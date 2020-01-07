@@ -505,6 +505,38 @@ $(document).ready(function()
             
             
             <li>
+              <a href="#optional-attributes">Optional Attributes</a>
+
+              
+                <ul class="nav nav-stacked">
+                  
+
+                  
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="#icon-url">Icon URL</a>
+                    </li>
+                  
+
+                </ul>
+              
+
+            </li>
+          
+
+        
+          
+
+          
+            
+            
+            
+            
+            <li>
               <a href="#related-topics">Related Topics</a>
 
               
@@ -542,7 +574,7 @@ $(document).ready(function()
   <span class="guide_byline">
     
       
-      by <a href="/wip/authors/will_pearson">Will Pearson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/yak/the-package-manifest.md" target="_blank">13 Aug 2019</a>)
+      by <a href="/wip/authors/will_pearson">Will Pearson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/yak/the-package-manifest.md" target="_blank">07 Jan 2020</a>)
     
   </span>
 
@@ -667,9 +699,16 @@ You should specify a license for your package so that people know how they are p
 <pre><code class="language-yaml">url: "https://github.com/meshmash/Plankton"
 </code></pre>
 
-<!-- ## Optional Attributes
+<h2 id="optional-attributes">Optional Attributes</h2>
 
-### Dependencies
+<h3 id="icon-url">Icon URL</h3>
+
+<p>Specify a link to an icon that will be used by the Package Manager in Rhino. Keep it small – a 32x32 PNG is ideal.</p>
+
+<pre><code class="language-yaml">icon_url: "https://example.com/path/to/icon.png"
+</code></pre>
+
+<!-- ### Dependencies
 
 A list of packages upon which this package depends. Can also include optional version specifications, again adhering to Semantic Versioning.
 
@@ -757,7 +796,7 @@ dependencies:
         </div>
 
         <div class="row text-center">
-          © 1997 - 2019 Robert McNeel &amp; Associates<br/>
+          © 1997 - 2020 Robert McNeel &amp; Associates<br/>
           <span class="glyphicon glyphicon-heart-empty"></span>&nbsp;<a href="/wip/authors">Contributions welcome</a>
         </div>
 
