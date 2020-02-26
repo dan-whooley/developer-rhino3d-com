@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.22</span>
+   &#160;<span id="projectnumber">6.23</span>
    </div>
   </td>
  </tr>
@@ -4166,9 +4166,9 @@ $(function() {
 <div class="line"><a name="l04094"></a><span class="lineno"> 4094</span>&#160;<span class="comment">    then your calculation should insure both are properly updated.</span></div>
 <div class="line"><a name="l04095"></a><span class="lineno"> 4095</span>&#160;<span class="comment">  */</span></div>
 <div class="line"><a name="l04096"></a><span class="lineno"> 4096</span>&#160;  <a class="code" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> m_dV;</div>
-<div class="line"><a name="l04097"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a7496a0e3ba5f171adb216a482ce057ae"> 4097</a></span>&#160;  <a class="code" href="class_o_n__3f_point_array.html">ON_3fPointArray</a> m_V;</div>
-<div class="line"><a name="l04098"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a6cc720e646b5fb26e5285b1838f71c7d"> 4098</a></span>&#160; </div>
-<div class="line"><a name="l04099"></a><span class="lineno"> 4099</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l04097"></a><span class="lineno"> 4097</span>&#160;  <a class="code" href="class_o_n__3f_point_array.html">ON_3fPointArray</a> m_V;</div>
+<div class="line"><a name="l04098"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a7496a0e3ba5f171adb216a482ce057ae"> 4098</a></span>&#160; </div>
+<div class="line"><a name="l04099"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a6cc720e646b5fb26e5285b1838f71c7d"> 4099</a></span>&#160;  <span class="comment">/*</span></div>
 <div class="line"><a name="l04100"></a><span class="lineno"> 4100</span>&#160;<span class="comment">  Returns:</span></div>
 <div class="line"><a name="l04101"></a><span class="lineno"> 4101</span>&#160;<span class="comment">    Location of the vertex.  If double precision vertices</span></div>
 <div class="line"><a name="l04102"></a><span class="lineno"> 4102</span>&#160;<span class="comment">    are present, the double precision vertex location is</span></div>
@@ -4179,8 +4179,8 @@ $(function() {
 <div class="line"><a name="l04107"></a><span class="lineno"> 4107</span>&#160; </div>
 <div class="line"><a name="l04108"></a><span class="lineno"> 4108</span>&#160;  <span class="comment">// m_F[] facets (triangles or quads)</span></div>
 <div class="line"><a name="l04109"></a><span class="lineno"> 4109</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_MeshFace&gt;</a> m_F;</div>
-<div class="line"><a name="l04110"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a005e7e4b0f04014c289264e06e496450"> 4110</a></span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l04111"></a><span class="lineno"> 4111</span>&#160;<span class="comment">  ////////////////////////////////////////////////////////////////////////</span></div>
+<div class="line"><a name="l04110"></a><span class="lineno"> 4110</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l04111"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a005e7e4b0f04014c289264e06e496450"> 4111</a></span>&#160;<span class="comment">  ////////////////////////////////////////////////////////////////////////</span></div>
 <div class="line"><a name="l04112"></a><span class="lineno"> 4112</span>&#160;<span class="comment"></span>  <span class="comment">//</span></div>
 <div class="line"><a name="l04113"></a><span class="lineno"> 4113</span>&#160;  <span class="comment">// N-gon</span></div>
 <div class="line"><a name="l04114"></a><span class="lineno"> 4114</span>&#160;  <span class="comment">//</span></div>
@@ -4722,10 +4722,10 @@ $(function() {
 <div class="line"><a name="l04650"></a><span class="lineno"> 4650</span>&#160;  <span class="comment">// If m_NgonMap[fi] &lt; m_Ngon.UnsignedCount(), then it is the index of the N-gon in m_Ngon[] </span></div>
 <div class="line"><a name="l04651"></a><span class="lineno"> 4651</span>&#160;  <span class="comment">// that m_F[]  belongs to.  Otherwise, m_NgonMap[fi] is ON_UNSET_UINT_INDEX.</span></div>
 <div class="line"><a name="l04652"></a><span class="lineno"> 4652</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;unsigned int&gt;</a> m_NgonMap; <span class="comment">// invalid if m_NgonMap.Count() != m_F.Count()</span></div>
-<div class="line"><a name="l04653"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#ab992dbdbd1b3202ce27b6aed0eb15827"> 4653</a></span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_MeshNgon*&gt;</a> m_Ngon;</div>
-<div class="line"><a name="l04654"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#ab91153bed501502cd587b18884c48d22"> 4654</a></span>&#160;  <a class="code" href="class_o_n___mesh_ngon_allocator.html">ON_MeshNgonAllocator</a> m_NgonAllocator; <span class="comment">// use this to allocate elements added to m_Ngon;</span></div>
-<div class="line"><a name="l04655"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a9f60e99fe72ecdd5edea702c7ec73363"> 4655</a></span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l04656"></a><span class="lineno"> 4656</span>&#160;<span class="comment">  ////////////////////////////////////////////////////////////////////////</span></div>
+<div class="line"><a name="l04653"></a><span class="lineno"> 4653</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_MeshNgon*&gt;</a> m_Ngon;</div>
+<div class="line"><a name="l04654"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#ab992dbdbd1b3202ce27b6aed0eb15827"> 4654</a></span>&#160;  <a class="code" href="class_o_n___mesh_ngon_allocator.html">ON_MeshNgonAllocator</a> m_NgonAllocator; <span class="comment">// use this to allocate elements added to m_Ngon;</span></div>
+<div class="line"><a name="l04655"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#ab91153bed501502cd587b18884c48d22"> 4655</a></span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l04656"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a9f60e99fe72ecdd5edea702c7ec73363"> 4656</a></span>&#160;<span class="comment">  ////////////////////////////////////////////////////////////////////////</span></div>
 <div class="line"><a name="l04657"></a><span class="lineno"> 4657</span>&#160;<span class="comment"></span>  <span class="comment">//</span></div>
 <div class="line"><a name="l04658"></a><span class="lineno"> 4658</span>&#160;  <span class="comment">// Vertex and Face normal implementation</span></div>
 <div class="line"><a name="l04659"></a><span class="lineno"> 4659</span>&#160;  <span class="comment">//</span></div>
@@ -4735,14 +4735,14 @@ $(function() {
 <div class="line"><a name="l04663"></a><span class="lineno"> 4663</span>&#160;  <span class="comment">// Either m_N[] has zero count or it m_N[j] is the</span></div>
 <div class="line"><a name="l04664"></a><span class="lineno"> 4664</span>&#160;  <span class="comment">// the unit vertex normal at m_V[j].</span></div>
 <div class="line"><a name="l04665"></a><span class="lineno"> 4665</span>&#160;  <a class="code" href="class_o_n__3f_vector_array.html">ON_3fVectorArray</a> m_N;</div>
-<div class="line"><a name="l04666"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#af5c95b35080197efd6f43ab5830efe9f"> 4666</a></span>&#160; </div>
-<div class="line"><a name="l04667"></a><span class="lineno"> 4667</span>&#160;  <span class="comment">// m_FN[] OPTIONAL face unit normals</span></div>
+<div class="line"><a name="l04666"></a><span class="lineno"> 4666</span>&#160; </div>
+<div class="line"><a name="l04667"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#af5c95b35080197efd6f43ab5830efe9f"> 4667</a></span>&#160;  <span class="comment">// m_FN[] OPTIONAL face unit normals</span></div>
 <div class="line"><a name="l04668"></a><span class="lineno"> 4668</span>&#160;  <span class="comment">// If m_FN[] is empty or m_FN.Count() != m_F.Count(), </span></div>
 <div class="line"><a name="l04669"></a><span class="lineno"> 4669</span>&#160;  <span class="comment">// then m_FN is ignored.  Otherwise m_FN[j] is the</span></div>
 <div class="line"><a name="l04670"></a><span class="lineno"> 4670</span>&#160;  <span class="comment">// unit normal for the facet m_F[j].</span></div>
 <div class="line"><a name="l04671"></a><span class="lineno"> 4671</span>&#160;  <a class="code" href="class_o_n__3f_vector_array.html">ON_3fVectorArray</a> m_FN;</div>
-<div class="line"><a name="l04672"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a61b4408beb9cd28c90ddb4ec8492f499"> 4672</a></span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l04673"></a><span class="lineno"> 4673</span>&#160;<span class="comment">  /////////////////////////////////////////////////////////////////</span></div>
+<div class="line"><a name="l04672"></a><span class="lineno"> 4672</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l04673"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a61b4408beb9cd28c90ddb4ec8492f499"> 4673</a></span>&#160;<span class="comment">  /////////////////////////////////////////////////////////////////</span></div>
 <div class="line"><a name="l04674"></a><span class="lineno"> 4674</span>&#160;<span class="comment"></span>  <span class="comment">// Implementation - texture coordinates</span></div>
 <div class="line"><a name="l04675"></a><span class="lineno"> 4675</span>&#160;  <span class="comment">//</span></div>
 <div class="line"><a name="l04676"></a><span class="lineno"> 4676</span>&#160;  <span class="comment">// OPTIONAL texture coordinates for each vertex</span></div>
@@ -4751,9 +4751,9 @@ $(function() {
 <div class="line"><a name="l04679"></a><span class="lineno"> 4679</span>&#160;  <span class="comment">// but that breaks lots of checked out code that assumes</span></div>
 <div class="line"><a name="l04680"></a><span class="lineno"> 4680</span>&#160;  <span class="comment">// m_T is an array of ON_2fPoints.</span></div>
 <div class="line"><a name="l04681"></a><span class="lineno"> 4681</span>&#160;  <a class="code" href="class_o_n___mapping_tag.html">ON_MappingTag</a> m_Ttag; <span class="comment">// OPTIONAL tag for values in m_T[]</span></div>
-<div class="line"><a name="l04682"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a5a5f8175918c06ea9b632113e29786b9"> 4682</a></span>&#160;  <a class="code" href="class_o_n__2f_point_array.html">ON_2fPointArray</a> m_T;  <span class="comment">// OPTIONAL texture coordinates for each vertex</span></div>
-<div class="line"><a name="l04683"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#af8813d0559c1834e30af2b86da7d64c9"> 4683</a></span>&#160; </div>
-<div class="line"><a name="l04684"></a><span class="lineno"> 4684</span>&#160;  <span class="comment">// RUNTIME ONLY</span></div>
+<div class="line"><a name="l04682"></a><span class="lineno"> 4682</span>&#160;  <a class="code" href="class_o_n__2f_point_array.html">ON_2fPointArray</a> m_T;  <span class="comment">// OPTIONAL texture coordinates for each vertex</span></div>
+<div class="line"><a name="l04683"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a5a5f8175918c06ea9b632113e29786b9"> 4683</a></span>&#160; </div>
+<div class="line"><a name="l04684"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#af8813d0559c1834e30af2b86da7d64c9"> 4684</a></span>&#160;  <span class="comment">// RUNTIME ONLY</span></div>
 <div class="line"><a name="l04685"></a><span class="lineno"> 4685</span>&#160;  <span class="comment">//   This array is used to cache texture coordinates used by</span></div>
 <div class="line"><a name="l04686"></a><span class="lineno"> 4686</span>&#160;  <span class="comment">//   rendering applications that require 1d texture coordinates,</span></div>
 <div class="line"><a name="l04687"></a><span class="lineno"> 4687</span>&#160;  <span class="comment">//   3d texture coordinates, or multiple sets of texture </span></div>
@@ -4761,8 +4761,8 @@ $(function() {
 <div class="line"><a name="l04689"></a><span class="lineno"> 4689</span>&#160;  <span class="comment">//   Users are responsible for verifying </span></div>
 <div class="line"><a name="l04690"></a><span class="lineno"> 4690</span>&#160;  <span class="comment">//   m_TC[i].m_T.Count() = m_V.Count()</span></div>
 <div class="line"><a name="l04691"></a><span class="lineno"> 4691</span>&#160;  <a class="code" href="class_o_n___class_array.html">ON_ClassArray&lt;ON_TextureCoordinates&gt;</a> m_TC;  </div>
-<div class="line"><a name="l04692"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a28e3c1473d1817f3606ebc30c7b05bf0"> 4692</a></span>&#160; </div>
-<div class="line"><a name="l04693"></a><span class="lineno"> 4693</span>&#160;  <span class="comment">// If m_T.Count() == m_V.Count(), then the mesh has texture coordinates</span></div>
+<div class="line"><a name="l04692"></a><span class="lineno"> 4692</span>&#160; </div>
+<div class="line"><a name="l04693"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a28e3c1473d1817f3606ebc30c7b05bf0"> 4693</a></span>&#160;  <span class="comment">// If m_T.Count() == m_V.Count(), then the mesh has texture coordinates</span></div>
 <div class="line"><a name="l04694"></a><span class="lineno"> 4694</span>&#160;  <span class="comment">// and m_T[j] is the texture coordinate for vertex m_V[j].</span></div>
 <div class="line"><a name="l04695"></a><span class="lineno"> 4695</span>&#160;  <span class="comment">//</span></div>
 <div class="line"><a name="l04696"></a><span class="lineno"> 4696</span>&#160;  <span class="comment">// When opennurbs or Rhino meshes an ON_Surface or ON_Brep, the texture</span></div>
@@ -4796,10 +4796,10 @@ $(function() {
 <div class="line"><a name="l04724"></a><span class="lineno"> 4724</span>&#160;  <span class="comment">// This information is used to calculate high quality </span></div>
 <div class="line"><a name="l04725"></a><span class="lineno"> 4725</span>&#160;  <span class="comment">// packed texture coordinates.  </span></div>
 <div class="line"><a name="l04726"></a><span class="lineno"> 4726</span>&#160;  <a class="code" href="class_o_n__2d_point_array.html">ON_2dPointArray</a> m_S;</div>
-<div class="line"><a name="l04727"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#acbf195fbe55da435006a2ba9c66e71e4"> 4727</a></span>&#160;  <a class="code" href="class_o_n___interval.html">ON_Interval</a> m_srf_domain[2]; <span class="comment">// surface evaluation domain.</span></div>
-<div class="line"><a name="l04728"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a48d982115e07a7a0209d7b35b83a96bb"> 4728</a></span>&#160;  <span class="keywordtype">double</span> m_srf_scale[2];</div>
-<div class="line"><a name="l04729"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#abfec38c9115fc2045b8d2105dd634ff2"> 4729</a></span>&#160; </div>
-<div class="line"><a name="l04730"></a><span class="lineno"> 4730</span>&#160; </div>
+<div class="line"><a name="l04727"></a><span class="lineno"> 4727</span>&#160;  <a class="code" href="class_o_n___interval.html">ON_Interval</a> m_srf_domain[2]; <span class="comment">// surface evaluation domain.</span></div>
+<div class="line"><a name="l04728"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#acbf195fbe55da435006a2ba9c66e71e4"> 4728</a></span>&#160;  <span class="keywordtype">double</span> m_srf_scale[2];</div>
+<div class="line"><a name="l04729"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a48d982115e07a7a0209d7b35b83a96bb"> 4729</a></span>&#160; </div>
+<div class="line"><a name="l04730"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#abfec38c9115fc2045b8d2105dd634ff2"> 4730</a></span>&#160; </div>
 <div class="line"><a name="l04731"></a><span class="lineno"> 4731</span>&#160;  <span class="comment">// Packed texture information.</span></div>
 <div class="line"><a name="l04732"></a><span class="lineno"> 4732</span>&#160;  <span class="comment">//</span></div>
 <div class="line"><a name="l04733"></a><span class="lineno"> 4733</span>&#160;  <span class="comment">// If either of the m_packed_tex_domain[] intervals is a </span></div>
@@ -4807,8 +4807,8 @@ $(function() {
 <div class="line"><a name="l04735"></a><span class="lineno"> 4735</span>&#160;  <span class="comment">// calculation assigned this subrectangle to this mesh.</span></div>
 <div class="line"><a name="l04736"></a><span class="lineno"> 4736</span>&#160; </div>
 <div class="line"><a name="l04737"></a><span class="lineno"> 4737</span>&#160;  <a class="code" href="class_o_n___interval.html">ON_Interval</a> m_packed_tex_domain[2];</div>
-<div class="line"><a name="l04738"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#abe46dd344baf3956432762bb2f69d90b"> 4738</a></span>&#160; </div>
-<div class="line"><a name="l04739"></a><span class="lineno"> 4739</span>&#160;  <span class="comment">// The m_packed_tex_rotate setting is valid only when</span></div>
+<div class="line"><a name="l04738"></a><span class="lineno"> 4738</span>&#160; </div>
+<div class="line"><a name="l04739"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#abe46dd344baf3956432762bb2f69d90b"> 4739</a></span>&#160;  <span class="comment">// The m_packed_tex_rotate setting is valid only when</span></div>
 <div class="line"><a name="l04740"></a><span class="lineno"> 4740</span>&#160;  <span class="comment">// m_S, m_srf_domain, m_packed_scale[] and </span></div>
 <div class="line"><a name="l04741"></a><span class="lineno"> 4741</span>&#160;  <span class="comment">// m_packed_tex_domain[] are all valid and the texture</span></div>
 <div class="line"><a name="l04742"></a><span class="lineno"> 4742</span>&#160;  <span class="comment">// coordinates are based on surface evaluation parameters.</span></div>
@@ -4838,8 +4838,8 @@ $(function() {
 <div class="line"><a name="l04766"></a><span class="lineno"> 4766</span>&#160;  <span class="comment">//     u = m_srf_domain[0].ParameterAt(y);</span></div>
 <div class="line"><a name="l04767"></a><span class="lineno"> 4767</span>&#160;  <span class="comment">//     v = m_srf_domain[1].ParameterAt(1.0 - x);</span></div>
 <div class="line"><a name="l04768"></a><span class="lineno"> 4768</span>&#160;  <span class="keywordtype">bool</span> m_packed_tex_rotate;</div>
-<div class="line"><a name="l04769"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a859cbfcfa130e9a7433d012064554938"> 4769</a></span>&#160; </div>
-<div class="line"><a name="l04770"></a><span class="lineno"> 4770</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l04769"></a><span class="lineno"> 4769</span>&#160; </div>
+<div class="line"><a name="l04770"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a859cbfcfa130e9a7433d012064554938"> 4770</a></span>&#160;  <span class="comment">/*</span></div>
 <div class="line"><a name="l04771"></a><span class="lineno"> 4771</span>&#160;<span class="comment">  Returns:</span></div>
 <div class="line"><a name="l04772"></a><span class="lineno"> 4772</span>&#160;<span class="comment">    True if the m_srf_scale[] values are positive and</span></div>
 <div class="line"><a name="l04773"></a><span class="lineno"> 4773</span>&#160;<span class="comment">    the m_packed_tex_domain[] intervals are set to values</span></div>
@@ -4872,44 +4872,44 @@ $(function() {
 <div class="line"><a name="l04800"></a><span class="lineno"> 4800</span>&#160;<span class="comment"></span>  <span class="comment">// Implementation - curvature</span></div>
 <div class="line"><a name="l04801"></a><span class="lineno"> 4801</span>&#160; </div>
 <div class="line"><a name="l04802"></a><span class="lineno"> 4802</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_SurfaceCurvature&gt;</a> m_K;  <span class="comment">// OPTIONAL surface curvatures</span></div>
-<div class="line"><a name="l04803"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a8f353770ff5fcc259d21e8a162d3e9d8"> 4803</a></span>&#160;                                            <span class="comment">// Either m_K[] has zero count or it has the same</span></div>
-<div class="line"><a name="l04804"></a><span class="lineno"> 4804</span>&#160;                                            <span class="comment">// count as m_V[], in which case m_K[j] reports</span></div>
+<div class="line"><a name="l04803"></a><span class="lineno"> 4803</span>&#160;                                            <span class="comment">// Either m_K[] has zero count or it has the same</span></div>
+<div class="line"><a name="l04804"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a8f353770ff5fcc259d21e8a162d3e9d8"> 4804</a></span>&#160;                                            <span class="comment">// count as m_V[], in which case m_K[j] reports</span></div>
 <div class="line"><a name="l04805"></a><span class="lineno"> 4805</span>&#160;                                            <span class="comment">// the surface curvatures at m_V[j].</span></div>
 <div class="line"><a name="l04806"></a><span class="lineno"> 4806</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l04807"></a><span class="lineno"> 4807</span>&#160;<span class="comment">  /////////////////////////////////////////////////////////////////</span></div>
 <div class="line"><a name="l04808"></a><span class="lineno"> 4808</span>&#160;<span class="comment"></span>  <span class="comment">// Implementation - false color</span></div>
 <div class="line"><a name="l04809"></a><span class="lineno"> 4809</span>&#160;  <a class="code" href="class_o_n___mapping_tag.html">ON_MappingTag</a> m_Ctag; <span class="comment">// OPTIONAL tag for values in m_C[]</span></div>
-<div class="line"><a name="l04810"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a9caa1b55e23568cd492840c0290f56f3"> 4810</a></span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_Color&gt;</a> m_C;  <span class="comment">// OPTIONAL vertex color</span></div>
-<div class="line"><a name="l04811"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a3eaa9b3a794729ab14d9c610e485d01e"> 4811</a></span>&#160;                                 <span class="comment">// Either m_C[] has zero count or it has the same</span></div>
-<div class="line"><a name="l04812"></a><span class="lineno"> 4812</span>&#160;                                 <span class="comment">// count as m_V[], in which case m_C[j] reports</span></div>
+<div class="line"><a name="l04810"></a><span class="lineno"> 4810</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_Color&gt;</a> m_C;  <span class="comment">// OPTIONAL vertex color</span></div>
+<div class="line"><a name="l04811"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a9caa1b55e23568cd492840c0290f56f3"> 4811</a></span>&#160;                                 <span class="comment">// Either m_C[] has zero count or it has the same</span></div>
+<div class="line"><a name="l04812"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a3eaa9b3a794729ab14d9c610e485d01e"> 4812</a></span>&#160;                                 <span class="comment">// count as m_V[], in which case m_C[j] reports</span></div>
 <div class="line"><a name="l04813"></a><span class="lineno"> 4813</span>&#160;                                 <span class="comment">// the color assigned to m_V[j].</span></div>
 <div class="line"><a name="l04814"></a><span class="lineno"> 4814</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l04815"></a><span class="lineno"> 4815</span>&#160;<span class="comment">  /////////////////////////////////////////////////////////////////</span></div>
 <div class="line"><a name="l04816"></a><span class="lineno"> 4816</span>&#160;<span class="comment"></span>  <span class="comment">// Implementation - runtime vertex visibility - not saved in 3dm files.</span></div>
 <div class="line"><a name="l04817"></a><span class="lineno"> 4817</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;bool&gt;</a> m_H; <span class="comment">// OPTIONAL vertex visibility.</span></div>
-<div class="line"><a name="l04818"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a2a166eabbd9f7f0e141e30325f6783f8"> 4818</a></span>&#160;                            <span class="comment">// If m_H.Count() = m_V.Count(), then</span></div>
-<div class="line"><a name="l04819"></a><span class="lineno"> 4819</span>&#160;                            <span class="comment">// m_H[vi] is true if the vertex m_V[vi] </span></div>
+<div class="line"><a name="l04818"></a><span class="lineno"> 4818</span>&#160;                            <span class="comment">// If m_H.Count() = m_V.Count(), then</span></div>
+<div class="line"><a name="l04819"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a2a166eabbd9f7f0e141e30325f6783f8"> 4819</a></span>&#160;                            <span class="comment">// m_H[vi] is true if the vertex m_V[vi] </span></div>
 <div class="line"><a name="l04820"></a><span class="lineno"> 4820</span>&#160;                            <span class="comment">// is hidden.  Otherwise, all vertices are visible.</span></div>
 <div class="line"><a name="l04821"></a><span class="lineno"> 4821</span>&#160;  <span class="keywordtype">int</span> m_hidden_count;       <span class="comment">// number of vertices that are hidden</span></div>
-<div class="line"><a name="l04822"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a532418e6af843813ecc81246a8da7eef"> 4822</a></span>&#160;                            <span class="comment">// = number of true values in m_H[] array.</span></div>
-<div class="line"><a name="l04823"></a><span class="lineno"> 4823</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l04822"></a><span class="lineno"> 4822</span>&#160;                            <span class="comment">// = number of true values in m_H[] array.</span></div>
+<div class="line"><a name="l04823"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a532418e6af843813ecc81246a8da7eef"> 4823</a></span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l04824"></a><span class="lineno"> 4824</span>&#160;<span class="comment">  /////////////////////////////////////////////////////////////////</span></div>
 <div class="line"><a name="l04825"></a><span class="lineno"> 4825</span>&#160;<span class="comment"></span>  <span class="comment">// Implementation - runtime UI information</span></div>
 <div class="line"><a name="l04826"></a><span class="lineno"> 4826</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___object.html">ON_Object</a>* m_parent; <span class="comment">// runtime parent geometry (use ...::Cast() to get it)</span></div>
-<div class="line"><a name="l04827"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a77c5f065e1c3ae6a160e6931601ccdc8"> 4827</a></span>&#160; </div>
-<div class="line"><a name="l04828"></a><span class="lineno"> 4828</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l04827"></a><span class="lineno"> 4827</span>&#160; </div>
+<div class="line"><a name="l04828"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a77c5f065e1c3ae6a160e6931601ccdc8"> 4828</a></span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l04829"></a><span class="lineno"> 4829</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l04830"></a><span class="lineno"> 4830</span>&#160;<span class="comment">  /////////////////////////////////////////////////////////////////</span></div>
 <div class="line"><a name="l04831"></a><span class="lineno"> 4831</span>&#160;<span class="comment"></span>  <span class="comment">// Implementation - mesh topology</span></div>
 <div class="line"><a name="l04832"></a><span class="lineno"> 4832</span>&#160;  <a class="code" href="class_o_n___mesh_topology.html">ON_MeshTopology</a> m_top;</div>
-<div class="line"><a name="l04833"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a72a9c0b4169a22209bc923d7450d3fae"> 4833</a></span>&#160; </div>
-<div class="line"><a name="l04834"></a><span class="lineno"> 4834</span>&#160;  <a class="code" href="class_o_n___mesh_parameters.html">ON_MeshParameters</a>* m_mesh_parameters; <span class="comment">// If mesh was created from a parametric surface,</span></div>
-<div class="line"><a name="l04835"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#aaf44985cbb5e3d74e80d342226cc259e"> 4835</a></span>&#160;                                        <span class="comment">// these parameters were used to create the mesh.</span></div>
-<div class="line"><a name="l04836"></a><span class="lineno"> 4836</span>&#160;  <span class="keywordtype">int</span>                         m_invalid_count;</div>
-<div class="line"><a name="l04837"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a283e17b42b01749486e447a56acd5f60"> 4837</a></span>&#160;  <span class="keywordtype">int</span>                         m_quad_count;</div>
-<div class="line"><a name="l04838"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a0e88e56788c06e475b27d239f78c7656"> 4838</a></span>&#160;  <span class="keywordtype">int</span>                         m_triangle_count;</div>
-<div class="line"><a name="l04839"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a093d11d8fa0cc22dee2f284cbc3790e0"> 4839</a></span>&#160; </div>
-<div class="line"><a name="l04840"></a><span class="lineno"> 4840</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l04833"></a><span class="lineno"> 4833</span>&#160; </div>
+<div class="line"><a name="l04834"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a72a9c0b4169a22209bc923d7450d3fae"> 4834</a></span>&#160;  <a class="code" href="class_o_n___mesh_parameters.html">ON_MeshParameters</a>* m_mesh_parameters; <span class="comment">// If mesh was created from a parametric surface,</span></div>
+<div class="line"><a name="l04835"></a><span class="lineno"> 4835</span>&#160;                                        <span class="comment">// these parameters were used to create the mesh.</span></div>
+<div class="line"><a name="l04836"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#aaf44985cbb5e3d74e80d342226cc259e"> 4836</a></span>&#160;  <span class="keywordtype">int</span>                         m_invalid_count;</div>
+<div class="line"><a name="l04837"></a><span class="lineno"> 4837</span>&#160;  <span class="keywordtype">int</span>                         m_quad_count;</div>
+<div class="line"><a name="l04838"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a283e17b42b01749486e447a56acd5f60"> 4838</a></span>&#160;  <span class="keywordtype">int</span>                         m_triangle_count;</div>
+<div class="line"><a name="l04839"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a0e88e56788c06e475b27d239f78c7656"> 4839</a></span>&#160; </div>
+<div class="line"><a name="l04840"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a093d11d8fa0cc22dee2f284cbc3790e0"> 4840</a></span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l04841"></a><span class="lineno"> 4841</span>&#160;  <span class="keywordtype">char</span> m_mesh_is_closed;   <span class="comment">// 0 = unset, 1 = all edges have 2 or more faces, 2 = at least one boundary edge </span></div>
 <div class="line"><a name="l04842"></a><span class="lineno"> 4842</span>&#160;  <span class="keywordtype">char</span> m_mesh_is_manifold; <span class="comment">// 0 = unset, 1 = all edges have 1 or 2 faces, 2 = not manifold</span></div>
 <div class="line"><a name="l04843"></a><span class="lineno"> 4843</span>&#160;  <span class="keywordtype">char</span> m_mesh_is_oriented; <span class="comment">// 0 = unset, 1 = faces normals agree across all edges that have 2 faces, 2 = not oriented</span></div>
@@ -4920,10 +4920,10 @@ $(function() {
 <div class="line"><a name="l04848"></a><span class="lineno"> 4848</span>&#160; </div>
 <div class="line"><a name="l04849"></a><span class="lineno"> 4849</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l04850"></a><span class="lineno"> 4850</span>&#160;  <span class="keywordtype">float</span> m_nbox[2][3]; <span class="comment">// 3d bounding box of all referenced unit normals </span></div>
-<div class="line"><a name="l04851"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#aa60c942b6427718bf0ea8e0b398a61fa"> 4851</a></span>&#160;                      <span class="comment">// (for estimation of Gauss map bounds)</span></div>
-<div class="line"><a name="l04852"></a><span class="lineno"> 4852</span>&#160;  <span class="keywordtype">float</span> m_tbox[2][2]; <span class="comment">// 2d bounding box of all referenced texture coordinates</span></div>
-<div class="line"><a name="l04853"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a26c5690c95d3f26fc86438061f131759"> 4853</a></span>&#160; </div>
-<div class="line"><a name="l04854"></a><span class="lineno"> 4854</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l04851"></a><span class="lineno"> 4851</span>&#160;                      <span class="comment">// (for estimation of Gauss map bounds)</span></div>
+<div class="line"><a name="l04852"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#aa60c942b6427718bf0ea8e0b398a61fa"> 4852</a></span>&#160;  <span class="keywordtype">float</span> m_tbox[2][2]; <span class="comment">// 2d bounding box of all referenced texture coordinates</span></div>
+<div class="line"><a name="l04853"></a><span class="lineno"> 4853</span>&#160; </div>
+<div class="line"><a name="l04854"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a26c5690c95d3f26fc86438061f131759"> 4854</a></span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l04855"></a><span class="lineno"> 4855</span>&#160;  <span class="comment">// m_vertex_bbox = bounding box of vertex locations</span></div>
 <div class="line"><a name="l04856"></a><span class="lineno"> 4856</span>&#160; </div>
 <div class="line"><a name="l04857"></a><span class="lineno"> 4857</span>&#160;  <span class="comment">// cache of recently used tight bounding boxes</span></div>
@@ -4932,11 +4932,11 @@ $(function() {
 <div class="line"><a name="l04860"></a><span class="lineno"> 4860</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l04861"></a><span class="lineno"> 4861</span>&#160; </div>
 <div class="line"><a name="l04862"></a><span class="lineno"> 4862</span>&#160;  <a class="code" href="class_o_n___mesh_curvature_stats.html">ON_MeshCurvatureStats</a>* m_kstat[4]; <span class="comment">// gaussian,mean,min,max,sectionx,sectiony,sectionz</span></div>
-<div class="line"><a name="l04863"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a14d1b43c587734c9c34ee58324fd88b4"> 4863</a></span>&#160; </div>
-<div class="line"><a name="l04864"></a><span class="lineno"> 4864</span>&#160;  <span class="comment">// sub-mesh information rendering large meshes</span></div>
+<div class="line"><a name="l04863"></a><span class="lineno"> 4863</span>&#160; </div>
+<div class="line"><a name="l04864"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a14d1b43c587734c9c34ee58324fd88b4"> 4864</a></span>&#160;  <span class="comment">// sub-mesh information rendering large meshes</span></div>
 <div class="line"><a name="l04865"></a><span class="lineno"> 4865</span>&#160;  <a class="code" href="class_o_n___mesh_partition.html">ON_MeshPartition</a>* m_partition;</div>
-<div class="line"><a name="l04866"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a64decd77fe7b70c0fab3a910844667e4"> 4866</a></span>&#160; </div>
-<div class="line"><a name="l04867"></a><span class="lineno"> 4867</span>&#160;<span class="preprocessor">#if defined(OPENNURBS_PLUS)</span></div>
+<div class="line"><a name="l04866"></a><span class="lineno"> 4866</span>&#160; </div>
+<div class="line"><a name="l04867"></a><span class="lineno"><a class="line" href="class_o_n___mesh.html#a64decd77fe7b70c0fab3a910844667e4"> 4867</a></span>&#160;<span class="preprocessor">#if defined(OPENNURBS_PLUS)</span></div>
 <div class="line"><a name="l04868"></a><span class="lineno"> 4868</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l04869"></a><span class="lineno"> 4869</span>&#160;  <span class="keyword">class </span>ON_MeshTreeCache* m_mesh_cache;</div>
 <div class="line"><a name="l04870"></a><span class="lineno"> 4870</span>&#160;  <span class="keyword">class </span>ON_MeshTreeCache* MeshTreeCache( <span class="keywordtype">bool</span> ) <span class="keyword">const</span>;</div>
@@ -4958,22 +4958,22 @@ $(function() {
 <div class="line"><a name="l04886"></a><span class="lineno"> 4886</span>&#160;<span class="comment">// ON_MeshCache</span></div>
 <div class="line"><a name="l04887"></a><span class="lineno"> 4887</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l04888"></a><span class="lineno"> 4888</span>&#160;<span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___mesh_cache.html">ON_MeshCache</a></div>
-<div class="line"><a name="l04889"></a><span class="lineno"><a class="line" href="class_o_n___mesh_cache.html"> 4889</a></span>&#160;{</div>
-<div class="line"><a name="l04890"></a><span class="lineno"> 4890</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l04889"></a><span class="lineno"> 4889</span>&#160;{</div>
+<div class="line"><a name="l04890"></a><span class="lineno"><a class="line" href="class_o_n___mesh_cache.html"> 4890</a></span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l04891"></a><span class="lineno"> 4891</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="class_o_n___mesh_cache.html">ON_MeshCache</a> Empty;</div>
-<div class="line"><a name="l04892"></a><span class="lineno"><a class="line" href="class_o_n___mesh_cache.html#a2af3e3193ce297b296465f63faf98d18"> 4892</a></span>&#160; </div>
-<div class="line"><a name="l04893"></a><span class="lineno"> 4893</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="struct_o_n___u_u_i_d__struct.html">ON_UUID</a> RenderMeshId;</div>
-<div class="line"><a name="l04894"></a><span class="lineno"><a class="line" href="class_o_n___mesh_cache.html#a3da6fd9a11b2d47e485010a54785de46"> 4894</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="struct_o_n___u_u_i_d__struct.html">ON_UUID</a> AnalysisMeshId;</div>
-<div class="line"><a name="l04895"></a><span class="lineno"><a class="line" href="class_o_n___mesh_cache.html#ab0e7a462bb4aed09cc43cff29e6e7a0f"> 4895</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="struct_o_n___u_u_i_d__struct.html">ON_UUID</a> PreviewMeshId;</div>
-<div class="line"><a name="l04896"></a><span class="lineno"><a class="line" href="class_o_n___mesh_cache.html#a54315960a61e7b09726a87a9f5f238f6"> 4896</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="struct_o_n___u_u_i_d__struct.html">ON_UUID</a> AnyMeshId;</div>
-<div class="line"><a name="l04897"></a><span class="lineno"><a class="line" href="class_o_n___mesh_cache.html#af136b9a55070b797e5d82230c6314c47"> 4897</a></span>&#160; </div>
-<div class="line"><a name="l04898"></a><span class="lineno"> 4898</span>&#160;  <span class="comment">// Cached mesh with the fewest faces</span></div>
+<div class="line"><a name="l04892"></a><span class="lineno"> 4892</span>&#160; </div>
+<div class="line"><a name="l04893"></a><span class="lineno"><a class="line" href="class_o_n___mesh_cache.html#a2af3e3193ce297b296465f63faf98d18"> 4893</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="struct_o_n___u_u_i_d__struct.html">ON_UUID</a> RenderMeshId;</div>
+<div class="line"><a name="l04894"></a><span class="lineno"> 4894</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="struct_o_n___u_u_i_d__struct.html">ON_UUID</a> AnalysisMeshId;</div>
+<div class="line"><a name="l04895"></a><span class="lineno"><a class="line" href="class_o_n___mesh_cache.html#a3da6fd9a11b2d47e485010a54785de46"> 4895</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="struct_o_n___u_u_i_d__struct.html">ON_UUID</a> PreviewMeshId;</div>
+<div class="line"><a name="l04896"></a><span class="lineno"><a class="line" href="class_o_n___mesh_cache.html#ab0e7a462bb4aed09cc43cff29e6e7a0f"> 4896</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="struct_o_n___u_u_i_d__struct.html">ON_UUID</a> AnyMeshId;</div>
+<div class="line"><a name="l04897"></a><span class="lineno"><a class="line" href="class_o_n___mesh_cache.html#a54315960a61e7b09726a87a9f5f238f6"> 4897</a></span>&#160; </div>
+<div class="line"><a name="l04898"></a><span class="lineno"><a class="line" href="class_o_n___mesh_cache.html#af136b9a55070b797e5d82230c6314c47"> 4898</a></span>&#160;  <span class="comment">// Cached mesh with the fewest faces</span></div>
 <div class="line"><a name="l04899"></a><span class="lineno"> 4899</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="struct_o_n___u_u_i_d__struct.html">ON_UUID</a> CoarseMeshId;</div>
-<div class="line"><a name="l04900"></a><span class="lineno"><a class="line" href="class_o_n___mesh_cache.html#aa37169af7239929de7680fd12c452bd4"> 4900</a></span>&#160; </div>
-<div class="line"><a name="l04901"></a><span class="lineno"> 4901</span>&#160;  <span class="comment">// Cached mesh with the most faces</span></div>
+<div class="line"><a name="l04900"></a><span class="lineno"> 4900</span>&#160; </div>
+<div class="line"><a name="l04901"></a><span class="lineno"><a class="line" href="class_o_n___mesh_cache.html#aa37169af7239929de7680fd12c452bd4"> 4901</a></span>&#160;  <span class="comment">// Cached mesh with the most faces</span></div>
 <div class="line"><a name="l04902"></a><span class="lineno"> 4902</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="struct_o_n___u_u_i_d__struct.html">ON_UUID</a> FineMeshId;</div>
-<div class="line"><a name="l04903"></a><span class="lineno"><a class="line" href="class_o_n___mesh_cache.html#a39195f9cf96aeea7bd61fe5991b14870"> 4903</a></span>&#160; </div>
-<div class="line"><a name="l04904"></a><span class="lineno"> 4904</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l04903"></a><span class="lineno"> 4903</span>&#160; </div>
+<div class="line"><a name="l04904"></a><span class="lineno"><a class="line" href="class_o_n___mesh_cache.html#a39195f9cf96aeea7bd61fe5991b14870"> 4904</a></span>&#160;  <span class="comment">/*</span></div>
 <div class="line"><a name="l04905"></a><span class="lineno"> 4905</span>&#160;<span class="comment">  Returns:</span></div>
 <div class="line"><a name="l04906"></a><span class="lineno"> 4906</span>&#160;<span class="comment">    The id that corresonds to the obsolete ON::mesh_type enum value.</span></div>
 <div class="line"><a name="l04907"></a><span class="lineno"> 4907</span>&#160;<span class="comment">  Remarks:</span></div>
@@ -5137,12 +5137,12 @@ $(function() {
 <div class="line"><a name="l05065"></a><span class="lineno"> 5065</span>&#160;};</div>
 <div class="line"><a name="l05066"></a><span class="lineno"> 5066</span>&#160; </div>
 <div class="line"><a name="l05067"></a><span class="lineno"> 5067</span>&#160;<span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___mesh_ngon_iterator.html">ON_MeshNgonIterator</a></div>
-<div class="line"><a name="l05068"></a><span class="lineno"><a class="line" href="class_o_n___mesh_ngon_iterator.html"> 5068</a></span>&#160;{</div>
-<div class="line"><a name="l05069"></a><span class="lineno"> 5069</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l05068"></a><span class="lineno"> 5068</span>&#160;{</div>
+<div class="line"><a name="l05069"></a><span class="lineno"><a class="line" href="class_o_n___mesh_ngon_iterator.html"> 5069</a></span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l05070"></a><span class="lineno"> 5070</span>&#160; </div>
 <div class="line"><a name="l05071"></a><span class="lineno"> 5071</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="class_o_n___mesh_ngon_iterator.html">ON_MeshNgonIterator</a> EmptyMeshNgonIterator;</div>
-<div class="line"><a name="l05072"></a><span class="lineno"><a class="line" href="class_o_n___mesh_ngon_iterator.html#a61979a27d44f43b483dea41671d6f84b"> 5072</a></span>&#160; </div>
-<div class="line"><a name="l05073"></a><span class="lineno"> 5073</span>&#160;  <a class="code" href="class_o_n___mesh_ngon_iterator.html">ON_MeshNgonIterator</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l05072"></a><span class="lineno"> 5072</span>&#160; </div>
+<div class="line"><a name="l05073"></a><span class="lineno"><a class="line" href="class_o_n___mesh_ngon_iterator.html#a61979a27d44f43b483dea41671d6f84b"> 5073</a></span>&#160;  <a class="code" href="class_o_n___mesh_ngon_iterator.html">ON_MeshNgonIterator</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l05074"></a><span class="lineno"> 5074</span>&#160;  ~<a class="code" href="class_o_n___mesh_ngon_iterator.html">ON_MeshNgonIterator</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l05075"></a><span class="lineno"> 5075</span>&#160;  </div>
 <div class="line"><a name="l05076"></a><span class="lineno"> 5076</span>&#160;  <a class="code" href="class_o_n___mesh_ngon_iterator.html">ON_MeshNgonIterator</a>(</div>
@@ -5287,12 +5287,12 @@ $(function() {
 <div class="line"><a name="l05215"></a><span class="lineno"> 5215</span>&#160;};</div>
 <div class="line"><a name="l05216"></a><span class="lineno"> 5216</span>&#160; </div>
 <div class="line"><a name="l05217"></a><span class="lineno"> 5217</span>&#160;<span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___mesh_component_ref.html">ON_MeshComponentRef</a> : <span class="keyword">public</span> <a class="code" href="class_o_n___geometry.html">ON_Geometry</a></div>
-<div class="line"><a name="l05218"></a><span class="lineno"><a class="line" href="class_o_n___mesh_component_ref.html"> 5218</a></span>&#160;{</div>
-<div class="line"><a name="l05219"></a><span class="lineno"> 5219</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#gaeec70151e703b808ab57d0626db20e1f">ON_OBJECT_DECLARE</a>(<a class="code" href="class_o_n___mesh_component_ref.html">ON_MeshComponentRef</a>);</div>
+<div class="line"><a name="l05218"></a><span class="lineno"> 5218</span>&#160;{</div>
+<div class="line"><a name="l05219"></a><span class="lineno"><a class="line" href="class_o_n___mesh_component_ref.html"> 5219</a></span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#gaeec70151e703b808ab57d0626db20e1f">ON_OBJECT_DECLARE</a>(<a class="code" href="class_o_n___mesh_component_ref.html">ON_MeshComponentRef</a>);</div>
 <div class="line"><a name="l05220"></a><span class="lineno"> 5220</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l05221"></a><span class="lineno"> 5221</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="class_o_n___mesh_component_ref.html">ON_MeshComponentRef</a> <a class="code" href="group__open_n_u_r_b_s.html#gga6f5c1d4d88bb5eccd2afaacde27f9ef3ac9f88e098f6fe4e4e112eeb05ccb9671">Unset</a>;</div>
-<div class="line"><a name="l05222"></a><span class="lineno"><a class="line" href="class_o_n___mesh_component_ref.html#aad6f5b0c9a89120530ca33ea0b0dca7b"> 5222</a></span>&#160; </div>
-<div class="line"><a name="l05223"></a><span class="lineno"> 5223</span>&#160;  <a class="code" href="class_o_n___mesh_component_ref.html">ON_MeshComponentRef</a>();</div>
+<div class="line"><a name="l05222"></a><span class="lineno"> 5222</span>&#160; </div>
+<div class="line"><a name="l05223"></a><span class="lineno"><a class="line" href="class_o_n___mesh_component_ref.html#aad6f5b0c9a89120530ca33ea0b0dca7b"> 5223</a></span>&#160;  <a class="code" href="class_o_n___mesh_component_ref.html">ON_MeshComponentRef</a>();</div>
 <div class="line"><a name="l05224"></a><span class="lineno"> 5224</span>&#160;  <a class="code" href="class_o_n___mesh_component_ref.html">ON_MeshComponentRef</a>(</div>
 <div class="line"><a name="l05225"></a><span class="lineno"> 5225</span>&#160;    <span class="keyword">const</span> <span class="keyword">class</span> <a class="code" href="class_o_n___mesh.html">ON_Mesh</a>* mesh,</div>
 <div class="line"><a name="l05226"></a><span class="lineno"> 5226</span>&#160;    <a class="code" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a> ci </div>
@@ -6025,8 +6025,8 @@ $(function() {
 <div class="line"><a name="l05953"></a><span class="lineno"> 5953</span>&#160;          );</div>
 <div class="line"><a name="l05954"></a><span class="lineno"> 5954</span>&#160; </div>
 <div class="line"><a name="l05955"></a><span class="lineno"> 5955</span>&#160;<span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___mesh_x_point.html">ON_MeshXPoint</a></div>
-<div class="line"><a name="l05956"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html"> 5956</a></span>&#160;{</div>
-<div class="line"><a name="l05957"></a><span class="lineno"> 5957</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l05956"></a><span class="lineno"> 5956</span>&#160;{</div>
+<div class="line"><a name="l05957"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html"> 5957</a></span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l05958"></a><span class="lineno"> 5958</span>&#160;  <span class="comment">// this class must not have a vtable.</span></div>
 <div class="line"><a name="l05959"></a><span class="lineno"> 5959</span>&#160;  <a class="code" href="class_o_n___mesh_x_point.html">ON_MeshXPoint</a>();</div>
 <div class="line"><a name="l05960"></a><span class="lineno"> 5960</span>&#160; </div>
@@ -6115,11 +6115,11 @@ $(function() {
 <div class="line"><a name="l06043"></a><span class="lineno"> 6043</span>&#160; </div>
 <div class="line"><a name="l06044"></a><span class="lineno"> 6044</span>&#160;  <span class="comment">// m_point must be the first data member in this class.</span></div>
 <div class="line"><a name="l06045"></a><span class="lineno"> 6045</span>&#160;  <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a> m_point;</div>
-<div class="line"><a name="l06046"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a3c7e7ae9fdfc3878a9c8b66992c100be"> 6046</a></span>&#160; </div>
-<div class="line"><a name="l06047"></a><span class="lineno"> 6047</span>&#160;  <span class="comment">// m_event_sn must immediately follow m_point.</span></div>
+<div class="line"><a name="l06046"></a><span class="lineno"> 6046</span>&#160; </div>
+<div class="line"><a name="l06047"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a3c7e7ae9fdfc3878a9c8b66992c100be"> 6047</a></span>&#160;  <span class="comment">// m_event_sn must immediately follow m_point.</span></div>
 <div class="line"><a name="l06048"></a><span class="lineno"> 6048</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a> m_event_sn;</div>
-<div class="line"><a name="l06049"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a36de9a586916bba1dbccf529aa9df451"> 6049</a></span>&#160;  </div>
-<div class="line"><a name="l06050"></a><span class="lineno"> 6050</span>&#160;  <span class="comment">// The bits of (m_status_corner_mask &amp; m_point_status) are set to</span></div>
+<div class="line"><a name="l06049"></a><span class="lineno"> 6049</span>&#160;  </div>
+<div class="line"><a name="l06050"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a36de9a586916bba1dbccf529aa9df451"> 6050</a></span>&#160;  <span class="comment">// The bits of (m_status_corner_mask &amp; m_point_status) are set to</span></div>
 <div class="line"><a name="l06051"></a><span class="lineno"> 6051</span>&#160;  <span class="comment">// identify the corner or edge of the facet the mesh-plane</span></div>
 <div class="line"><a name="l06052"></a><span class="lineno"> 6052</span>&#160;  <span class="comment">// intersection point lies on. Below &quot;Cn&quot; identifies a corner of</span></div>
 <div class="line"><a name="l06053"></a><span class="lineno"> 6053</span>&#160;  <span class="comment">// the facet: Cn = mesh.m_V[face.vi[n]], n = 0, 1, 2 or 3.</span></div>
@@ -6162,11 +6162,11 @@ $(function() {
 <div class="line"><a name="l06090"></a><span class="lineno"> 6090</span>&#160;  <span class="comment">//     set if the triangle facet edge connecting C2 and C0 is in the</span></div>
 <div class="line"><a name="l06091"></a><span class="lineno"> 6091</span>&#160;  <span class="comment">//     plane and the point is at the start or end of this edge.</span></div>
 <div class="line"><a name="l06092"></a><span class="lineno"> 6092</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_point_status;</div>
-<div class="line"><a name="l06093"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a463cd147f26fc161bda1602f267e5223"> 6093</a></span>&#160; </div>
-<div class="line"><a name="l06094"></a><span class="lineno"> 6094</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l06093"></a><span class="lineno"> 6093</span>&#160; </div>
+<div class="line"><a name="l06094"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a463cd147f26fc161bda1602f267e5223"> 6094</a></span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l06095"></a><span class="lineno"> 6095</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_o_n___mesh_x_point_pool.html">ON_MeshXPointPool</a>;</div>
-<div class="line"><a name="l06096"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a8c376cdaec101fa8cafa7ae146e07bcc"> 6096</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_private_tag; <span class="comment">// used internally</span></div>
-<div class="line"><a name="l06097"></a><span class="lineno"> 6097</span>&#160; </div>
+<div class="line"><a name="l06096"></a><span class="lineno"> 6096</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_private_tag; <span class="comment">// used internally</span></div>
+<div class="line"><a name="l06097"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a8c376cdaec101fa8cafa7ae146e07bcc"> 6097</a></span>&#160; </div>
 <div class="line"><a name="l06098"></a><span class="lineno"> 6098</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l06099"></a><span class="lineno"> 6099</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_reserved1;</div>
 <div class="line"><a name="l06100"></a><span class="lineno"> 6100</span>&#160; </div>
@@ -6177,30 +6177,30 @@ $(function() {
 <div class="line"><a name="l06105"></a><span class="lineno"> 6105</span>&#160;  <span class="comment">// an ON_MeshXPoint class is copied. Nothing else in opennurbs</span></div>
 <div class="line"><a name="l06106"></a><span class="lineno"> 6106</span>&#160;  <span class="comment">// modifies or uses this value.</span></div>
 <div class="line"><a name="l06107"></a><span class="lineno"> 6107</span>&#160;  ON__INT_PTR m_tag;</div>
-<div class="line"><a name="l06108"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a7791c6b8042e07d60f7e47a458acd342"> 6108</a></span>&#160; </div>
-<div class="line"><a name="l06109"></a><span class="lineno"> 6109</span>&#160;  ON__UINT_PTR m_mesh_id;</div>
-<div class="line"><a name="l06110"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#abcbfe1db500825c71e54c3d78050af52"> 6110</a></span>&#160; </div>
-<div class="line"><a name="l06111"></a><span class="lineno"> 6111</span>&#160; </div>
+<div class="line"><a name="l06108"></a><span class="lineno"> 6108</span>&#160; </div>
+<div class="line"><a name="l06109"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a7791c6b8042e07d60f7e47a458acd342"> 6109</a></span>&#160;  ON__UINT_PTR m_mesh_id;</div>
+<div class="line"><a name="l06110"></a><span class="lineno"> 6110</span>&#160; </div>
+<div class="line"><a name="l06111"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#abcbfe1db500825c71e54c3d78050af52"> 6111</a></span>&#160; </div>
 <div class="line"><a name="l06112"></a><span class="lineno"> 6112</span>&#160; </div>
 <div class="line"><a name="l06113"></a><span class="lineno"> 6113</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_mesh_facet_index;</div>
-<div class="line"><a name="l06114"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a7ff6d59fdaf1701796db146348a5f658"> 6114</a></span>&#160;  <span class="comment">// If (0x0F &amp; m_status_bits) = 1, 2, 4 or 8, then</span></div>
-<div class="line"><a name="l06115"></a><span class="lineno"> 6115</span>&#160;  <span class="comment">// m_mesh_vertex_index = index of the mesh&#39;s vertex.</span></div>
+<div class="line"><a name="l06114"></a><span class="lineno"> 6114</span>&#160;  <span class="comment">// If (0x0F &amp; m_status_bits) = 1, 2, 4 or 8, then</span></div>
+<div class="line"><a name="l06115"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a7ff6d59fdaf1701796db146348a5f658"> 6115</a></span>&#160;  <span class="comment">// m_mesh_vertex_index = index of the mesh&#39;s vertex.</span></div>
 <div class="line"><a name="l06116"></a><span class="lineno"> 6116</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_mesh_vertex_index;</div>
-<div class="line"><a name="l06117"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a13d0e28930aa9ca69a5949cafd56993b"> 6117</a></span>&#160; </div>
-<div class="line"><a name="l06118"></a><span class="lineno"> 6118</span>&#160;  <span class="comment">// Surface parameters</span></div>
+<div class="line"><a name="l06117"></a><span class="lineno"> 6117</span>&#160; </div>
+<div class="line"><a name="l06118"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a13d0e28930aa9ca69a5949cafd56993b"> 6118</a></span>&#160;  <span class="comment">// Surface parameters</span></div>
 <div class="line"><a name="l06119"></a><span class="lineno"> 6119</span>&#160;  <span class="comment">//  If no surface parameters are on the mesh, m_S = (0.0,0.0).</span></div>
 <div class="line"><a name="l06120"></a><span class="lineno"> 6120</span>&#160;  <a class="code" href="class_o_n__2d_point.html">ON_2dPoint</a> m_S;</div>
-<div class="line"><a name="l06121"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a6bae66c8566bec9f5efb7fcfce121083"> 6121</a></span>&#160; </div>
-<div class="line"><a name="l06122"></a><span class="lineno"> 6122</span>&#160;  <span class="comment">// The values of m_bc[] are the mesh facet&#39;s barycentric coordinates</span></div>
+<div class="line"><a name="l06121"></a><span class="lineno"> 6121</span>&#160; </div>
+<div class="line"><a name="l06122"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a6bae66c8566bec9f5efb7fcfce121083"> 6122</a></span>&#160;  <span class="comment">// The values of m_bc[] are the mesh facet&#39;s barycentric coordinates</span></div>
 <div class="line"><a name="l06123"></a><span class="lineno"> 6123</span>&#160;  <span class="comment">// for the point.</span></div>
 <div class="line"><a name="l06124"></a><span class="lineno"> 6124</span>&#160;  <span class="keywordtype">double</span> m_bc[4];</div>
-<div class="line"><a name="l06125"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a7dad381e05d943e0fa7a0d7d6abc666b"> 6125</a></span>&#160; </div>
-<div class="line"><a name="l06126"></a><span class="lineno"> 6126</span>&#160;  <span class="comment">// The m_p[] pointers are used as previous and next pointers when</span></div>
+<div class="line"><a name="l06125"></a><span class="lineno"> 6125</span>&#160; </div>
+<div class="line"><a name="l06126"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a7dad381e05d943e0fa7a0d7d6abc666b"> 6126</a></span>&#160;  <span class="comment">// The m_p[] pointers are used as previous and next pointers when</span></div>
 <div class="line"><a name="l06127"></a><span class="lineno"> 6127</span>&#160;  <span class="comment">// connecting events in an intersection component. </span></div>
 <div class="line"><a name="l06128"></a><span class="lineno"> 6128</span>&#160;  <span class="comment">// See ON_MeshXPoint::JoinPoints() for more details.</span></div>
 <div class="line"><a name="l06129"></a><span class="lineno"> 6129</span>&#160;  <span class="keyword">class </span><a class="code" href="class_o_n___mesh_x_point.html">ON_MeshXPoint</a>* m_p[2]; <span class="comment">// (previous,next)</span></div>
-<div class="line"><a name="l06130"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a9c184de7c67152acc9cf59b3b6f6c577"> 6130</a></span>&#160; </div>
-<div class="line"><a name="l06131"></a><span class="lineno"> 6131</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l06130"></a><span class="lineno"> 6130</span>&#160; </div>
+<div class="line"><a name="l06131"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a9c184de7c67152acc9cf59b3b6f6c577"> 6131</a></span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l06132"></a><span class="lineno"> 6132</span>&#160;<span class="comment">  ////////////////////////////////////////////////////////////////</span></div>
 <div class="line"><a name="l06133"></a><span class="lineno"> 6133</span>&#160;<span class="comment"></span>  <span class="comment">//</span></div>
 <div class="line"><a name="l06134"></a><span class="lineno"> 6134</span>&#160;  <span class="comment">//</span></div>
@@ -6210,9 +6210,9 @@ $(function() {
 <div class="line"><a name="l06138"></a><span class="lineno"> 6138</span>&#160;  <span class="comment">//   ON_MeshXPlane::IntersectPlane(): m_other_id = plane_id</span></div>
 <div class="line"><a name="l06139"></a><span class="lineno"> 6139</span>&#160; </div>
 <div class="line"><a name="l06140"></a><span class="lineno"> 6140</span>&#160;  <span class="keywordtype">double</span> m_other_parameter;</div>
-<div class="line"><a name="l06141"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a553c80ae5d81bf43913f4b42ac781ef1"> 6141</a></span>&#160;  ON__UINT_PTR m_other_id;</div>
-<div class="line"><a name="l06142"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a957f00cc19f7eacc37290d669b8c5a44"> 6142</a></span>&#160; </div>
-<div class="line"><a name="l06143"></a><span class="lineno"> 6143</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l06141"></a><span class="lineno"> 6141</span>&#160;  ON__UINT_PTR m_other_id;</div>
+<div class="line"><a name="l06142"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a553c80ae5d81bf43913f4b42ac781ef1"> 6142</a></span>&#160; </div>
+<div class="line"><a name="l06143"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a957f00cc19f7eacc37290d669b8c5a44"> 6143</a></span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l06144"></a><span class="lineno"> 6144</span>&#160;  ON__UINT_PTR  m_reserved2;</div>
 <div class="line"><a name="l06145"></a><span class="lineno"> 6145</span>&#160; </div>
 <div class="line"><a name="l06146"></a><span class="lineno"> 6146</span>&#160;<span class="keyword">public</span>:</div>
@@ -6222,35 +6222,35 @@ $(function() {
 <div class="line"><a name="l06150"></a><span class="lineno"> 6150</span>&#160;  <span class="comment">//</span></div>
 <div class="line"><a name="l06151"></a><span class="lineno"> 6151</span>&#160; </div>
 <div class="line"><a name="l06152"></a><span class="lineno"> 6152</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_status_corner_value[4];   <span class="comment">// = {0x0001,0x0002,0x0004,0x0008}</span></div>
-<div class="line"><a name="l06153"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#ad35d100cb6e587dde9e271b24f162dfa"> 6153</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_status_corner_value_mask; <span class="comment">// = 0x000F</span></div>
-<div class="line"><a name="l06154"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a2298504b36a5842018e21e17fd5a7ee1"> 6154</a></span>&#160; </div>
-<div class="line"><a name="l06155"></a><span class="lineno"> 6155</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_status_at_corner;         <span class="comment">// = 0x0010</span></div>
-<div class="line"><a name="l06156"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a4d0c5eb0aee7dd79811f74568a141e1e"> 6156</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_status_corner_mask;       <span class="comment">// = 0x001F</span></div>
-<div class="line"><a name="l06157"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a2004594e3fcb6039177c7497187fc1fa"> 6157</a></span>&#160; </div>
-<div class="line"><a name="l06158"></a><span class="lineno"> 6158</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_status_olap_edge_start;   <span class="comment">// = 0x0020</span></div>
-<div class="line"><a name="l06159"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#ab447cfcae0872851ee8a7a0409449a46"> 6159</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_status_olap_edge_end;     <span class="comment">// = 0x0040</span></div>
-<div class="line"><a name="l06160"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a0cc64adf17b89ac228d69d48e91c5f45"> 6160</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_status_olap_edge_mask;    <span class="comment">// = 0x0060</span></div>
-<div class="line"><a name="l06161"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#ae7fcffcdc8d416ea12e10bee716c506f"> 6161</a></span>&#160; </div>
-<div class="line"><a name="l06162"></a><span class="lineno"> 6162</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_status_olap_facet_corner; <span class="comment">// = 0x0080</span></div>
-<div class="line"><a name="l06163"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a2484b88cfb351d201459aa0722fdce84"> 6163</a></span>&#160; </div>
-<div class="line"><a name="l06164"></a><span class="lineno"> 6164</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_status_degenerate;        <span class="comment">// = 0x0100</span></div>
-<div class="line"><a name="l06165"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a2419f9944982dfac332edba92138b13e"> 6165</a></span>&#160;};</div>
-<div class="line"><a name="l06166"></a><span class="lineno"> 6166</span>&#160; </div>
+<div class="line"><a name="l06153"></a><span class="lineno"> 6153</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_status_corner_value_mask; <span class="comment">// = 0x000F</span></div>
+<div class="line"><a name="l06154"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#ad35d100cb6e587dde9e271b24f162dfa"> 6154</a></span>&#160; </div>
+<div class="line"><a name="l06155"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a2298504b36a5842018e21e17fd5a7ee1"> 6155</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_status_at_corner;         <span class="comment">// = 0x0010</span></div>
+<div class="line"><a name="l06156"></a><span class="lineno"> 6156</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_status_corner_mask;       <span class="comment">// = 0x001F</span></div>
+<div class="line"><a name="l06157"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a4d0c5eb0aee7dd79811f74568a141e1e"> 6157</a></span>&#160; </div>
+<div class="line"><a name="l06158"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a2004594e3fcb6039177c7497187fc1fa"> 6158</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_status_olap_edge_start;   <span class="comment">// = 0x0020</span></div>
+<div class="line"><a name="l06159"></a><span class="lineno"> 6159</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_status_olap_edge_end;     <span class="comment">// = 0x0040</span></div>
+<div class="line"><a name="l06160"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#ab447cfcae0872851ee8a7a0409449a46"> 6160</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_status_olap_edge_mask;    <span class="comment">// = 0x0060</span></div>
+<div class="line"><a name="l06161"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a0cc64adf17b89ac228d69d48e91c5f45"> 6161</a></span>&#160; </div>
+<div class="line"><a name="l06162"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#ae7fcffcdc8d416ea12e10bee716c506f"> 6162</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_status_olap_facet_corner; <span class="comment">// = 0x0080</span></div>
+<div class="line"><a name="l06163"></a><span class="lineno"> 6163</span>&#160; </div>
+<div class="line"><a name="l06164"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a2484b88cfb351d201459aa0722fdce84"> 6164</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_status_degenerate;        <span class="comment">// = 0x0100</span></div>
+<div class="line"><a name="l06165"></a><span class="lineno"> 6165</span>&#160;};</div>
+<div class="line"><a name="l06166"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point.html#a2419f9944982dfac332edba92138b13e"> 6166</a></span>&#160; </div>
 <div class="line"><a name="l06167"></a><span class="lineno"> 6167</span>&#160;<span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___mesh_x_point_pair.html">ON_MeshXPointPair</a></div>
-<div class="line"><a name="l06168"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point_pair.html"> 6168</a></span>&#160;{</div>
-<div class="line"><a name="l06169"></a><span class="lineno"> 6169</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l06168"></a><span class="lineno"> 6168</span>&#160;{</div>
+<div class="line"><a name="l06169"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point_pair.html"> 6169</a></span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l06170"></a><span class="lineno"> 6170</span>&#160;  <span class="keyword">class </span><a class="code" href="class_o_n___mesh_x_point.html">ON_MeshXPoint</a>* m_mxpoint[2];</div>
-<div class="line"><a name="l06171"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point_pair.html#a69fdec56890f95f8dd5a26a01fae5be4"> 6171</a></span>&#160;};</div>
-<div class="line"><a name="l06172"></a><span class="lineno"> 6172</span>&#160; </div>
+<div class="line"><a name="l06171"></a><span class="lineno"> 6171</span>&#160;};</div>
+<div class="line"><a name="l06172"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point_pair.html#a69fdec56890f95f8dd5a26a01fae5be4"> 6172</a></span>&#160; </div>
 <div class="line"><a name="l06173"></a><span class="lineno"> 6173</span>&#160; </div>
 <div class="line"><a name="l06174"></a><span class="lineno"> 6174</span>&#160;<span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___mesh_x_point_pool_iterator.html">ON_MeshXPointPoolIterator</a> : <span class="keyword">private</span> <a class="code" href="class_o_n___fixed_size_pool_iterator.html">ON_FixedSizePoolIterator</a></div>
-<div class="line"><a name="l06175"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point_pool_iterator.html"> 6175</a></span>&#160;{</div>
-<div class="line"><a name="l06176"></a><span class="lineno"> 6176</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l06175"></a><span class="lineno"> 6175</span>&#160;{</div>
+<div class="line"><a name="l06176"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point_pool_iterator.html"> 6176</a></span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l06177"></a><span class="lineno"> 6177</span>&#160;  <a class="code" href="class_o_n___mesh_x_point_pool_iterator.html">ON_MeshXPointPoolIterator</a>( <span class="keyword">const</span> <span class="keyword">class</span> <a class="code" href="class_o_n___mesh_x_point_pool.html">ON_MeshXPointPool</a>&amp; mxpointpool );</div>
 <div class="line"><a name="l06178"></a><span class="lineno"> 6178</span>&#160; </div>
 <div class="line"><a name="l06179"></a><span class="lineno"> 6179</span>&#160;  <span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="class_o_n___mesh_x_point_pool.html">ON_MeshXPointPool</a>&amp; m_mxpointpool;</div>
-<div class="line"><a name="l06180"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point_pool_iterator.html#a14de731e1674baf04d5c98d11b5f717b"> 6180</a></span>&#160; </div>
-<div class="line"><a name="l06181"></a><span class="lineno"> 6181</span>&#160;  <span class="keyword">class </span><a class="code" href="class_o_n___mesh_x_point.html">ON_MeshXPoint</a>* FirstPoint();</div>
+<div class="line"><a name="l06180"></a><span class="lineno"> 6180</span>&#160; </div>
+<div class="line"><a name="l06181"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point_pool_iterator.html#a14de731e1674baf04d5c98d11b5f717b"> 6181</a></span>&#160;  <span class="keyword">class </span><a class="code" href="class_o_n___mesh_x_point.html">ON_MeshXPoint</a>* FirstPoint();</div>
 <div class="line"><a name="l06182"></a><span class="lineno"> 6182</span>&#160;  <span class="keyword">class </span><a class="code" href="class_o_n___mesh_x_point.html">ON_MeshXPoint</a>* NextPoint();</div>
 <div class="line"><a name="l06183"></a><span class="lineno"> 6183</span>&#160; </div>
 <div class="line"><a name="l06184"></a><span class="lineno"> 6184</span>&#160;<span class="keyword">private</span>:</div>
@@ -6259,10 +6259,10 @@ $(function() {
 <div class="line"><a name="l06187"></a><span class="lineno"> 6187</span>&#160;};</div>
 <div class="line"><a name="l06188"></a><span class="lineno"> 6188</span>&#160; </div>
 <div class="line"><a name="l06189"></a><span class="lineno"> 6189</span>&#160;<span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___mesh_x_point_pool.html">ON_MeshXPointPool</a> : <span class="keyword">private</span> <a class="code" href="class_o_n___fixed_size_pool.html">ON_FixedSizePool</a></div>
-<div class="line"><a name="l06190"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point_pool.html"> 6190</a></span>&#160;{</div>
-<div class="line"><a name="l06191"></a><span class="lineno"> 6191</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_o_n___mesh_x_point_pool_iterator.html">ON_MeshXPointPoolIterator</a>;</div>
-<div class="line"><a name="l06192"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point_pool.html#a6053ed0d0d6492081de9c52b18b8d9a5"> 6192</a></span>&#160; </div>
-<div class="line"><a name="l06193"></a><span class="lineno"> 6193</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l06190"></a><span class="lineno"> 6190</span>&#160;{</div>
+<div class="line"><a name="l06191"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point_pool.html"> 6191</a></span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_o_n___mesh_x_point_pool_iterator.html">ON_MeshXPointPoolIterator</a>;</div>
+<div class="line"><a name="l06192"></a><span class="lineno"> 6192</span>&#160; </div>
+<div class="line"><a name="l06193"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_point_pool.html#a6053ed0d0d6492081de9c52b18b8d9a5"> 6193</a></span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l06194"></a><span class="lineno"> 6194</span>&#160;  <a class="code" href="class_o_n___mesh_x_point_pool.html">ON_MeshXPointPool</a>();</div>
 <div class="line"><a name="l06195"></a><span class="lineno"> 6195</span>&#160; </div>
 <div class="line"><a name="l06196"></a><span class="lineno"> 6196</span>&#160;  <span class="comment">/*</span></div>
@@ -6357,8 +6357,8 @@ $(function() {
 <div class="line"><a name="l06285"></a><span class="lineno"> 6285</span>&#160;};</div>
 <div class="line"><a name="l06286"></a><span class="lineno"> 6286</span>&#160; </div>
 <div class="line"><a name="l06287"></a><span class="lineno"> 6287</span>&#160;<span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___mesh_x.html">ON_MeshX</a></div>
-<div class="line"><a name="l06288"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html"> 6288</a></span>&#160;{</div>
-<div class="line"><a name="l06289"></a><span class="lineno"> 6289</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l06288"></a><span class="lineno"> 6288</span>&#160;{</div>
+<div class="line"><a name="l06289"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html"> 6289</a></span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l06290"></a><span class="lineno"> 6290</span>&#160; </div>
 <div class="line"><a name="l06291"></a><span class="lineno"> 6291</span>&#160;  <span class="comment">/*</span></div>
 <div class="line"><a name="l06292"></a><span class="lineno"> 6292</span>&#160;<span class="comment">  Parameters:</span></div>
@@ -6455,43 +6455,43 @@ $(function() {
 <div class="line"><a name="l06383"></a><span class="lineno"> 6383</span>&#160;  <span class="comment">// convienience of the caller.  The ON_MeshX class never</span></div>
 <div class="line"><a name="l06384"></a><span class="lineno"> 6384</span>&#160;  <span class="comment">// uses this pointer</span></div>
 <div class="line"><a name="l06385"></a><span class="lineno"> 6385</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___mesh.html">ON_Mesh</a>* m_mesh;</div>
-<div class="line"><a name="l06386"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#a6be034c03e2085018ea9a86c36ccffc5"> 6386</a></span>&#160; </div>
-<div class="line"><a name="l06387"></a><span class="lineno"> 6387</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___r_tree.html">ON_RTree</a>* m_mesh_face_rtree;</div>
-<div class="line"><a name="l06388"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#ae43b89a20cec23b7168f7467fb23ec3c"> 6388</a></span>&#160; </div>
-<div class="line"><a name="l06389"></a><span class="lineno"> 6389</span>&#160;  <span class="comment">// These m_mesh_* fields save the information need to calculate</span></div>
+<div class="line"><a name="l06386"></a><span class="lineno"> 6386</span>&#160; </div>
+<div class="line"><a name="l06387"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#a6be034c03e2085018ea9a86c36ccffc5"> 6387</a></span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___r_tree.html">ON_RTree</a>* m_mesh_face_rtree;</div>
+<div class="line"><a name="l06388"></a><span class="lineno"> 6388</span>&#160; </div>
+<div class="line"><a name="l06389"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#ae43b89a20cec23b7168f7467fb23ec3c"> 6389</a></span>&#160;  <span class="comment">// These m_mesh_* fields save the information need to calculate</span></div>
 <div class="line"><a name="l06390"></a><span class="lineno"> 6390</span>&#160;  <span class="comment">// mesh plane interesections.  The values of these fields are</span></div>
 <div class="line"><a name="l06391"></a><span class="lineno"> 6391</span>&#160;  <span class="comment">// set in the ON_MeshX constructors.</span></div>
 <div class="line"><a name="l06392"></a><span class="lineno"> 6392</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_mesh_Vcnt;</div>
-<div class="line"><a name="l06393"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#af0c92259791072f2335aa25585a7d346"> 6393</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_mesh_Fcnt;</div>
-<div class="line"><a name="l06394"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#a442ab27cd0490b23cb53640f1e7b4f8f"> 6394</a></span>&#160;  </div>
-<div class="line"><a name="l06395"></a><span class="lineno"> 6395</span>&#160;  <span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>*  m_mesh_dV;</div>
-<div class="line"><a name="l06396"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#aae6242fd438474fc22307b3a63f12138"> 6396</a></span>&#160;  <span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="class_o_n__3f_point.html">ON_3fPoint</a>*  m_mesh_fV;</div>
-<div class="line"><a name="l06397"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#acd0fd3c1393d4db895fd916898286e91"> 6397</a></span>&#160;  <span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="class_o_n__2d_point.html">ON_2dPoint</a>*  m_mesh_S;</div>
-<div class="line"><a name="l06398"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#a4e64b020e4bc1656cdc9d80faa90a95d"> 6398</a></span>&#160;  <span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="class_o_n___mesh_face.html">ON_MeshFace</a>* m_mesh_F;</div>
-<div class="line"><a name="l06399"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#a76a246d003b1eb016ea0d97359d838b3"> 6399</a></span>&#160; </div>
-<div class="line"><a name="l06400"></a><span class="lineno"> 6400</span>&#160;  <a class="code" href="class_o_n___bounding_box.html">ON_BoundingBox</a> m_mesh_bbox;</div>
-<div class="line"><a name="l06401"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#a732f4cdab51fbe2e0d67794aa3c844dc"> 6401</a></span>&#160; </div>
-<div class="line"><a name="l06402"></a><span class="lineno"> 6402</span>&#160;  <span class="comment">// The value of the mesh_id parameter passed to the</span></div>
+<div class="line"><a name="l06393"></a><span class="lineno"> 6393</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_mesh_Fcnt;</div>
+<div class="line"><a name="l06394"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#af0c92259791072f2335aa25585a7d346"> 6394</a></span>&#160;  </div>
+<div class="line"><a name="l06395"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#a442ab27cd0490b23cb53640f1e7b4f8f"> 6395</a></span>&#160;  <span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>*  m_mesh_dV;</div>
+<div class="line"><a name="l06396"></a><span class="lineno"> 6396</span>&#160;  <span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="class_o_n__3f_point.html">ON_3fPoint</a>*  m_mesh_fV;</div>
+<div class="line"><a name="l06397"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#aae6242fd438474fc22307b3a63f12138"> 6397</a></span>&#160;  <span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="class_o_n__2d_point.html">ON_2dPoint</a>*  m_mesh_S;</div>
+<div class="line"><a name="l06398"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#acd0fd3c1393d4db895fd916898286e91"> 6398</a></span>&#160;  <span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="class_o_n___mesh_face.html">ON_MeshFace</a>* m_mesh_F;</div>
+<div class="line"><a name="l06399"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#a4e64b020e4bc1656cdc9d80faa90a95d"> 6399</a></span>&#160; </div>
+<div class="line"><a name="l06400"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#a76a246d003b1eb016ea0d97359d838b3"> 6400</a></span>&#160;  <a class="code" href="class_o_n___bounding_box.html">ON_BoundingBox</a> m_mesh_bbox;</div>
+<div class="line"><a name="l06401"></a><span class="lineno"> 6401</span>&#160; </div>
+<div class="line"><a name="l06402"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#a732f4cdab51fbe2e0d67794aa3c844dc"> 6402</a></span>&#160;  <span class="comment">// The value of the mesh_id parameter passed to the</span></div>
 <div class="line"><a name="l06403"></a><span class="lineno"> 6403</span>&#160;  <span class="comment">// ON_MeshX() constructor is saved in m_mesh_id</span></div>
 <div class="line"><a name="l06404"></a><span class="lineno"> 6404</span>&#160;  <span class="comment">// and the value is assigned to ON_MeshX.m_mesh_id</span></div>
 <div class="line"><a name="l06405"></a><span class="lineno"> 6405</span>&#160;  <span class="comment">// when intersection events are added.</span></div>
 <div class="line"><a name="l06406"></a><span class="lineno"> 6406</span>&#160;  <span class="keyword">const</span> ON__UINT_PTR m_mesh_id;</div>
-<div class="line"><a name="l06407"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#aadb5a4fed919679319873a1ebba4d6bb"> 6407</a></span>&#160; </div>
-<div class="line"><a name="l06408"></a><span class="lineno"> 6408</span>&#160;  <span class="comment">// The ON_MeshX constructor sets m_tag to zero.</span></div>
+<div class="line"><a name="l06407"></a><span class="lineno"> 6407</span>&#160; </div>
+<div class="line"><a name="l06408"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#aadb5a4fed919679319873a1ebba4d6bb"> 6408</a></span>&#160;  <span class="comment">// The ON_MeshX constructor sets m_tag to zero.</span></div>
 <div class="line"><a name="l06409"></a><span class="lineno"> 6409</span>&#160;  <span class="comment">// Nothing in opennurbs modifies or uses this value.</span></div>
 <div class="line"><a name="l06410"></a><span class="lineno"> 6410</span>&#160;  ON__UINT_PTR m_tag;</div>
-<div class="line"><a name="l06411"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#a6369a5d61d216d9b7bb93c6f0527f328"> 6411</a></span>&#160; </div>
-<div class="line"><a name="l06412"></a><span class="lineno"> 6412</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l06411"></a><span class="lineno"> 6411</span>&#160; </div>
+<div class="line"><a name="l06412"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#a6369a5d61d216d9b7bb93c6f0527f328"> 6412</a></span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l06413"></a><span class="lineno"> 6413</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_reserved1[7];</div>
-<div class="line"><a name="l06414"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#aba9cdde336a0cc4c8b44a77494315481"> 6414</a></span>&#160; </div>
-<div class="line"><a name="l06415"></a><span class="lineno"> 6415</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_bHaveXform;</div>
-<div class="line"><a name="l06416"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#a34653ce3a03676ad326235de5dcd9411"> 6416</a></span>&#160;  <a class="code" href="class_o_n___xform.html">ON_Xform</a> m_xform;</div>
-<div class="line"><a name="l06417"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#ab8257dfe6b06535f516fccd7f1e2ecfb"> 6417</a></span>&#160;  <a class="code" href="class_o_n___xform.html">ON_Xform</a> m_inverse_xform;</div>
-<div class="line"><a name="l06418"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#a878766a24359b3fab1bf6b09608d76c4"> 6418</a></span>&#160; </div>
-<div class="line"><a name="l06419"></a><span class="lineno"> 6419</span>&#160;  <span class="keywordtype">double</span> m_bc_tolerance; <span class="comment">// default is ON_EPSILON</span></div>
-<div class="line"><a name="l06420"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#a6a54530613eae9dee4100425c39aac08"> 6420</a></span>&#160;  <a class="code" href="class_o_n___surface_properties.html">ON_SurfaceProperties</a> m_surface_properties;</div>
-<div class="line"><a name="l06421"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#a10720a47c9d5b2a061b5203683440fe6"> 6421</a></span>&#160; </div>
-<div class="line"><a name="l06422"></a><span class="lineno"> 6422</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l06414"></a><span class="lineno"> 6414</span>&#160; </div>
+<div class="line"><a name="l06415"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#aba9cdde336a0cc4c8b44a77494315481"> 6415</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_bHaveXform;</div>
+<div class="line"><a name="l06416"></a><span class="lineno"> 6416</span>&#160;  <a class="code" href="class_o_n___xform.html">ON_Xform</a> m_xform;</div>
+<div class="line"><a name="l06417"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#a34653ce3a03676ad326235de5dcd9411"> 6417</a></span>&#160;  <a class="code" href="class_o_n___xform.html">ON_Xform</a> m_inverse_xform;</div>
+<div class="line"><a name="l06418"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#ab8257dfe6b06535f516fccd7f1e2ecfb"> 6418</a></span>&#160; </div>
+<div class="line"><a name="l06419"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#a878766a24359b3fab1bf6b09608d76c4"> 6419</a></span>&#160;  <span class="keywordtype">double</span> m_bc_tolerance; <span class="comment">// default is ON_EPSILON</span></div>
+<div class="line"><a name="l06420"></a><span class="lineno"> 6420</span>&#160;  <a class="code" href="class_o_n___surface_properties.html">ON_SurfaceProperties</a> m_surface_properties;</div>
+<div class="line"><a name="l06421"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#a6a54530613eae9dee4100425c39aac08"> 6421</a></span>&#160; </div>
+<div class="line"><a name="l06422"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x.html#a10720a47c9d5b2a061b5203683440fe6"> 6422</a></span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l06423"></a><span class="lineno"> 6423</span>&#160;  <span class="keywordtype">double</span> m_reserved2[4];</div>
 <div class="line"><a name="l06424"></a><span class="lineno"> 6424</span>&#160; </div>
 <div class="line"><a name="l06425"></a><span class="lineno"> 6425</span>&#160;  <span class="comment">// no implementation</span></div>
@@ -6500,8 +6500,8 @@ $(function() {
 <div class="line"><a name="l06428"></a><span class="lineno"> 6428</span>&#160;};</div>
 <div class="line"><a name="l06429"></a><span class="lineno"> 6429</span>&#160; </div>
 <div class="line"><a name="l06430"></a><span class="lineno"> 6430</span>&#160;<span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___mesh_x_plane.html">ON_MeshXPlane</a> : <span class="keyword">public</span> <a class="code" href="class_o_n___mesh_x.html">ON_MeshX</a></div>
-<div class="line"><a name="l06431"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_plane.html"> 6431</a></span>&#160;{</div>
-<div class="line"><a name="l06432"></a><span class="lineno"> 6432</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l06431"></a><span class="lineno"> 6431</span>&#160;{</div>
+<div class="line"><a name="l06432"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_plane.html"> 6432</a></span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l06433"></a><span class="lineno"> 6433</span>&#160; </div>
 <div class="line"><a name="l06434"></a><span class="lineno"> 6434</span>&#160;  <span class="comment">/*</span></div>
 <div class="line"><a name="l06435"></a><span class="lineno"> 6435</span>&#160;<span class="comment">  Parameters:</span></div>
@@ -6594,8 +6594,8 @@ $(function() {
 <div class="line"><a name="l06522"></a><span class="lineno"> 6522</span>&#160;  ON__UINT_PTR m_reserved;</div>
 <div class="line"><a name="l06523"></a><span class="lineno"> 6523</span>&#160; </div>
 <div class="line"><a name="l06524"></a><span class="lineno"> 6524</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span>ON_MeshXPlaneCache;</div>
-<div class="line"><a name="l06525"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_plane.html#a36ba55781204d03446c409bb33a7f0ad"> 6525</a></span>&#160;  <span class="keyword">class </span>ON_MeshXPlaneCache* m_mxp_cache;</div>
-<div class="line"><a name="l06526"></a><span class="lineno"> 6526</span>&#160;  <span class="keyword">class </span>ON_MeshXPlaneCache* MeshXPlaneCache() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l06525"></a><span class="lineno"> 6525</span>&#160;  <span class="keyword">class </span>ON_MeshXPlaneCache* m_mxp_cache;</div>
+<div class="line"><a name="l06526"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_plane.html#a36ba55781204d03446c409bb33a7f0ad"> 6526</a></span>&#160;  <span class="keyword">class </span>ON_MeshXPlaneCache* MeshXPlaneCache() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l06527"></a><span class="lineno"> 6527</span>&#160; </div>
 <div class="line"><a name="l06528"></a><span class="lineno"> 6528</span>&#160;  <span class="comment">// no implementation</span></div>
 <div class="line"><a name="l06529"></a><span class="lineno"> 6529</span>&#160;  <a class="code" href="class_o_n___mesh_x_plane.html">ON_MeshXPlane</a>(<span class="keyword">const</span> <a class="code" href="class_o_n___mesh_x_plane.html">ON_MeshXPlane</a>&amp;);</div>
@@ -6604,8 +6604,8 @@ $(function() {
 <div class="line"><a name="l06532"></a><span class="lineno"> 6532</span>&#160; </div>
 <div class="line"><a name="l06533"></a><span class="lineno"> 6533</span>&#160; </div>
 <div class="line"><a name="l06534"></a><span class="lineno"> 6534</span>&#160;<span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___mesh_x_line.html">ON_MeshXLine</a> : <span class="keyword">public</span> <a class="code" href="class_o_n___mesh_x.html">ON_MeshX</a></div>
-<div class="line"><a name="l06535"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_line.html"> 6535</a></span>&#160;{</div>
-<div class="line"><a name="l06536"></a><span class="lineno"> 6536</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l06535"></a><span class="lineno"> 6535</span>&#160;{</div>
+<div class="line"><a name="l06536"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_line.html"> 6536</a></span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l06537"></a><span class="lineno"> 6537</span>&#160; </div>
 <div class="line"><a name="l06538"></a><span class="lineno"> 6538</span>&#160;  <span class="comment">/*</span></div>
 <div class="line"><a name="l06539"></a><span class="lineno"> 6539</span>&#160;<span class="comment">  Parameters:</span></div>
@@ -6670,8 +6670,8 @@ $(function() {
 <div class="line"><a name="l06598"></a><span class="lineno"> 6598</span>&#160;  ON__UINT_PTR m_reserved;</div>
 <div class="line"><a name="l06599"></a><span class="lineno"> 6599</span>&#160; </div>
 <div class="line"><a name="l06600"></a><span class="lineno"> 6600</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span>ON_MeshXPlaneCache;</div>
-<div class="line"><a name="l06601"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_line.html#a36ba55781204d03446c409bb33a7f0ad"> 6601</a></span>&#160;  <span class="keyword">class </span>ON_MeshXLineCache* m_mxl_cache;</div>
-<div class="line"><a name="l06602"></a><span class="lineno"> 6602</span>&#160;  <span class="keyword">class </span>ON_MeshXLineCache* MeshXLineCache() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l06601"></a><span class="lineno"> 6601</span>&#160;  <span class="keyword">class </span>ON_MeshXLineCache* m_mxl_cache;</div>
+<div class="line"><a name="l06602"></a><span class="lineno"><a class="line" href="class_o_n___mesh_x_line.html#a36ba55781204d03446c409bb33a7f0ad"> 6602</a></span>&#160;  <span class="keyword">class </span>ON_MeshXLineCache* MeshXLineCache() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l06603"></a><span class="lineno"> 6603</span>&#160; </div>
 <div class="line"><a name="l06604"></a><span class="lineno"> 6604</span>&#160;  <span class="comment">// no implementation</span></div>
 <div class="line"><a name="l06605"></a><span class="lineno"> 6605</span>&#160;  <a class="code" href="class_o_n___mesh_x_line.html">ON_MeshXLine</a>(<span class="keyword">const</span> <a class="code" href="class_o_n___mesh_x_line.html">ON_MeshXLine</a>&amp;);</div>
@@ -6679,39 +6679,39 @@ $(function() {
 <div class="line"><a name="l06607"></a><span class="lineno"> 6607</span>&#160;};</div>
 <div class="line"><a name="l06608"></a><span class="lineno"> 6608</span>&#160; </div>
 <div class="line"><a name="l06609"></a><span class="lineno"> 6609</span>&#160;<span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___mesh_thickness_analysis_point.html">ON_MeshThicknessAnalysisPoint</a></div>
-<div class="line"><a name="l06610"></a><span class="lineno"><a class="line" href="class_o_n___mesh_thickness_analysis_point.html"> 6610</a></span>&#160;{</div>
-<div class="line"><a name="l06611"></a><span class="lineno"> 6611</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l06610"></a><span class="lineno"> 6610</span>&#160;{</div>
+<div class="line"><a name="l06611"></a><span class="lineno"><a class="line" href="class_o_n___mesh_thickness_analysis_point.html"> 6611</a></span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l06612"></a><span class="lineno"> 6612</span>&#160;  <a class="code" href="class_o_n___mesh_thickness_analysis_point.html">ON_MeshThicknessAnalysisPoint</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l06613"></a><span class="lineno"> 6613</span>&#160;  ~<a class="code" href="class_o_n___mesh_thickness_analysis_point.html">ON_MeshThicknessAnalysisPoint</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l06614"></a><span class="lineno"> 6614</span>&#160;  <a class="code" href="class_o_n___mesh_thickness_analysis_point.html">ON_MeshThicknessAnalysisPoint</a>(<span class="keyword">const</span> <a class="code" href="class_o_n___mesh_thickness_analysis_point.html">ON_MeshThicknessAnalysisPoint</a>&amp;) = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l06615"></a><span class="lineno"> 6615</span>&#160;  <a class="code" href="class_o_n___mesh_thickness_analysis_point.html">ON_MeshThicknessAnalysisPoint</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_o_n___mesh_thickness_analysis_point.html">ON_MeshThicknessAnalysisPoint</a>&amp;) = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l06616"></a><span class="lineno"> 6616</span>&#160; </div>
 <div class="line"><a name="l06617"></a><span class="lineno"> 6617</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="class_o_n___mesh_thickness_analysis_point.html">ON_MeshThicknessAnalysisPoint</a> UnsetPoint;</div>
-<div class="line"><a name="l06618"></a><span class="lineno"><a class="line" href="class_o_n___mesh_thickness_analysis_point.html#a64b41cb12a354f6efa80dd21fec2fd73"> 6618</a></span>&#160; </div>
-<div class="line"><a name="l06619"></a><span class="lineno"> 6619</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l06618"></a><span class="lineno"> 6618</span>&#160; </div>
+<div class="line"><a name="l06619"></a><span class="lineno"><a class="line" href="class_o_n___mesh_thickness_analysis_point.html#a64b41cb12a354f6efa80dd21fec2fd73"> 6619</a></span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l06620"></a><span class="lineno"> 6620</span>&#160;  <span class="comment">// m_mesh_context = value of the ON_MeshThicknessAnalysis::AddMesh() mesh_context parameter.</span></div>
 <div class="line"><a name="l06621"></a><span class="lineno"> 6621</span>&#160;  ON__INT_PTR m_mesh_context = 0;</div>
-<div class="line"><a name="l06622"></a><span class="lineno"><a class="line" href="class_o_n___mesh_thickness_analysis_point.html#a9c3419f975d28b948188daa453b76df1"> 6622</a></span>&#160; </div>
-<div class="line"><a name="l06623"></a><span class="lineno"> 6623</span>&#160;  <span class="comment">// m_mesh_id = value returned by ON_MeshThicknessAnalysis::AddMesh().</span></div>
+<div class="line"><a name="l06622"></a><span class="lineno"> 6622</span>&#160; </div>
+<div class="line"><a name="l06623"></a><span class="lineno"><a class="line" href="class_o_n___mesh_thickness_analysis_point.html#a9c3419f975d28b948188daa453b76df1"> 6623</a></span>&#160;  <span class="comment">// m_mesh_id = value returned by ON_MeshThicknessAnalysis::AddMesh().</span></div>
 <div class="line"><a name="l06624"></a><span class="lineno"> 6624</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_mesh_id = <a class="code" href="group__open_n_u_r_b_s.html#ga507bcdb4c7af9ee9debce233c851507c">ON_UNSET_UINT_INDEX</a>;</div>
-<div class="line"><a name="l06625"></a><span class="lineno"><a class="line" href="class_o_n___mesh_thickness_analysis_point.html#aefcd313402149aa4e56f4b4ab1805d12"> 6625</a></span>&#160; </div>
-<div class="line"><a name="l06626"></a><span class="lineno"> 6626</span>&#160;  <span class="comment">// m_mesh_vertex_index = ON_Mesh vertex index.</span></div>
+<div class="line"><a name="l06625"></a><span class="lineno"> 6625</span>&#160; </div>
+<div class="line"><a name="l06626"></a><span class="lineno"><a class="line" href="class_o_n___mesh_thickness_analysis_point.html#aefcd313402149aa4e56f4b4ab1805d12"> 6626</a></span>&#160;  <span class="comment">// m_mesh_vertex_index = ON_Mesh vertex index.</span></div>
 <div class="line"><a name="l06627"></a><span class="lineno"> 6627</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_mesh_vertex_index = <a class="code" href="group__open_n_u_r_b_s.html#ga507bcdb4c7af9ee9debce233c851507c">ON_UNSET_UINT_INDEX</a>;</div>
-<div class="line"><a name="l06628"></a><span class="lineno"><a class="line" href="class_o_n___mesh_thickness_analysis_point.html#ab2c129e42f2644e790c504aba35a5892"> 6628</a></span>&#160;  </div>
-<div class="line"><a name="l06629"></a><span class="lineno"> 6629</span>&#160;  <span class="comment">// If the distance from the vertex to the other side was greater than the max_distance</span></div>
+<div class="line"><a name="l06628"></a><span class="lineno"> 6628</span>&#160;  </div>
+<div class="line"><a name="l06629"></a><span class="lineno"><a class="line" href="class_o_n___mesh_thickness_analysis_point.html#ab2c129e42f2644e790c504aba35a5892"> 6629</a></span>&#160;  <span class="comment">// If the distance from the vertex to the other side was greater than the max_distance</span></div>
 <div class="line"><a name="l06630"></a><span class="lineno"> 6630</span>&#160;  <span class="comment">// parameter in the CalculateVertexDistance call, then 0 &lt;= m_distance = ON_UNSET_POSITIVE_VALUE</span></div>
 <div class="line"><a name="l06631"></a><span class="lineno"> 6631</span>&#160;  <span class="keywordtype">double</span> m_distance = <a class="code" href="group__open_n_u_r_b_s.html#ga0ba31b5b2f16a539c9d63052c383ff0b">ON_UNSET_POSITIVE_VALUE</a>;</div>
-<div class="line"><a name="l06632"></a><span class="lineno"><a class="line" href="class_o_n___mesh_thickness_analysis_point.html#ad9c8aa24de9f27311ad268b7eb7bba8c"> 6632</a></span>&#160; </div>
-<div class="line"><a name="l06633"></a><span class="lineno"> 6633</span>&#160;  <span class="comment">// Location of the mesh vertex</span></div>
+<div class="line"><a name="l06632"></a><span class="lineno"> 6632</span>&#160; </div>
+<div class="line"><a name="l06633"></a><span class="lineno"><a class="line" href="class_o_n___mesh_thickness_analysis_point.html#ad9c8aa24de9f27311ad268b7eb7bba8c"> 6633</a></span>&#160;  <span class="comment">// Location of the mesh vertex</span></div>
 <div class="line"><a name="l06634"></a><span class="lineno"> 6634</span>&#160;  <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a> m_vertex_point = <a class="code" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a>;</div>
-<div class="line"><a name="l06635"></a><span class="lineno"><a class="line" href="class_o_n___mesh_thickness_analysis_point.html#aaa70510c71f5209c5ed76b23df57120d"> 6635</a></span>&#160; </div>
-<div class="line"><a name="l06636"></a><span class="lineno"> 6636</span>&#160;  <span class="comment">// Location of the point on the other side</span></div>
+<div class="line"><a name="l06635"></a><span class="lineno"> 6635</span>&#160; </div>
+<div class="line"><a name="l06636"></a><span class="lineno"><a class="line" href="class_o_n___mesh_thickness_analysis_point.html#aaa70510c71f5209c5ed76b23df57120d"> 6636</a></span>&#160;  <span class="comment">// Location of the point on the other side</span></div>
 <div class="line"><a name="l06637"></a><span class="lineno"> 6637</span>&#160;  <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a> m_closest_point = <a class="code" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a>;</div>
-<div class="line"><a name="l06638"></a><span class="lineno"><a class="line" href="class_o_n___mesh_thickness_analysis_point.html#aefa8ea105f5610e1f5e1a00c244d2a32"> 6638</a></span>&#160;};</div>
-<div class="line"><a name="l06639"></a><span class="lineno"> 6639</span>&#160; </div>
+<div class="line"><a name="l06638"></a><span class="lineno"> 6638</span>&#160;};</div>
+<div class="line"><a name="l06639"></a><span class="lineno"><a class="line" href="class_o_n___mesh_thickness_analysis_point.html#aefa8ea105f5610e1f5e1a00c244d2a32"> 6639</a></span>&#160; </div>
 <div class="line"><a name="l06640"></a><span class="lineno"> 6640</span>&#160;<span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___mesh_thickness_analysis_vertex_iterator.html">ON_MeshThicknessAnalysisVertexIterator</a></div>
-<div class="line"><a name="l06641"></a><span class="lineno"><a class="line" href="class_o_n___mesh_thickness_analysis_vertex_iterator.html"> 6641</a></span>&#160;{</div>
-<div class="line"><a name="l06642"></a><span class="lineno"> 6642</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l06641"></a><span class="lineno"> 6641</span>&#160;{</div>
+<div class="line"><a name="l06642"></a><span class="lineno"><a class="line" href="class_o_n___mesh_thickness_analysis_vertex_iterator.html"> 6642</a></span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l06643"></a><span class="lineno"> 6643</span>&#160;  <a class="code" href="class_o_n___mesh_thickness_analysis_vertex_iterator.html">ON_MeshThicknessAnalysisVertexIterator</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l06644"></a><span class="lineno"> 6644</span>&#160;  ~<a class="code" href="class_o_n___mesh_thickness_analysis_vertex_iterator.html">ON_MeshThicknessAnalysisVertexIterator</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l06645"></a><span class="lineno"> 6645</span>&#160;  <a class="code" href="class_o_n___mesh_thickness_analysis_vertex_iterator.html">ON_MeshThicknessAnalysisVertexIterator</a>(<span class="keyword">const</span> <a class="code" href="class_o_n___mesh_thickness_analysis_vertex_iterator.html">ON_MeshThicknessAnalysisVertexIterator</a>&amp;) = <span class="keywordflow">default</span>;</div>
@@ -6857,8 +6857,8 @@ $(function() {
 <div class="line"><a name="l06785"></a><span class="lineno"> 6785</span>&#160;};</div>
 <div class="line"><a name="l06786"></a><span class="lineno"> 6786</span>&#160; </div>
 <div class="line"><a name="l06787"></a><span class="lineno"> 6787</span>&#160;<span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___mesh_thickness_analysis.html">ON_MeshThicknessAnalysis</a></div>
-<div class="line"><a name="l06788"></a><span class="lineno"><a class="line" href="class_o_n___mesh_thickness_analysis.html"> 6788</a></span>&#160;{</div>
-<div class="line"><a name="l06789"></a><span class="lineno"> 6789</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l06788"></a><span class="lineno"> 6788</span>&#160;{</div>
+<div class="line"><a name="l06789"></a><span class="lineno"><a class="line" href="class_o_n___mesh_thickness_analysis.html"> 6789</a></span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l06790"></a><span class="lineno"> 6790</span>&#160;  <a class="code" href="class_o_n___mesh_thickness_analysis.html">ON_MeshThicknessAnalysis</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l06791"></a><span class="lineno"> 6791</span>&#160; </div>
 <div class="line"><a name="l06792"></a><span class="lineno"> 6792</span>&#160;  ~<a class="code" href="class_o_n___mesh_thickness_analysis.html">ON_MeshThicknessAnalysis</a>() = <span class="keywordflow">default</span>;</div>
@@ -6986,8 +6986,8 @@ $(function() {
 <div class="line"><a name="l06914"></a><span class="lineno"> 6914</span>&#160;  <span class="comment">//        needs to have dll-interface to be used by clients ...</span></div>
 <div class="line"><a name="l06915"></a><span class="lineno"> 6915</span>&#160;  <span class="comment">// m_sp is private and all code that manages m_sp is explicitly implemented in the DLL.</span></div>
 <div class="line"><a name="l06916"></a><span class="lineno"> 6916</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_o_n___mesh_thickness_analysis_vertex_iterator.html">ON_MeshThicknessAnalysisVertexIterator</a>;</div>
-<div class="line"><a name="l06917"></a><span class="lineno"><a class="line" href="class_o_n___mesh_thickness_analysis.html#a5d830d03b443538ece45b24f7a86c6b6"> 6917</a></span>&#160;  std::shared_ptr&lt; class ON_MeshThicknessAnalysisImpl &gt; m_sp;</div>
-<div class="line"><a name="l06918"></a><span class="lineno"> 6918</span>&#160;  <a class="code" href="class_o_n___mesh_thickness_analysis.html">ON_MeshThicknessAnalysis</a>( std::shared_ptr&lt; class ON_MeshThicknessAnalysisImpl &gt; &amp; );</div>
+<div class="line"><a name="l06917"></a><span class="lineno"> 6917</span>&#160;  std::shared_ptr&lt; class ON_MeshThicknessAnalysisImpl &gt; m_sp;</div>
+<div class="line"><a name="l06918"></a><span class="lineno"><a class="line" href="class_o_n___mesh_thickness_analysis.html#a5d830d03b443538ece45b24f7a86c6b6"> 6918</a></span>&#160;  <a class="code" href="class_o_n___mesh_thickness_analysis.html">ON_MeshThicknessAnalysis</a>( std::shared_ptr&lt; class ON_MeshThicknessAnalysisImpl &gt; &amp; );</div>
 <div class="line"><a name="l06919"></a><span class="lineno"> 6919</span>&#160; </div>
 <div class="line"><a name="l06920"></a><span class="lineno"> 6920</span>&#160;<span class="preprocessor">#pragma ON_PRAGMA_WARNING_POP</span></div>
 <div class="line"><a name="l06921"></a><span class="lineno"> 6921</span>&#160;};</div>
@@ -7006,7 +7006,7 @@ $(function() {
 <div class="ttc" id="aclass_o_n___progress_reporter_html"><div class="ttname"><a href="class_o_n___progress_reporter.html">ON_ProgressReporter</a></div><div class="ttdef"><b>Definition:</b> opennurbs_progress_reporter.h:28</div></div>
 <div class="ttc" id="aclass_o_n___mesh_parameters_html_a707dd7580e0141baa2585e539502e732"><div class="ttname"><a href="class_o_n___mesh_parameters.html#a707dd7580e0141baa2585e539502e732">ON_MeshParameters::MESH_STYLE</a></div><div class="ttdeci">MESH_STYLE</div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:39</div></div>
 <div class="ttc" id="aclass_o_n___s_h_a1___hash_html_a50683fde45600ba340667429fd8fd686"><div class="ttname"><a href="class_o_n___s_h_a1___hash.html#a50683fde45600ba340667429fd8fd686">ON_SHA1_Hash::ZeroDigest</a></div><div class="ttdeci">static const ON_SHA1_Hash ZeroDigest</div><div class="ttdoc">all digest bytes are zero</div><div class="ttdef"><b>Definition:</b> opennurbs_sha1.h:25</div></div>
-<div class="ttc" id="aclass_o_n___mesh_x_point_html"><div class="ttname"><a href="class_o_n___mesh_x_point.html">ON_MeshXPoint</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:5956</div></div>
+<div class="ttc" id="aclass_o_n___mesh_x_point_html"><div class="ttname"><a href="class_o_n___mesh_x_point.html">ON_MeshXPoint</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:5957</div></div>
 <div class="ttc" id="aclass_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x_html"><div class="ttname"><a href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a></div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:2325</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gaf9906c49c05ed2ce341d24d9cc1d1f94"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gaf9906c49c05ed2ce341d24d9cc1d1f94">ON_ClosestPointToTriangle</a></div><div class="ttdeci">ON_DECL bool ON_ClosestPointToTriangle(ON_3dPoint A, ON_3dPoint B, ON_3dPoint C, ON_3dPoint P, double *a, double *b, double *c)</div></div>
 <div class="ttc" id="aclass_o_n___mesh_partition_html"><div class="ttname"><a href="class_o_n___mesh_partition.html">ON_MeshPartition</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:2254</div></div>
@@ -7026,24 +7026,24 @@ $(function() {
 <div class="ttc" id="aclass_o_n__3f_point_html"><div class="ttname"><a href="class_o_n__3f_point.html">ON_3fPoint</a></div><div class="ttdef"><b>Definition:</b> opennurbs_fpoint.h:219</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga9d286e107e732bf0e265df5b821b3401"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga9d286e107e732bf0e265df5b821b3401">ON_GetTrianglePlaneEquation</a></div><div class="ttdeci">ON_DECL bool ON_GetTrianglePlaneEquation(const ON_3dPoint &amp;A, const ON_3dPoint &amp;B, const ON_3dPoint &amp;C, double *a, double *b, double *c, double *d, double *evaluation_tol)</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga6a9cf40fc56ae3de3ee587b578a3a70f"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga6a9cf40fc56ae3de3ee587b578a3a70f">operator!=</a></div><div class="ttdeci">ON_DECL bool operator!=(const ON_MeshParameters &amp;a, const ON_MeshParameters &amp;b)</div></div>
-<div class="ttc" id="aclass_o_n___mesh_x_point_pair_html"><div class="ttname"><a href="class_o_n___mesh_x_point_pair.html">ON_MeshXPointPair</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6168</div></div>
+<div class="ttc" id="aclass_o_n___mesh_x_point_pair_html"><div class="ttname"><a href="class_o_n___mesh_x_point_pair.html">ON_MeshXPointPair</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6169</div></div>
 <div class="ttc" id="aclass_o_n__2d_point_html"><div class="ttname"><a href="class_o_n__2d_point.html">ON_2dPoint</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:295</div></div>
 <div class="ttc" id="astruct_o_n___mesh_topology_vertex_html"><div class="ttname"><a href="struct_o_n___mesh_topology_vertex.html">ON_MeshTopologyVertex</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:694</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga3425e30f602f0434290151fd6547f021"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga3425e30f602f0434290151fd6547f021">operator==</a></div><div class="ttdeci">ON_DECL bool operator==(const ON_MeshParameters &amp;a, const ON_MeshParameters &amp;b)</div></div>
-<div class="ttc" id="aclass_o_n___mesh_thickness_analysis_vertex_iterator_html"><div class="ttname"><a href="class_o_n___mesh_thickness_analysis_vertex_iterator.html">ON_MeshThicknessAnalysisVertexIterator</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6641</div></div>
+<div class="ttc" id="aclass_o_n___mesh_thickness_analysis_vertex_iterator_html"><div class="ttname"><a href="class_o_n___mesh_thickness_analysis_vertex_iterator.html">ON_MeshThicknessAnalysisVertexIterator</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6642</div></div>
 <div class="ttc" id="aclass_o_n___space_morph_html"><div class="ttname"><a href="class_o_n___space_morph.html">ON_SpaceMorph</a></div><div class="ttdef"><b>Definition:</b> opennurbs_xform.h:1724</div></div>
 <div class="ttc" id="aclass_o_n___mesh_face_side_html_aa7a3b9af1312f72867ed12be1c523a00"><div class="ttname"><a href="class_o_n___mesh_face_side.html#aa7a3b9af1312f72867ed12be1c523a00">ON_MeshFaceSide::CompareVertexIndex</a></div><div class="ttdeci">static int CompareVertexIndex(const ON_MeshFaceSide *a, const ON_MeshFaceSide *b)</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga59fb488a26cef0e7bf900a815eb92b88"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga59fb488a26cef0e7bf900a815eb92b88">ON_DECL</a></div><div class="ttdeci">#define ON_DECL</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:116</div></div>
 <div class="ttc" id="aclass_o_n___mesh_ngon_html_a6198586119e95e3d1a1829c613080b12"><div class="ttname"><a href="class_o_n___mesh_ngon.html#a6198586119e95e3d1a1829c613080b12">ON_MeshNgon::IsValid</a></div><div class="ttdeci">static unsigned int IsValid(const ON_MeshNgon *ngon, unsigned int ngon_index, ON_TextLog *text_log, unsigned int mesh_vertex_count, unsigned int mesh_face_count, const ON_MeshFace *mesh_F)</div></div>
 <div class="ttc" id="aclass_o_n___mesh_ngon_html"><div class="ttname"><a href="class_o_n___mesh_ngon.html">ON_MeshNgon</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:1269</div></div>
 <div class="ttc" id="aclass_o_n___mesh_topology_html"><div class="ttname"><a href="class_o_n___mesh_topology.html">ON_MeshTopology</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:2000</div></div>
-<div class="ttc" id="aclass_o_n___mesh_thickness_analysis_point_html_ab2c129e42f2644e790c504aba35a5892"><div class="ttname"><a href="class_o_n___mesh_thickness_analysis_point.html#ab2c129e42f2644e790c504aba35a5892">ON_MeshThicknessAnalysisPoint::m_mesh_vertex_index</a></div><div class="ttdeci">unsigned int m_mesh_vertex_index</div><div class="ttdoc">m_mesh_vertex_index = ON_Mesh vertex index.</div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6628</div></div>
+<div class="ttc" id="aclass_o_n___mesh_thickness_analysis_point_html_ab2c129e42f2644e790c504aba35a5892"><div class="ttname"><a href="class_o_n___mesh_thickness_analysis_point.html#ab2c129e42f2644e790c504aba35a5892">ON_MeshThicknessAnalysisPoint::m_mesh_vertex_index</a></div><div class="ttdeci">unsigned int m_mesh_vertex_index</div><div class="ttdoc">m_mesh_vertex_index = ON_Mesh vertex index.</div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6629</div></div>
 <div class="ttc" id="aclass_o_n___object_html"><div class="ttname"><a href="class_o_n___object.html">ON_Object</a></div><div class="ttdef"><b>Definition:</b> opennurbs_object.h:467</div></div>
 <div class="ttc" id="aclass_o_n___mesh_vertex_face_map_html"><div class="ttname"><a href="class_o_n___mesh_vertex_face_map.html">ON_MeshVertexFaceMap</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:1144</div></div>
 <div class="ttc" id="aclass_o_n___mesh_face_side_html_a680b3a0be1bf6d54ba66e5afc985f143"><div class="ttname"><a href="class_o_n___mesh_face_side.html#a680b3a0be1bf6d54ba66e5afc985f143">ON_MeshFaceSide::Unset</a></div><div class="ttdeci">static const ON_MeshFaceSide Unset</div><div class="ttdoc">all values are zero</div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:1839</div></div>
 <div class="ttc" id="aclass_o_n___mesh_face_side_html_a7ec526ef41564986c97960c4361dc685"><div class="ttname"><a href="class_o_n___mesh_face_side.html#a7ec526ef41564986c97960c4361dc685">ON_MeshFaceSide::m_dir</a></div><div class="ttdeci">unsigned char m_dir</div><div class="ttdoc">0 = counterclockwise, 1 = clockwise (reversed)</div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:1835</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga5e466b0525d08412a4fc62b352f60685"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a></div><div class="ttdeci">unsigned short ON__UINT16</div><div class="ttdoc">16 bit unsigned integer</div><div class="ttdef"><b>Definition:</b> opennurbs_system.h:232</div></div>
-<div class="ttc" id="aclass_o_n___mesh_x_point_pool_iterator_html"><div class="ttname"><a href="class_o_n___mesh_x_point_pool_iterator.html">ON_MeshXPointPoolIterator</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6175</div></div>
+<div class="ttc" id="aclass_o_n___mesh_x_point_pool_iterator_html"><div class="ttname"><a href="class_o_n___mesh_x_point_pool_iterator.html">ON_MeshXPointPoolIterator</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6176</div></div>
 <div class="ttc" id="aclass_o_n_html_a328d22b5ad7bf9d4e9ba1123355d3cf9"><div class="ttname"><a href="class_o_n.html#a328d22b5ad7bf9d4e9ba1123355d3cf9">ON::object_type</a></div><div class="ttdeci">object_type</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:1977</div></div>
 <div class="ttc" id="astruct_o_n___mesh_topology_vertex_html_a7673a5e44198e895fbb5ecce1c0cbcfa"><div class="ttname"><a href="struct_o_n___mesh_topology_vertex.html#a7673a5e44198e895fbb5ecce1c0cbcfa">ON_MeshTopologyVertex::m_tope_count</a></div><div class="ttdeci">int m_tope_count</div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:698</div></div>
 <div class="ttc" id="aclass_o_n__3d_point_array_html"><div class="ttname"><a href="class_o_n__3d_point_array.html">ON_3dPointArray</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:2121</div></div>
@@ -7085,11 +7085,11 @@ $(function() {
 <div class="ttc" id="astruct_o_n___mesh_topology_edge_html_a3f904febd99beea23ac58430340e9d23"><div class="ttname"><a href="struct_o_n___mesh_topology_edge.html#a3f904febd99beea23ac58430340e9d23">ON_MeshTopologyEdge::m_topfi</a></div><div class="ttdeci">const int * m_topfi</div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:727</div></div>
 <div class="ttc" id="aclass_o_n___mesh_ngon_html_a020cc6bf78aa865d951419d520471145"><div class="ttname"><a href="class_o_n___mesh_ngon.html#a020cc6bf78aa865d951419d520471145">ON_MeshNgon::AppendToString</a></div><div class="ttdeci">void AppendToString(class ON_String &amp;s) const</div></div>
 <div class="ttc" id="aclass_o_n___terminator_html"><div class="ttname"><a href="class_o_n___terminator.html">ON_Terminator</a></div><div class="ttdef"><b>Definition:</b> opennurbs_terminator.h:23</div></div>
-<div class="ttc" id="aclass_o_n___mesh_x_point_pool_html"><div class="ttname"><a href="class_o_n___mesh_x_point_pool.html">ON_MeshXPointPool</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6190</div></div>
+<div class="ttc" id="aclass_o_n___mesh_x_point_pool_html"><div class="ttname"><a href="class_o_n___mesh_x_point_pool.html">ON_MeshXPointPool</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6191</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gga6f5c1d4d88bb5eccd2afaacde27f9ef3ac9f88e098f6fe4e4e112eeb05ccb9671"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gga6f5c1d4d88bb5eccd2afaacde27f9ef3ac9f88e098f6fe4e4e112eeb05ccb9671">ON_3dmArchiveTableType::Unset</a></div><div class="ttdeci">@ Unset</div></div>
 <div class="ttc" id="aclass_o_n___mesh_ngon_html_a844465d5254f81ae6005b4a30335f0b2"><div class="ttname"><a href="class_o_n___mesh_ngon.html#a844465d5254f81ae6005b4a30335f0b2">ON_MeshNgon::ToString</a></div><div class="ttdeci">ON_String ToString() const</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga534631a3b829303b82d08d756eb115b5"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga534631a3b829303b82d08d756eb115b5">ON_ClosestPointBetweenTriangleAndQuad</a></div><div class="ttdeci">ON_DECL bool ON_ClosestPointBetweenTriangleAndQuad(const ON_3dPoint Tri[3], const ON_3dPoint Quad[4], double t[3], double q[4])</div></div>
-<div class="ttc" id="aclass_o_n___mesh_ngon_iterator_html"><div class="ttname"><a href="class_o_n___mesh_ngon_iterator.html">ON_MeshNgonIterator</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:5068</div></div>
+<div class="ttc" id="aclass_o_n___mesh_ngon_iterator_html"><div class="ttname"><a href="class_o_n___mesh_ngon_iterator.html">ON_MeshNgonIterator</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:5069</div></div>
 <div class="ttc" id="aclass_o_n___mesh_face_side_html"><div class="ttname"><a href="class_o_n___mesh_face_side.html">ON_MeshFaceSide</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:1828</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga325a71bb94682ce9b4838c85b21a0338"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga325a71bb94682ce9b4838c85b21a0338">ON_Mesh2dRegion</a></div><div class="ttdeci">ON_DECL int ON_Mesh2dRegion(int point_count, int point_stride, const double *point, int edge_count, int edge_stride, const int *edge, const int *edge_side, ON_SimpleArray&lt; ON_3dex &gt; &amp;triangles)</div></div>
 <div class="ttc" id="agroup___rhino_html_ga8e6f5833c898be05daa508d60b72b22f"><div class="ttname"><a href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a></div><div class="ttdeci">ON_DEPRECATED_MSG(&quot;This function will be removed in Rhino Version 7. \n&quot; &quot;For assistance replacing this function post on discourse.mcneel.com/c/rhino-developer.&quot;) RHINO_SDK_FUNCTION bool RhinoBrepGet2dProjection(unsigned int rhino_doc_sn</div></div>
@@ -7100,7 +7100,7 @@ $(function() {
 <div class="ttc" id="aclass_o_n___mesh_face_side_html_aad6639c8fe295795da1551573c36e354"><div class="ttname"><a href="class_o_n___mesh_face_side.html#aad6639c8fe295795da1551573c36e354">ON_MeshFaceSide::m_fi</a></div><div class="ttdeci">unsigned int m_fi</div><div class="ttdoc">face index or id</div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:1832</div></div>
 <div class="ttc" id="agroup___rhino_html_gga6c073bf85465e4c86ba86176c79d1b45a7a1920d61156abc05a60135aefe8bc67"><div class="ttname"><a href="group___rhino.html#gga6c073bf85465e4c86ba86176c79d1b45a7a1920d61156abc05a60135aefe8bc67">RhDisplacementSweepResolutionFormula::Default</a></div><div class="ttdeci">@ Default</div><div class="ttdoc">summary&gt;Default formula.</div></div>
 <div class="ttc" id="aclass_o_n___mesh_ngon_html_a31f82078d58ddc0f0da74f35a35ea946"><div class="ttname"><a href="class_o_n___mesh_ngon.html#a31f82078d58ddc0f0da74f35a35ea946">ON_MeshNgon::NgonListFromMeshFace</a></div><div class="ttdeci">static class ON_MeshNgon ** NgonListFromMeshFace(class ON_MeshNgonBuffer &amp;ngon_buffer, unsigned int mesh_face_index, const unsigned int *fvi)</div></div>
-<div class="ttc" id="aclass_o_n___mesh_thickness_analysis_point_html_a64b41cb12a354f6efa80dd21fec2fd73"><div class="ttname"><a href="class_o_n___mesh_thickness_analysis_point.html#a64b41cb12a354f6efa80dd21fec2fd73">ON_MeshThicknessAnalysisPoint::UnsetPoint</a></div><div class="ttdeci">static const ON_MeshThicknessAnalysisPoint UnsetPoint</div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6618</div></div>
+<div class="ttc" id="aclass_o_n___mesh_thickness_analysis_point_html_a64b41cb12a354f6efa80dd21fec2fd73"><div class="ttname"><a href="class_o_n___mesh_thickness_analysis_point.html#a64b41cb12a354f6efa80dd21fec2fd73">ON_MeshThicknessAnalysisPoint::UnsetPoint</a></div><div class="ttdeci">static const ON_MeshThicknessAnalysisPoint UnsetPoint</div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6619</div></div>
 <div class="ttc" id="agroup___rhino_html_ggaf2392ae606e7fb725ce1de9fea95bf0fa9e0e31246b7b078403969b265870b3f4"><div class="ttname"><a href="group___rhino.html#ggaf2392ae606e7fb725ce1de9fea95bf0fa9e0e31246b7b078403969b265870b3f4">RhinoPropertiesPanelPageType::Dimension</a></div><div class="ttdeci">@ Dimension</div><div class="ttdoc">If page is provided by Rhino and only dimensions are selected, activate this page.</div></div>
 <div class="ttc" id="aclass_o_n__3d_point_html_ae5dcca5dde698b25a7ec98b3868285b5"><div class="ttname"><a href="class_o_n__3d_point.html#ae5dcca5dde698b25a7ec98b3868285b5">ON_3dPoint::Origin</a></div><div class="ttdeci">static const ON_3dPoint Origin</div><div class="ttdoc">(0.0,0.0,0.0)</div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:496</div></div>
 <div class="ttc" id="aclass_o_n___binary_archive_html"><div class="ttname"><a href="class_o_n___binary_archive.html">ON_BinaryArchive</a></div><div class="ttdoc">&lt; use for generic serialization of binary data</div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:2014</div></div>
@@ -7108,7 +7108,7 @@ $(function() {
 <div class="ttc" id="aclass_o_n___text_log_html"><div class="ttname"><a href="class_o_n___text_log.html">ON_TextLog</a></div><div class="ttdef"><b>Definition:</b> opennurbs_textlog.h:22</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga1b9bbb0fba1d3a5fae3accc23a26e990"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a></div><div class="ttdeci">#define ON_NOEXCEPT</div><div class="ttdef"><b>Definition:</b> opennurbs_system_compiler.h:66</div></div>
 <div class="ttc" id="aclass_o_n__3d_point_html"><div class="ttname"><a href="class_o_n__3d_point.html">ON_3dPoint</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:483</div></div>
-<div class="ttc" id="aclass_o_n___mesh_x_line_html"><div class="ttname"><a href="class_o_n___mesh_x_line.html">ON_MeshXLine</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6535</div></div>
+<div class="ttc" id="aclass_o_n___mesh_x_line_html"><div class="ttname"><a href="class_o_n___mesh_x_line.html">ON_MeshXLine</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6536</div></div>
 <div class="ttc" id="aclass_o_n___bounding_box_cache_html"><div class="ttname"><a href="class_o_n___bounding_box_cache.html">ON_BoundingBoxCache</a></div><div class="ttdef"><b>Definition:</b> opennurbs_bounding_box.h:629</div></div>
 <div class="ttc" id="aclass_o_n___texture_mapping_html_a43ceae28c14840152691a1400b3a5140"><div class="ttname"><a href="class_o_n___texture_mapping.html#a43ceae28c14840152691a1400b3a5140">ON_TextureMapping::TYPE</a></div><div class="ttdeci">TYPE</div><div class="ttdef"><b>Definition:</b> opennurbs_texture_mapping.h:79</div></div>
 <div class="ttc" id="aclass_o_n___mesh_ngon_html_a5f77d02a7fc8b39ea6492782938b69ea"><div class="ttname"><a href="class_o_n___mesh_ngon.html#a5f77d02a7fc8b39ea6492782938b69ea">ON_MeshNgon::ToWideString</a></div><div class="ttdeci">ON_wString ToWideString() const</div></div>
@@ -7120,19 +7120,19 @@ $(function() {
 <div class="ttc" id="aclass_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x_html_a6221b41ae5fc61b5744f4dbf23136741"><div class="ttname"><a href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html#a6221b41ae5fc61b5744f4dbf23136741">ON_COMPONENT_INDEX::UnsetComponentIndex</a></div><div class="ttdeci">static const ON_COMPONENT_INDEX UnsetComponentIndex</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:2427</div></div>
 <div class="ttc" id="aclass_o_n___r_tree_html"><div class="ttname"><a href="class_o_n___r_tree.html">ON_RTree</a></div><div class="ttdef"><b>Definition:</b> opennurbs_rtree.h:384</div></div>
 <div class="ttc" id="aclass_o_n___mesh_face_side_html_a45b745d235b6b71457567241a3ca0d9f"><div class="ttname"><a href="class_o_n___mesh_face_side.html#a45b745d235b6b71457567241a3ca0d9f">ON_MeshFaceSide::SortByFaceIndex</a></div><div class="ttdeci">static void SortByFaceIndex(ON_MeshFaceSide *face_sides, size_t face_sides_count)</div></div>
-<div class="ttc" id="aclass_o_n___mesh_x_plane_html"><div class="ttname"><a href="class_o_n___mesh_x_plane.html">ON_MeshXPlane</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6431</div></div>
+<div class="ttc" id="aclass_o_n___mesh_x_plane_html"><div class="ttname"><a href="class_o_n___mesh_x_plane.html">ON_MeshXPlane</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6432</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gac53e03e3dac2d69bf4ccc14a30f93f4b"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gac53e03e3dac2d69bf4ccc14a30f93f4b">ON_GetMeshMeshClosestPoint</a></div><div class="ttdeci">ON_DECL bool ON_GetMeshMeshClosestPoint(const ON_Mesh &amp;MeshA, const ON_Mesh &amp;MeshB, double max_dist, bool bUseMultipleThreads, int *fidA, double a[4], int *fidB, double b[4])</div></div>
-<div class="ttc" id="aclass_o_n___mesh_thickness_analysis_point_html_aefcd313402149aa4e56f4b4ab1805d12"><div class="ttname"><a href="class_o_n___mesh_thickness_analysis_point.html#aefcd313402149aa4e56f4b4ab1805d12">ON_MeshThicknessAnalysisPoint::m_mesh_id</a></div><div class="ttdeci">unsigned int m_mesh_id</div><div class="ttdoc">m_mesh_id = value returned by ON_MeshThicknessAnalysis::AddMesh().</div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6625</div></div>
+<div class="ttc" id="aclass_o_n___mesh_thickness_analysis_point_html_aefcd313402149aa4e56f4b4ab1805d12"><div class="ttname"><a href="class_o_n___mesh_thickness_analysis_point.html#aefcd313402149aa4e56f4b4ab1805d12">ON_MeshThicknessAnalysisPoint::m_mesh_id</a></div><div class="ttdeci">unsigned int m_mesh_id</div><div class="ttdoc">m_mesh_id = value returned by ON_MeshThicknessAnalysis::AddMesh().</div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6626</div></div>
 <div class="ttc" id="aclass_o_n___mesh_face_side_html_a299a6da7abf65f5e6a3246ac51f4b0ef"><div class="ttname"><a href="class_o_n___mesh_face_side.html#a299a6da7abf65f5e6a3246ac51f4b0ef">ON_MeshFaceSide::CompareFaceIndex</a></div><div class="ttdeci">static int CompareFaceIndex(const ON_MeshFaceSide *a, const ON_MeshFaceSide *b)</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gac741bf9e3823a5cd9e18198228f2329e"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a></div><div class="ttdeci">#define ON_CLASS</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:115</div></div>
-<div class="ttc" id="aclass_o_n___mesh_thickness_analysis_point_html"><div class="ttname"><a href="class_o_n___mesh_thickness_analysis_point.html">ON_MeshThicknessAnalysisPoint</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6610</div></div>
+<div class="ttc" id="aclass_o_n___mesh_thickness_analysis_point_html"><div class="ttname"><a href="class_o_n___mesh_thickness_analysis_point.html">ON_MeshThicknessAnalysisPoint</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6611</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gaab2e0aa57fd011d02ed6666e9990430c"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gaab2e0aa57fd011d02ed6666e9990430c">ON_ClosestPointBetweenTriangles</a></div><div class="ttdeci">ON_DECL bool ON_ClosestPointBetweenTriangles(const ON_3dPoint A[3], const ON_3dPoint B[3], double a[3], double b[3])</div></div>
-<div class="ttc" id="aclass_o_n___mesh_thickness_analysis_html"><div class="ttname"><a href="class_o_n___mesh_thickness_analysis.html">ON_MeshThicknessAnalysis</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6788</div></div>
+<div class="ttc" id="aclass_o_n___mesh_thickness_analysis_html"><div class="ttname"><a href="class_o_n___mesh_thickness_analysis.html">ON_MeshThicknessAnalysis</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6789</div></div>
 <div class="ttc" id="aclass_o_n___texture_mapping_html"><div class="ttname"><a href="class_o_n___texture_mapping.html">ON_TextureMapping</a></div><div class="ttdef"><b>Definition:</b> opennurbs_texture_mapping.h:40</div></div>
 <div class="ttc" id="aclass_o_n___s_h_a1___hash_html"><div class="ttname"><a href="class_o_n___s_h_a1___hash.html">ON_SHA1_Hash</a></div><div class="ttdef"><b>Definition:</b> opennurbs_sha1.h:22</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga18bf17a07f7064723c6f57889143cc44"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga18bf17a07f7064723c6f57889143cc44">ON_TriangleNormal</a></div><div class="ttdeci">ON_DECL ON_3dVector ON_TriangleNormal(const ON_3dPoint &amp;A, const ON_3dPoint &amp;B, const ON_3dPoint &amp;C)</div></div>
 <div class="ttc" id="astruct_o_n___u_u_i_d__struct_html"><div class="ttname"><a href="struct_o_n___u_u_i_d__struct.html">ON_UUID_struct</a></div><div class="ttdoc">ON_UUID is a 16 byte universally unique identifier.</div><div class="ttdef"><b>Definition:</b> opennurbs_uuid.h:35</div></div>
-<div class="ttc" id="aclass_o_n___mesh_component_ref_html"><div class="ttname"><a href="class_o_n___mesh_component_ref.html">ON_MeshComponentRef</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:5218</div></div>
+<div class="ttc" id="aclass_o_n___mesh_component_ref_html"><div class="ttname"><a href="class_o_n___mesh_component_ref.html">ON_MeshComponentRef</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:5219</div></div>
 <div class="ttc" id="aclass_o_n__3f_point_array_html"><div class="ttname"><a href="class_o_n__3f_point_array.html">ON_3fPointArray</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:2325</div></div>
 <div class="ttc" id="aclass_o_n___mesh_parameters_html_ae3534a8bc15e264688b12003087b3b0a"><div class="ttname"><a href="class_o_n___mesh_parameters.html#ae3534a8bc15e264688b12003087b3b0a">ON_MeshParameters::MESH_PARAMETER_ID</a></div><div class="ttdeci">MESH_PARAMETER_ID</div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:61</div></div>
 <div class="ttc" id="astruct_o_n___mesh_part_html_a1430ab7319320a214c77b2e4f25d5fc5"><div class="ttname"><a href="struct_o_n___mesh_part.html#a1430ab7319320a214c77b2e4f25d5fc5">ON_MeshPart::vertex_count</a></div><div class="ttdeci">int vertex_count</div><div class="ttdoc">= vi[1] - vi[0];</div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:1987</div></div>
@@ -7148,15 +7148,15 @@ $(function() {
 <div class="ttc" id="aclass_o_n___fixed_size_pool_iterator_html"><div class="ttname"><a href="class_o_n___fixed_size_pool_iterator.html">ON_FixedSizePoolIterator</a></div><div class="ttdef"><b>Definition:</b> opennurbs_fsp.h:311</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gaea03c6f4bab106103ada72c766f7fe5c"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a></div><div class="ttdeci">unsigned int ON__UINT32</div><div class="ttdoc">32 bit unsigned integer</div><div class="ttdef"><b>Definition:</b> opennurbs_system.h:238</div></div>
 <div class="ttc" id="aclass_o_n___mesh_ngon_html_a394718017f61f497b598ef7b65cab5c9"><div class="ttname"><a href="class_o_n___mesh_ngon.html#a394718017f61f497b598ef7b65cab5c9">ON_MeshNgon::NgonFromMeshFace</a></div><div class="ttdeci">static class ON_MeshNgon * NgonFromMeshFace(class ON_MeshNgonBuffer &amp;ngon_buffer, unsigned int mesh_face_index, const unsigned int *fvi)</div></div>
-<div class="ttc" id="aclass_o_n___mesh_cache_html"><div class="ttname"><a href="class_o_n___mesh_cache.html">ON_MeshCache</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:4889</div></div>
-<div class="ttc" id="aclass_o_n___mesh_x_html"><div class="ttname"><a href="class_o_n___mesh_x.html">ON_MeshX</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6288</div></div>
+<div class="ttc" id="aclass_o_n___mesh_cache_html"><div class="ttname"><a href="class_o_n___mesh_cache.html">ON_MeshCache</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:4890</div></div>
+<div class="ttc" id="aclass_o_n___mesh_x_html"><div class="ttname"><a href="class_o_n___mesh_x.html">ON_MeshX</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6289</div></div>
 <div class="ttc" id="astruct_o_n___mesh_topology_vertex_html_a30e234dab522a2bbcd9d94374e705403"><div class="ttname"><a href="struct_o_n___mesh_topology_vertex.html#a30e234dab522a2bbcd9d94374e705403">ON_MeshTopologyVertex::m_vi</a></div><div class="ttdeci">const int * m_vi</div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:713</div></div>
 <div class="ttc" id="aclass_o_n___surface_curvature_html"><div class="ttname"><a href="class_o_n___surface_curvature.html">ON_SurfaceCurvature</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:2036</div></div>
-<div class="ttc" id="aclass_o_n___mesh_thickness_analysis_point_html_a9c3419f975d28b948188daa453b76df1"><div class="ttname"><a href="class_o_n___mesh_thickness_analysis_point.html#a9c3419f975d28b948188daa453b76df1">ON_MeshThicknessAnalysisPoint::m_mesh_context</a></div><div class="ttdeci">ON__INT_PTR m_mesh_context</div><div class="ttdoc">m_mesh_context = value of the ON_MeshThicknessAnalysis::AddMesh() mesh_context parameter.</div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6622</div></div>
+<div class="ttc" id="aclass_o_n___mesh_thickness_analysis_point_html_a9c3419f975d28b948188daa453b76df1"><div class="ttname"><a href="class_o_n___mesh_thickness_analysis_point.html#a9c3419f975d28b948188daa453b76df1">ON_MeshThicknessAnalysisPoint::m_mesh_context</a></div><div class="ttdeci">ON__INT_PTR m_mesh_context</div><div class="ttdoc">m_mesh_context = value of the ON_MeshThicknessAnalysis::AddMesh() mesh_context parameter.</div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:6623</div></div>
 <div class="ttc" id="aclass_o_n__3d_point_html_aa68906e3e7650b01ce88c527f6088d7d"><div class="ttname"><a href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a></div><div class="ttdeci">static const ON_3dPoint UnsetPoint</div><div class="ttdoc">(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)</div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:497</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 30 2020 05:33:02 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 25 2020 16:26:03 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
