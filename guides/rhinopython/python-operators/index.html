@@ -512,7 +512,7 @@ $(document).ready(function()
   <span class="guide_byline">
     
       
-      by <a href="/authors/dale_fugier">Dale Fugier</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/6/_guide_topics/rhinopython/python-operators.md" target="_blank">05 Dec 2018</a>)
+      by <a href="/authors/dale_fugier">Dale Fugier</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/6/_guide_topics/rhinopython/python-operators.md" target="_blank">06 Mar 2020</a>)
     
   </span>
 
@@ -562,9 +562,14 @@ $(document).ready(function()
       <td><code>/</code></td>
     </tr>
     <tr>
+      <td>Integer Division</td>
+      <td> </td>
+      <td><code>//</code></td>
+    </tr>
+    <tr>
       <td>Modulus arithmetic</td>
       <td> </td>
-      <td><code>mod</code></td>
+      <td><code>%</code></td>
     </tr>
     <tr>
       <td>Addition</td>
@@ -579,7 +584,7 @@ $(document).ready(function()
     <tr>
       <td>String concatenation</td>
       <td> </td>
-      <td><code>&amp;</code></td>
+      <td><code>+</code></td>
     </tr>
   </tbody>
 </table>
@@ -659,21 +664,6 @@ $(document).ready(function()
       <td> </td>
       <td><code>or</code></td>
     </tr>
-    <tr>
-      <td>Logical exclusion</td>
-      <td> </td>
-      <td><code>xor</code></td>
-    </tr>
-    <tr>
-      <td>Logical equivalence</td>
-      <td> </td>
-      <td><code>eqv</code></td>
-    </tr>
-    <tr>
-      <td>Logical implication</td>
-      <td> </td>
-      <td><code>imp</code></td>
-    </tr>
   </tbody>
 </table>
 
@@ -681,7 +671,7 @@ $(document).ready(function()
 
 <p>When multiplication and division occur together in an expression, each operation is evaluated as it occurs from left to right.  Likewise, when addition and subtraction occur together in an expression, each operation is evaluated in order of appearance from left to right.</p>
 
-<p>The string concatenation (<code>&amp;</code>) operator is not an arithmetic operator, but in precedence it falls after all arithmetic operators and before all comparison operators.  The <code>is</code> operator is an object reference comparison operator.  It does not compare objects or their values; it checks only to determine if two object references refer to the same object.</p>
+<p>The string concatenation (<code>+</code>) operator is not an arithmetic operator, but in precedence it falls after all arithmetic operators and before all comparison operators.  The <code>is</code> operator is an object reference comparison operator.  It does not compare objects or their values; it checks only to determine if two object references refer to the same object.</p>
 
 <hr />
 
