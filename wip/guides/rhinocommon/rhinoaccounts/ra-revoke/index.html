@@ -406,7 +406,7 @@ $(document).ready(function()
   <span class="guide_byline">
     
       
-      by <a href="/wip/authors/aj">Andrés Jacobo</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/rhinocommon/rhinoaccounts/ra-revoke.md" target="_blank">19 Feb 2020</a>)
+      by <a href="/wip/authors/aj">Andrés Jacobo</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/rhinocommon/rhinoaccounts/ra-revoke.md" target="_blank">10 Mar 2020</a>)
     
   </span>
 
@@ -419,7 +419,7 @@ $(document).ready(function()
 <p><strong>Important Note</strong>: 
 <code>RevokeTokenAsync</code> must be executed inside a protected function that is passed to <code>ExecuteProtectedCodeAsync</code>. This is done to make sure that only a valid, signed assembly can retrieve auth tokens. Code inside the protected function should be kept as small as possible for performance and security reasons.</p>
 
-<pre><code class="language-cs">using McNeel.RhinoAccounts;
+<pre><code class="language-cs">using Rhino.Runtime.RhinoAccounts;
 
 ...
 

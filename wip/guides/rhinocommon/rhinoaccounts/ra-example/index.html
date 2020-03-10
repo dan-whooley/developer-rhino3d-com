@@ -406,7 +406,7 @@ $(document).ready(function()
   <span class="guide_byline">
     
       
-      by <a href="/wip/authors/aj">Andrés Jacobo</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/rhinocommon/rhinoaccounts/ra-example.md" target="_blank">19 Feb 2020</a>)
+      by <a href="/wip/authors/aj">Andrés Jacobo</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/rhinocommon/rhinoaccounts/ra-example.md" target="_blank">10 Mar 2020</a>)
     
   </span>
 
@@ -423,13 +423,13 @@ Both <code>GetAuthTokensAsync</code> and <code>TryGetAuthTokens</code> must be e
 
 <p>Example:</p>
 
-<pre><code class="language-cs">using McNeel.RhinoAccounts;
+<pre><code class="language-cs">using Rhino.Runtime.RhinoAccounts;
 
 ...
 
 Tuple&lt;OpenIDConnectToken, OAuth2Token&gt; authTokens = null;
 
-await RhinoAccountsManager.ExecuteProtectedCodeAsync(async (RhinoAccountsManager.SecretKey secretKey) =&gt;
+await RhinoAccountsManager.ExecuteProtectedCodeAsync(async (SecretKey secretKey) =&gt;
 {
 	authTokens = RhinoAccountsManager.TryGetAuthTokens("MY_PLUGIN_ID",secretKey);
 	
