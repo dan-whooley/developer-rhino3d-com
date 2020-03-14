@@ -574,7 +574,7 @@ $(document).ready(function()
   <span class="guide_byline">
     
       
-      by <a href="/wip/authors/will_pearson">Will Pearson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/yak/the-package-manifest.md" target="_blank">07 Jan 2020</a>)
+      by <a href="/wip/authors/will_pearson">Will Pearson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/yak/the-package-manifest.md" target="_blank">14 Mar 2020</a>)
     
   </span>
 
@@ -640,11 +640,14 @@ url: "https://github.com/meshmash/Plankton"
 
 <h3 id="version">Version</h3>
 
-<p><em>Since 0.8: four-digit version numbers allowed</em></p>
+<p><em>Since 0.8: four-digit version numbers allowed</em>
+<em>Since 0.9: <code>$version</code> placeholder</em></p>
 
 <p>The version number given to the package.</p>
 
 <p>Package version numbers <strong>must</strong> either follow <a href="http://semver.org/spec/v2.0.0.html">Semantic Versioning 2.0.0</a> (e.g. <code>1.1.0-beta</code>) or <code>System.Version</code> a.k.a. Microsoft’s four-digit standard (e.g. <code>1.2.3.4</code>). It’s recommended to use Semantic Versioning because it allows package authors to specify prerelease versions. These are handy for limited testing, since by default the latest <em>stable</em> version is installed.</p>
+
+<p>To make the authoring process easier, it’s possible to replace the version number with <code>$version</code> – the version number will be inferred from the contents of the package and substituted during <code>yak build</code>.</p>
 
 <pre><code class="language-yaml">version: 0.3.4
 </code></pre>

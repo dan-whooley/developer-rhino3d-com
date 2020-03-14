@@ -435,7 +435,7 @@ $(document).ready(function()
   <span class="guide_byline">
     
       
-      by <a href="/wip/authors/will_pearson">Will Pearson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/yak/creating-a-grasshopper-plugin-package.md" target="_blank">07 Jan 2020</a>)
+      by <a href="/wip/authors/will_pearson">Will Pearson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/yak/creating-a-grasshopper-plugin-package.md" target="_blank">14 Mar 2020</a>)
     
   </span>
 
@@ -448,8 +448,6 @@ $(document).ready(function()
 For Mac, replace the path to the Yak CLI tool with
 <code>/Applications/RhinoWIP.app/Contents/Resources/bin/yak</code>.
 </div>
-
-<!-- The Yak CLI tool is located at `C:\Program Files\Rhino WIP\System\Yak.exe`. -->
 
 <p>First, let’s assume you have a folder on your computer which contains all the
 files that you would like to distribute in your package. Something like this…</p>
@@ -472,7 +470,7 @@ Prompt and navigate to the directory above.</p>
 the <a href="../the-package-manifest">Manifest Reference Guide</a>. Alternatively, you can use the <code>spec</code>
 command to generate a skeleton file. We’ll do the latter here.</p>
 
-<pre><code class="language-commandline">&gt; "C:\Program Files\Rhino WIP\System\Yak.exe" spec
+<pre><code class="language-commandline">&gt; "C:\Program Files\Rhino 7 WIP\System\Yak.exe" spec
 
 Inspecting content: Plankton.gha
 
@@ -522,13 +520,13 @@ secret:
 
 <p>Now that we have a manifest file, we can build the package!</p>
 
-<pre><code class="language-commandline">&gt; "C:\Program Files\Rhino WIP\System\Yak.exe" build
+<pre><code class="language-commandline">&gt; "C:\Program Files\Rhino 7 WIP\System\Yak.exe" build
 
 Building package from contents of C:\Users\Bozo\dist
 
 Found manifest.yml for package: marmoset (1.0.0)
 Inspecting content: Marmoset.gha
-Creating marmoset-1.0.0.yak
+Creating marmoset-1.0.0-rh6_18-win.yak
 
 ---
 name: marmoset
@@ -542,13 +540,17 @@ url: example.com
 secret:
   id: c9beedb9-07ec-4974-a0a2-44670ddb17e4
 
-C:\Users\Bozo\dist\marmoset-1.0.0.yak
+C:\Users\Bozo\dist\marmoset-1.0.0-rh6_18-win.yak
 ├── Marmoset.dll
 ├── Marmoset.gha
 ├── manifest.yml
 ├── misc\LICENSE.txt
 └── misc\README.md
 </code></pre>
+
+<div class="alert alert-info" role="alert">
+<strong>Note:</strong> The filename includes a <a href="../the-anatomy-of-a-package#distributions">"distribution tag"</a> (in this case <code>rh6_18-win</code>). This is inferred from the version of Grasshopper.dll or Rhinocommon.dll that you reference in your plug-in project, as well as the platform on which you perform the packaging process.
+</div>
 
 <p>Congratulations! 🙌 You’ve just created a Yak package for your Grasshopper
 plug-in.</p>

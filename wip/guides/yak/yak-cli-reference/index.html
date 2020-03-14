@@ -563,7 +563,7 @@ $(document).ready(function()
   <span class="guide_byline">
     
       
-      by <a href="/wip/authors/will_pearson">Will Pearson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/yak/yak-cli-reference.md" target="_blank">12 Aug 2019</a>)
+      by <a href="/wip/authors/will_pearson">Will Pearson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/yak/yak-cli-reference.md" target="_blank">14 Mar 2020</a>)
     
   </span>
 
@@ -571,19 +571,24 @@ $(document).ready(function()
 
           <p>A reference for the Yak command line tool.</p>
 
-          <p>The Yak command line tool is included with Rhino 6. On Windows the tool is located at <code>C:\Program Files\Rhino WIP\System\yak.exe</code>.</p>
+          <p>The Yak command line tool is included with Rhino 7 WIP. On Windows the tool is located at <code>C:\Program Files\Rhino 7 WIP\System\yak.exe</code>. On macOS there is a convenience script at <code>/Applications/RhinoWIP.app/Contents/Resources/bin/yak</code>.</p>
 
 <h2 id="build">Build</h2>
 
 <ul>
   <li><em>Since 0.2: Command added</em></li>
   <li><em>Since 0.4: Supports multiple .gha files, .rhp files or anything else for that matter</em></li>
+  <li><em>Since 0.9: Appends distribution tag to filename and expands $version placeholder</em></li>
 </ul>
 
 <p>When run in a directory containing a valid <code>manifest.yaml</code> file, creates a package containing all files in the directory.</p>
 
 <pre><code class="language-commandline">yak build
 </code></pre>
+
+<div class="alert alert-info" role="alert">
+  <strong>Note:</strong> A <a href="../the-anatomy-of-a-package#distributions">distribution tag</a> (e.g. `rh7-win`) is appended to the filename of the created package. The tag is determined by inspecting the contents of the package during creation. The filename can be manually adjusted if the author wants to publish a cross-platform distribution, e.g. `rh7-any`. Only .rhp and .gha files can currently be inspected. If a package contains none of these, it will have a distribution tag of `any-any`.
+</div>
 
 <!-- During the build, the component GUID is extracted to help with searching for the package later. -->
 
@@ -614,7 +619,7 @@ $(document).ready(function()
 <pre><code class="language-commandline">yak login
 </code></pre>
 
-<p>On macOS, credentials are stored in <code>~/.mcneel/yak.yml</code>. On Windows, they are stored in <code>%appdata%\McNeel\yak.yml</code>.</p>
+<p>On Windows, the token is stored in <code>%appdata%\McNeel\yak.yml</code>. On macOS, it is stored in <code>~/.mcneel/yak.yml</code>.</p>
 
 <h2 id="push">Push</h2>
 
