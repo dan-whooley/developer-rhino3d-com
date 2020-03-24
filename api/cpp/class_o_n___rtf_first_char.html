@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.23</span>
+   &#160;<span id="projectnumber">6.24</span>
    </div>
   </td>
  </tr>
@@ -123,6 +123,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a647120b8fa10c0325ae6f58916710b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8119fcf3472a23af4c550b226f45813"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___rtf_first_char.html#ae8119fcf3472a23af4c550b226f45813">PushRun</a> (<a class="el" href="class_o_n___rtf_first_char_1_1_text_run.html">TextRun</a> &amp;run)</td></tr>
 <tr class="separator:ae8119fcf3472a23af4c550b226f45813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a762200a62bf42a5703f36f9e866abcb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___rtf_first_char.html#a762200a62bf42a5703f36f9e866abcb2">RunBegin</a> () override</td></tr>
+<tr class="separator:a762200a62bf42a5703f36f9e866abcb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3833d461ac602ad02932b35f5e7ec6d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___rtf_first_char.html#a3833d461ac602ad02932b35f5e7ec6d8">RunEnd</a> () override</td></tr>
+<tr class="separator:a3833d461ac602ad02932b35f5e7ec6d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18d75b6d6b1feeefa904653e1a84fd07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___rtf_first_char.html#a18d75b6d6b1feeefa904653e1a84fd07">SetInColorTable</a> (bool b)</td></tr>
 <tr class="separator:a18d75b6d6b1feeefa904653e1a84fd07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1afc2c07dbfcc4627b61cd6a5eedcaad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___rtf_first_char.html#a1afc2c07dbfcc4627b61cd6a5eedcaad">Strikethrough</a> (const wchar_t *value) override</td></tr>
@@ -661,6 +665,60 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a762200a62bf42a5703f36f9e866abcb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a762200a62bf42a5703f36f9e866abcb2">&#9670;&nbsp;</a></span>RunBegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ON_RtfFirstChar::RunBegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="class_o_n___text_builder.html#a7cbedf7f6b679ced51b66b4d20c90baf">ON_TextBuilder</a>.</p>
+
+</div>
+</div>
+<a id="a3833d461ac602ad02932b35f5e7ec6d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3833d461ac602ad02932b35f5e7ec6d8">&#9670;&nbsp;</a></span>RunEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ON_RtfFirstChar::RunEnd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="class_o_n___text_builder.html#a4bb2ccbefe17d7b0f9a11b14761ff104">ON_TextBuilder</a>.</p>
+
+</div>
+</div>
 <a id="a18d75b6d6b1feeefa904653e1a84fd07"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a18d75b6d6b1feeefa904653e1a84fd07">&#9670;&nbsp;</a></span>SetInColorTable()</h2>
 
@@ -821,7 +879,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 25 2020 16:26:42 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 24 2020 15:04:40 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

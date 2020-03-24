@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.23</span>
+   &#160;<span id="projectnumber">6.24</span>
    </div>
   </td>
  </tr>
@@ -153,6 +153,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac86cace0400036590fd7adaf4a03fa8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60fca6b630b8288cc03682c40fd85d68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___rtf_string_builder.html#a60fca6b630b8288cc03682c40fd85d68">PushRun</a> (<a class="el" href="class_o_n___rtf_string_builder_1_1_text_run.html">TextRun</a> &amp;run)</td></tr>
 <tr class="separator:a60fca6b630b8288cc03682c40fd85d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac71236d8af61b0482234c0f1bbf9acda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___rtf_string_builder.html#ac71236d8af61b0482234c0f1bbf9acda">RunBegin</a> () override</td></tr>
+<tr class="separator:ac71236d8af61b0482234c0f1bbf9acda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad007f16d81cb8d2f899abcbb9aa9efab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___rtf_string_builder.html#ad007f16d81cb8d2f899abcbb9aa9efab">RunEnd</a> () override</td></tr>
+<tr class="separator:ad007f16d81cb8d2f899abcbb9aa9efab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6c413ce634a974f8b817f6b68e3a686"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___rtf_string_builder.html#ad6c413ce634a974f8b817f6b68e3a686">Section</a> () override</td></tr>
 <tr class="separator:ad6c413ce634a974f8b817f6b68e3a686"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a036019c53dc5958c8855ebe7973814c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___rtf_string_builder.html#a036019c53dc5958c8855ebe7973814c3">SetDefaultFacename</a> (const wchar_t *facename)</td></tr>
@@ -1077,6 +1081,60 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ac71236d8af61b0482234c0f1bbf9acda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac71236d8af61b0482234c0f1bbf9acda">&#9670;&nbsp;</a></span>RunBegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ON_RtfStringBuilder::RunBegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="class_o_n___text_builder.html#a7cbedf7f6b679ced51b66b4d20c90baf">ON_TextBuilder</a>.</p>
+
+</div>
+</div>
+<a id="ad007f16d81cb8d2f899abcbb9aa9efab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad007f16d81cb8d2f899abcbb9aa9efab">&#9670;&nbsp;</a></span>RunEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ON_RtfStringBuilder::RunEnd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="class_o_n___text_builder.html#a4bb2ccbefe17d7b0f9a11b14761ff104">ON_TextBuilder</a>.</p>
+
+</div>
+</div>
 <a id="ad6c413ce634a974f8b817f6b68e3a686"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad6c413ce634a974f8b817f6b68e3a686">&#9670;&nbsp;</a></span>Section()</h2>
 
@@ -1746,7 +1804,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 25 2020 16:26:42 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 24 2020 15:04:40 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
