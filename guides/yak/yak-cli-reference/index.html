@@ -6,20 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Yak CLI Reference</title>
+  <title>Yak Command Line Interface Reference</title>
   <meta name="description" content="A reference for the Yak command line tool.">
 
   <!-- OpenGraph for Facebook, Twitter, Slack unfurling -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="/guides/yak/yak-cli-reference/" />
-  <meta property="og:title" content="Yak CLI Reference" />
+  <meta property="og:title" content="Yak Command Line Interface Reference" />
   <meta property="og:description" content="A reference for the Yak command line tool." />
   <meta property=”og:site_name” content="developer.rhino3d.com"/>
   <meta property=”og:image” content="http://developer.rhino3d.com/images/rhinodev-logo-unfurl.png"/>
 
   <!-- twitter card tags additive with the og: tags -->
   <meta name="twitter:domain" value="developer.rhino3d.com" />
-  <meta name="twitter:title" value="Yak CLI Reference" />
+  <meta name="twitter:title" value="Yak Command Line Interface Reference" />
   <meta name="twitter:description" value="A reference for the Yak command line tool." />
   
     <meta name="twitter:image" content="http://developer.rhino3d.com/images/rhinodev-logo-unfurl.png" />
@@ -526,6 +526,22 @@ $(document).ready(function()
           
 
         
+          
+
+          
+            
+            
+            
+            
+            <li>
+              <a href="#related-topics">Related Topics</a>
+
+              
+
+            </li>
+          
+
+        
     </ul>
 </nav>
 
@@ -549,13 +565,13 @@ $(document).ready(function()
               
           </ol>
 
-          <h1>Yak CLI Reference</h1>
+          <h1>Yak Command Line Interface Reference</h1>
 
           <p>
   <span class="guide_byline">
     
       
-      by <a href="/authors/will_pearson">Will Pearson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/6/_guide_topics/yak/yak-cli-reference.md" target="_blank">05 Dec 2018</a>)
+      by <a href="/authors/will_pearson">Will Pearson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/6/_guide_topics/yak/yak-cli-reference.md" target="_blank">12 May 2020</a>)
     
   </span>
 
@@ -563,7 +579,7 @@ $(document).ready(function()
 
           <p>A reference for the Yak command line tool.</p>
 
-          <p>The Yak command line tool is included with Rhino 6. On Windows the tool is located at <code>C:\Program Files\Rhino 6\System\yak.exe</code>.</p>
+          <p>The Yak command line tool is included with Rhino 6. On Windows the tool is located at <code>C:\Program Files\Rhino 6\System\yak.exe</code>. On macOS there is a convenience script at <code>/Applications/Rhinoceros.app/Contents/Resources/bin/yak</code>.</p>
 
 <h2 id="build">Build</h2>
 
@@ -606,7 +622,7 @@ $(document).ready(function()
 <pre><code class="language-commandline">yak login
 </code></pre>
 
-<p>On macOS, credentials are stored in <code>~/.mcneel/yak.yml</code>. On Windows, they are stored in <code>%appdata%\McNeel\yak.yml</code>.</p>
+<p>On Windows, the token is stored in <code>%appdata%\McNeel\yak.yml</code>. On macOS, it is stored in <code>~/.mcneel/yak.yml</code>.</p>
 
 <h2 id="push">Push</h2>
 
@@ -676,8 +692,23 @@ file.</p>
 <pre><code class="language-commandline">yak yank &lt;package&gt; &lt;version&gt;
 </code></pre>
 
-<p>Yanked versions do not appear in searches but can still be installed if the
-exact package version is known. To all intents and purposes they are hidden.</p>
+<div class="alert alert-info" role="alert">
+  <strong>Note:</strong> Requires <a href="#login">authentication</a>.
+</div>
+
+<p>Yanked versions do not appear in searches but can still be installed if the exact package version is known. To all intents and purposes they are hidden.</p>
+
+<p>Note, it is not possible to push a package that has been yanked. If you find yourself in this situation, then simply roll the version number of your package and push.</p>
+
+<hr />
+
+<h2 id="related-topics">Related Topics</h2>
+
+<ul>
+  <li><a href="/guides/yak/">Yak Guides and Tutorials</a></li>
+  <li><a href="/guides/yak/the-anatomy-of-a-package/">Anatomy of a Package</a></li>
+  <li><a href="/guides/yak/the-package-manifest/">The Package Manifest</a></li>
+</ul>
 
         </article>
 
