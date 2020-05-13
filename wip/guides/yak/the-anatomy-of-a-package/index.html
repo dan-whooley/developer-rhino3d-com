@@ -121,7 +121,7 @@
 
 <!-- Check the version banner for broken links and remove the link if found -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>
+<!-- <script>
 $(document).ready(function()
 {
   var splitPath = window.location.pathname.split("/");
@@ -134,7 +134,7 @@ $(document).ready(function()
     $aTag.attr("href", "/");
   });
 });
-</script>
+</script> -->
 
 
     <div class="container">
@@ -467,7 +467,7 @@ $(document).ready(function()
   <span class="guide_byline">
     
       
-      by <a href="/wip/authors/will_pearson">Will Pearson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/yak/the-anatomy-of-a-package.md" target="_blank">08 Apr 2020</a>)
+      by <a href="/wip/authors/will_pearson">Will Pearson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/yak/the-anatomy-of-a-package.md" target="_blank">12 May 2020</a>)
     
   </span>
 
@@ -479,10 +479,12 @@ $(document).ready(function()
 
 <p>Packages are simply ZIP archives with a .yak extension. Take this simple example…</p>
 
-<pre><code>plankton-0.4.0-any-any.yak
+<pre><code>howler-0.4.0-any-any.yak
 ├── manifest.yml
-├── Plankton.gha
-├── Plankton.dll
+├── Howler.rhp
+├── Howler.rui
+├── HowlerCommon.dll
+├── HowlerGrasshopper.gha
 └── misc/
     ├── README.md
     └── LICENSE.txt

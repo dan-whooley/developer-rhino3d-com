@@ -124,7 +124,7 @@
 
 <!-- Check the version banner for broken links and remove the link if found -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>
+<!-- <script>
 $(document).ready(function()
 {
   var splitPath = window.location.pathname.split("/");
@@ -137,7 +137,7 @@ $(document).ready(function()
     $aTag.attr("href", "/");
   });
 });
-</script>
+</script> -->
 
 
     <div class="container">
@@ -460,6 +460,15 @@ $(document).ready(function()
                         <a href="#delete-license">DELETE /license</a>
                     </li>
                   
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="#put-license">PUT /license</a>
+                    </li>
+                  
 
                 </ul>
               
@@ -497,7 +506,7 @@ $(document).ready(function()
   <span class="guide_byline">
     
       
-      by <a href="/wip/authors/aj">Andrés Jacobo</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/rhinocommon/cloudzoo/cloudzoo-optional-endpoints.md" target="_blank">25 Jun 2019</a>)
+      by <a href="/wip/authors/aj">Andrés Jacobo</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/rhinocommon/cloudzoo/cloudzoo-optional-endpoints.md" target="_blank">07 May 2020</a>)
     
   </span>
 
@@ -574,6 +583,39 @@ $(document).ready(function()
 </ul>
 
 <p>A non-successful (error) response (The license cannot be removed):</p>
+
+<ul>
+  <li>HTTP Status Code: A code greater or equal to <code>400 (Bad Request)</code></li>
+  <li>Response Payload: <a href="#non-successful-responses">A non-successful response</a></li>
+</ul>
+
+<h3 id="put-license">PUT /license</h3>
+
+<p>Adds or replaces a License Cluster in Cloud Zoo. If any of the licenses in the <a href="/wip/guides/rhinocommon/cloudzoo/cloudzoo-licensecluster">License Cluster object</a> passed already exist in the given entity, their license cluster will be overwritten with the License Cluster passed. If there is more than one cluster in the entity containing the licenses in the cluster passed, an error will be returned and the operation will be aborted.</p>
+
+<h4 id="example-request-1">Example Request</h4>
+
+<pre><code>PUT /license
+
+{
+    "entityId": "9034901491490-|-Group",
+    "licenseCluster": LICENSE_CLUSTER_OBJECT
+}
+</code></pre>
+
+<p>The <code>entityId</code> should be the entity where the License Cluster will be added or updated.
+The <code>licenseCluster</code> should be a <a href="/wip/guides/rhinocommon/cloudzoo/cloudzoo-licensecluster">License Cluster object</a> representing the license(s) to be added or updated.</p>
+
+<h4 id="response-1">Response</h4>
+
+<p>A successful response (The license was removed):</p>
+
+<ul>
+  <li>HTTP Status Code: <code>200 (OK)</code></li>
+  <li>Response Payload: Empty.</li>
+</ul>
+
+<p>A non-successful (error) response (The license cannot be added/updated):</p>
 
 <ul>
   <li>HTTP Status Code: A code greater or equal to <code>400 (Bad Request)</code></li>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['makeradiussplinedata',['MakeRadiusSplineData',['../group___rhino.html#ga22e354cd47acee0a3f1374d33bc8e478',1,'rhinoSdkUtilities.h']]]
+  ['makeradiussplinedata_45281',['MakeRadiusSplineData',['../group___rhino.html#ga84d880bb69e74070637cec7c8c86f1ce',1,'rhinoSdkUtilities.h']]]
 ];

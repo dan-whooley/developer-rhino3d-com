@@ -124,7 +124,7 @@
 
 <!-- Check the version banner for broken links and remove the link if found -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>
+<!-- <script>
 $(document).ready(function()
 {
   var splitPath = window.location.pathname.split("/");
@@ -137,7 +137,7 @@ $(document).ready(function()
     $aTag.attr("href", "/");
   });
 });
-</script>
+</script> -->
 
 
     <div class="container">
@@ -454,7 +454,7 @@ $(document).ready(function()
   <span class="guide_byline">
     
       
-      by <a href="/wip/authors/scott_davidson">Scott Davidson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/rhinopython/python-dictionary-database.md" target="_blank">05 Dec 2018</a>)
+      by <a href="/wip/authors/scott_davidson">Scott Davidson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/rhinopython/python-dictionary-database.md" target="_blank">27 Nov 2019</a>)
     
   </span>
 
@@ -520,7 +520,7 @@ $(document).ready(function()
 
 <p>Knowing that the <code>value</code> for <code>medical</code> is a list.  Use and index number to access any single book:</p>
 
-<pre><code class="language-python"> print datastore["office"]["medical"][1]
+<pre><code class="language-python"> print datastore["office"]["medical"][0]
 </code></pre>
 
 <p>This returns the dictionary object for room 100, reception.</p>
