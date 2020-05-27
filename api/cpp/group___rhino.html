@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">6.26</span>
    </div>
   </td>
  </tr>
@@ -1834,6 +1834,8 @@ Functions</h2></td></tr>
 <tr class="separator:ga9a18511e261fefcc9a8dab8bc930030e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga00c96e65dc32185e904607678ca78b88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga00c96e65dc32185e904607678ca78b88">RhinoGetFilletPoints</a> (const <a class="el" href="class_o_n___curve.html">ON_Curve</a> &amp;c0, const <a class="el" href="class_o_n___curve.html">ON_Curve</a> &amp;c1, double radius, double t0_base, double t1_base, double &amp;t0, double &amp;t1, <a class="el" href="class_o_n___plane.html">ON_Plane</a> &amp;FilletPlane)</td></tr>
 <tr class="separator:ga00c96e65dc32185e904607678ca78b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3f5a19528787d2bbc4577504778009dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga3f5a19528787d2bbc4577504778009dc">RhinoGetGrevillePoints</a> (const <a class="el" href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a> &amp;in_curve, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &gt; &amp;out_points)</td></tr>
+<tr class="separator:ga3f5a19528787d2bbc4577504778009dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf7685ebbfcd1f81066cb2a5b27c4b6c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gaf7685ebbfcd1f81066cb2a5b27c4b6c7">RhinoGetIsoCurves</a> (const <a class="el" href="class_o_n___brep_face.html">ON_BrepFace</a> &amp;face, int iso_dir, double iso_constant, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___curve.html">ON_Curve</a> * &gt; &amp;curves)</td></tr>
 <tr class="separator:gaf7685ebbfcd1f81066cb2a5b27c4b6c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1582844c968d70dcc14ce0c9e20d6b03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga1582844c968d70dcc14ce0c9e20d6b03">RhinoGetIsoIntervals</a> (const <a class="el" href="class_o_n___brep_face.html">ON_BrepFace</a> &amp;face, int iso_dir, double iso_constant, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___interval.html">ON_Interval</a> &gt; &amp;intervals)</td></tr>
@@ -2223,6 +2225,8 @@ Functions</h2></td></tr>
 <tr class="separator:ga589567b04b08b38076703c69c8b7ee2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8888692cc5d9dc68576c3759c27c3133"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga8888692cc5d9dc68576c3759c27c3133">RhinoSetExternalPackBrepTexturesRoutine</a> (bool(*routine)(const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;meshes, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;packed_tex_out))</td></tr>
 <tr class="separator:ga8888692cc5d9dc68576c3759c27c3133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe7b385b53bd98761da431c95f0b71c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> <a class="el" href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gabe7b385b53bd98761da431c95f0b71c4">RhinoSetGrevillePoints</a> (const <a class="el" href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a> &amp;in_curve, int point_count, const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> *in_points, <a class="el" href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a> *out_curve=nullptr)</td></tr>
+<tr class="separator:gabe7b385b53bd98761da431c95f0b71c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7bb476302ff018204c27ac2276e8d2ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga7bb476302ff018204c27ac2276e8d2ea">RhinoSetNurbsCurveEndCondition</a> (<a class="el" href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a> *curve, int end, int continuity, const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &amp;point, const <a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a> &amp;tangent, const <a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a> &amp;curvature)</td></tr>
 <tr class="memdesc:ga7bb476302ff018204c27ac2276e8d2ea"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="_rhino_sdk_match_curve_8h_source.html">RhinoSdkMatchCurve.h</a>.  <a href="group___rhino.html#ga7bb476302ff018204c27ac2276e8d2ea">More...</a><br /></td></tr>
 <tr class="separator:ga7bb476302ff018204c27ac2276e8d2ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -12926,6 +12930,35 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ga3f5a19528787d2bbc4577504778009dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3f5a19528787d2bbc4577504778009dc">&#9670;&nbsp;</a></span>RhinoGetGrevillePoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> int RhinoGetGrevillePoints </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a> &amp;&#160;</td>
+          <td class="paramname"><em>in_curve</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>out_points</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Returns a NURBS curve's edit, or Greville, points. Parameters: in_curve - [in] The input NURBS curve. out_points - [out] The edit points. Returns: The number of points added to out_points. </p>
+
+</div>
+</div>
 <a id="gaf7685ebbfcd1f81066cb2a5b27c4b6c7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaf7685ebbfcd1f81066cb2a5b27c4b6c7">&#9670;&nbsp;</a></span>RhinoGetIsoCurves()</h2>
 
@@ -20510,6 +20543,47 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="gabe7b385b53bd98761da431c95f0b71c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe7b385b53bd98761da431c95f0b71c4">&#9670;&nbsp;</a></span>RhinoSetGrevillePoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> <a class="el" href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a>* RhinoSetGrevillePoints </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a> &amp;&#160;</td>
+          <td class="paramname"><em>in_curve</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>point_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> *&#160;</td>
+          <td class="paramname"><em>in_points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a> *&#160;</td>
+          <td class="paramname"><em>out_curve</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Modifies a NURBS curve's edit, or Greville, points. Parameters: pNurbsCurve - [in] The input NURBS curve. point_count - [in] The number of points in the array. The number of points should match the number of point returned by RhinoGetGrevillePoints(in_curve). in_points - [in] The array of points. out_curve - [in] If not nullptr, this curve will be used and returned. Returns: Pointer to the modified curve if successful, or nullptr on failure Note: if out_curve == nullptr, then memory will be allocated for the returned curve and the caller is responsible for deleting it when finished. </p>
+
+</div>
+</div>
 <a id="ga7bb476302ff018204c27ac2276e8d2ea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga7bb476302ff018204c27ac2276e8d2ea">&#9670;&nbsp;</a></span>RhinoSetNurbsCurveEndCondition()</h2>
 
@@ -24072,7 +24146,7 @@ Variables</h2></td></tr>
 <div class="ttc" id="agroup___rhino_html_ga2fa073809d595133ddcfe6d8da265848"><div class="ttname"><a href="group___rhino.html#ga2fa073809d595133ddcfe6d8da265848">RHINO_VERSION_BRANCH</a></div><div class="ttdeci">#define RHINO_VERSION_BRANCH</div><div class="ttdef"><b>Definition:</b> rhinoSdkVersion.h:87</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:12:57 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 26 2020 19:02:45 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

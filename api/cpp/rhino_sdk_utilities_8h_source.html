@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">6.26</span>
    </div>
   </td>
  </tr>
@@ -6842,97 +6842,135 @@ $(function() {
 <div class="line"><a name="l06770"></a><span class="lineno"> 6770</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
 <div class="line"><a name="l06771"></a><span class="lineno"> 6771</span>&#160;<span class="keywordtype">double</span> <a class="code" href="group___rhino.html#ga6c8cc5c2468512c43efe67e1014049f7">RhinoGetTimeInSecondsSince</a>(<span class="keyword">const</span> <a class="code" href="group___rhino.html#ga7d522524c227b8e5e5ac46d8cddfab99">RhTimestamp</a>&amp; timestamp);</div>
 <div class="line"><a name="l06772"></a><span class="lineno"> 6772</span>&#160; </div>
-<div class="line"><a name="l06773"></a><span class="lineno"> 6773</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l06774"></a><span class="lineno"> 6774</span>&#160;<span class="comment">Description:</span></div>
-<div class="line"><a name="l06775"></a><span class="lineno"> 6775</span>&#160;<span class="comment">  Create a surface by extruding a smooth, G1 curve a distance along an axis with</span></div>
-<div class="line"><a name="l06776"></a><span class="lineno"> 6776</span>&#160;<span class="comment">  draft angle. The end of the extrusion will be on a plane parallel to</span></div>
-<div class="line"><a name="l06777"></a><span class="lineno"> 6777</span>&#160;<span class="comment">  ReferenceDir, a distance of dist from ReferencePoint. </span></div>
-<div class="line"><a name="l06778"></a><span class="lineno"> 6778</span>&#160;<span class="comment">Parameters:</span></div>
-<div class="line"><a name="l06779"></a><span class="lineno"> 6779</span>&#160;<span class="comment">  Crv            - [in] The smooth, G1 curve to extrude.</span></div>
-<div class="line"><a name="l06780"></a><span class="lineno"> 6780</span>&#160;<span class="comment">  ExtrudeDir     - [in] The extrusion direction.</span></div>
-<div class="line"><a name="l06781"></a><span class="lineno"> 6781</span>&#160;<span class="comment">  dist           - [in] The extrusion distance.</span></div>
-<div class="line"><a name="l06782"></a><span class="lineno"> 6782</span>&#160;<span class="comment">  draft          - [in] The extrusion draft angle.</span></div>
-<div class="line"><a name="l06783"></a><span class="lineno"> 6783</span>&#160;<span class="comment">  ReferencePoint - [in] The reference point, generally be a point on the curve.</span></div>
-<div class="line"><a name="l06784"></a><span class="lineno"> 6784</span>&#160;<span class="comment">  ReferenceDir   - [in] The reference direction. For planar curves, a natural choice</span></div>
-<div class="line"><a name="l06785"></a><span class="lineno"> 6785</span>&#160;<span class="comment">                        for ReferenceDir will be the plane&#39;s normal. In any case, </span></div>
-<div class="line"><a name="l06786"></a><span class="lineno"> 6786</span>&#160;<span class="comment">                        ReferenceDir = ExtrudeDir may make sense.</span></div>
-<div class="line"><a name="l06787"></a><span class="lineno"> 6787</span>&#160;<span class="comment">Returns:</span></div>
-<div class="line"><a name="l06788"></a><span class="lineno"> 6788</span>&#160;<span class="comment">  A surface if successful, nullptr otherwise.</span></div>
-<div class="line"><a name="l06789"></a><span class="lineno"> 6789</span>&#160;<span class="comment">Remarks;</span></div>
-<div class="line"><a name="l06790"></a><span class="lineno"> 6790</span>&#160;<span class="comment">  If Crv is not G1, nullptr will be returned. Use RhinoTaperedExtrudeCurveWithRef instead.</span></div>
-<div class="line"><a name="l06791"></a><span class="lineno"> 6791</span>&#160;<span class="comment">  NOTE: Memory for the surface is allocated and becomes the responsibility of the caller.</span></div>
-<div class="line"><a name="l06792"></a><span class="lineno"> 6792</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l06793"></a><span class="lineno"> 6793</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
-<div class="line"><a name="l06794"></a><span class="lineno"> 6794</span>&#160;<a class="code" href="class_o_n___surface.html">ON_Surface</a>* <a class="code" href="group___rhino.html#ga66a703382916370c545bc2286ccdefe8">RhinoTaperedExtrudeSmoothCurveWithRef</a>(</div>
-<div class="line"><a name="l06795"></a><span class="lineno"> 6795</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___curve.html">ON_Curve</a>&amp; Crv, </div>
-<div class="line"><a name="l06796"></a><span class="lineno"> 6796</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n__3d_vector.html">ON_3dVector</a>&amp; ExtrudeDir, </div>
-<div class="line"><a name="l06797"></a><span class="lineno"> 6797</span>&#160;  <span class="keywordtype">double</span> dist, </div>
-<div class="line"><a name="l06798"></a><span class="lineno"> 6798</span>&#160;  <span class="keywordtype">double</span> draft,</div>
-<div class="line"><a name="l06799"></a><span class="lineno"> 6799</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp; ReferencePoint, </div>
-<div class="line"><a name="l06800"></a><span class="lineno"> 6800</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n__3d_vector.html">ON_3dVector</a>&amp; ReferenceDir</div>
-<div class="line"><a name="l06801"></a><span class="lineno"> 6801</span>&#160;);</div>
-<div class="line"><a name="l06802"></a><span class="lineno"> 6802</span>&#160; </div>
-<div class="line"><a name="l06803"></a><span class="lineno"> 6803</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l06804"></a><span class="lineno"> 6804</span>&#160;<span class="comment">Description:</span></div>
-<div class="line"><a name="l06805"></a><span class="lineno"> 6805</span>&#160;<span class="comment">  Create a polysurface by extruding a curve a distance along an axis with </span></div>
-<div class="line"><a name="l06806"></a><span class="lineno"> 6806</span>&#160;<span class="comment">  draft angle. The end of the extrusion will be on a plane parallel to</span></div>
-<div class="line"><a name="l06807"></a><span class="lineno"> 6807</span>&#160;<span class="comment">  ReferenceDir, a distance of dist from ReferencePoint. </span></div>
-<div class="line"><a name="l06808"></a><span class="lineno"> 6808</span>&#160;<span class="comment">Parameters:</span></div>
-<div class="line"><a name="l06809"></a><span class="lineno"> 6809</span>&#160;<span class="comment">  Crv            - [in] The curve to extrude.</span></div>
-<div class="line"><a name="l06810"></a><span class="lineno"> 6810</span>&#160;<span class="comment">  ExtrudeDir     - [in] The extrusion direction.</span></div>
-<div class="line"><a name="l06811"></a><span class="lineno"> 6811</span>&#160;<span class="comment">  dist           - [in] The extrusion distance.</span></div>
-<div class="line"><a name="l06812"></a><span class="lineno"> 6812</span>&#160;<span class="comment">  draft          - [in] The extrusion draft angle.</span></div>
-<div class="line"><a name="l06813"></a><span class="lineno"> 6813</span>&#160;<span class="comment">  ReferencePoint - [in] The reference point, generally be a point on the curve.</span></div>
-<div class="line"><a name="l06814"></a><span class="lineno"> 6814</span>&#160;<span class="comment">  ReferenceDir   - [in] The reference direction. For planar curves, a natural choice</span></div>
-<div class="line"><a name="l06815"></a><span class="lineno"> 6815</span>&#160;<span class="comment">                        for ReferenceDir will be the plane&#39;s normal. In any case,</span></div>
-<div class="line"><a name="l06816"></a><span class="lineno"> 6816</span>&#160;<span class="comment">                        ReferenceDir = ExtrudeDir may make sense.</span></div>
-<div class="line"><a name="l06817"></a><span class="lineno"> 6817</span>&#160;<span class="comment">  ExtrusionSrfs  - [out] The results of the extrusion.</span></div>
-<div class="line"><a name="l06818"></a><span class="lineno"> 6818</span>&#160;<span class="comment">Returns:</span></div>
-<div class="line"><a name="l06819"></a><span class="lineno"> 6819</span>&#160;<span class="comment">  true if successful, false otherwise.</span></div>
-<div class="line"><a name="l06820"></a><span class="lineno"> 6820</span>&#160;<span class="comment">Remarks;</span></div>
-<div class="line"><a name="l06821"></a><span class="lineno"> 6821</span>&#160;<span class="comment">  The result will have a face for each G1 section of Crv, and may be disjoint.</span></div>
-<div class="line"><a name="l06822"></a><span class="lineno"> 6822</span>&#160;<span class="comment">  NOTE: Memory for the surfaces is allocated and becomes the responsibility of the caller.</span></div>
-<div class="line"><a name="l06823"></a><span class="lineno"> 6823</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l06824"></a><span class="lineno"> 6824</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
-<div class="line"><a name="l06825"></a><span class="lineno"> 6825</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group___rhino.html#ga8e4cd34d46d9206a99dc66ddbbbcc21b">RhinoTaperedExtrudeCurveWithRef</a>(</div>
-<div class="line"><a name="l06826"></a><span class="lineno"> 6826</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___curve.html">ON_Curve</a>&amp; Crv, </div>
-<div class="line"><a name="l06827"></a><span class="lineno"> 6827</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n__3d_vector.html">ON_3dVector</a>&amp; ExtrudeDir, </div>
-<div class="line"><a name="l06828"></a><span class="lineno"> 6828</span>&#160;  <span class="keywordtype">double</span> dist, </div>
-<div class="line"><a name="l06829"></a><span class="lineno"> 6829</span>&#160;  <span class="keywordtype">double</span> draft,</div>
-<div class="line"><a name="l06830"></a><span class="lineno"> 6830</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp; ReferencePoint, </div>
-<div class="line"><a name="l06831"></a><span class="lineno"> 6831</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n__3d_vector.html">ON_3dVector</a>&amp; ReferenceDir,</div>
-<div class="line"><a name="l06832"></a><span class="lineno"> 6832</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_Surface*&gt;</a>&amp; ExtrusionSrfs</div>
-<div class="line"><a name="l06833"></a><span class="lineno"> 6833</span>&#160;);</div>
-<div class="line"><a name="l06834"></a><span class="lineno"> 6834</span>&#160; </div>
-<div class="line"><a name="l06835"></a><span class="lineno"> 6835</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
-<div class="line"><a name="l06836"></a><span class="lineno"> 6836</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group___rhino.html#ga8e4cd34d46d9206a99dc66ddbbbcc21b">RhinoTaperedExtrudeCurveWithRef</a>(</div>
-<div class="line"><a name="l06837"></a><span class="lineno"> 6837</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___curve.html">ON_Curve</a>&amp; Crv, </div>
-<div class="line"><a name="l06838"></a><span class="lineno"> 6838</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n__3d_vector.html">ON_3dVector</a>&amp; ExtrudeDir, </div>
-<div class="line"><a name="l06839"></a><span class="lineno"> 6839</span>&#160;  <span class="keywordtype">double</span> dist, </div>
-<div class="line"><a name="l06840"></a><span class="lineno"> 6840</span>&#160;  <span class="keywordtype">double</span> draft,</div>
-<div class="line"><a name="l06841"></a><span class="lineno"> 6841</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp; ReferencePoint, </div>
-<div class="line"><a name="l06842"></a><span class="lineno"> 6842</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n__3d_vector.html">ON_3dVector</a>&amp; ReferenceDir,</div>
-<div class="line"><a name="l06843"></a><span class="lineno"> 6843</span>&#160;  <span class="keywordtype">double</span> tolerance,<span class="comment">//For intersecting and trimming</span></div>
-<div class="line"><a name="l06844"></a><span class="lineno"> 6844</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_Brep*&gt;</a>&amp; Extrusions</div>
-<div class="line"><a name="l06845"></a><span class="lineno"> 6845</span>&#160;);</div>
-<div class="line"><a name="l06846"></a><span class="lineno"> 6846</span>&#160; </div>
-<div class="line"><a name="l06847"></a><span class="lineno"> 6847</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l06848"></a><span class="lineno"> 6848</span>&#160;<span class="comment">Description:</span></div>
-<div class="line"><a name="l06849"></a><span class="lineno"> 6849</span>&#160;<span class="comment">  Contracts the underlying untrimmed surface of a Brep face right to the to the trimming boundaries.</span></div>
-<div class="line"><a name="l06850"></a><span class="lineno"> 6850</span>&#160;<span class="comment">  Note, shrinking the trimmed surface can sometimes cause problems later since having</span></div>
-<div class="line"><a name="l06851"></a><span class="lineno"> 6851</span>&#160;<span class="comment">  the edges so close to the trimming boundaries can cause commands that use the surface </span></div>
-<div class="line"><a name="l06852"></a><span class="lineno"> 6852</span>&#160;<span class="comment">  edges as input to fail.</span></div>
-<div class="line"><a name="l06853"></a><span class="lineno"> 6853</span>&#160;<span class="comment">Parameters:</span></div>
-<div class="line"><a name="l06854"></a><span class="lineno"> 6854</span>&#160;<span class="comment">  brep - [in] The Brep.</span></div>
-<div class="line"><a name="l06855"></a><span class="lineno"> 6855</span>&#160;<span class="comment">  face_index- [in] The index of the Brep face.</span></div>
+<div class="line"><a name="l06773"></a><span class="lineno"> 6773</span>&#160; </div>
+<div class="line"><a name="l06774"></a><span class="lineno"> 6774</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l06775"></a><span class="lineno"> 6775</span>&#160;<span class="comment">Description:</span></div>
+<div class="line"><a name="l06776"></a><span class="lineno"> 6776</span>&#160;<span class="comment">  Returns a NURBS curve&#39;s edit, or Greville, points.</span></div>
+<div class="line"><a name="l06777"></a><span class="lineno"> 6777</span>&#160;<span class="comment">Parameters:</span></div>
+<div class="line"><a name="l06778"></a><span class="lineno"> 6778</span>&#160;<span class="comment">  in_curve   - [in] The input NURBS curve.</span></div>
+<div class="line"><a name="l06779"></a><span class="lineno"> 6779</span>&#160;<span class="comment">  out_points - [out] The edit points.</span></div>
+<div class="line"><a name="l06780"></a><span class="lineno"> 6780</span>&#160;<span class="comment">Returns:</span></div>
+<div class="line"><a name="l06781"></a><span class="lineno"> 6781</span>&#160;<span class="comment">  The number of points added to out_points.</span></div>
+<div class="line"><a name="l06782"></a><span class="lineno"> 6782</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l06783"></a><span class="lineno"> 6783</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
+<div class="line"><a name="l06784"></a><span class="lineno"> 6784</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group___rhino.html#ga3f5a19528787d2bbc4577504778009dc">RhinoGetGrevillePoints</a>(</div>
+<div class="line"><a name="l06785"></a><span class="lineno"> 6785</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a>&amp; in_curve, </div>
+<div class="line"><a name="l06786"></a><span class="lineno"> 6786</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_3dPoint&gt;</a>&amp; out_points</div>
+<div class="line"><a name="l06787"></a><span class="lineno"> 6787</span>&#160;);</div>
+<div class="line"><a name="l06788"></a><span class="lineno"> 6788</span>&#160; </div>
+<div class="line"><a name="l06789"></a><span class="lineno"> 6789</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l06790"></a><span class="lineno"> 6790</span>&#160;<span class="comment">Description:</span></div>
+<div class="line"><a name="l06791"></a><span class="lineno"> 6791</span>&#160;<span class="comment">  Modifies a NURBS curve&#39;s edit, or Greville, points.</span></div>
+<div class="line"><a name="l06792"></a><span class="lineno"> 6792</span>&#160;<span class="comment">Parameters:</span></div>
+<div class="line"><a name="l06793"></a><span class="lineno"> 6793</span>&#160;<span class="comment">  pNurbsCurve - [in] The input NURBS curve.</span></div>
+<div class="line"><a name="l06794"></a><span class="lineno"> 6794</span>&#160;<span class="comment">  point_count - [in] The number of points in the array. The number of points should match </span></div>
+<div class="line"><a name="l06795"></a><span class="lineno"> 6795</span>&#160;<span class="comment">                     the number of point returned by RhinoGetGrevillePoints(in_curve).</span></div>
+<div class="line"><a name="l06796"></a><span class="lineno"> 6796</span>&#160;<span class="comment">  in_points   - [in] The array of points.</span></div>
+<div class="line"><a name="l06797"></a><span class="lineno"> 6797</span>&#160;<span class="comment">  out_curve   - [in] If not nullptr, this curve will be used and returned.</span></div>
+<div class="line"><a name="l06798"></a><span class="lineno"> 6798</span>&#160;<span class="comment">Returns:</span></div>
+<div class="line"><a name="l06799"></a><span class="lineno"> 6799</span>&#160;<span class="comment">  Pointer to the modified curve if successful, or nullptr on failure</span></div>
+<div class="line"><a name="l06800"></a><span class="lineno"> 6800</span>&#160;<span class="comment">  Note: if out_curve == nullptr, then memory will be allocated for the </span></div>
+<div class="line"><a name="l06801"></a><span class="lineno"> 6801</span>&#160;<span class="comment">  returned curve and the caller is responsible for deleting it when finished.</span></div>
+<div class="line"><a name="l06802"></a><span class="lineno"> 6802</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l06803"></a><span class="lineno"> 6803</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
+<div class="line"><a name="l06804"></a><span class="lineno"> 6804</span>&#160;<a class="code" href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a>* <a class="code" href="group___rhino.html#gabe7b385b53bd98761da431c95f0b71c4">RhinoSetGrevillePoints</a>(</div>
+<div class="line"><a name="l06805"></a><span class="lineno"> 6805</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a>&amp; in_curve,</div>
+<div class="line"><a name="l06806"></a><span class="lineno"> 6806</span>&#160;  <span class="keywordtype">int</span> point_count,</div>
+<div class="line"><a name="l06807"></a><span class="lineno"> 6807</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>* in_points,</div>
+<div class="line"><a name="l06808"></a><span class="lineno"> 6808</span>&#160;  <a class="code" href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a>* out_curve = <span class="keyword">nullptr</span></div>
+<div class="line"><a name="l06809"></a><span class="lineno"> 6809</span>&#160;);</div>
+<div class="line"><a name="l06810"></a><span class="lineno"> 6810</span>&#160; </div>
+<div class="line"><a name="l06811"></a><span class="lineno"> 6811</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l06812"></a><span class="lineno"> 6812</span>&#160;<span class="comment">Description:</span></div>
+<div class="line"><a name="l06813"></a><span class="lineno"> 6813</span>&#160;<span class="comment">  Create a surface by extruding a smooth, G1 curve a distance along an axis with</span></div>
+<div class="line"><a name="l06814"></a><span class="lineno"> 6814</span>&#160;<span class="comment">  draft angle. The end of the extrusion will be on a plane parallel to</span></div>
+<div class="line"><a name="l06815"></a><span class="lineno"> 6815</span>&#160;<span class="comment">  ReferenceDir, a distance of dist from ReferencePoint. </span></div>
+<div class="line"><a name="l06816"></a><span class="lineno"> 6816</span>&#160;<span class="comment">Parameters:</span></div>
+<div class="line"><a name="l06817"></a><span class="lineno"> 6817</span>&#160;<span class="comment">  Crv            - [in] The smooth, G1 curve to extrude.</span></div>
+<div class="line"><a name="l06818"></a><span class="lineno"> 6818</span>&#160;<span class="comment">  ExtrudeDir     - [in] The extrusion direction.</span></div>
+<div class="line"><a name="l06819"></a><span class="lineno"> 6819</span>&#160;<span class="comment">  dist           - [in] The extrusion distance.</span></div>
+<div class="line"><a name="l06820"></a><span class="lineno"> 6820</span>&#160;<span class="comment">  draft          - [in] The extrusion draft angle.</span></div>
+<div class="line"><a name="l06821"></a><span class="lineno"> 6821</span>&#160;<span class="comment">  ReferencePoint - [in] The reference point, generally be a point on the curve.</span></div>
+<div class="line"><a name="l06822"></a><span class="lineno"> 6822</span>&#160;<span class="comment">  ReferenceDir   - [in] The reference direction. For planar curves, a natural choice</span></div>
+<div class="line"><a name="l06823"></a><span class="lineno"> 6823</span>&#160;<span class="comment">                        for ReferenceDir will be the plane&#39;s normal. In any case, </span></div>
+<div class="line"><a name="l06824"></a><span class="lineno"> 6824</span>&#160;<span class="comment">                        ReferenceDir = ExtrudeDir may make sense.</span></div>
+<div class="line"><a name="l06825"></a><span class="lineno"> 6825</span>&#160;<span class="comment">Returns:</span></div>
+<div class="line"><a name="l06826"></a><span class="lineno"> 6826</span>&#160;<span class="comment">  A surface if successful, nullptr otherwise.</span></div>
+<div class="line"><a name="l06827"></a><span class="lineno"> 6827</span>&#160;<span class="comment">Remarks;</span></div>
+<div class="line"><a name="l06828"></a><span class="lineno"> 6828</span>&#160;<span class="comment">  If Crv is not G1, nullptr will be returned. Use RhinoTaperedExtrudeCurveWithRef instead.</span></div>
+<div class="line"><a name="l06829"></a><span class="lineno"> 6829</span>&#160;<span class="comment">  NOTE: Memory for the surface is allocated and becomes the responsibility of the caller.</span></div>
+<div class="line"><a name="l06830"></a><span class="lineno"> 6830</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l06831"></a><span class="lineno"> 6831</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
+<div class="line"><a name="l06832"></a><span class="lineno"> 6832</span>&#160;<a class="code" href="class_o_n___surface.html">ON_Surface</a>* <a class="code" href="group___rhino.html#ga66a703382916370c545bc2286ccdefe8">RhinoTaperedExtrudeSmoothCurveWithRef</a>(</div>
+<div class="line"><a name="l06833"></a><span class="lineno"> 6833</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___curve.html">ON_Curve</a>&amp; Crv, </div>
+<div class="line"><a name="l06834"></a><span class="lineno"> 6834</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n__3d_vector.html">ON_3dVector</a>&amp; ExtrudeDir, </div>
+<div class="line"><a name="l06835"></a><span class="lineno"> 6835</span>&#160;  <span class="keywordtype">double</span> dist, </div>
+<div class="line"><a name="l06836"></a><span class="lineno"> 6836</span>&#160;  <span class="keywordtype">double</span> draft,</div>
+<div class="line"><a name="l06837"></a><span class="lineno"> 6837</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp; ReferencePoint, </div>
+<div class="line"><a name="l06838"></a><span class="lineno"> 6838</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n__3d_vector.html">ON_3dVector</a>&amp; ReferenceDir</div>
+<div class="line"><a name="l06839"></a><span class="lineno"> 6839</span>&#160;);</div>
+<div class="line"><a name="l06840"></a><span class="lineno"> 6840</span>&#160; </div>
+<div class="line"><a name="l06841"></a><span class="lineno"> 6841</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l06842"></a><span class="lineno"> 6842</span>&#160;<span class="comment">Description:</span></div>
+<div class="line"><a name="l06843"></a><span class="lineno"> 6843</span>&#160;<span class="comment">  Create a polysurface by extruding a curve a distance along an axis with </span></div>
+<div class="line"><a name="l06844"></a><span class="lineno"> 6844</span>&#160;<span class="comment">  draft angle. The end of the extrusion will be on a plane parallel to</span></div>
+<div class="line"><a name="l06845"></a><span class="lineno"> 6845</span>&#160;<span class="comment">  ReferenceDir, a distance of dist from ReferencePoint. </span></div>
+<div class="line"><a name="l06846"></a><span class="lineno"> 6846</span>&#160;<span class="comment">Parameters:</span></div>
+<div class="line"><a name="l06847"></a><span class="lineno"> 6847</span>&#160;<span class="comment">  Crv            - [in] The curve to extrude.</span></div>
+<div class="line"><a name="l06848"></a><span class="lineno"> 6848</span>&#160;<span class="comment">  ExtrudeDir     - [in] The extrusion direction.</span></div>
+<div class="line"><a name="l06849"></a><span class="lineno"> 6849</span>&#160;<span class="comment">  dist           - [in] The extrusion distance.</span></div>
+<div class="line"><a name="l06850"></a><span class="lineno"> 6850</span>&#160;<span class="comment">  draft          - [in] The extrusion draft angle.</span></div>
+<div class="line"><a name="l06851"></a><span class="lineno"> 6851</span>&#160;<span class="comment">  ReferencePoint - [in] The reference point, generally be a point on the curve.</span></div>
+<div class="line"><a name="l06852"></a><span class="lineno"> 6852</span>&#160;<span class="comment">  ReferenceDir   - [in] The reference direction. For planar curves, a natural choice</span></div>
+<div class="line"><a name="l06853"></a><span class="lineno"> 6853</span>&#160;<span class="comment">                        for ReferenceDir will be the plane&#39;s normal. In any case,</span></div>
+<div class="line"><a name="l06854"></a><span class="lineno"> 6854</span>&#160;<span class="comment">                        ReferenceDir = ExtrudeDir may make sense.</span></div>
+<div class="line"><a name="l06855"></a><span class="lineno"> 6855</span>&#160;<span class="comment">  ExtrusionSrfs  - [out] The results of the extrusion.</span></div>
 <div class="line"><a name="l06856"></a><span class="lineno"> 6856</span>&#160;<span class="comment">Returns:</span></div>
 <div class="line"><a name="l06857"></a><span class="lineno"> 6857</span>&#160;<span class="comment">  true if successful, false otherwise.</span></div>
-<div class="line"><a name="l06858"></a><span class="lineno"> 6858</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l06859"></a><span class="lineno"> 6859</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
-<div class="line"><a name="l06860"></a><span class="lineno"> 6860</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group___rhino.html#ga7a34a3acd084ad0f3d8e8cd266b83e2a">RhinoBrepShrinkSurfaceToEdge</a>(</div>
-<div class="line"><a name="l06861"></a><span class="lineno"> 6861</span>&#160;  <a class="code" href="class_o_n___brep.html">ON_Brep</a>&amp; brep,</div>
-<div class="line"><a name="l06862"></a><span class="lineno"> 6862</span>&#160;  <span class="keywordtype">int</span> face_index</div>
-<div class="line"><a name="l06863"></a><span class="lineno"> 6863</span>&#160;);</div>
+<div class="line"><a name="l06858"></a><span class="lineno"> 6858</span>&#160;<span class="comment">Remarks;</span></div>
+<div class="line"><a name="l06859"></a><span class="lineno"> 6859</span>&#160;<span class="comment">  The result will have a face for each G1 section of Crv, and may be disjoint.</span></div>
+<div class="line"><a name="l06860"></a><span class="lineno"> 6860</span>&#160;<span class="comment">  NOTE: Memory for the surfaces is allocated and becomes the responsibility of the caller.</span></div>
+<div class="line"><a name="l06861"></a><span class="lineno"> 6861</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l06862"></a><span class="lineno"> 6862</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
+<div class="line"><a name="l06863"></a><span class="lineno"> 6863</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group___rhino.html#ga8e4cd34d46d9206a99dc66ddbbbcc21b">RhinoTaperedExtrudeCurveWithRef</a>(</div>
+<div class="line"><a name="l06864"></a><span class="lineno"> 6864</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___curve.html">ON_Curve</a>&amp; Crv, </div>
+<div class="line"><a name="l06865"></a><span class="lineno"> 6865</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n__3d_vector.html">ON_3dVector</a>&amp; ExtrudeDir, </div>
+<div class="line"><a name="l06866"></a><span class="lineno"> 6866</span>&#160;  <span class="keywordtype">double</span> dist, </div>
+<div class="line"><a name="l06867"></a><span class="lineno"> 6867</span>&#160;  <span class="keywordtype">double</span> draft,</div>
+<div class="line"><a name="l06868"></a><span class="lineno"> 6868</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp; ReferencePoint, </div>
+<div class="line"><a name="l06869"></a><span class="lineno"> 6869</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n__3d_vector.html">ON_3dVector</a>&amp; ReferenceDir,</div>
+<div class="line"><a name="l06870"></a><span class="lineno"> 6870</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_Surface*&gt;</a>&amp; ExtrusionSrfs</div>
+<div class="line"><a name="l06871"></a><span class="lineno"> 6871</span>&#160;);</div>
+<div class="line"><a name="l06872"></a><span class="lineno"> 6872</span>&#160; </div>
+<div class="line"><a name="l06873"></a><span class="lineno"> 6873</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
+<div class="line"><a name="l06874"></a><span class="lineno"> 6874</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group___rhino.html#ga8e4cd34d46d9206a99dc66ddbbbcc21b">RhinoTaperedExtrudeCurveWithRef</a>(</div>
+<div class="line"><a name="l06875"></a><span class="lineno"> 6875</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___curve.html">ON_Curve</a>&amp; Crv, </div>
+<div class="line"><a name="l06876"></a><span class="lineno"> 6876</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n__3d_vector.html">ON_3dVector</a>&amp; ExtrudeDir, </div>
+<div class="line"><a name="l06877"></a><span class="lineno"> 6877</span>&#160;  <span class="keywordtype">double</span> dist, </div>
+<div class="line"><a name="l06878"></a><span class="lineno"> 6878</span>&#160;  <span class="keywordtype">double</span> draft,</div>
+<div class="line"><a name="l06879"></a><span class="lineno"> 6879</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp; ReferencePoint, </div>
+<div class="line"><a name="l06880"></a><span class="lineno"> 6880</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n__3d_vector.html">ON_3dVector</a>&amp; ReferenceDir,</div>
+<div class="line"><a name="l06881"></a><span class="lineno"> 6881</span>&#160;  <span class="keywordtype">double</span> tolerance,<span class="comment">//For intersecting and trimming</span></div>
+<div class="line"><a name="l06882"></a><span class="lineno"> 6882</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_Brep*&gt;</a>&amp; Extrusions</div>
+<div class="line"><a name="l06883"></a><span class="lineno"> 6883</span>&#160;);</div>
+<div class="line"><a name="l06884"></a><span class="lineno"> 6884</span>&#160; </div>
+<div class="line"><a name="l06885"></a><span class="lineno"> 6885</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l06886"></a><span class="lineno"> 6886</span>&#160;<span class="comment">Description:</span></div>
+<div class="line"><a name="l06887"></a><span class="lineno"> 6887</span>&#160;<span class="comment">  Contracts the underlying untrimmed surface of a Brep face right to the to the trimming boundaries.</span></div>
+<div class="line"><a name="l06888"></a><span class="lineno"> 6888</span>&#160;<span class="comment">  Note, shrinking the trimmed surface can sometimes cause problems later since having</span></div>
+<div class="line"><a name="l06889"></a><span class="lineno"> 6889</span>&#160;<span class="comment">  the edges so close to the trimming boundaries can cause commands that use the surface </span></div>
+<div class="line"><a name="l06890"></a><span class="lineno"> 6890</span>&#160;<span class="comment">  edges as input to fail.</span></div>
+<div class="line"><a name="l06891"></a><span class="lineno"> 6891</span>&#160;<span class="comment">Parameters:</span></div>
+<div class="line"><a name="l06892"></a><span class="lineno"> 6892</span>&#160;<span class="comment">  brep - [in] The Brep.</span></div>
+<div class="line"><a name="l06893"></a><span class="lineno"> 6893</span>&#160;<span class="comment">  face_index- [in] The index of the Brep face.</span></div>
+<div class="line"><a name="l06894"></a><span class="lineno"> 6894</span>&#160;<span class="comment">Returns:</span></div>
+<div class="line"><a name="l06895"></a><span class="lineno"> 6895</span>&#160;<span class="comment">  true if successful, false otherwise.</span></div>
+<div class="line"><a name="l06896"></a><span class="lineno"> 6896</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l06897"></a><span class="lineno"> 6897</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
+<div class="line"><a name="l06898"></a><span class="lineno"> 6898</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group___rhino.html#ga7a34a3acd084ad0f3d8e8cd266b83e2a">RhinoBrepShrinkSurfaceToEdge</a>(</div>
+<div class="line"><a name="l06899"></a><span class="lineno"> 6899</span>&#160;  <a class="code" href="class_o_n___brep.html">ON_Brep</a>&amp; brep,</div>
+<div class="line"><a name="l06900"></a><span class="lineno"> 6900</span>&#160;  <span class="keywordtype">int</span> face_index</div>
+<div class="line"><a name="l06901"></a><span class="lineno"> 6901</span>&#160;);</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_o_n__3d_vector_html"><div class="ttname"><a href="class_o_n__3d_vector.html">ON_3dVector</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:1185</div></div>
 <div class="ttc" id="agroup___rhino_html_gaaeebc36cd4aeaf61774a91464cccf74f"><div class="ttname"><a href="group___rhino.html#gaaeebc36cd4aeaf61774a91464cccf74f">RhinoSmoothSurface</a></div><div class="ttdeci">RHINO_SDK_FUNCTION ON_Surface * RhinoSmoothSurface(const ON_Surface *pInput, double dSmoothFactor, bool bXSmooth, bool bYSmooth, bool bZSmooth, bool bFixBoundaries, int nCoordinateSystem)</div></div>
@@ -7016,6 +7054,7 @@ $(function() {
 <div class="ttc" id="aclass_o_n___circle_html"><div class="ttname"><a href="class_o_n___circle.html">ON_Circle</a></div><div class="ttdef"><b>Definition:</b> opennurbs_circle.h:36</div></div>
 <div class="ttc" id="agroup___rhino_html_gac755340b90d743b2b00ea6ab6b39eb11"><div class="ttname"><a href="group___rhino.html#gac755340b90d743b2b00ea6ab6b39eb11">RhinoAppVersionGetQuartet</a></div><div class="ttdeci">RHINO_SDK_FUNCTION unsigned int RhinoAppVersionGetQuartet(unsigned int rhino_app_version_quartet[4])</div></div>
 <div class="ttc" id="agroup___rhino_html_ga387591041674bcc9e8b9f24a02325213"><div class="ttname"><a href="group___rhino.html#ga387591041674bcc9e8b9f24a02325213">RhinoOffsetSurface</a></div><div class="ttdeci">RHINO_SDK_FUNCTION ON_Brep * RhinoOffsetSurface(const ON_BrepFace &amp;face, const double dOffsetDistance, const double dTolerance=0.0, const bool bBothSides=false, const bool bSolid=false, double *pAchievedTol=nullptr)</div></div>
+<div class="ttc" id="agroup___rhino_html_gabe7b385b53bd98761da431c95f0b71c4"><div class="ttname"><a href="group___rhino.html#gabe7b385b53bd98761da431c95f0b71c4">RhinoSetGrevillePoints</a></div><div class="ttdeci">RHINO_SDK_FUNCTION ON_NurbsCurve * RhinoSetGrevillePoints(const ON_NurbsCurve &amp;in_curve, int point_count, const ON_3dPoint *in_points, ON_NurbsCurve *out_curve=nullptr)</div></div>
 <div class="ttc" id="agroup___rhino_html_gae0ca1c334125e1735d6bf07ae91bbb66"><div class="ttname"><a href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div><div class="ttdeci">#define RHINO_SDK_FUNCTION</div><div class="ttdef"><b>Definition:</b> rhinoSdk.h:287</div></div>
 <div class="ttc" id="agroup___rhino_html_ga3e7b2bdd8066d84e429b874cd626b30c"><div class="ttname"><a href="group___rhino.html#ga3e7b2bdd8066d84e429b874cd626b30c">RhinoMakeCurveEndsMeet</a></div><div class="ttdeci">RHINO_SDK_FUNCTION BOOL RhinoMakeCurveEndsMeet(ON_Curve *pCrv0, int end0, ON_Curve *pCrv1, int end1)</div></div>
 <div class="ttc" id="agroup___rhino_html_gab40471a969f74fff32a3173242b4007a"><div class="ttname"><a href="group___rhino.html#gab40471a969f74fff32a3173242b4007a">RhinoSrfControlPtGrid</a></div><div class="ttdeci">RHINO_SDK_FUNCTION ON_NurbsSurface * RhinoSrfControlPtGrid(int point_count[2], int degree[2], const ON_3dPointArray &amp;point_array, ON_NurbsSurface *nurbs_surface=nullptr)</div></div>
@@ -7204,6 +7243,7 @@ $(function() {
 <div class="ttc" id="aclass_c_rhino_extend_html_a5df4f19378df0c0316da7d5fa6df01cc"><div class="ttname"><a href="class_c_rhino_extend.html#a5df4f19378df0c0316da7d5fa6df01cc">CRhinoExtend::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> rhinoSdkUtilities.h:1794</div></div>
 <div class="ttc" id="aclass_o_n__2i_point_html"><div class="ttname"><a href="class_o_n__2i_point.html">ON_2iPoint</a></div><div class="ttdef"><b>Definition:</b> opennurbs_ipoint.h:27</div></div>
 <div class="ttc" id="agroup___rhino_html_ga14a4327b94577c166964d4d511475cd9"><div class="ttname"><a href="group___rhino.html#ga14a4327b94577c166964d4d511475cd9">RhinoColorDialog</a></div><div class="ttdeci">RHINO_SDK_FUNCTION BOOL RhinoColorDialog(HWND hwndParent, ON_Color &amp;color, bool include_button_colors=false, const wchar_t *dialog_title=nullptr)</div></div>
+<div class="ttc" id="agroup___rhino_html_ga3f5a19528787d2bbc4577504778009dc"><div class="ttname"><a href="group___rhino.html#ga3f5a19528787d2bbc4577504778009dc">RhinoGetGrevillePoints</a></div><div class="ttdeci">RHINO_SDK_FUNCTION int RhinoGetGrevillePoints(const ON_NurbsCurve &amp;in_curve, ON_SimpleArray&lt; ON_3dPoint &gt; &amp;out_points)</div></div>
 <div class="ttc" id="agroup___rhino_html_gga5343207395b08616cf301e3eafd7b0c8a23a990f4ceba2969db07ff767f5f5a3b"><div class="ttname"><a href="group___rhino.html#gga5343207395b08616cf301e3eafd7b0c8a23a990f4ceba2969db07ff767f5f5a3b">RHINO_IDEF_LINKED_FILE_IS_DIFFERENT</a></div><div class="ttdeci">@ RHINO_IDEF_LINKED_FILE_IS_DIFFERENT</div><div class="ttdef"><b>Definition:</b> rhinoSdkUtilities.h:5556</div></div>
 <div class="ttc" id="agroup___rhino_html_gaedcfc57360373f878e5933c9f6b4e30e"><div class="ttname"><a href="group___rhino.html#gaedcfc57360373f878e5933c9f6b4e30e">RhinoSplitFaceAtTangents</a></div><div class="ttdeci">RHINO_SDK_FUNCTION bool RhinoSplitFaceAtTangents(ON_Brep &amp;brep, int face_index)</div></div>
 <div class="ttc" id="agroup___rhino_html_gac9d0ed566f3f65992bb8e0b0eae7f165"><div class="ttname"><a href="group___rhino.html#gac9d0ed566f3f65992bb8e0b0eae7f165">RhinoCreateArcBlend</a></div><div class="ttdeci">RHINO_SDK_FUNCTION ON_PolyCurve * RhinoCreateArcBlend(const ON_3dPoint &amp;startpt, const ON_3dVector &amp;startdir, const ON_3dPoint &amp;endpt, const ON_3dVector &amp;enddir, const double controlpolygonlengthratio=1.0, ON_PolyCurve *curve_out=nullptr)</div></div>
@@ -7275,7 +7315,7 @@ $(function() {
 <div class="ttc" id="agroup___rhino_html_ga0c9d160e45eebedb9d9db93dbba11179"><div class="ttname"><a href="group___rhino.html#ga0c9d160e45eebedb9d9db93dbba11179">RhinoCreateSolid</a></div><div class="ttdeci">RHINO_SDK_FUNCTION int RhinoCreateSolid(const ON_SimpleArray&lt; const ON_Brep * &gt; &amp;InBreps, ON_SimpleArray&lt; ON_Brep * &gt; &amp;OutBreps, double tolerance)</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:12:56 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 26 2020 19:02:44 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

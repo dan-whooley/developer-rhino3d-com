@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">6.26</span>
    </div>
   </td>
  </tr>
@@ -376,6 +376,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a80d0ab0a889923ab7ba6640c3b967f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a974ffaa5ac36a001df62ea70fa24ebb5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___viewport.html#a974ffaa5ac36a001df62ea70fa24ebb5">SetViewScale</a> (double x, double y)</td></tr>
 <tr class="separator:a974ffaa5ac36a001df62ea70fa24ebb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad2df66442e1e6bff26c217b3a92df2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___viewport.html">ON_Viewport</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___viewport.html#aad2df66442e1e6bff26c217b3a92df2c">ShallowCopy</a> (<a class="el" href="class_o_n___viewport.html">ON_Viewport</a> *destination) const</td></tr>
+<tr class="separator:aad2df66442e1e6bff26c217b3a92df2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afff9bb52114bc963e11d1ba3f488c6d1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___viewport.html#afff9bb52114bc963e11d1ba3f488c6d1">TargetDistance</a> (bool bUseFrustumCenterFallback) const</td></tr>
 <tr class="separator:afff9bb52114bc963e11d1ba3f488c6d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af98008a284c7af73a37cf8b25f02d896"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___viewport.html#af98008a284c7af73a37cf8b25f02d896">TargetPoint</a> () const</td></tr>
@@ -4400,6 +4402,25 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="aad2df66442e1e6bff26c217b3a92df2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad2df66442e1e6bff26c217b3a92df2c">&#9670;&nbsp;</a></span>ShallowCopy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_o_n___viewport.html">ON_Viewport</a>* ON_Viewport::ShallowCopy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_o_n___viewport.html">ON_Viewport</a> *&#160;</td>
+          <td class="paramname"><em>destination</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Creates a shallow copy of this (no base class member including user data are copied). Parameters: destination - [in] If destination is not nullptr, then the copy is put in this class. Otherwise, the copy is put into a viewport created by calling new <a class="el" href="class_o_n___viewport.html#a070d327a6d3aaac4c1f1477de16cd14b">ON_Viewport()</a>. </p>
+
+</div>
+</div>
 <a id="afff9bb52114bc963e11d1ba3f488c6d1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afff9bb52114bc963e11d1ba3f488c6d1">&#9670;&nbsp;</a></span>TargetDistance()</h2>
 
@@ -5465,7 +5486,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:31 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 26 2020 19:03:18 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
