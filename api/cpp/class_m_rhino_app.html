@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.26</span>
+   &#160;<span id="projectnumber">6.27</span>
    </div>
   </td>
  </tr>
@@ -135,6 +135,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3850c7b3c922abb20994415f7964cb3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8acd25cffbc1763b2b8300d8e15c147e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_rhino_app.html#a8acd25cffbc1763b2b8300d8e15c147e">OnClose</a> ()</td></tr>
 <tr class="separator:a8acd25cffbc1763b2b8300d8e15c147e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36055912491767899d3a0c02ee9b8f74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_rhino_app.html#a36055912491767899d3a0c02ee9b8f74">OnMRApplicationTerminate</a> ()</td></tr>
+<tr class="separator:a36055912491767899d3a0c02ee9b8f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03b48f63cd595726a0a566143d076cdf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_rhino_app.html#a03b48f63cd595726a0a566143d076cdf">OnMRApplicationTerminateCancel</a> ()</td></tr>
+<tr class="separator:a03b48f63cd595726a0a566143d076cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb781ff6bc3ca1a7734333418b3c46f6"><td class="memItemLeft" align="right" valign="top">CDocument *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_rhino_app.html#adb781ff6bc3ca1a7734333418b3c46f6">OpenDocumentFile</a> (const wchar_t *)</td></tr>
 <tr class="separator:adb781ff6bc3ca1a7734333418b3c46f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedfaf0930bec9aa16cf79ccd44e6da59"><td class="memItemLeft" align="right" valign="top">const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_rhino_app.html#aedfaf0930bec9aa16cf79ccd44e6da59">ProfileName</a> () const override</td></tr>
@@ -865,6 +869,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a3bd48daedc306802e8519541f5b1684d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc0932229ebb35abdfbf655512a16453"><td class="memItemLeft" align="right" valign="top">pthread_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_rhino_app.html#afc0932229ebb35abdfbf655512a16453">m_main_thread_id</a></td></tr>
 <tr class="separator:afc0932229ebb35abdfbf655512a16453"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93d59cbe3b787e110fc50e608b5b3ced"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_rhino_app.html#ab4af4e24c98694320129692164fcca97">APP_STATE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_rhino_app.html#a93d59cbe3b787e110fc50e608b5b3ced">m_save_state</a> = APP_STATE::app_state_ctor_zero</td></tr>
+<tr class="separator:a93d59cbe3b787e110fc50e608b5b3ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ccb60521f85e91ebda4c16f2d48ae5b"><td class="memItemLeft" align="right" valign="top">CThreadManager *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_rhino_app.html#a3ccb60521f85e91ebda4c16f2d48ae5b">m_thread_manager</a></td></tr>
 <tr class="separator:a3ccb60521f85e91ebda4c16f2d48ae5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_c_rhino_app"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_c_rhino_app')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_c_rhino_app.html">CRhinoApp</a></td></tr>
@@ -1600,6 +1606,40 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a36055912491767899d3a0c02ee9b8f74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36055912491767899d3a0c02ee9b8f74">&#9670;&nbsp;</a></span>OnMRApplicationTerminate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MRhinoApp::OnMRApplicationTerminate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a03b48f63cd595726a0a566143d076cdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03b48f63cd595726a0a566143d076cdf">&#9670;&nbsp;</a></span>OnMRApplicationTerminateCancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MRhinoApp::OnMRApplicationTerminateCancel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="adb781ff6bc3ca1a7734333418b3c46f6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adb781ff6bc3ca1a7734333418b3c46f6">&#9670;&nbsp;</a></span>OpenDocumentFile()</h2>
 
@@ -2121,6 +2161,28 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a93d59cbe3b787e110fc50e608b5b3ced"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93d59cbe3b787e110fc50e608b5b3ced">&#9670;&nbsp;</a></span>m_save_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_rhino_app.html#ab4af4e24c98694320129692164fcca97">APP_STATE</a> MRhinoApp::m_save_state = APP_STATE::app_state_ctor_zero</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a3ccb60521f85e91ebda4c16f2d48ae5b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3ccb60521f85e91ebda4c16f2d48ae5b">&#9670;&nbsp;</a></span>m_thread_manager</h2>
 
@@ -2190,7 +2252,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 26 2020 19:03:06 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 24 2020 09:39:55 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
