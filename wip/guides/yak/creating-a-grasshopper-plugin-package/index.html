@@ -435,7 +435,7 @@ $(document).ready(function()
   <span class="guide_byline">
     
       
-      by <a href="/wip/authors/will_pearson">Will Pearson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/yak/creating-a-grasshopper-plugin-package.md" target="_blank">14 Mar 2020</a>)
+      by <a href="/wip/authors/will_pearson">Will Pearson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/yak/creating-a-grasshopper-plugin-package.md" target="_blank">25 Jun 2020</a>)
     
   </span>
 
@@ -472,17 +472,17 @@ command to generate a skeleton file. We’ll do the latter here.</p>
 
 <pre><code class="language-commandline">&gt; "C:\Program Files\Rhino 7 WIP\System\Yak.exe" spec
 
-Inspecting content: Plankton.gha
+Inspecting content: Marmoset.gha
 
 ---
 name: marmoset
 version: 1.0.0
 authors:
-- &lt;author&gt;
-description: &lt;description&gt;
-url: &lt;url&gt;
-secret:
-  id: c9beedb9-07ec-4974-a0a2-44670ddb17e4
+- Park Ranger
+description: &gt;
+  This plug-in does something. I'm not really sure exactly what it's supposed to
+  do, but it does it better than any other plug-in.
+url: https://example.com
 
 
 Saved to C:\Users\Bozo\dist\manifest.yml
@@ -493,15 +493,8 @@ glean useful information from the <code>.gha</code> assembly and use it generate
 <code>manifest.yml</code> with name, version, authors, etc. pre-populated. If you haven’t
 added this information, then placeholders will be used.</p>
 
-<div class="alert alert-info" role="alert">
-<strong>Note:</strong> You might notice your plug-in's GUID lurking in the
-<code>secret/id</code> key. More information on how this is used can be found in
-the <a href="../package-restore-in-grasshopper">"Package Restore in Grasshopper"
-</a> guide.
-</div>
-
-<p>Open the manifest file with your <a href="http://atom.io">favourite editor</a> and fill in
-the gaps.</p>
+<p>Open the manifest file with your <a href="https://code.visualstudio.com">favourite editor</a>
+and fill in the gaps.</p>
 
 <p>Afterwards, you should have something that looks a little like this…</p>
 
@@ -509,13 +502,13 @@ the gaps.</p>
 name: marmoset
 version: 1.0.0
 authors:
-- Will Pearson
+- Park Ranger
 description: &gt;
   This plug-in does something. I'm not really sure exactly what it's supposed to
   do, but it does it better than any other plug-in.
-url: example.com
-secret:
-  id: c9beedb9-07ec-4974-a0a2-44670ddb17e4
+url: https://example.com
+keywords:
+- mammal
 </code></pre>
 
 <p>Now that we have a manifest file, we can build the package!</p>
@@ -537,8 +530,9 @@ description: &gt;
   This plug-in does something. I'm not really sure exactly what it's supposed to
   do, but it does it better than any other plug-in.
 url: example.com
-secret:
-  id: c9beedb9-07ec-4974-a0a2-44670ddb17e4
+keywords:
+- mammal
+- guid:c9beedb9-07ec-4974-a0a2-44670ddb17e4
 
 C:\Users\Bozo\dist\marmoset-1.0.0-rh6_18-win.yak
 ├── Marmoset.dll
@@ -550,6 +544,13 @@ C:\Users\Bozo\dist\marmoset-1.0.0-rh6_18-win.yak
 
 <div class="alert alert-info" role="alert">
 <strong>Note:</strong> The filename includes a <a href="../the-anatomy-of-a-package#distributions">"distribution tag"</a> (in this case <code>rh6_18-win</code>). This is inferred from the version of Grasshopper.dll or Rhinocommon.dll that you reference in your plug-in project, as well as the platform on which you perform the packaging process.
+</div>
+
+<div class="alert alert-info" role="alert">
+<strong>Note:</strong> You might notice your plug-in's GUID lurking in the
+keywords. More information on how this is used can be found in the
+<a href="../package-restore-in-grasshopper">"Package Restore in Grasshopper"
+</a> guide.
 </div>
 
 <p>Congratulations! 🙌 You’ve just created a Yak package for your Grasshopper

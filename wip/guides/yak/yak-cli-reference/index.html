@@ -526,6 +526,22 @@ $(document).ready(function()
             
             
             <li>
+              <a href="#owner">Owner</a>
+
+              
+
+            </li>
+          
+
+        
+          
+
+          
+            
+            
+            
+            
+            <li>
               <a href="#related-topics">Related Topics</a>
 
               
@@ -563,7 +579,7 @@ $(document).ready(function()
   <span class="guide_byline">
     
       
-      by <a href="/wip/authors/will_pearson">Will Pearson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/yak/yak-cli-reference.md" target="_blank">07 May 2020</a>)
+      by <a href="/wip/authors/will_pearson">Will Pearson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/yak/yak-cli-reference.md" target="_blank">25 Jun 2020</a>)
     
   </span>
 
@@ -579,15 +595,20 @@ $(document).ready(function()
   <li><em>Since 0.2: Command added</em></li>
   <li><em>Since 0.4: Supports multiple .gha files, .rhp files or anything else for that matter</em></li>
   <li><em>Since 0.9: Appends distribution tag to filename and expands $version placeholder</em></li>
+  <li><em>Singe 0.10.1: Adds <code>--platform</code> argument</em></li>
 </ul>
 
 <p>When run in a directory containing a valid <code>manifest.yaml</code> file, creates a package containing all files in the directory.</p>
 
-<pre><code class="language-commandline">yak build
+<pre><code class="language-commandline">Usage: yak build [options]
+
+Options:
+    --platform PLATFORM  The platform where the package will run ('win', 'mac' or 'any')
+    -h, --help           Get help (equivalent to `yak help build`)
 </code></pre>
 
 <div class="alert alert-info" role="alert">
-  <strong>Note:</strong> A <a href="../the-anatomy-of-a-package#distributions">distribution tag</a> (e.g. `rh7-win`) is appended to the filename of the created package. The tag is determined by inspecting the contents of the package during creation. The filename can be manually adjusted if the author wants to publish a cross-platform distribution, e.g. `rh7-any`. Only .rhp and .gha files can currently be inspected. If a package contains none of these, it will have a distribution tag of `any-any`.
+  <strong>Note:</strong> A <a href="../the-anatomy-of-a-package#distributions">distribution tag</a> (e.g. <code>rh7-win</code>) is appended to the filename of the created package. The tag is determined by inspecting the contents of the package during creation. The <code>--platform=any</code> argument can be used if the author wants to publish a cross-platform distribution, e.g. <code>rh7-any</code>. Only .rhp and .gha files can currently be inspected. If a package contains none of these, it will have a distribution tag of <code>any-any</code>.
 </div>
 
 <!-- During the build, the component GUID is extracted to help with searching for the package later. -->
@@ -612,14 +633,22 @@ $(document).ready(function()
 
 <h2 id="login">Login</h2>
 
-<p><em>Since 0.2</em></p>
+<p><em>Since 0.2: Command added</em>
+<em>Since 0.10: User registered during login</em></p>
 
 <p>Authenticates with Rhino Accounts and stores a time-limited OAuth2 access token so that the user can use commands which require authentication.</p>
 
-<pre><code class="language-commandline">yak login
+<pre><code class="language-commandline">Usage: yak login [options]
+
+Options:
+    --ci              Generate a non-expiring API key and display it
+    -s, --source URL  Package repository location [default: https://yak.rhino3d.com/].
+    -h, --help        Get help (equivalent to `yak help login`)
 </code></pre>
 
 <p>On Windows, the token is stored in <code>%appdata%\McNeel\yak.yml</code>. On macOS, it is stored in <code>~/.mcneel/yak.yml</code>.</p>
+
+<p>During login, the user is registered on the server.</p>
 
 <h2 id="push">Push</h2>
 
@@ -696,6 +725,24 @@ file.</p>
 <p>Yanked versions do not appear in searches but can still be installed if the exact package version is known. To all intents and purposes they are hidden.</p>
 
 <p>Note, it is not possible to push a package that has been yanked. If you find yourself in this situation, then simply roll the version number of your package and push.</p>
+
+<h2 id="owner">Owner</h2>
+
+<p><em>Since 0.10</em></p>
+
+<p>Adds, removes of lists the owners of a package. Package owners can push new versions of the package and (un)yank existing versions.</p>
+
+<pre><code class="language-commandline">Usage:
+    yak owner add [--source=URL] &lt;package&gt; &lt;email&gt;
+    yak owner remove [--source=URL] &lt;package&gt; &lt;email&gt;
+    yak owner list [--source=URL] &lt;package&gt;
+    
+Options:
+    -h, --help
+    -s, --source URL  Package repository location [default: https://yak.rhino3d.com/].
+</code></pre>
+
+<p>New owners can do everything that the original owner can do. Please bear this in mind!</p>
 
 <hr />
 
