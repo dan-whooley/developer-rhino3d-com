@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.27</span>
+   &#160;<span id="projectnumber">6.28</span>
    </div>
   </td>
  </tr>
@@ -94,6 +94,8 @@ Inheritance diagram for CRhinoDimension:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a51fc11e2d70e2397c0ae264eb2f5f0f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_dimension.html#a51fc11e2d70e2397c0ae264eb2f5f0f8">ClearBoundingBox</a> () const</td></tr>
 <tr class="separator:a51fc11e2d70e2397c0ae264eb2f5f0f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57c172b048691d6474fa4372545d22c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_dimension.html#a57c172b048691d6474fa4372545d22c5">ForceTextUpdate</a> () const</td></tr>
+<tr class="separator:a57c172b048691d6474fa4372545d22c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1b042c45c3a494fb93b6da522a5588d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_dimension.html#ac1b042c45c3a494fb93b6da522a5588d">IsVisibleInViewport</a> (const <a class="el" href="class_c_rhino_viewport.html">CRhinoViewport</a> &amp;vp) const</td></tr>
 <tr class="separator:ac1b042c45c3a494fb93b6da522a5588d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0f8315b19c02f0c1e9b84a288e57057"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_dimension.html#ad0f8315b19c02f0c1e9b84a288e57057">IsVisibleInViewport</a> (const <a class="el" href="class_c_rhino_viewport.html">CRhinoViewport</a> &amp;vp, const <a class="el" href="class_o_n___xform.html">ON_Xform</a> &amp;xform) const</td></tr>
@@ -759,6 +761,24 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a57c172b048691d6474fa4372545d22c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57c172b048691d6474fa4372545d22c5">&#9670;&nbsp;</a></span>ForceTextUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRhinoDimension::ForceTextUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Added this function to force updating text on dimensions added to a <a class="el" href="class_c_rhino_doc.html">CRhinoDoc</a>, but not drawn yet. Somebody wrote a script to add a dimension and query it's length with document drawing turned off Normally text is generated on demand when dimensions are drawn </p>
+
+</div>
+</div>
 <a id="a9abe626000033e5911734fffabc61fcc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9abe626000033e5911734fffabc61fcc">&#9670;&nbsp;</a></span>GetFrontDrawNumber()</h2>
 
@@ -1017,7 +1037,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 24 2020 09:39:36 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 5 2020 09:06:57 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
