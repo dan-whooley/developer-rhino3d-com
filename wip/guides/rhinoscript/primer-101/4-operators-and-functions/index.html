@@ -565,7 +565,7 @@ x = 4 + (5 * 2)		» correct precedence
 
 <p>x doesn’t equal 18, even though many cheap calculators seem to disagree. The precedence of the multiplication is higher which means you first have to multiply 5 by 2, and then add the result to 4. Thus, x equals 14. VBScript is not a cheap calculator and it has no problems whatsoever with operator precedence. It is us, human beings, who are the confused ones. The example above is fairly straightforward, but how would you code the following?</p>
 
-<script type="math/tex; mode=display">y =\frac{\sqrt{x^2+(x+1)}}{x-3} + \left|{\frac{2x}{x^{0.5x}}}\right|</script>
+\[y =\frac{\sqrt{x^2+(x+1)}}{x-3} + \left|{\frac{2x}{x^{0.5x}}}\right|\]
 
 <p>Without extensive use of parenthesis, this would be very nasty indeed. By using parenthesis in equations we can force precedence, and we can easily group different bits of mathematics. All the individual bits in the mathematical notation have been grouped inside parenthesis and extra spaces have been inserted to accentuate transitions from one top level group to the next:</p>
 
@@ -659,7 +659,7 @@ colouring the regions we can mimic boolean evaluation in programming code:</p>
 
 <p>A good example is the <code>Sin()</code> function, which takes a single numeric value and returns the sine of that value. If we want to know the sine of -say- 4.7, all we need to do is type in <em>x = Sin(4.7)</em>. Internally the computer might calculate the sine by using a digital implementation of the Taylor series:</p>
 
-<script type="math/tex; mode=display">f(x) = \sum_{n=0}^\infty \frac{f^n(a)}{n!} {(x-a)^n}</script>
+\[f(x) = \sum_{n=0}^\infty \frac{f^n(a)}{n!} {(x-a)^n}\]
 
 <p>In other words: you don’t want to know. The good people who develop programming languages
 predicted you don’t want to know, which is why they implemented a <em>Sin()</em> function. VBScript comes with a long list of predefined functions all of which are available to RhinoScripters. Some deal with mathematical

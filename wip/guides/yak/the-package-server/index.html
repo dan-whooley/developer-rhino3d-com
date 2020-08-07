@@ -507,7 +507,7 @@ $(document).ready(function()
 <p>There are two cases where version numbers can be semantically equivalent.</p>
 
 <ul>
-  <li>Semantic versions that only differ in build metadata<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>, i.e. <code>1.0.0+build.1</code> and <code>1.0.0+build.2</code></li>
+  <li>Semantic versions that only differ in build metadata<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>, i.e. <code>1.0.0+build.1</code> and <code>1.0.0+build.2</code></li>
   <li>A four-digit version and semantic version that are identical except for a “0” fourth digit (no prerelease or build metadata), e.g. <code>1.2.3</code> and <code>1.2.3.0</code></li>
 </ul>
 
@@ -515,10 +515,10 @@ $(document).ready(function()
 
 <hr />
 
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1">
-      <p><a href="https://semver.org/#spec-item-10"><em>“Build metadata MUST be ignored when determining version precedence. Thus two versions that differ only in the build metadata, have the same precedence.”</em></a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="https://semver.org/#spec-item-10"><em>“Build metadata MUST be ignored when determining version precedence. Thus two versions that differ only in the build metadata, have the same precedence.”</em></a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>

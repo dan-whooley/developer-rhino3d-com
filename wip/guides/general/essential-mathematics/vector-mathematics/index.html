@@ -700,8 +700,7 @@ $(document).ready(function()
 
           <p>A vector indicates a quantity, such as velocity or force, that has direction and length. Vectors in 3D coordinate systems are represented with an ordered set of three real numbers and look like:</p>
 
-<p><script type="math/tex">% <![CDATA[
-\mathbf{\vec v}  = <a_1, a_2, a_3> %]]></script></p>
+<p>\(\mathbf{\vec v}  = &lt;a_1, a_2, a_3&gt;\)</p>
 
 <div class="embed-responsive embed-responsive-16by9 video-player">
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/NU34_aCoN3E?showinfo=0&amp;rel=0&amp;modestbranding=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
@@ -717,8 +716,7 @@ $(document).ready(function()
 
 <p>For example, if we have a vector that has a direction parallel to the x-axis of a given 3D coordinate system and a length of 5 units, we can write the vector as follows:</p>
 
-<p><script type="math/tex">% <![CDATA[
-\mathbf{\vec v} = <5, 0, 0> %]]></script></p>
+<p>\(\mathbf{\vec v} = &lt;5, 0, 0&gt;\)</p>
 
 <p>To represent that vector, we need an anchor point in the coordinate system. For example, all of the arrows in the following figure are equal representations of the same vector despite the fact that they are anchored at different locations.</p>
 
@@ -728,25 +726,23 @@ $(document).ready(function()
 </figure>
 
 <div class="note">
-  <p>Given a 3D vector <script type="math/tex">% <![CDATA[
-\vec v = <a_1, a_2, a_3> %]]></script> , all vector components <script type="math/tex">a_1</script>, <script type="math/tex">a_2</script>, <script type="math/tex">a_3</script> are real numbers. Also all line segments from a point <script type="math/tex">A(x,y,z)</script> to point <script type="math/tex">B(x+a_1, y+a_2, z+a_3)</script> are equivalent representations of vector <script type="math/tex">\vec v</script>.</p>
+  <p>Given a 3D vector \(\vec v = &lt;a_1, a_2, a_3&gt;\) , all vector components \(a_1\), \(a_2\), \(a_3\) are real numbers. Also all line segments from a point \(A(x,y,z)\) to point \(B(x+a_1, y+a_2, z+a_3)\) are equivalent representations of vector \(\vec v\).</p>
 </div>
 
 <p>So, how do we define the end points of a line segment that represents a given vector?
 Let us define an anchor point (A) so that:</p>
 
-<p><script type="math/tex">A = (1, 2, 3)</script></p>
+<p>\(A = (1, 2, 3)\)</p>
 
 <p>And a vector:</p>
 
-<p><script type="math/tex">% <![CDATA[
-\mathbf{\vec v} = <5, 6, 7> %]]></script></p>
+<p>\(\mathbf{\vec v} = &lt;5, 6, 7&gt;\)</p>
 
-<p>The tip point <script type="math/tex">(B)</script> of the vector is calculated by adding the corresponding components from anchor point and vector <script type="math/tex">\vec v</script>:</p>
+<p>The tip point \((B)\) of the vector is calculated by adding the corresponding components from anchor point and vector \(\vec v\):</p>
 
-<p><script type="math/tex">B = A + \mathbf{\vec v}</script><br />
-<script type="math/tex">B = (1+5, 2+6, 3+7)</script><br />
-<script type="math/tex">B = (6, 8, 10)</script></p>
+<p>\(B = A + \mathbf{\vec v}\)<br />
+\(B = (1+5, 2+6, 3+7)\)<br />
+\(B = (6, 8, 10)\)</p>
 
 <figure>
    <img src="/wip/images/math-image172.png" />
@@ -767,12 +763,11 @@ Let us define an anchor point (A) so that:</p>
 
 <h3 id="position-vector">Position vector</h3>
 
-<p>One special vector representation uses the <script type="math/tex">\text{origin point} (0,0,0)</script> as the vector anchor point.
-The position vector <script type="math/tex">% <![CDATA[
-\mathbf{\vec v} = <a_1,a_2,a_3> %]]></script> is represented with a line segment between two points, the origin and the tip point B, so that:</p>
+<p>One special vector representation uses the \(\text{origin point} (0,0,0)\) as the vector anchor point.
+The position vector \(\mathbf{\vec v} = &lt;a_1,a_2,a_3&gt;\) is represented with a line segment between two points, the origin and the tip point B, so that:</p>
 
-<p><script type="math/tex">\text{Origin point} = (0,0,0)</script><br />
-<script type="math/tex">B = (a_1,a_2,a_3)</script></p>
+<p>\(\text{Origin point} = (0,0,0)\)<br />
+\(B = (a_1,a_2,a_3)\)</p>
 
 <figure>
    <img src="/wip/images/math-image169.png" />
@@ -780,8 +775,7 @@ The position vector <script type="math/tex">% <![CDATA[
 </figure>
 
 <div class="note">
-  <p>A <em>position vector</em> for a given vector <script type="math/tex">% <![CDATA[
-\vec v= < a_1,a_2,a_3 > %]]></script> is a special line segment representation from the origin point <script type="math/tex">(0,0,0)</script> to point <script type="math/tex">(a_1, a_2, a_3)</script>.</p>
+  <p>A <em>position vector</em> for a given vector \(\vec v= &lt; a_1,a_2,a_3 &gt;\) is a special line segment representation from the origin point \((0,0,0)\) to point \((a_1, a_2, a_3)\).</p>
 </div>
 
 <div class="embed-responsive embed-responsive-16by9 video-player">
@@ -801,9 +795,8 @@ The position vector <script type="math/tex">% <![CDATA[
 <p>Do not confuse vectors and points. They are very different concepts. Vectors, as we mentioned, represent a quantity that has direction and length, while points indicate a location. For example, the North direction is a vector, while the North Pole is a location (point).
 If we have a vector and a point that have the same components, such as:</p>
 
-<p><script type="math/tex">% <![CDATA[
-\mathbf{\vec v} = <3,1,0> %]]></script><br />
-<script type="math/tex">P = (3,1,0)</script></p>
+<p>\(\mathbf{\vec v} = &lt;3,1,0&gt;\)<br />
+\(P = (3,1,0)\)</p>
 
 <p>We can draw the vector and the point as follows:</p>
 
@@ -820,17 +813,15 @@ If we have a vector and a point that have the same components, such as:</p>
 
 <h3 id="vector-length">Vector length</h3>
 
-<p>As mentioned before, vectors have length. We will use <script type="math/tex">\vert a \vert</script> to notate the length of a given vector <script type="math/tex">a</script>. For example:</p>
+<p>As mentioned before, vectors have length. We will use \(\vert a \vert\) to notate the length of a given vector \(a\). For example:</p>
 
-<p><script type="math/tex">% <![CDATA[
-\mathbf{\vec a} = <4, 3, 0> %]]></script><br />
-<script type="math/tex">\vert \mathbf{\vec a} \vert = \sqrt{4^2 + 3^2 + 0^2}</script><br />
-<script type="math/tex">\vert \mathbf{\vec a} \vert = 5</script></p>
+<p>\(\mathbf{\vec a} = &lt;4, 3, 0&gt;\)<br />
+\(\vert \mathbf{\vec a} \vert = \sqrt{4^2 + 3^2 + 0^2}\)<br />
+\(\vert \mathbf{\vec a} \vert = 5\)</p>
 
-<p>In general, the length of a vector <script type="math/tex">% <![CDATA[
-\mathbf{\vec a} <a_1,a_2,a_3> %]]></script> is calculated as follows:</p>
+<p>In general, the length of a vector \(\mathbf{\vec a} &lt;a_1,a_2,a_3&gt;\) is calculated as follows:</p>
 
-<p><script type="math/tex">\vert \mathbf{\vec a} \vert = \sqrt{(a_1)^2 + (a_2)^2 + (a_3)^2}</script></p>
+<p>\(\vert \mathbf{\vec a} \vert = \sqrt{(a_1)^2 + (a_2)^2 + (a_3)^2}\)</p>
 
 <figure>
    <img src="/wip/images/math-image173.png" />
@@ -847,27 +838,22 @@ If we have a vector and a point that have the same components, such as:</p>
 
 <p>To calculate a unit vector, we need to find the length of the given vector, and then divide the vector components by the length. For example:</p>
 
-<p><script type="math/tex">% <![CDATA[
-\mathbf{\vec a} = <4, 3, 0> %]]></script><br />
-       <script type="math/tex">\vert \mathbf{\vec a} \vert = \sqrt{4^2 + 3^2 + 0^2}</script><br />
-       <script type="math/tex">\vert \mathbf{\vec a} \vert  = 5 \text{ unit length}</script></p>
+<p>\(\mathbf{\vec a} = &lt;4, 3, 0&gt;\)<br />
+       \(\vert \mathbf{\vec a} \vert = \sqrt{4^2 + 3^2 + 0^2}\)<br />
+       \(\vert \mathbf{\vec a} \vert  = 5 \text{ unit length}\)</p>
 
-<p>If <script type="math/tex">\mathbf{\vec b} = \text{unit vector}</script> of <script type="math/tex">a</script>, then:<br />
-       <script type="math/tex">% <![CDATA[
-\mathbf{\vec b} = <4/5, 3/5, 0/5> %]]></script><br />
-       <script type="math/tex">% <![CDATA[
-\mathbf{\vec b} = <0.8, 0.6, 0> %]]></script><br />
-       <script type="math/tex">\vert \mathbf{\vec b} \vert  = \sqrt{0.8^2 + 0.6^2 + 0^2}</script><br />
-       <script type="math/tex">\vert \mathbf{\vec b} \vert  = \sqrt{0.64 + 0.36 + 0}</script><br />
-       <script type="math/tex">\vert \mathbf{\vec b} \vert  = \sqrt{(1)} = 1 \text{ unit length}</script></p>
+<p>If \(\mathbf{\vec b} = \text{unit vector}\) of \(a\), then:<br />
+       \(\mathbf{\vec b} = &lt;4/5, 3/5, 0/5&gt;\)<br />
+       \(\mathbf{\vec b} = &lt;0.8, 0.6, 0&gt;\)<br />
+       \(\vert \mathbf{\vec b} \vert  = \sqrt{0.8^2 + 0.6^2 + 0^2}\)<br />
+       \(\vert \mathbf{\vec b} \vert  = \sqrt{0.64 + 0.36 + 0}\)<br />
+       \(\vert \mathbf{\vec b} \vert  = \sqrt{(1)} = 1 \text{ unit length}\)</p>
 
 <p>In general:</p>
 
-<p><script type="math/tex">% <![CDATA[
-\mathbf{\vec a} = <a_1, a_2, a_3> %]]></script></p>
+<p>\(\mathbf{\vec a} = &lt;a_1, a_2, a_3&gt;\)</p>
 
-<p>The unit vector of <script type="math/tex">% <![CDATA[
-\mathbf{\vec a} = <a_1/\vert \mathbf{\vec a} \vert , a_2/\vert \mathbf{\vec a} \vert , a_3/\vert \mathbf{\vec a} \vert > %]]></script></p>
+<p>The unit vector of \(\mathbf{\vec a} = &lt;a_1/\vert \mathbf{\vec a} \vert , a_2/\vert \mathbf{\vec a} \vert , a_3/\vert \mathbf{\vec a} \vert &gt;\)</p>
 
 <figure>
    <img src="/wip/images/math-image176.png" />
@@ -892,23 +878,18 @@ If we have a vector and a point that have the same components, such as:</p>
 
 <p>Vector scalar operation involves multiplying a vector by a number. For example:</p>
 
-<p><script type="math/tex">% <![CDATA[
-\mathbf{\vec a} = <4, 3, 0> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-2* \mathbf{\vec a} = <2*4, 2*3, 2*0> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-2*\mathbf{\vec a} = <8, 6, 0> %]]></script></p>
+<p>\(\mathbf{\vec a} = &lt;4, 3, 0&gt;\)<br />
+\(2* \mathbf{\vec a} = &lt;2*4, 2*3, 2*0&gt;\)<br />
+\(2*\mathbf{\vec a} = &lt;8, 6, 0&gt;\)</p>
 
 <figure>
    <img src="/wip/images/math-image175.png" />
    <figcaption>Figure (7): Vector scalar operation</figcaption>
 </figure>
 
-<p>In general, given vector <script type="math/tex">% <![CDATA[
-\mathbf{\vec a} = <a_1, a_2, a_3> %]]></script>, and a real number <script type="math/tex">t</script></p>
+<p>In general, given vector \(\mathbf{\vec a} = &lt;a_1, a_2, a_3&gt;\), and a real number \(t\)</p>
 
-<p><script type="math/tex">% <![CDATA[
-t*\mathbf{\vec a} = < t* a_1, t* a_2, t* a_3 > %]]></script></p>
+<p>\(t*\mathbf{\vec a} = &lt; t* a_1, t* a_2, t* a_3 &gt;\)</p>
 
 <div class="embed-responsive embed-responsive-16by9 video-player">
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/S59M8BnDYAQ?showinfo=0&amp;rel=0&amp;modestbranding=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
@@ -926,14 +907,10 @@ t*\mathbf{\vec a} = < t* a_1, t* a_2, t* a_3 > %]]></script></p>
 
 <p>For example, if we have two vectors:</p>
 
-<p><script type="math/tex">% <![CDATA[
-\mathbf{\vec a} = <1, 2, 0> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec b} = <4, 1, 3> %]]></script> <br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec a}+\mathbf{\vec b} = <1+4, 2+1, 0+3> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec a}+\mathbf{\vec b} = <5, 3, 3> %]]></script></p>
+<p>\(\mathbf{\vec a} = &lt;1, 2, 0&gt;\)<br />
+\(\mathbf{\vec b} = &lt;4, 1, 3&gt;\) <br />
+\(\mathbf{\vec a}+\mathbf{\vec b} = &lt;1+4, 2+1, 0+3&gt;\)<br />
+\(\mathbf{\vec a}+\mathbf{\vec b} = &lt;5, 3, 3&gt;\)</p>
 
 <figure>
    <img src="/wip/images/math-image179.png" />
@@ -942,12 +919,9 @@ t*\mathbf{\vec a} = < t* a_1, t* a_2, t* a_3 > %]]></script></p>
 
 <p>In general, vector addition of the two vectors a and b is calculated as follows:</p>
 
-<p><script type="math/tex">% <![CDATA[
-\mathbf{\vec a} = <a_1, a_2, a_3> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec b} = <b_1, b_2, b_3> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec a}+\mathbf{\vec b} = <a_1+b_1, a_2+b_2, a_3+b_3> %]]></script></p>
+<p>\(\mathbf{\vec a} = &lt;a_1, a_2, a_3&gt;\)<br />
+\(\mathbf{\vec b} = &lt;b_1, b_2, b_3&gt;\)<br />
+\(\mathbf{\vec a}+\mathbf{\vec b} = &lt;a_1+b_1, a_2+b_2, a_3+b_3&gt;\)</p>
 
 <p>Vector addition is useful for finding the average direction of two or more vectors. In this case, we usually use same-length vectors. Here is an example that shows the difference between using same-length vectors and different-length vectors on the resulting vector addition:</p>
 
@@ -966,41 +940,32 @@ t*\mathbf{\vec a} = < t* a_1, t* a_2, t* a_3 > %]]></script></p>
 
 <h3 id="vector-subtraction">Vector subtraction</h3>
 
-<p>Vector subtraction takes two vectors and produces a third vector. We subtract two vectors by subtracting corresponding components. For example, if we have two vectors <script type="math/tex">\mathbf{\vec a}</script> and <script type="math/tex">\mathbf{\vec b}</script> and we subtract <script type="math/tex">\mathbf{\vec b}</script> from <script type="math/tex">\mathbf{\vec a}</script>, then:</p>
+<p>Vector subtraction takes two vectors and produces a third vector. We subtract two vectors by subtracting corresponding components. For example, if we have two vectors \(\mathbf{\vec a}\) and \(\mathbf{\vec b}\) and we subtract \(\mathbf{\vec b}\) from \(\mathbf{\vec a}\), then:</p>
 
-<p><script type="math/tex">% <![CDATA[
-\mathbf{\vec a} = <1, 2, 0> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec b} = <4, 1, 4> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec a}-\mathbf{\vec b} = <1-4, 2-1, 0-4> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec a}-\mathbf{\vec b} = <-3, 1, -4> = \mathbf{\mathbf{\vec b}a} %]]></script></p>
+<p>\(\mathbf{\vec a} = &lt;1, 2, 0&gt;\)<br />
+\(\mathbf{\vec b} = &lt;4, 1, 4&gt;\)<br />
+\(\mathbf{\vec a}-\mathbf{\vec b} = &lt;1-4, 2-1, 0-4&gt;\)<br />
+\(\mathbf{\vec a}-\mathbf{\vec b} = &lt;-3, 1, -4&gt; = \mathbf{\mathbf{\vec b}a}\)</p>
 
-<p>If we subtract <script type="math/tex">\mathbf{\vec b}</script> from <script type="math/tex">\mathbf{\vec a}</script>, we get a different result:</p>
+<p>If we subtract \(\mathbf{\vec b}\) from \(\mathbf{\vec a}\), we get a different result:</p>
 
-<p><script type="math/tex">% <![CDATA[
-\mathbf{\vec b} - \mathbf{\vec a} = <4-1, 1-2, 4-0> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec b} - \mathbf{\vec a} = <3, -1, 4> = \mathbf{\mathbf{\vec a}b} %]]></script></p>
+<p>\(\mathbf{\vec b} - \mathbf{\vec a} = &lt;4-1, 1-2, 4-0&gt;\)<br />
+\(\mathbf{\vec b} - \mathbf{\vec a} = &lt;3, -1, 4&gt; = \mathbf{\mathbf{\vec a}b}\)</p>
 
-<p>Note that the vector <script type="math/tex">\mathbf{\vec b} - \mathbf{\vec a}</script> has the same length as the vector <script type="math/tex">\mathbf{\vec a} - \mathbf{\vec b}</script>, but goes in the opposite direction.</p>
+<p>Note that the vector \(\mathbf{\vec b} - \mathbf{\vec a}\) has the same length as the vector \(\mathbf{\vec a} - \mathbf{\vec b}\), but goes in the opposite direction.</p>
 
 <figure>
    <img src="/wip/images/math-image178.png" />
    <figcaption>Figure (10): Vector subtraction.</figcaption>
 </figure>
 
-<p>In general, if we have two vectors, <script type="math/tex">\mathbf{\vec a}</script> and <script type="math/tex">\mathbf{\vec b}</script>, then <script type="math/tex">\mathbf{\vec a} - \mathbf{\vec b}</script> is a vector that is calculated as follows:</p>
+<p>In general, if we have two vectors, \(\mathbf{\vec a}\) and \(\mathbf{\vec b}\), then \(\mathbf{\vec a} - \mathbf{\vec b}\) is a vector that is calculated as follows:</p>
 
-<p><script type="math/tex">% <![CDATA[
-\mathbf{\vec a} = <a_1, a_2, a_3> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec b} = <b_1, b_2, b_3> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec a}-\mathbf{\vec b} = <a_1 - b_1, a_2 - b_2, a_3 - b_3> = \mathbf{\mathbf{\vec b}a} %]]></script></p>
+<p>\(\mathbf{\vec a} = &lt;a_1, a_2, a_3&gt;\)<br />
+\(\mathbf{\vec b} = &lt;b_1, b_2, b_3&gt;\)<br />
+\(\mathbf{\vec a}-\mathbf{\vec b} = &lt;a_1 - b_1, a_2 - b_2, a_3 - b_3&gt; = \mathbf{\mathbf{\vec b}a}\)</p>
 
-<p>Vector subtraction is commonly used to find vectors between points. So if we need to find a vector that goes from the tip point of the position vector <script type="math/tex">\mathbf{\vec b}</script> to the tip point of the position vector <script type="math/tex">\mathbf{\vec a}</script>, then we use vector subtraction <script type="math/tex">(\mathbf{\vec a}-\mathbf{\vec b})</script> as shown in Figure (11).</p>
+<p>Vector subtraction is commonly used to find vectors between points. So if we need to find a vector that goes from the tip point of the position vector \(\mathbf{\vec b}\) to the tip point of the position vector \(\mathbf{\vec a}\), then we use vector subtraction \((\mathbf{\vec a}-\mathbf{\vec b})\) as shown in Figure (11).</p>
 
 <figure>
    <img src="/wip/images/math-image180.png" />
@@ -1017,37 +982,33 @@ t*\mathbf{\vec a} = < t* a_1, t* a_2, t* a_3 > %]]></script></p>
 
 <p>There are eight properties of vectors. If a, b, and c are vectors, and s and t are numbers, then:</p>
 
-<p><script type="math/tex">\mathbf{\vec a} + \mathbf{\vec b} = \mathbf{\vec b} + \mathbf{\vec a}</script><br />
-<script type="math/tex">\mathbf{\vec a} + 0 = a</script><br />
-<script type="math/tex">s * (\mathbf{\vec a} + \mathbf{\vec b}) = s * a + s * \mathbf{\vec b}</script><br />
-<script type="math/tex">s * t * (\mathbf{\vec a}) = s * (t * \mathbf{\vec a})</script><br />
-<script type="math/tex">\mathbf{\vec a} + (\mathbf{\vec b} + \mathbf{\vec c}) = (\mathbf{\vec a} + \mathbf{\vec b}) + \mathbf{\vec c}</script><br />
-<script type="math/tex">\mathbf{\vec a} + (-\mathbf{\vec a}) = 0</script><br />
-<script type="math/tex">(s + t) * \mathbf{\vec a} = s * \mathbf{\vec a} + t * \mathbf{\vec a}</script><br />
-<script type="math/tex">1 * \mathbf{\vec a} = \mathbf{\vec a}</script></p>
+<p>\(\mathbf{\vec a} + \mathbf{\vec b} = \mathbf{\vec b} + \mathbf{\vec a}\)<br />
+\(\mathbf{\vec a} + 0 = a\)<br />
+\(s * (\mathbf{\vec a} + \mathbf{\vec b}) = s * a + s * \mathbf{\vec b}\)<br />
+\(s * t * (\mathbf{\vec a}) = s * (t * \mathbf{\vec a})\)<br />
+\(\mathbf{\vec a} + (\mathbf{\vec b} + \mathbf{\vec c}) = (\mathbf{\vec a} + \mathbf{\vec b}) + \mathbf{\vec c}\)<br />
+\(\mathbf{\vec a} + (-\mathbf{\vec a}) = 0\)<br />
+\((s + t) * \mathbf{\vec a} = s * \mathbf{\vec a} + t * \mathbf{\vec a}\)<br />
+\(1 * \mathbf{\vec a} = \mathbf{\vec a}\)</p>
 
 <h3 id="vector-dot-product">Vector dot product</h3>
 
 <p>The dot product takes two vectors and produces a number.
 For example, if we have the two vectors a and b so that:</p>
 
-<p><script type="math/tex">% <![CDATA[
-\mathbf{\vec a} = <1, 2, 3> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec b} = <5, 6, 7> %]]></script></p>
+<p>\(\mathbf{\vec a} = &lt;1, 2, 3&gt;\)<br />
+\(\mathbf{\vec b} = &lt;5, 6, 7&gt;\)</p>
 
 <p>Then the dot product is the sum of multiplying the components as follows:</p>
 
-<p><script type="math/tex">\mathbf{\vec a} · \mathbf{\vec b} = 1 * 5 + 2 * 6 + 3 * 7</script><br />
-<script type="math/tex">\mathbf{\vec a} · \mathbf{\vec b} = 38</script></p>
+<p>\(\mathbf{\vec a} · \mathbf{\vec b} = 1 * 5 + 2 * 6 + 3 * 7\)<br />
+\(\mathbf{\vec a} · \mathbf{\vec b} = 38\)</p>
 
 <p>In general, given the two vectors a and b:</p>
 
-<p><script type="math/tex">% <![CDATA[
-\mathbf{\vec a} = <a_1, a_2, a_3> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec b} = <b_1, b_2, b_3> %]]></script><br />
-<script type="math/tex">\mathbf{\vec a} · \mathbf{\vec b} = a_1 * b_1 + a_2 * b_2 + a_3 * b_3</script></p>
+<p>\(\mathbf{\vec a} = &lt;a_1, a_2, a_3&gt;\)<br />
+\(\mathbf{\vec b} = &lt;b_1, b_2, b_3&gt;\)<br />
+\(\mathbf{\vec a} · \mathbf{\vec b} = a_1 * b_1 + a_2 * b_2 + a_3 * b_3\)</p>
 
 <p>We always get a positive number for the dot product between two vectors when they go in the same general direction. A negative dot product between two vectors means that the two vectors go in the opposite general direction.</p>
 
@@ -1058,24 +1019,21 @@ For example, if we have the two vectors a and b so that:</p>
 
 <p>When calculating the dot product of two unit vectors, the result is always between 1 and +1. For example:</p>
 
-<p><script type="math/tex">% <![CDATA[
-\mathbf{\vec a} = <1, 0, 0> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec b} = <0.6, 0.8, 0> %]]></script><br />
-<script type="math/tex">\mathbf{\vec a} · \mathbf{\vec b} = (1 * 0.6, 0 * 0.8, 0 * 0) = 0.6</script></p>
+<p>\(\mathbf{\vec a} = &lt;1, 0, 0&gt;\)<br />
+\(\mathbf{\vec b} = &lt;0.6, 0.8, 0&gt;\)<br />
+\(\mathbf{\vec a} · \mathbf{\vec b} = (1 * 0.6, 0 * 0.8, 0 * 0) = 0.6\)</p>
 
 <p>In addition, the dot product of a vector with itself is equal to that vector’s length to the power of two. For example:</p>
 
-<p><script type="math/tex">% <![CDATA[
-\mathbf{\vec a} = <0, 3, 4> %]]></script><br />
-<script type="math/tex">\mathbf{\vec a} · \mathbf{\vec a} = 0 * 0 + 3 * 3 + 4 * 4</script><br />
-<script type="math/tex">\mathbf{\vec a} · \mathbf{\vec a} = 25</script></p>
+<p>\(\mathbf{\vec a} = &lt;0, 3, 4&gt;\)<br />
+\(\mathbf{\vec a} · \mathbf{\vec a} = 0 * 0 + 3 * 3 + 4 * 4\)<br />
+\(\mathbf{\vec a} · \mathbf{\vec a} = 25\)</p>
 
-<p>Calculating the square length of vector <script type="math/tex">\mathbf{\vec a}</script> :</p>
+<p>Calculating the square length of vector \(\mathbf{\vec a}\) :</p>
 
-<p><script type="math/tex">\vert \mathbf{\vec a} \vert = \sqrt{4^2 + 3^2 + 0^2}</script><br />
-<script type="math/tex">\vert \mathbf{\vec a} \vert = 5</script><br />
-<script type="math/tex">\vert \mathbf{\vec a} \vert 2 = 25</script></p>
+<p>\(\vert \mathbf{\vec a} \vert = \sqrt{4^2 + 3^2 + 0^2}\)<br />
+\(\vert \mathbf{\vec a} \vert = 5\)<br />
+\(\vert \mathbf{\vec a} \vert 2 = 25\)</p>
 
 <h3 id="vector-dot-product-lengths-and-angles">Vector dot product, lengths, and angles</h3>
 
@@ -1087,42 +1045,37 @@ For example, if we have the two vectors a and b so that:</p>
 
 <p>In general:</p>
 
-<p><script type="math/tex">\mathbf{\vec a} · \mathbf{\vec b} = \vert \mathbf{\vec a} \vert * \vert \mathbf{\vec b} \vert * cos(ө)</script> , or<br />
-<script type="math/tex">\mathbf{\vec a} · \mathbf{\vec b} / (\vert \mathbf{\vec a} \vert * \vert \mathbf{\vec b} \vert) = cos(ө)</script></p>
+<p>\(\mathbf{\vec a} · \mathbf{\vec b} = \vert \mathbf{\vec a} \vert * \vert \mathbf{\vec b} \vert * cos(ө)\) , or<br />
+\(\mathbf{\vec a} · \mathbf{\vec b} / (\vert \mathbf{\vec a} \vert * \vert \mathbf{\vec b} \vert) = cos(ө)\)</p>
 
 <p>Where:</p>
 
-<p><script type="math/tex">ө</script> is the angle included between the vectors.</p>
+<p>\(ө\) is the angle included between the vectors.</p>
 
 <p>If vectors a and b are unit vectors, we can simply say:</p>
 
-<p><script type="math/tex">\mathbf{\vec a} · \mathbf{\vec b} = cos(ө)</script></p>
+<p>\(\mathbf{\vec a} · \mathbf{\vec b} = cos(ө)\)</p>
 
 <p>And since the cosine of a 90-degree angle is equal to 0, we can say:</p>
 
 <div class="note">
-  <p>Vectors <script type="math/tex">\vec a</script> and <script type="math/tex">\vec b</script> are orthogonal if, and only if, <script type="math/tex">\vec{a} \cdot  \vec{b} = 0</script>.</p>
+  <p>Vectors \(\vec a\) and \(\vec b\) are orthogonal if, and only if, \(\vec{a} \cdot  \vec{b} = 0\).</p>
 </div>
 
 <p>For example, if we calculate the dot product of the two orthogonal vectors, World xaxis and yaxis, the result will equal zero.</p>
 
-<p><script type="math/tex">% <![CDATA[
-\mathbf{\vec x} = <1, 0, 0> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec y} = <0, 1, 0> %]]></script><br />
-<script type="math/tex">\mathbf{\vec x} · \mathbf{\vec y} = (1 * 0) + (0 * 1) + (0 * 0)</script><br />
-<script type="math/tex">\mathbf{\vec x} · \mathbf{\vec y} = 0</script></p>
+<p>\(\mathbf{\vec x} = &lt;1, 0, 0&gt;\)<br />
+\(\mathbf{\vec y} = &lt;0, 1, 0&gt;\)<br />
+\(\mathbf{\vec x} · \mathbf{\vec y} = (1 * 0) + (0 * 1) + (0 * 0)\)<br />
+\(\mathbf{\vec x} · \mathbf{\vec y} = 0\)</p>
 
 <p>There is also a relationship between the dot product and the projection length of one vector onto another. For example:</p>
 
-<p><script type="math/tex">% <![CDATA[
-\mathbf{\vec a} = <5, 2, 0> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec b} = <9, 0, 0> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-unit(\mathbf{\vec b}) = <1, 0, 0> %]]></script><br />
-<script type="math/tex">\mathbf{\vec a} · unit(\mathbf{\vec b}) = (5 * 1) + (2 * 0) + (0 * 0)</script><br />
-<script type="math/tex">\mathbf{\vec a} · unit(\mathbf{\vec b}) = 2 (\text{which is equal to the projection length of mathbf{\vec a} onto mathbf{\vec b}})</script></p>
+<p>\(\mathbf{\vec a} = &lt;5, 2, 0&gt;\)<br />
+\(\mathbf{\vec b} = &lt;9, 0, 0&gt;\)<br />
+\(unit(\mathbf{\vec b}) = &lt;1, 0, 0&gt;\)<br />
+\(\mathbf{\vec a} · unit(\mathbf{\vec b}) = (5 * 1) + (2 * 0) + (0 * 0)\)<br />
+\(\mathbf{\vec a} · unit(\mathbf{\vec b}) = 2 (\text{which is equal to the projection length of mathbf{\vec a} onto mathbf{\vec b}})\)</p>
 
 <figure>
    <img src="/wip/images/math-image182.png" />
@@ -1131,8 +1084,8 @@ unit(\mathbf{\vec b}) = <1, 0, 0> %]]></script><br />
 
 <p>In general, given a vector a and a non-zero vector b, we can calculate the projection length pL of vector a onto vector b using the dot product.</p>
 
-<p><script type="math/tex">pL = \vert \mathbf{\vec a} \vert * cos(ө)</script><br />
-<script type="math/tex">pL = \mathbf{\vec a} · unit(\mathbf{\vec b})</script></p>
+<p>\(pL = \vert \mathbf{\vec a} \vert * cos(ө)\)<br />
+\(pL = \mathbf{\vec a} · unit(\mathbf{\vec b})\)</p>
 
 <div class="embed-responsive embed-responsive-16by9 video-player">
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZsM2RQbVDf4?showinfo=0&amp;rel=0&amp;modestbranding=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
@@ -1142,13 +1095,13 @@ unit(\mathbf{\vec b}) = <1, 0, 0> %]]></script><br />
 
 <h3 id="dot-product-properties">Dot product properties</h3>
 
-<p>If <script type="math/tex">\mathbf{\vec a}</script>, <script type="math/tex">\mathbf{\vec b}</script>, and <script type="math/tex">\mathbf{\vec c}</script> are vectors and s is a number, then:</p>
+<p>If \(\mathbf{\vec a}\), \(\mathbf{\vec b}\), and \(\mathbf{\vec c}\) are vectors and s is a number, then:</p>
 
-<p><script type="math/tex">\mathbf{\vec a} · \mathbf{\vec a} = \vert  \mathbf{\vec a} \vert ^2</script><br />
-<script type="math/tex">\mathbf{\vec a} · (\mathbf{\vec b} + \mathbf{\vec c}) = \mathbf{\vec a} · \mathbf{\vec b} + \mathbf{\vec a} · \mathbf{\vec c}</script><br />
-<script type="math/tex">0 · \mathbf{\vec a} = 0</script><br />
-<script type="math/tex">\mathbf{\vec a} · \mathbf{\vec b} = \mathbf{\vec b} · \mathbf{\vec a}</script><br />
-<script type="math/tex">(s * \mathbf{\vec a}) · \mathbf{\vec b} = s * (\mathbf{\vec a} · \mathbf{\vec b}) = \mathbf{\vec a} · (s * \mathbf{\vec b})</script></p>
+<p>\(\mathbf{\vec a} · \mathbf{\vec a} = \vert  \mathbf{\vec a} \vert ^2\)<br />
+\(\mathbf{\vec a} · (\mathbf{\vec b} + \mathbf{\vec c}) = \mathbf{\vec a} · \mathbf{\vec b} + \mathbf{\vec a} · \mathbf{\vec c}\)<br />
+\(0 · \mathbf{\vec a} = 0\)<br />
+\(\mathbf{\vec a} · \mathbf{\vec b} = \mathbf{\vec b} · \mathbf{\vec a}\)<br />
+\((s * \mathbf{\vec a}) · \mathbf{\vec b} = s * (\mathbf{\vec a} · \mathbf{\vec b}) = \mathbf{\vec a} · (s * \mathbf{\vec b})\)</p>
 
 <h3 id="vector-cross-product">Vector cross product</h3>
 
@@ -1161,38 +1114,28 @@ unit(\mathbf{\vec b}) = <1, 0, 0> %]]></script><br />
 
 <p>For example, if you have two vectors lying on the World xy-plane, then their cross product is a vector perpendicular to the xy-plane going either in the positive or negative World z-axis direction. For example:</p>
 
-<p><script type="math/tex">% <![CDATA[
-\mathbf{\vec a} = <3, 1, 0> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec b} = <1, 2, 0> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec a} × \mathbf{\vec b} = < (1 * 0 – 0 * 2), (0 * 1 - 3 * 0), (3 * 2 - 1 * 1) > %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec a} × \mathbf{\vec b} = <0, 0, 5> %]]></script></p>
+<p>\(\mathbf{\vec a} = &lt;3, 1, 0&gt;\)<br />
+\(\mathbf{\vec b} = &lt;1, 2, 0&gt;\)<br />
+\(\mathbf{\vec a} × \mathbf{\vec b} = &lt; (1 * 0 – 0 * 2), (0 * 1 - 3 * 0), (3 * 2 - 1 * 1) &gt;\)<br />
+\(\mathbf{\vec a} × \mathbf{\vec b} = &lt;0, 0, 5&gt;\)</p>
 
 <div class="note">
-  <p>The vector <script type="math/tex">\vec a x \vec b</script> is orthogonal to both <script type="math/tex">\vec a</script> and <script type="math/tex">\vec b</script>.</p>
+  <p>The vector \(\vec a x \vec b\) is orthogonal to both \(\vec a\) and \(\vec b\).</p>
 </div>
 
-<p>You will probably never need to calculate a cross product of two vectors by hand, but if you are curious about how it is done, continue reading; otherwise you can safely skip this section. The cross product <script type="math/tex">a × b</script> is defined using determinants. Here is a simple illustration of how to calculate a determinant using the standard basis vectors:</p>
+<p>You will probably never need to calculate a cross product of two vectors by hand, but if you are curious about how it is done, continue reading; otherwise you can safely skip this section. The cross product \(a × b\) is defined using determinants. Here is a simple illustration of how to calculate a determinant using the standard basis vectors:</p>
 
-<p><script type="math/tex">% <![CDATA[
-\color {red}{i} = <1, 0, 0> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\color {blue}{j} = <0,1, 0> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\color {green}{k} = <0, 0, 1> %]]></script></p>
+<p>\(\color {red}{i} = &lt;1, 0, 0&gt;\)<br />
+\(\color {blue}{j} = &lt;0,1, 0&gt;\)<br />
+\(\color {green}{k} = &lt;0, 0, 1&gt;\)</p>
 
 <p><img src="/wip/images/math-image184.png" /></p>
 
-<p>The cross product of the two vectors <script type="math/tex">% <![CDATA[
-\mathbf{\vec a} = <a1, a2, a3> %]]></script> and <script type="math/tex">% <![CDATA[
-\mathbf{\vec b} = <b1, b2, b3> %]]></script> is calculated as follows using the above diagram:</p>
+<p>The cross product of the two vectors \(\mathbf{\vec a} = &lt;a1, a2, a3&gt;\) and \(\mathbf{\vec b} = &lt;b1, b2, b3&gt;\) is calculated as follows using the above diagram:</p>
 
-<p><script type="math/tex">\mathbf{\vec a} × \mathbf{\vec b} = \color {red}{i (a_2 * b_3)} + \color {blue}{ j (a_3 * b_1)} + \color {green}{k(a_1 * b_2)} - \color {green}{k (a_2 * b_1)} - \color {red}{i (a_3 * b_2)} -\color {blue}{ j (a_1 * b_3)}</script><br />
-<script type="math/tex">\mathbf{\vec a} × \mathbf{\vec b} = \color {red}{i (a_2 * b_3 - a_3 * b_2)} + \color {blue}{j (a_3 * b_1 - a_1 * b_3)} +\color {green}{k (a_1 * b_2 - a_2 * b_1)}</script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec a} × \mathbf{\vec b} = <\color {red}{a_2 * b_3 – a_3 * b_2},  \color {blue}{a_3 * b_1 - a_1 * b_3},  \color {green}{a_1 * b_2 - a_2 * b_1} > %]]></script></p>
+<p>\(\mathbf{\vec a} × \mathbf{\vec b} = \color {red}{i (a_2 * b_3)} + \color {blue}{ j (a_3 * b_1)} + \color {green}{k(a_1 * b_2)} - \color {green}{k (a_2 * b_1)} - \color {red}{i (a_3 * b_2)} -\color {blue}{ j (a_1 * b_3)}\)<br />
+\(\mathbf{\vec a} × \mathbf{\vec b} = \color {red}{i (a_2 * b_3 - a_3 * b_2)} + \color {blue}{j (a_3 * b_1 - a_1 * b_3)} +\color {green}{k (a_1 * b_2 - a_2 * b_1)}\)<br />
+\(\mathbf{\vec a} × \mathbf{\vec b} = &lt;\color {red}{a_2 * b_3 – a_3 * b_2},  \color {blue}{a_3 * b_1 - a_1 * b_3},  \color {green}{a_1 * b_2 - a_2 * b_1} &gt;\)</p>
 
 <div class="embed-responsive embed-responsive-16by9 video-player">
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/I5WkhSo4p6o?showinfo=0&amp;rel=0&amp;modestbranding=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
@@ -1204,51 +1147,47 @@ unit(\mathbf{\vec b}) = <1, 0, 0> %]]></script><br />
 
 <p>There is a relationship between the angle between two vectors and the length of their cross product vector. The smaller the angle (smaller sine); the shorter the cross product vector will be. The order of operands is important in vectors cross product. For example:</p>
 
-<p><script type="math/tex">% <![CDATA[
-\mathbf{\vec a} = <1, 0, 0> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec b} = <0, 1, 0> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec a} × \mathbf{\vec b} = <0, 0, 1> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec b} × \mathbf{\vec a} = <0, 0, -1> %]]></script></p>
+<p>\(\mathbf{\vec a} = &lt;1, 0, 0&gt;\)<br />
+\(\mathbf{\vec b} = &lt;0, 1, 0&gt;\)<br />
+\(\mathbf{\vec a} × \mathbf{\vec b} = &lt;0, 0, 1&gt;\)<br />
+\(\mathbf{\vec b} × \mathbf{\vec a} = &lt;0, 0, -1&gt;\)</p>
 
 <figure>
    <img src="/wip/images/math-image185.png" />
    <figcaption>Figure (15): The relationship between the sine of the angle between two vectors and the length of their cross product vector.</figcaption>
 </figure>
 
-<p>In Rhino’s right-handed system, the direction of <script type="math/tex">\mathbf{\vec a} × \mathbf{\vec b}</script> is given by the right-hand rule (where <script type="math/tex">\mathbf{\vec a}</script> = index finger, <script type="math/tex">\mathbf{\vec b}</script> = middle finger, and <script type="math/tex">\mathbf{\vec a} × \mathbf{\vec b}</script> = thumb).</p>
+<p>In Rhino’s right-handed system, the direction of \(\mathbf{\vec a} × \mathbf{\vec b}\) is given by the right-hand rule (where \(\mathbf{\vec a}\) = index finger, \(\mathbf{\vec b}\) = middle finger, and \(\mathbf{\vec a} × \mathbf{\vec b}\) = thumb).</p>
 
 <p><img src="/wip/images/math-image186.png" width="375px" /></p>
 
-<p>In general, for any pair of 3-D vectors <script type="math/tex">\mathbf{\vec a}</script> and <script type="math/tex">\mathbf{\vec b}</script>:</p>
+<p>In general, for any pair of 3-D vectors \(\mathbf{\vec a}\) and \(\mathbf{\vec b}\):</p>
 
-<p><script type="math/tex">\vert \mathbf{\vec a} × \mathbf{\vec b} \vert  = \vert  \mathbf{\vec a} \vert  \vert  \mathbf{\vec b} \vert  sin(ө)</script></p>
+<p>\(\vert \mathbf{\vec a} × \mathbf{\vec b} \vert  = \vert  \mathbf{\vec a} \vert  \vert  \mathbf{\vec b} \vert  sin(ө)\)</p>
 
 <p>Where:</p>
 
-<p><script type="math/tex">ө</script> is the angle included between the position vectors of <script type="math/tex">\mathbf{\vec a}</script> and <script type="math/tex">\mathbf{\vec b}</script></p>
+<p>\(ө\) is the angle included between the position vectors of \(\mathbf{\vec a}\) and \(\mathbf{\vec b}\)</p>
 
 <p>If a and b are unit vectors, then we can simply say that the length of their cross product equals the sine of the angle between them. In other words:</p>
 
-<p><script type="math/tex">\vert \mathbf{\vec a} × \mathbf{\vec b} \vert = sin(ө)</script></p>
+<p>\(\vert \mathbf{\vec a} × \mathbf{\vec b} \vert = sin(ө)\)</p>
 
 <p>The cross product between two vectors helps us determine if two vectors are parallel. This is because the result is always a zero vector.</p>
 
 <div class="note">
-  <p>Vectors <script type="math/tex">\vec a</script> and <script type="math/tex">\vec b</script> are parallel if, and only if, <script type="math/tex">a \times b = 0</script>.</p>
+  <p>Vectors \(\vec a\) and \(\vec b\) are parallel if, and only if, \(a \times b = 0\).</p>
 </div>
 
 <h3 id="cross-product-properties">Cross product properties</h3>
 
-<p>If <script type="math/tex">\mathbf{\vec a}</script>, <script type="math/tex">\mathbf{\vec b}</script>, and <script type="math/tex">\mathbf{\vec c}</script> are vectors, and <script type="math/tex">s</script> is a number, then:<br />
-<script type="math/tex">\mathbf{\vec a} × \mathbf{\vec b} = -\mathbf{\vec b} × \mathbf{\vec a}</script> <br />
-<script type="math/tex">(s * \mathbf{\vec a}) × \mathbf{\vec b} = s * (\mathbf{\vec a} × \mathbf{\vec b}) = \mathbf{\vec a} × (s * \mathbf{\vec b})</script><br />
-<script type="math/tex">\mathbf{\vec a} × (\mathbf{\vec b} + \mathbf{\vec c}) = \mathbf{\vec a} × \mathbf{\vec b} + \mathbf{\vec a} × \mathbf{\vec c}</script><br />
-<script type="math/tex">(\mathbf{\vec a} + \mathbf{\vec b}) × \mathbf{\vec c} = \mathbf{\vec a} × \mathbf{\vec c} + \mathbf{\vec b} × \mathbf{\vec c}</script><br />
-<script type="math/tex">\mathbf{\vec a} · (\mathbf{\vec b} × \mathbf{\vec c}) = (\mathbf{\vec a} × \mathbf{\vec b}) · \mathbf{\vec c}</script><br />
-<script type="math/tex">\mathbf{\vec a} × (\mathbf{\vec b} × \mathbf{\vec c}) = (\mathbf{\vec a} · \mathbf{\vec c}) * \mathbf{\vec b} – (\mathbf{\vec a} · \mathbf{\vec b}) * \mathbf{\vec c}</script></p>
+<p>If \(\mathbf{\vec a}\), \(\mathbf{\vec b}\), and \(\mathbf{\vec c}\) are vectors, and \(s\) is a number, then:<br />
+\(\mathbf{\vec a} × \mathbf{\vec b} = -\mathbf{\vec b} × \mathbf{\vec a}\) <br />
+\((s * \mathbf{\vec a}) × \mathbf{\vec b} = s * (\mathbf{\vec a} × \mathbf{\vec b}) = \mathbf{\vec a} × (s * \mathbf{\vec b})\)<br />
+\(\mathbf{\vec a} × (\mathbf{\vec b} + \mathbf{\vec c}) = \mathbf{\vec a} × \mathbf{\vec b} + \mathbf{\vec a} × \mathbf{\vec c}\)<br />
+\((\mathbf{\vec a} + \mathbf{\vec b}) × \mathbf{\vec c} = \mathbf{\vec a} × \mathbf{\vec c} + \mathbf{\vec b} × \mathbf{\vec c}\)<br />
+\(\mathbf{\vec a} · (\mathbf{\vec b} × \mathbf{\vec c}) = (\mathbf{\vec a} × \mathbf{\vec b}) · \mathbf{\vec c}\)<br />
+\(\mathbf{\vec a} × (\mathbf{\vec b} × \mathbf{\vec c}) = (\mathbf{\vec a} · \mathbf{\vec c}) * \mathbf{\vec b} – (\mathbf{\vec a} · \mathbf{\vec b}) * \mathbf{\vec c}\)</p>
 
 <h2 id="13-vector-equation-of-line">1.3 Vector equation of line</h2>
 
@@ -1261,75 +1200,72 @@ unit(\mathbf{\vec b}) = <1, 0, 0> %]]></script><br />
 
 <p>For example, if we know the direction of a line and a point on that line, then we can find any other point on the line using vectors, as in the following:</p>
 
-<p><script type="math/tex">\overline{L} = line</script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec v} = <a, b, c> %]]></script> line direction unit vector<br />
-<script type="math/tex">Q = (x_0, y_0, z_0)</script> line position point<br />
-<script type="math/tex">P = (x, y, z)</script> any point on the line</p>
+<p>\(\overline{L} = line\)<br />
+\(\mathbf{\vec v} = &lt;a, b, c&gt;\) line direction unit vector<br />
+\(Q = (x_0, y_0, z_0)\) line position point<br />
+\(P = (x, y, z)\) any point on the line</p>
 
 <p>We know that:</p>
 
-<p><script type="math/tex">\mathbf{\vec a} = t *\mathbf{\vec v}</script>   (2)<br />
-<script type="math/tex">\mathbf{\vec p} = \mathbf{\vec q} + \mathbf{\vec a}</script>   (1)</p>
+<p>\(\mathbf{\vec a} = t *\mathbf{\vec v}\)   (2)<br />
+\(\mathbf{\vec p} = \mathbf{\vec q} + \mathbf{\vec a}\)   (1)</p>
 
 <p>From 1 and 2:</p>
 
-<p><script type="math/tex">\mathbf{\vec p} = \mathbf{\vec q} + t * \mathbf{\vec v}</script>  (3)</p>
+<p>\(\mathbf{\vec p} = \mathbf{\vec q} + t * \mathbf{\vec v}\)  (3)</p>
 
 <p>However, we can write (3) as follows:</p>
 
-<p><script type="math/tex">% <![CDATA[
-<x, y, z> = <x_0, y_0, z_0> + <t * a, t * b, t * c> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-<x, y, z> = <x_0 + t * a, y_0 + t * b, z_0 + t * c> %]]></script></p>
+<p>\(&lt;x, y, z&gt; = &lt;x_0, y_0, z_0&gt; + &lt;t * a, t * b, t * c&gt;\)<br />
+\(&lt;x, y, z&gt; = &lt;x_0 + t * a, y_0 + t * b, z_0 + t * c&gt;\)</p>
 
 <p>Therefore:</p>
 
-<p><script type="math/tex">x = x_0 + t * a</script><br />
-<script type="math/tex">y = y_0 + t * b</script><br />
-<script type="math/tex">z = z_0 + t * c</script></p>
+<p>\(x = x_0 + t * a\)<br />
+\(y = y_0 + t * b\)<br />
+\(z = z_0 + t * c\)</p>
 
 <p>Which is the same as:</p>
 
-<p><script type="math/tex">P = Q + t * \mathbf{\vec v}</script></p>
+<p>\(P = Q + t * \mathbf{\vec v}\)</p>
 
 <div class="note">
-  <p>Given a point <script type="math/tex">Q</script> and a direction <script type="math/tex">\vec v</script> on a line, any point <script type="math/tex">P</script> on that line can be calculated using the vector equation of a line <script type="math/tex">P = Q + t * \vec v</script> where <script type="math/tex">t</script> is a number.</p>
+  <p>Given a point \(Q\) and a direction \(\vec v\) on a line, any point \(P\) on that line can be calculated using the vector equation of a line \(P = Q + t * \vec v\) where \(t\) is a number.</p>
 </div>
 
 <p>Another common example is to find the midpoint between two points. The following shows how to find the midpoint using the vector equation of a line:</p>
 
-<p><script type="math/tex">\mathbf{\vec q}</script> is the position vector for point <script type="math/tex">Q</script><br />
-<script type="math/tex">\mathbf{\vec p}</script> is the position vector for point <script type="math/tex">P</script><br />
-<script type="math/tex">\mathbf{\vec a}</script> is the vector going from <script type="math/tex">Q \rightarrow P</script></p>
+<p>\(\mathbf{\vec q}\) is the position vector for point \(Q\)<br />
+\(\mathbf{\vec p}\) is the position vector for point \(P\)<br />
+\(\mathbf{\vec a}\) is the vector going from \(Q \rightarrow P\)</p>
 
 <p>From vector subtraction, we know that:</p>
 
-<p><script type="math/tex">\mathbf{\vec a} = \mathbf{\vec p} - \mathbf{\vec q}</script></p>
+<p>\(\mathbf{\vec a} = \mathbf{\vec p} - \mathbf{\vec q}\)</p>
 
 <p>From the line equation, we know that:</p>
 
-<p><script type="math/tex">M = Q + t * \mathbf{\vec a}</script></p>
+<p>\(M = Q + t * \mathbf{\vec a}\)</p>
 
 <p>And since we need to find midpoint, then:</p>
 
-<p><script type="math/tex">t = 0.5</script></p>
+<p>\(t = 0.5\)</p>
 
 <p>Hence we can say:</p>
 
-<p><script type="math/tex">M = Q + 0.5 * \mathbf{\vec a}</script></p>
+<p>\(M = Q + 0.5 * \mathbf{\vec a}\)</p>
 
 <figure>
    <img src="/wip/images/math-image159.png" />
    <figcaption>Figure (17): Find the midpoint between two input points.</figcaption>
 </figure>
 
-<p>In general, you can find any point between <script type="math/tex">Q</script> and <script type="math/tex">P</script> by changing the <script type="math/tex">t</script> value between 0 and 1 using the general equation:</p>
+<p>In general, you can find any point between \(Q\) and \(P\) by changing the \(t\) value between 0 and 1 using the general equation:</p>
 
-<p><script type="math/tex">M = Q + t * (P - Q)</script></p>
+<p>\(M = Q + t * (P - Q)\)</p>
 
 <div class="note">
-  <p>Given two points <script type="math/tex">Q</script> and <script type="math/tex">P</script>, any point <script type="math/tex">M</script> between the two points is calculated using the equation <script type="math/tex">M = Q + t * (P - Q)</script> where t is a number between 0 and 1.</p>
+  <p>Given two points \(Q\) and \(P\), any point \(M\) between the two points is calculated using the equation \(M = Q + t * (P - Q)\) where t is a number between 0 and 1.</p>
 </div>
 
 <h2 id="14-vector-equation-of-a-plane">1.4 Vector equation of a plane</h2>
@@ -1340,19 +1276,19 @@ unit(\mathbf{\vec b}) = <1, 0, 0> %]]></script><br />
 
 <p>In Figure (16), given:</p>
 
-<p><script type="math/tex">A</script> = the first point on the plane<br />
-<script type="math/tex">B</script> = the second point on the plane<br />
-<script type="math/tex">C</script> = the third point on the plane</p>
+<p>\(A\) = the first point on the plane<br />
+\(B\) = the second point on the plane<br />
+\(C\) = the third point on the plane</p>
 
 <p>And:</p>
 
-<p><script type="math/tex">\mathbf{\vec a}</script> = a position vector of point <script type="math/tex">A</script><br />
-<script type="math/tex">\mathbf{\vec b}</script> = a position vector of point <script type="math/tex">B</script><br />
-<script type="math/tex">\mathbf{\vec c}</script> = a position vector of point <script type="math/tex">C</script></p>
+<p>\(\mathbf{\vec a}\) = a position vector of point \(A\)<br />
+\(\mathbf{\vec b}\) = a position vector of point \(B\)<br />
+\(\mathbf{\vec c}\) = a position vector of point \(C\)</p>
 
-<p>We can find the normal vector <script type="math/tex">\mathbf{\vec n}</script> as follows:</p>
+<p>We can find the normal vector \(\mathbf{\vec n}\) as follows:</p>
 
-<p><script type="math/tex">\mathbf{\vec n} = (\mathbf{\vec b} - \mathbf{\vec a}) × (\mathbf{\vec c} - \mathbf{\vec a})</script></p>
+<p>\(\mathbf{\vec n} = (\mathbf{\vec b} - \mathbf{\vec a}) × (\mathbf{\vec c} - \mathbf{\vec a})\)</p>
 
 <figure>
    <img src="/wip/images/math-image160.png" />
@@ -1361,25 +1297,21 @@ unit(\mathbf{\vec b}) = <1, 0, 0> %]]></script><br />
 
 <p>We can also derive the scalar equation of the plane using the vector dot product:</p>
 
-<p><script type="math/tex">\mathbf{\vec n} · (\mathbf{\vec b} - \mathbf{\vec a}) = 0</script></p>
+<p>\(\mathbf{\vec n} · (\mathbf{\vec b} - \mathbf{\vec a}) = 0\)</p>
 
 <p>If:</p>
 
-<p><script type="math/tex">% <![CDATA[
-\mathbf{\vec n} = <a, b, c> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec b} = <x, y, z> %]]></script><br />
-<script type="math/tex">% <![CDATA[
-\mathbf{\vec a} = <x_0, y_0, z_0> %]]></script></p>
+<p>\(\mathbf{\vec n} = &lt;a, b, c&gt;\)<br />
+\(\mathbf{\vec b} = &lt;x, y, z&gt;\)<br />
+\(\mathbf{\vec a} = &lt;x_0, y_0, z_0&gt;\)</p>
 
 <p>Then we can expand the above:</p>
 
-<p><script type="math/tex">% <![CDATA[
-<a, b, c> · <x-x_0, y-y_0, z-z_0 > = 0 %]]></script></p>
+<p>\(&lt;a, b, c&gt; · &lt;x-x_0, y-y_0, z-z_0 &gt; = 0\)</p>
 
 <p>Solving the dot product gives the general scalar equation of a plane:</p>
 
-<p><script type="math/tex">a * (x - x_0) + b * (y - y_0) + c * (z - z_0) = 0</script></p>
+<p>\(a * (x - x_0) + b * (y - y_0) + c * (z - z_0) = 0\)</p>
 
 <h2 id="15-tutorials">1.5 Tutorials</h2>
 
@@ -1688,44 +1620,44 @@ This is what the result looks like:</p>
 <p><img src="/wip/images/math-image5.png" /></p>
 
 <p><strong>Input:</strong><br />
-Two points (<script type="math/tex">A</script> and <script type="math/tex">B</script>) in the 3-D coordinate system.</p>
+Two points (\(A\) and \(B\)) in the 3-D coordinate system.</p>
 
 <p><img src="/wip/images/math-image6.png" /></p>
 
 <p>Parameters:
 The following is a diagram of the parameters that we will need in order to solve the problem:
-<script type="math/tex">A</script> tangent point <script type="math/tex">D</script> between the two spheres, at some <script type="math/tex">t</script> parameter (0-1) between points <script type="math/tex">A</script> and <script type="math/tex">B</script>.</p>
+\(A\) tangent point \(D\) between the two spheres, at some \(t\) parameter (0-1) between points \(A\) and \(B\).</p>
 
 <ul>
-  <li>The center of the first sphere or the midpoint <script type="math/tex">C1</script> between <script type="math/tex">A</script> and <script type="math/tex">D</script>.</li>
-  <li>The center of the second sphere or the midpoint <script type="math/tex">C2</script> between <script type="math/tex">D</script> and <script type="math/tex">B</script>.</li>
-  <li>The radius of the first sphere <script type="math/tex">(r1)</script> or the distance between <script type="math/tex">A</script> and <script type="math/tex">C1</script>.</li>
-  <li>The radius of the second sphere <script type="math/tex">(r2)</script> or the distance between <script type="math/tex">D</script> and <script type="math/tex">C2</script>.</li>
+  <li>The center of the first sphere or the midpoint \(C1\) between \(A\) and \(D\).</li>
+  <li>The center of the second sphere or the midpoint \(C2\) between \(D\) and \(B\).</li>
+  <li>The radius of the first sphere \((r1)\) or the distance between \(A\) and \(C1\).</li>
+  <li>The radius of the second sphere \((r2)\) or the distance between \(D\) and \(C2\).</li>
 </ul>
 
 <p><strong>Solution:</strong></p>
 
-<p>1. Use the <strong>Expression</strong> component to definepoint <script type="math/tex">D</script> between <script type="math/tex">A</script> and <script type="math/tex">B</script> atsome parameter <script type="math/tex">t</script>. The expression we will use is based onthe vector equation of a line:</p>
+<p>1. Use the <strong>Expression</strong> component to definepoint \(D\) between \(A\) and \(B\) atsome parameter \(t\). The expression we will use is based onthe vector equation of a line:</p>
 
-<p><script type="math/tex">D = A + t*(B-A)</script></p>
+<p>\(D = A + t*(B-A)\)</p>
 
-<p>$$B-A<script type="math/tex">: is the vector that goes from</script>B<script type="math/tex">to</script>A  (\vec{BA}) using the vector subtraction   operation.</p>
+<p>$$B-A\(: is the vector that goes from\)B\(to\)A  (\vec{BA}) using the vector subtraction   operation.</p>
 
-<p>$$t*(B-A)<script type="math/tex">: where</script>t$$ is between 0 and 1 to get us a location on the vector.</p>
+<p>$$t*(B-A)\(: where\)t$$ is between 0 and 1 to get us a location on the vector.</p>
 
 <p>$$A+t*(B-A)$$ : gets apoint on the vector between A and B.</p>
 
 <p><img src="/wip/images/math-image8.png" /></p>
 
-<p>2. Use the Expression component to also define the mid points <script type="math/tex">C1</script> and <script type="math/tex">C2</script>.</p>
+<p>2. Use the Expression component to also define the mid points \(C1\) and \(C2\).</p>
 
 <p><img src="/wip/images/math-image9.png" /></p>
 
-<p>3. The first sphere radius <script type="math/tex">(r1)</script> and the second sphere radius <script type="math/tex">(r2)</script> can be calculated using the <strong>Distance</strong> component.</p>
+<p>3. The first sphere radius \((r1)\) and the second sphere radius \((r2)\) can be calculated using the <strong>Distance</strong> component.</p>
 
 <p><img src="/wip/images/math-image10.png" /></p>
 
-<p>4. The final step involves creating the sphere from a base plane and radius. We need to make sure the origins are hooked to <script type="math/tex">C1</script> and <script type="math/tex">C2</script> and the radius from <script type="math/tex">r1</script> and <script type="math/tex">r2</script>.</p>
+<p>4. The final step involves creating the sphere from a base plane and radius. We need to make sure the origins are hooked to \(C1\) and \(C2\) and the radius from \(r1\) and \(r2\).</p>
 
 <p><img src="/wip/images/math-image54.png" /></p>
 

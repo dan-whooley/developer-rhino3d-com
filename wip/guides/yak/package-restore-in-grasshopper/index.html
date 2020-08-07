@@ -485,7 +485,7 @@ new “Install” option.</p>
 
 <p>Yak uses the name and version of the “libraries” (plug-ins) to which the missing
 components belong to search the server. If any packages match the search query
-then they will be installed and, if possible, loaded prior to opening the definition<sup id="fnref:3"><a href="#fn:3" class="footnote">1</a></sup>.</p>
+then they will be installed and, if possible, loaded prior to opening the definition<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote">1</a></sup>.</p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MsjRdRtHW08" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
@@ -493,7 +493,7 @@ then they will be installed and, if possible, loaded prior to opening the defini
 
 <h3 id="naming-and-guid-fallback">Naming (and GUID fallback)</h3>
 
-<p>In case the package name doesn’t match<sup id="fnref:1"><a href="#fn:1" class="footnote">2</a></sup> the plug-in name (as defined in the
+<p>In case the package name doesn’t match<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">2</a></sup> the plug-in name (as defined in the
 <code>GH_AssemblyInfo</code> derived class), Yak will fall back to searching by plug-in ID.</p>
 
 <p><img src="/wip/images/yak-gh-restore-guid.gif" alt="Package restore can still operate when the plug-in name doesn't match the package" /></p>
@@ -502,12 +502,12 @@ then they will be installed and, if possible, loaded prior to opening the defini
 <code>yak build</code> and added to <code>manifest.yml</code>. When the package is pushed, the server
 extracts the ID (along with the name, version, etc.) and makes it searchable.
 This is to say, if you don’t want to change the name of your Grasshopper plug-in
-to conform with the constraints<sup id="fnref:1:1"><a href="#fn:1" class="footnote">2</a></sup>, <em>please</em> make sure you build the package
+to conform with the constraints<sup id="fnref:1:1" role="doc-noteref"><a href="#fn:1" class="footnote">2</a></sup>, <em>please</em> make sure you build the package
 using <code>yak build</code> so this can all work happily!</p>
 
 <h3 id="version-numbers">Version numbers</h3>
 
-<p>Package version numbers can either follow the <a href="https://semver.org">Semantic Versioning 2.0.0</a> (SemVer) spec or they can be four-digits<sup id="fnref:2"><a href="#fn:2" class="footnote">3</a></sup>, as per <code>System.Version</code>. See the <a href="../the-package-server">package server</a> guide for more details on the allowed version number formats.</p>
+<p>Package version numbers can either follow the <a href="https://semver.org">Semantic Versioning 2.0.0</a> (SemVer) spec or they can be four-digits<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">3</a></sup>, as per <code>System.Version</code>. See the <a href="../the-package-server">package server</a> guide for more details on the allowed version number formats.</p>
 
 <p>The server allows both SemVer and four-digit because some Grasshopper plug-ins will specify their version number as a <code>string</code> in a class derived from <code>GH_AssemblyInfo</code> whereas others will rely on the <code>AssemblyVersionAttribute</code>.</p>
 
@@ -515,16 +515,16 @@ using <code>yak build</code> so this can all work happily!</p>
 
 <hr />
 
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:3">
-      <p>Added to Grasshopper in December 2019. On-the-fly loading is only possible if another version of the Grasshopper library is not already installed and loaded. Otherwise, Rhino will need to be restarted to load the new version of the library. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:3" role="doc-endnote">
+      <p>Added to Grasshopper in December 2019. On-the-fly loading is only possible if another version of the Grasshopper library is not already installed and loaded. Otherwise, Rhino will need to be restarted to load the new version of the library. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:1">
-      <p>Package names are pretty strict. They only allow letters, numbers, hyphens and underscores. <a href="#fnref:1" class="reversefootnote">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    <li id="fn:1" role="doc-endnote">
+      <p>Package names are pretty strict. They only allow letters, numbers, hyphens and underscores. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
     </li>
-    <li id="fn:2">
-      <p>Support for four-digit (<code>System.Version</code>) version numbers was added in Yak 0.8. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:2" role="doc-endnote">
+      <p>Support for four-digit (<code>System.Version</code>) version numbers was added in Yak 0.8. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>

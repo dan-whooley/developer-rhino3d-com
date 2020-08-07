@@ -1447,7 +1447,7 @@ End Sub
 
 <p>Home stretch time, we’ve collected all the information we need in order to populate this sphere. The last step of the algorithm is to stack circles around the sphere, starting at every seam-circle. We need to calculate the circumference of the sphere at that particular latitude, divide that number by the diameter of the circles and once again find the largest integer value which is smaller than or equal to that result. The equivalent mathematical notation for this is:</p>
 
-<script type="math/tex; mode=display">N_{count} = \left[\frac{2 \cdot R_{sphere} \cdot \cos{\phi}}{2 \cdot R_{circle}} \right]</script>
+\[N_{count} = \left[\frac{2 \cdot R_{sphere} \cdot \cos{\phi}}{2 \cdot R_{circle}} \right]\]
 
 <p>in case you need to impress anyone…</p>
 
@@ -1683,7 +1683,7 @@ You'll notice I'm violating a lot of naming conventions from paragraph [2.3.5 Us
 
 <p>The relationship between a and the lengths of the sides of the triangle is:</p>
 
-<script type="math/tex; mode=display">\cos({\alpha})=\frac{0.5D}{?} \gg \frac{1}{\cos({\alpha})}=\frac{?}{0.5D} \gg \frac{0.5D}{\cos({\alpha})} = ?</script>
+\[\cos({\alpha})=\frac{0.5D}{?} \gg \frac{1}{\cos({\alpha})}=\frac{?}{0.5D} \gg \frac{0.5D}{\cos({\alpha})} = ?\]
 
 <p>We now have the equation we need in order to solve the length of the slant edge. The only remaining problem is cos(a). In the paragraph on vector mathematics (6.2 Points and Vectors) the vector dotproduct is briefly introduced as a way to compute the angle between two vectors. When we use unitized vectors, the arccosine of the dotproduct gives us the angle between them. This means the dotproduct returns the cosine of the angle between these vectors. This is a very fortunate turn of events since the cosine of the angle is exactly the thing we’re looking for. In other words, the dotproduct saves us from having to use the cosine and arccosine functions altogether. Thus, the distance between {A} and {M} is the result of:</p>
 
@@ -1969,9 +1969,9 @@ The thing to realize is that the call is now different. We're putting in differe
 
 <p>As you may or may not have guessed at this point, the little circles between pieces represent the knot-vector of this curve. This <em>D<sup>3</sup></em> curve has ten control points and twelve knots (0~11). This is not a coincidence, the number of knots follows directly from the number of points and the degree:</p>
 
-<script type="math/tex; mode=display">K_N = P_N + (D-1)</script>
+\[K_N = P_N + (D-1)\]
 
-<p>Where <script type="math/tex">{K_N}</script> is the knot count, <script type="math/tex">{P_N}</script> is the point count and <script type="math/tex">{D}</script> is the degree.</p>
+<p>Where \({K_N}\) is the knot count, \({P_N}\) is the point count and \({D}\) is the degree.</p>
 
 <p>In the image on the previous page, the red and purple pieces do in fact touch the control polygon at the beginning and end, but we have to make some effort to stretch them this far. This effort is called “clamping”, and it is achieved by stacking a lot of knots together. You can see that the number of knots we need to collapse in order to get the curve to touch a control-point is the same as the degree of the curve:</p>
 
@@ -1993,10 +1993,10 @@ The thing to realize is that the call is now different. We're putting in differe
 
 <ul>
   <li>Iterate though all segments of the polyline.</li>
-  <li>From the beginning of the segment <script type="math/tex">{A}</script>, place an extra control point <script type="math/tex">{W_1}</script> at distance <script type="math/tex">{R}</script>.</li>
-  <li>From the end of the segment <script type="math/tex">{B}</script>, place an extra control point <script type="math/tex">{W_2}</script> at distance <script type="math/tex">{R}</script>.</li>
-  <li>Put extra control-points halfway between <script type="math/tex">{A; W_1; W_2; B}</script>.</li>
-  <li>Insert a <script type="math/tex">D^5</script> nurbs curve using those new control points.</li>
+  <li>From the beginning of the segment \({A}\), place an extra control point \({W_1}\) at distance \({R}\).</li>
+  <li>From the end of the segment \({B}\), place an extra control point \({W_2}\) at distance \({R}\).</li>
+  <li>Put extra control-points halfway between \({A; W_1; W_2; B}\).</li>
+  <li>Insert a \(D^5\) nurbs curve using those new control points.</li>
 </ul>
 
 <p>Or, in graphic form:</p>
@@ -2007,7 +2007,7 @@ The thing to realize is that the call is now different. We're putting in differe
 
 <p>The third image shows the original control points (the filled circles) and all blend radius control points (the empty circles), positioned along every segment with a distance of {R} from its nearest neighbour. The two red control points have been positioned 0.5 units away (half the segment length) from their respective neighbours.</p>
 
-<p>Finally, the last image shows all the control points that will be added in between the existing control points. Once we have an ordered array of all control points (ordered as they appear along the original polyline) we can create a <script type="math/tex">D^5</script> curve using <em>Rhino.AddCurve()</em>.</p>
+<p>Finally, the last image shows all the control points that will be added in between the existing control points. Once we have an ordered array of all control points (ordered as they appear along the original polyline) we can create a \(D^5\) curve using <em>Rhino.AddCurve()</em>.</p>
 
 <pre class="line-numbers"><code class="language-vb">Sub BlendCorners()
     Dim idPolyline : idPolyline = Rhino.GetObject("Polyline to blend", 4, True, True)
@@ -2625,7 +2625,7 @@ End Sub
 
 <p><img src="/wip/images/primer-meshgraph_xy.svg" alt="/wip/imagesprimer-meshgraph_xy.svg" class="float-img-right" width="375" /></p>
 
-<script type="math/tex; mode=display">f(x, y, \Theta, \Delta) = ...</script>
+\[f(x, y, \Theta, \Delta) = ...\]
 
 <p>Where the user is allowed to specify any valid mathematical function using the variables <em>x</em>, <em>y</em>, <em>Θ</em> and <em>Δ</em>. Every vertex in the mesh plane has a unique combination of <em>x</em> and <em>y</em> values which can be used to determine the <em>z</em> value of that vertex by evaluating the custom function (<em>Θ</em> and <em>Δ</em> are the polar coordinates of <em>x</em> and <em>y</em>). This means every vertex {A} in the plane has a coordinate {B} associated with it which shares the <em>x</em> and <em>y</em> components, but not the <em>z</em> component.</p>
 
@@ -3186,7 +3186,7 @@ Apart from a few primitive surface types such as spheres, cones, planes and cyli
 
 <p>Our choices are already pretty limited by these contraints, but there are still some worthy contestants. If this were a primer about mathematics I’d probably have gone for a gaussian distribution, but instead we’ll use an extremely simple equation known as a hyperbola. If we define the diffusion factor of a Greville point as the inverse of its distance to {S’}, we get this hyperbolic function:</p>
 
-<script type="math/tex; mode=display">f(y)=\frac{1}{x}</script>
+\[f(y)=\frac{1}{x}\]
 
 <p><img src="/wip/images/primer-distanceweightfactor.svg" class="img-center" width="80%" /></p>
 
@@ -3523,7 +3523,7 @@ End Sub
 
 <p>The great German mathematician Carl Friedrich Gauss figured out that by multiplying the principal curvature radii you get another, for some purposes much more useful indicator of curvature:</p>
 
-<script type="math/tex; mode=display">K_{Gauss}=K_{min} \cdot K_{max}</script>
+\[K_{Gauss}=K_{min} \cdot K_{max}\]
 
 <p>Where J<sub>Gauss</sub> is the Gaussian curvature and l<sub>min</sub> and l<sub>max</sub> are the principal curvatures. Assuming you are completely comfortable with the behaviour of multiplications, we can identify a number of specific cases:</p>
 
@@ -3533,7 +3533,7 @@ End Sub
 
 <p>The other important curvature definition is Mean curvature (“average”), which is essentially the sum of the principal curvatures:</p>
 
-<script type="math/tex; mode=display">K_{Mean}=\frac{K_{min} + K_{max}}{2}</script>
+\[K_{Mean}=\frac{K_{min} + K_{max}}{2}\]
 
 <p>As you know, summation behaves very different from multiplication, and Mean curvature can be used to analyze different properties of a surface because it has different special cases. If the minimum and maximum principal curvatures are equal in amplitude but have opposing signs, the average of both is zero. A surface with zero Mean curvature is not merely anticlastic, it is a very special surface known as a <em>minimal</em> or <em>zero-energy</em> surface. It is the natural shape of a soap film with equal atmospheric pressure on both sides. These surfaces are extremely important in the field of tensile architecture since they spread stress equally across the surface resulting in structurally strong geometry.</p>
 
