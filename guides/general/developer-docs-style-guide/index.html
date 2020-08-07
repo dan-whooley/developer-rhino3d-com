@@ -1366,7 +1366,7 @@ This can contain only <em>span</em> level elements.
 
 <p>yields:</p>
 
-<p>This is a text with a footnote<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>.</p>
+<p>This is a text with a footnote<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>.</p>
 
 <hr />
 
@@ -1424,7 +1424,7 @@ This can contain only <em>span</em> level elements.
 
 <p>yields:</p>
 
-<script type="math/tex; mode=display">y = {\sqrt{x^2+(x-1)} \over x-3} + \left| 2x \over x^{0.5x} \right|</script>
+\[y = {\sqrt{x^2+(x-1)} \over x-3} + \left| 2x \over x^{0.5x} \right|\]
 
 <p>See the <a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">MathJax basic tutorial and quick reference on StackExchange</a>.</p>
 
@@ -1459,10 +1459,10 @@ This can contain only <em>span</em> level elements.
 
 <h2 id="footnotes-1">Footnotes</h2>
 
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1">
-      <p>This is an example of a footnote. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:1" role="doc-endnote">
+      <p>This is an example of a footnote. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>

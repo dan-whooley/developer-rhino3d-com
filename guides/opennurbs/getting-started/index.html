@@ -674,7 +674,7 @@ $(document).ready(function()
 
 <h4 id="orientation-of-on_brep-faces">Orientation of ON_Brep faces</h4>
 
-<p>The UV orientation of surfaces in a Brep is arbitrary.  If the <code>BOOL ON_BrepFace::m_bRev</code> member is <code>FALSE</code>, then the face’s orientation agrees with the surface’s natural <script type="math/tex">Du \times Dv</script> orientation.  When the member is <code>TRUE</code>, the face’s orientation is opposite the surface’s natural <script type="math/tex">Du \times Dv</script> orientation.</p>
+<p>The UV orientation of surfaces in a Brep is arbitrary.  If the <code>BOOL ON_BrepFace::m_bRev</code> member is <code>FALSE</code>, then the face’s orientation agrees with the surface’s natural \(Du \times Dv\) orientation.  When the member is <code>TRUE</code>, the face’s orientation is opposite the surface’s natural \(Du \times Dv\) orientation.</p>
 
 <p>If your application cannot handle <code>ON_BrepFaces</code> that have a <code>TRUE</code> <code>m_bRev</code> flag, then call <code>ON_Brep::FlipReversedSurfaces()</code>.  See the comments in <code>ON_Brep::FlipReversedSurfaces()</code> and <code>ON_Brep::SwapFaceParameters()</code> for details.</p>
 

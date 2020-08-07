@@ -499,7 +499,7 @@ then they will be installed and made available the next time Grasshopper loads.<
 
 <h3 id="naming-and-guid-fallback">Naming (and GUID fallback)</h3>
 
-<p>In case the package name doesn’t match<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> the plug-in name (as defined in the
+<p>In case the package name doesn’t match<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup> the plug-in name (as defined in the
 <code>GH_AssemblyInfo</code> derived class), Yak will fall back to searching by plug-in ID.</p>
 
 <p><img src="/images/yak-gh-restore-guid.gif" alt="Package restore can still operate when the plug-in name doesn't match the package" /></p>
@@ -512,13 +512,13 @@ then they will be installed and made available the next time Grasshopper loads.<
 <code>yak build</code> and added to <code>manifest.yml</code>. When the package is pushed, the server
 extracts the ID (along with the name, version, etc.) and makes it searchable.
 This is to say, if you don’t want to change the name of your Grasshopper plug-in
-to conform with the constraints<sup id="fnref:1:1"><a href="#fn:1" class="footnote">1</a></sup>, <em>please</em> make sure you build the package
+to conform with the constraints<sup id="fnref:1:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>, <em>please</em> make sure you build the package
 using <code>yak build</code> so this can all work happily!</p>
 
 <h3 id="version-numbers">Version numbers</h3>
 
 <p>Similar to the naming, the Yak server is strict in its use of Semantic
-Versioning<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> for packages. The server will however attempt to coerce version
+Versioning<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup> for packages. The server will however attempt to coerce version
 strings that don’t exactly match the specification, for example: <code>1 -&gt; 1.0.0</code>.
 If the “Unrecognized Objects” dialog kicks up a plug-in that doesn’t match
 Semantic Versioning (and can’t be coerced), then it won’t find any matches.</p>
@@ -531,13 +531,13 @@ Versioning, so…</p>
 
 <hr />
 
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1">
-      <p>Package names are pretty strict. They only allow letters, numbers, hyphens and underscores. <a href="#fnref:1" class="reversefootnote">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    <li id="fn:1" role="doc-endnote">
+      <p>Package names are pretty strict. They only allow letters, numbers, hyphens and underscores. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
     </li>
-    <li id="fn:2">
-      <p><a href="http://semver.org/spec/v2.0.0.html">http://semver.org/spec/v2.0.0.html</a> <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:2" role="doc-endnote">
+      <p><a href="http://semver.org/spec/v2.0.0.html">http://semver.org/spec/v2.0.0.html</a> <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>

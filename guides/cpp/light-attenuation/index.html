@@ -515,9 +515,9 @@ $(document).ready(function()
 <p>The three coefficients to light attenuation are:</p>
 
 <ol>
-  <li>Constant attenuation (<script type="math/tex">C</script>)</li>
-  <li>Linear attenuation (<script type="math/tex">L</script>)</li>
-  <li>Quadratic attenuation (<script type="math/tex">Q</script>)</li>
+  <li>Constant attenuation (\(C\))</li>
+  <li>Linear attenuation (\(L\))</li>
+  <li>Quadratic attenuation (\(Q\))</li>
 </ol>
 
 <p>Thus, you could create the input vector as follows:</p>
@@ -533,23 +533,23 @@ $(document).ready(function()
 
 <p>If you want constant attenuation, or:</p>
 
-<script type="math/tex; mode=display">1 \over C</script>
+\[1 \over C\]
 
-<p>then both <script type="math/tex">L</script> and <script type="math/tex">Q</script> must be <script type="math/tex">0</script> and <script type="math/tex">C > 0</script> (usually <script type="math/tex">= 1.0</script>).</p>
+<p>then both \(L\) and \(Q\) must be \(0\) and \(C &gt; 0\) (usually \(= 1.0\)).</p>
 
 <h3 id="linear">Linear</h3>
 
 <p>If you want linear attenuation:</p>
 
-<script type="math/tex; mode=display">1 \over C + dL</script>
+\[1 \over C + dL\]
 
-<p>where <script type="math/tex">d</script> = distance to light, then <script type="math/tex">C</script> and <script type="math/tex">L</script> vary and <script type="math/tex">Q</script> must be <script type="math/tex">0</script>.</p>
+<p>where \(d\) = distance to light, then \(C\) and \(L\) vary and \(Q\) must be \(0\).</p>
 
 <h3 id="quadratic">Quadratic</h3>
 
 <p>If you want quadratic attenuation:</p>
 
-<script type="math/tex; mode=display">1 \over C + dL + d^{2Q}</script>
+\[1 \over C + dL + d^{2Q}\]
 
 <p>then all 3 coefficients can and should vary.</p>
 
