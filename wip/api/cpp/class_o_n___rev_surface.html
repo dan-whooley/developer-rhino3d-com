@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -154,6 +154,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa7de622e9d43adf093fb05937697104d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7672b802e579e02850e8c2e04416540"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___rev_surface.html#ad7672b802e579e02850e8c2e04416540">IsCylindrical</a> (<a class="el" href="class_o_n___cylinder.html">ON_Cylinder</a> *cylinder=nullptr, double tolerance=<a class="el" href="group__open_n_u_r_b_s.html#ga384d9713cff6f46d203437be118aab80">ON_ZERO_TOLERANCE</a>) const</td></tr>
 <tr class="separator:ad7672b802e579e02850e8c2e04416540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00ce1c4e6a067a3ea43bda36f1759046"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___arc.html">ON_Arc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___rev_surface.html#a00ce1c4e6a067a3ea43bda36f1759046">IsoArc</a> (double curve_parameter) const</td></tr>
+<tr class="separator:a00ce1c4e6a067a3ea43bda36f1759046"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d33f6bb58d894a83477ee455c63fe9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___curve.html">ON_Curve</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___rev_surface.html#a6d33f6bb58d894a83477ee455c63fe9b">IsoCurve</a> (int dir, double c) const override</td></tr>
 <tr class="separator:a6d33f6bb58d894a83477ee455c63fe9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3a6443f77d72791aa5422e03f35a173"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___rev_surface.html#ab3a6443f77d72791aa5422e03f35a173">IsPeriodic</a> (int) const override</td></tr>
@@ -280,7 +282,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a540c9be4e61afd522ced8ee37cb0a47f inherit pub_methods_class_o_n___surface"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___surface.html#a540c9be4e61afd522ced8ee37cb0a47f">PointAt</a> (double, double) const</td></tr>
 <tr class="memdesc:a540c9be4e61afd522ced8ee37cb0a47f inherit pub_methods_class_o_n___surface"><td class="mdescLeft">&#160;</td><td class="mdescRight">simple evaluation interface - no error handling  <a href="class_o_n___surface.html#a540c9be4e61afd522ced8ee37cb0a47f">More...</a><br /></td></tr>
 <tr class="separator:a540c9be4e61afd522ced8ee37cb0a47f inherit pub_methods_class_o_n___surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a18b844ec679dd1f1a42afb6a9d50dc inherit pub_methods_class_o_n___surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_o_n___curve.html">ON_Curve</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___surface.html#a6a18b844ec679dd1f1a42afb6a9d50dc">Pullback</a> (const <a class="el" href="class_o_n___curve.html">ON_Curve</a> &amp;curve_3d, double tolerance, const <a class="el" href="class_o_n___interval.html">ON_Interval</a> *curve_3d_subdomain=nullptr, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> start_uv=<a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a>, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> end_uv=<a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a>, <a class="el" href="group__open_n_u_r_b_s.html#ga07b06d9e1e6e2628fff11b0c5bcb9d87">ON_FitResult</a> *rc=0) const</td></tr>
+<tr class="memitem:a6a18b844ec679dd1f1a42afb6a9d50dc inherit pub_methods_class_o_n___surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_o_n___curve.html">ON_Curve</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___surface.html#a6a18b844ec679dd1f1a42afb6a9d50dc">Pullback</a> (const <a class="el" href="class_o_n___curve.html">ON_Curve</a> &amp;curve_3d, double tolerance, const <a class="el" href="class_o_n___interval.html">ON_Interval</a> *curve_3d_subdomain=nullptr, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> start_uv=<a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a>, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> end_uv=<a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a>, <a class="el" href="group__open_n_u_r_b_s.html#ga07b06d9e1e6e2628fff11b0c5bcb9d87">ON_FitResult</a> *rc=0) const</td></tr>
 <tr class="separator:a6a18b844ec679dd1f1a42afb6a9d50dc inherit pub_methods_class_o_n___surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8a30c98f407b9971a7699df969fd1c4 inherit pub_methods_class_o_n___surface"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_o_n___curve.html">ON_Curve</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___surface.html#ae8a30c98f407b9971a7699df969fd1c4">Pushup</a> (const <a class="el" href="class_o_n___curve.html">ON_Curve</a> &amp;curve_2d, double tolerance, const <a class="el" href="class_o_n___interval.html">ON_Interval</a> *curve_2d_subdomain=nullptr, <a class="el" href="group__open_n_u_r_b_s.html#ga07b06d9e1e6e2628fff11b0c5bcb9d87">ON_FitResult</a> *rc=0) const</td></tr>
 <tr class="separator:ae8a30c98f407b9971a7699df969fd1c4 inherit pub_methods_class_o_n___surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -291,7 +293,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2f753f161c711fb529aa98649757beee inherit pub_methods_class_o_n___surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4647ab1cb5aaba90fa9cca690ad4ae06 inherit pub_methods_class_o_n___surface"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_o_n___surface_tree.html">ON_SurfaceTree</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___surface.html#a4647ab1cb5aaba90fa9cca690ad4ae06">SurfaceTree</a> () const</td></tr>
 <tr class="separator:a4647ab1cb5aaba90fa9cca690ad4ae06 inherit pub_methods_class_o_n___surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8080ef0b385224c17df0f035a697814e inherit pub_methods_class_o_n___surface"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___surface.html#a8080ef0b385224c17df0f035a697814e">VolumeMassProperties</a> (class <a class="el" href="class_o_n___mass_properties.html">ON_MassProperties</a> &amp;mp, bool bVolume=true, bool bFirstMoments=true, bool bSecondMoments=true, bool bProductMoments=true, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> base_point=<a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a>, double rel_tol=1.0e-6, double abs_tol=1.0e-6) const</td></tr>
+<tr class="memitem:a8080ef0b385224c17df0f035a697814e inherit pub_methods_class_o_n___surface"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___surface.html#a8080ef0b385224c17df0f035a697814e">VolumeMassProperties</a> (class <a class="el" href="class_o_n___mass_properties.html">ON_MassProperties</a> &amp;mp, bool bVolume=true, bool bFirstMoments=true, bool bSecondMoments=true, bool bProductMoments=true, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> base_point=<a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a>, double rel_tol=1.0e-6, double abs_tol=1.0e-6) const</td></tr>
 <tr class="separator:a8080ef0b385224c17df0f035a697814e inherit pub_methods_class_o_n___surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_o_n___geometry"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_o_n___geometry')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_o_n___geometry.html">ON_Geometry</a></td></tr>
 <tr class="memitem:a65226d33b1c8c1e8289e37073566c953 inherit pub_methods_class_o_n___geometry"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___geometry.html#a65226d33b1c8c1e8289e37073566c953">ON_Geometry</a> ()=default</td></tr>
@@ -1647,6 +1649,24 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a00ce1c4e6a067a3ea43bda36f1759046"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00ce1c4e6a067a3ea43bda36f1759046">&#9670;&nbsp;</a></span>IsoArc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_o_n___arc.html">ON_Arc</a> ON_RevSurface::IsoArc </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>curve_parameter</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a6d33f6bb58d894a83477ee455c63fe9b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d33f6bb58d894a83477ee455c63fe9b">&#9670;&nbsp;</a></span>IsoCurve()</h2>
 
@@ -2420,7 +2440,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:28 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:54 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['applybufferimageattributes_48830',['ApplyBufferImageAttributes',['../class_c_rhino_dib.html#acac62a806962281b8b5b960ebe7ab3fc',1,'CRhinoDib']]]
+  ['applybufferimageattributes_53782',['ApplyBufferImageAttributes',['../class_c_rhino_dib.html#a68cc33fe3e580fcc77a946adc36d32ba',1,'CRhinoDib']]]
 ];

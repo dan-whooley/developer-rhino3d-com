@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -66,6 +66,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_o_n___mesh-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -95,10 +96,22 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9ee37aa93246b181563b9aabed637a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8da15ad65efff0f1967534245d81383"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#af8da15ad65efff0f1967534245d81383">~ON_Mesh</a> ()</td></tr>
 <tr class="separator:af8da15ad65efff0f1967534245d81383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34cab5280e39fd919b5e019817ce04dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a34cab5280e39fd919b5e019817ce04dc">AddNgon</a> (const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; unsigned int &gt; &amp;ngon_fi)</td></tr>
+<tr class="separator:a34cab5280e39fd919b5e019817ce04dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb812b572f4ced402594a186fde4d243"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#adb812b572f4ced402594a186fde4d243">AddNgon</a> (const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; unsigned int &gt; &amp;ngon_fi, bool bPermitHoles)</td></tr>
+<tr class="separator:adb812b572f4ced402594a186fde4d243"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb3d88b51027b886d9b467eda75036eb"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#abb3d88b51027b886d9b467eda75036eb">AddNgon</a> (<a class="el" href="class_o_n___mesh_ngon.html">ON_MeshNgon</a> *ngon)</td></tr>
 <tr class="separator:abb3d88b51027b886d9b467eda75036eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f89a4ba64a5e25a7a20ad3ac6881ab7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a1f89a4ba64a5e25a7a20ad3ac6881ab7">AddNgon</a> (unsigned int Fcount, const unsigned int *ngon_fi)</td></tr>
+<tr class="separator:a1f89a4ba64a5e25a7a20ad3ac6881ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cb115a0baab6a1b37bbc5c95f61937e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a3cb115a0baab6a1b37bbc5c95f61937e">AddNgon</a> (unsigned int Fcount, const unsigned int *ngon_fi, bool bPermitHoles)</td></tr>
+<tr class="separator:a3cb115a0baab6a1b37bbc5c95f61937e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19a5572ee9d7de8a703aa4a432934655"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a19a5572ee9d7de8a703aa4a432934655">AddNgon</a> (unsigned int Vcount, const unsigned int *ngon_vi, unsigned int Fcount, const unsigned int *ngon_fi)</td></tr>
 <tr class="separator:a19a5572ee9d7de8a703aa4a432934655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21cc7b60eb21a8836512136c951929c2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a21cc7b60eb21a8836512136c951929c2">AddNgon_Expert</a> (unsigned int Fcount, const unsigned int *ngon_fi, bool bPermitHoles, <a class="el" href="class_o_n___mesh_vertex_face_map.html">ON_MeshVertexFaceMap</a> *vertexFaceMap)</td></tr>
+<tr class="separator:a21cc7b60eb21a8836512136c951929c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61cd035aeaea26d6814a8711a657a00c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a61cd035aeaea26d6814a8711a657a00c">AddNgons</a> (const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a> &gt; &amp;ci_list)</td></tr>
+<tr class="separator:a61cd035aeaea26d6814a8711a657a00c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fb69972dd0035076ee1a393e7aae1a0"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a3fb69972dd0035076ee1a393e7aae1a0">AddPlanarNgons</a> (const unsigned int *const *vertex_face_map, double planar_tolerance, unsigned int minimum_ngon_vertex_count, unsigned int minimum_ngon_face_count, bool bAllowHoles)</td></tr>
 <tr class="separator:a3fb69972dd0035076ee1a393e7aae1a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9b7951b3d2892e63d866c4ff8d65dfd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___mesh_ngon.html">ON_MeshNgon</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#ab9b7951b3d2892e63d866c4ff8d65dfd">AllocateNgon</a> (unsigned int Vcount, unsigned int Fcount)</td></tr>
@@ -155,6 +168,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afce044b87f7573b019c215063fe85e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03df67e386dc849f2c3badf9280da0c6"><td class="memItemLeft" align="right" valign="top">const unsigned int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a03df67e386dc849f2c3badf9280da0c6">CreateNgonMap</a> ()</td></tr>
 <tr class="separator:a03df67e386dc849f2c3badf9280da0c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43669dda3f5ca8bd9151487fa915c60e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a43669dda3f5ca8bd9151487fa915c60e">CreateNgonMap</a> (<a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; unsigned int &gt; &amp;map) const</td></tr>
+<tr class="separator:a43669dda3f5ca8bd9151487fa915c60e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e6c90461ff94aa261d94fb4f6aaa160"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a9e6c90461ff94aa261d94fb4f6aaa160">CreateNgonMap</a> (unsigned int *ngon_map) const</td></tr>
+<tr class="separator:a9e6c90461ff94aa261d94fb4f6aaa160"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4bc3aabd5155e282910738daa1b3c62"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_o_n___mesh_partition.html">ON_MeshPartition</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#ac4bc3aabd5155e282910738daa1b3c62">CreatePartition</a> (int, int)</td></tr>
 <tr class="separator:ac4bc3aabd5155e282910738daa1b3c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a105368d48f28f2c7def8eafc7d2e7e20"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a105368d48f28f2c7def8eafc7d2e7e20">CullClashingFaces</a> (int what_to_cull)</td></tr>
@@ -162,6 +179,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a285f54befb68149d3a23ac29fc1042a7"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a285f54befb68149d3a23ac29fc1042a7">CullDegenerateFaces</a> ()</td></tr>
 <tr class="memdesc:a285f54befb68149d3a23ac29fc1042a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns number of degenerate faces  <a href="class_o_n___mesh.html#a285f54befb68149d3a23ac29fc1042a7">More...</a><br /></td></tr>
 <tr class="separator:a285f54befb68149d3a23ac29fc1042a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95987b3668ca3c6958426adb4d3268ec"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a95987b3668ca3c6958426adb4d3268ec">CullDegenerates</a> ()</td></tr>
+<tr class="separator:a95987b3668ca3c6958426adb4d3268ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a28c1db5796622470a0d8cd4c8d4f7c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a2a28c1db5796622470a0d8cd4c8d4f7c">CullUnusedVertices</a> ()</td></tr>
 <tr class="memdesc:a2a28c1db5796622470a0d8cd4c8d4f7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns number of culled vertices  <a href="class_o_n___mesh.html#a2a28c1db5796622470a0d8cd4c8d4f7c">More...</a><br /></td></tr>
 <tr class="separator:a2a28c1db5796622470a0d8cd4c8d4f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,6 +195,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a57ee1525a489f197b6a1a2cb9d0f439e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24b28034b4aeb5425af27969919eea63"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a24b28034b4aeb5425af27969919eea63">DeleteComponents</a> (const <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a> *ci_list, size_t ci_count, bool bIgnoreInvalidComponents, bool bRemoveDegenerateFaces, bool bRemoveUnusedVertices, bool bRemoveEmptyNgons)</td></tr>
 <tr class="separator:a24b28034b4aeb5425af27969919eea63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9c08746dc896cf1de9be6087f74e8c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#ae9c08746dc896cf1de9be6087f74e8c3">DeleteComponents</a> (const <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a> *ci_list, size_t ci_count, bool bIgnoreInvalidComponents, bool bRemoveDegenerateFaces, bool bRemoveUnusedVertices, bool bRemoveEmptyNgons, unsigned int *faceMap)</td></tr>
+<tr class="separator:ae9c08746dc896cf1de9be6087f74e8c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ae0206ba06af5b6a2895582caad8ca0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a8ae0206ba06af5b6a2895582caad8ca0">DeleteComponents</a> (const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a> &gt; &amp;ci_list)</td></tr>
 <tr class="separator:a8ae0206ba06af5b6a2895582caad8ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc0108f56f056f60f2918924e1152103"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#afc0108f56f056f60f2918924e1152103">DeleteFace</a> (int meshfi)</td></tr>
@@ -200,14 +221,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa029aafe4a524b31a986fa46374d6c5b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#aa029aafe4a524b31a986fa46374d6c5b">Dimension</a> () const override</td></tr>
 <tr class="memdesc:aa029aafe4a524b31a986fa46374d6c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_o_n___geometry.html">ON_Geometry</a> overrides.  <a href="class_o_n___mesh.html#aa029aafe4a524b31a986fa46374d6c5b">More...</a><br /></td></tr>
 <tr class="separator:aa029aafe4a524b31a986fa46374d6c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b101813d31f261ef0a6ca950cfcf14a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a1b101813d31f261ef0a6ca950cfcf14a">DoublePrecisionVertices</a> ()</td></tr>
+<tr class="memitem:ac4e376f80851554edae4fa183347124a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#ac4e376f80851554edae4fa183347124a">DissolveOrDelete</a> (const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a> &gt; &amp;ci_list)</td></tr>
+<tr class="separator:ac4e376f80851554edae4fa183347124a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b101813d31f261ef0a6ca950cfcf14a"><td class="memItemLeft" align="right" valign="top">ON_3dPointArray &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a1b101813d31f261ef0a6ca950cfcf14a">DoublePrecisionVertices</a> ()</td></tr>
 <tr class="memdesc:a1b101813d31f261ef0a6ca950cfcf14a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation - mesh geometry.  <a href="class_o_n___mesh.html#a1b101813d31f261ef0a6ca950cfcf14a">More...</a><br /></td></tr>
 <tr class="separator:a1b101813d31f261ef0a6ca950cfcf14a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afce02d0446f6a17f2c4eddbd15b4d636"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#afce02d0446f6a17f2c4eddbd15b4d636">DoublePrecisionVertices</a> () const</td></tr>
+<tr class="memitem:afce02d0446f6a17f2c4eddbd15b4d636"><td class="memItemLeft" align="right" valign="top">const ON_3dPointArray &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#afce02d0446f6a17f2c4eddbd15b4d636">DoublePrecisionVertices</a> () const</td></tr>
 <tr class="separator:afce02d0446f6a17f2c4eddbd15b4d636"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9621f32fa9123a6feae820085d14a02d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a9621f32fa9123a6feae820085d14a02d">Dump</a> (<a class="el" href="class_o_n___text_log.html">ON_TextLog</a> &amp;) const override</td></tr>
 <tr class="memdesc:a9621f32fa9123a6feae820085d14a02d"><td class="mdescLeft">&#160;</td><td class="mdescRight">for debugging  <a href="class_o_n___mesh.html#a9621f32fa9123a6feae820085d14a02d">More...</a><br /></td></tr>
 <tr class="separator:a9621f32fa9123a6feae820085d14a02d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ae1553b8fc5e622e1115dee760987f3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a3ae1553b8fc5e622e1115dee760987f3">DuplicateBorder</a> (<a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___polyline.html">ON_Polyline</a> * &gt; &amp;polylines, bool joinOverUnweldedVertices) const</td></tr>
+<tr class="separator:a3ae1553b8fc5e622e1115dee760987f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f52a5d5c1b13b9b776fe72a0b7d30d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___mesh.html">ON_Mesh</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a7f52a5d5c1b13b9b776fe72a0b7d30d7">DuplicateFace</a> (int face_index, <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> *mesh) const</td></tr>
 <tr class="separator:a7f52a5d5c1b13b9b776fe72a0b7d30d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abaee0bc734648a07a275f51005596d69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#abaee0bc734648a07a275f51005596d69">EmergencyDestroy</a> ()</td></tr>
@@ -268,12 +293,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4a2631a57074d47d73a086470574dd1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ba7721378a6841ae06af7614f71511f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a4ba7721378a6841ae06af7614f71511f">GetMeshFaceSideList</a> (const unsigned int *Vid, class <a class="el" href="class_o_n___mesh_face_side.html">ON_MeshFaceSide</a> *&amp;sides) const</td></tr>
 <tr class="separator:a4ba7721378a6841ae06af7614f71511f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a805b093e3860a05c0b8c74b07f2ae60b"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a805b093e3860a05c0b8c74b07f2ae60b">GetMeshNakedEdgeList</a> (<a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n__2dex.html">ON_2dex</a> &gt; &amp;naked_edge_list, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; int &gt; *ci_meshtop_vertex_map=nullptr, bool bLookForNgonInteriorEdges=false) const</td></tr>
+<tr class="separator:a805b093e3860a05c0b8c74b07f2ae60b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b1b8f8504f4842c9ada4a49e715033a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a3b1b8f8504f4842c9ada4a49e715033a">GetNgonBoundaryPoints</a> (const <a class="el" href="class_o_n___mesh_ngon.html">ON_MeshNgon</a> *ngon, bool bAppendStartPoint, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> *ngon_boundary_points) const</td></tr>
 <tr class="separator:a3b1b8f8504f4842c9ada4a49e715033a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac770d4e7641dafddb357881012b49c53"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#ac770d4e7641dafddb357881012b49c53">GetNgonBoundaryPoints</a> (const <a class="el" href="class_o_n___mesh_ngon.html">ON_MeshNgon</a> *ngon, bool bAppendStartPoint, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &gt; &amp;ngon_boundary_points) const</td></tr>
 <tr class="separator:ac770d4e7641dafddb357881012b49c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6edacf07064f4635d781dd5252702639"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a6edacf07064f4635d781dd5252702639">GetNgonOuterBoundary</a> (unsigned int ngon_fi_count, const unsigned int *ngon_fi, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; unsigned int &gt; &amp;ngon_vi) const</td></tr>
 <tr class="separator:a6edacf07064f4635d781dd5252702639"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22229d8f7d94c1e74a846c7c63ab6059"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a22229d8f7d94c1e74a846c7c63ab6059">GetSelfIntersections</a> (double tolerance, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___polyline.html">ON_Polyline</a> * &gt; *perforatingResults, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___polyline.html">ON_Polyline</a> * &gt; *overlapResults, <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> *overlapMeshResult, <a class="el" href="class_o_n___text_log.html">ON_TextLog</a> *log, <a class="el" href="class_o_n___terminator.html">ON_Terminator</a> *cancel, <a class="el" href="class_o_n___progress_reporter.html">ON_ProgressReporter</a> *reporter) const</td></tr>
+<tr class="separator:a22229d8f7d94c1e74a846c7c63ab6059"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0542ef954af83954f70d55b37455d03"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#ac0542ef954af83954f70d55b37455d03">GetSilhouette</a> (const <a class="el" href="class_o_n___silhouette_parameters.html">ON_SilhouetteParameters</a> parameters, const <a class="el" href="class_o_n___plane_equation.html">ON_PlaneEquation</a> *clipping_planes, size_t clipping_plane_count, <a class="el" href="class_o_n___class_array.html">ON_ClassArray</a>&lt; <a class="el" href="class_o_n___s_i_l___e_v_e_n_t.html">ON_SIL_EVENT</a> &gt; &amp;silhouettes, <a class="el" href="class_o_n___progress_reporter.html">ON_ProgressReporter</a> *progress, <a class="el" href="class_o_n___terminator.html">ON_Terminator</a> *terminator) const</td></tr>
 <tr class="separator:ac0542ef954af83954f70d55b37455d03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af63e6ec48221680b4eea2344efb07013"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#af63e6ec48221680b4eea2344efb07013">GetTightBoundingBox</a> (class <a class="el" href="class_o_n___bounding_box.html">ON_BoundingBox</a> &amp;tight_bbox, bool bGrowBox=false, const class <a class="el" href="class_o_n___xform.html">ON_Xform</a> *xform=nullptr) const override</td></tr>
@@ -358,6 +387,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a38c8cfd7fc32bddf1aa2ea68204fcbc6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a38c8cfd7fc32bddf1aa2ea68204fcbc6">IsMorphable</a> () const override</td></tr>
 <tr class="memdesc:a38c8cfd7fc32bddf1aa2ea68204fcbc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">virtual <a class="el" href="class_o_n___geometry.html">ON_Geometry</a> override  <a href="class_o_n___mesh.html#a38c8cfd7fc32bddf1aa2ea68204fcbc6">More...</a><br /></td></tr>
 <tr class="separator:a38c8cfd7fc32bddf1aa2ea68204fcbc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a890dbca9b3dd42c2744927091a9cad4f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a890dbca9b3dd42c2744927091a9cad4f">IsNotEmpty</a> () const</td></tr>
+<tr class="separator:a890dbca9b3dd42c2744927091a9cad4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cad2bd54873b1a24b9a0d030fd3fc65"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a6cad2bd54873b1a24b9a0d030fd3fc65">IsOriented</a> () const</td></tr>
 <tr class="separator:a6cad2bd54873b1a24b9a0d030fd3fc65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47f89b45f3e01a4ed5b0c3f8378e6567"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a47f89b45f3e01a4ed5b0c3f8378e6567">IsPointInside</a> (<a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> test_point, double tolerance, bool bStrictlyInside) const</td></tr>
@@ -378,6 +409,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a946263df140cb0a25931db03ed015759"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a946263df140cb0a25931db03ed015759">MemoryRelocate</a> () override</td></tr>
 <tr class="memdesc:a946263df140cb0a25931db03ed015759"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override of virtual <a class="el" href="class_o_n___object.html#ae0674ccb79b6333e4b3c8e95ee10dd73">ON_Object::MemoryRelocate</a>.  <a href="class_o_n___mesh.html#a946263df140cb0a25931db03ed015759">More...</a><br /></td></tr>
 <tr class="separator:a946263df140cb0a25931db03ed015759"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3226b27eca51ba7a97ac8fba12b56b39"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a3226b27eca51ba7a97ac8fba12b56b39">MergeFaceSets</a> (const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a> &gt; &amp;ci_list)</td></tr>
+<tr class="separator:a3226b27eca51ba7a97ac8fba12b56b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa634b516a1c1042d78d19a2c4544f0bd"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="class_o_n___mesh_component_ref.html">ON_MeshComponentRef</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#aa634b516a1c1042d78d19a2c4544f0bd">MeshComponent</a> (<a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a> ci) const</td></tr>
 <tr class="separator:aa634b516a1c1042d78d19a2c4544f0bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8497796652e5421a57823809746239e4"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="class_o_n___mesh_component_ref.html">ON_MeshComponentRef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a8497796652e5421a57823809746239e4">MeshComponentRef</a> (<a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a> ci) const</td></tr>
@@ -429,6 +462,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9295f030b83e008c7c07f43ed33dab97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a061ab836e5be4150fb6501d0a0545d85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n.html#a328d22b5ad7bf9d4e9ba1123355d3cf9">ON::object_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a061ab836e5be4150fb6501d0a0545d85">ObjectType</a> () const override</td></tr>
 <tr class="separator:a061ab836e5be4150fb6501d0a0545d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a892efaa4dad96e991cc6c6c9c03db2e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___mesh.html">ON_Mesh</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a892efaa4dad96e991cc6c6c9c03db2e5">OffsetMesh</a> (const double distance, const <a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a> &amp;direction) const</td></tr>
+<tr class="separator:a892efaa4dad96e991cc6c6c9c03db2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10397c31699ec61ec3f0191bb4c91209"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___mesh.html">ON_Mesh</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a10397c31699ec61ec3f0191bb4c91209">operator=</a> (const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> &amp;)</td></tr>
 <tr class="separator:a10397c31699ec61ec3f0191bb4c91209"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d0c2907958feec6fc5a7361855c77cb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a0d0c2907958feec6fc5a7361855c77cb">OrientNgons</a> (bool bPermitHoles)</td></tr>
@@ -440,6 +475,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a64501613756a89e8bd1c52f1a44c4d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfed633bb6c0ef69b6e0dd585dffb6b2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#abfed633bb6c0ef69b6e0dd585dffb6b2">Read</a> (<a class="el" href="class_o_n___binary_archive.html">ON_BinaryArchive</a> &amp;) override</td></tr>
 <tr class="separator:abfed633bb6c0ef69b6e0dd585dffb6b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a182b3f6401bc7617ca97d4269378882e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a182b3f6401bc7617ca97d4269378882e">RemoveAllCreases</a> ()</td></tr>
+<tr class="separator:a182b3f6401bc7617ca97d4269378882e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5650aabe73182b671e1a7d60f7993869"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a5650aabe73182b671e1a7d60f7993869">RemoveAllNgons</a> ()</td></tr>
 <tr class="separator:a5650aabe73182b671e1a7d60f7993869"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b0c77dc1381c57b45e87008264ca0ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a4b0c77dc1381c57b45e87008264ca0ce">RemoveEmptyNgons</a> ()</td></tr>
@@ -498,6 +535,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a795963e1da89ea2d8aed31fe5f79365c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59e152a0038bf5a96071b5c6ff3a2ef4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a59e152a0038bf5a96071b5c6ff3a2ef4">SolidOrientation</a> () const</td></tr>
 <tr class="separator:a59e152a0038bf5a96071b5c6ff3a2ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac1b6eec5e11ecc564037ddd342af32e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#aac1b6eec5e11ecc564037ddd342af32e">Split</a> (const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;meshesThatSplit, double tolerance, bool splitAtCoplanar, bool createNgons, bool *somethingHappened, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;results, <a class="el" href="class_o_n___text_log.html">ON_TextLog</a> *log, <a class="el" href="class_o_n___terminator.html">ON_Terminator</a> *cancel, <a class="el" href="class_o_n___progress_reporter.html">ON_ProgressReporter</a> *reporter) const</td></tr>
+<tr class="separator:aac1b6eec5e11ecc564037ddd342af32e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7a137c9bd26335e1ba37d285ca88169"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#ab7a137c9bd26335e1ba37d285ca88169">SwapCoordinates</a> (int, int) override</td></tr>
 <tr class="separator:ab7a137c9bd26335e1ba37d285ca88169"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14ed95524bdd6ce006fc9943e3f6543b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a14ed95524bdd6ce006fc9943e3f6543b">SwapEdge</a> (int topei)</td></tr>
@@ -538,11 +577,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a30d559932d255011e1c3389e4d0dd29e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a570150a61ae34746d3ef1ef02c8d7612"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a570150a61ae34746d3ef1ef02c8d7612">VertexUnsignedCount</a> () const</td></tr>
 <tr class="separator:a570150a61ae34746d3ef1ef02c8d7612"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7c016b38cda75a98a1648c1001c1d6c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#af7c016b38cda75a98a1648c1001c1d6c">Volume</a> (<a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> base_point=<a class="el" href="class_o_n__3d_point.html#ae5dcca5dde698b25a7ec98b3868285b5">ON_3dPoint::Origin</a>, double *error_estimate=nullptr) const</td></tr>
+<tr class="memitem:af7c016b38cda75a98a1648c1001c1d6c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#af7c016b38cda75a98a1648c1001c1d6c">Volume</a> (<a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> base_point=<a class="el" href="group__open_n_u_r_b_s.html#gae5dcca5dde698b25a7ec98b3868285b5">ON_3dPoint::Origin</a>, double *error_estimate=nullptr) const</td></tr>
 <tr class="separator:af7c016b38cda75a98a1648c1001c1d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa607ea044e3e95c8404019416e5dfdfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#aa607ea044e3e95c8404019416e5dfdfe">VolumeCentroid</a> (<a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> base_point=<a class="el" href="class_o_n__3d_point.html#ae5dcca5dde698b25a7ec98b3868285b5">ON_3dPoint::Origin</a>, double *volume=nullptr) const</td></tr>
+<tr class="memitem:aa607ea044e3e95c8404019416e5dfdfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#aa607ea044e3e95c8404019416e5dfdfe">VolumeCentroid</a> (<a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> base_point=<a class="el" href="group__open_n_u_r_b_s.html#gae5dcca5dde698b25a7ec98b3868285b5">ON_3dPoint::Origin</a>, double *volume=nullptr) const</td></tr>
 <tr class="separator:aa607ea044e3e95c8404019416e5dfdfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6a1b4435044cb9bd612ca013faed17b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#aa6a1b4435044cb9bd612ca013faed17b">VolumeMassProperties</a> (class <a class="el" href="class_o_n___mass_properties.html">ON_MassProperties</a> &amp;mp, bool bVolume=true, bool bFirstMoments=true, bool bSecondMoments=true, bool bProductMoments=true, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> base_point=<a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a>) const</td></tr>
+<tr class="memitem:aa6a1b4435044cb9bd612ca013faed17b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#aa6a1b4435044cb9bd612ca013faed17b">VolumeMassProperties</a> (class <a class="el" href="class_o_n___mass_properties.html">ON_MassProperties</a> &amp;mp, bool bVolume=true, bool bFirstMoments=true, bool bSecondMoments=true, bool bProductMoments=true, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> base_point=<a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a>) const</td></tr>
 <tr class="separator:aa6a1b4435044cb9bd612ca013faed17b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4d8ee57465bcf4458dc5fbb55628423"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#ad4d8ee57465bcf4458dc5fbb55628423">Write</a> (<a class="el" href="class_o_n___binary_archive.html">ON_BinaryArchive</a> &amp;) const override</td></tr>
 <tr class="separator:ad4d8ee57465bcf4458dc5fbb55628423"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -655,6 +694,16 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ad55fc7bbc2c7082c2a5b13da37516579"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f0120c2518091a21db432e686f39cd5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a0f0120c2518091a21db432e686f39cd5">From3dPolygon</a> (size_t polygon_points_count, const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> *polygon_points, double planar_tolerance, <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> *destintation_mesh)</td></tr>
 <tr class="separator:a0f0120c2518091a21db432e686f39cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09213661dab9943eab473e8f369f2196"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a09213661dab9943eab473e8f369f2196">FromFilteredFaceList</a> (const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> &amp;original, bool *pattern, unsigned patternLength)</td></tr>
+<tr class="separator:a09213661dab9943eab473e8f369f2196"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f2ba77f7480c01babab680a1c089df0"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a2f2ba77f7480c01babab680a1c089df0">IntersectArray</a> (const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;meshes, double tolerance, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___polyline.html">ON_Polyline</a> * &gt; *perforatingResults, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___polyline.html">ON_Polyline</a> * &gt; *overlapResults, <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> *overlapMeshResult, <a class="el" href="class_o_n___text_log.html">ON_TextLog</a> *log, <a class="el" href="class_o_n___terminator.html">ON_Terminator</a> *cancel, <a class="el" href="class_o_n___progress_reporter.html">ON_ProgressReporter</a> *reporter)</td></tr>
+<tr class="separator:a2f2ba77f7480c01babab680a1c089df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9154c4736f20d4f2fa0bc214032b7e6"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#ac9154c4736f20d4f2fa0bc214032b7e6">IterativeCleanup</a> (const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;meshes, double tolerance, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;results)</td></tr>
+<tr class="separator:ac9154c4736f20d4f2fa0bc214032b7e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a384ec8eed2f6a7316750618c393c42"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a2a384ec8eed2f6a7316750618c393c42">RequireIterativeCleanup</a> (const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;meshes, double tolerance)</td></tr>
+<tr class="separator:a2a384ec8eed2f6a7316750618c393c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a787131c36a85439f7a15cbff46a81b73"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a787131c36a85439f7a15cbff46a81b73">SplitArray</a> (const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;meshesToSplit, const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;meshesThatSplit, double tolerance, bool splitAtCoplanar, bool createNgons, bool *somethingHappened, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;results, <a class="el" href="class_o_n___text_log.html">ON_TextLog</a> *log, <a class="el" href="class_o_n___terminator.html">ON_Terminator</a> *cancel, <a class="el" href="class_o_n___progress_reporter.html">ON_ProgressReporter</a> *reporter)</td></tr>
+<tr class="separator:a787131c36a85439f7a15cbff46a81b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -663,22 +712,22 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a9caa1b55e23568cd492840c0290f56f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___mapping_tag.html">ON_MappingTag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a9caa1b55e23568cd492840c0290f56f3">m_Ctag</a></td></tr>
 <tr class="memdesc:a9caa1b55e23568cd492840c0290f56f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation - false color.  <a href="class_o_n___mesh.html#a9caa1b55e23568cd492840c0290f56f3">More...</a><br /></td></tr>
 <tr class="separator:a9caa1b55e23568cd492840c0290f56f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7496a0e3ba5f171adb216a482ce057ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a7496a0e3ba5f171adb216a482ce057ae">m_dV</a></td></tr>
+<tr class="memitem:a7496a0e3ba5f171adb216a482ce057ae"><td class="memItemLeft" align="right" valign="top">ON_3dPointArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a7496a0e3ba5f171adb216a482ce057ae">m_dV</a></td></tr>
 <tr class="separator:a7496a0e3ba5f171adb216a482ce057ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a005e7e4b0f04014c289264e06e496450"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___mesh_face.html">ON_MeshFace</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a005e7e4b0f04014c289264e06e496450">m_F</a></td></tr>
 <tr class="memdesc:a005e7e4b0f04014c289264e06e496450"><td class="mdescLeft">&#160;</td><td class="mdescRight">m_F[] facets (triangles or quads)  <a href="class_o_n___mesh.html#a005e7e4b0f04014c289264e06e496450">More...</a><br /></td></tr>
 <tr class="separator:a005e7e4b0f04014c289264e06e496450"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61b4408beb9cd28c90ddb4ec8492f499"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3f_vector_array.html">ON_3fVectorArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a61b4408beb9cd28c90ddb4ec8492f499">m_FN</a></td></tr>
+<tr class="memitem:a61b4408beb9cd28c90ddb4ec8492f499"><td class="memItemLeft" align="right" valign="top">ON_3fVectorArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a61b4408beb9cd28c90ddb4ec8492f499">m_FN</a></td></tr>
 <tr class="separator:a61b4408beb9cd28c90ddb4ec8492f499"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a166eabbd9f7f0e141e30325f6783f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a2a166eabbd9f7f0e141e30325f6783f8">m_H</a></td></tr>
 <tr class="memdesc:a2a166eabbd9f7f0e141e30325f6783f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation - runtime vertex visibility - not saved in 3dm files.  <a href="class_o_n___mesh.html#a2a166eabbd9f7f0e141e30325f6783f8">More...</a><br /></td></tr>
 <tr class="separator:a2a166eabbd9f7f0e141e30325f6783f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a532418e6af843813ecc81246a8da7eef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a532418e6af843813ecc81246a8da7eef">m_hidden_count</a></td></tr>
 <tr class="separator:a532418e6af843813ecc81246a8da7eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f353770ff5fcc259d21e8a162d3e9d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___surface_curvature.html">ON_SurfaceCurvature</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a8f353770ff5fcc259d21e8a162d3e9d8">m_K</a></td></tr>
+<tr class="memitem:a8f353770ff5fcc259d21e8a162d3e9d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; ON_SurfaceCurvature &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a8f353770ff5fcc259d21e8a162d3e9d8">m_K</a></td></tr>
 <tr class="memdesc:a8f353770ff5fcc259d21e8a162d3e9d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation - curvature.  <a href="class_o_n___mesh.html#a8f353770ff5fcc259d21e8a162d3e9d8">More...</a><br /></td></tr>
 <tr class="separator:a8f353770ff5fcc259d21e8a162d3e9d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5c95b35080197efd6f43ab5830efe9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3f_vector_array.html">ON_3fVectorArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#af5c95b35080197efd6f43ab5830efe9f">m_N</a></td></tr>
+<tr class="memitem:af5c95b35080197efd6f43ab5830efe9f"><td class="memItemLeft" align="right" valign="top">ON_3fVectorArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#af5c95b35080197efd6f43ab5830efe9f">m_N</a></td></tr>
 <tr class="separator:af5c95b35080197efd6f43ab5830efe9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab91153bed501502cd587b18884c48d22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___mesh_ngon.html">ON_MeshNgon</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#ab91153bed501502cd587b18884c48d22">m_Ngon</a></td></tr>
 <tr class="separator:ab91153bed501502cd587b18884c48d22"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -695,14 +744,14 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a77c5f065e1c3ae6a160e6931601ccdc8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_o_n___object.html">ON_Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a77c5f065e1c3ae6a160e6931601ccdc8">m_parent</a></td></tr>
 <tr class="memdesc:a77c5f065e1c3ae6a160e6931601ccdc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation - runtime UI information.  <a href="class_o_n___mesh.html#a77c5f065e1c3ae6a160e6931601ccdc8">More...</a><br /></td></tr>
 <tr class="separator:a77c5f065e1c3ae6a160e6931601ccdc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbf195fbe55da435006a2ba9c66e71e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__2d_point_array.html">ON_2dPointArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#acbf195fbe55da435006a2ba9c66e71e4">m_S</a></td></tr>
+<tr class="memitem:acbf195fbe55da435006a2ba9c66e71e4"><td class="memItemLeft" align="right" valign="top">ON_2dPointArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#acbf195fbe55da435006a2ba9c66e71e4">m_S</a></td></tr>
 <tr class="separator:acbf195fbe55da435006a2ba9c66e71e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48d982115e07a7a0209d7b35b83a96bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___interval.html">ON_Interval</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a48d982115e07a7a0209d7b35b83a96bb">m_srf_domain</a> [2]</td></tr>
 <tr class="memdesc:a48d982115e07a7a0209d7b35b83a96bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">surface evaluation domain.  <a href="class_o_n___mesh.html#a48d982115e07a7a0209d7b35b83a96bb">More...</a><br /></td></tr>
 <tr class="separator:a48d982115e07a7a0209d7b35b83a96bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfec38c9115fc2045b8d2105dd634ff2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#abfec38c9115fc2045b8d2105dd634ff2">m_srf_scale</a> [2]</td></tr>
 <tr class="separator:abfec38c9115fc2045b8d2105dd634ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8813d0559c1834e30af2b86da7d64c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__2f_point_array.html">ON_2fPointArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#af8813d0559c1834e30af2b86da7d64c9">m_T</a></td></tr>
+<tr class="memitem:af8813d0559c1834e30af2b86da7d64c9"><td class="memItemLeft" align="right" valign="top">ON_2fPointArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#af8813d0559c1834e30af2b86da7d64c9">m_T</a></td></tr>
 <tr class="memdesc:af8813d0559c1834e30af2b86da7d64c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">OPTIONAL texture coordinates for each vertex.  <a href="class_o_n___mesh.html#af8813d0559c1834e30af2b86da7d64c9">More...</a><br /></td></tr>
 <tr class="separator:af8813d0559c1834e30af2b86da7d64c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28e3c1473d1817f3606ebc30c7b05bf0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___class_array.html">ON_ClassArray</a>&lt; <a class="el" href="class_o_n___texture_coordinates.html">ON_TextureCoordinates</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a28e3c1473d1817f3606ebc30c7b05bf0">m_TC</a></td></tr>
@@ -710,8 +759,16 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a5a5f8175918c06ea9b632113e29786b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___mapping_tag.html">ON_MappingTag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a5a5f8175918c06ea9b632113e29786b9">m_Ttag</a></td></tr>
 <tr class="memdesc:a5a5f8175918c06ea9b632113e29786b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">OPTIONAL tag for values in m_T[].  <a href="class_o_n___mesh.html#a5a5f8175918c06ea9b632113e29786b9">More...</a><br /></td></tr>
 <tr class="separator:a5a5f8175918c06ea9b632113e29786b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cc720e646b5fb26e5285b1838f71c7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3f_point_array.html">ON_3fPointArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a6cc720e646b5fb26e5285b1838f71c7d">m_V</a></td></tr>
+<tr class="memitem:a6cc720e646b5fb26e5285b1838f71c7d"><td class="memItemLeft" align="right" valign="top">ON_3fPointArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a6cc720e646b5fb26e5285b1838f71c7d">m_V</a></td></tr>
 <tr class="separator:a6cc720e646b5fb26e5285b1838f71c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a210bd7d627ff486ac874ab4c226ab6c8"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a210bd7d627ff486ac874ab4c226ab6c8">Empty</a></td></tr>
+<tr class="separator:a210bd7d627ff486ac874ab4c226ab6c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_class_o_n___geometry"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_o_n___geometry')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="class_o_n___geometry.html">ON_Geometry</a></td></tr>
+<tr class="memitem:a03dcd2409adc639499e0ca07944dfd0c inherit pub_static_attribs_class_o_n___geometry"><td class="memItemLeft" align="right" valign="top">const static <a class="el" href="class_o_n___geometry.html">ON_Geometry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___geometry.html#a03dcd2409adc639499e0ca07944dfd0c">Unset</a></td></tr>
+<tr class="separator:a03dcd2409adc639499e0ca07944dfd0c inherit pub_static_attribs_class_o_n___geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -753,9 +810,6 @@ Additional Inherited Members</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:a7f520e987ffa14e71b06493340f9956c inherit pub_types_class_o_n___object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_attribs_class_o_n___geometry"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_o_n___geometry')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="class_o_n___geometry.html">ON_Geometry</a></td></tr>
-<tr class="memitem:a03dcd2409adc639499e0ca07944dfd0c inherit pub_static_attribs_class_o_n___geometry"><td class="memItemLeft" align="right" valign="top">const static <a class="el" href="class_o_n___geometry.html">ON_Geometry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___geometry.html#a03dcd2409adc639499e0ca07944dfd0c">Unset</a></td></tr>
-<tr class="separator:a03dcd2409adc639499e0ca07944dfd0c inherit pub_static_attribs_class_o_n___geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aae117c9788c5c8f66ba927af0bc37d13"></a>
@@ -860,8 +914,56 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a34cab5280e39fd919b5e019817ce04dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34cab5280e39fd919b5e019817ce04dc">&#9670;&nbsp;</a></span>AddNgon() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ON_Mesh::AddNgon </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; unsigned int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ngon_fi</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Add a new ngon to the mesh. Does not allow the creation of inner boundaries. Parameters: ngon_fi[] An array of distinct <a class="el" href="class_o_n___mesh.html#a005e7e4b0f04014c289264e06e496450" title="m_F[] facets (triangles or quads)">ON_Mesh.m_F</a>[] face indices referencing a set of connected faces. Returns: index of the new n-gon. -1: If input information is not valid. </p>
+
+</div>
+</div>
+<a id="adb812b572f4ced402594a186fde4d243"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb812b572f4ced402594a186fde4d243">&#9670;&nbsp;</a></span>AddNgon() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ON_Mesh::AddNgon </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; unsigned int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ngon_fi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bPermitHoles</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Add a new ngon to the mesh. Parameters: ngon_fi[] An array of distinct <a class="el" href="class_o_n___mesh.html#a005e7e4b0f04014c289264e06e496450" title="m_F[] facets (triangles or quads)">ON_Mesh.m_F</a>[] face indices referencing a set of connected faces. bPermitHoles If true, also ngons that contain inner boundaries are allowed. Returns: index of the new n-gon. -1: If input information is not valid. </p>
+
+</div>
+</div>
 <a id="abb3d88b51027b886d9b467eda75036eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb3d88b51027b886d9b467eda75036eb">&#9670;&nbsp;</a></span>AddNgon() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abb3d88b51027b886d9b467eda75036eb">&#9670;&nbsp;</a></span>AddNgon() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -879,8 +981,72 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a1f89a4ba64a5e25a7a20ad3ac6881ab7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f89a4ba64a5e25a7a20ad3ac6881ab7">&#9670;&nbsp;</a></span>AddNgon() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ON_Mesh::AddNgon </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>Fcount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int *&#160;</td>
+          <td class="paramname"><em>ngon_fi</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Add a new ngon to the mesh. Does not allow the creation of inner boundaries. Parameters: Fcount - [in] Number of face that make up the ngon. ngon_fi[] An array of N distinct <a class="el" href="class_o_n___mesh.html#a005e7e4b0f04014c289264e06e496450" title="m_F[] facets (triangles or quads)">ON_Mesh.m_F</a>[] face indices referencing a set of connected faces. Returns: index of the new n-gon. -1: If input information is not valid. </p>
+
+</div>
+</div>
+<a id="a3cb115a0baab6a1b37bbc5c95f61937e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cb115a0baab6a1b37bbc5c95f61937e">&#9670;&nbsp;</a></span>AddNgon() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ON_Mesh::AddNgon </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>Fcount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int *&#160;</td>
+          <td class="paramname"><em>ngon_fi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bPermitHoles</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Add a new ngon to the mesh. Parameters: Fcount - [in] Number of face that make up the ngon. ngon_fi[] An array of N distinct <a class="el" href="class_o_n___mesh.html#a005e7e4b0f04014c289264e06e496450" title="m_F[] facets (triangles or quads)">ON_Mesh.m_F</a>[] face indices referencing a set of connected faces. bPermitHoles If true, also ngons that contain inner boundaries are allowed. Returns: index of the new n-gon. -1: If input information is not valid. </p>
+
+</div>
+</div>
 <a id="a19a5572ee9d7de8a703aa4a432934655"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19a5572ee9d7de8a703aa4a432934655">&#9670;&nbsp;</a></span>AddNgon() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a19a5572ee9d7de8a703aa4a432934655">&#9670;&nbsp;</a></span>AddNgon() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -917,6 +1083,65 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Description: Add a new ngon to the mesh. Parameters: Vcount - number of vertices and number of sides in the n-gon ngon_vi[] - in An array of N distinct <a class="el" href="class_o_n___mesh.html#a6cc720e646b5fb26e5285b1838f71c7d">ON_Mesh.m_V</a>[] vertex indices Fcount - [in] Number of face that make up the ngon. ngon_fi[] An array of N distinct <a class="el" href="class_o_n___mesh.html#a005e7e4b0f04014c289264e06e496450" title="m_F[] facets (triangles or quads)">ON_Mesh.m_F</a>[] face indices The outer boundary of this group of faces should be the list of vertices passes as ngon_vi[] Returns: index of the new n-gon. -1: If input information is not valid. </p>
+
+</div>
+</div>
+<a id="a21cc7b60eb21a8836512136c951929c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21cc7b60eb21a8836512136c951929c2">&#9670;&nbsp;</a></span>AddNgon_Expert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ON_Mesh::AddNgon_Expert </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>Fcount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int *&#160;</td>
+          <td class="paramname"><em>ngon_fi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bPermitHoles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___mesh_vertex_face_map.html">ON_MeshVertexFaceMap</a> *&#160;</td>
+          <td class="paramname"><em>vertexFaceMap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Add a new ngon to the mesh. WARNING! The usage of this particular overload is discouraged unless its usage is critical for performance. If vertexFaceMap is set to something other than nullptr, then the value will be filled and can be re-fed to the function. Parameters: Fcount - [in] Number of face that make up the ngon. ngon_fi[] An array of N distinct <a class="el" href="class_o_n___mesh.html#a005e7e4b0f04014c289264e06e496450" title="m_F[] facets (triangles or quads)">ON_Mesh.m_F</a>[] face indices referencing a set of connected faces. bPermitHoles If true, also ngons that contain inner boundaries are allowed. faceVertexMap If nullptr, this will be set to a new faceVertexMap. Must be freed with <a class="el" href="group__open_n_u_r_b_s.html#ga11bd5c38846c84d11a00bd1b1cd31e61">onfree()</a>. It is responsability of the user to call <a class="el" href="group__open_n_u_r_b_s.html#ga11bd5c38846c84d11a00bd1b1cd31e61">onfree()</a> on the created object. Returns: index of the new n-gon. -1: If input information is not valid. </p>
+
+</div>
+</div>
+<a id="a61cd035aeaea26d6814a8711a657a00c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61cd035aeaea26d6814a8711a657a00c">&#9670;&nbsp;</a></span>AddNgons()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ON_Mesh::AddNgons </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ci_list</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1595,7 +1820,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a03df67e386dc849f2c3badf9280da0c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03df67e386dc849f2c3badf9280da0c6">&#9670;&nbsp;</a></span>CreateNgonMap()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a03df67e386dc849f2c3badf9280da0c6">&#9670;&nbsp;</a></span>CreateNgonMap() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1609,6 +1834,50 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Description: Expert user function to update n-gon map after the expert user does something to make the current one invalid. Returns: null: The mesh does not have ngon-information. an array of length m_F.Count() ngon_map[]</p><ul>
+<li>If ngon_map[fi] &gt;= 0, then ON_MeshFace.m_F[fi] belongs to ON_Mesh.Ngon(ngon_map[fi]).</li>
+<li>Otherwise, ngon_map[fi] = -1. </li>
+</ul>
+
+</div>
+</div>
+<a id="a43669dda3f5ca8bd9151487fa915c60e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43669dda3f5ca8bd9151487fa915c60e">&#9670;&nbsp;</a></span>CreateNgonMap() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_Mesh::CreateNgonMap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; unsigned int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>map</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Expert user function to construct n-gon map even on const objects after the expert user did something that made the current one invalid. map [out]: The map is modified to match the new ngon map, if true is returned. Returns: A value indicating if the mesh has ngon information. The map is an array of length m_F.Count(), ngon_map[]</p><ul>
+<li>If ngon_map[fi] &gt;= 0, then ON_MeshFace.m_F[fi] belongs to ON_Mesh.Ngon(ngon_map[fi]).</li>
+<li>Otherwise, ngon_map[fi] = -1. </li>
+</ul>
+
+</div>
+</div>
+<a id="a9e6c90461ff94aa261d94fb4f6aaa160"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e6c90461ff94aa261d94fb4f6aaa160">&#9670;&nbsp;</a></span>CreateNgonMap() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_Mesh::CreateNgonMap </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>ngon_map</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Expert user function to construct n-gon map even on const objects after the expert user did something that made the current one invalid. map [in-out]: The map must have at least m_F elements It is modified to match the new ngon map, if true is returned. Returns: A value indicating if the mesh has ngon information. The map is an array of length m_F.Count(), ngon_map[]</p><ul>
 <li>If ngon_map[fi] &gt;= 0, then ON_MeshFace.m_F[fi] belongs to ON_Mesh.Ngon(ngon_map[fi]).</li>
 <li>Otherwise, ngon_map[fi] = -1. </li>
 </ul>
@@ -1680,6 +1949,24 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>returns number of degenerate faces </p>
+
+</div>
+</div>
+<a id="a95987b3668ca3c6958426adb4d3268ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95987b3668ca3c6958426adb4d3268ec">&#9670;&nbsp;</a></span>CullDegenerates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ON_Mesh::CullDegenerates </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Removes degenerate and unused mesh components. Returns: Number of removed components; </p>
 
 </div>
 </div>
@@ -1771,7 +2058,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a57ee1525a489f197b6a1a2cb9d0f439e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57ee1525a489f197b6a1a2cb9d0f439e">&#9670;&nbsp;</a></span>DeleteComponents() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a57ee1525a489f197b6a1a2cb9d0f439e">&#9670;&nbsp;</a></span>DeleteComponents() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1810,7 +2097,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a24b28034b4aeb5425af27969919eea63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24b28034b4aeb5425af27969919eea63">&#9670;&nbsp;</a></span>DeleteComponents() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a24b28034b4aeb5425af27969919eea63">&#9670;&nbsp;</a></span>DeleteComponents() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1862,8 +2149,67 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ae9c08746dc896cf1de9be6087f74e8c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9c08746dc896cf1de9be6087f74e8c3">&#9670;&nbsp;</a></span>DeleteComponents() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_Mesh::DeleteComponents </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a> *&#160;</td>
+          <td class="paramname"><em>ci_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>ci_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bIgnoreInvalidComponents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bRemoveDegenerateFaces</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bRemoveUnusedVertices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bRemoveEmptyNgons</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>faceMap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Delete the portions of the mesh identified in ci_list[]. Parameters: ci_list - [in] List of components to delete. ci_list_count - [in] Number of elements in the ci_list[] array. Can be zero if you are using this function to remove unused vertices or empty ngons. bIgnoreInvalidComponents - [in] If true, invalid elements in ci_list[] are ignored. If false and ci_list[] contains an invalid element, then no changes are made and false is returned. bRemoveDegenerateFaces - [in] If true, remove degenerate faces. bCullUnusedVertices - [in] Remove vertices that are not referenced by a face. Pass true unless you have a good reason for keeping unreferenced vertices. bRemoveEmptyNgons - [in] Remove ngons that are empty. Pass true unless you have a good reason for keeping empty ngons. faceMap - [i] If anything other than nullptr is passed in, then faceMap[fi] is the index of the new face after the removal of vertices, faces, etc. This needs to be allocated to be at least m_F.Count() long. Returns: True: succesful False: failure - no changes. </p>
+
+</div>
+</div>
 <a id="a8ae0206ba06af5b6a2895582caad8ca0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ae0206ba06af5b6a2895582caad8ca0">&#9670;&nbsp;</a></span>DeleteComponents() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ae0206ba06af5b6a2895582caad8ca0">&#9670;&nbsp;</a></span>DeleteComponents() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2082,6 +2428,25 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ac4e376f80851554edae4fa183347124a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4e376f80851554edae4fa183347124a">&#9670;&nbsp;</a></span>DissolveOrDelete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ON_Mesh::DissolveOrDelete </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ci_list</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Merge faces like <a class="el" href="class_o_n___sub_d.html#a0412e0107132bcad5a3def31ed368f01">ON_SubD::MergeFaces()</a> does. Parameters: ci_list - [in] vertices, edges, and faces that trigger merging. Returns: If ngons were added, then the index of the first added ngon is returned. Otherwise ON_UNSET_UINT_INDEX is returned. </p>
+
+</div>
+</div>
 <a id="a1b101813d31f261ef0a6ca950cfcf14a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1b101813d31f261ef0a6ca950cfcf14a">&#9670;&nbsp;</a></span>DoublePrecisionVertices() <span class="overload">[1/2]</span></h2>
 
@@ -2089,7 +2454,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a>&amp; ON_Mesh::DoublePrecisionVertices </td>
+          <td class="memname">ON_3dPointArray&amp; ON_Mesh::DoublePrecisionVertices </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -2099,7 +2464,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implementation - mesh geometry. </p>
 <p>Vertex locations In a case where adjacent facets share a vertex location but have distinct normals or texture coordinates at that location, the vertex must be duplicated. Description: Get double precision vertices. If they do not exist, they will be created and match the existing single precision vertices. Returns: Array of double precision vertices. If you modify the values in this array, you must make the same modifications to the single precision vertices, or call UpdateSinglePrecisonVertices(). Example:</p>
-<p>/ add a bunch of double precision information <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a>&amp; dv = mesh.DoublePrecisionVertices(); for ( i = 0; i &lt; lots; i++ ) { dv[i] = ... } / This call updates the single precison values / in m_V[] and sets all the counts and CRCs that / are used in validity checking. mesh.UpdateSinglePrecisonVertices();</p>
+<p>/ add a bunch of double precision information ON_3dPointArray&amp; dv = mesh.DoublePrecisionVertices(); for ( i = 0; i &lt; lots; i++ ) { dv[i] = ... } / This call updates the single precison values / in m_V[] and sets all the counts and CRCs that / are used in validity checking. mesh.UpdateSinglePrecisonVertices();</p>
 <p>Remarks: Avoid mulitple calls to <a class="el" href="class_o_n___mesh.html#a1b101813d31f261ef0a6ca950cfcf14a" title="Implementation - mesh geometry.">DoublePrecisionVertices()</a>. It is most efficient to make one call, save a local reference, and use the local reference as needed. </p>
 
 </div>
@@ -2111,7 +2476,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a>&amp; ON_Mesh::DoublePrecisionVertices </td>
+          <td class="memname">const ON_3dPointArray&amp; ON_Mesh::DoublePrecisionVertices </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -2148,6 +2513,35 @@ Additional Inherited Members</h2></td></tr>
 <p>for debugging </p>
 
 <p>Reimplemented from <a class="el" href="class_o_n___object.html#a21c7b04a80f1806c3a45f72d7c491a44">ON_Object</a>.</p>
+
+</div>
+</div>
+<a id="a3ae1553b8fc5e622e1115dee760987f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ae1553b8fc5e622e1115dee760987f3">&#9670;&nbsp;</a></span>DuplicateBorder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_Mesh::DuplicateBorder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___polyline.html">ON_Polyline</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>polylines</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>joinOverUnweldedVertices</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Finds the naked border of a mesh. Parameters: polylines - [in] An array to which objects will be added. joinOverUnweldedVertices - [in] If true, unwelded vertices will stop the polyline. Returns: true if the computation finished successfully, false otherwise. </p>
 
 </div>
 </div>
@@ -2493,6 +2887,49 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Description: Create a mesh that fills in a 3d polygon. Parameters: polygon_points_count - [in] &gt;= 3 polygon_points - [in] An array of distinct 3d points that forms a polygon. The points do not have to be coplanar, but they should be close to coplanar if you want a decent result. planar_tolerance - [in] If planar_tolerance &gt;= 0.0 and polygon_points &gt;= 4, then planar_tolerance is a 3d distance tolerance use to determine if the polygon is planar. When a polygon is planar, all vertex normals are identical. When a polygon is not planar, vertex normals may vary. If planar_tolerance is not &gt;= 0.0, then all vertex normals are identical in all cases. destintation_mesh - [in] null or a pointer to the mesh to be used. Returns: A pointer to a mesh that fills the 3d polygon or null if the input is not valid. </p>
+
+</div>
+</div>
+<a id="a09213661dab9943eab473e8f369f2196"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09213661dab9943eab473e8f369f2196">&#9670;&nbsp;</a></span>FromFilteredFaceList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_o_n___mesh.html">ON_Mesh</a>* ON_Mesh::FromFilteredFaceList </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> &amp;&#160;</td>
+          <td class="paramname"><em>original</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>pattern</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>patternLength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Description: Create a mesh from a filtered mesh list. Parameters: original - [in] a mesh input pattern - [in] An array of boolean values. patternLength - [in] Length of pattern. Returns: A pointer to a mesh that is the result, or nullptr. </p>
 
 </div>
 </div>
@@ -3014,6 +3451,40 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a805b093e3860a05c0b8c74b07f2ae60b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a805b093e3860a05c0b8c74b07f2ae60b">&#9670;&nbsp;</a></span>GetMeshNakedEdgeList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ON_Mesh::GetMeshNakedEdgeList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n__2dex.html">ON_2dex</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>naked_edge_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; int &gt; *&#160;</td>
+          <td class="paramname"><em>ci_meshtop_vertex_map</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bLookForNgonInteriorEdges</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a3b1b8f8504f4842c9ada4a49e715033a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3b1b8f8504f4842c9ada4a49e715033a">&#9670;&nbsp;</a></span>GetNgonBoundaryPoints() <span class="overload">[1/2]</span></h2>
 
@@ -3116,6 +3587,65 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Descrption: Given a group of connected coplanar faces, find the n-gon boundary. ngon_fi_count - [in] number of indices in ngon_fi[] ngon_fi - [in] Indices of faces in the <a class="el" href="class_o_n___mesh.html#a005e7e4b0f04014c289264e06e496450" title="m_F[] facets (triangles or quads)">ON_Mesh.m_F</a>[] array. ngon_vi - [out] An ordered list of indices of vertices in the <a class="el" href="class_o_n___mesh.html#a6cc720e646b5fb26e5285b1838f71c7d">ON_Mesh.m_V</a>[] array that for the outer boundary of the n-gon. The natural counter-clockwise orientation of the first face with a boundary edge determines the order of the ngon_vi[] list. </p>
+
+</div>
+</div>
+<a id="a22229d8f7d94c1e74a846c7c63ab6059"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22229d8f7d94c1e74a846c7c63ab6059">&#9670;&nbsp;</a></span>GetSelfIntersections()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_Mesh::GetSelfIntersections </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tolerance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___polyline.html">ON_Polyline</a> * &gt; *&#160;</td>
+          <td class="paramname"><em>perforatingResults</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___polyline.html">ON_Polyline</a> * &gt; *&#160;</td>
+          <td class="paramname"><em>overlapResults</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___mesh.html">ON_Mesh</a> *&#160;</td>
+          <td class="paramname"><em>overlapMeshResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___text_log.html">ON_TextLog</a> *&#160;</td>
+          <td class="paramname"><em>log</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___terminator.html">ON_Terminator</a> *&#160;</td>
+          <td class="paramname"><em>cancel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___progress_reporter.html">ON_ProgressReporter</a> *&#160;</td>
+          <td class="paramname"><em>reporter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get self intersections on the current mesh. See the parameter description in the function above. </p>
 
 </div>
 </div>
@@ -3626,6 +4156,83 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a2f2ba77f7480c01babab680a1c089df0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f2ba77f7480c01babab680a1c089df0">&#9670;&nbsp;</a></span>IntersectArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ON_Mesh::IntersectArray </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>meshes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tolerance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___polyline.html">ON_Polyline</a> * &gt; *&#160;</td>
+          <td class="paramname"><em>perforatingResults</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___polyline.html">ON_Polyline</a> * &gt; *&#160;</td>
+          <td class="paramname"><em>overlapResults</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___mesh.html">ON_Mesh</a> *&#160;</td>
+          <td class="paramname"><em>overlapMeshResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___text_log.html">ON_TextLog</a> *&#160;</td>
+          <td class="paramname"><em>log</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___terminator.html">ON_Terminator</a> *&#160;</td>
+          <td class="paramname"><em>cancel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___progress_reporter.html">ON_ProgressReporter</a> *&#160;</td>
+          <td class="paramname"><em>reporter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Description: Intersects a group of meshes. This method uses the new code. Parameters: meshes - [in] The mesh input list. nullptr entries are tolerated. tolerance - [in] A 3d-distance tolerance value. If tolerance is:</p><ul>
+<li>negative: the positive value will be used.</li>
+<li>0.0: no tolerance will be used. This is rarely useful, and only in cases where perforations intersections happen inside faces, and/or there is coplanarity parallel to one of the three fundamental axes.</li>
+<li>ON_DBL_QNAN, ON_UNSET_VALUE and ON_UNSET_POSITIVE_VALUE: the function picks a suitable, or default, tolerance value. WARNING! Generally, good tolerance values for objects drawn near the origin are in the magnitude of 10^-7, or ON_SQRT_EPSILON * 10. Often, the document absolute tolerance is not a good tolerance value. You might use a fractional coeffiecient to scale the document tolerance to a suitable value, while accepting a user-provided value. This function expects that each mesh conforms to the tolerance that is provided, and that means that features in the mesh are always larger than the mentioned tolerance. Coplanar gaps between meshes that are smaller than tolerance are overlaps. perforatingResults - [out] If not nullptr, this array will be filled with the polylines from perforating intersections. overlapResults - [out] If not nullptr, this array will be filled with the polylines from overlaps. This can be (but does not need to be) the same object provided to intersectionResults. overlapMeshResult - [out] If not nullptr, this mesh will have new faces added that represent the coplar unions of inputs. If this output is not required, it's best to leave this as nullptr. log - [out] If not nullptr, intersection warnings and errors are printed here. If the intersection runs smoothly, nothing will generally be printed. cancel - [out] If not nullptr, a trigger to request termination. When cancellation is requested, the return value will often be false. You are responsible to delete new objects that were returned, even if you requested cancellation. reporter - [out] If not nullptr, an indicative progress is reported. Returns: true if the computation finished successfully, false otherwise. </li>
+</ul>
+
+</div>
+</div>
 <a id="a8edfe4badff618e7fdbf16f0e20d538a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8edfe4badff618e7fdbf16f0e20d538a">&#9670;&nbsp;</a></span>IntersectMesh() <span class="overload">[1/2]</span></h2>
 
@@ -3663,7 +4270,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Carefully intersect this mesh with meshB. Parameters: meshB - [in] x - [out] Each element of x is a polyline of ON_MMX_POINTs. intersection_tolerance - [in] overlap_tolerance - [in] Returns: number of olylines appended to x[] array. Remarks: The InstersectMesh function will will create a meshtree, a mesh topology and face normals of this mesh and meshB. Note: if you create these in multiple memory pools you run the risk of crashing or leaking memory if you are not careful. </p>
+<p>Description: Carefully intersect this mesh with meshB. This method currently uses the old code. Parameters: meshB - [in] x - [out] Each element of x is a polyline of ON_MMX_POINTs. intersection_tolerance - [in] overlap_tolerance - [in] Returns: number of olylines appended to x[] array. Remarks: The InstersectMesh function will will create a meshtree, a mesh topology and face normals of this mesh and meshB. Note: if you create these in multiple memory pools you run the risk of crashing or leaking memory if you are not careful. </p>
 
 </div>
 </div>
@@ -4028,6 +4635,24 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a890dbca9b3dd42c2744927091a9cad4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a890dbca9b3dd42c2744927091a9cad4f">&#9670;&nbsp;</a></span>IsNotEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_Mesh::IsNotEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns true if there are vertices and faces. </p>
+
+</div>
+</div>
 <a id="a6cad2bd54873b1a24b9a0d030fd3fc65"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6cad2bd54873b1a24b9a0d030fd3fc65">&#9670;&nbsp;</a></span>IsOriented()</h2>
 
@@ -4207,6 +4832,49 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ac9154c4736f20d4f2fa0bc214032b7e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9154c4736f20d4f2fa0bc214032b7e6">&#9670;&nbsp;</a></span>IterativeCleanup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ON_Mesh::IterativeCleanup </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>meshes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tolerance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>results</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Description: Performs the maximum currently-available iterative cleanup based on a tolerance value on a group of meshes. This is an iterative process. Parameters: meshes - [in] A group of meshes that are worked on together. A single mesh is also OK. tolerance - [in] A 3d distance. This is usually a value of about 10e-7 magnitude. results - [out] A list that will be filled the exactly mesh.Count() items. If a mesh did not require cleanup, or cleanup did not yield any change, a nullptr is added to this list. Returns: true if the operation was successful, false otherwise. Also returning all nullptr is considered success. </p>
+
+</div>
+</div>
 <a id="a33d67491f386ad56d11d091d4a2fa548"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a33d67491f386ad56d11d091d4a2fa548">&#9670;&nbsp;</a></span>MakeDeformable()</h2>
 
@@ -4262,6 +4930,25 @@ Additional Inherited Members</h2></td></tr>
 <p>Override of virtual <a class="el" href="class_o_n___object.html#ae0674ccb79b6333e4b3c8e95ee10dd73">ON_Object::MemoryRelocate</a>. </p>
 
 <p>Reimplemented from <a class="el" href="class_o_n___object.html#ae0674ccb79b6333e4b3c8e95ee10dd73">ON_Object</a>.</p>
+
+</div>
+</div>
+<a id="a3226b27eca51ba7a97ac8fba12b56b39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3226b27eca51ba7a97ac8fba12b56b39">&#9670;&nbsp;</a></span>MergeFaceSets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ON_Mesh::MergeFaceSets </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ci_list</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Merge faces like <a class="el" href="class_o_n___sub_d.html#a0412e0107132bcad5a3def31ed368f01">ON_SubD::MergeFaces()</a> does. Parameters: ci_list - [in] vertices, edges, and faces that trigger merging. Returns: If ngons were added, then the index of the first added ngon is returned. Otherwise ON_UNSET_UINT_INDEX is returned. </p>
 
 </div>
 </div>
@@ -4805,6 +5492,36 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a892efaa4dad96e991cc6c6c9c03db2e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a892efaa4dad96e991cc6c6c9c03db2e5">&#9670;&nbsp;</a></span>OffsetMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_o_n___mesh.html">ON_Mesh</a>* ON_Mesh::OffsetMesh </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>distance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>direction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Mesh offset Description: Offsets a mesh by the input distance</p>
+<p>distance - [in] Distance to offset direction - [in] If this parameter is <a class="el" href="group__open_n_u_r_b_s.html#gaa62d84d9817922de5f60ef3b057ed0be" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dVector::UnsetVector</a>, offset each vertex in the normal direction orherwise, offset every vertex in the input direction Returns: New mesh that is an offset of a duplicate of this mesh Or nullptr if the input was invalid or the mesh could not be duplicated or offset Caller manages memory of new mesh </p>
+
+</div>
+</div>
 <a id="a10397c31699ec61ec3f0191bb4c91209"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a10397c31699ec61ec3f0191bb4c91209">&#9670;&nbsp;</a></span>operator=()</h2>
 
@@ -4905,6 +5622,23 @@ Additional Inherited Members</h2></td></tr>
 <p>The default implementation of this virtual function returns false and does nothing. </p>
 
 <p>Reimplemented from <a class="el" href="class_o_n___object.html#a09ac9742ead91dd8f9cdd579bcbfed10">ON_Object</a>.</p>
+
+</div>
+</div>
+<a id="a182b3f6401bc7617ca97d4269378882e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a182b3f6401bc7617ca97d4269378882e">&#9670;&nbsp;</a></span>RemoveAllCreases()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ON_Mesh::RemoveAllCreases </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -5046,6 +5780,48 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a384ec8eed2f6a7316750618c393c42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a384ec8eed2f6a7316750618c393c42">&#9670;&nbsp;</a></span>RequireIterativeCleanup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ON_Mesh::RequireIterativeCleanup </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>meshes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tolerance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Description: Determines if meshes require an iterative cleanup based on a tolerance value. All available cleanup steps are used. Currently available cleanup steps are:</p>
+<ul>
+<li>mending of single precision coincidence even though double precision vertices differ.</li>
+<li>union of nearly identical vertices, irrespectively of their origin.</li>
+<li>removal of t-joints along edges. Parameters: meshes - [in] A group of meshes that are worked on together. A single mesh is also OK. tolerance - [in] A 3d distance. This is usually a value of about 10e-7 magnitude. Returns: true if the step is required for mesh booleans, intersections, etc, false otherwise. </li>
+</ul>
 
 </div>
 </div>
@@ -5650,6 +6426,166 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="aac1b6eec5e11ecc564037ddd342af32e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac1b6eec5e11ecc564037ddd342af32e">&#9670;&nbsp;</a></span>Split()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_Mesh::Split </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>meshesThatSplit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tolerance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>splitAtCoplanar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>createNgons</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>somethingHappened</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>results</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___text_log.html">ON_TextLog</a> *&#160;</td>
+          <td class="paramname"><em>log</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___terminator.html">ON_Terminator</a> *&#160;</td>
+          <td class="paramname"><em>cancel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___progress_reporter.html">ON_ProgressReporter</a> *&#160;</td>
+          <td class="paramname"><em>reporter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Splits the current mesh and returns the split result. If nothing happened, the current mesh is not copied. Instead, somethingHappened is set to false. Parameters: meshesThatSplit - [in] The mesh splitters. nullptr entries are tolerated. tolerance - [in] A 3d-distance tolerance value. If tolerance is:</p><ul>
+<li>negative: the positive value will be used.</li>
+<li>0.0: no tolerance will be used. This is rarely useful, and only in cases where perforations intersections happen inside faces, and/or there is coplanarity parallel to one of the three fundamental axes.</li>
+<li>ON_DBL_QNAN, ON_UNSET_VALUE and ON_UNSET_POSITIVE_VALUE: the function picks a suitable, or default, tolerance value. WARNING! Generally, good tolerance values for objects drawn near the origin are in the magnitude of 10^-7, or ON_SQRT_EPSILON * 10. Often, the document absolute tolerance is not a good tolerance value. You might use a fractional coeffiecient to scale the document tolerance to a suitable value, while accepting a user-provided value. This function expects that each mesh conforms to the tolerance that is provided, and that means that features in the mesh are always larger than the mentioned tolerance. Coplanar gaps between meshes that are smaller than tolerance are overlaps. somethingHappened - [out] If not nullptr, informs the caller if the mesh was actually hit by anything. results - [out] This array will be filled with the split result. If nothing happened, the current mesh is not copied. log - [out] If not nullptr, intersection warnings and errors are printed here. If the intersection runs smoothly, nothing will be printed. cancel - [out] If not nullptr, a trigger to request termination. When cancellation is requested, the return value will often be false. You are responsible to delete new objects that were returned, even if you requested cancellation. reporter - [out] If not nullptr, an indicative progress is reported. Returns: true if the computation finished successfully, false otherwise. </li>
+</ul>
+
+</div>
+</div>
+<a id="a787131c36a85439f7a15cbff46a81b73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a787131c36a85439f7a15cbff46a81b73">&#9670;&nbsp;</a></span>SplitArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ON_Mesh::SplitArray </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>meshesToSplit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>meshesThatSplit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tolerance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>splitAtCoplanar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>createNgons</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>somethingHappened</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>results</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___text_log.html">ON_TextLog</a> *&#160;</td>
+          <td class="paramname"><em>log</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___terminator.html">ON_Terminator</a> *&#160;</td>
+          <td class="paramname"><em>cancel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___progress_reporter.html">ON_ProgressReporter</a> *&#160;</td>
+          <td class="paramname"><em>reporter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Splits a list of meshes. See the parameter description two methods above. Additional parameter: createNgons - If true, ngons are created along the splitting ridge to preserve the boundary look. </p>
+
+</div>
+</div>
 <a id="ab7a137c9bd26335e1ba37d285ca88169"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab7a137c9bd26335e1ba37d285ca88169">&#9670;&nbsp;</a></span>SwapCoordinates()</h2>
 
@@ -5885,7 +6821,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: If you modify the values of the single precision vertices in m_V[], then you must call <a class="el" href="class_o_n___mesh.html#aab94df03536804d2573b383699db4c57">UpdateDoublePrecisionVertices()</a>. Remarks: If double precision vertices are not present, this function does nothing. </p>
+<p>Description: If you modify the values of the single precision vertices in m_V[], then you must call <a class="el" href="class_o_n___mesh.html#aab94df03536804d2573b383699db4c57">UpdateDoublePrecisionVertices()</a>. Remarks: If double precision vertices are not present, this function creates them. </p>
 
 </div>
 </div>
@@ -6046,7 +6982,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">double ON_Mesh::Volume </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a>&#160;</td>
-          <td class="paramname"><em>base_point</em> = <code><a class="el" href="class_o_n__3d_point.html#ae5dcca5dde698b25a7ec98b3868285b5">ON_3dPoint::Origin</a></code>, </td>
+          <td class="paramname"><em>base_point</em> = <code><a class="el" href="group__open_n_u_r_b_s.html#gae5dcca5dde698b25a7ec98b3868285b5">ON_3dPoint::Origin</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -6076,7 +7012,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> ON_Mesh::VolumeCentroid </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a>&#160;</td>
-          <td class="paramname"><em>base_point</em> = <code><a class="el" href="class_o_n__3d_point.html#ae5dcca5dde698b25a7ec98b3868285b5">ON_3dPoint::Origin</a></code>, </td>
+          <td class="paramname"><em>base_point</em> = <code><a class="el" href="group__open_n_u_r_b_s.html#gae5dcca5dde698b25a7ec98b3868285b5">ON_3dPoint::Origin</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -6135,7 +7071,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a>&#160;</td>
-          <td class="paramname"><em>base_point</em> = <code><a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a></code>&#160;</td>
+          <td class="paramname"><em>base_point</em> = <code><a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -6144,7 +7080,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Calculate volume mass properties of the mesh. Parameters: base_point - [in] When computing the volume mass properties of a solid volume defined by several meshes, pass the same base_point to each call to <a class="el" href="class_o_n___mesh.html#aa6a1b4435044cb9bd612ca013faed17b">VolumeMassProperties()</a> and add the answers. When computing the volume mass properties of a solid defined by a single mesh, the center of the bounding box is a good choice for base_point. If the mesh is closed, you can pass <a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a> and the center of the bounding box will be used. mp - [out] bVolume - [in] true to calculate volume bFirstMoments - [in] true to calculate volume first moments, volume, and volume centroid. bSecondMoments - [in] true to calculate volume second moments. bProductMoments - [in] true to calculate volume product moments. base_point - [in] If the surface is closed, then pass ON_UNSET_VALUE.</p>
+<p>Description: Calculate volume mass properties of the mesh. Parameters: base_point - [in] When computing the volume mass properties of a solid volume defined by several meshes, pass the same base_point to each call to <a class="el" href="class_o_n___mesh.html#aa6a1b4435044cb9bd612ca013faed17b">VolumeMassProperties()</a> and add the answers. When computing the volume mass properties of a solid defined by a single mesh, the center of the bounding box is a good choice for base_point. If the mesh is closed, you can pass <a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a> and the center of the bounding box will be used. mp - [out] bVolume - [in] true to calculate volume bFirstMoments - [in] true to calculate volume first moments, volume, and volume centroid. bSecondMoments - [in] true to calculate volume second moments. bProductMoments - [in] true to calculate volume product moments. base_point - [in] If the surface is closed, then pass ON_UNSET_VALUE.</p>
 <p>This parameter is for expert users who are computing a volume whose boundary is defined by several non-closed breps, surfaces, and meshes.</p>
 <p>When computing the volume, volume centroid, or volume first moments of a volume whose boundary is defined by several breps, surfaces, and meshes, pass the same base_point to each call to VolumeMassProperties. <br  />
 </p>
@@ -6184,6 +7120,28 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a210bd7d627ff486ac874ab4c226ab6c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a210bd7d627ff486ac874ab4c226ab6c8">&#9670;&nbsp;</a></span>Empty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> ON_Mesh::Empty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a3eaa9b3a794729ab14d9c610e485d01e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3eaa9b3a794729ab14d9c610e485d01e">&#9670;&nbsp;</a></span>m_C</h2>
 
@@ -6223,7 +7181,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> ON_Mesh::m_dV</td>
+          <td class="memname">ON_3dPointArray ON_Mesh::m_dV</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -6257,7 +7215,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_o_n__3f_vector_array.html">ON_3fVectorArray</a> ON_Mesh::m_FN</td>
+          <td class="memname">ON_3fVectorArray ON_Mesh::m_FN</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -6326,7 +7284,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt;<a class="el" href="class_o_n___surface_curvature.html">ON_SurfaceCurvature</a>&gt; ON_Mesh::m_K</td>
+          <td class="memname"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt;ON_SurfaceCurvature&gt; ON_Mesh::m_K</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -6390,7 +7348,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_o_n__3f_vector_array.html">ON_3fVectorArray</a> ON_Mesh::m_N</td>
+          <td class="memname">ON_3fVectorArray ON_Mesh::m_N</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -6573,7 +7531,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_o_n__2d_point_array.html">ON_2dPointArray</a> ON_Mesh::m_S</td>
+          <td class="memname">ON_2dPointArray ON_Mesh::m_S</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -6624,7 +7582,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_o_n__2f_point_array.html">ON_2fPointArray</a> ON_Mesh::m_T</td>
+          <td class="memname">ON_2fPointArray ON_Mesh::m_T</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -6743,7 +7701,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_o_n__3f_point_array.html">ON_3fPointArray</a> ON_Mesh::m_V</td>
+          <td class="memname">ON_3fPointArray ON_Mesh::m_V</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -6753,7 +7711,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:25 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:52 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

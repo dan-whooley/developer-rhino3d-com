@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -64,7 +64,9 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="class_c_rhino_object_grips-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">CRhinoObjectGrips Class Reference<div class="ingroups"><a class="el" href="group___rhino.html">Rhino</a></div></div>  </div>
@@ -91,6 +93,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acfb92b35ced760e558f0c3474083727f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0be80182a6f2301df17adf9fa0d44259"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object_grips.html#a0be80182a6f2301df17adf9fa0d44259">HasGripsSelected</a> (bool bCheckAllGrips=false) const</td></tr>
 <tr class="separator:a0be80182a6f2301df17adf9fa0d44259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbbad12f82e2bf9cdf4238ca95b26fa2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object_grips.html#afbbad12f82e2bf9cdf4238ca95b26fa2">IsCustom</a> (<a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a> custom_grips_id) const</td></tr>
+<tr class="separator:afbbad12f82e2bf9cdf4238ca95b26fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6332b2f3697b40a3d581c5c382028c9"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="class_o_n___morph_control.html">ON_MorphControl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object_grips.html#ab6332b2f3697b40a3d581c5c382028c9">MorphControl</a> () const</td></tr>
 <tr class="separator:ab6332b2f3697b40a3d581c5c382028c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d77c8a557b5a4e9326a465d46e09b22"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_c_rhino_grip_object.html">CRhinoGripObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object_grips.html#a0d77c8a557b5a4e9326a465d46e09b22">NeighborGrip</a> (int grip_index, int dr, int ds, int dt, bool bWrap) const</td></tr>
@@ -119,10 +123,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0feb36b61f7ab2d01c6ecb2ad799d071"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ac1c04cd77158c6eb79b0c80c449bdc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object_grips.html#a4ac1c04cd77158c6eb79b0c80c449bdc">SetGripStatus</a> (const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_c_rhino_grip_status.html">CRhinoGripStatus</a> &gt; &amp;grip_status)</td></tr>
 <tr class="separator:a4ac1c04cd77158c6eb79b0c80c449bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4e38535c19100e787805e4059f5b4f2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object_grips.html#ac4e38535c19100e787805e4059f5b4f2">UpdateMesh</a> (<a class="el" href="class_o_n.html#a7a4479b49f4b13f6a1112c87cf106e5e">ON::mesh_type</a> mesh_type)</td></tr>
-<tr class="separator:ac4e38535c19100e787805e4059f5b4f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f25d9d026d6dd028a3188f9d0eed04f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object_grips.html#a3f25d9d026d6dd028a3188f9d0eed04f">UpdateMesh</a> (<a class="el" href="class_o_n.html#a7a4479b49f4b13f6a1112c87cf106e5e">ON::mesh_type</a> mesh_type_hint)</td></tr>
+<tr class="separator:a3f25d9d026d6dd028a3188f9d0eed04f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b812888167df5feb4a7cf6fc67721ef"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object_grips.html#a0b812888167df5feb4a7cf6fc67721ef">UpdateWidgetGeometry</a> ()</td></tr>
 <tr class="separator:a0b812888167df5feb4a7cf6fc67721ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a629551bfa78e52ff2961c74f0119eaca"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object_grips.html#a629551bfa78e52ff2961c74f0119eaca">IsCustom</a> (const class <a class="el" href="class_c_rhino_object_grips.html">CRhinoObjectGrips</a> *grips, <a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a> custom_grips_id)</td></tr>
+<tr class="separator:a629551bfa78e52ff2961c74f0119eaca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -146,6 +155,13 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:afc488a7490051a71ce172f8434c07f1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_rhino_object.html">CRhinoObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object_grips.html#afc488a7490051a71ce172f8434c07f1d">m_owner_object</a></td></tr>
 <tr class="memdesc:afc488a7490051a71ce172f8434c07f1d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_rhino_object.html" title="Base class for all runtime Rhino objects.">CRhinoObject</a> owner of the grips.  <a href="class_c_rhino_object_grips.html#afc488a7490051a71ce172f8434c07f1d">More...</a><br /></td></tr>
 <tr class="separator:afc488a7490051a71ce172f8434c07f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a88a8c0e18b953caeaf4b7f03440a4451"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object_grips.html#a88a8c0e18b953caeaf4b7f03440a4451">CustomCurveEditPointGripsId</a></td></tr>
+<tr class="separator:a88a8c0e18b953caeaf4b7f03440a4451"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a414b93fa8339ed53546179b60ae7442f"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object_grips.html#a414b93fa8339ed53546179b60ae7442f">CustomSubDEditPointGripsId</a></td></tr>
+<tr class="separator:a414b93fa8339ed53546179b60ae7442f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9d6229c35b8956bdbe56d0b9aab8ed7f"></a>
@@ -371,6 +387,63 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Description: Query the selection state of an object's grips. Parameters: bCheckAllGrips - [in] If false, <a class="el" href="class_c_rhino_object_grips.html#a0be80182a6f2301df17adf9fa0d44259">HasGripsSelected()</a> will return true if any grips are selected. If true, <a class="el" href="class_c_rhino_object_grips.html#a0be80182a6f2301df17adf9fa0d44259">HasGripsSelected()</a> will return true if all grips are selected. <br  />
  Returns: True if all grips are selected or at least one grip is selected and bCheckAllGrips is false. </p>
+
+</div>
+</div>
+<a id="a629551bfa78e52ff2961c74f0119eaca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a629551bfa78e52ff2961c74f0119eaca">&#9670;&nbsp;</a></span>IsCustom() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool CRhinoObjectGrips::IsCustom </td>
+          <td>(</td>
+          <td class="paramtype">const class <a class="el" href="class_c_rhino_object_grips.html">CRhinoObjectGrips</a> *&#160;</td>
+          <td class="paramname"><em>grips</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a>&#160;</td>
+          <td class="paramname"><em>custom_grips_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Parameters: grips - [in] custom_grips_id - [in] <br  />
+ Returns: True if grips are custom grips with the specified custom grips id. </p>
+
+</div>
+</div>
+<a id="afbbad12f82e2bf9cdf4238ca95b26fa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbbad12f82e2bf9cdf4238ca95b26fa2">&#9670;&nbsp;</a></span>IsCustom() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CRhinoObjectGrips::IsCustom </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a>&#160;</td>
+          <td class="paramname"><em>custom_grips_id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Parameters: custom_grips_id - [in] Returns: True if this are custom grips with the specified custom grips id. </p>
 
 </div>
 </div>
@@ -717,7 +790,7 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Resets location of all grips to original spots and cleans up stuff that was created by dynamic dragging. This is required when dragging is canceled or in the Copy command when grips are "copied". This function should not destroy the current grips and make new ones because the grips may be in a list someplace (like in the copy command).</p>
+<p>End custom grips interface Begin all grips virtual function interface All types of grips (built-in and custom) override the following functions. Description: Resets location of all grips to original spots and cleans up stuff that was created by dynamic dragging. This is required when dragging is canceled or in the Copy command when grips are "copied". This function should not destroy the current grips and make new ones because the grips may be in a list someplace (like in the copy command).</p>
 <p>The default <a class="el" href="class_c_rhino_object_grips.html#a529f0878154414db56e0548144a5d5a6">CRhinoObjectGrips::Reset()</a> takes care of the grip location issues. The override should clean up dynamic workspace stuff and can call <a class="el" href="class_c_rhino_object_grips.html#a529f0878154414db56e0548144a5d5a6">CRhinoObjectGrips::Reset()</a> to handle resetting grip locations. </p>
 
 </div>
@@ -744,7 +817,8 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Just before Rhino turns of objec grips, it calls this function. If grips have modified any display meshes, they must override this function and restore the meshes to their original states. </p>
+<p>Description: Just before Rhino turns off object grips, it calls this function. If you have modified any object display information, you must override this function and restore the display information to its original state.</p>
+<p>Remarks: This function is poorly named. It harkens back to a simpler time in the late 1990s. </p>
 
 </div>
 </div>
@@ -806,12 +880,12 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Set grip status. This is useful in commands that replace and copy objects. Parameters: grip_status - [in] Returns: True if status was restored. </p>
+<p>End all grips virtual function interface Description: Set grip status. This is useful in commands that replace and copy objects. Parameters: grip_status - [in] Returns: True if status was restored. </p>
 
 </div>
 </div>
-<a id="ac4e38535c19100e787805e4059f5b4f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4e38535c19100e787805e4059f5b4f2">&#9670;&nbsp;</a></span>UpdateMesh()</h2>
+<a id="a3f25d9d026d6dd028a3188f9d0eed04f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f25d9d026d6dd028a3188f9d0eed04f">&#9670;&nbsp;</a></span>UpdateMesh()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -823,7 +897,7 @@ Public Attributes</h2></td></tr>
           <td class="memname">virtual void CRhinoObjectGrips::UpdateMesh </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_o_n.html#a7a4479b49f4b13f6a1112c87cf106e5e">ON::mesh_type</a>&#160;</td>
-          <td class="paramname"><em>mesh_type</em></td><td>)</td>
+          <td class="paramname"><em>mesh_type_hint</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -833,7 +907,11 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Just before Rhino shades an object with grips on, it calls <a class="el" href="class_c_rhino_object_grips.html#ac4e38535c19100e787805e4059f5b4f2">UpdateMesh()</a> to update the display meshes. Grips that modify surface or mesh objects must override this fuction and modify the display meshes here. </p>
+<p>Description: Just before Rhino draws an object with grips on, it calls <a class="el" href="class_c_rhino_object_grips.html#a3f25d9d026d6dd028a3188f9d0eed04f">UpdateMesh()</a> to update display information that will be used in the near future.</p>
+<p>If "m_bNewLocation" is true, update your dynamic display information and then set m_bNewLocation to false. If "m_bNewLocation" is false, do nothing.</p>
+<p>Parameters: mesh_type_hint - [in] Ideally, design your override so it can ignore this parameter. At best, treat the parameter as a hint for what will occur in the near future.</p>
+<p>ON::mesh_type::analysis_mesh The grips parent object is currently in some sort of visual analsis mode (false color curvature, draft, edges, ...) and at some point in the near future the grips parent object and any dynamic display information will be shown. ON::mesh_type::render_mesh At some point in the near future the grips parent object and any dynamic display information will be used in a "shaded" viewport setting. It's common for there to be several viewports in both shaded and wireframe contexts. ON::mesh_type::any_type At some point in the near future the grips parent object and any dynamic display information will be used in a "wireframe" viewport setting. It's common for there to be several viewports in both shaded and wireframe contexts.</p>
+<p>Remarks: This function is poorly named and the parameter is not all that useful. Both harken back to a simpler time in the late 1990s. </p>
 
 </div>
 </div>
@@ -864,6 +942,53 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a88a8c0e18b953caeaf4b7f03440a4451"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88a8c0e18b953caeaf4b7f03440a4451">&#9670;&nbsp;</a></span>CustomCurveEditPointGripsId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a> CRhinoObjectGrips::CustomCurveEditPointGripsId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Begin custom grips interface NOTE: Custom grips ids do not have to appear here. They can be hidden in implementation files.</p>
+<p>The ids here are for core Rhino grips, like edit points, and are provided so it is easy for 3rd party plug-ins to determine what type of core Rhino grips are enabled. CustomCurveEditPointGripsId makes a grip at every curve Greville point. The EditPtOn command applied to a SubD enables these grips. </p>
+
+</div>
+</div>
+<a id="a414b93fa8339ed53546179b60ae7442f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a414b93fa8339ed53546179b60ae7442f">&#9670;&nbsp;</a></span>CustomSubDEditPointGripsId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a> CRhinoObjectGrips::CustomSubDEditPointGripsId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>CustomSubDEditPointGripsId makes a grip for every subd surface point. The EditPtOn command applied to a SubD enables these grips. </p>
+
+</div>
+</div>
 <a id="aa237c57d0c913de5a1a7d16a2c9fad86"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa237c57d0c913de5a1a7d16a2c9fad86">&#9670;&nbsp;</a></span>m__grips_type</h2>
 
@@ -991,7 +1116,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:05 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:29 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

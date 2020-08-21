@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -134,12 +134,10 @@ Public Member Functions</h2></td></tr>
 Friends</h2></td></tr>
 <tr class="memitem:a6b3a440f8ac861a8d7731be18603eb84"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___fixed_size_pool.html#a6b3a440f8ac861a8d7731be18603eb84">ON_FixedSizePoolIterator</a></td></tr>
 <tr class="separator:a6b3a440f8ac861a8d7731be18603eb84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d68ad8584ea472af56286e7450911b1"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___fixed_size_pool.html#a3d68ad8584ea472af56286e7450911b1">ON_SleepLockGuard</a></td></tr>
+<tr class="separator:a3d68ad8584ea472af56286e7450911b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section rcs"><dt>NoKeywords</dt><dd></dd></dl>
-<p>/ / Copyright (c) 1993-2012 Robert McNeel &amp; Associates. All rights reserved. / OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert / McNeel &amp; Associates. / / THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY. / ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF / MERCHANTABILITY ARE HEREBY DISCLAIMED. / <br  />
- / For complete openNURBS copyright information see <a href="http://www.opennurbs.org">http://www.opennurbs.org</a>. / ////////////////////////////////////////////////////////////// </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad17cc7144c361db18aef3f55f0e19635"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad17cc7144c361db18aef3f55f0e19635">&#9670;&nbsp;</a></span>ON_FixedSizePool()</h2>
 
@@ -433,6 +431,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Returns: If successful, (1 + maximum assigned id value) is returned. Otherwise 0 is returned. </p>
 
 </div>
 </div>
@@ -590,10 +589,34 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a3d68ad8584ea472af56286e7450911b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d68ad8584ea472af56286e7450911b1">&#9670;&nbsp;</a></span>ON_SleepLockGuard</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_o_n___sleep_lock_guard.html">ON_SleepLockGuard</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Used by The ThreadSafe...() functions and for expert users to use when managing memory controlled by this pool. Best to ingnore this unless you have a very clear idea of what you are doing, why you are doing it, and when you are doing it. Otherwise, you'll find yourself waiting forever on a nested access request. <br  />
+ </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:24 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:50 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

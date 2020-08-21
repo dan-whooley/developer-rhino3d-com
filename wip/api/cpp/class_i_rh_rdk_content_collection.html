@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -118,14 +118,26 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a1b933952932222f8d64921e6eb4bcaa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This interface is returned by GetData(uuidData_RdkContentDatabase) where it will get a collection that represents all the content in a 'database' &ndash; usually a document.</p>
-<p>It is also returned by GetData(uuidData_RdkContentDisplayCollection) where it will get a collection that represents only the content in a database that is not filtered out by a search phrase.</p>
-<p>It is also returned by GetData(uuidData_RdkContentSelection) where it will get a collection that represents the current selection in a UI.</p>
+<div class="textblock"><p>This interface is returned in several different contexts:</p>
+<p>Public:</p>
+<ul>
+<li>It is returned by GetData(uuidData_RdkContentDatabase) where it will get a collection that represents all the content in a 'database' &ndash; usually a document.</li>
+<li>It is returned by GetData(uuidData_RdkContentDisplayCollection) where it will get a collection that represents only the content in a database that is not filtered out by a search phrase.</li>
+<li><p class="startli">It is returned by GetData(uuidData_RdkContentSelection) where it will get a collection that represents the current selection in a Content UI.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group___r_d_k.html#gaf6e5d0c316df2adbf97117cff42b356c">uuidData_RdkContentDatabase</a> </dd>
 <dd>
 <a class="el" href="group___r_d_k.html#gacb6e5139033b48d1aa218e7bd2237838">uuidData_RdkContentDisplayCollection</a> </dd>
 <dd>
-<a class="el" href="group___r_d_k.html#ga5821202ebb3a4caafc86fd61eae5aa29">uuidData_RdkContentSelection</a> </dd></dl>
+<a class="el" href="group___r_d_k.html#ga5821202ebb3a4caafc86fd61eae5aa29">uuidData_RdkContentSelection</a></dd></dl>
+<p>Internal:</p>
+</li>
+<li>It is returned by GetData(uuidData_RdkContentSelectionOverride) where it will get a collection that represents the current right-clicked selection in a drop-down list (NCC).</li>
+<li><p class="startli">It is returned by GetData(uuidData_RdkContentSelectionForPreview) where it will get a collection that represents the current selection made by the user. This is usually the same as uuidData_RdkContentSelection but when the user selects a Texture Proxy, uuidData_RdkContentSelection gives the proxy's members whereas uuidData_RdkContentSelectionForPreview gives the proxy itself.</p>
+<dl class="section see"><dt>See also</dt><dd>uuidData_RdkContentSelectionOverride </dd>
+<dd>
+<a class="el" href="group___r_d_k.html#ga5b071bbc609550f09e366f78b05a9247">uuidData_RdkContentSelectionForPreview</a> </dd></dl>
+</li>
+</ul>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1b933952932222f8d64921e6eb4bcaa6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1b933952932222f8d64921e6eb4bcaa6">&#9670;&nbsp;</a></span>~IRhRdkContentCollection()</h2>
@@ -622,17 +634,18 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets a search pattern for filtering contents. This is not actually used by the iterator, but is stored for use by any UI that wants to filter contents based on a search string by using the function <a class="el" href="group___r_d_k.html#ga955915114a645692d1c28a6e9831499d">RhRdkCheckSearchPattern()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">wszPattern</td><td>can be a plain string or one of the following: name: &lt;name&gt; note: &lt;note&gt; (or notes: &lt;note&gt;) tags: &lt;tags&gt; (or tag: &lt;tags&gt;) This search pattern is used by <a class="el" href="group___r_d_k.html#ga955915114a645692d1c28a6e9831499d">RhRdkCheckSearchPattern()</a> in the following way: If pattern is a plain string, the name, notes and tags are searched for any occurrence of the string. If the pattern starts with name:, a wildcard search is performed on the name parameter only. If the pattern starts with note:, a wildcard search is performed on the notes parameter only. If the pattern starts with tags:, a wildcard search is performed on each semicolon-delimited tag in the tags parameter only. </td></tr>
+    <tr><td class="paramname">wszPattern</td><td>is the search pattern. See <a class="el" href="group___r_d_k.html#ga955915114a645692d1c28a6e9831499d">RhRdkCheckSearchPattern()</a> for details. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group___r_d_k.html#ga955915114a645692d1c28a6e9831499d">RhRdkCheckSearchPattern()</a> </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:16 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:42 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

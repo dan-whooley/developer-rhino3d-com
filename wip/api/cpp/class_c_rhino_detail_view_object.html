@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -63,6 +63,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
@@ -85,6 +86,70 @@ Inheritance diagram for CRhinoDetailViewObject:</div>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a091bae729553c25d42d4f846a1c2615c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_detail_view_object.html#a091bae729553c25d42d4f846a1c2615c">ScaleFormat</a> : unsigned int { <br />
+&#160;&#160;<a class="el" href="class_c_rhino_detail_view_object.html#a091bae729553c25d42d4f846a1c2615ca6adf97f83acf6453d4a6a4b1070f3754">ScaleFormat::None</a>, 
+<a class="el" href="class_c_rhino_detail_view_object.html#a091bae729553c25d42d4f846a1c2615ca4ad6a0ea20e80b925a07e2228096337b">ScaleFormat::PageLengthToOne</a>, 
+<a class="el" href="class_c_rhino_detail_view_object.html#a091bae729553c25d42d4f846a1c2615cac3c51f2146972c4e06dcc8af10c032ab">ScaleFormat::OneToModelLength</a>, 
+<a class="el" href="class_c_rhino_detail_view_object.html#a091bae729553c25d42d4f846a1c2615cac2c1a5e54205fee5b232b5a542cbf2f3">ScaleFormat::OneInchToModelLengthFeet</a>, 
+<br />
+&#160;&#160;<a class="el" href="class_c_rhino_detail_view_object.html#a091bae729553c25d42d4f846a1c2615ca07ba2dfc5d4e5954dabbd3c56158bc58">ScaleFormat::ModelLengthInchToOneFoot</a>, 
+<a class="el" href="class_c_rhino_detail_view_object.html#a091bae729553c25d42d4f846a1c2615ca3c34009617758f7b62727659ba19c1fe">ScaleFormat::ModelLengthInchToOneFootInch</a>
+<br />
+ }</td></tr>
+<tr class="separator:a091bae729553c25d42d4f846a1c2615c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_class_c_rhino_object"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_c_rhino_object')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_c_rhino_object.html">CRhinoObject</a></td></tr>
+<tr class="memitem:a9af34722c6084ee1110cb5320486aa8e inherit pub_types_class_c_rhino_object"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8e">GEOMETRY_TYPE</a> { <br />
+&#160;&#160;<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea32987d82377f97c0d6ca13955fd37703">unknown_object_type</a> = ON::object_type::unknown_object_type, 
+<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea651f6fd5c0d09547ab1619d5861022ae">point_object</a> = ON::object_type::point_object, 
+<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea1b96d382775fdab8dcb799b61965959b">pointset_object</a> = ON::object_type::pointset_object, 
+<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea7921fba881d29feb02d22af26d2d2ae4">curve_object</a> = ON::object_type::curve_object, 
+<br />
+&#160;&#160;<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea2b4e2b4893761b631c53da20378a8d74">surface_object</a> = ON::object_type::surface_object, 
+<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea38fb6a87e4003f90df85d2285162524a">polysrf_object</a> = ON::object_type::polysrf_filter, 
+<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8eabbcb4fcabb9fee7fa3d1ebe734a5a862">edge_object</a> = ON::object_type::edge_filter, 
+<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8eadf7f8e2ba7ebf2814dfd84704ff475b9">polyedge_object</a> = ON::object_type::polyedge_filter, 
+<br />
+&#160;&#160;<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8eaa9dcd30db4768b0ad517e3ed1c261153">loop_object</a> = ON::object_type::loop_object, 
+<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8eabd73865849ab72389223824d7c4643bb">brepvertex_filter</a> = ON::object_type::brepvertex_filter, 
+<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8eabbcac19b7f643af6e215f5132a564883">mesh_object</a> = ON::object_type::mesh_object, 
+<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea16129f0def276b42bd3dc2a6e93fc142">annotation_object</a> = ON::object_type::annotation_object, 
+<br />
+&#160;&#160;<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea04011822681f84db135b852516c26e61">light_object</a> = ON::object_type::light_object, 
+<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea0fda3e58354771940afa83eaa62bbbdb">instance_reference</a> = ON::object_type::instance_reference, 
+<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8eaaa7b5b4fe9d53f9a9a02c4993a4b6999">grip_object</a> = ON::object_type::grip_object, 
+<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea9f9a5d948109f2f12f981c215b994a63">morph_control_object</a> = ON::object_type::morph_control_object, 
+<br />
+&#160;&#160;<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8eacd1b050139879d38d67f82237a2a8ba1">subd_object</a> = ON::object_type::subd_object, 
+<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ead57fb91611047c663d92979110b7d840">meshvertex_filter</a> = ON::object_type::meshvertex_filter, 
+<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea80d74e274bc679e772008d078c1d5dac">meshedge_filter</a> = ON::object_type::meshedge_filter, 
+<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ead01042bf190f35bd0af4c18fba09e142">meshface_filter</a> = ON::object_type::meshface_filter, 
+<br />
+&#160;&#160;<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea0ca970bce7847b3313b94fe9a7ae46dd">meshcomponent_reference</a> = ON::object_type::meshcomponent_reference, 
+<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8eaeaadfc28d84dc36a55322c5fa1b24ac4">cage_object</a> = ON::object_type::cage_object, 
+<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8eaa703896fb21e5ca086a8629baa47e38d">hatch_object</a> = ON::object_type::hatch_object, 
+<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8eabb2528818925e6431338f1322e6437e6">phantom_object</a> = ON::object_type::phantom_object, 
+<br />
+&#160;&#160;<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8eabf6c6bdb6d827f9e22b6275ef9098e0b">extrusion_object</a> = ON::object_type::extrusion_object, 
+<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea5b9e00d487f22ec1e34f3f9215373673">any_object</a> = ON::object_type::any_object
+<br />
+ }</td></tr>
+<tr class="separator:a9af34722c6084ee1110cb5320486aa8e inherit pub_types_class_c_rhino_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_class_o_n___object"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_o_n___object')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_o_n___object.html">ON_Object</a></td></tr>
+<tr class="memitem:a7f520e987ffa14e71b06493340f9956c inherit pub_types_class_o_n___object"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___object.html#a7f520e987ffa14e71b06493340f9956c">UserDataConflictResolution</a> : unsigned char { <br />
+&#160;&#160;<a class="el" href="class_o_n___object.html#a7f520e987ffa14e71b06493340f9956caba9e24ac13ffcde7d2f6b554a33df7cd">UserDataConflictResolution::destination_object</a> = 0, 
+<a class="el" href="class_o_n___object.html#a7f520e987ffa14e71b06493340f9956ca34f1a09f0cf6c7e702b6aad2260c6b0f">UserDataConflictResolution::source_object</a> = 1, 
+<a class="el" href="class_o_n___object.html#a7f520e987ffa14e71b06493340f9956cad741a50b9ec9ac0de6491a83bc5b166f">UserDataConflictResolution::source_copycount_gt</a> = 2, 
+<a class="el" href="class_o_n___object.html#a7f520e987ffa14e71b06493340f9956ca35055504b8fe7e98f97c2b2ea6168ad2">UserDataConflictResolution::source_copycount_ge</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="class_o_n___object.html#a7f520e987ffa14e71b06493340f9956ca6c944380c6bd502741a041a82ad00a5a">UserDataConflictResolution::destination_copycount_gt</a> = 4, 
+<a class="el" href="class_o_n___object.html#a7f520e987ffa14e71b06493340f9956cadb77cee2050a09b500c679688e45a105">UserDataConflictResolution::destination_copycount_ge</a> = 5, 
+<a class="el" href="class_o_n___object.html#a7f520e987ffa14e71b06493340f9956ca880ec7882afd9386e91140bf4f77e594">UserDataConflictResolution::delete_item</a> = 6
+<br />
+ }</td></tr>
+<tr class="separator:a7f520e987ffa14e71b06493340f9956c inherit pub_types_class_o_n___object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abb8c788e942cbcddc1d86679ce68eb2a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_detail_view_object.html#abb8c788e942cbcddc1d86679ce68eb2a">CRhinoDetailViewObject</a> ()</td></tr>
@@ -116,6 +181,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4325bae8ab334a8be040a3fdbd2fc5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a230145c5e7483f3b751fe79de509fae1"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_o_n___detail_view.html">ON_DetailView</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_detail_view_object.html#a230145c5e7483f3b751fe79de509fae1">GetDetailView</a> () const</td></tr>
 <tr class="separator:a230145c5e7483f3b751fe79de509fae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54853d95375a5f64183a86e3a2628984"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_detail_view_object.html#a54853d95375a5f64183a86e3a2628984">GetFormattedScale</a> (<a class="el" href="class_c_rhino_detail_view_object.html#a091bae729553c25d42d4f846a1c2615c">ScaleFormat</a> format, <a class="el" href="class_o_n__w_string.html">ON_wString</a> &amp;str) const</td></tr>
+<tr class="separator:a54853d95375a5f64183a86e3a2628984"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0166ea3bbf42ee52f66d18ef4a762fba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_detail_view_object.html#a0166ea3bbf42ee52f66d18ef4a762fba">GetModelLength</a> (double paper_length, double &amp;model_length) const</td></tr>
 <tr class="separator:a0166ea3bbf42ee52f66d18ef4a762fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4427afd740d6b93ddea3cac2d3c10384"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_detail_view_object.html#a4427afd740d6b93ddea3cac2d3c10384">GetPageXforms</a> (<a class="el" href="class_o_n___xform.html">ON_Xform</a> *pWorldToPage, <a class="el" href="class_o_n___xform.html">ON_Xform</a> *pPageToWorld) const</td></tr>
@@ -523,6 +590,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ab128284749f59dd6604dbe58a213f534"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4351a40696e94d860b91e23e5a05a87"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_detail_view_object.html#ac4351a40696e94d860b91e23e5a05a87">GetDetailXform</a> (UINT sn, const <a class="el" href="class_c_rhino_doc.html">CRhinoDoc</a> *pDoc, <a class="el" href="class_o_n___xform.html">ON_Xform</a> *pWorldToPage, <a class="el" href="class_o_n___xform.html">ON_Xform</a> *pPageToWorld)</td></tr>
 <tr class="separator:ac4351a40696e94d860b91e23e5a05a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14aa1dd18c9f26925141c58602182028"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_c_rhino_detail_view_object.html#a091bae729553c25d42d4f846a1c2615c">ScaleFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_detail_view_object.html#a14aa1dd18c9f26925141c58602182028">ScaleFormatFromUnsigned</a> (unsigned int scale_format_as_unsigned)</td></tr>
+<tr class="separator:a14aa1dd18c9f26925141c58602182028"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacf78249e33e0086ba388bd828b2e912"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_detail_view_object.html#aacf78249e33e0086ba388bd828b2e912">SetInPrintPreview</a> (bool on)</td></tr>
 <tr class="separator:aacf78249e33e0086ba388bd828b2e912"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_class_c_rhino_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_c_rhino_object')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_c_rhino_object.html">CRhinoObject</a></td></tr>
@@ -548,56 +617,6 @@ Friends</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_class_c_rhino_object"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_c_rhino_object')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_c_rhino_object.html">CRhinoObject</a></td></tr>
-<tr class="memitem:a9af34722c6084ee1110cb5320486aa8e inherit pub_types_class_c_rhino_object"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8e">GEOMETRY_TYPE</a> { <br />
-&#160;&#160;<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea32987d82377f97c0d6ca13955fd37703">unknown_object_type</a> = ON::object_type::unknown_object_type, 
-<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea651f6fd5c0d09547ab1619d5861022ae">point_object</a> = ON::object_type::point_object, 
-<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea1b96d382775fdab8dcb799b61965959b">pointset_object</a> = ON::object_type::pointset_object, 
-<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea7921fba881d29feb02d22af26d2d2ae4">curve_object</a> = ON::object_type::curve_object, 
-<br />
-&#160;&#160;<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea2b4e2b4893761b631c53da20378a8d74">surface_object</a> = ON::object_type::surface_object, 
-<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea38fb6a87e4003f90df85d2285162524a">polysrf_object</a> = ON::object_type::polysrf_filter, 
-<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8eabbcb4fcabb9fee7fa3d1ebe734a5a862">edge_object</a> = ON::object_type::edge_filter, 
-<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8eadf7f8e2ba7ebf2814dfd84704ff475b9">polyedge_object</a> = ON::object_type::polyedge_filter, 
-<br />
-&#160;&#160;<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8eaa9dcd30db4768b0ad517e3ed1c261153">loop_object</a> = ON::object_type::loop_object, 
-<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8eabd73865849ab72389223824d7c4643bb">brepvertex_filter</a> = ON::object_type::brepvertex_filter, 
-<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8eabbcac19b7f643af6e215f5132a564883">mesh_object</a> = ON::object_type::mesh_object, 
-<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea16129f0def276b42bd3dc2a6e93fc142">annotation_object</a> = ON::object_type::annotation_object, 
-<br />
-&#160;&#160;<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea04011822681f84db135b852516c26e61">light_object</a> = ON::object_type::light_object, 
-<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea0fda3e58354771940afa83eaa62bbbdb">instance_reference</a> = ON::object_type::instance_reference, 
-<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8eaaa7b5b4fe9d53f9a9a02c4993a4b6999">grip_object</a> = ON::object_type::grip_object, 
-<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea9f9a5d948109f2f12f981c215b994a63">morph_control_object</a> = ON::object_type::morph_control_object, 
-<br />
-&#160;&#160;<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8eacd1b050139879d38d67f82237a2a8ba1">subd_object</a> = ON::object_type::subd_object, 
-<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ead57fb91611047c663d92979110b7d840">meshvertex_filter</a> = ON::object_type::meshvertex_filter, 
-<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea80d74e274bc679e772008d078c1d5dac">meshedge_filter</a> = ON::object_type::meshedge_filter, 
-<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ead01042bf190f35bd0af4c18fba09e142">meshface_filter</a> = ON::object_type::meshface_filter, 
-<br />
-&#160;&#160;<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea0ca970bce7847b3313b94fe9a7ae46dd">meshcomponent_reference</a> = ON::object_type::meshcomponent_reference, 
-<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8eaeaadfc28d84dc36a55322c5fa1b24ac4">cage_object</a> = ON::object_type::cage_object, 
-<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8eaa703896fb21e5ca086a8629baa47e38d">hatch_object</a> = ON::object_type::hatch_object, 
-<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8eabb2528818925e6431338f1322e6437e6">phantom_object</a> = ON::object_type::phantom_object, 
-<br />
-&#160;&#160;<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8eabf6c6bdb6d827f9e22b6275ef9098e0b">extrusion_object</a> = ON::object_type::extrusion_object, 
-<a class="el" href="class_c_rhino_object.html#a9af34722c6084ee1110cb5320486aa8ea5b9e00d487f22ec1e34f3f9215373673">any_object</a> = ON::object_type::any_object
-<br />
- }</td></tr>
-<tr class="separator:a9af34722c6084ee1110cb5320486aa8e inherit pub_types_class_c_rhino_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_class_o_n___object"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_o_n___object')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_o_n___object.html">ON_Object</a></td></tr>
-<tr class="memitem:a7f520e987ffa14e71b06493340f9956c inherit pub_types_class_o_n___object"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___object.html#a7f520e987ffa14e71b06493340f9956c">UserDataConflictResolution</a> : unsigned char { <br />
-&#160;&#160;<a class="el" href="class_o_n___object.html#a7f520e987ffa14e71b06493340f9956caba9e24ac13ffcde7d2f6b554a33df7cd">UserDataConflictResolution::destination_object</a> = 0, 
-<a class="el" href="class_o_n___object.html#a7f520e987ffa14e71b06493340f9956ca34f1a09f0cf6c7e702b6aad2260c6b0f">UserDataConflictResolution::source_object</a> = 1, 
-<a class="el" href="class_o_n___object.html#a7f520e987ffa14e71b06493340f9956cad741a50b9ec9ac0de6491a83bc5b166f">UserDataConflictResolution::source_copycount_gt</a> = 2, 
-<a class="el" href="class_o_n___object.html#a7f520e987ffa14e71b06493340f9956ca35055504b8fe7e98f97c2b2ea6168ad2">UserDataConflictResolution::source_copycount_ge</a> = 3, 
-<br />
-&#160;&#160;<a class="el" href="class_o_n___object.html#a7f520e987ffa14e71b06493340f9956ca6c944380c6bd502741a041a82ad00a5a">UserDataConflictResolution::destination_copycount_gt</a> = 4, 
-<a class="el" href="class_o_n___object.html#a7f520e987ffa14e71b06493340f9956cadb77cee2050a09b500c679688e45a105">UserDataConflictResolution::destination_copycount_ge</a> = 5, 
-<a class="el" href="class_o_n___object.html#a7f520e987ffa14e71b06493340f9956ca880ec7882afd9386e91140bf4f77e594">UserDataConflictResolution::delete_item</a> = 6
-<br />
- }</td></tr>
-<tr class="separator:a7f520e987ffa14e71b06493340f9956c inherit pub_types_class_o_n___object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_c_rhino_object"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_c_rhino_object')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_c_rhino_object.html">CRhinoObject</a></td></tr>
 <tr class="memitem:af5ef9508fad434572a0a0c4a0f4017c7 inherit pub_attribs_class_c_rhino_object"><td class="memItemLeft" align="right" valign="top">class CRhObjectSdkExtension *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#af5ef9508fad434572a0a0c4a0f4017c7">m__object_sdk_extension</a></td></tr>
 <tr class="separator:af5ef9508fad434572a0a0c4a0f4017c7 inherit pub_attribs_class_c_rhino_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -644,7 +663,45 @@ Additional Inherited Members</h2></td></tr>
 <p>THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY. ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF MERCHANTABILITY ARE HEREBY DISCLAIMED.</p>
 <p>For complete Rhino SDK copyright information see <a href="http://www.rhino3d.com/developer">http://www.rhino3d.com/developer</a>. <a class="el" href="class_c_rhino_detail_view_object.html">CRhinoDetailViewObject</a></p>
 <p>A detail view is a nested <a class="el" href="class_c_rhino_viewport.html">CRhinoViewport</a> placed on a page view with a 2D closed curve boundary. Can be any type of modeling view. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a091bae729553c25d42d4f846a1c2615c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a091bae729553c25d42d4f846a1c2615c">&#9670;&nbsp;</a></span>ScaleFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_c_rhino_detail_view_object.html#a091bae729553c25d42d4f846a1c2615c">CRhinoDetailViewObject::ScaleFormat</a> : unsigned int</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Description: Detail scale formats. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a091bae729553c25d42d4f846a1c2615ca6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"><p>No formattng. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a091bae729553c25d42d4f846a1c2615ca4ad6a0ea20e80b925a07e2228096337b"></a>PageLengthToOne&#160;</td><td class="fielddoc"><p>#:1 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a091bae729553c25d42d4f846a1c2615cac3c51f2146972c4e06dcc8af10c032ab"></a>OneToModelLength&#160;</td><td class="fielddoc"><p>1:# </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a091bae729553c25d42d4f846a1c2615cac2c1a5e54205fee5b232b5a542cbf2f3"></a>OneInchToModelLengthFeet&#160;</td><td class="fielddoc"><p>1" = #' </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a091bae729553c25d42d4f846a1c2615ca07ba2dfc5d4e5954dabbd3c56158bc58"></a>ModelLengthInchToOneFoot&#160;</td><td class="fielddoc"><p>#" = 1' </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a091bae729553c25d42d4f846a1c2615ca3c34009617758f7b62727659ba19c1fe"></a>ModelLengthInchToOneFootInch&#160;</td><td class="fielddoc"><p>#' = 1'-0" </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abb8c788e942cbcddc1d86679ce68eb2a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb8c788e942cbcddc1d86679ce68eb2a">&#9670;&nbsp;</a></span>CRhinoDetailViewObject() <span class="overload">[1/4]</span></h2>
 
@@ -990,6 +1047,35 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54853d95375a5f64183a86e3a2628984"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54853d95375a5f64183a86e3a2628984">&#9670;&nbsp;</a></span>GetFormattedScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CRhinoDetailViewObject::GetFormattedScale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_rhino_detail_view_object.html#a091bae729553c25d42d4f846a1c2615c">ScaleFormat</a>&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n__w_string.html">ON_wString</a> &amp;&#160;</td>
+          <td class="paramname"><em>str</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Returns the detail's scale as a formatted string Parameters: format: [in] The scale format. str: [out] The formatted string. Returns: true if successful </p>
 
 </div>
 </div>
@@ -1341,6 +1427,32 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a14aa1dd18c9f26925141c58602182028"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14aa1dd18c9f26925141c58602182028">&#9670;&nbsp;</a></span>ScaleFormatFromUnsigned()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_c_rhino_detail_view_object.html#a091bae729553c25d42d4f846a1c2615c">ScaleFormat</a> CRhinoDetailViewObject::ScaleFormatFromUnsigned </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>scale_format_as_unsigned</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a1c3cb5e91b5457b0f58fc820a32a3a16"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1c3cb5e91b5457b0f58fc820a32a3a16">&#9670;&nbsp;</a></span>ScreenPointInBoundary()</h2>
 
@@ -1685,7 +1797,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:00 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:25 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

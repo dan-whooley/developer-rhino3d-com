@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -138,6 +138,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ab4f222307e1793df9a721859f9f7ba9b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app_model_aid_settings.html#ab4f222307e1793df9a721859f9f7ba9b">m_mouse_pickbox_radius</a></td></tr>
 <tr class="memdesc:ab4f222307e1793df9a721859f9f7ba9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">radius of mouse pick box in pixels  <a href="class_c_rhino_app_model_aid_settings.html#ab4f222307e1793df9a721859f9f7ba9b">More...</a><br /></td></tr>
 <tr class="separator:ab4f222307e1793df9a721859f9f7ba9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90311700e9e5df5365e391007a17c130"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app_model_aid_settings.html#a90311700e9e5df5365e391007a17c130">m_nearmidintperp_snap_to_meshes</a></td></tr>
+<tr class="memdesc:a90311700e9e5df5365e391007a17c130"><td class="mdescLeft">&#160;</td><td class="mdescRight">osnapping to mesh objects  <a href="class_c_rhino_app_model_aid_settings.html#a90311700e9e5df5365e391007a17c130">More...</a><br /></td></tr>
+<tr class="separator:a90311700e9e5df5365e391007a17c130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8ae5145a0147fd09489b95f3c554f12"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app_model_aid_settings.html#ad8ae5145a0147fd09489b95f3c554f12">m_nudge_key_step</a></td></tr>
 <tr class="memdesc:ad8ae5145a0147fd09489b95f3c554f12"><td class="mdescLeft">&#160;</td><td class="mdescRight">nudge steps in units  <a href="class_c_rhino_app_model_aid_settings.html#ad8ae5145a0147fd09489b95f3c554f12">More...</a><br /></td></tr>
 <tr class="separator:ad8ae5145a0147fd09489b95f3c554f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,6 +165,9 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ac22e6306e54687470893a9ac578e45a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac425516d54c06ac1796ee06b16f96c19"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app_model_aid_settings.html#ac425516d54c06ac1796ee06b16f96c19">m_project_snap_to_cplane</a></td></tr>
 <tr class="separator:ac425516d54c06ac1796ee06b16f96c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb8520dd14ff541914e28ce1e3c72719"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app_model_aid_settings.html#abb8520dd14ff541914e28ce1e3c72719">m_project_snap_to_cplane_in_plan_parallel_views</a></td></tr>
+<tr class="memdesc:abb8520dd14ff541914e28ce1e3c72719"><td class="mdescLeft">&#160;</td><td class="mdescRight">Projecting osnaps in plan parallel views.  <a href="class_c_rhino_app_model_aid_settings.html#abb8520dd14ff541914e28ce1e3c72719">More...</a><br /></td></tr>
+<tr class="separator:abb8520dd14ff541914e28ce1e3c72719"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad892499ba16ebcf63b6500f68854898c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app_model_aid_settings.html#ad892499ba16ebcf63b6500f68854898c">m_shift_nudge_key_step</a></td></tr>
 <tr class="separator:ad892499ba16ebcf63b6500f68854898c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8b1ad7937e5208397ec6b3c2ed70a0e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app_model_aid_settings.html#ab8b1ad7937e5208397ec6b3c2ed70a0e">m_snap_to_filtered</a></td></tr>
@@ -547,6 +553,22 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a90311700e9e5df5365e391007a17c130"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90311700e9e5df5365e391007a17c130">&#9670;&nbsp;</a></span>m_nearmidintperp_snap_to_meshes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CRhinoAppModelAidSettings::m_nearmidintperp_snap_to_meshes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>osnapping to mesh objects </p>
+
+</div>
+</div>
 <a id="ad8ae5145a0147fd09489b95f3c554f12"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad8ae5145a0147fd09489b95f3c554f12">&#9670;&nbsp;</a></span>m_nudge_key_step</h2>
 
@@ -696,6 +718,22 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="abb8520dd14ff541914e28ce1e3c72719"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb8520dd14ff541914e28ce1e3c72719">&#9670;&nbsp;</a></span>m_project_snap_to_cplane_in_plan_parallel_views</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CRhinoAppModelAidSettings::m_project_snap_to_cplane_in_plan_parallel_views</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Projecting osnaps in plan parallel views. </p>
+
+</div>
+</div>
 <a id="ad892499ba16ebcf63b6500f68854898c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad892499ba16ebcf63b6500f68854898c">&#9670;&nbsp;</a></span>m_shift_nudge_key_step</h2>
 
@@ -801,7 +839,7 @@ Static Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:12:59 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:24 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

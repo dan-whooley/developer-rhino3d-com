@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -395,90 +395,94 @@ $(function() {
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<a class="code" href="group__open_n_u_r_b_s.html#ga59fb488a26cef0e7bf900a815eb92b88">ON_DECL</a></div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> <a class="code" href="group__open_n_u_r_b_s.html#ga85dffcd533e3336bc31e0f78cfd1d4fe">ON_WorkerThreadTerminateRequestStatus</a>();</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="preprocessor">#if defined (ON_RUNTIME_APPLE)</span></div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<a class="code" href="group__open_n_u_r_b_s.html#ga59fb488a26cef0e7bf900a815eb92b88">ON_DECL</a></div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="keywordtype">void</span> ON_SetWorkerThreadTestCancel (<span class="keywordtype">void</span>(*fTestCancelThreadFunction)(<span class="keywordtype">void</span>));</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160; </div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="comment">Allocate memory that is intentionally never returned</span></div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="comment">should not be considered a memory leak. Typically this is</span></div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="comment">for an application workspace.</span></div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<a class="code" href="group__open_n_u_r_b_s.html#ga59fb488a26cef0e7bf900a815eb92b88">ON_DECL</a></div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="group__open_n_u_r_b_s.html#ga42854b279bd71b7daf09b73619402c05">onmalloc_forever</a>( <span class="keywordtype">size_t</span> );</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160; </div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<a class="code" href="group__open_n_u_r_b_s.html#ga59fb488a26cef0e7bf900a815eb92b88">ON_DECL</a></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__open_n_u_r_b_s.html#gaf3727f9eb22c38f1c5f65e4af6d3f4ab">ON_Disableonmalloc</a>();</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="preprocessor">#if defined (ON_RUNTIME_APPLE)</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<a class="code" href="group__open_n_u_r_b_s.html#ga59fb488a26cef0e7bf900a815eb92b88">ON_DECL</a></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="keywordtype">void</span> ON_SetWorkerThreadTestCancel (<span class="keywordtype">void</span>(*fTestCancelThreadFunction)(<span class="keywordtype">void</span>));</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="comment">Allocate memory that is intentionally never returned</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<span class="comment">should not be considered a memory leak. Typically this is</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="comment">for an application workspace.</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<a class="code" href="group__open_n_u_r_b_s.html#ga59fb488a26cef0e7bf900a815eb92b88">ON_DECL</a></div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="group__open_n_u_r_b_s.html#gacadf2b280c0895b23634d3ad33a6a04b">onmalloc</a>( <span class="keywordtype">size_t</span> );</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="group__open_n_u_r_b_s.html#ga42854b279bd71b7daf09b73619402c05">onmalloc_forever</a>( <span class="keywordtype">size_t</span> );</div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<a class="code" href="group__open_n_u_r_b_s.html#ga59fb488a26cef0e7bf900a815eb92b88">ON_DECL</a></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="group__open_n_u_r_b_s.html#gafd9f0e22bf0d4c895439915f21e3398d">oncalloc</a>( <span class="keywordtype">size_t</span>, <span class="keywordtype">size_t</span> );</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="group__open_n_u_r_b_s.html#gacadf2b280c0895b23634d3ad33a6a04b">onmalloc</a>( <span class="keywordtype">size_t</span> );</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<a class="code" href="group__open_n_u_r_b_s.html#ga59fb488a26cef0e7bf900a815eb92b88">ON_DECL</a></div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="keywordtype">void</span>   <a class="code" href="group__open_n_u_r_b_s.html#ga11bd5c38846c84d11a00bd1b1cd31e61">onfree</a>( <span class="keywordtype">void</span>* );</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="group__open_n_u_r_b_s.html#gafd9f0e22bf0d4c895439915f21e3398d">oncalloc</a>( <span class="keywordtype">size_t</span>, <span class="keywordtype">size_t</span> );</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<a class="code" href="group__open_n_u_r_b_s.html#ga59fb488a26cef0e7bf900a815eb92b88">ON_DECL</a></div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="group__open_n_u_r_b_s.html#ga4a8fe5a63aa8db84884b76d53e32b74b">onrealloc</a>( <span class="keywordtype">void</span>*, <span class="keywordtype">size_t</span> );</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="keywordtype">void</span>   <a class="code" href="group__open_n_u_r_b_s.html#ga11bd5c38846c84d11a00bd1b1cd31e61">onfree</a>( <span class="keywordtype">void</span>* );</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160; </div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<a class="code" href="group__open_n_u_r_b_s.html#ga59fb488a26cef0e7bf900a815eb92b88">ON_DECL</a></div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="group__open_n_u_r_b_s.html#ga7794855034e2017f74bdb3890cb1a1ba">onmemdup</a>( <span class="keyword">const</span> <span class="keywordtype">void</span>*, <span class="keywordtype">size_t</span> );</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="group__open_n_u_r_b_s.html#ga4a8fe5a63aa8db84884b76d53e32b74b">onrealloc</a>( <span class="keywordtype">void</span>*, <span class="keywordtype">size_t</span> );</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160; </div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<a class="code" href="group__open_n_u_r_b_s.html#ga59fb488a26cef0e7bf900a815eb92b88">ON_DECL</a></div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="group__open_n_u_r_b_s.html#ga6fceabd91f8e9bf885ba9fe0fb5d3d56">onstrdup</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* );</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="group__open_n_u_r_b_s.html#ga7794855034e2017f74bdb3890cb1a1ba">onmemdup</a>( <span class="keyword">const</span> <span class="keywordtype">void</span>*, <span class="keywordtype">size_t</span> );</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160; </div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<a class="code" href="group__open_n_u_r_b_s.html#ga59fb488a26cef0e7bf900a815eb92b88">ON_DECL</a></div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="keywordtype">wchar_t</span>* <a class="code" href="group__open_n_u_r_b_s.html#ga357a9d9d50961a8bb366984df9873cc0">onwcsdup</a>( <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* );</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="group__open_n_u_r_b_s.html#ga6fceabd91f8e9bf885ba9fe0fb5d3d56">onstrdup</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* );</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; </div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<a class="code" href="group__open_n_u_r_b_s.html#ga59fb488a26cef0e7bf900a815eb92b88">ON_DECL</a></div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* <a class="code" href="group__open_n_u_r_b_s.html#ga7655b05d52843c751a9b94738fa02c5b">onmbsdup</a>( <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* );</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="keywordtype">wchar_t</span>* <a class="code" href="group__open_n_u_r_b_s.html#ga357a9d9d50961a8bb366984df9873cc0">onwcsdup</a>( <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* );</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160; </div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="preprocessor">#if defined (cplusplus) || defined(_cplusplus) || defined(__cplusplus)</span></div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;}</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<a class="code" href="group__open_n_u_r_b_s.html#ga59fb488a26cef0e7bf900a815eb92b88">ON_DECL</a></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* <a class="code" href="group__open_n_u_r_b_s.html#ga7655b05d52843c751a9b94738fa02c5b">onmbsdup</a>( <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* );</div>
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> ON_MemoryAllocationTracking</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;{</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="comment">  Descrption:</span></div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="comment">    Windows Debug Builds:</span></div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="comment">      The constructor saves the current state of memory allocation tracking</span></div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="comment">      and then enables/disables memory allocation tracking.</span></div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="comment">    Otherwise:</span></div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="comment">      Does nothting.</span></div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  ON_MemoryAllocationTracking(</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordtype">bool</span> bEnableAllocationTracking</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  );</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160; </div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="comment">  Descrption:</span></div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="comment">    Windows Debug Builds:</span></div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="comment">      The desctructor restores the saved state of memory allocation tracking.</span></div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<span class="comment">    Otherwise:</span></div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="comment">      Does nothting.</span></div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;  ~ON_MemoryAllocationTracking();</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160; </div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_g_stack_depth;</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> m_g_crt_dbg_flag0;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_this_statck_depth;</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> m_this_crt_dbg_flag0;</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160; </div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  ON_MemoryAllocationTracking() = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;  ON_MemoryAllocationTracking(<span class="keyword">const</span> ON_MemoryAllocationTracking&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;  ON_MemoryAllocationTracking&amp; operator=(<span class="keyword">const</span> ON_MemoryAllocationTracking&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;};</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160; </div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160; </div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="preprocessor">#if defined (cplusplus) || defined(_cplusplus) || defined(__cplusplus)</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;}</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> ON_MemoryAllocationTracking</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;{</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="comment">  Descrption:</span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="comment">    Windows Debug Builds:</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="comment">      The constructor saves the current state of memory allocation tracking</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="comment">      and then enables/disables memory allocation tracking.</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="comment">    Otherwise:</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="comment">      Does nothting.</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;  ON_MemoryAllocationTracking(</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keywordtype">bool</span> bEnableAllocationTracking</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;  );</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160; </div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<span class="comment">  Descrption:</span></div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="comment">    Windows Debug Builds:</span></div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="comment">      The desctructor restores the saved state of memory allocation tracking.</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="comment">    Otherwise:</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="comment">      Does nothting.</span></div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;  ~ON_MemoryAllocationTracking();</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160; </div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_g_stack_depth;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> m_g_crt_dbg_flag0;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_this_statck_depth;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> m_this_crt_dbg_flag0;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160; </div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;  ON_MemoryAllocationTracking() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;  ON_MemoryAllocationTracking(<span class="keyword">const</span> ON_MemoryAllocationTracking&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;  ON_MemoryAllocationTracking&amp; operator=(<span class="keyword">const</span> ON_MemoryAllocationTracking&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;};</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160; </div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga11bd5c38846c84d11a00bd1b1cd31e61"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga11bd5c38846c84d11a00bd1b1cd31e61">onfree</a></div><div class="ttdeci">ON_DECL void onfree(void *)</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga23b6932808e4d0f3331f781dddd4d990"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga23b6932808e4d0f3331f781dddd4d990">ON_WorkerThreadEnableTerminateRequest</a></div><div class="ttdeci">ON_DECL ON__UINT64 ON_WorkerThreadEnableTerminateRequest()</div></div>
+<div class="ttc" id="agroup__open_n_u_r_b_s_html_gaf3727f9eb22c38f1c5f65e4af6d3f4ab"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gaf3727f9eb22c38f1c5f65e4af6d3f4ab">ON_Disableonmalloc</a></div><div class="ttdeci">ON_DECL void ON_Disableonmalloc()</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga7794855034e2017f74bdb3890cb1a1ba"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga7794855034e2017f74bdb3890cb1a1ba">onmemdup</a></div><div class="ttdeci">ON_DECL void * onmemdup(const void *, size_t)</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga59fb488a26cef0e7bf900a815eb92b88"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga59fb488a26cef0e7bf900a815eb92b88">ON_DECL</a></div><div class="ttdeci">#define ON_DECL</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:116</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga7655b05d52843c751a9b94738fa02c5b"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga7655b05d52843c751a9b94738fa02c5b">onmbsdup</a></div><div class="ttdeci">ON_DECL unsigned char * onmbsdup(const unsigned char *)</div></div>
@@ -501,7 +505,7 @@ $(function() {
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gacadf2b280c0895b23634d3ad33a6a04b"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gacadf2b280c0895b23634d3ad33a6a04b">onmalloc</a></div><div class="ttdeci">ON_DECL void * onmalloc(size_t)</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:12:50 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:15 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

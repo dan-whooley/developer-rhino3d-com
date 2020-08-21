@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -94,6 +94,8 @@ Inheritance diagram for CRhinoDimension:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a51fc11e2d70e2397c0ae264eb2f5f0f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_dimension.html#a51fc11e2d70e2397c0ae264eb2f5f0f8">ClearBoundingBox</a> () const</td></tr>
 <tr class="separator:a51fc11e2d70e2397c0ae264eb2f5f0f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57c172b048691d6474fa4372545d22c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_dimension.html#a57c172b048691d6474fa4372545d22c5">ForceTextUpdate</a> () const</td></tr>
+<tr class="separator:a57c172b048691d6474fa4372545d22c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1b042c45c3a494fb93b6da522a5588d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_dimension.html#ac1b042c45c3a494fb93b6da522a5588d">IsVisibleInViewport</a> (const <a class="el" href="class_c_rhino_viewport.html">CRhinoViewport</a> &amp;vp) const</td></tr>
 <tr class="separator:ac1b042c45c3a494fb93b6da522a5588d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0f8315b19c02f0c1e9b84a288e57057"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_dimension.html#ad0f8315b19c02f0c1e9b84a288e57057">IsVisibleInViewport</a> (const <a class="el" href="class_c_rhino_viewport.html">CRhinoViewport</a> &amp;vp, const <a class="el" href="class_o_n___xform.html">ON_Xform</a> &amp;xform) const</td></tr>
@@ -126,6 +128,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac4b12ed3c6bb19c24d49818d2f754059 inherit pub_methods_class_c_rhino_annotation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30e2ac6fe6588173b1222d661b114c28 inherit pub_methods_class_c_rhino_annotation"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_o_n___bounding_box.html">ON_BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_annotation.html#a30e2ac6fe6588173b1222d661b114c28">BoundingBox</a> (const <a class="el" href="class_c_rhino_viewport.html">CRhinoViewport</a> *vp, const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a> *dimstyle) const</td></tr>
 <tr class="separator:a30e2ac6fe6588173b1222d661b114c28 inherit pub_methods_class_c_rhino_annotation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a812c386ed9cd38e343905768b17b51e9 inherit pub_methods_class_c_rhino_annotation"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_annotation.html#a812c386ed9cd38e343905768b17b51e9">ContainsMeasurableTextFields</a> () const</td></tr>
+<tr class="separator:a812c386ed9cd38e343905768b17b51e9 inherit pub_methods_class_c_rhino_annotation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a299a972baa988c900334b6139cee32eb inherit pub_methods_class_c_rhino_annotation"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_annotation.html#a299a972baa988c900334b6139cee32eb">GetEffectiveDimensionStyle</a> (const <a class="el" href="class_c_rhino_doc.html">CRhinoDoc</a> *doc) const</td></tr>
 <tr class="separator:a299a972baa988c900334b6139cee32eb inherit pub_methods_class_c_rhino_annotation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18779af81133b4e521ac6e5cceb4e57d inherit pub_methods_class_c_rhino_annotation"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_annotation.html#a18779af81133b4e521ac6e5cceb4e57d">GetTightBoundingBox</a> (<a class="el" href="class_o_n___bounding_box.html">ON_BoundingBox</a> &amp;tight_bbox, bool bGrowBox, const <a class="el" href="class_o_n___xform.html">ON_Xform</a> *xform) const override</td></tr>
@@ -759,6 +763,24 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a57c172b048691d6474fa4372545d22c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57c172b048691d6474fa4372545d22c5">&#9670;&nbsp;</a></span>ForceTextUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRhinoDimension::ForceTextUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Added this function to force updating text on dimensions added to a <a class="el" href="class_c_rhino_doc.html">CRhinoDoc</a>, but not drawn yet. Somebody wrote a script to add a dimension and query it's length with document drawing turned off Normally text is generated on demand when dimensions are drawn </p>
+
+</div>
+</div>
 <a id="a9abe626000033e5911734fffabc61fcc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9abe626000033e5911734fffabc61fcc">&#9670;&nbsp;</a></span>GetFrontDrawNumber()</h2>
 
@@ -1017,7 +1039,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:00 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:25 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

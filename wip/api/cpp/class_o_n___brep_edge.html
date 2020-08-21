@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -124,6 +124,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adc1e71835bd2661548863b571b0c1e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2e14b4484be5338b490ed8aff84ecc4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___brep_edge.html">ON_BrepEdge</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep_edge.html#ac2e14b4484be5338b490ed8aff84ecc4">operator=</a> (const <a class="el" href="class_o_n___brep_edge.html">ON_BrepEdge</a> &amp;)</td></tr>
 <tr class="separator:ac2e14b4484be5338b490ed8aff84ecc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a587fcd8af0c5d705e5a95906414b264f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep_edge.html#a587fcd8af0c5d705e5a95906414b264f">ProxyBrepSubDEdgeId</a> () const</td></tr>
+<tr class="separator:a587fcd8af0c5d705e5a95906414b264f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea6a21741401d230c97ee21095329edb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep_edge.html#aea6a21741401d230c97ee21095329edb">Read</a> (<a class="el" href="class_o_n___binary_archive.html">ON_BinaryArchive</a> &amp;) override</td></tr>
 <tr class="memdesc:aea6a21741401d230c97ee21095329edb"><td class="mdescLeft">&#160;</td><td class="mdescRight">virtual <a class="el" href="class_o_n___object.html#a09ac9742ead91dd8f9cdd579bcbfed10">ON_Object::Read()</a> override  <a href="class_o_n___brep_edge.html#aea6a21741401d230c97ee21095329edb">More...</a><br /></td></tr>
 <tr class="separator:aea6a21741401d230c97ee21095329edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -784,7 +786,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: For each trim at this edge, find the 3d unit vector at the edge parameter in the trim's surface tan plane, perpindicular to the edge, which points to the active side of the trim Parameters: edge_t - [in] parameter of this edge. V - [out] 3d vectors pointing into the faces. One for each trim, in order of m_ti. N - [out] Surface normals at edge_t. Parallel to V. Returns: True if vectors can be found. False if edge tangent or surface normals can't be found, or if input is bad. </p>
+<p>Description: For each trim at this edge, find the 3d unit vector at the edge parameter in the trim's surface tan plane, perpendicular to the edge, which points to the active side of the trim Parameters: edge_t - [in] parameter of this edge. V - [out] 3d vectors pointing into the faces. One for each trim, in order of m_ti. N - [out] Surface normals at edge_t. Parallel to V. Returns: True if vectors can be found. False if edge tangent or surface normals can't be found, or if input is bad. </p>
 
 </div>
 </div>
@@ -912,6 +914,24 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a587fcd8af0c5d705e5a95906414b264f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a587fcd8af0c5d705e5a95906414b264f">&#9670;&nbsp;</a></span>ProxyBrepSubDEdgeId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ON_BrepEdge::ProxyBrepSubDEdgeId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns: If this edge is part of a brep created by <a class="el" href="class_o_n___sub_d.html#ac0c535f015caf4aa27dfa95f3d768deb" title="SubD proxy brep interface.">ON_SubD::ProxyBrep()</a>, then the subd component id of the corresponding SubD edge is returned. Otherwise 0 is returned. </p>
+
+</div>
+</div>
 <a id="aea6a21741401d230c97ee21095329edb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aea6a21741401d230c97ee21095329edb">&#9670;&nbsp;</a></span>Read()</h2>
 
@@ -1015,7 +1035,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Parameters: eti - [in] index into the edge's m_ti[] array. Returns: The trim brep.m_T[edge.m_ti[eti]]; Remarks: This version of "Trim" hides the virtual function <a class="el" href="class_o_n___curve_proxy.html#a706a5f0d8bc948f9bea6a4eafd5f2c36" title="override of virtual ON_Curve::Trim">ON_CurveProxy::Trim(const ON_Interval&amp;)</a>, which is a good thing. Special care must be takend when changing the geometry of a brep edge to insure vertex, trim, and edge information remains valid. </p>
+<p>Parameters: eti - [in] index into the edge's m_ti[] array. Returns: The trim brep.m_T[edge.m_ti[eti]]; Remarks: This version of "Trim" hides the virtual function <a class="el" href="class_o_n___curve_proxy.html#a706a5f0d8bc948f9bea6a4eafd5f2c36" title="override of virtual ON_Curve::Trim">ON_CurveProxy::Trim(const ON_Interval&amp;)</a>, which is a good thing. Special care must be taken when changing the geometry of a brep edge to insure vertex, trim, and edge information remains valid. </p>
 
 </div>
 </div>
@@ -1249,14 +1269,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>indices of starting/ending vertex</p>
-<p>For closed edges, m_vi[0] = m_vi[1] and m_edge_index appears twice in the m_V[m_vi[0]].m_ei[] array. The first occurance of m_edge_index in m_V[m_vi[0]].m_ei[] is for the closed edge starting the vertex. The second occurance of m_edge_index in m_V[m_vi[0]].m_ei[] is for the closed edge edge ending at the vertex. C.f. ON_Brep::Next/PrevEdge(). </p>
+<p>For closed edges, m_vi[0] = m_vi[1] and m_edge_index appears twice in the m_V[m_vi[0]].m_ei[] array. The first occurrence of m_edge_index in m_V[m_vi[0]].m_ei[] is for the closed edge starting the vertex. The second occurrence of m_edge_index in m_V[m_vi[0]].m_ei[] is for the closed edge edge ending at the vertex. C.f. ON_Brep::Next/PrevEdge(). </p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:21 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:47 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

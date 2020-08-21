@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -79,6 +79,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a13994bb8db125452bbd9118badebdfa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a598b9dc837282f784c8f7e35d11a6fe8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_open_document_options.html#a598b9dc837282f784c8f7e35d11a6fe8">AddToMRU</a> () const</td></tr>
 <tr class="separator:a598b9dc837282f784c8f7e35d11a6fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb960eea1dc03f90281fc47cb427674a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_open_document_options.html#afb960eea1dc03f90281fc47cb427674a">CreateHeadless</a> () const</td></tr>
+<tr class="separator:afb960eea1dc03f90281fc47cb427674a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae37ee5ede20b90d4252e8905d8d654a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_open_document_options.html#aae37ee5ede20b90d4252e8905d8d654a">CreateStealthWorksession</a> () const</td></tr>
 <tr class="separator:aae37ee5ede20b90d4252e8905d8d654a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a425c138499eb4f441bb8d58ba3ee52e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_open_document_options.html#a425c138499eb4f441bb8d58ba3ee52e1">FileReadingPlugInFileTypeIndex</a> () const</td></tr>
@@ -91,6 +93,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0a65bd937e2c842b2422b568fe057bf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37dd6b6459ef3f200554f358703cbfa0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_open_document_options.html#a37dd6b6459ef3f200554f358703cbfa0">SetAddToMRU</a> (bool bAddToMRU)</td></tr>
 <tr class="separator:a37dd6b6459ef3f200554f358703cbfa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af15a771342f2490abe526557321828ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_open_document_options.html#af15a771342f2490abe526557321828ac">SetCreateHeadless</a> (bool bCreateHeadless)</td></tr>
+<tr class="separator:af15a771342f2490abe526557321828ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3efbcab3d8fdc34ad02b1eff4216dd13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_open_document_options.html#a3efbcab3d8fdc34ad02b1eff4216dd13">SetCreateStealthWorksession</a> (bool bCreateStealthWorksession)</td></tr>
 <tr class="separator:a3efbcab3d8fdc34ad02b1eff4216dd13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f1bba1f81b32d286cb2f6f4cbb2d0b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_open_document_options.html#a8f1bba1f81b32d286cb2f6f4cbb2d0b1">SetFileReadingPlugInId</a> (<a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a> file_read_plug_in_id, int file_type_index)</td></tr>
@@ -148,6 +152,24 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Returns: true if the model file name should be added to the MRU list after the file is successfully read. Remarks: Default value is true. </p>
+
+</div>
+</div>
+<a id="afb960eea1dc03f90281fc47cb427674a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb960eea1dc03f90281fc47cb427674a">&#9670;&nbsp;</a></span>CreateHeadless()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CRhinoOpenDocumentOptions::CreateHeadless </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns: true if a "headless" document should be created Remarks: This function is a work in progress and may change during the development of V7 </p>
 
 </div>
 </div>
@@ -236,7 +258,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns: true if the document name should be set from the file name. false if the model is not named (reading a backup or autosave file). Remarks: Default value is true. </p>
+<p>Returns: true if the document name should be set from the file name. false if the model is not named (reading a backup or auto-save file). Remarks: Default value is true. </p>
 
 </div>
 </div>
@@ -251,6 +273,24 @@ Static Public Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>bAddToMRU</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af15a771342f2490abe526557321828ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af15a771342f2490abe526557321828ac">&#9670;&nbsp;</a></span>SetCreateHeadless()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRhinoOpenDocumentOptions::SetCreateHeadless </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bCreateHeadless</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -390,7 +430,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns: true if the Rhino app default directory should be updated. Remarks: Default value is true. </p>
+<p>Returns: true if the Rhino application default directory should be updated. Remarks: Default value is true. </p>
 
 </div>
 </div>
@@ -439,7 +479,7 @@ Static Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:05 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:30 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

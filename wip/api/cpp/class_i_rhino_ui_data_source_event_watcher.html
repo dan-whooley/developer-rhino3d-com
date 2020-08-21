@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -190,7 +190,7 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Emergency virtual function for future expansion. </p>
+<p>Emergency virtual function for future expansion. Vanilla (non-host) data source event watchers <em>must</em> unregister by handling EVF("OnDeleteDataSource") wszFunc = "OnDeleteDataSource", pvData = IRhinoUiDataSource* </p>
 
 <p>Implemented in <a class="el" href="class_c_rh_rdk_controller.html#a0e52194bffff9c4c8011397e71036efe">CRhRdkController</a>.</p>
 
@@ -229,7 +229,7 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Implement this method to handle an event when the data of a certain type changes. Your handler will typically transfer data of that type to elements of your user interface. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Currently implemented by EVF. It should supplement <a class="el" href="class_i_rhino_ui_data_source_event_watcher.html#a6cce1606209ef822b5847dcb770fd595">Delete()</a> which should only delete it. Sometimes an event watcher needs to be unregistered without being deleted. Implement this method to handle an event when the data of a certain type changes. Your handler will typically transfer data of that type to elements of your user interface. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">uuidData</td><td>is the identifier of the data. </td></tr>
     <tr><td class="paramname">pInfo</td><td>is a pointer to an object that contains more information about the event. </td></tr>
@@ -245,7 +245,7 @@ Protected Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:16 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:42 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

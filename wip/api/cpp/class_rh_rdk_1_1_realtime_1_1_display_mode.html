@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -103,6 +103,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode_1_1_i_h_u_d_callbacks.html">IHUDCallbacks</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode_1_1_i_h_u_d_callbacks3.html">IHUDCallbacks3</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode_1_1_i_h_u_d_functionality.html">IHUDFunctionality</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -120,7 +122,9 @@ Public Types</h2></td></tr>
 <a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#a098f9e6ea807dbc68eda8ba74c5385d3a55ce816dd083c15817b5f5d59c80c935">StatusBarComponent::StatusText</a>, 
 <br />
 &#160;&#160;<a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#a098f9e6ea807dbc68eda8ba74c5385d3aa76d4ef5f3f6a672bbfab2865563e530">StatusBarComponent::Time</a>, 
-<a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#a098f9e6ea807dbc68eda8ba74c5385d3adf818eab01b3bd0ca2bea974656b9698">StatusBarComponent::PassAmount</a>
+<a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#a098f9e6ea807dbc68eda8ba74c5385d3adf818eab01b3bd0ca2bea974656b9698">StatusBarComponent::PassAmount</a>, 
+<a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#a098f9e6ea807dbc68eda8ba74c5385d3a3a268afe6cfb710b788ee6a8f92694a0">StatusBarComponent::PostEffectsOn</a>, 
+<a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#a098f9e6ea807dbc68eda8ba74c5385d3a465fcebc71ff6ef1fdc3443c19c2f7ab">StatusBarComponent::PostEffectsOff</a>
 <br />
  }</td></tr>
 <tr class="separator:a098f9e6ea807dbc68eda8ba74c5385d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,6 +190,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aca07aa415c8caf233b9d81eb7444616a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc49fb0e86fec86e60e6b93c2cbc5e81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__2i_size.html">ON_2iSize</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#abc49fb0e86fec86e60e6b93c2cbc5e81">RenderSize</a> (void) const</td></tr>
 <tr class="separator:abc49fb0e86fec86e60e6b93c2cbc5e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6b8305ba8af0ceb56972e85531780f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_rh_rdk_render_window.html">IRhRdkRenderWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#af6b8305ba8af0ceb56972e85531780f7">RenderWindow</a> (void)</td></tr>
+<tr class="separator:af6b8305ba8af0ceb56972e85531780f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a572e06d5e76422a924e3b17a6efbcb45"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#a572e06d5e76422a924e3b17a6efbcb45">ShowCaptureProgress</a> (void) const =0</td></tr>
 <tr class="separator:a572e06d5e76422a924e3b17a6efbcb45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32b5a77f15e2dd14cac6cbea64ce06ba"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#a32b5a77f15e2dd14cac6cbea64ce06ba">ShutdownRenderer</a> ()=0</td></tr>
@@ -215,17 +221,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad1a06d415dbd81b3d8c2284fa4a2f3c9 inherit pub_methods_class_c_rhino_mouse_callback"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_mouse_callback.html#ad1a06d415dbd81b3d8c2284fa4a2f3c9">OnBeginMouseMove</a> (unsigned int viewSerialNumber, UINT flags, const <a class="el" href="class_o_n__2i_point.html">ON_2iPoint</a> &amp;point, bool &amp;executeDefaultHandler)</td></tr>
 <tr class="memdesc:ad1a06d415dbd81b3d8c2284fa4a2f3c9 inherit pub_methods_class_c_rhino_mouse_callback"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called at the beginning of <a class="el" href="class_c_rhino_view.html">CRhinoView</a> processing a mouse move event.  <a href="class_c_rhino_mouse_callback.html#ad1a06d415dbd81b3d8c2284fa4a2f3c9">More...</a><br /></td></tr>
 <tr class="separator:ad1a06d415dbd81b3d8c2284fa4a2f3c9 inherit pub_methods_class_c_rhino_mouse_callback"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a829226af78edf33fcf6ef4404049f1f0 inherit pub_methods_class_c_rhino_mouse_callback"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_mouse_callback.html#a829226af78edf33fcf6ef4404049f1f0">OnBeginMouseUp</a> (unsigned int viewSerialNumber, <a class="el" href="class_c_rhino_mouse_callback.html#a182c2c4fa5e81f7da958b6e10499c218">mouse_button</a> button, UINT flags, const <a class="el" href="class_o_n__2i_point.html">ON_2iPoint</a> &amp;point, bool &amp;executeDefaultHandler)</td></tr>
-<tr class="memdesc:a829226af78edf33fcf6ef4404049f1f0 inherit pub_methods_class_c_rhino_mouse_callback"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called at the beginning of <a class="el" href="class_c_rhino_view.html">CRhinoView</a> processing a mouse up event.  <a href="class_c_rhino_mouse_callback.html#a829226af78edf33fcf6ef4404049f1f0">More...</a><br /></td></tr>
-<tr class="separator:a829226af78edf33fcf6ef4404049f1f0 inherit pub_methods_class_c_rhino_mouse_callback"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27493910776bcb30e721dfff65c6724c inherit pub_methods_class_c_rhino_mouse_callback"><td class="memItemLeft" align="right" valign="top">virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_mouse_callback.html#a27493910776bcb30e721dfff65c6724c">OnMouseDblClk</a> (<a class="el" href="class_c_rhino_view.html">CRhinoView</a> &amp;, <a class="el" href="class_c_rhino_mouse_callback.html#a182c2c4fa5e81f7da958b6e10499c218">CRhinoMouseCallback::mouse_button</a>, UINT, const <a class="el" href="class_o_n__2i_point.html">ON_2iPoint</a> &amp;)</td></tr>
-<tr class="separator:a27493910776bcb30e721dfff65c6724c inherit pub_methods_class_c_rhino_mouse_callback"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71be1d1dacfd851844d6f5888ca78fb9 inherit pub_methods_class_c_rhino_mouse_callback"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_mouse_callback.html#a71be1d1dacfd851844d6f5888ca78fb9">OnMouseMove</a> (unsigned int viewSerialNumber, UINT flags, const <a class="el" href="class_o_n__2i_point.html">ON_2iPoint</a> &amp;point, bool defaultHandlerExecuted)</td></tr>
 <tr class="memdesc:a71be1d1dacfd851844d6f5888ca78fb9 inherit pub_methods_class_c_rhino_mouse_callback"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called at the end of <a class="el" href="class_c_rhino_view.html">CRhinoView</a> processing a mouse move event.  <a href="class_c_rhino_mouse_callback.html#a71be1d1dacfd851844d6f5888ca78fb9">More...</a><br /></td></tr>
 <tr class="separator:a71be1d1dacfd851844d6f5888ca78fb9 inherit pub_methods_class_c_rhino_mouse_callback"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11cfb50dea54e4f2735047dae57462bd inherit pub_methods_class_c_rhino_mouse_callback"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_mouse_callback.html#a11cfb50dea54e4f2735047dae57462bd">OnMouseUp</a> (unsigned int viewSerialNumber, <a class="el" href="class_c_rhino_mouse_callback.html#a182c2c4fa5e81f7da958b6e10499c218">mouse_button</a> button, UINT flags, const <a class="el" href="class_o_n__2i_point.html">ON_2iPoint</a> &amp;point, bool defaultHandlerExecuted)</td></tr>
-<tr class="memdesc:a11cfb50dea54e4f2735047dae57462bd inherit pub_methods_class_c_rhino_mouse_callback"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called at the end of <a class="el" href="class_c_rhino_view.html">CRhinoView</a> processing a mouse up event.  <a href="class_c_rhino_mouse_callback.html#a11cfb50dea54e4f2735047dae57462bd">More...</a><br /></td></tr>
-<tr class="separator:a11cfb50dea54e4f2735047dae57462bd inherit pub_methods_class_c_rhino_mouse_callback"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_rh_rdk_1_1_realtime_1_1_i_signal_update"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_rh_rdk_1_1_realtime_1_1_i_signal_update')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_rh_rdk_1_1_realtime_1_1_i_signal_update.html">RhRdk::Realtime::ISignalUpdate</a></td></tr>
 <tr class="memitem:a2fbc654f4d1707fdc87fff064a2c48b3 inherit pub_methods_class_rh_rdk_1_1_realtime_1_1_i_signal_update"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_i_signal_update.html#a2fbc654f4d1707fdc87fff064a2c48b3">~ISignalUpdate</a> ()</td></tr>
 <tr class="separator:a2fbc654f4d1707fdc87fff064a2c48b3 inherit pub_methods_class_rh_rdk_1_1_realtime_1_1_i_signal_update"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -234,6 +232,12 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a3cd28d26c933632cbc525d193a7304c3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#a3cd28d26c933632cbc525d193a7304c3">ComputeViewportCRC</a> (const <a class="el" href="class_o_n___viewport.html">ON_Viewport</a> &amp;vp)</td></tr>
 <tr class="separator:a3cd28d26c933632cbc525d193a7304c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d150cb12c72219ec203462544bf5e80"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#a1d150cb12c72219ec203462544bf5e80">DrawOrLockRendererFrameBufferImpl</a> (const <a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html">DisplayMode</a> &amp;dm, <a class="el" href="class_i_rh_rdk_render_window.html">IRhRdkRenderWindow</a> &amp;rw, const <a class="el" href="struct_rh_rdk_1_1_realtime_1_1_display_mode_1_1_f_r_a_m_e___b_u_f_f_e_r___i_n_f_o___i_n_p_u_t_s.html">FRAME_BUFFER_INFO_INPUTS</a> &amp;input, <a class="el" href="struct_rh_rdk_1_1_realtime_1_1_display_mode_1_1_f_r_a_m_e___b_u_f_f_e_r___i_n_f_o___o_u_t_p_u_t_s.html">FRAME_BUFFER_INFO_OUTPUTS</a> &amp;outputs)</td></tr>
+<tr class="separator:a1d150cb12c72219ec203462544bf5e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab940be4210fe8a60d0396f6c5e6fac81"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html">DisplayMode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#ab940be4210fe8a60d0396f6c5e6fac81">FromPipeline</a> (const <a class="el" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a> &amp;pipe)</td></tr>
+<tr class="separator:ab940be4210fe8a60d0396f6c5e6fac81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a883da39883592b3339010eca92365c55"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#a883da39883592b3339010eca92365c55">UnlockRendererFrameBufferImpl</a> (const <a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html">DisplayMode</a> &amp;dm, <a class="el" href="class_i_rh_rdk_render_window.html">IRhRdkRenderWindow</a> &amp;rw)</td></tr>
+<tr class="separator:a883da39883592b3339010eca92365c55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -244,11 +248,19 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a206a611c87516ac9819c2e942ac7456b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#a206a611c87516ac9819c2e942ac7456b">OnBeginMouseDown</a> (unsigned int viewSerialNumber, <a class="el" href="class_c_rhino_mouse_callback.html#a182c2c4fa5e81f7da958b6e10499c218">mouse_button</a> button, UINT flags, const <a class="el" href="class_o_n__2i_point.html">ON_2iPoint</a> &amp;point, bool &amp;defaultHandlerExecuted) override</td></tr>
 <tr class="memdesc:a206a611c87516ac9819c2e942ac7456b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called at the beginning of <a class="el" href="class_c_rhino_view.html">CRhinoView</a> processing a mouse down event.  <a href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#a206a611c87516ac9819c2e942ac7456b">More...</a><br /></td></tr>
 <tr class="separator:a206a611c87516ac9819c2e942ac7456b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a146de7a75c2ef1f57933112be6e338ab"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#a146de7a75c2ef1f57933112be6e338ab">OnBeginMouseUp</a> (unsigned int viewSerialNumber, <a class="el" href="class_c_rhino_mouse_callback.html#a182c2c4fa5e81f7da958b6e10499c218">mouse_button</a> button, UINT flags, const <a class="el" href="class_o_n__2i_point.html">ON_2iPoint</a> &amp;point, bool &amp;executeDefaultHandler) override</td></tr>
+<tr class="memdesc:a146de7a75c2ef1f57933112be6e338ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called at the beginning of <a class="el" href="class_c_rhino_view.html">CRhinoView</a> processing a mouse up event.  <a href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#a146de7a75c2ef1f57933112be6e338ab">More...</a><br /></td></tr>
+<tr class="separator:a146de7a75c2ef1f57933112be6e338ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91d19517be4c7f02bfeb945abe130804"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#a91d19517be4c7f02bfeb945abe130804">OnInitFrameBuffer</a> (<a class="el" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a> &amp;pipeline)</td></tr>
 <tr class="separator:a91d19517be4c7f02bfeb945abe130804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0d24996e44a449e5419869420c41760"><td class="memItemLeft" align="right" valign="top">virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#ae0d24996e44a449e5419869420c41760">OnMouseDblClk</a> (<a class="el" href="class_c_rhino_view.html">CRhinoView</a> &amp;view, <a class="el" href="class_c_rhino_mouse_callback.html#a182c2c4fa5e81f7da958b6e10499c218">CRhinoMouseCallback::mouse_button</a>, UINT flags, const <a class="el" href="class_o_n__2i_point.html">ON_2iPoint</a> &amp;pt) override</td></tr>
+<tr class="separator:ae0d24996e44a449e5419869420c41760"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fbf9b0d38fed3d08548a2d95de74203"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#a1fbf9b0d38fed3d08548a2d95de74203">OnMouseDown</a> (unsigned int viewSerialNumber, <a class="el" href="class_c_rhino_mouse_callback.html#a182c2c4fa5e81f7da958b6e10499c218">mouse_button</a> button, UINT flags, const <a class="el" href="class_o_n__2i_point.html">ON_2iPoint</a> &amp;point, bool defaultHandlerExecuted) override</td></tr>
 <tr class="memdesc:a1fbf9b0d38fed3d08548a2d95de74203"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called at the end of <a class="el" href="class_c_rhino_view.html">CRhinoView</a> processing a mouse down event.  <a href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#a1fbf9b0d38fed3d08548a2d95de74203">More...</a><br /></td></tr>
 <tr class="separator:a1fbf9b0d38fed3d08548a2d95de74203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dbb485cae6ecfab0e850c22251f6d8b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#a8dbb485cae6ecfab0e850c22251f6d8b">OnMouseUp</a> (unsigned int viewSerialNumber, <a class="el" href="class_c_rhino_mouse_callback.html#a182c2c4fa5e81f7da958b6e10499c218">mouse_button</a> button, UINT flags, const <a class="el" href="class_o_n__2i_point.html">ON_2iPoint</a> &amp;point, bool defaultHandlerExecuted) override</td></tr>
+<tr class="memdesc:a8dbb485cae6ecfab0e850c22251f6d8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called at the end of <a class="el" href="class_c_rhino_view.html">CRhinoView</a> processing a mouse up event.  <a href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#a8dbb485cae6ecfab0e850c22251f6d8b">More...</a><br /></td></tr>
+<tr class="separator:a8dbb485cae6ecfab0e850c22251f6d8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a540859cc1cab3c32e360d6b2d70d37fa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#a540859cc1cab3c32e360d6b2d70d37fa">OnPostDrawObjects</a> (<a class="el" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a> &amp;pipeline)</td></tr>
 <tr class="separator:a540859cc1cab3c32e360d6b2d70d37fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1999680475e5b5b24112c885d6f6b122"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html#a1999680475e5b5b24112c885d6f6b122">OnPreDrawObjects</a> (<a class="el" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a> &amp;pipeline)</td></tr>
@@ -303,6 +315,8 @@ Additional Inherited Members</h2></td></tr>
 <tr><td class="fieldname"><a id="a098f9e6ea807dbc68eda8ba74c5385d3a55ce816dd083c15817b5f5d59c80c935"></a>StatusText&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a098f9e6ea807dbc68eda8ba74c5385d3aa76d4ef5f3f6a672bbfab2865563e530"></a>Time&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a098f9e6ea807dbc68eda8ba74c5385d3adf818eab01b3bd0ca2bea974656b9698"></a>PassAmount&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a098f9e6ea807dbc68eda8ba74c5385d3a3a268afe6cfb710b788ee6a8f92694a0"></a>PostEffectsOn&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a098f9e6ea807dbc68eda8ba74c5385d3a465fcebc71ff6ef1fdc3443c19c2f7ab"></a>PostEffectsOff&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -511,7 +525,56 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Return true if you have drawn the frame into the current OpenGL view, or you have supplied one of the other methods for drawing in outputs. Return false if the frame was not available, and the framework should wait. </p>
+<p>Return true if you have drawn the frame into the current OpenGL view, or you have supplied one of the other methods for drawing in outputs. Return false if the frame was not available, and the framework should wait. If you're using <a class="el" href="class_i_rh_rdk_render_window.html">IRhRdkRenderWindow</a> as your framebuffer (which is recommended), you can implement DrawOrLockRendererFrameBuffer simply by calling DrawOrLockRendererFrameBufferImpl. </p>
+
+</div>
+</div>
+<a id="a1d150cb12c72219ec203462544bf5e80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d150cb12c72219ec203462544bf5e80">&#9670;&nbsp;</a></span>DrawOrLockRendererFrameBufferImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool RhRdk::Realtime::DisplayMode::DrawOrLockRendererFrameBufferImpl </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html">DisplayMode</a> &amp;&#160;</td>
+          <td class="paramname"><em>dm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_i_rh_rdk_render_window.html">IRhRdkRenderWindow</a> &amp;&#160;</td>
+          <td class="paramname"><em>rw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_rh_rdk_1_1_realtime_1_1_display_mode_1_1_f_r_a_m_e___b_u_f_f_e_r___i_n_f_o___i_n_p_u_t_s.html">FRAME_BUFFER_INFO_INPUTS</a> &amp;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_rh_rdk_1_1_realtime_1_1_display_mode_1_1_f_r_a_m_e___b_u_f_f_e_r___i_n_f_o___o_u_t_p_u_t_s.html">FRAME_BUFFER_INFO_OUTPUTS</a> &amp;&#160;</td>
+          <td class="paramname"><em>outputs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>See comment for DrawOrLockRendererFrameBuffer. </p>
 
 </div>
 </div>
@@ -629,6 +692,33 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ab940be4210fe8a60d0396f6c5e6fac81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab940be4210fe8a60d0396f6c5e6fac81">&#9670;&nbsp;</a></span>FromPipeline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::shared_ptr&lt;<a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html">DisplayMode</a>&gt; RhRdk::Realtime::DisplayMode::FromPipeline </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a> &amp;&#160;</td>
+          <td class="paramname"><em>pipe</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the display mode associated with a particular display pipline. </p>
+
+</div>
+</div>
 <a id="acb001020684d48f34cf972c06ef9d18c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acb001020684d48f34cf972c06ef9d18c">&#9670;&nbsp;</a></span>HUDCallbacks()</h2>
 
@@ -651,7 +741,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Default implementation stops built in HUD from being displayed. Implementation may optionally return <a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode_1_1_i_h_u_d_functionality.html">IHUDFunctionality</a> - dynamic cast to access that functionality </p>
+<p>Default implementation stops built in HUD from being displayed. Implementation may optionally return <a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode_1_1_i_h_u_d_functionality.html">IHUDFunctionality</a> or <a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode_1_1_i_h_u_d_callbacks3.html">IHUDCallbacks3</a> - dynamic cast to access that functionality. </p>
 
 </div>
 </div>
@@ -873,6 +963,64 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a146de7a75c2ef1f57933112be6e338ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a146de7a75c2ef1f57933112be6e338ab">&#9670;&nbsp;</a></span>OnBeginMouseUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RhRdk::Realtime::DisplayMode::OnBeginMouseUp </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>viewSerialNumber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_c_rhino_mouse_callback.html#a182c2c4fa5e81f7da958b6e10499c218">mouse_button</a>&#160;</td>
+          <td class="paramname"><em>button</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_o_n__2i_point.html">ON_2iPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>executeDefaultHandler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called at the beginning of <a class="el" href="class_c_rhino_view.html">CRhinoView</a> processing a mouse up event. </p>
+
+<p>Reimplemented from <a class="el" href="class_c_rhino_mouse_callback.html#a829226af78edf33fcf6ef4404049f1f0">CRhinoMouseCallback</a>.</p>
+
+</div>
+</div>
 <a id="acb1720ed8e75c325c05f753a20bf3a02"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acb1720ed8e75c325c05f753a20bf3a02">&#9670;&nbsp;</a></span>OnDisplayPipelineSettingsChanged()</h2>
 
@@ -954,6 +1102,57 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ae0d24996e44a449e5419869420c41760"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0d24996e44a449e5419869420c41760">&#9670;&nbsp;</a></span>OnMouseDblClk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual BOOL RhRdk::Realtime::DisplayMode::OnMouseDblClk </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_rhino_view.html">CRhinoView</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_c_rhino_mouse_callback.html#a182c2c4fa5e81f7da958b6e10499c218">CRhinoMouseCallback::mouse_button</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_o_n__2i_point.html">ON_2iPoint</a> &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Override if you want to handle mouse double click events. If you return TRUE, the default handler is not called. If you return FALSE, the default OnMouseDblClick() handler is called. </p>
+
+<p>Reimplemented from <a class="el" href="class_c_rhino_mouse_callback.html#a27493910776bcb30e721dfff65c6724c">CRhinoMouseCallback</a>.</p>
+
+</div>
+</div>
 <a id="a1fbf9b0d38fed3d08548a2d95de74203"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1fbf9b0d38fed3d08548a2d95de74203">&#9670;&nbsp;</a></span>OnMouseDown()</h2>
 
@@ -1009,6 +1208,64 @@ Additional Inherited Members</h2></td></tr>
 <p>Called at the end of <a class="el" href="class_c_rhino_view.html">CRhinoView</a> processing a mouse down event. </p>
 
 <p>Reimplemented from <a class="el" href="class_c_rhino_mouse_callback.html#aabb8737d93d9b71f68622a3bbc76326e">CRhinoMouseCallback</a>.</p>
+
+</div>
+</div>
+<a id="a8dbb485cae6ecfab0e850c22251f6d8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dbb485cae6ecfab0e850c22251f6d8b">&#9670;&nbsp;</a></span>OnMouseUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RhRdk::Realtime::DisplayMode::OnMouseUp </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>viewSerialNumber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_c_rhino_mouse_callback.html#a182c2c4fa5e81f7da958b6e10499c218">mouse_button</a>&#160;</td>
+          <td class="paramname"><em>button</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_o_n__2i_point.html">ON_2iPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>defaultHandlerExecuted</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called at the end of <a class="el" href="class_c_rhino_view.html">CRhinoView</a> processing a mouse up event. </p>
+
+<p>Reimplemented from <a class="el" href="class_c_rhino_mouse_callback.html#a11cfb50dea54e4f2735047dae57462bd">CRhinoMouseCallback</a>.</p>
 
 </div>
 </div>
@@ -1116,7 +1373,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Triggered when a component on the HUD has been pressed. </p>
+<p>Triggered when a component on the HUD has been pressed. Deprecated - use <a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode_1_1_i_h_u_d_callbacks3.html#a7a25b191973e6830ca4d1289e4fbbd01">IHUDCallbacks3::OnStatusBarMouseEvent</a> </p>
 
 </div>
 </div>
@@ -1280,6 +1537,24 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Returns the size of the viewport or renderframe related to the running session. </p>
+
+</div>
+</div>
+<a id="af6b8305ba8af0ceb56972e85531780f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6b8305ba8af0ceb56972e85531780f7">&#9670;&nbsp;</a></span>RenderWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_i_rh_rdk_render_window.html">IRhRdkRenderWindow</a>* RhRdk::Realtime::DisplayMode::RenderWindow </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1468,6 +1743,44 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>If you're calling DrawOrLockRendererFrameBufferImpl, you should call UnlockRendererFrameBufferImpl in your override of this function. </p>
+
+</div>
+</div>
+<a id="a883da39883592b3339010eca92365c55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a883da39883592b3339010eca92365c55">&#9670;&nbsp;</a></span>UnlockRendererFrameBufferImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void RhRdk::Realtime::DisplayMode::UnlockRendererFrameBufferImpl </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_rh_rdk_1_1_realtime_1_1_display_mode.html">DisplayMode</a> &amp;&#160;</td>
+          <td class="paramname"><em>dm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_i_rh_rdk_render_window.html">IRhRdkRenderWindow</a> &amp;&#160;</td>
+          <td class="paramname"><em>rw</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>See comment for UnlockRendererFrameBuffer. </p>
 
 </div>
 </div>
@@ -1578,7 +1891,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:32 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:56:01 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

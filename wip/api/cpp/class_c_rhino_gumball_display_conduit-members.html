@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -94,6 +94,8 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="class_c_rhino_gumball_display_conduit.html#a4685bc21078e406967da76aff5ce80ca">ExecConduit</a>(CRhinoDisplayPipeline &amp;pipeline, UINT channel, bool &amp;terminate)</td><td class="entry"><a class="el" href="class_c_rhino_gumball_display_conduit.html">CRhinoGumballDisplayConduit</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a4ae030f29765051d8adaad43224ee396">FromRuntimeSerialNumber</a>(unsigned int display_conduit_sn)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#adeeb52934a676b50219c9cbaad68bcd2">GetGeometryFilter</a>() const</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a511e6ad54149e198d94cb860cbbae66d">GetObjectFilter</a>() const</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a7d0265de1de98de370dd5e0eafe3a83f">GetSelectedFilter</a>(bool &amp;on, bool &amp;checkSubObjects) const</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_rhino_gumball_display_conduit.html#a766c259a0289943f4c62de0754de56b2">Gumball</a>() const</td><td class="entry"><a class="el" href="class_c_rhino_gumball_display_conduit.html">CRhinoGumballDisplayConduit</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_c_rhino_gumball_display_conduit.html#adfab4baa611e13814abd851566d74a21">GumballDrawIsEnabled</a>() const</td><td class="entry"><a class="el" href="class_c_rhino_gumball_display_conduit.html">CRhinoGumballDisplayConduit</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_rhino_gumball_display_conduit.html#a815689b47b682b7413ee4fb86f521a4a">GumballTransform</a>() const</td><td class="entry"><a class="el" href="class_c_rhino_gumball_display_conduit.html">CRhinoGumballDisplayConduit</a></td><td class="entry"></td></tr>
@@ -125,9 +127,13 @@ $(function() {
   <tr><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a9d16a378450adde878c371366d618744">ReplaceBinding</a>(const CRhinoViewport &amp;old_viewport, const CRhinoViewport &amp;new_viewport)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a1ea01318139f2d3f2c1df3ede55fc914">ReplaceBinding</a>(const CRhinoView &amp;old_view, const CRhinoView &amp;new_view)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#aee84706771a26c25cd447c37bb8fd05f">ReplaceBinding</a>(const ON_Viewport &amp;old_viewport, const ON_Viewport &amp;new_viewport)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_c_rhino_gumball_display_conduit.html#ae422f53908072133ea6a8794a2cfd3ea">SetBaseGumball</a>(const CRhinoGumball &amp;gumball)</td><td class="entry"><a class="el" href="class_c_rhino_gumball_display_conduit.html">CRhinoGumballDisplayConduit</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a3e2a039034cdb90c009942eb88711313">SetGeometryFilter</a>(unsigned int geometry_filter)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_c_rhino_gumball_display_conduit.html#a9a60f282753d1224dc6571b79909e533">SetPreTransform</a>(const ON_Xform &amp;xform0)</td><td class="entry"><a class="el" href="class_c_rhino_gumball_display_conduit.html">CRhinoGumballDisplayConduit</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a42abd3b8be415a168bb1460e9348683d">RuntimeSerialNumber</a>(const CRhinoDisplayConduit *conduit)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_rhino_gumball_display_conduit.html#ae422f53908072133ea6a8794a2cfd3ea">SetBaseGumball</a>(const CRhinoGumball &amp;gumball)</td><td class="entry"><a class="el" href="class_c_rhino_gumball_display_conduit.html">CRhinoGumballDisplayConduit</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a3e2a039034cdb90c009942eb88711313">SetGeometryFilter</a>(unsigned int geometry_filter)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a359f221136d613466ea8d21b083cfade">SetObjectFilter</a>(ON_UUID objectId)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a62cc10be94770d764535826b04fa5f41">SetObjectFilter</a>(const ON_SimpleArray&lt; ON_UUID &gt; &amp;objectIds)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_rhino_gumball_display_conduit.html#a9a60f282753d1224dc6571b79909e533">SetPreTransform</a>(const ON_Xform &amp;xform0)</td><td class="entry"><a class="el" href="class_c_rhino_gumball_display_conduit.html">CRhinoGumballDisplayConduit</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#af592845af5b719c6f45a68c87bed44de">SetSelectedFilter</a>(bool on, bool checkSubObjects)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a9453277ff005af1b2b59a5919d51cf9e">ToggleBinding</a>(const CRhinoDisplayPipeline &amp;pipeline)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a4cc2a2d99e721b01753d31e8f10c98f8">ToggleBinding</a>(const CRhinoViewport &amp;viewport)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a5f6f848ae9d7dbc8343f4ebee39e15bb">ToggleBinding</a>(const CRhinoView &amp;view)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
@@ -150,7 +156,7 @@ $(function() {
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:03 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:28 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

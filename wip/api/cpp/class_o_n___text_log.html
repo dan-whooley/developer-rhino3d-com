@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -63,7 +63,9 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
@@ -87,6 +89,15 @@ Inheritance diagram for ON_TextLog:</div>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a700ba4648aa155a66ab69d45819de029"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a700ba4648aa155a66ab69d45819de029">LevelOfDetail</a> : unsigned char { <a class="el" href="class_o_n___text_log.html#a700ba4648aa155a66ab69d45819de029aa1d0ec6d56f8833a078b5a7ac4caf2d4">LevelOfDetail::Minimum</a> = 0, 
+<a class="el" href="class_o_n___text_log.html#a700ba4648aa155a66ab69d45819de029a87f8a6ab85c9ced3702b4ea641ad4bb5">LevelOfDetail::Medium</a> = 1, 
+<a class="el" href="class_o_n___text_log.html#a700ba4648aa155a66ab69d45819de029a8321e79c278ec510f63675c040594892">LevelOfDetail::Maximum</a> = 2
+ }</td></tr>
+<tr class="memdesc:a700ba4648aa155a66ab69d45819de029"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_o_n___text_log.html#a700ba4648aa155a66ab69d45819de029" title="ON_TextLog::LevelOfDetail determines ow much detail is printed. Functions that have an ON_TextLog par...">ON_TextLog::LevelOfDetail</a> determines ow much detail is printed. Functions that have an <a class="el" href="class_o_n___text_log.html">ON_TextLog</a> parameter, like the Dump() functions, may use the level of detail to tailor their output. may use the level of detail to tailor their output.  <a href="class_o_n___text_log.html#a700ba4648aa155a66ab69d45819de029">More...</a><br /></td></tr>
+<tr class="separator:a700ba4648aa155a66ab69d45819de029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7ed18044ce797e2a9e6855a8553df0ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a7ed18044ce797e2a9e6855a8553df0ab">ON_TextLog</a> ()</td></tr>
@@ -98,16 +109,26 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad7906106bc0611cc31ed7eff8d5496cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9225f44bcfd18712578b4f13e4687a3b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a9225f44bcfd18712578b4f13e4687a3b">~ON_TextLog</a> ()</td></tr>
 <tr class="separator:a9225f44bcfd18712578b4f13e4687a3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b0d9e4cf0a756d5e69a38118dcca1d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a3b0d9e4cf0a756d5e69a38118dcca1d1">ClearColorFormat</a> ()</td></tr>
+<tr class="separator:a3b0d9e4cf0a756d5e69a38118dcca1d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ae0899b8dc4ba02a7cb195110fae3a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0">ON_Color::TextFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a5ae0899b8dc4ba02a7cb195110fae3a6">GetColorFormat</a> ()</td></tr>
+<tr class="separator:a5ae0899b8dc4ba02a7cb195110fae3a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ddb0bbc6d708456aca0c081ea43b5cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a7ddb0bbc6d708456aca0c081ea43b5cf">GetDoubleFormat</a> (<a class="el" href="class_o_n___string.html">ON_String</a> &amp;) const</td></tr>
 <tr class="separator:a7ddb0bbc6d708456aca0c081ea43b5cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a349a10e893db9c72d720d1db8a5c49a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a349a10e893db9c72d720d1db8a5c49a2">GetFloatFormat</a> (<a class="el" href="class_o_n___string.html">ON_String</a> &amp;) const</td></tr>
 <tr class="separator:a349a10e893db9c72d720d1db8a5c49a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ce55a51f2a6cb0b4e69d25823490320"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___text_log.html#a700ba4648aa155a66ab69d45819de029">ON_TextLog::LevelOfDetail</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a6ce55a51f2a6cb0b4e69d25823490320">GetLevelOfDetail</a> () const</td></tr>
+<tr class="separator:a6ce55a51f2a6cb0b4e69d25823490320"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4419d9acde27146c1cf882f0c847b4e6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a4419d9acde27146c1cf882f0c847b4e6">IndentCount</a> ()</td></tr>
 <tr class="separator:a4419d9acde27146c1cf882f0c847b4e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0cf423fec89815eace97bd21f2be616"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#aa0cf423fec89815eace97bd21f2be616">IndentSize</a> () const</td></tr>
 <tr class="separator:aa0cf423fec89815eace97bd21f2be616"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace1239672bff474fd870396fb5ff0612"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#ace1239672bff474fd870396fb5ff0612">IsNull</a> () const</td></tr>
+<tr class="separator:ace1239672bff474fd870396fb5ff0612"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c096dba1ea7aec048e4f2e775b8664f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a1c096dba1ea7aec048e4f2e775b8664f">IsTextHash</a> () const</td></tr>
 <tr class="separator:a1c096dba1ea7aec048e4f2e775b8664f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25a7e55dbf28fde6bdffe66f888de917"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a25a7e55dbf28fde6bdffe66f888de917">LevelOfDetailIsAtLeast</a> (<a class="el" href="class_o_n___text_log.html#a700ba4648aa155a66ab69d45819de029">ON_TextLog::LevelOfDetail</a> level_of_detail)</td></tr>
+<tr class="separator:a25a7e55dbf28fde6bdffe66f888de917"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a101b5eb8a984913b2f405662e0572791"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___text_log.html">ON_TextLog</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a101b5eb8a984913b2f405662e0572791">operator&lt;&lt;</a> (char)</td></tr>
 <tr class="separator:a101b5eb8a984913b2f405662e0572791"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5ef150efd2536ddfbbaf74ae7a081cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___text_log.html">ON_TextLog</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#ad5ef150efd2536ddfbbaf74ae7a081cb">operator&lt;&lt;</a> (const char *)</td></tr>
@@ -142,7 +163,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4b994d2a46b09f5c3caee566250ba3e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62a006e542778d141a92bf806abc1642"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a62a006e542778d141a92bf806abc1642">Print</a> (const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &amp;)</td></tr>
 <tr class="separator:a62a006e542778d141a92bf806abc1642"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72ac19980c6d885c61964730f02d7055"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a72ac19980c6d885c61964730f02d7055">Print</a> (const <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;, const char *=nullptr)</td></tr>
+<tr class="memitem:a72ac19980c6d885c61964730f02d7055"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a72ac19980c6d885c61964730f02d7055">Print</a> (const ON_3dPointArray &amp;, const char *=nullptr)</td></tr>
 <tr class="separator:a72ac19980c6d885c61964730f02d7055"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40cc2580185935aff374ea38fc3f9261"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a40cc2580185935aff374ea38fc3f9261">Print</a> (const <a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a> &amp;)</td></tr>
 <tr class="separator:a40cc2580185935aff374ea38fc3f9261"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,6 +187,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af588196530bc9026f675405c3b5a71bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a558feb7d43e2858542770cc5469faa87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a558feb7d43e2858542770cc5469faa87">Print</a> (float)</td></tr>
 <tr class="separator:a558feb7d43e2858542770cc5469faa87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d6f10f97c3e656d5b445a88e59b3373"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a4d6f10f97c3e656d5b445a88e59b3373">PrintColor</a> (const <a class="el" href="class_o_n___color.html">ON_Color</a> &amp;color)</td></tr>
+<tr class="separator:a4d6f10f97c3e656d5b445a88e59b3373"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b6a4fa5e1538b768b9347767694a7ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a0b6a4fa5e1538b768b9347767694a7ab">PrintCurrentTime</a> ()</td></tr>
 <tr class="separator:a0b6a4fa5e1538b768b9347767694a7ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6bb9094a5af07401bfe42c6b712c1cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#af6bb9094a5af07401bfe42c6b712c1cb">PrintKnotVector</a> (int, int, const double *)</td></tr>
@@ -177,12 +200,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a481b0c2f9cbf25a6a11402969bccadaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b56d6b96fa338a6c3337e493d335aec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a5b56d6b96fa338a6c3337e493d335aec">PrintPointList</a> (int, bool, int, int, const double *, const char *=nullptr)</td></tr>
 <tr class="separator:a5b56d6b96fa338a6c3337e493d335aec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6682bb1bb96958cf614286e66c2d942"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#ac6682bb1bb96958cf614286e66c2d942">PrintRGB</a> (const <a class="el" href="class_o_n___color.html">ON_Color</a> &amp;)</td></tr>
-<tr class="separator:ac6682bb1bb96958cf614286e66c2d942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b12b008f721784fd6745fa5d7c8896e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a4b12b008f721784fd6745fa5d7c8896e">PrintRGB</a> (const <a class="el" href="class_o_n___color.html">ON_Color</a> &amp;color)</td></tr>
+<tr class="separator:a4b12b008f721784fd6745fa5d7c8896e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15274f5e403fe51cca0fec989931c247"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a15274f5e403fe51cca0fec989931c247">PrintSpace</a> ()</td></tr>
+<tr class="separator:a15274f5e403fe51cca0fec989931c247"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a948d58aa90f4b08dd7850a938fa9748d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a948d58aa90f4b08dd7850a938fa9748d">PrintString</a> (const char *s)</td></tr>
 <tr class="separator:a948d58aa90f4b08dd7850a938fa9748d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49e8abc8458d1220a0b6b63faff2e4a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a49e8abc8458d1220a0b6b63faff2e4a8">PrintString</a> (const wchar_t *s)</td></tr>
 <tr class="separator:a49e8abc8458d1220a0b6b63faff2e4a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42e34484300d6e5078778d6dd25a2a63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a42e34484300d6e5078778d6dd25a2a63">PrintTab</a> ()</td></tr>
+<tr class="separator:a42e34484300d6e5078778d6dd25a2a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83e6341ebd9920cc76e761c262e56511"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a83e6341ebd9920cc76e761c262e56511">PrintTime</a> (const struct tm &amp;t)</td></tr>
 <tr class="separator:a83e6341ebd9920cc76e761c262e56511"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10a75e596735377f00fe6bef39c6fe6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a10a75e596735377f00fe6bef39c6fe6f">PrintWrappedText</a> (const char *, int=60)</td></tr>
@@ -193,6 +220,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1fea42c46611c03c94fc571d0b914baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a133e2123c77916d006818e36d1f92e9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a133e2123c77916d006818e36d1f92e9d">PushIndent</a> ()</td></tr>
 <tr class="separator:a133e2123c77916d006818e36d1f92e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a772561c904e2753a1f9abb95bcf85be5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a772561c904e2753a1f9abb95bcf85be5">SetColorFormat</a> (<a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0">ON_Color::TextFormat</a> color_format)</td></tr>
+<tr class="separator:a772561c904e2753a1f9abb95bcf85be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7de49469c5149a3f3a3d3b2abe2530e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#aa7de49469c5149a3f3a3d3b2abe2530e">SetDoubleFormat</a> (const char *)</td></tr>
 <tr class="memdesc:aa7de49469c5149a3f3a3d3b2abe2530e"><td class="mdescLeft">&#160;</td><td class="mdescRight">default is g  <a href="class_o_n___text_log.html#aa7de49469c5149a3f3a3d3b2abe2530e">More...</a><br /></td></tr>
 <tr class="separator:aa7de49469c5149a3f3a3d3b2abe2530e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,6 +232,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa21071dc5ac45ab95f61405d8ed0f135"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab23d75e36cd6f1a83ea80810e312ef40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#ab23d75e36cd6f1a83ea80810e312ef40">SetIndentSize</a> (int)</td></tr>
 <tr class="separator:ab23d75e36cd6f1a83ea80810e312ef40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c130b919c1382647d834a889a4bc2d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#a2c130b919c1382647d834a889a4bc2d6">SetLevelOfDetail</a> (<a class="el" href="class_o_n___text_log.html#a700ba4648aa155a66ab69d45819de029">ON_TextLog::LevelOfDetail</a> level_of_detail)</td></tr>
+<tr class="separator:a2c130b919c1382647d834a889a4bc2d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ab463fdf032b0526a4488152b4f2f5c85"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_o_n___text_log.html#a700ba4648aa155a66ab69d45819de029">ON_TextLog::LevelOfDetail</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_log.html#ab463fdf032b0526a4488152b4f2f5c85">LevelOfDetailFromUnsigned</a> (unsigned int level_of_detail)</td></tr>
+<tr class="separator:ab463fdf032b0526a4488152b4f2f5c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -231,7 +267,41 @@ Friends</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>/ / Copyright (c) 1993-2018 Robert McNeel &amp; Associates. All rights reserved. / OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert / McNeel &amp; Associates. / / THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY. / ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF / MERCHANTABILITY ARE HEREBY DISCLAIMED. / <br  />
  / For complete openNURBS copyright information see <a href="http://www.opennurbs.org">http://www.opennurbs.org</a>. / ////////////////////////////////////////////////////////////// </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a700ba4648aa155a66ab69d45819de029"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a700ba4648aa155a66ab69d45819de029">&#9670;&nbsp;</a></span>LevelOfDetail</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_o_n___text_log.html#a700ba4648aa155a66ab69d45819de029">ON_TextLog::LevelOfDetail</a> : unsigned char</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_o_n___text_log.html#a700ba4648aa155a66ab69d45819de029" title="ON_TextLog::LevelOfDetail determines ow much detail is printed. Functions that have an ON_TextLog par...">ON_TextLog::LevelOfDetail</a> determines ow much detail is printed. Functions that have an <a class="el" href="class_o_n___text_log.html">ON_TextLog</a> parameter, like the Dump() functions, may use the level of detail to tailor their output. may use the level of detail to tailor their output. </p>
+<p>Level of detail interface</p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a700ba4648aa155a66ab69d45819de029aa1d0ec6d56f8833a078b5a7ac4caf2d4"></a>Minimum&#160;</td><td class="fielddoc"><p>A brief summary or synopsis. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a700ba4648aa155a66ab69d45819de029a87f8a6ab85c9ced3702b4ea641ad4bb5"></a>Medium&#160;</td><td class="fielddoc"><p>The default level of detail. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a700ba4648aa155a66ab69d45819de029a8321e79c278ec510f63675c040594892"></a>Maximum&#160;</td><td class="fielddoc"><p>A verbose description that may be so long it obscures the important points. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7ed18044ce797e2a9e6855a8553df0ab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7ed18044ce797e2a9e6855a8553df0ab">&#9670;&nbsp;</a></span>ON_TextLog() <span class="overload">[1/3]</span></h2>
 
@@ -374,6 +444,41 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a3b0d9e4cf0a756d5e69a38118dcca1d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b0d9e4cf0a756d5e69a38118dcca1d1">&#9670;&nbsp;</a></span>ClearColorFormat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ON_TextLog::ClearColorFormat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Returns color format to the default <a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0a08fb3d668a8bc4d965e8c1d98b5be53a">ON_Color::TextFormat::DecimalRGBa</a> </p>
+
+</div>
+</div>
+<a id="a5ae0899b8dc4ba02a7cb195110fae3a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ae0899b8dc4ba02a7cb195110fae3a6">&#9670;&nbsp;</a></span>GetColorFormat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0">ON_Color::TextFormat</a> ON_TextLog::GetColorFormat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a7ddb0bbc6d708456aca0c081ea43b5cf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7ddb0bbc6d708456aca0c081ea43b5cf">&#9670;&nbsp;</a></span>GetDoubleFormat()</h2>
 
@@ -407,6 +512,24 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6ce55a51f2a6cb0b4e69d25823490320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ce55a51f2a6cb0b4e69d25823490320">&#9670;&nbsp;</a></span>GetLevelOfDetail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_o_n___text_log.html#a700ba4648aa155a66ab69d45819de029">ON_TextLog::LevelOfDetail</a> ON_TextLog::GetLevelOfDetail </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns: Level of detail to print 0 = minimum level of detail 4 = maximum level of detail </p>
 
 </div>
 </div>
@@ -446,6 +569,24 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="ace1239672bff474fd870396fb5ff0612"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace1239672bff474fd870396fb5ff0612">&#9670;&nbsp;</a></span>IsNull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_TextLog::IsNull </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns: True if this is <a class="el" href="class_o_n___text_log.html#a80a6226c6ab14790a0f3da4b45ce43b7">ON_TextLog::Null</a>. </p>
+
+</div>
+</div>
 <a id="a1c096dba1ea7aec048e4f2e775b8664f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1c096dba1ea7aec048e4f2e775b8664f">&#9670;&nbsp;</a></span>IsTextHash()</h2>
 
@@ -460,6 +601,52 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Returns: True if the text is being used to calculate a geometric content SHA1 hash and non-geometry information that varies based on time, computer, or user should not be printed. </p>
+
+</div>
+</div>
+<a id="ab463fdf032b0526a4488152b4f2f5c85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab463fdf032b0526a4488152b4f2f5c85">&#9670;&nbsp;</a></span>LevelOfDetailFromUnsigned()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_o_n___text_log.html#a700ba4648aa155a66ab69d45819de029">ON_TextLog::LevelOfDetail</a> ON_TextLog::LevelOfDetailFromUnsigned </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>level_of_detail</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a25a7e55dbf28fde6bdffe66f888de917"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25a7e55dbf28fde6bdffe66f888de917">&#9670;&nbsp;</a></span>LevelOfDetailIsAtLeast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_TextLog::LevelOfDetailIsAtLeast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_o_n___text_log.html#a700ba4648aa155a66ab69d45819de029">ON_TextLog::LevelOfDetail</a>&#160;</td>
+          <td class="paramname"><em>level_of_detail</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Parameter: level_of_detail - [in] Returns: True if this text log's level of detail the same or more detailed than the amount specified by level_of_detail. </p>
 
 </div>
 </div>
@@ -788,7 +975,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void ON_TextLog::Print </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;&#160;</td>
+          <td class="paramtype">const ON_3dPointArray &amp;&#160;</td>
           <td class="paramname">, </td>
         </tr>
         <tr>
@@ -1034,6 +1221,25 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a4d6f10f97c3e656d5b445a88e59b3373"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d6f10f97c3e656d5b445a88e59b3373">&#9670;&nbsp;</a></span>PrintColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ON_TextLog::PrintColor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___color.html">ON_Color</a> &amp;&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Print color using <a class="el" href="class_o_n___color.html#ae438f9df9111e3bc48e89a10f7b54d93">ON_Color::ToText</a>(this-&gt;<a class="el" href="class_o_n___text_log.html#a5ae0899b8dc4ba02a7cb195110fae3a6">GetColorFormat()</a>,0,true,*this); </p>
+
+</div>
+</div>
 <a id="a0b6a4fa5e1538b768b9347767694a7ab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0b6a4fa5e1538b768b9347767694a7ab">&#9670;&nbsp;</a></span>PrintCurrentTime()</h2>
 
@@ -1222,8 +1428,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ac6682bb1bb96958cf614286e66c2d942"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6682bb1bb96958cf614286e66c2d942">&#9670;&nbsp;</a></span>PrintRGB()</h2>
+<a id="a4b12b008f721784fd6745fa5d7c8896e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b12b008f721784fd6745fa5d7c8896e">&#9670;&nbsp;</a></span>PrintRGB()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1232,11 +1438,30 @@ Friends</h2></td></tr>
           <td class="memname">void ON_TextLog::PrintRGB </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_o_n___color.html">ON_Color</a> &amp;&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Print color using the format <a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0a26f58386b67c107a7e49aa4542bca1ac">ON_Color::TextFormat::DecimalRGB</a>. </p>
+
+</div>
+</div>
+<a id="a15274f5e403fe51cca0fec989931c247"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15274f5e403fe51cca0fec989931c247">&#9670;&nbsp;</a></span>PrintSpace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ON_TextLog::PrintSpace </td>
+          <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Description: Same as calling Print(" "); </p>
 
 </div>
 </div>
@@ -1275,6 +1500,24 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Description: Print an unformatted UNICODE string of any length. Parameters: s - [in] nullptr terminated UNICODE string. </p>
+
+</div>
+</div>
+<a id="a42e34484300d6e5078778d6dd25a2a63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42e34484300d6e5078778d6dd25a2a63">&#9670;&nbsp;</a></span>PrintTab()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ON_TextLog::PrintTab </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Same as calling Print("\t"); </p>
 
 </div>
 </div>
@@ -1374,6 +1617,24 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a772561c904e2753a1f9abb95bcf85be5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a772561c904e2753a1f9abb95bcf85be5">&#9670;&nbsp;</a></span>SetColorFormat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ON_TextLog::SetColorFormat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0">ON_Color::TextFormat</a>&#160;</td>
+          <td class="paramname"><em>color_format</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aa7de49469c5149a3f3a3d3b2abe2530e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa7de49469c5149a3f3a3d3b2abe2530e">&#9670;&nbsp;</a></span>SetDoubleFormat()</h2>
 
@@ -1448,6 +1709,25 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c130b919c1382647d834a889a4bc2d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c130b919c1382647d834a889a4bc2d6">&#9670;&nbsp;</a></span>SetLevelOfDetail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ON_TextLog::SetLevelOfDetail </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_o_n___text_log.html#a700ba4648aa155a66ab69d45819de029">ON_TextLog::LevelOfDetail</a>&#160;</td>
+          <td class="paramname"><em>level_of_detail</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Set the level of detail to print. Parameters: level_of_detail - [in] (default = <a class="el" href="class_o_n___text_log.html#a700ba4648aa155a66ab69d45819de029a87f8a6ab85c9ced3702b4ea641ad4bb5" title="The default level of detail.">ON_TextLog::LevelOfDetail::Medium</a>) </p>
 
 </div>
 </div>
@@ -1545,7 +1825,7 @@ Friends</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:30 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:58 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

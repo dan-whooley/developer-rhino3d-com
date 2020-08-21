@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -387,8 +387,8 @@ $(function() {
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  <span class="keywordtype">double</span> m_angle_radians = 0.0;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  <a class="code" href="class_o_n__2d_point.html">ON_2dPoint</a> m_base = <a class="code" href="class_o_n__2d_point.html#a61c18ee7b2ac577050c0bc21b793eb1b">ON_2dPoint::Origin</a>;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  <a class="code" href="class_o_n__2d_vector.html">ON_2dVector</a> m_offset = <a class="code" href="class_o_n__2d_vector.html#a2f9dd18fe13c0bd3e85cde1db1eee97b">ON_2dVector::ZeroVector</a>;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  <a class="code" href="class_o_n__2d_point.html">ON_2dPoint</a> m_base = <a class="code" href="group__open_n_u_r_b_s.html#ga61c18ee7b2ac577050c0bc21b793eb1b">ON_2dPoint::Origin</a>;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  <a class="code" href="class_o_n__2d_vector.html">ON_2dVector</a> m_offset = <a class="code" href="group__open_n_u_r_b_s.html#ga2f9dd18fe13c0bd3e85cde1db1eee97b">ON_2dVector::ZeroVector</a>;</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt; double&gt;</a> m_dashes;</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;};</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
@@ -469,7 +469,7 @@ $(function() {
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  {</div>
 <div class="line"><a name="l00398"></a><span class="lineno"><a class="line" href="class_o_n___hatch_pattern.html#a0034c984b918c03c6ccf4e5c4cbc6007">  398</a></span>&#160;    <a class="code" href="group___rhino.html#gga92ddae21b919495f4f225191041764aeae41480b6bbfbf7407974a88d3d34f4fa">Solid</a>    = 0,  <span class="comment">// uses entity color</span></div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    Lines    = 1,  <span class="comment">// pat file definition</span></div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    Gradient = 2,  <span class="comment">// uses a fill color function</span></div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="comment">//Gradient = 2,  // uses a fill color function</span></div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;  };</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160; </div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_o_n___hatch_pattern.html#a0034c984b918c03c6ccf4e5c4cbc6007">ON_HatchPattern::HatchFillType</a> HatchFillTypeFromUnsigned(</div>
@@ -640,8 +640,8 @@ $(function() {
 <div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160; </div>
 <div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;*/</div>
 <div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;<span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___hatch.html">ON_Hatch</a> : <span class="keyword">public</span> <a class="code" href="class_o_n___geometry.html">ON_Geometry</a></div>
-<div class="line"><a name="l00571"></a><span class="lineno"><a class="line" href="class_o_n___hatch.html">  571</a></span>&#160;{</div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#gaeec70151e703b808ab57d0626db20e1f">ON_OBJECT_DECLARE</a>( <a class="code" href="class_o_n___hatch.html">ON_Hatch</a>);</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;{</div>
+<div class="line"><a name="l00572"></a><span class="lineno"><a class="line" href="class_o_n___hatch.html">  572</a></span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#gaeec70151e703b808ab57d0626db20e1f">ON_OBJECT_DECLARE</a>( <a class="code" href="class_o_n___hatch.html">ON_Hatch</a>);</div>
 <div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160; </div>
 <div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;  <span class="comment">// Default constructor</span></div>
@@ -955,84 +955,143 @@ $(function() {
 <div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;<span class="comment">  */</span></div>
 <div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;  <span class="keywordtype">bool</span> ReplaceLoops(<a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;const ON_Curve*&gt;</a>&amp; loops);</div>
 <div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160; </div>
-<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;  <a class="code" href="class_o_n___plane.html">ON_Plane</a> m_plane;</div>
-<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;  <span class="keywordtype">double</span> m_pattern_scale = 1.0;</div>
-<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;  <span class="keywordtype">double</span> m_pattern_rotation = 0.0;</div>
-<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;  <a class="code" href="class_o_n__2d_point.html">ON_2dPoint</a> m_basepoint = <a class="code" href="class_o_n__2d_point.html#a61c18ee7b2ac577050c0bc21b793eb1b">ON_2dPoint::Origin</a>;</div>
-<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_HatchLoop*&gt;</a> m_loops;</div>
-<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;  <span class="keywordtype">int</span> m_pattern_index = -1;</div>
-<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;};</div>
-<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160; </div>
-<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;<span class="comment">//Part of a boundary. An element has a curve subdomain and a flag to say </span></div>
-<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;<span class="comment">//whether that piece of curve should be reversed</span></div>
-<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;<span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___curve_region_boundary_element.html">ON_CurveRegionBoundaryElement</a></div>
-<div class="line"><a name="l00898"></a><span class="lineno"><a class="line" href="class_o_n___curve_region_boundary_element.html">  898</a></span>&#160;{</div>
-<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;public :</div>
-<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;  <a class="code" href="class_o_n___curve_region_boundary_element.html">ON_CurveRegionBoundaryElement</a>();</div>
-<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;  <a class="code" href="class_o_n___curve_region_boundary_element.html">ON_CurveRegionBoundaryElement</a>(<span class="keyword">const</span> <a class="code" href="class_o_n___curve_region_boundary_element.html">ON_CurveRegionBoundaryElement</a>&amp; src);</div>
-<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;  ~<a class="code" href="class_o_n___curve_region_boundary_element.html">ON_CurveRegionBoundaryElement</a>();</div>
-<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;  <a class="code" href="class_o_n___curve_region_boundary_element.html">ON_CurveRegionBoundaryElement</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_o_n___curve_region_boundary_element.html">ON_CurveRegionBoundaryElement</a>&amp; src);</div>
-<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;  <span class="keywordtype">int</span> m_curve_id;</div>
-<div class="line"><a name="l00905"></a><span class="lineno"><a class="line" href="class_o_n___curve_region_boundary_element.html#aab3a69618d379f6a43f69a2affd6b2fd">  905</a></span>&#160;  <a class="code" href="class_o_n___interval.html">ON_Interval</a> m_subdomain;</div>
-<div class="line"><a name="l00906"></a><span class="lineno"><a class="line" href="class_o_n___curve_region_boundary_element.html#a672202db02c3da102d61918d60580d94">  906</a></span>&#160;  <span class="keywordtype">bool</span> m_bReversed;</div>
-<div class="line"><a name="l00907"></a><span class="lineno"><a class="line" href="class_o_n___curve_region_boundary_element.html#a9ca836cf98863b689606208d5fb8877b">  907</a></span>&#160;};</div>
-<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160; </div>
-<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;<span class="comment">//A list of curve subdomains that form a closed boundary with active space on the left.</span></div>
-<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;<span class="keyword">typedef</span> <a class="code" href="class_o_n___class_array.html">ON_ClassArray&lt;ON_CurveRegionBoundaryElement&gt;</a> <a class="code" href="group__open_n_u_r_b_s.html#ga6eb12bba64f5862e83e082e222309dd2">ON_CurveRegionBoundary</a>;</div>
-<div class="line"><a name="l00911"></a><span class="lineno"><a class="line" href="group__open_n_u_r_b_s.html#ga6eb12bba64f5862e83e082e222309dd2">  911</a></span>&#160; </div>
-<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;<span class="comment">//A list of region boundaries that bound a single connected region of the plane.</span></div>
-<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;<span class="comment">//The first boundary is always the outer boundary.</span></div>
-<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;<span class="keyword">typedef</span> <a class="code" href="class_o_n___class_array.html">ON_ClassArray&lt;ON_CurveRegionBoundary&gt;</a> <a class="code" href="group__open_n_u_r_b_s.html#ga843dcf411d64e7d2128c3ba37902914a">ON_CurveRegion</a>;</div>
-<div class="line"><a name="l00915"></a><span class="lineno"><a class="line" href="group__open_n_u_r_b_s.html#ga843dcf411d64e7d2128c3ba37902914a">  915</a></span>&#160; </div>
-<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160; </div>
-<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;<span class="preprocessor">#if defined(OPENNURBS_GRADIENT_WIP)</span></div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;<span class="comment">    Returns gradient fill type for this hatch</span></div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga6940cf29f871aaf7049d55eaa88c5062">ON_GradientType</a> GetGradientType() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;  </div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;<span class="comment">    Set the gradient fill type for this hatch</span></div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;  <span class="keywordtype">void</span> SetGradientType(<a class="code" href="group__open_n_u_r_b_s.html#ga6940cf29f871aaf7049d55eaa88c5062">ON_GradientType</a> gt);</div>
+<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160; </div>
+<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;<span class="comment">    Get list of color stops used for gradient drawing.</span></div>
+<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;  <span class="keywordtype">void</span> GetGradientColors(<a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_ColorStop&gt;</a>&amp; colors) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160; </div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;<span class="comment">    Set list of color stops used for gradient drawing.</span></div>
+<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;  <span class="keywordtype">bool</span> SetGradientColors(<span class="keyword">const</span> <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_ColorStop&gt;</a>&amp; colors);</div>
+<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160; </div>
+<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;<span class="comment">    Get gradient repeat factor for gradient drawing.</span></div>
+<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;<span class="comment">    &gt; 1 repeat reflected number of times between start and end point</span></div>
+<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;<span class="comment">    &lt; -1 repeat wrap number of times between start and end point</span></div>
+<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;<span class="comment">    any other value does not affect repeat on a gradient</span></div>
+<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;  <span class="keywordtype">double</span> GetGradientRepeat() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;  </div>
+<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;<span class="comment">    Set gradient repeat factor for gradient drawing</span></div>
+<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;<span class="comment">    &gt; 1 repeat reflected number of times between start and end point</span></div>
+<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;<span class="comment">    &lt; -1 repeat wrap number of times between start and end point</span></div>
+<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;<span class="comment">    any other value does not affect repeat on a gradient</span></div>
+<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;<span class="comment">    True if the repeat factor was successfully set</span></div>
+<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;  <span class="keywordtype">bool</span> SetGradientRepeat(<span class="keywordtype">double</span> repeat);</div>
+<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160; </div>
+<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;<span class="comment">    Get the start and end points for gradient drawing in 3d</span></div>
+<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;  <span class="keywordtype">void</span> GetGradientEndPoints(<a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp; startPoint, <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp; endPoint) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160; </div>
+<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;<span class="comment">    Set the start and end points for gradient drawing</span></div>
+<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;  <span class="keywordtype">bool</span> SetGradientEndPoints(<a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a> startpoint, <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a> endPoint);</div>
+<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160; </div>
+<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;  <a class="code" href="class_o_n___plane.html">ON_Plane</a> m_plane;</div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;  <span class="keywordtype">double</span> m_pattern_scale = 1.0;</div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;  <span class="keywordtype">double</span> m_pattern_rotation = 0.0;</div>
+<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;  <a class="code" href="class_o_n__2d_point.html">ON_2dPoint</a> m_basepoint = <a class="code" href="group__open_n_u_r_b_s.html#ga61c18ee7b2ac577050c0bc21b793eb1b">ON_2dPoint::Origin</a>;</div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_HatchLoop*&gt;</a> m_loops;</div>
+<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;  <span class="keywordtype">int</span> m_pattern_index = -1;</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;};</div>
+<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160; </div>
+<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;<span class="comment">//Part of a boundary. An element has a curve subdomain and a flag to say </span></div>
+<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;<span class="comment">//whether that piece of curve should be reversed</span></div>
+<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;<span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___curve_region_boundary_element.html">ON_CurveRegionBoundaryElement</a></div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;{</div>
+<div class="line"><a name="l00957"></a><span class="lineno"><a class="line" href="class_o_n___curve_region_boundary_element.html">  957</a></span>&#160;public :</div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;  <a class="code" href="class_o_n___curve_region_boundary_element.html">ON_CurveRegionBoundaryElement</a>();</div>
+<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;  <a class="code" href="class_o_n___curve_region_boundary_element.html">ON_CurveRegionBoundaryElement</a>(<span class="keyword">const</span> <a class="code" href="class_o_n___curve_region_boundary_element.html">ON_CurveRegionBoundaryElement</a>&amp; src);</div>
+<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;  ~<a class="code" href="class_o_n___curve_region_boundary_element.html">ON_CurveRegionBoundaryElement</a>();</div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;  <a class="code" href="class_o_n___curve_region_boundary_element.html">ON_CurveRegionBoundaryElement</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_o_n___curve_region_boundary_element.html">ON_CurveRegionBoundaryElement</a>&amp; src);</div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;  <span class="keywordtype">int</span> m_curve_id;</div>
+<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;  <a class="code" href="class_o_n___interval.html">ON_Interval</a> m_subdomain;</div>
+<div class="line"><a name="l00964"></a><span class="lineno"><a class="line" href="class_o_n___curve_region_boundary_element.html#aab3a69618d379f6a43f69a2affd6b2fd">  964</a></span>&#160;  <span class="keywordtype">bool</span> m_bReversed;</div>
+<div class="line"><a name="l00965"></a><span class="lineno"><a class="line" href="class_o_n___curve_region_boundary_element.html#a672202db02c3da102d61918d60580d94">  965</a></span>&#160;};</div>
+<div class="line"><a name="l00966"></a><span class="lineno"><a class="line" href="class_o_n___curve_region_boundary_element.html#a9ca836cf98863b689606208d5fb8877b">  966</a></span>&#160; </div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;<span class="comment">//A list of curve subdomains that form a closed boundary with active space on the left.</span></div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;<span class="keyword">typedef</span> <a class="code" href="class_o_n___class_array.html">ON_ClassArray&lt;ON_CurveRegionBoundaryElement&gt;</a> <a class="code" href="group__open_n_u_r_b_s.html#ga6eb12bba64f5862e83e082e222309dd2">ON_CurveRegionBoundary</a>;</div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160; </div>
+<div class="line"><a name="l00970"></a><span class="lineno"><a class="line" href="group__open_n_u_r_b_s.html#ga6eb12bba64f5862e83e082e222309dd2">  970</a></span>&#160;<span class="comment">//A list of region boundaries that bound a single connected region of the plane.</span></div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;<span class="comment">//The first boundary is always the outer boundary.</span></div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;<span class="keyword">typedef</span> <a class="code" href="class_o_n___class_array.html">ON_ClassArray&lt;ON_CurveRegionBoundary&gt;</a> <a class="code" href="group__open_n_u_r_b_s.html#ga843dcf411d64e7d2128c3ba37902914a">ON_CurveRegion</a>;</div>
+<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160; </div>
+<div class="line"><a name="l00974"></a><span class="lineno"><a class="line" href="group__open_n_u_r_b_s.html#ga843dcf411d64e7d2128c3ba37902914a">  974</a></span>&#160; </div>
+<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gaeec70151e703b808ab57d0626db20e1f"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gaeec70151e703b808ab57d0626db20e1f">ON_OBJECT_DECLARE</a></div><div class="ttdeci">#define ON_OBJECT_DECLARE(cls)</div><div class="ttdef"><b>Definition:</b> opennurbs_object.h:312</div></div>
+<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga6940cf29f871aaf7049d55eaa88c5062"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga6940cf29f871aaf7049d55eaa88c5062">ON_GradientType</a></div><div class="ttdeci">ON_GradientType</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:697</div></div>
 <div class="ttc" id="aclass_o_n___hatch_pattern_html"><div class="ttname"><a href="class_o_n___hatch_pattern.html">ON_HatchPattern</a></div><div class="ttdef"><b>Definition:</b> opennurbs_hatch.h:345</div></div>
 <div class="ttc" id="aclass_o_n___interval_html"><div class="ttname"><a href="class_o_n___interval.html">ON_Interval</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:49</div></div>
 <div class="ttc" id="aclass_o_n___hatch_line_html"><div class="ttname"><a href="class_o_n___hatch_line.html">ON_HatchLine</a></div><div class="ttdef"><b>Definition:</b> opennurbs_hatch.h:139</div></div>
-<div class="ttc" id="aclass_o_n__2d_vector_html_a2f9dd18fe13c0bd3e85cde1db1eee97b"><div class="ttname"><a href="class_o_n__2d_vector.html#a2f9dd18fe13c0bd3e85cde1db1eee97b">ON_2dVector::ZeroVector</a></div><div class="ttdeci">static const ON_2dVector ZeroVector</div><div class="ttdoc">(0.0,0.0)</div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:884</div></div>
-<div class="ttc" id="aclass_o_n__2d_point_html_a61c18ee7b2ac577050c0bc21b793eb1b"><div class="ttname"><a href="class_o_n__2d_point.html#a61c18ee7b2ac577050c0bc21b793eb1b">ON_2dPoint::Origin</a></div><div class="ttdeci">static const ON_2dPoint Origin</div><div class="ttdoc">(0.0,0.0)</div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:308</div></div>
 <div class="ttc" id="aclass_o_n___class_array_html"><div class="ttname"><a href="class_o_n___class_array.html">ON_ClassArray&lt; ON_HatchLine &gt;</a></div></div>
 <div class="ttc" id="aclass_o_n___model_component_html"><div class="ttname"><a href="class_o_n___model_component.html">ON_ModelComponent</a></div><div class="ttdef"><b>Definition:</b> opennurbs_model_component.h:28</div></div>
-<div class="ttc" id="aclass_o_n__2d_point_html"><div class="ttname"><a href="class_o_n__2d_point.html">ON_2dPoint</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:295</div></div>
-<div class="ttc" id="aclass_o_n___curve_region_boundary_element_html"><div class="ttname"><a href="class_o_n___curve_region_boundary_element.html">ON_CurveRegionBoundaryElement</a></div><div class="ttdef"><b>Definition:</b> opennurbs_hatch.h:898</div></div>
+<div class="ttc" id="aclass_o_n__2d_point_html"><div class="ttname"><a href="class_o_n__2d_point.html">ON_2dPoint</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:308</div></div>
+<div class="ttc" id="aclass_o_n___curve_region_boundary_element_html"><div class="ttname"><a href="class_o_n___curve_region_boundary_element.html">ON_CurveRegionBoundaryElement</a></div><div class="ttdef"><b>Definition:</b> opennurbs_hatch.h:957</div></div>
 <div class="ttc" id="agroup___rhino_html_gga92ddae21b919495f4f225191041764aea3663598d5c5858b5a6040b1bbed4f187"><div class="ttname"><a href="group___rhino.html#gga92ddae21b919495f4f225191041764aea3663598d5c5858b5a6040b1bbed4f187">RhinoDashStyle::Dash</a></div><div class="ttdeci">@ Dash</div></div>
-<div class="ttc" id="aclass_o_n_html_a328d22b5ad7bf9d4e9ba1123355d3cf9"><div class="ttname"><a href="class_o_n.html#a328d22b5ad7bf9d4e9ba1123355d3cf9">ON::object_type</a></div><div class="ttdeci">object_type</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:1977</div></div>
+<div class="ttc" id="aclass_o_n_html_a328d22b5ad7bf9d4e9ba1123355d3cf9"><div class="ttname"><a href="class_o_n.html#a328d22b5ad7bf9d4e9ba1123355d3cf9">ON::object_type</a></div><div class="ttdeci">object_type</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:2010</div></div>
 <div class="ttc" id="aclass_o_n___curve_html"><div class="ttname"><a href="class_o_n___curve.html">ON_Curve</a></div><div class="ttdef"><b>Definition:</b> opennurbs_curve.h:94</div></div>
 <div class="ttc" id="aclass_o_n___xform_html"><div class="ttname"><a href="class_o_n___xform.html">ON_Xform</a></div><div class="ttdef"><b>Definition:</b> opennurbs_xform.h:31</div></div>
-<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga6eb12bba64f5862e83e082e222309dd2"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga6eb12bba64f5862e83e082e222309dd2">ON_CurveRegionBoundary</a></div><div class="ttdeci">ON_ClassArray&lt; ON_CurveRegionBoundaryElement &gt; ON_CurveRegionBoundary</div><div class="ttdoc">A list of curve subdomains that form a closed boundary with active space on the left.</div><div class="ttdef"><b>Definition:</b> opennurbs_hatch.h:911</div></div>
-<div class="ttc" id="aclass_o_n___model_component_reference_html"><div class="ttname"><a href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a></div><div class="ttdoc">ON_ModelComponentReference is a persistent reference to a model component. ON_ModelComponentReference...</div><div class="ttdef"><b>Definition:</b> opennurbs_model_component.h:1709</div></div>
+<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga6eb12bba64f5862e83e082e222309dd2"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga6eb12bba64f5862e83e082e222309dd2">ON_CurveRegionBoundary</a></div><div class="ttdeci">ON_ClassArray&lt; ON_CurveRegionBoundaryElement &gt; ON_CurveRegionBoundary</div><div class="ttdoc">A list of curve subdomains that form a closed boundary with active space on the left.</div><div class="ttdef"><b>Definition:</b> opennurbs_hatch.h:970</div></div>
+<div class="ttc" id="aclass_o_n___model_component_reference_html"><div class="ttname"><a href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a></div><div class="ttdoc">ON_ModelComponentReference is a persistent reference to a model component. ON_ModelComponentReference...</div><div class="ttdef"><b>Definition:</b> opennurbs_model_component.h:1714</div></div>
 <div class="ttc" id="aclass_o_n___simple_array_html"><div class="ttname"><a href="class_o_n___simple_array.html">ON_SimpleArray&lt; double &gt;</a></div></div>
 <div class="ttc" id="aclass_o_n___bounding_box_html"><div class="ttname"><a href="class_o_n___bounding_box.html">ON_BoundingBox</a></div><div class="ttdef"><b>Definition:</b> opennurbs_bounding_box.h:28</div></div>
 <div class="ttc" id="aclass_o_n___hatch_loop_html_a6051c6354c7237bd9b26635208d040ad"><div class="ttname"><a href="class_o_n___hatch_loop.html#a6051c6354c7237bd9b26635208d040ad">ON_HatchLoop::eLoopType</a></div><div class="ttdeci">eLoopType</div><div class="ttdef"><b>Definition:</b> opennurbs_hatch.h:50</div></div>
 <div class="ttc" id="aclass_o_n__w_string_html"><div class="ttname"><a href="class_o_n__w_string.html">ON_wString</a></div><div class="ttdef"><b>Definition:</b> opennurbs_string.h:2136</div></div>
 <div class="ttc" id="agroup___r_d_k_html_ggae009bb548af4c3651e39048eb4f3b943a0d3adee051531c15b3509b4d4d75ce7b"><div class="ttname"><a href="group___r_d_k.html#ggae009bb548af4c3651e39048eb4f3b943a0d3adee051531c15b3509b4d4d75ce7b">RhRdkRenderMeshPrimitiveTypes::Plane</a></div><div class="ttdeci">@ Plane</div></div>
 <div class="ttc" id="aclass_o_n___geometry_html"><div class="ttname"><a href="class_o_n___geometry.html">ON_Geometry</a></div><div class="ttdef"><b>Definition:</b> opennurbs_geometry.h:39</div></div>
-<div class="ttc" id="aclass_o_n___hatch_html"><div class="ttname"><a href="class_o_n___hatch.html">ON_Hatch</a></div><div class="ttdef"><b>Definition:</b> opennurbs_hatch.h:571</div></div>
+<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga61c18ee7b2ac577050c0bc21b793eb1b"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga61c18ee7b2ac577050c0bc21b793eb1b">ON_2dPoint::Origin</a></div><div class="ttdeci">static const ON_2dPoint Origin</div><div class="ttdoc">(0.0,0.0)</div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:321</div></div>
+<div class="ttc" id="aclass_o_n___hatch_html"><div class="ttname"><a href="class_o_n___hatch.html">ON_Hatch</a></div><div class="ttdef"><b>Definition:</b> opennurbs_hatch.h:572</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gga6f5c1d4d88bb5eccd2afaacde27f9ef3ac9f88e098f6fe4e4e112eeb05ccb9671"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gga6f5c1d4d88bb5eccd2afaacde27f9ef3ac9f88e098f6fe4e4e112eeb05ccb9671">ON_3dmArchiveTableType::Unset</a></div><div class="ttdeci">@ Unset</div></div>
-<div class="ttc" id="aclass_o_n___brep_html"><div class="ttname"><a href="class_o_n___brep.html">ON_Brep</a></div><div class="ttdef"><b>Definition:</b> opennurbs_brep.h:1688</div></div>
+<div class="ttc" id="aclass_o_n___brep_html"><div class="ttname"><a href="class_o_n___brep.html">ON_Brep</a></div><div class="ttdef"><b>Definition:</b> opennurbs_brep.h:1865</div></div>
 <div class="ttc" id="agroup___rhino_html_gga92ddae21b919495f4f225191041764aeae41480b6bbfbf7407974a88d3d34f4fa"><div class="ttname"><a href="group___rhino.html#gga92ddae21b919495f4f225191041764aeae41480b6bbfbf7407974a88d3d34f4fa">RhinoDashStyle::Solid</a></div><div class="ttdeci">@ Solid</div></div>
 <div class="ttc" id="aclass_o_n___plane_html"><div class="ttname"><a href="class_o_n___plane.html">ON_Plane</a></div><div class="ttdef"><b>Definition:</b> opennurbs_plane.h:23</div></div>
-<div class="ttc" id="aclass_o_n___object_array_html"><div class="ttname"><a href="class_o_n___object_array.html">ON_ObjectArray</a></div><div class="ttdef"><b>Definition:</b> opennurbs_array.h:736</div></div>
+<div class="ttc" id="aclass_o_n___object_array_html"><div class="ttname"><a href="class_o_n___object_array.html">ON_ObjectArray</a></div><div class="ttdef"><b>Definition:</b> opennurbs_array.h:741</div></div>
 <div class="ttc" id="agroup___rhino_html_ggaf2392ae606e7fb725ce1de9fea95bf0fa9e0e31246b7b078403969b265870b3f4"><div class="ttname"><a href="group___rhino.html#ggaf2392ae606e7fb725ce1de9fea95bf0fa9e0e31246b7b078403969b265870b3f4">RhinoPropertiesPanelPageType::Dimension</a></div><div class="ttdeci">@ Dimension</div><div class="ttdoc">If page is provided by Rhino and only dimensions are selected, activate this page.</div></div>
-<div class="ttc" id="aclass_o_n___binary_archive_html"><div class="ttname"><a href="class_o_n___binary_archive.html">ON_BinaryArchive</a></div><div class="ttdoc">&lt; use for generic serialization of binary data</div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:2014</div></div>
+<div class="ttc" id="aclass_o_n___binary_archive_html"><div class="ttname"><a href="class_o_n___binary_archive.html">ON_BinaryArchive</a></div><div class="ttdoc">&lt; use for generic serialization of binary data</div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:2035</div></div>
 <div class="ttc" id="aclass_o_n___text_log_html"><div class="ttname"><a href="class_o_n___text_log.html">ON_TextLog</a></div><div class="ttdef"><b>Definition:</b> opennurbs_textlog.h:22</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga1b9bbb0fba1d3a5fae3accc23a26e990"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a></div><div class="ttdeci">#define ON_NOEXCEPT</div><div class="ttdef"><b>Definition:</b> opennurbs_system_compiler.h:66</div></div>
-<div class="ttc" id="aclass_o_n__3d_point_html"><div class="ttname"><a href="class_o_n__3d_point.html">ON_3dPoint</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:483</div></div>
+<div class="ttc" id="aclass_o_n__3d_point_html"><div class="ttname"><a href="class_o_n__3d_point.html">ON_3dPoint</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:517</div></div>
 <div class="ttc" id="aclass_o_n___hatch_pattern_html_a0034c984b918c03c6ccf4e5c4cbc6007"><div class="ttname"><a href="class_o_n___hatch_pattern.html#a0034c984b918c03c6ccf4e5c4cbc6007">ON_HatchPattern::HatchFillType</a></div><div class="ttdeci">HatchFillType</div><div class="ttdef"><b>Definition:</b> opennurbs_hatch.h:398</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gac741bf9e3823a5cd9e18198228f2329e"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a></div><div class="ttdeci">#define ON_CLASS</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:115</div></div>
+<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga2f9dd18fe13c0bd3e85cde1db1eee97b"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga2f9dd18fe13c0bd3e85cde1db1eee97b">ON_2dVector::ZeroVector</a></div><div class="ttdeci">static const ON_2dVector ZeroVector</div><div class="ttdoc">(0.0,0.0)</div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:950</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gab8eeb61ad6680d79be132cee16b1abf8"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gab8eeb61ad6680d79be132cee16b1abf8">operator!=</a></div><div class="ttdeci">ON_DECL bool operator!=(const ON_ManifestMapItem &amp;lhs, const ON_ManifestMapItem &amp;rhs)</div></div>
 <div class="ttc" id="aclass_o_n__w_string_html_ab9c20b8013ccb7ca12828a2fd935f5ad"><div class="ttname"><a href="class_o_n__w_string.html#ab9c20b8013ccb7ca12828a2fd935f5ad">ON_wString::EmptyString</a></div><div class="ttdeci">static const ON_wString EmptyString</div><div class="ttdef"><b>Definition:</b> opennurbs_string.h:2142</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gaf216ef4a1e828721ca8bfa456bba1bd8"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gaf216ef4a1e828721ca8bfa456bba1bd8">operator==</a></div><div class="ttdeci">ON_DECL bool operator==(const ON_ManifestMapItem &amp;lhs, const ON_ManifestMapItem &amp;rhs)</div></div>
 <div class="ttc" id="aclass_o_n___hatch_loop_html"><div class="ttname"><a href="class_o_n___hatch_loop.html">ON_HatchLoop</a></div><div class="ttdef"><b>Definition:</b> opennurbs_hatch.h:28</div></div>
-<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga843dcf411d64e7d2128c3ba37902914a"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga843dcf411d64e7d2128c3ba37902914a">ON_CurveRegion</a></div><div class="ttdeci">ON_ClassArray&lt; ON_CurveRegionBoundary &gt; ON_CurveRegion</div><div class="ttdef"><b>Definition:</b> opennurbs_hatch.h:915</div></div>
-<div class="ttc" id="aclass_o_n__2d_vector_html"><div class="ttname"><a href="class_o_n__2d_vector.html">ON_2dVector</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:871</div></div>
+<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga843dcf411d64e7d2128c3ba37902914a"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga843dcf411d64e7d2128c3ba37902914a">ON_CurveRegion</a></div><div class="ttdeci">ON_ClassArray&lt; ON_CurveRegionBoundary &gt; ON_CurveRegion</div><div class="ttdef"><b>Definition:</b> opennurbs_hatch.h:974</div></div>
+<div class="ttc" id="aclass_o_n__2d_vector_html"><div class="ttname"><a href="class_o_n__2d_vector.html">ON_2dVector</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:937</div></div>
 <div class="ttc" id="aclass_o_n___hatch_pattern_html_a0034c984b918c03c6ccf4e5c4cbc6007ae41480b6bbfbf7407974a88d3d34f4fa"><div class="ttname"><a href="class_o_n___hatch_pattern.html#a0034c984b918c03c6ccf4e5c4cbc6007ae41480b6bbfbf7407974a88d3d34f4fa">ON_HatchPattern::HatchFillType::Solid</a></div><div class="ttdeci">@ Solid</div><div class="ttdoc">uses entity color</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:12:50 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:14 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

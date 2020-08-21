@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -77,6 +77,11 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr class="memitem:a8b4d042458fc38cad267ab0c1dcf0178"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_mask.html#a8b4d042458fc38cad267ab0c1dcf0178">MaskFrame</a> : unsigned char { <a class="el" href="class_o_n___text_mask.html#a8b4d042458fc38cad267ab0c1dcf0178a4d3a38177f524037379ef069aa3c5bdc">MaskFrame::NoFrame</a> = 0, 
+<a class="el" href="class_o_n___text_mask.html#a8b4d042458fc38cad267ab0c1dcf0178aa9ba3bde80ff5aaae636c3a8cfa3e612">MaskFrame::RectFrame</a> = 1
+ }</td></tr>
+<tr class="memdesc:a8b4d042458fc38cad267ab0c1dcf0178"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a frame stroke around the text mask area  <a href="class_o_n___text_mask.html#a8b4d042458fc38cad267ab0c1dcf0178">More...</a><br /></td></tr>
+<tr class="separator:a8b4d042458fc38cad267ab0c1dcf0178"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d60c00ecd4e154a98677676f94cbb2b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_mask.html#a7d60c00ecd4e154a98677676f94cbb2b">MaskType</a> : unsigned char { <a class="el" href="class_o_n___text_mask.html#a7d60c00ecd4e154a98677676f94cbb2ba9927759828bc91abb6319a9f98978185">MaskType::BackgroundColor</a> = 0, 
 <a class="el" href="class_o_n___text_mask.html#a7d60c00ecd4e154a98677676f94cbb2bad030b6843f1bfbdf39d7acf3d22a370b">MaskType::MaskColor</a> = 1
  }</td></tr>
@@ -102,6 +107,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6c854248040f999b8168f4e515fd2e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab35082c3632dd4ac578c4a3bb6f2b527"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___text_mask.html#a7d60c00ecd4e154a98677676f94cbb2b">ON_TextMask::MaskType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_mask.html#ab35082c3632dd4ac578c4a3bb6f2b527">MaskFillType</a> () const</td></tr>
 <tr class="separator:ab35082c3632dd4ac578c4a3bb6f2b527"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69b94a53842ac6a7bf8c007dc2ad3874"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___text_mask.html#a8b4d042458fc38cad267ab0c1dcf0178">ON_TextMask::MaskFrame</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_mask.html#a69b94a53842ac6a7bf8c007dc2ad3874">MaskFrameType</a> () const</td></tr>
+<tr class="memdesc:a69b94a53842ac6a7bf8c007dc2ad3874"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether or not to draw a rectangular frame around a text mask.  <a href="class_o_n___text_mask.html#a69b94a53842ac6a7bf8c007dc2ad3874">More...</a><br /></td></tr>
+<tr class="separator:a69b94a53842ac6a7bf8c007dc2ad3874"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac34609b18f251b0d93fd6acc5a4884f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___text_mask.html">ON_TextMask</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_mask.html#ac34609b18f251b0d93fd6acc5a4884f9">operator=</a> (const <a class="el" href="class_o_n___text_mask.html">ON_TextMask</a> &amp;src)=default</td></tr>
 <tr class="separator:ac34609b18f251b0d93fd6acc5a4884f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b544953efc8b1c0b8d850c5ec6690bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_mask.html#a9b544953efc8b1c0b8d850c5ec6690bf">Read</a> (<a class="el" href="class_o_n___binary_archive.html">ON_BinaryArchive</a> &amp;archive)</td></tr>
@@ -114,6 +122,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad7bd4e6c9b1f277a829e650f0a30029e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f2028460b26b70370e1e600cd3d5449"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_mask.html#a2f2028460b26b70370e1e600cd3d5449">SetMaskFillType</a> (<a class="el" href="class_o_n___text_mask.html#a7d60c00ecd4e154a98677676f94cbb2b">ON_TextMask::MaskType</a> source)</td></tr>
 <tr class="separator:a2f2028460b26b70370e1e600cd3d5449"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b9623c5f4fc033b29338d7544299900"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_mask.html#a9b9623c5f4fc033b29338d7544299900">SetMaskFrameType</a> (<a class="el" href="class_o_n___text_mask.html#a8b4d042458fc38cad267ab0c1dcf0178">ON_TextMask::MaskFrame</a> frame)</td></tr>
+<tr class="separator:a9b9623c5f4fc033b29338d7544299900"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab45d4592c1aafa22adca0cee3e3cb860"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_mask.html#ab45d4592c1aafa22adca0cee3e3cb860">Write</a> (<a class="el" href="class_o_n___binary_archive.html">ON_BinaryArchive</a> &amp;archive) const</td></tr>
 <tr class="separator:ab45d4592c1aafa22adca0cee3e3cb860"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -121,8 +131,10 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ae98ea6f1f5af0245ec4899a7078b3f54"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_mask.html#ae98ea6f1f5af0245ec4899a7078b3f54">Compare</a> (const <a class="el" href="class_o_n___text_mask.html">ON_TextMask</a> &amp;lhs, const <a class="el" href="class_o_n___text_mask.html">ON_TextMask</a> &amp;rhs)</td></tr>
 <tr class="separator:ae98ea6f1f5af0245ec4899a7078b3f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad63d69708c421a39a9d67ccfedc355eb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_o_n___text_mask.html#a7d60c00ecd4e154a98677676f94cbb2b">ON_TextMask::MaskType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_mask.html#ad63d69708c421a39a9d67ccfedc355eb">MaskTypeFromUnsigned</a> (unsigned int mask_type_as_unsigned)</td></tr>
-<tr class="separator:ad63d69708c421a39a9d67ccfedc355eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a038f5c357e363e50c8b1aad92741dfb4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_o_n___text_mask.html#a8b4d042458fc38cad267ab0c1dcf0178">ON_TextMask::MaskFrame</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_mask.html#a038f5c357e363e50c8b1aad92741dfb4">MaskFrameFromUnsigned</a> (unsigned int mask_frame_as_unsigned)</td></tr>
+<tr class="separator:a038f5c357e363e50c8b1aad92741dfb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6fe5ea330c0989b71b6ec1ee6c2b3f0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_o_n___text_mask.html#a7d60c00ecd4e154a98677676f94cbb2b">ON_TextMask::MaskType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___text_mask.html#ab6fe5ea330c0989b71b6ec1ee6c2b3f0">MaskTypeFromUnsigned</a> (unsigned int mask_border_as_unsigned)</td></tr>
+<tr class="separator:ab6fe5ea330c0989b71b6ec1ee6c2b3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -130,6 +142,36 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a66d3c442508ce2d3f81b105933c20be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a8b4d042458fc38cad267ab0c1dcf0178"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b4d042458fc38cad267ab0c1dcf0178">&#9670;&nbsp;</a></span>MaskFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_o_n___text_mask.html#a8b4d042458fc38cad267ab0c1dcf0178">ON_TextMask::MaskFrame</a> : unsigned char</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draw a frame stroke around the text mask area </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a8b4d042458fc38cad267ab0c1dcf0178a4d3a38177f524037379ef069aa3c5bdc"></a>NoFrame&#160;</td><td class="fielddoc"><p>Text mask frame not drawn </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8b4d042458fc38cad267ab0c1dcf0178aa9ba3bde80ff5aaae636c3a8cfa3e612"></a>RectFrame&#160;</td><td class="fielddoc"><p>Text mask frame outline rectangle drawn </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="a7d60c00ecd4e154a98677676f94cbb2b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7d60c00ecd4e154a98677676f94cbb2b">&#9670;&nbsp;</a></span>MaskType</h2>
 
@@ -367,8 +409,53 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ad63d69708c421a39a9d67ccfedc355eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad63d69708c421a39a9d67ccfedc355eb">&#9670;&nbsp;</a></span>MaskTypeFromUnsigned()</h2>
+<a id="a038f5c357e363e50c8b1aad92741dfb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a038f5c357e363e50c8b1aad92741dfb4">&#9670;&nbsp;</a></span>MaskFrameFromUnsigned()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_o_n___text_mask.html#a8b4d042458fc38cad267ab0c1dcf0178">ON_TextMask::MaskFrame</a> ON_TextMask::MaskFrameFromUnsigned </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>mask_frame_as_unsigned</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69b94a53842ac6a7bf8c007dc2ad3874"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69b94a53842ac6a7bf8c007dc2ad3874">&#9670;&nbsp;</a></span>MaskFrameType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_o_n___text_mask.html#a8b4d042458fc38cad267ab0c1dcf0178">ON_TextMask::MaskFrame</a> ON_TextMask::MaskFrameType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determines whether or not to draw a rectangular frame around a text mask. </p>
+
+</div>
+</div>
+<a id="ab6fe5ea330c0989b71b6ec1ee6c2b3f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6fe5ea330c0989b71b6ec1ee6c2b3f0">&#9670;&nbsp;</a></span>MaskTypeFromUnsigned()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -380,7 +467,7 @@ Static Public Attributes</h2></td></tr>
           <td class="memname">static <a class="el" href="class_o_n___text_mask.html#a7d60c00ecd4e154a98677676f94cbb2b">ON_TextMask::MaskType</a> ON_TextMask::MaskTypeFromUnsigned </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>mask_type_as_unsigned</em></td><td>)</td>
+          <td class="paramname"><em>mask_border_as_unsigned</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -509,6 +596,24 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a9b9623c5f4fc033b29338d7544299900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b9623c5f4fc033b29338d7544299900">&#9670;&nbsp;</a></span>SetMaskFrameType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ON_TextMask::SetMaskFrameType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_o_n___text_mask.html#a8b4d042458fc38cad267ab0c1dcf0178">ON_TextMask::MaskFrame</a>&#160;</td>
+          <td class="paramname"><em>frame</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab45d4592c1aafa22adca0cee3e3cb860"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab45d4592c1aafa22adca0cee3e3cb860">&#9670;&nbsp;</a></span>Write()</h2>
 
@@ -554,7 +659,7 @@ Static Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:30 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:58 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

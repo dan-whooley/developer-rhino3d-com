@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -82,6 +82,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8d0a117de21df998510e5079ca7fd5ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd5e82262065cf38c60c3da0b1b0fd0b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___hash32_table_item.html#acd5e82262065cf38c60c3da0b1b0fd0b">~ON_Hash32TableItem</a> ()=default</td></tr>
 <tr class="separator:acd5e82262065cf38c60c3da0b1b0fd0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7240811f886783c2de65dee99a546555"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___hash32_table_item.html#a7240811f886783c2de65dee99a546555">ClearHashTableSerialNumberForExperts</a> ()</td></tr>
+<tr class="separator:a7240811f886783c2de65dee99a546555"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a172a42a6ad297f17c51383f55869eb43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___hash32_table_item.html#a172a42a6ad297f17c51383f55869eb43">HashTableItemHash</a> () const</td></tr>
+<tr class="separator:a172a42a6ad297f17c51383f55869eb43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a983025533e0eead3faaa661096cc9a8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___hash32_table_item.html#a983025533e0eead3faaa661096cc9a8d">HashTableSerialNumber</a> () const</td></tr>
 <tr class="separator:a983025533e0eead3faaa661096cc9a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c1acbee4b1d0863c9f0c6ef3f5df0fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___hash32_table_item.html">ON_Hash32TableItem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___hash32_table_item.html#a8c1acbee4b1d0863c9f0c6ef3f5df0fa">operator=</a> (const <a class="el" href="class_o_n___hash32_table_item.html">ON_Hash32TableItem</a> &amp;)=default</td></tr>
@@ -180,6 +184,24 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7240811f886783c2de65dee99a546555"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7240811f886783c2de65dee99a546555">&#9670;&nbsp;</a></span>ClearHashTableSerialNumberForExperts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ON_Hash32TableItem::ClearHashTableSerialNumberForExperts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Useful when copying hash tables to remove the hash table reference from a copied hash item. Never remove the hash table reference from an item that is still in a hash table. </p>
+
+</div>
+</div>
 <a id="a14aa4162fb83c5e06d508104e01793f9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a14aa4162fb83c5e06d508104e01793f9">&#9670;&nbsp;</a></span>Hash32FromId()</h2>
 
@@ -229,6 +251,26 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a172a42a6ad297f17c51383f55869eb43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a172a42a6ad297f17c51383f55869eb43">&#9670;&nbsp;</a></span>HashTableItemHash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a> ON_Hash32TableItem::HashTableItemHash </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns: If this item has been added to an ON_Hash32Table.AddItem(hash32,item pointer) then the value of hash3d passed as the first argument to ON_Hash32Table.AddItem(hash32,item pointer) is returned. This is the value the <a class="el" href="class_o_n___hash32_table.html">ON_Hash32Table</a> uses for this item. Othewise 0 is returned. Remarks: This function is useful when copying hash tables.</p>
+<p>count = src_hash_table.ItemCount(); MyHashTableItems src_items[count]; ///&lt; items added to src_hash_table</p>
+<p>/ copy src_hash_table MyHashTableItems copied_items[count]; copied_items = src_items; for (unsigned i = 0; i &lt; count; ++i) { ON_SubDSurfaceInterpolatortHash32TableItem&amp; hitem = copied_items[i]; hitem.ClearHashTableSerialNumberForExperts(); m_htable.AddItem(hitem.HashTableItemHash(), &amp;hitem); } </p>
 
 </div>
 </div>
@@ -301,7 +343,7 @@ Friends</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:24 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:50 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

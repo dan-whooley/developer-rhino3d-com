@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['makeradiussplinedata_45281',['MakeRadiusSplineData',['../group___rhino.html#ga84d880bb69e74070637cec7c8c86f1ce',1,'rhinoSdkUtilities.h']]]
+  ['lpcustominfo_49897',['LPCUSTOMINFO',['../class_c_rhino_ui_tabbed_sheet_ctrl_msg.html#a62622c8194e4352eb9bcc393a8c221cb',1,'CRhinoUiTabbedSheetCtrlMsg']]],
+  ['lprhinouioptionslistctrlnm_49898',['LPRhinoUiOptionsListCtrlNM',['../group___rhino_u_i.html#gacebd5a8758526decc65046300175b214',1,'RhinoSdkUiOptionsListCtrl.h']]]
 ];

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -135,6 +135,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3850c7b3c922abb20994415f7964cb3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8acd25cffbc1763b2b8300d8e15c147e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_rhino_app.html#a8acd25cffbc1763b2b8300d8e15c147e">OnClose</a> ()</td></tr>
 <tr class="separator:a8acd25cffbc1763b2b8300d8e15c147e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36055912491767899d3a0c02ee9b8f74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_rhino_app.html#a36055912491767899d3a0c02ee9b8f74">OnMRApplicationTerminate</a> ()</td></tr>
+<tr class="separator:a36055912491767899d3a0c02ee9b8f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03b48f63cd595726a0a566143d076cdf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_rhino_app.html#a03b48f63cd595726a0a566143d076cdf">OnMRApplicationTerminateCancel</a> ()</td></tr>
+<tr class="separator:a03b48f63cd595726a0a566143d076cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb781ff6bc3ca1a7734333418b3c46f6"><td class="memItemLeft" align="right" valign="top">CDocument *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_rhino_app.html#adb781ff6bc3ca1a7734333418b3c46f6">OpenDocumentFile</a> (const wchar_t *)</td></tr>
 <tr class="separator:adb781ff6bc3ca1a7734333418b3c46f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedfaf0930bec9aa16cf79ccd44e6da59"><td class="memItemLeft" align="right" valign="top">const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_rhino_app.html#aedfaf0930bec9aa16cf79ccd44e6da59">ProfileName</a> () const override</td></tr>
@@ -163,7 +167,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6de1daa5fdc27b81a9fe353629bd4e85 inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a6de1daa5fdc27b81a9fe353629bd4e85">~CRhinoApp</a> ()</td></tr>
 <tr class="separator:a6de1daa5fdc27b81a9fe353629bd4e85 inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40d4a7b79a094600e550828f974d0294 inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a40d4a7b79a094600e550828f974d0294">AcceleratorKeyDown</a> (UINT nChar, UINT nRepCnt, UINT nFlags)</td></tr>
-<tr class="memdesc:a40d4a7b79a094600e550828f974d0294 inherit pub_methods_class_c_rhino_app"><td class="mdescLeft">&#160;</td><td class="mdescRight">From CmdWndRichEditCtrl.cpp.  <a href="class_c_rhino_app.html#a40d4a7b79a094600e550828f974d0294">More...</a><br /></td></tr>
 <tr class="separator:a40d4a7b79a094600e550828f974d0294 inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d1268c2cbcec1199c36b6222434ba00 inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a2d1268c2cbcec1199c36b6222434ba00">ActivateCommandWindowCaret</a> () const</td></tr>
 <tr class="memdesc:a2d1268c2cbcec1199c36b6222434ba00 inherit pub_methods_class_c_rhino_app"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activates flashing caret in command prompt.  <a href="class_c_rhino_app.html#a2d1268c2cbcec1199c36b6222434ba00">More...</a><br /></td></tr>
@@ -207,6 +210,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6aad722c5c8cf0bdf02a156afc7a4cf1 inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf5fc4ec63caf26b97a494e0f6e8820c inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#aaf5fc4ec63caf26b97a494e0f6e8820c">CanSave</a> ()</td></tr>
 <tr class="separator:aaf5fc4ec63caf26b97a494e0f6e8820c inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af94ecfba0c9c8b8295f9e60de240f100 inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#af94ecfba0c9c8b8295f9e60de240f100">CaptureCommandWindowPrint</a> (bool enabled)</td></tr>
+<tr class="separator:af94ecfba0c9c8b8295f9e60de240f100 inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a104ee6ab221f78e75cd7af813fc09cbd inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a104ee6ab221f78e75cd7af813fc09cbd">CaptureCommandWindowPrintEnabled</a> () const</td></tr>
+<tr class="separator:a104ee6ab221f78e75cd7af813fc09cbd inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fe049052eb076992bc89016a4550013 inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a6fe049052eb076992bc89016a4550013">ClearCommandHistoryWindowText</a> ()</td></tr>
 <tr class="separator:a6fe049052eb076992bc89016a4550013 inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79ffdcc982ad9bdb33f3e4ccf052a7b9 inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a79ffdcc982ad9bdb33f3e4ccf052a7b9">ClearCursorToolTip</a> ()</td></tr>
@@ -224,6 +231,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a596dbd5d5119a6b167963fce2a59addd inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80a6b8d928a1ce03a70d202897455743 inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_c_rhino_app_1_1_c_rh_mru_command_record.html">CRhMruCommandRecord</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a80a6b8d928a1ce03a70d202897455743">CommandToRepeat</a> () const</td></tr>
 <tr class="separator:a80a6b8d928a1ce03a70d202897455743 inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe6d470f46db0d1aa3238e38beab9cb5 inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#afe6d470f46db0d1aa3238e38beab9cb5">CommandWindowCapturedStrings</a> (<a class="el" href="class_o_n___class_array.html">ON_ClassArray</a>&lt; <a class="el" href="class_o_n__w_string.html">ON_wString</a> &gt; &amp;strings, bool clearBuffer)</td></tr>
+<tr class="separator:afe6d470f46db0d1aa3238e38beab9cb5 inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d968d2da47c5c7e6340375601022e0f inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a5d968d2da47c5c7e6340375601022e0f">CreateOsnapCursors</a> (int)</td></tr>
 <tr class="separator:a5d968d2da47c5c7e6340375601022e0f inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfd599644864462d08f477f051573dc2 inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#adfd599644864462d08f477f051573dc2">CreateRhinoView</a> (unsigned int rhino_doc_sn, const <a class="el" href="class_o_n__3dm_view.html">ON_3dmView</a> *view, CRuntimeClass *pMfcViewRuntimeClass, bool bShowView)</td></tr>
@@ -330,6 +339,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa6e71112f54a86e8fc6e76167f12456c inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acace90e26ffcada4650f5a38069a2237 inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> LPUNKNOWN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#acace90e26ffcada4650f5a38069a2237">GetPlugInObjectInterface</a> (const <a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a> &amp;plugin_uuid, const <a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a> &amp;interface_uuid)</td></tr>
 <tr class="separator:acace90e26ffcada4650f5a38069a2237 inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b757ef3f1a5798fcc34b02d9905d8c5 inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a5b757ef3f1a5798fcc34b02d9905d8c5">GetProtocolHandlerUrl</a> (<a class="el" href="class_o_n__w_string.html">ON_wString</a> &amp;protocolHandlerUrl)</td></tr>
+<tr class="separator:a5b757ef3f1a5798fcc34b02d9905d8c5 inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9ce4d52055e78438aabc9f24ef74b1c inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#ac9ce4d52055e78438aabc9f24ef74b1c">GetRhinoGlobalOptionsRegistryPath</a> (bool bFullPath, <a class="el" href="class_o_n__w_string.html">ON_wString</a> &amp;result) const</td></tr>
 <tr class="separator:ac9ce4d52055e78438aabc9f24ef74b1c inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fc24c285f56904e49490cc2510fdb88 inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a6fc24c285f56904e49490cc2510fdb88">GetRhinoPlugInsRegistryPath</a> (bool bFullPath, <a class="el" href="class_o_n__w_string.html">ON_wString</a> &amp;result) const</td></tr>
@@ -353,6 +364,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7fe65bc53cb7baf8d44adcaa30d39728 inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b71dbed35ca71b921e8f980e8baf03e inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a7b71dbed35ca71b921e8f980e8baf03e">HideWindowBars</a> (UINT nWBMask=0xFFFFFFFF, bool bRedraw=true, const <a class="el" href="class_c_rhino_doc.html">CRhinoDoc</a> *pDoc=nullptr)</td></tr>
 <tr class="separator:a7b71dbed35ca71b921e8f980e8baf03e inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95a8293220b659b587aec3df9cb9711c inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a95a8293220b659b587aec3df9cb9711c">InAppMode</a> () const</td></tr>
+<tr class="separator:a95a8293220b659b587aec3df9cb9711c inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12f0a7f5f7666a2148fb0b81906bcfcd inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a12f0a7f5f7666a2148fb0b81906bcfcd">InCommand</a> (bool bIgnoreScriptRunnerCommands=false) const</td></tr>
 <tr class="separator:a12f0a7f5f7666a2148fb0b81906bcfcd inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add9bccb4e1b59e3d4b3ec9d48f856aa4 inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#add9bccb4e1b59e3d4b3ec9d48f856aa4">InConstructor</a> () const</td></tr>
@@ -411,6 +424,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac79bb4405e6c4f4dca7ccf7eef9b58f0 inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa13f756e0b1af9525147f1fda617186a inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#aa13f756e0b1af9525147f1fda617186a">IsRhino6UUID</a> (const <a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a>) const</td></tr>
 <tr class="separator:aa13f756e0b1af9525147f1fda617186a inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bde4d37b4dad0a633cb2419500ac3b6 inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a2bde4d37b4dad0a633cb2419500ac3b6">IsRhino7UUID</a> (const <a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a>) const</td></tr>
+<tr class="separator:a2bde4d37b4dad0a633cb2419500ac3b6 inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab62d50c981b4794b9ca91d7a1225ca0f inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#ab62d50c981b4794b9ca91d7a1225ca0f">IsRhinoUUID</a> (const <a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a>) const</td></tr>
 <tr class="separator:ab62d50c981b4794b9ca91d7a1225ca0f inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbbf2d0a4c456842954fb36b9c7929bd inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#acbbf2d0a4c456842954fb36b9c7929bd">IsSafeModeEnabled</a> () const</td></tr>
@@ -456,7 +471,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a90bdd8b64149328ed6ca02441050a74d inherit pub_methods_class_c_rhino_app"><td class="mdescLeft">&#160;</td><td class="mdescRight">ON_DEPRECATED.  <a href="class_c_rhino_app.html#a90bdd8b64149328ed6ca02441050a74d">More...</a><br /></td></tr>
 <tr class="separator:a90bdd8b64149328ed6ca02441050a74d inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a556dbb8c81a862b360796d2d67c107f0 inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a556dbb8c81a862b360796d2d67c107f0">OnAppAbout</a> ()</td></tr>
-<tr class="memdesc:a556dbb8c81a862b360796d2d67c107f0 inherit pub_methods_class_c_rhino_app"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call <a class="el" href="class_c_rhino_app.html#a71f7d2adcf5470774378b365e1be89f9">RhinoAbout()</a> externaly.  <a href="class_c_rhino_app.html#a556dbb8c81a862b360796d2d67c107f0">More...</a><br /></td></tr>
+<tr class="memdesc:a556dbb8c81a862b360796d2d67c107f0 inherit pub_methods_class_c_rhino_app"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call <a class="el" href="class_c_rhino_app.html#a71f7d2adcf5470774378b365e1be89f9">RhinoAbout()</a> externally.  <a href="class_c_rhino_app.html#a556dbb8c81a862b360796d2d67c107f0">More...</a><br /></td></tr>
 <tr class="separator:a556dbb8c81a862b360796d2d67c107f0 inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e822fa3e0040931e897c9811ef5a72d inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a2e822fa3e0040931e897c9811ef5a72d">OnAppFileNew</a> ()</td></tr>
 <tr class="separator:a2e822fa3e0040931e897c9811ef5a72d inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -527,7 +542,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac1fbde6c99b29e30052b08fd3f57eb44 inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> LPCTSTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#ac1fbde6c99b29e30052b08fd3f57eb44">RegistrySchemeName</a> () const</td></tr>
 <tr class="separator:ac1fbde6c99b29e30052b08fd3f57eb44 inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acba685b9b6abb2a3fef178dcad69237a inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#acba685b9b6abb2a3fef178dcad69237a">RememberCopyOption</a> () const</td></tr>
-<tr class="memdesc:acba685b9b6abb2a3fef178dcad69237a inherit pub_methods_class_c_rhino_app"><td class="mdescLeft">&#160;</td><td class="mdescRight">12 Nov 2010 - Lowell - Added <a class="el" href="class_c_rhino_app.html#acba685b9b6abb2a3fef178dcad69237a" title="12 Nov 2010 - Lowell - Added RememberCopyOption() - rr76147">RememberCopyOption()</a> - rr76147  <a href="class_c_rhino_app.html#acba685b9b6abb2a3fef178dcad69237a">More...</a><br /></td></tr>
 <tr class="separator:acba685b9b6abb2a3fef178dcad69237a inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43461a3934e69b11ca2e0baf9b1f733b inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a43461a3934e69b11ca2e0baf9b1f733b">RemovePageFromObjectPropertiesDialog</a> (class <a class="el" href="class_i_rhino_properties_panel_page.html">IRhinoPropertiesPanelPage</a> *pPage)</td></tr>
 <tr class="separator:a43461a3934e69b11ca2e0baf9b1f733b inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -558,8 +572,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adf9f1cac1be1953283c7e1cb273c132a inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d75ed9fed43efa5004777d19688e4cd inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> <a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a9d75ed9fed43efa5004777d19688e4cd">Rhino6_UUID</a> () const</td></tr>
 <tr class="separator:a9d75ed9fed43efa5004777d19688e4cd inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15ff0347ea72390d5ac4de40b0796ed6 inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> <a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a15ff0347ea72390d5ac4de40b0796ed6">Rhino7_UUID</a> () const</td></tr>
+<tr class="separator:a15ff0347ea72390d5ac4de40b0796ed6 inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71f7d2adcf5470774378b365e1be89f9 inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a71f7d2adcf5470774378b365e1be89f9">RhinoAbout</a> (bool bForceRhinoAbout=false) const</td></tr>
 <tr class="separator:a71f7d2adcf5470774378b365e1be89f9 inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeee0b7cc3148cef3f664a4279e9a4693 inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> LPCTSTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#aeee0b7cc3148cef3f664a4279e9a4693">RhinoCommandLine</a> () const</td></tr>
+<tr class="separator:aeee0b7cc3148cef3f664a4279e9a4693 inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd6337cacc2cb814e4aba0b12d7fbc89 inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> class <a class="el" href="class_c_rhino_command_manager.html">CRhinoCommandManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#abd6337cacc2cb814e4aba0b12d7fbc89">RhinoCommandManager</a> ()</td></tr>
 <tr class="separator:abd6337cacc2cb814e4aba0b12d7fbc89 inherit pub_methods_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a970094b2e872397d2df960ca85de55f1 inherit pub_methods_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> <a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a970094b2e872397d2df960ca85de55f1">RhinoCurrent_UUID</a> () const</td></tr>
@@ -802,7 +820,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a4053e2105f0ce01339e0547a869b0aee inherit pub_attribs_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top">HCURSOR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a4053e2105f0ce01339e0547a869b0aee">m_perp_osnap_cursor</a> = nullptr</td></tr>
 <tr class="separator:a4053e2105f0ce01339e0547a869b0aee inherit pub_attribs_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fbffced054e7dedf96d0017ee2c0556 inherit pub_attribs_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top">HCURSOR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a8fbffced054e7dedf96d0017ee2c0556">m_point_osnap_arrow_cursor</a> = nullptr</td></tr>
-<tr class="memdesc:a8fbffced054e7dedf96d0017ee2c0556 inherit pub_attribs_class_c_rhino_app"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current drag basepoint osnap cursors (arrow cursor and osnap label)  <a href="class_c_rhino_app.html#a8fbffced054e7dedf96d0017ee2c0556">More...</a><br /></td></tr>
+<tr class="memdesc:a8fbffced054e7dedf96d0017ee2c0556 inherit pub_attribs_class_c_rhino_app"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current drag base point osnap cursors (arrow cursor and osnap label)  <a href="class_c_rhino_app.html#a8fbffced054e7dedf96d0017ee2c0556">More...</a><br /></td></tr>
 <tr class="separator:a8fbffced054e7dedf96d0017ee2c0556 inherit pub_attribs_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa324e31fd04d8a253471c0c623a8add inherit pub_attribs_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top">HCURSOR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#aaa324e31fd04d8a253471c0c623a8add">m_point_osnap_cursor</a> = nullptr</td></tr>
 <tr class="memdesc:aaa324e31fd04d8a253471c0c623a8add inherit pub_attribs_class_c_rhino_app"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current osnap cursors.  <a href="class_c_rhino_app.html#aaa324e31fd04d8a253471c0c623a8add">More...</a><br /></td></tr>
@@ -865,6 +883,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a3bd48daedc306802e8519541f5b1684d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc0932229ebb35abdfbf655512a16453"><td class="memItemLeft" align="right" valign="top">pthread_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_rhino_app.html#afc0932229ebb35abdfbf655512a16453">m_main_thread_id</a></td></tr>
 <tr class="separator:afc0932229ebb35abdfbf655512a16453"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93d59cbe3b787e110fc50e608b5b3ced"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_rhino_app.html#ab4af4e24c98694320129692164fcca97">APP_STATE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_rhino_app.html#a93d59cbe3b787e110fc50e608b5b3ced">m_save_state</a> = APP_STATE::app_state_ctor_zero</td></tr>
+<tr class="separator:a93d59cbe3b787e110fc50e608b5b3ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ccb60521f85e91ebda4c16f2d48ae5b"><td class="memItemLeft" align="right" valign="top">CThreadManager *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_rhino_app.html#a3ccb60521f85e91ebda4c16f2d48ae5b">m_thread_manager</a></td></tr>
 <tr class="separator:a3ccb60521f85e91ebda4c16f2d48ae5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_c_rhino_app"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_c_rhino_app')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_c_rhino_app.html">CRhinoApp</a></td></tr>
@@ -885,7 +905,7 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a3b9b2332d6b4d82cf53aa6f843a90704 inherit pro_attribs_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a3b9b2332d6b4d82cf53aa6f843a90704">m_bNoCancelOnMainFrameClose</a> = false</td></tr>
 <tr class="separator:a3b9b2332d6b4d82cf53aa6f843a90704 inherit pro_attribs_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a087c409b8a26799e84dc4f788f8a273f inherit pro_attribs_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#a087c409b8a26799e84dc4f788f8a273f">m_bRememberCopyOption</a> = true</td></tr>
-<tr class="memdesc:a087c409b8a26799e84dc4f788f8a273f inherit pro_attribs_class_c_rhino_app"><td class="mdescLeft">&#160;</td><td class="mdescRight">This looks like it should be on appsettings.  <a href="class_c_rhino_app.html#a087c409b8a26799e84dc4f788f8a273f">More...</a><br /></td></tr>
+<tr class="memdesc:a087c409b8a26799e84dc4f788f8a273f inherit pro_attribs_class_c_rhino_app"><td class="mdescLeft">&#160;</td><td class="mdescRight">This looks like it should be on app settings.  <a href="class_c_rhino_app.html#a087c409b8a26799e84dc4f788f8a273f">More...</a><br /></td></tr>
 <tr class="separator:a087c409b8a26799e84dc4f788f8a273f inherit pro_attribs_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfab2da6795596707b34227f1397f946 inherit pro_attribs_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#acfab2da6795596707b34227f1397f946">m_bRestoreFromFullscreen</a> = false</td></tr>
 <tr class="separator:acfab2da6795596707b34227f1397f946 inherit pro_attribs_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -971,38 +991,38 @@ Protected Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_class_c_rhino_app"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_c_rhino_app')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_c_rhino_app.html">CRhinoApp</a></td></tr>
-<tr class="memitem:ae04b6468ecc3018f92cc34a738383d6d inherit pub_types_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="class_c_rhino_app.html#ae04b6468ecc3018f92cc34a738383d6da8c55903dfa37d5ddd17f4df191741196">HCB_COMMANDLINE_BAR</a> = 0x00000001, 
-<a class="el" href="class_c_rhino_app.html#ae04b6468ecc3018f92cc34a738383d6dafb03deb1ad0945b2199e5f3c5de16154">HCB_CURVATURE_ANALYSIS_BAR</a> = 0x00000002, 
-<a class="el" href="class_c_rhino_app.html#ae04b6468ecc3018f92cc34a738383d6da5aba0350653d0ea3b688097e7d8bd890">HCB_CURVATURE_GRAPH_BAR</a> = 0x00000004, 
-<a class="el" href="class_c_rhino_app.html#ae04b6468ecc3018f92cc34a738383d6da2e91ea98b1b5775c394546a457f0a094">HCB_DRAFT_ANGLE_BAR</a> = 0x00000008, 
+<tr class="memitem:a6390e9132d7e5b87f764db0fcee26ab2 inherit pub_types_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="class_c_rhino_app.html#a6390e9132d7e5b87f764db0fcee26ab2a8c55903dfa37d5ddd17f4df191741196">HCB_COMMANDLINE_BAR</a> = 0x00000001, 
+<a class="el" href="class_c_rhino_app.html#a6390e9132d7e5b87f764db0fcee26ab2afb03deb1ad0945b2199e5f3c5de16154">HCB_CURVATURE_ANALYSIS_BAR</a> = 0x00000002, 
+<a class="el" href="class_c_rhino_app.html#a6390e9132d7e5b87f764db0fcee26ab2a5aba0350653d0ea3b688097e7d8bd890">HCB_CURVATURE_GRAPH_BAR</a> = 0x00000004, 
+<a class="el" href="class_c_rhino_app.html#a6390e9132d7e5b87f764db0fcee26ab2a2e91ea98b1b5775c394546a457f0a094">HCB_DRAFT_ANGLE_BAR</a> = 0x00000008, 
 <br />
-&#160;&#160;<a class="el" href="class_c_rhino_app.html#ae04b6468ecc3018f92cc34a738383d6da24b140f8c6236b80e2dba2825463d8af">HCB_EDGE_ANALYSIS_BAR</a> = 0x00000010, 
-<a class="el" href="class_c_rhino_app.html#ae04b6468ecc3018f92cc34a738383d6da3749ae18f3afab6a6f98a9c7d20fea6c">HCB_EMAP_BAR</a> = 0x00000020, 
-<a class="el" href="class_c_rhino_app.html#ae04b6468ecc3018f92cc34a738383d6daf453b4b4b76c97838d36c37ec02de4a0">HCB_LAYER_BAR</a> = 0x00000040, 
-<a class="el" href="class_c_rhino_app.html#ae04b6468ecc3018f92cc34a738383d6da6d63a00f6b55457465c1f2e4dba4baaf">HCB_LAYER_MANAGER_BAR</a> = 0x00000080, 
+&#160;&#160;<a class="el" href="class_c_rhino_app.html#a6390e9132d7e5b87f764db0fcee26ab2a24b140f8c6236b80e2dba2825463d8af">HCB_EDGE_ANALYSIS_BAR</a> = 0x00000010, 
+<a class="el" href="class_c_rhino_app.html#a6390e9132d7e5b87f764db0fcee26ab2a3749ae18f3afab6a6f98a9c7d20fea6c">HCB_EMAP_BAR</a> = 0x00000020, 
+<a class="el" href="class_c_rhino_app.html#a6390e9132d7e5b87f764db0fcee26ab2af453b4b4b76c97838d36c37ec02de4a0">HCB_LAYER_BAR</a> = 0x00000040, 
+<a class="el" href="class_c_rhino_app.html#a6390e9132d7e5b87f764db0fcee26ab2a6d63a00f6b55457465c1f2e4dba4baaf">HCB_LAYER_MANAGER_BAR</a> = 0x00000080, 
 <br />
-&#160;&#160;<a class="el" href="class_c_rhino_app.html#ae04b6468ecc3018f92cc34a738383d6da7f6b54ed518a9f0b663f7faf538c9092">HCB_MOVE_UVN_BAR</a> = 0x00000100, 
-<a class="el" href="class_c_rhino_app.html#ae04b6468ecc3018f92cc34a738383d6da5089afe0274f197e988f87c773e67db1">HCB_NOTES_BAR</a> = 0x00000200, 
-<a class="el" href="class_c_rhino_app.html#ae04b6468ecc3018f92cc34a738383d6dab3c16cea74962554876325202ceafc43">HCB_OSNAP_BAR</a> = 0x00000400, 
-<a class="el" href="class_c_rhino_app.html#ae04b6468ecc3018f92cc34a738383d6da2bdfe058631cfe66931f63d40237348b">HCB_PROPERTIES_BAR</a> = 0x00000800, 
+&#160;&#160;<a class="el" href="class_c_rhino_app.html#a6390e9132d7e5b87f764db0fcee26ab2a7f6b54ed518a9f0b663f7faf538c9092">HCB_MOVE_UVN_BAR</a> = 0x00000100, 
+<a class="el" href="class_c_rhino_app.html#a6390e9132d7e5b87f764db0fcee26ab2a5089afe0274f197e988f87c773e67db1">HCB_NOTES_BAR</a> = 0x00000200, 
+<a class="el" href="class_c_rhino_app.html#a6390e9132d7e5b87f764db0fcee26ab2ab3c16cea74962554876325202ceafc43">HCB_OSNAP_BAR</a> = 0x00000400, 
+<a class="el" href="class_c_rhino_app.html#a6390e9132d7e5b87f764db0fcee26ab2a2bdfe058631cfe66931f63d40237348b">HCB_PROPERTIES_BAR</a> = 0x00000800, 
 <br />
-&#160;&#160;<a class="el" href="class_c_rhino_app.html#ae04b6468ecc3018f92cc34a738383d6da041108b24101b2c5fa1168638c0d46b4">HCB_VIEW_MANAGER_BAR</a> = 0x00001000, 
-<a class="el" href="class_c_rhino_app.html#ae04b6468ecc3018f92cc34a738383d6da279690c408bb578c114e584a0a9bdf32">HCB_ZEBRA_BAR</a> = 0x00002000, 
-<a class="el" href="class_c_rhino_app.html#ae04b6468ecc3018f92cc34a738383d6daddbdf223bb1cc02356ba98b0196e9fa0">HCB_COMMAND_CONTEXT_BAR</a> = 0x00004000, 
-<a class="el" href="class_c_rhino_app.html#ae04b6468ecc3018f92cc34a738383d6da35b61a38e46669fd41e3e16ccb8cad28">HCB_END_ANALYSIS_BAR</a> = 0x00008000, 
+&#160;&#160;<a class="el" href="class_c_rhino_app.html#a6390e9132d7e5b87f764db0fcee26ab2a041108b24101b2c5fa1168638c0d46b4">HCB_VIEW_MANAGER_BAR</a> = 0x00001000, 
+<a class="el" href="class_c_rhino_app.html#a6390e9132d7e5b87f764db0fcee26ab2a279690c408bb578c114e584a0a9bdf32">HCB_ZEBRA_BAR</a> = 0x00002000, 
+<a class="el" href="class_c_rhino_app.html#a6390e9132d7e5b87f764db0fcee26ab2addbdf223bb1cc02356ba98b0196e9fa0">HCB_COMMAND_CONTEXT_BAR</a> = 0x00004000, 
+<a class="el" href="class_c_rhino_app.html#a6390e9132d7e5b87f764db0fcee26ab2a35b61a38e46669fd41e3e16ccb8cad28">HCB_END_ANALYSIS_BAR</a> = 0x00008000, 
 <br />
-&#160;&#160;<a class="el" href="class_c_rhino_app.html#ae04b6468ecc3018f92cc34a738383d6dad6a14fd0251adf48841ee70ec853a029">HCB_DIRECTION_ANALYSIS_BAR</a> = 0x00010000
+&#160;&#160;<a class="el" href="class_c_rhino_app.html#a6390e9132d7e5b87f764db0fcee26ab2ad6a14fd0251adf48841ee70ec853a029">HCB_DIRECTION_ANALYSIS_BAR</a> = 0x00010000
 <br />
  }</td></tr>
-<tr class="memdesc:ae04b6468ecc3018f92cc34a738383d6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control bar bit masks...  <a href="class_c_rhino_app.html#ae04b6468ecc3018f92cc34a738383d6d">More...</a><br /></td></tr>
-<tr class="separator:ae04b6468ecc3018f92cc34a738383d6d inherit pub_types_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf728cd1885692dfe46cad8934892980 inherit pub_types_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="class_c_rhino_app.html#aaf728cd1885692dfe46cad8934892980a1c1b162ef36373b034c8802e5ea4269a">HWB_TITLE_BAR</a> = 0x00000001, 
-<a class="el" href="class_c_rhino_app.html#aaf728cd1885692dfe46cad8934892980a7c6b0b510072d5565db1881fe3fc392b">HWB_MENU_BAR</a> = 0x00000002, 
-<a class="el" href="class_c_rhino_app.html#aaf728cd1885692dfe46cad8934892980afc4d7ed83b99cf28b6cea596a15fc34a">HWB_STATUS_BAR</a> = 0x00000004
+<tr class="memdesc:a6390e9132d7e5b87f764db0fcee26ab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control bar bit masks...  <a href="class_c_rhino_app.html#a6390e9132d7e5b87f764db0fcee26ab2">More...</a><br /></td></tr>
+<tr class="separator:a6390e9132d7e5b87f764db0fcee26ab2 inherit pub_types_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9798129840a7fec9513de7fb83cb3a51 inherit pub_types_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="class_c_rhino_app.html#a9798129840a7fec9513de7fb83cb3a51a1c1b162ef36373b034c8802e5ea4269a">HWB_TITLE_BAR</a> = 0x00000001, 
+<a class="el" href="class_c_rhino_app.html#a9798129840a7fec9513de7fb83cb3a51a7c6b0b510072d5565db1881fe3fc392b">HWB_MENU_BAR</a> = 0x00000002, 
+<a class="el" href="class_c_rhino_app.html#a9798129840a7fec9513de7fb83cb3a51afc4d7ed83b99cf28b6cea596a15fc34a">HWB_STATUS_BAR</a> = 0x00000004
  }</td></tr>
-<tr class="memdesc:aaf728cd1885692dfe46cad8934892980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Window bar bit masks...  <a href="class_c_rhino_app.html#aaf728cd1885692dfe46cad8934892980">More...</a><br /></td></tr>
-<tr class="separator:aaf728cd1885692dfe46cad8934892980 inherit pub_types_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a9798129840a7fec9513de7fb83cb3a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Window bar bit masks...  <a href="class_c_rhino_app.html#a9798129840a7fec9513de7fb83cb3a51">More...</a><br /></td></tr>
+<tr class="separator:a9798129840a7fec9513de7fb83cb3a51 inherit pub_types_class_c_rhino_app"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4af4e24c98694320129692164fcca97 inherit pub_types_class_c_rhino_app"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app.html#ab4af4e24c98694320129692164fcca97">APP_STATE</a> : unsigned int { <br />
 &#160;&#160;<a class="el" href="class_c_rhino_app.html#ab4af4e24c98694320129692164fcca97a242c78c304e5352a9b976b84b070e481">app_state_ctor_zero</a> = 0, 
 <a class="el" href="class_c_rhino_app.html#ab4af4e24c98694320129692164fcca97a8736292926f2442b21f555ed3b05da7b">app_state_ctor_begin</a>, 
@@ -1600,6 +1620,40 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a36055912491767899d3a0c02ee9b8f74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36055912491767899d3a0c02ee9b8f74">&#9670;&nbsp;</a></span>OnMRApplicationTerminate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MRhinoApp::OnMRApplicationTerminate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a03b48f63cd595726a0a566143d076cdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03b48f63cd595726a0a566143d076cdf">&#9670;&nbsp;</a></span>OnMRApplicationTerminateCancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MRhinoApp::OnMRApplicationTerminateCancel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="adb781ff6bc3ca1a7734333418b3c46f6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adb781ff6bc3ca1a7734333418b3c46f6">&#9670;&nbsp;</a></span>OpenDocumentFile()</h2>
 
@@ -2121,6 +2175,28 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a93d59cbe3b787e110fc50e608b5b3ced"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93d59cbe3b787e110fc50e608b5b3ced">&#9670;&nbsp;</a></span>m_save_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_rhino_app.html#ab4af4e24c98694320129692164fcca97">APP_STATE</a> MRhinoApp::m_save_state = APP_STATE::app_state_ctor_zero</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a3ccb60521f85e91ebda4c16f2d48ae5b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3ccb60521f85e91ebda4c16f2d48ae5b">&#9670;&nbsp;</a></span>m_thread_manager</h2>
 
@@ -2190,7 +2266,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:19 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:45 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

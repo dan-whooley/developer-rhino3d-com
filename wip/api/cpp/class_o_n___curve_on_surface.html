@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -201,8 +201,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a85aa9ee2224714bc466f0bedaa569410 inherit pub_methods_class_o_n___curve"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6cf4d04b6fe809e888d9bd3c32038a4 inherit pub_methods_class_o_n___curve"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___curve.html#aa6cf4d04b6fe809e888d9bd3c32038a4">FrameAt</a> (double t, <a class="el" href="class_o_n___plane.html">ON_Plane</a> &amp;plane) const</td></tr>
 <tr class="separator:aa6cf4d04b6fe809e888d9bd3c32038a4 inherit pub_methods_class_o_n___curve"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5a68aa7745e0f2c056ac1bf15265aee inherit pub_methods_class_o_n___curve"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___curve.html#ad5a68aa7745e0f2c056ac1bf15265aee">GetClosestPoint</a> (const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &amp;, double *t, double maximum_distance=0.0, const <a class="el" href="class_o_n___interval.html">ON_Interval</a> *sub_domain=nullptr) const</td></tr>
-<tr class="separator:ad5a68aa7745e0f2c056ac1bf15265aee inherit pub_methods_class_o_n___curve"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9de44ea2c03b30312f12fae4ad273d6 inherit pub_methods_class_o_n___curve"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___curve.html#af9de44ea2c03b30312f12fae4ad273d6">GetClosestPoint</a> (const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &amp;test_point, double *t, double maximum_distance=0.0, const <a class="el" href="class_o_n___interval.html">ON_Interval</a> *sub_domain=nullptr) const</td></tr>
+<tr class="separator:af9de44ea2c03b30312f12fae4ad273d6 inherit pub_methods_class_o_n___curve"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad64be6b1a263a59bfc740199d6de8ace inherit pub_methods_class_o_n___curve"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___curve.html#ad64be6b1a263a59bfc740199d6de8ace">GetCurveParameterFromNurbFormParameter</a> (double nurbs_t, double *curve_t) const</td></tr>
 <tr class="separator:ad64be6b1a263a59bfc740199d6de8ace inherit pub_methods_class_o_n___curve"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36d4d80c58ea92dde6a1298ed8141a66 inherit pub_methods_class_o_n___curve"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___curve.html#a36d4d80c58ea92dde6a1298ed8141a66">GetDomain</a> (double *t0, double *t1) const</td></tr>
@@ -860,7 +860,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">bool ON_CurveOnSurface::GetSpanVector </td>
           <td>(</td>
           <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>knots</em></td><td>)</td>
+          <td class="paramname"><em>span_parameters</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -870,9 +870,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Get number of parameters of "knots". Parameters: knots - [out] an array of length <a class="el" href="class_o_n___curve_on_surface.html#a82bf6f36ef002f3460cb28220d59ae85" title="number of smooth spans in curve">SpanCount()</a>+1 is filled in with the parameters where the curve is not smooth (C-infinity). Returns: true if successful </p>
+<p>Description: Get number of parameters of "knots". Parameters: span_parameters - [out] an array of length <a class="el" href="class_o_n___curve_on_surface.html#a82bf6f36ef002f3460cb28220d59ae85" title="number of smooth spans in curve">SpanCount()</a>+1 is filled in with the parameters where the curve is not smooth (C-infinity). Returns: true if successful </p>
 
-<p>Implements <a class="el" href="class_o_n___curve.html#ae619c78b795518c251c5ac32d34d568f">ON_Curve</a>.</p>
+<p>Implements <a class="el" href="class_o_n___curve.html#a4c6903f3c0a52d0faa42fb80c2834ba3">ON_Curve</a>.</p>
 
 </div>
 </div>
@@ -1384,7 +1384,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:23 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:49 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

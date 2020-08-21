@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -77,7 +77,8 @@ Inheritance diagram for CRhRdkLinearWorkflow:</div>
  <div class="center">
   <img src="class_c_rh_rdk_linear_workflow.png" usemap="#CRhRdkLinearWorkflow_map" alt=""/>
   <map id="CRhRdkLinearWorkflow_map" name="CRhRdkLinearWorkflow_map">
-<area href="class_i_rh_rdk_linear_workflow.html" alt="IRhRdkLinearWorkflow" shape="rect" coords="0,0,145,24"/>
+<area href="class_i_rh_rdk_linear_workflow.html" alt="IRhRdkLinearWorkflow" shape="rect" coords="0,0,159,24"/>
+<area href="class_c_rh_rdk_linear_workflow_ex.html" alt="CRhRdkLinearWorkflowEx" shape="rect" coords="0,112,159,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -136,6 +137,10 @@ Public Member Functions</h2></td></tr>
 <tr class="inherit_header pub_methods_class_i_rh_rdk_linear_workflow"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_rh_rdk_linear_workflow')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_rh_rdk_linear_workflow.html">IRhRdkLinearWorkflow</a></td></tr>
 <tr class="memitem:a51a387a567a0bdb0ee6dc741fd6893e1 inherit pub_methods_class_i_rh_rdk_linear_workflow"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_linear_workflow.html#a51a387a567a0bdb0ee6dc741fd6893e1">~IRhRdkLinearWorkflow</a> ()</td></tr>
 <tr class="separator:a51a387a567a0bdb0ee6dc741fd6893e1 inherit pub_methods_class_i_rh_rdk_linear_workflow"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3c57a652d310ce481c0af694853e9ca inherit pub_methods_class_i_rh_rdk_linear_workflow"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_linear_workflow.html#ab3c57a652d310ce481c0af694853e9ca">PostProcessGammaOn</a> (void) const</td></tr>
+<tr class="separator:ab3c57a652d310ce481c0af694853e9ca inherit pub_methods_class_i_rh_rdk_linear_workflow"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b18217de1ba1560708f678ad56ebfa6 inherit pub_methods_class_i_rh_rdk_linear_workflow"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_linear_workflow.html#a0b18217de1ba1560708f678ad56ebfa6">SetPostProcessGammaOn</a> (bool)</td></tr>
+<tr class="separator:a0b18217de1ba1560708f678ad56ebfa6 inherit pub_methods_class_i_rh_rdk_linear_workflow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -145,7 +150,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This helper class provides simple gamma and linear workflow processing.</p>
-<p>If you want to get the linear workflow or gamma settings being used by a document, please see <a class="el" href="class_c_rh_rdk_document.html#ab2d6d9f788b4c5856f92412f1583cfdc">CRhRdkDocument::LinearWorkflow()</a>. </p>
+<p>If you want to get the linear workflow or gamma settings being used by a document, please see <a class="el" href="class_c_rh_rdk_document.html#ab2d6d9f788b4c5856f92412f1583cfdc">CRhRdkDocument::LinearWorkflow()</a>.</p>
+<p>Note that this does not support the EVF functions "PostProcessGammaOn" or "SetPostProcessGammaOn" mentioned in <a class="el" href="class_i_rh_rdk_linear_workflow.html">IRhRdkLinearWorkflow</a>. Please use <a class="el" href="class_c_rh_rdk_linear_workflow_ex.html">CRhRdkLinearWorkflowEx</a> to solve this. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afa7e30f06d863e3305b016ab52d3331d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa7e30f06d863e3305b016ab52d3331d">&#9670;&nbsp;</a></span>CRhRdkLinearWorkflow() <span class="overload">[1/2]</span></h2>
@@ -216,6 +222,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_rh_rdk_linear_workflow.html#a8a39f59e86b7ee5defd33d565867e3f0">IRhRdkLinearWorkflow</a>.</p>
 
+<p>Reimplemented in <a class="el" href="class_c_rh_rdk_linear_workflow_ex.html#a255c105d1bb48ae3eb433fecd177e91b">CRhRdkLinearWorkflowEx</a>.</p>
+
 </div>
 </div>
 <a id="ad51d6f8996e7c68b180e66c5367ecf01"></a>
@@ -241,7 +249,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Applies pre process gamma correction to a dib (i.e., an LDR texture) if PreProcessTextures is true. Note that if this texture comes from a <a class="el" href="class_c_rh_rdk_texture.html">CRhRdkTexture</a>, you should first check <a class="el" href="class_c_rh_rdk_texture.html#a4ba03dbab9636b10946efe2ae3cfca8b">CRhRdkTexture::IsLinear</a>. If the texture is linear, it will require no further processing. </p>
+<p>Applies pre-process gamma correction to a dib (i.e., an LDR texture) if PreProcessTextures is true. </p><dl class="section note"><dt>Note</dt><dd>If this texture comes from a <a class="el" href="class_c_rh_rdk_texture.html">CRhRdkTexture</a>, you should first check <a class="el" href="class_c_rh_rdk_texture.html#a4ba03dbab9636b10946efe2ae3cfca8b">CRhRdkTexture::IsLinear()</a>. If the texture is linear, it will require no further processing. </dd></dl>
 
 <p>Implements <a class="el" href="class_i_rh_rdk_linear_workflow.html#a8d4dc0370a232d309bcc78fd7e7895d5">IRhRdkLinearWorkflow</a>.</p>
 
@@ -280,7 +288,12 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Applies pre-process gamma correction to a color if linear workflow is active. /param bForTexture Set this value to true if the color is part of a texture. See notes below for checking <a class="el" href="class_c_rh_rdk_texture.html#a4ba03dbab9636b10946efe2ae3cfca8b">CRhRdkTexture::IsLinear</a>. </p>
+<p>Applies pre-process gamma correction to a color if linear workflow is active. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bForTexture</td><td>is <em>true</em> if the color is part of a texture. See notes below for checking <a class="el" href="class_c_rh_rdk_texture.html#a4ba03dbab9636b10946efe2ae3cfca8b">CRhRdkTexture::IsLinear()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="class_i_rh_rdk_linear_workflow.html#a9e62412f8e9b9cc2d81b1ecc5e6f2a70">IRhRdkLinearWorkflow</a>.</p>
 
@@ -414,13 +427,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">virtual void* CRhRdkLinearWorkflow::EVF </td>
           <td>(</td>
           <td class="paramtype">const wchar_t *&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>wszFunc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>pvData</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -434,9 +447,11 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Emergency virtual function for future expansion. </p>
+<p>Emergency virtual function for future expansion. Currently implemented wszFunc: "PostProcessGammaOn" (pvData = null; returns pointer to bool). "SetPostProcessGammaOn" (pvData is pointer to bool). </p>
 
-<p>Implements <a class="el" href="class_i_rh_rdk_linear_workflow.html#a7fdb54c16e52e9256e5fc13138edf084">IRhRdkLinearWorkflow</a>.</p>
+<p>Implements <a class="el" href="class_i_rh_rdk_linear_workflow.html#a10f476f5bf801dd313b69360def3b0d6">IRhRdkLinearWorkflow</a>.</p>
+
+<p>Reimplemented in <a class="el" href="class_c_rh_rdk_linear_workflow_ex.html#a73ca752c665cb817f83fe71806f20c5c">CRhRdkLinearWorkflowEx</a>.</p>
 
 </div>
 </div>
@@ -575,7 +590,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>gamma for frame buffer (post-process). This is not the value to applied - this is the value that appears in the UI. See PostProcessGamma_Reciprocal. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>post-process gamma for frame buffer. This is not the value applied, this is the value that appears in the UI. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_c_rh_rdk_linear_workflow.html#af8eafcfd1637d56d47bb2db02834743c">PostProcessGammaReciprocal()</a>. </dd></dl>
 
 <p>Implements <a class="el" href="class_i_rh_rdk_linear_workflow.html#a1d760e1e55f874aa41fe8484f4a4713e">IRhRdkLinearWorkflow</a>.</p>
 
@@ -604,7 +620,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>gamma reciprocal for frame buffer. This is the value that is applied to each color channel for post and is supplied here as an optimization. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>gamma reciprocal for frame buffer. This is the value that is applied to each color channel for post-process and is supplied here as an optimization. </dd></dl>
 
 <p>Implements <a class="el" href="class_i_rh_rdk_linear_workflow.html#acc81804a46bc24caa498a2b15baabab8">IRhRdkLinearWorkflow</a>.</p>
 
@@ -662,7 +678,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>gamma for input textures and colors (pre-process). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>pre-process gamma for input textures and colors. </dd></dl>
 
 <p>Implements <a class="el" href="class_i_rh_rdk_linear_workflow.html#a3cec01eb4551a83a97607a457332646a">IRhRdkLinearWorkflow</a>.</p>
 
@@ -691,7 +707,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>linear workflow active state for textures (also check IsLinear) . </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>linear workflow active state for textures (also check IsLinear()). </dd></dl>
 
 <p>Implements <a class="el" href="class_i_rh_rdk_linear_workflow.html#ae78eab4461f1fb63674777a2bdf9b759">IRhRdkLinearWorkflow</a>.</p>
 
@@ -749,7 +765,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set gamma. This will generally be &gt;= 1.0 - usually 2.2. The actual value to be applied is the reciprocal. </p>
+<p>Set post-process gamma. This will generally be &gt;= 1.0 (usually 2.2). The actual value to be applied in post-process is the reciprocal. </p>
 
 <p>Implements <a class="el" href="class_i_rh_rdk_linear_workflow.html#a9249e070e7bed0ebbeebc4f1ca354074">IRhRdkLinearWorkflow</a>.</p>
 
@@ -807,7 +823,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set gamma. This will generally be &gt;= 1.0 - usually 2.2. This is the actual value appied in pre-process. </p>
+<p>Set pre-process gamma. This will generally be &gt;= 1.0 (usually 2.2). This is the actual value applied in pre-process. </p>
 
 <p>Implements <a class="el" href="class_i_rh_rdk_linear_workflow.html#a01d15ffa7a602df9efbb15289ad074c1">IRhRdkLinearWorkflow</a>.</p>
 
@@ -845,7 +861,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:13 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:39 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

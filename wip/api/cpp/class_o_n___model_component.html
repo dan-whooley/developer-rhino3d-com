@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -488,6 +488,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a64475590e76eefde0ef3be0d6d2688b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab88e0dacbb65387d6076879e4deb0656"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n__w_string.html">ON_wString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___model_component.html#ab88e0dacbb65387d6076879e4deb0656">NameReferencePrefix</a> (const <a class="el" href="class_o_n___model_component.html#a63a60bd152dda8879588b15d7f394b47">wchar_t</a> *name)</td></tr>
 <tr class="separator:ab88e0dacbb65387d6076879e4deb0656"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a544efa96ab3a822b74501aadc4816eb6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___model_component.html#a544efa96ab3a822b74501aadc4816eb6">NextRuntimeSerialNumber</a> ()</td></tr>
+<tr class="separator:a544efa96ab3a822b74501aadc4816eb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93f76d3c2fd3cbe32729e2434a6ae31e"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n__w_string.html">ON_wString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___model_component.html#a93f76d3c2fd3cbe32729e2434a6ae31e">RemoveAllReferencePrefixDelimiters</a> (const <a class="el" href="class_o_n___model_component.html#a63a60bd152dda8879588b15d7f394b47">wchar_t</a> *name)</td></tr>
 <tr class="separator:a93f76d3c2fd3cbe32729e2434a6ae31e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3eac6a9460097526cbf1841df26b0ce3"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n__w_string.html">ON_wString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___model_component.html#a3eac6a9460097526cbf1841df26b0ce3">RemoveReferencePrefix</a> (const <a class="el" href="class_o_n___model_component.html#a63a60bd152dda8879588b15d7f394b47">wchar_t</a> *name)</td></tr>
@@ -2552,7 +2554,7 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Expert user function that gets a pointer to the name. Returns: A pointer to the string that contains the name. This pointer must be used immediately and then discarded before any code can possibly call <a class="el" href="class_o_n___model_component.html#a438dcead4834272400aa56b57ace93d0">SetName()</a> or the <a class="el" href="class_o_n___model_component.html">ON_ModelComponent</a> destructor could be called. Remarks: About the only good use for this function is when a model compoenent is peristent and the name is needed for a formatted string. For any other use, call the <a class="el" href="class_o_n___model_component.html#ac157c257e5a54aa12e3b3688ac87618a">Name()</a> function and store the result in an <a class="el" href="class_o_n__w_string.html">ON_wString</a>. This function is dangerous because the returned pointer will be invalid if <a class="el" href="class_o_n___model_component.html#a438dcead4834272400aa56b57ace93d0">SetName()</a> is called. </p>
+<p>Description: Expert user function that gets a pointer to the name. Returns: A pointer to the string that contains the name. This pointer must be used immediately and then discarded before any code can possibly call <a class="el" href="class_o_n___model_component.html#a438dcead4834272400aa56b57ace93d0">SetName()</a> or the <a class="el" href="class_o_n___model_component.html">ON_ModelComponent</a> destructor could be called. Remarks: About the only good use for this function is when a model compoenent is persistent and the name is needed for a formatted string. For any other use, call the <a class="el" href="class_o_n___model_component.html#ac157c257e5a54aa12e3b3688ac87618a">Name()</a> function and store the result in an <a class="el" href="class_o_n__w_string.html">ON_wString</a>. This function is dangerous because the returned pointer will be invalid if <a class="el" href="class_o_n___model_component.html#a438dcead4834272400aa56b57ace93d0">SetName()</a> is called. </p>
 
 </div>
 </div>
@@ -2755,6 +2757,32 @@ Protected Member Functions</h2></td></tr>
 <p>Parameters: new_name - [in] <br  />
  Returns: If new_name is empty or a valid component name, then name hash this component would have if SetName(new_name) were called. If new_name is not valid, then <a class="el" href="class_o_n___name_hash.html#af4ee74b71cf805d7003bd37a35b184b9">ON_NameHash::UnsetNameHash</a> is returned. Remarks: This function trims leading and trailing white space, includes the parent id when ON_ModelComponent::UniqueNameIncludesParent(ComponentType()) is true, and uses <a class="el" href="class_o_n___model_component.html#a98aa61a2c8d4a8c44ab57e26f2bb2a35">ON_ModelComponent::IsValidComponentName()</a> to determine if a non-empty name is valid. <br  />
  </p>
+
+</div>
+</div>
+<a id="a544efa96ab3a822b74501aadc4816eb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a544efa96ab3a822b74501aadc4816eb6">&#9670;&nbsp;</a></span>NextRuntimeSerialNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> ON_ModelComponent::NextRuntimeSerialNumber </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns: The next <a class="el" href="class_o_n___model_component.html">ON_ModelComponent</a> instance will have runtime serial number &gt;= <a class="el" href="class_o_n___model_component.html#a544efa96ab3a822b74501aadc4816eb6">ON_ModelComponent::NextRuntimeSerialNumber()</a>; </p>
 
 </div>
 </div>
@@ -3758,7 +3786,7 @@ Protected Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:26 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:52 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

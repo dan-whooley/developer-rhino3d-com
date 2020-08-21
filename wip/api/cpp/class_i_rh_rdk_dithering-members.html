@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -72,17 +72,19 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html#aa3b39f5f409b23c66d59a0779556fdc1">BeginChange</a>(RhRdkChangeContext cc) const =0</td><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html">IRhRdkDithering</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html#aedd0c78c954eea2dd4be99043caa8664">CopyFrom</a>(const IRhRdkDithering &amp;dit)=0</td><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html">IRhRdkDithering</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html#aa3550a39437af02b98408061dfe9b26f">EndChange</a>(void)=0</td><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html">IRhRdkDithering</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html#a9f7d34bab7e1c87c86334f7eeb67a69a">EVF</a>(const wchar_t *, void *)=0</td><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html">IRhRdkDithering</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html#a9322be1994ae22fa42899d368581bf61">EVF</a>(const wchar_t *wszFunc, void *pvData)=0</td><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html">IRhRdkDithering</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html#ab595a5ca3273310a078fc16b0e97dc03">IsEqual</a>(const IRhRdkDithering &amp;dit) const =0</td><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html">IRhRdkDithering</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html#aa59bb2227e0e2d4bd9c5c36741c1ee2d">Method</a>(void) const =0</td><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html">IRhRdkDithering</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html#a3d78ff983c48790a622287cbde1acb7f">Methods</a> enum name</td><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html">IRhRdkDithering</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html#a7d9d09f117275f56e889481aedbc83f0">New</a>(void)</td><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html">IRhRdkDithering</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html#ada6d72e448b721611b5205ac9e60053f">SetMethod</a>(Methods m)=0</td><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html">IRhRdkDithering</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html#adf3e5b787c3809ffda884078e6b98f20">On</a>(void) const</td><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html">IRhRdkDithering</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html#ada6d72e448b721611b5205ac9e60053f">SetMethod</a>(Methods m)=0</td><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html">IRhRdkDithering</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html#a179b29e44d13a8ab28f2c504ba81f6d0">SetOn</a>(bool bOn)</td><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html">IRhRdkDithering</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html#ad156021eb201a5db627c71b51ecf51eb">~IRhRdkDithering</a>()</td><td class="entry"><a class="el" href="class_i_rh_rdk_dithering.html">IRhRdkDithering</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:17 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:43 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

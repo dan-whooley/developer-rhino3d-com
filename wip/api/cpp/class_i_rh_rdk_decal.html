@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -65,6 +65,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="class_i_rh_rdk_decal-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">IRhRdkDecal Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group___r_d_k.html">RDK</a></div></div>  </div>
@@ -72,6 +73,15 @@ $(function() {
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_i_rh_rdk_decal_8h_source.html">IRhRdkDecal.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for IRhRdkDecal:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_i_rh_rdk_decal.png" usemap="#IRhRdkDecal_map" alt=""/>
+  <map id="IRhRdkDecal_map" name="IRhRdkDecal_map">
+<area href="class_i_rh_rdk_decal2.html" alt="IRhRdkDecal2" shape="rect" coords="0,56,91,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -149,6 +159,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af3668fa64c483dc2654b84395f065358"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89514c65239ac4d2bd9e17dfc62c4923"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_decal.html#a89514c65239ac4d2bd9e17dfc62c4923">VectorUp</a> (void) const =0</td></tr>
 <tr class="separator:a89514c65239ac4d2bd9e17dfc62c4923"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a043e52557f17ab8536bdd31c240c1a92"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_decal.html#a043e52557f17ab8536bdd31c240c1a92">GetTextureMapping</a> (const <a class="el" href="class_i_rh_rdk_decal.html">IRhRdkDecal</a> &amp;decal, <a class="el" href="class_o_n___texture_mapping.html">ON_TextureMapping</a> &amp;mappingOut)</td></tr>
+<tr class="separator:a043e52557f17ab8536bdd31c240c1a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This interface allows RDK clients to access decals that are attached to Rhino objects. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_c_rh_rdk_object_data_access.html">CRhRdkObjectDataAccess</a> </dd></dl>
@@ -406,6 +421,42 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Gets the start and end angles of the decal's 'horizontal sweep' (these are angles of longitude in radians). </p><dl class="section note"><dt>Note</dt><dd>These correspond to the old methods <a class="el" href="class_i_rh_rdk_decal.html#a09fa3717597d2beaa73552258dc1d5c6">LatStart()</a> and <a class="el" href="class_i_rh_rdk_decal.html#a876473fe16ffbdd548509e9387bf8ba1">LatEnd()</a> which were badly named. Only used when mapping is cylindrical or spherical. </dd></dl>
+
+</div>
+</div>
+<a id="a043e52557f17ab8536bdd31c240c1a92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a043e52557f17ab8536bdd31c240c1a92">&#9670;&nbsp;</a></span>GetTextureMapping()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool IRhRdkDecal::GetTextureMapping </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_i_rh_rdk_decal.html">IRhRdkDecal</a> &amp;&#160;</td>
+          <td class="paramname"><em>decal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___texture_mapping.html">ON_TextureMapping</a> &amp;&#160;</td>
+          <td class="paramname"><em>mappingOut</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -958,7 +1009,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:17 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:43 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

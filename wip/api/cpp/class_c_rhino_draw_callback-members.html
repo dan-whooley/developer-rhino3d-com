@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -94,6 +94,8 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a48bd19bb3bf55d5cd54b47ad6e7d543d">EnableConstantBinding</a>(bool enable=true)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a4ae030f29765051d8adaad43224ee396">FromRuntimeSerialNumber</a>(unsigned int display_conduit_sn)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#adeeb52934a676b50219c9cbaad68bcd2">GetGeometryFilter</a>() const</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a511e6ad54149e198d94cb860cbbae66d">GetObjectFilter</a>() const</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a7d0265de1de98de370dd5e0eafe3a83f">GetSelectedFilter</a>(bool &amp;on, bool &amp;checkSubObjects) const</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#aec1df6cead9ed19497984b4a34ef87b6">InterestedInObject</a>(const CRhinoObject *) const</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a5137ea49757f760feac60139e4f39d1f">IsBound</a>(const CRhinoDisplayPipeline &amp;pipeline, bool ignore_state=false) const</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a2d31b74a9415d36b52428291fa6d1403">IsBound</a>(const CRhinoViewport &amp;viewport, bool ignore_state=false) const</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
@@ -116,7 +118,11 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a9d16a378450adde878c371366d618744">ReplaceBinding</a>(const CRhinoViewport &amp;old_viewport, const CRhinoViewport &amp;new_viewport)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a1ea01318139f2d3f2c1df3ede55fc914">ReplaceBinding</a>(const CRhinoView &amp;old_view, const CRhinoView &amp;new_view)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#aee84706771a26c25cd447c37bb8fd05f">ReplaceBinding</a>(const ON_Viewport &amp;old_viewport, const ON_Viewport &amp;new_viewport)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a3e2a039034cdb90c009942eb88711313">SetGeometryFilter</a>(unsigned int geometry_filter)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a42abd3b8be415a168bb1460e9348683d">RuntimeSerialNumber</a>(const CRhinoDisplayConduit *conduit)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a3e2a039034cdb90c009942eb88711313">SetGeometryFilter</a>(unsigned int geometry_filter)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a359f221136d613466ea8d21b083cfade">SetObjectFilter</a>(ON_UUID objectId)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a62cc10be94770d764535826b04fa5f41">SetObjectFilter</a>(const ON_SimpleArray&lt; ON_UUID &gt; &amp;objectIds)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#af592845af5b719c6f45a68c87bed44de">SetSelectedFilter</a>(bool on, bool checkSubObjects)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a9453277ff005af1b2b59a5919d51cf9e">ToggleBinding</a>(const CRhinoDisplayPipeline &amp;pipeline)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a4cc2a2d99e721b01753d31e8f10c98f8">ToggleBinding</a>(const CRhinoViewport &amp;viewport)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html#a5f6f848ae9d7dbc8343f4ebee39e15bb">ToggleBinding</a>(const CRhinoView &amp;view)</td><td class="entry"><a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a></td><td class="entry"></td></tr>
@@ -135,7 +141,7 @@ $(function() {
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:01 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:26 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

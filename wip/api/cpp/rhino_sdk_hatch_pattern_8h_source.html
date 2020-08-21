@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -88,7 +88,7 @@ $(function() {
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">class </span><a class="code" href="group___rhino.html#gac7cff1e910b2374d20cd2265d4f976dd">RHINO_SDK_CLASS</a> <a class="code" href="class_c_rhino_hatch_pattern.html">CRhinoHatchPattern</a> : <span class="keyword">public</span> <a class="code" href="class_o_n___hatch_pattern.html">ON_HatchPattern</a></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_c_rhino_hatch_pattern.html">   19</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NextRuntimeSerialNumber();</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_c_rhino_hatch_pattern.html">   19</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_o_n___model_component.html#a544efa96ab3a822b74501aadc4816eb6">NextRuntimeSerialNumber</a>();</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="comment">/*</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">  Returns:</span></div>
@@ -561,8 +561,8 @@ $(function() {
 <div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    HDC hdc,</div>
 <div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_o_n__4i_rect.html">ON_4iRect</a>&amp; rect,</div>
 <div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    <span class="keywordtype">double</span> angle,</div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    COLORREF bkColor = <a class="code" href="group___r_d_k.html#gga76db87c0658e96e63e7238cb2415f74fa889574aebacda6bfd3e534e2b49b8028">RGB</a>(255, 255, 255),</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    COLORREF fgColor = <a class="code" href="group___r_d_k.html#gga76db87c0658e96e63e7238cb2415f74fa889574aebacda6bfd3e534e2b49b8028">RGB</a>(0, 0, 0)</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    COLORREF bkColor = <a class="code" href="group___r_d_k.html#gga55db026e4b44abc83b38464fd5a4e58aa889574aebacda6bfd3e534e2b49b8028">RGB</a>(255, 255, 255),</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    COLORREF fgColor = <a class="code" href="group___r_d_k.html#gga55db026e4b44abc83b38464fd5a4e58aa889574aebacda6bfd3e534e2b49b8028">RGB</a>(0, 0, 0)</div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;  ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160; </div>
 <div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;  <span class="comment">/*</span></div>
@@ -582,8 +582,8 @@ $(function() {
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    HDC pDC,</div>
 <div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_o_n__4i_rect.html">ON_4iRect</a>&amp; rect,</div>
 <div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    <span class="keywordtype">double</span> angle,</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    COLORREF bkColor = <a class="code" href="group___r_d_k.html#gga76db87c0658e96e63e7238cb2415f74fa889574aebacda6bfd3e534e2b49b8028">RGB</a>(255, 255, 255),</div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    COLORREF fgColor = <a class="code" href="group___r_d_k.html#gga76db87c0658e96e63e7238cb2415f74fa889574aebacda6bfd3e534e2b49b8028">RGB</a>(0, 0, 0)</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    COLORREF bkColor = <a class="code" href="group___r_d_k.html#gga55db026e4b44abc83b38464fd5a4e58aa889574aebacda6bfd3e534e2b49b8028">RGB</a>(255, 255, 255),</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    COLORREF fgColor = <a class="code" href="group___r_d_k.html#gga55db026e4b44abc83b38464fd5a4e58aa889574aebacda6bfd3e534e2b49b8028">RGB</a>(0, 0, 0)</div>
 <div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;  ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160; </div>
 <div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160; </div>
@@ -697,7 +697,7 @@ $(function() {
 <div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;    DefaultHatchPatternCount = 9</div>
 <div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;  };</div>
 <div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160; </div>
-<div class="line"><a name="l00628"></a><span class="lineno"><a class="line" href="class_c_rhino_hatch_pattern_table.html#a14e0e9b5aa2e8172b615f83de15345a2a28da490e5a584022cdf35c90f1f90278">  628</a></span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00628"></a><span class="lineno"><a class="line" href="class_c_rhino_hatch_pattern_table.html#af914528e85c492766e6091d17815ace2a28da490e5a584022cdf35c90f1f90278">  628</a></span>&#160;  <span class="comment">/*</span></div>
 <div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;<span class="comment">  Description:</span></div>
 <div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;<span class="comment">    Get a list of the default hatch patterns.</span></div>
 <div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;<span class="comment">  Parameters:</span></div>
@@ -780,7 +780,7 @@ $(function() {
 <div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;  );</div>
 <div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_o_n__3d_vector_html"><div class="ttname"><a href="class_o_n__3d_vector.html">ON_3dVector</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:1185</div></div>
+<div class="ttc" id="aclass_o_n__3d_vector_html"><div class="ttname"><a href="class_o_n__3d_vector.html">ON_3dVector</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:1263</div></div>
 <div class="ttc" id="aclass_o_n___hatch_pattern_html"><div class="ttname"><a href="class_o_n___hatch_pattern.html">ON_HatchPattern</a></div><div class="ttdef"><b>Definition:</b> opennurbs_hatch.h:345</div></div>
 <div class="ttc" id="agroup___rhino_html_gac7cff1e910b2374d20cd2265d4f976dd"><div class="ttname"><a href="group___rhino.html#gac7cff1e910b2374d20cd2265d4f976dd">RHINO_SDK_CLASS</a></div><div class="ttdeci">#define RHINO_SDK_CLASS</div><div class="ttdef"><b>Definition:</b> rhinoSdk.h:285</div></div>
 <div class="ttc" id="aclass_c_rhino_event_watcher_html"><div class="ttname"><a href="class_c_rhino_event_watcher.html">CRhinoEventWatcher</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkEventWatcher.h:113</div></div>
@@ -789,25 +789,26 @@ $(function() {
 <div class="ttc" id="agroup___rhino_html_gae0ca1c334125e1735d6bf07ae91bbb66"><div class="ttname"><a href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div><div class="ttdeci">#define RHINO_SDK_FUNCTION</div><div class="ttdef"><b>Definition:</b> rhinoSdk.h:287</div></div>
 <div class="ttc" id="aclass_o_n___hatch_pattern_html_afba7c9f47897172219920f485cbf3111"><div class="ttname"><a href="class_o_n___hatch_pattern.html#afba7c9f47897172219920f485cbf3111">ON_HatchPattern::operator=</a></div><div class="ttdeci">ON_HatchPattern &amp; operator=(const ON_HatchPattern &amp;)=default</div></div>
 <div class="ttc" id="aclass_o_n__4i_rect_html"><div class="ttname"><a href="class_o_n__4i_rect.html">ON_4iRect</a></div><div class="ttdef"><b>Definition:</b> opennurbs_ipoint.h:339</div></div>
+<div class="ttc" id="agroup___r_d_k_html_gga55db026e4b44abc83b38464fd5a4e58aa889574aebacda6bfd3e534e2b49b8028"><div class="ttname"><a href="group___r_d_k.html#gga55db026e4b44abc83b38464fd5a4e58aa889574aebacda6bfd3e534e2b49b8028">ComponentOrder::RGB</a></div><div class="ttdeci">@ RGB</div></div>
 <div class="ttc" id="aclass_o_n___simple_array_html"><div class="ttname"><a href="class_o_n___simple_array.html">ON_SimpleArray</a></div><div class="ttdef"><b>Definition:</b> opennurbs_array.h:39</div></div>
 <div class="ttc" id="aclass_o_n__w_string_html"><div class="ttname"><a href="class_o_n__w_string.html">ON_wString</a></div><div class="ttdef"><b>Definition:</b> opennurbs_string.h:2136</div></div>
-<div class="ttc" id="agroup___r_d_k_html_gga76db87c0658e96e63e7238cb2415f74fa889574aebacda6bfd3e534e2b49b8028"><div class="ttname"><a href="group___r_d_k.html#gga76db87c0658e96e63e7238cb2415f74fa889574aebacda6bfd3e534e2b49b8028">ComponentOrder::RGB</a></div><div class="ttdeci">@ RGB</div></div>
-<div class="ttc" id="aclass_o_n___component_manifest_html"><div class="ttname"><a href="class_o_n___component_manifest.html">ON_ComponentManifest</a></div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:605</div></div>
+<div class="ttc" id="aclass_o_n___component_manifest_html"><div class="ttname"><a href="class_o_n___component_manifest.html">ON_ComponentManifest</a></div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:627</div></div>
 <div class="ttc" id="aclass_c_rhino_hatch_pattern_html"><div class="ttname"><a href="class_c_rhino_hatch_pattern.html">CRhinoHatchPattern</a></div><div class="ttdoc">CRhinoHatchPattern class.</div><div class="ttdef"><b>Definition:</b> rhinoSdkHatchPattern.h:19</div></div>
-<div class="ttc" id="aclass_o_n___hatch_html"><div class="ttname"><a href="class_o_n___hatch.html">ON_Hatch</a></div><div class="ttdef"><b>Definition:</b> opennurbs_hatch.h:571</div></div>
-<div class="ttc" id="aclass_o_n___brep_html"><div class="ttname"><a href="class_o_n___brep.html">ON_Brep</a></div><div class="ttdef"><b>Definition:</b> opennurbs_brep.h:1688</div></div>
+<div class="ttc" id="aclass_o_n___hatch_html"><div class="ttname"><a href="class_o_n___hatch.html">ON_Hatch</a></div><div class="ttdef"><b>Definition:</b> opennurbs_hatch.h:572</div></div>
+<div class="ttc" id="aclass_o_n___brep_html"><div class="ttname"><a href="class_o_n___brep.html">ON_Brep</a></div><div class="ttdef"><b>Definition:</b> opennurbs_brep.h:1865</div></div>
 <div class="ttc" id="agroup___rhino_html_gga92ddae21b919495f4f225191041764aeae41480b6bbfbf7407974a88d3d34f4fa"><div class="ttname"><a href="group___rhino.html#gga92ddae21b919495f4f225191041764aeae41480b6bbfbf7407974a88d3d34f4fa">RhinoDashStyle::Solid</a></div><div class="ttdeci">@ Solid</div></div>
 <div class="ttc" id="agroup___rhino_html_ga8e6f5833c898be05daa508d60b72b22f"><div class="ttname"><a href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a></div><div class="ttdeci">ON_DEPRECATED_MSG(&quot;This function will be removed in Rhino Version 7. \n&quot; &quot;For assistance replacing this function post on discourse.mcneel.com/c/rhino-developer.&quot;) RHINO_SDK_FUNCTION bool RhinoBrepGet2dProjection(unsigned int rhino_doc_sn</div></div>
 <div class="ttc" id="aclass_o_n___text_log_html"><div class="ttname"><a href="class_o_n___text_log.html">ON_TextLog</a></div><div class="ttdef"><b>Definition:</b> opennurbs_textlog.h:22</div></div>
-<div class="ttc" id="aclass_c_rhino_doc_html"><div class="ttname"><a href="class_c_rhino_doc.html">CRhinoDoc</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkDoc.h:655</div></div>
+<div class="ttc" id="aclass_c_rhino_doc_html"><div class="ttname"><a href="class_c_rhino_doc.html">CRhinoDoc</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkDoc.h:683</div></div>
+<div class="ttc" id="aclass_o_n___model_component_html_a544efa96ab3a822b74501aadc4816eb6"><div class="ttname"><a href="class_o_n___model_component.html#a544efa96ab3a822b74501aadc4816eb6">ON_ModelComponent::NextRuntimeSerialNumber</a></div><div class="ttdeci">static ON__UINT64 NextRuntimeSerialNumber()</div></div>
 <div class="ttc" id="aclass_c_rhino_doc_table_reference_html"><div class="ttname"><a href="class_c_rhino_doc_table_reference.html">CRhinoDocTableReference</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkBitmap.h:18</div></div>
 <div class="ttc" id="aclass_c_rhino_hatch_pattern_table_html"><div class="ttname"><a href="class_c_rhino_hatch_pattern_table.html">CRhinoHatchPatternTable</a></div><div class="ttdoc">CRhinoHatchPatternTable class - A list of Hatch Pattern definitions.</div><div class="ttdef"><b>Definition:</b> rhinoSdkHatchPattern.h:135</div></div>
-<div class="ttc" id="aclass_o_n___component_manifest_item_html"><div class="ttname"><a href="class_o_n___component_manifest_item.html">ON_ComponentManifestItem</a></div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:1206</div></div>
+<div class="ttc" id="aclass_o_n___component_manifest_item_html"><div class="ttname"><a href="class_o_n___component_manifest_item.html">ON_ComponentManifestItem</a></div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:1228</div></div>
 <div class="ttc" id="astruct_o_n___u_u_i_d__struct_html"><div class="ttname"><a href="struct_o_n___u_u_i_d__struct.html">ON_UUID_struct</a></div><div class="ttdoc">ON_UUID is a 16 byte universally unique identifier.</div><div class="ttdef"><b>Definition:</b> opennurbs_uuid.h:35</div></div>
-<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga14e3d8c3c9542339ffabe5b404b76062"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga14e3d8c3c9542339ffabe5b404b76062">ON_SimpleArray::Sort</a></div><div class="ttdeci">bool Sort(ON::sort_algorithm sort_algorithm, int *, int(*)(const T *, const T *)) const</div><div class="ttdef"><b>Definition:</b> opennurbs_array_defs.h:789</div></div>
+<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga14e3d8c3c9542339ffabe5b404b76062"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga14e3d8c3c9542339ffabe5b404b76062">ON_SimpleArray::Sort</a></div><div class="ttdeci">bool Sort(ON::sort_algorithm sort_algorithm, int *, int(*)(const T *, const T *)) const</div><div class="ttdef"><b>Definition:</b> opennurbs_array_defs.h:825</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:12:55 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:20 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

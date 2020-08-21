@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -773,7 +773,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Create meshes used to render and analyze surface and polysrf objects. Paramters: mesh_type - [in] type of meshes to create mp - [in] in parameters that control the quality of the meshes that are created. mapping - [in] If not NULL, the texture coordinates are calculated using the call ON_Mesh::SetTextureCoordinates(*mapping,mapping,true) mapping_xform - [in] See mapping parameter description. See Also: <a class="el" href="class_c_rhino_object.html#ab862c57820a45f609f21518fb95ad9a7">CRhinoObject::GetMeshes</a> <a class="el" href="class_c_rhino_object.html#ad6fbd6ccff7aa376efb9f4400f4df99f">CRhinoObject::MeshCount</a> <a class="el" href="class_c_rhino_object.html#a3fba7ff7e1b93d6c656e32d365485acd" title="Returns true if the object is capable of having a mesh of the specified type.">CRhinoObject::IsMeshable</a> </p>
+<p>Description: Create meshes used to render and analyze surface and polysurface objects. Parameters: mesh_type - [in] type of meshes to create mp - [in] in parameters that control the quality of the meshes that are created. mapping - [in] If not NULL, the texture coordinates are calculated using the call ON_Mesh::SetTextureCoordinates(*mapping,mapping,true) mapping_xform - [in] See mapping parameter description. See Also: <a class="el" href="class_c_rhino_object.html#ab862c57820a45f609f21518fb95ad9a7">CRhinoObject::GetMeshes</a> <a class="el" href="class_c_rhino_object.html#ad6fbd6ccff7aa376efb9f4400f4df99f">CRhinoObject::MeshCount</a> <a class="el" href="class_c_rhino_object.html#a3fba7ff7e1b93d6c656e32d365485acd" title="Returns true if the object is capable of having a mesh of the specified type.">CRhinoObject::IsMeshable</a> </p>
 
 <p>Reimplemented from <a class="el" href="class_c_rhino_object.html#a0c28e15f5e3d9e8c82ed867c4e417b93">CRhinoObject</a>.</p>
 
@@ -812,7 +812,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Destroy meshes used to render and analyze surface and polysrf objects. Paramters: mesh_type - [in] type of mesh to destroy bDeleteMeshes - [in] if true, cached meshes are deleted. If false, pointers to cached meshes are just set to NULL. See Also: <a class="el" href="class_c_rhino_object.html#ab862c57820a45f609f21518fb95ad9a7">CRhinoObject::GetMeshes</a> <a class="el" href="class_c_rhino_object.html#ad6fbd6ccff7aa376efb9f4400f4df99f">CRhinoObject::MeshCount</a> <a class="el" href="class_c_rhino_object.html#a3fba7ff7e1b93d6c656e32d365485acd" title="Returns true if the object is capable of having a mesh of the specified type.">CRhinoObject::IsMeshable</a> </p>
+<p>Description: Destroy meshes used to render and analyze surface and polysurface objects. Parameters: mesh_type - [in] type of mesh to destroy bDeleteMeshes - [in] if true, cached meshes are deleted. If false, pointers to cached meshes are just set to NULL. See Also: <a class="el" href="class_c_rhino_object.html#ab862c57820a45f609f21518fb95ad9a7">CRhinoObject::GetMeshes</a> <a class="el" href="class_c_rhino_object.html#ad6fbd6ccff7aa376efb9f4400f4df99f">CRhinoObject::MeshCount</a> <a class="el" href="class_c_rhino_object.html#a3fba7ff7e1b93d6c656e32d365485acd" title="Returns true if the object is capable of having a mesh of the specified type.">CRhinoObject::IsMeshable</a> </p>
 
 <p>Reimplemented from <a class="el" href="class_c_rhino_object.html#ab925033d4807a726d44b20b27be4ffb7">CRhinoObject</a>.</p>
 
@@ -901,7 +901,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Draws wireframe representation of highlighed sub objects. objects that support subobject highlighting must override this function </p>
+<p>Draws wireframe representation of highlighted sub objects. objects that support subobject highlighting must override this function </p>
 
 <p>Reimplemented from <a class="el" href="class_c_rhino_object.html#abf2653bd7cc679281189407be0fe1b61">CRhinoObject</a>.</p>
 
@@ -1003,7 +1003,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Turns on the object's default editing grips Paramters bDefaultGripsOn - [in] True to turn on the object's default grips. False to turn off any grips. See Also: <a class="el" href="class_c_rhino_object.html#a8a50d3d85abdae257aef663abfdee17f">CRhinoObject::GripsOn</a> <a class="el" href="class_c_rhino_object.html#a3c2b5143719cb089c0fe0c246ff7387c">CRhinoObject::GetGrips</a> </p>
+<p>Description: Turns on the object's default editing grips Parameters: bDefaultGripsOn - [in] True to turn on the object's default grips. False to turn off any grips. See Also: <a class="el" href="class_c_rhino_object.html#a8a50d3d85abdae257aef663abfdee17f">CRhinoObject::GripsOn</a> <a class="el" href="class_c_rhino_object.html#a3c2b5143719cb089c0fe0c246ff7387c">CRhinoObject::GetGrips</a> </p>
 
 <p>Reimplemented from <a class="el" href="class_c_rhino_object.html#a7195765316af2dc26b7c641556e4182e">CRhinoObject</a>.</p>
 
@@ -1068,7 +1068,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Get a list of all highlighted sub-objects Paramters: component_indices - [out] component indices of highlighted sub-objects. Returns: number of highlighted subobjects </p>
+<p>Description: Get a list of all highlighted sub-objects Parameters: component_indices - [out] component indices of highlighted sub-objects. Returns: number of highlighted subobjects </p>
 
 <p>Reimplemented from <a class="el" href="class_c_rhino_object.html#a435009c27552015e28b06f5b73364d97">CRhinoObject</a>.</p>
 
@@ -1107,7 +1107,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Get existing meshes used to render and analyze surface and polysrf objects. Paramters: <a class="el" href="class_o_n.html#a7a4479b49f4b13f6a1112c87cf106e5e">ON::mesh_type</a> - [in] type of mesh to get meshes - [out] meshes are appended to this array. The <a class="el" href="class_c_rhino_object.html" title="Base class for all runtime Rhino objects.">CRhinoObject</a> owns these meshes so the meshes cannot be modified. Returns: Number of meshes added to meshes array See Also: <a class="el" href="class_c_rhino_object.html#ab925033d4807a726d44b20b27be4ffb7">CRhinoObject::DestroyMeshes</a> <a class="el" href="class_c_rhino_object.html#ad6fbd6ccff7aa376efb9f4400f4df99f">CRhinoObject::MeshCount</a> <a class="el" href="class_c_rhino_object.html#a3fba7ff7e1b93d6c656e32d365485acd" title="Returns true if the object is capable of having a mesh of the specified type.">CRhinoObject::IsMeshable</a> </p>
+<p>Description: Get existing meshes used to render and analyze surface and polysurface objects. Parameters: <a class="el" href="class_o_n.html#a7a4479b49f4b13f6a1112c87cf106e5e">ON::mesh_type</a> - [in] type of mesh to get meshes - [out] meshes are appended to this array. The <a class="el" href="class_c_rhino_object.html" title="Base class for all runtime Rhino objects.">CRhinoObject</a> owns these meshes so the meshes cannot be modified. Returns: Number of meshes added to meshes array See Also: <a class="el" href="class_c_rhino_object.html#ab925033d4807a726d44b20b27be4ffb7">CRhinoObject::DestroyMeshes</a> <a class="el" href="class_c_rhino_object.html#ad6fbd6ccff7aa376efb9f4400f4df99f">CRhinoObject::MeshCount</a> <a class="el" href="class_c_rhino_object.html#a3fba7ff7e1b93d6c656e32d365485acd" title="Returns true if the object is capable of having a mesh of the specified type.">CRhinoObject::IsMeshable</a> </p>
 
 <p>Reimplemented from <a class="el" href="class_c_rhino_object.html#ab862c57820a45f609f21518fb95ad9a7">CRhinoObject</a>.</p>
 
@@ -1136,7 +1136,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Get a list of all selected sub-objects Paramters: component_indices - [out] component indices of selected sub-objects. Returns: number of selected subobjects </p>
+<p>Description: Get a list of all selected sub-objects Parameters: component_indices - [out] component indices of selected sub-objects. Returns: number of selected subobjects </p>
 
 <p>Reimplemented from <a class="el" href="class_c_rhino_object.html#ae4898ae235db8d0549afb2b77166e99c">CRhinoObject</a>.</p>
 
@@ -1274,7 +1274,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>true if pixels used by hightlighted object differ from pixels used by unhighlighted object. </p>
+<p>true if pixels used by highlighted object differ from pixels used by highlighted object. </p>
 
 <p>Reimplemented from <a class="el" href="class_c_rhino_object.html#a6847903516675b1b8340b6ab0e66009b">CRhinoObject</a>.</p>
 
@@ -1430,7 +1430,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Check sub-object selection state. Paramters: component_index - [in] index of subobject to check Remarks: subobject cannot be persistently selected Returns: @untitled table false sub-object is not selected true sub-object is selected </p>
+<p>Description: Check sub-object selection state. Parameters: component_index - [in] index of subobject to check Remarks: subobject cannot be persistently selected Returns: @untitled table false sub-object is not selected true sub-object is selected </p>
 
 <p>Reimplemented from <a class="el" href="class_c_rhino_object.html#a50d744b8d578bfda0428a1662b56a23b">CRhinoObject</a>.</p>
 
@@ -1672,7 +1672,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Reports if an object can be selected. Parameters: component_index - [in] index of subobject to check bSelect - [in] (default=true) bSynchHighlight - [in] (default=true) If true, then the object is hightlighted if it is selected and not hightlighted if is is not selected. bPersistentSelect - [in] (default=false) Subobjects that are persistently selected stay selected when a command terminates. Returns: 0: object is not selected 1: object is selected 2: object is selected persistently Remarks: Objects that are locked, hidden, or on locked or hidden layers cannot be selected. If <a class="el" href="class_c_rhino_object.html#a44159228766275081eb384b8409220cc" title="true if can be selected while grips are on">IsSelectableWithGripsOn()</a> returns false, then an that object is not selectable if it has grips turned on. See Also: <a class="el" href="class_c_rhino_doc.html#af95dbf07f3ffb67965a1a99d8d34414d">CRhinoDoc::UnselectAll</a> CRhinoView::UnselectAllSubObjects </p>
+<p>Description: Reports if an object can be selected. Parameters: component_index - [in] index of subobject to check bSelect - [in] (default=true) bSynchHighlight - [in] (default=true) If true, then the object is highlighted if it is selected and not highlighted if is is not selected. bPersistentSelect - [in] (default=false) Subobjects that are persistently selected stay selected when a command terminates. Returns: 0: object is not selected 1: object is selected 2: object is selected persistently Remarks: Objects that are locked, hidden, or on locked or hidden layers cannot be selected. If <a class="el" href="class_c_rhino_object.html#a44159228766275081eb384b8409220cc" title="true if can be selected while grips are on">IsSelectableWithGripsOn()</a> returns false, then an that object is not selectable if it has grips turned on. See Also: <a class="el" href="class_c_rhino_doc.html#af95dbf07f3ffb67965a1a99d8d34414d">CRhinoDoc::UnselectAll</a> CRhinoView::UnselectAllSubObjects </p>
 
 <p>Reimplemented from <a class="el" href="class_c_rhino_object.html#af6e3cbe82bde413f02b26de51e0f56f4">CRhinoObject</a>.</p>
 
@@ -1959,7 +1959,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:01 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:27 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

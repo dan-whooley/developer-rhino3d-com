@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -92,6 +92,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a67c106a20fd65edafb07351b408891cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4465f9fd75b25c2c1d4e6788bb9621a1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_c_rh_rdk_content_field.html">CRhRdkContentField</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rh_rdk_content_fields.html#a4465f9fd75b25c2c1d4e6788bb9621a1">FindField</a> (const wchar_t *wszInternalName) const</td></tr>
 <tr class="separator:a4465f9fd75b25c2c1d4e6788bb9621a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a219e1ed2b0606457ff73fab67d3db4c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rh_rdk_content_fields.html#a219e1ed2b0606457ff73fab67d3db4c2">GetFieldValueCRC</a> (const <a class="el" href="class_c_rh_rdk_content_1_1_c_render_c_r_c_flags.html">CRhRdkContent::CRenderCRCFlags</a> &amp;rcrcFlags, <a class="el" href="class_c_rh_rdk_content_field.html#a0252c19a6d1a9e246e5b021aded37027">CRhRdkContentField::Filter</a> filter) const</td></tr>
+<tr class="separator:a219e1ed2b0606457ff73fab67d3db4c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a444d6459b020bf6a32dc4a3af56459d4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rh_rdk_content_fields.html#a444d6459b020bf6a32dc4a3af56459d4">GetValuesFromParamBlock</a> (const <a class="el" href="class_i_rh_rdk_param_block.html">IRhRdkParamBlock</a> &amp;paramBlock, int sectionId)</td></tr>
 <tr class="separator:a444d6459b020bf6a32dc4a3af56459d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d1357e6c3ef89016946adc19421983a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group___r_d_k.html#gaf141e0bb1bad5b4f381f9de023f904ad">RDK_DEPRECATED</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rh_rdk_content_fields.html#a3d1357e6c3ef89016946adc19421983a">GetValuesFromParamBlock</a> (const <a class="el" href="class_i_rh_rdk_param_block.html">IRhRdkParamBlock</a> &amp;paramBlock, int sectionId, CRhRdkContent::eChangeContext cc)</td></tr>
@@ -393,6 +395,41 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The field with the specified name, or nullptr if the field does not exist. </dd></dl>
+
+</div>
+</div>
+<a id="a219e1ed2b0606457ff73fab67d3db4c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a219e1ed2b0606457ff73fab67d3db4c2">&#9670;&nbsp;</a></span>GetFieldValueCRC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a> CRhRdkContentFields::GetFieldValueCRC </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_rh_rdk_content_1_1_c_render_c_r_c_flags.html">CRhRdkContent::CRenderCRCFlags</a> &amp;&#160;</td>
+          <td class="paramname"><em>rcrcFlags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_c_rh_rdk_content_field.html#a0252c19a6d1a9e246e5b021aded37027">CRhRdkContentField::Filter</a>&#160;</td>
+          <td class="paramname"><em>filter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Calculate the CRC of all fields that match a filter. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filter</td><td>is a filter to control which fields are considered. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The CRC. virtual </dd></dl>
 
 </div>
 </div>
@@ -728,7 +765,7 @@ Friends</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:11 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:37 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

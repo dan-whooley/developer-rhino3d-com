@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -805,7 +805,7 @@ $(function() {
 <div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;  <span class="comment">/*</span></div>
 <div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;<span class="comment">  Description:</span></div>
 <div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;<span class="comment">    Attach a user string to the object.  This information will</span></div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;<span class="comment">    perisist through copy construction, operator=, and file IO.</span></div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;<span class="comment">    persist through copy construction, operator=, and file IO.</span></div>
 <div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;<span class="comment">  Parameters:</span></div>
 <div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;<span class="comment">    key - [in] id used to retrieve this string.</span></div>
 <div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;<span class="comment">    string_value - [in] </span></div>
@@ -996,8 +996,8 @@ $(function() {
 <div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;<span class="comment">  */</span></div>
 <div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;  <span class="keyword">enum</span> <span class="keyword">class </span>UserDataConflictResolution : <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span></div>
 <div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;  {</div>
-<div class="line"><a name="l00927"></a><span class="lineno"><a class="line" href="class_o_n___object.html#a7f520e987ffa14e71b06493340f9956c">  927</a></span>&#160;    destination_object = 0,       <span class="comment">// use destination item</span></div>
-<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;    source_object = 1,            <span class="comment">// use source item</span></div>
+<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;    destination_object = 0,       <span class="comment">// use destination item</span></div>
+<div class="line"><a name="l00928"></a><span class="lineno"><a class="line" href="class_o_n___object.html#a7f520e987ffa14e71b06493340f9956c">  928</a></span>&#160;    source_object = 1,            <span class="comment">// use source item</span></div>
 <div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;    source_copycount_gt = 2,      <span class="comment">// use source item if source copycount &gt; destination copy count</span></div>
 <div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;    source_copycount_ge = 3,      <span class="comment">// use source item if source copycount &gt;= destination copy count</span></div>
 <div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;    destination_copycount_gt = 4, <span class="comment">// use destination item if destination copycount &gt; source copy count</span></div>
@@ -1233,103 +1233,107 @@ $(function() {
 <div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;<span class="comment">  Returns:</span></div>
 <div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;<span class="comment">    Aggregate information about the object&#39;s component states.</span></div>
-<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;  <span class="keyword">virtual</span></div>
-<div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;  <a class="code" href="class_o_n___aggregate_component_status.html">ON_AggregateComponentStatus</a> AggregateComponentStatus() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160; </div>
-<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;<span class="comment">    Call whenever a component status setting is modifed </span></div>
-<div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;<span class="comment">    by directly changing it on a component in a way that</span></div>
-<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;<span class="comment">    will result in any saved information about the parent</span></div>
-<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;<span class="comment">    object&#39;s aggretate component status becoming invalid.</span></div>
-<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;<span class="comment">  Remarks:</span></div>
-<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;<span class="comment">    The implementations of this function are nearly instant.</span></div>
-<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;<span class="comment">    and this function may be called as frequently as needed. </span></div>
-<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;<span class="comment">    The next time AggregateComponentStatus()</span></div>
-<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;<span class="comment">    is called the information used to return the value</span></div>
-<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;<span class="comment">    will be updated.</span></div>
-<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;  <span class="keyword">virtual</span></div>
-<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;  <span class="keywordtype">void</span> MarkAggregateComponentStatusAsNotCurrent() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160; </div>
-<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;<span class="comment">    Delete the portions of the object identified in ci_list[].</span></div>
-<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;<span class="comment">    ci_list - [in]</span></div>
-<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;<span class="comment">      List of components to delete.</span></div>
-<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;<span class="comment">    ci_list_count - [in]</span></div>
-<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;<span class="comment">      Number of elements in the ci_list[] array.</span></div>
-<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;<span class="comment">    True: succesful</span></div>
-<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;<span class="comment">    False: failure - no changes.</span></div>
-<div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;  <span class="keyword">virtual</span></div>
-<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;  <span class="keywordtype">bool</span> DeleteComponents(</div>
-<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a>* ci_list,</div>
-<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;    <span class="keywordtype">size_t</span> ci_count</div>
-<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;    );</div>
-<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;<span class="comment">  /////////////////////////////////////////////////////////////////</span></div>
-<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;<span class="comment"></span>  <span class="comment">//</span></div>
-<div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;  <span class="comment">// Expert interface</span></div>
-<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;  <span class="comment">//</span></div>
-<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160; </div>
-<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;<span class="comment">    Expert user function.  If you are using openNURBS in its</span></div>
-<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;<span class="comment">    default configuration to read and write 3dm archives,</span></div>
-<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;<span class="comment">    you never need to call this function.</span></div>
-<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;<span class="comment">    Many objects employ lazy creation of (runtime) caches</span></div>
-<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;<span class="comment">    that save information to help speed geometric calculations.</span></div>
-<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;<span class="comment">    This function will destroy all runtime information.</span></div>
-<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;<span class="comment">    bDelete - [in] if true, any cached information is properly</span></div>
-<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;<span class="comment">                   deleted.  If false, any cached information</span></div>
-<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;<span class="comment">                   is simply discarded.  This is useful when</span></div>
-<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;<span class="comment">                   the cached information may be in alternate</span></div>
-<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;<span class="comment">                   memory pools that are managed in nonstandard</span></div>
-<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;<span class="comment">                   ways.</span></div>
-<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> DestroyRuntimeCache( <span class="keywordtype">bool</span> bDelete = <span class="keyword">true</span> );</div>
-<div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160; </div>
-<div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160;  <span class="keyword">class </span><a class="code" href="class_o_n___user_data.html">ON_UserData</a>* m_userdata_list;</div>
-<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;  <span class="keyword">class </span><a class="code" href="class_o_n___user_data.html">ON_UserData</a>* TransferUserDataItem(</div>
-<div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;    <span class="keyword">const</span> <span class="keyword">class</span> <a class="code" href="class_o_n___user_data.html">ON_UserData</a>* source_ud_copy_this,</div>
-<div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;    <span class="keyword">class</span> <a class="code" href="class_o_n___user_data.html">ON_UserData</a>* source_ud_move_this,</div>
-<div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;    <span class="keywordtype">bool</span> bPerformConflictCheck,</div>
-<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;    <a class="code" href="class_o_n___object.html#a7f520e987ffa14e71b06493340f9956c">ON_Object::UserDataConflictResolution</a> userdata_conflict_resolution</div>
-<div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160;    );</div>
-<div class="line"><a name="l01234"></a><span class="lineno"> 1234</span>&#160;};</div>
-<div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160; </div>
-<div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l01237"></a><span class="lineno"> 1237</span>&#160; </div>
+<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;<span class="comment">  Remarks:</span></div>
+<div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;<span class="comment">    This function &quot;should&quot; return a const ON_AggregateComponentStatusEx,</span></div>
+<div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;<span class="comment">    but that requires breaking the C++ SDK.</span></div>
+<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;  <span class="keyword">virtual</span></div>
+<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;  <a class="code" href="class_o_n___aggregate_component_status.html">ON_AggregateComponentStatus</a> AggregateComponentStatus() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160; </div>
+<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;<span class="comment">    Call whenever a component status setting is modifed </span></div>
+<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;<span class="comment">    by directly changing it on a component in a way that</span></div>
+<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;<span class="comment">    will result in any saved information about the parent</span></div>
+<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;<span class="comment">    object&#39;s aggretate component status becoming invalid.</span></div>
+<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;<span class="comment">  Remarks:</span></div>
+<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;<span class="comment">    The implementations of this function are nearly instant.</span></div>
+<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;<span class="comment">    and this function may be called as frequently as needed. </span></div>
+<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;<span class="comment">    The next time AggregateComponentStatus()</span></div>
+<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;<span class="comment">    is called the information used to return the value</span></div>
+<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;<span class="comment">    will be updated.</span></div>
+<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;  <span class="keyword">virtual</span></div>
+<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;  <span class="keywordtype">void</span> MarkAggregateComponentStatusAsNotCurrent() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160; </div>
+<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;<span class="comment">    Delete the portions of the object identified in ci_list[].</span></div>
+<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;<span class="comment">    ci_list - [in]</span></div>
+<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;<span class="comment">      List of components to delete.</span></div>
+<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;<span class="comment">    ci_list_count - [in]</span></div>
+<div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;<span class="comment">      Number of elements in the ci_list[] array.</span></div>
+<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;<span class="comment">    True: succesful</span></div>
+<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;<span class="comment">    False: failure - no changes.</span></div>
+<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;  <span class="keyword">virtual</span></div>
+<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;  <span class="keywordtype">bool</span> DeleteComponents(</div>
+<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a>* ci_list,</div>
+<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;    <span class="keywordtype">size_t</span> ci_count</div>
+<div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;    );</div>
+<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;<span class="comment">  /////////////////////////////////////////////////////////////////</span></div>
+<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;<span class="comment"></span>  <span class="comment">//</span></div>
+<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;  <span class="comment">// Expert interface</span></div>
+<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160; </div>
+<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;<span class="comment">    Expert user function.  If you are using openNURBS in its</span></div>
+<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;<span class="comment">    default configuration to read and write 3dm archives,</span></div>
+<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;<span class="comment">    you never need to call this function.</span></div>
+<div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;<span class="comment">    Many objects employ lazy creation of (runtime) caches</span></div>
+<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;<span class="comment">    that save information to help speed geometric calculations.</span></div>
+<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;<span class="comment">    This function will destroy all runtime information.</span></div>
+<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;<span class="comment">    bDelete - [in] if true, any cached information is properly</span></div>
+<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;<span class="comment">                   deleted.  If false, any cached information</span></div>
+<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;<span class="comment">                   is simply discarded.  This is useful when</span></div>
+<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;<span class="comment">                   the cached information may be in alternate</span></div>
+<div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;<span class="comment">                   memory pools that are managed in nonstandard</span></div>
+<div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;<span class="comment">                   ways.</span></div>
+<div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> DestroyRuntimeCache( <span class="keywordtype">bool</span> bDelete = <span class="keyword">true</span> );</div>
+<div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160; </div>
+<div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;  <span class="keyword">class </span><a class="code" href="class_o_n___user_data.html">ON_UserData</a>* m_userdata_list;</div>
+<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;  <span class="keyword">class </span><a class="code" href="class_o_n___user_data.html">ON_UserData</a>* TransferUserDataItem(</div>
+<div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160;    <span class="keyword">const</span> <span class="keyword">class</span> <a class="code" href="class_o_n___user_data.html">ON_UserData</a>* source_ud_copy_this,</div>
+<div class="line"><a name="l01234"></a><span class="lineno"> 1234</span>&#160;    <span class="keyword">class</span> <a class="code" href="class_o_n___user_data.html">ON_UserData</a>* source_ud_move_this,</div>
+<div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160;    <span class="keywordtype">bool</span> bPerformConflictCheck,</div>
+<div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160;    <a class="code" href="class_o_n___object.html#a7f520e987ffa14e71b06493340f9956c">ON_Object::UserDataConflictResolution</a> userdata_conflict_resolution</div>
+<div class="line"><a name="l01237"></a><span class="lineno"> 1237</span>&#160;    );</div>
+<div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160;};</div>
+<div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160; </div>
+<div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_o_n___user_string_html"><div class="ttname"><a href="class_o_n___user_string.html">ON_UserString</a></div><div class="ttdef"><b>Definition:</b> opennurbs_object.h:433</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gaeec70151e703b808ab57d0626db20e1f"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gaeec70151e703b808ab57d0626db20e1f">ON_OBJECT_DECLARE</a></div><div class="ttdeci">#define ON_OBJECT_DECLARE(cls)</div><div class="ttdef"><b>Definition:</b> opennurbs_object.h:312</div></div>
-<div class="ttc" id="aclass_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x_html"><div class="ttname"><a href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a></div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:2325</div></div>
+<div class="ttc" id="aclass_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x_html"><div class="ttname"><a href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a></div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:2373</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga5bc3f9347689cb701302ff4a6cdc53f3"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga5bc3f9347689cb701302ff4a6cdc53f3">ON_IsNotValid</a></div><div class="ttdeci">ON_DECL bool ON_IsNotValid()</div></div>
 <div class="ttc" id="aclass_o_n___class_array_html"><div class="ttname"><a href="class_o_n___class_array.html">ON_ClassArray&lt; ON_UserString &gt;</a></div></div>
 <div class="ttc" id="astruct_o_n___vtable_html_a582811c11e8cb20bfd87bc150072dc8c"><div class="ttname"><a href="struct_o_n___vtable.html#a582811c11e8cb20bfd87bc150072dc8c">ON_Vtable::f</a></div><div class="ttdeci">ON_Vtable_func f[4]</div><div class="ttdef"><b>Definition:</b> opennurbs_object.h:275</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga59fb488a26cef0e7bf900a815eb92b88"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga59fb488a26cef0e7bf900a815eb92b88">ON_DECL</a></div><div class="ttdeci">#define ON_DECL</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:116</div></div>
 <div class="ttc" id="aclass_o_n___object_html"><div class="ttname"><a href="class_o_n___object.html">ON_Object</a></div><div class="ttdef"><b>Definition:</b> opennurbs_object.h:467</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga491c7d3cb43a77358c3751dca5e02100"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga491c7d3cb43a77358c3751dca5e02100">ON_ClassVtable</a></div><div class="ttdeci">ON_DECL struct ON_Vtable * ON_ClassVtable(void *p)</div></div>
-<div class="ttc" id="aclass_o_n_html_a328d22b5ad7bf9d4e9ba1123355d3cf9"><div class="ttname"><a href="class_o_n.html#a328d22b5ad7bf9d4e9ba1123355d3cf9">ON::object_type</a></div><div class="ttdeci">object_type</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:1977</div></div>
+<div class="ttc" id="aclass_o_n_html_a328d22b5ad7bf9d4e9ba1123355d3cf9"><div class="ttname"><a href="class_o_n.html#a328d22b5ad7bf9d4e9ba1123355d3cf9">ON::object_type</a></div><div class="ttdeci">object_type</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:2010</div></div>
 <div class="ttc" id="astruct_o_n___vtable_html"><div class="ttname"><a href="struct_o_n___vtable.html">ON_Vtable</a></div><div class="ttdef"><b>Definition:</b> opennurbs_object.h:267</div></div>
-<div class="ttc" id="aclass_o_n___object_html_a7f520e987ffa14e71b06493340f9956c"><div class="ttname"><a href="class_o_n___object.html#a7f520e987ffa14e71b06493340f9956c">ON_Object::UserDataConflictResolution</a></div><div class="ttdeci">UserDataConflictResolution</div><div class="ttdef"><b>Definition:</b> opennurbs_object.h:927</div></div>
+<div class="ttc" id="aclass_o_n___object_html_a7f520e987ffa14e71b06493340f9956c"><div class="ttname"><a href="class_o_n___object.html#a7f520e987ffa14e71b06493340f9956c">ON_Object::UserDataConflictResolution</a></div><div class="ttdeci">UserDataConflictResolution</div><div class="ttdef"><b>Definition:</b> opennurbs_object.h:928</div></div>
 <div class="ttc" id="aclass_o_n___xform_html"><div class="ttname"><a href="class_o_n___xform.html">ON_Xform</a></div><div class="ttdef"><b>Definition:</b> opennurbs_xform.h:31</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga96c6aae0eada13dd8125c66643e09200"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga96c6aae0eada13dd8125c66643e09200">ON_GetMostRecentClassIdCreateUuid</a></div><div class="ttdeci">ON_DECL ON_UUID ON_GetMostRecentClassIdCreateUuid()</div></div>
 <div class="ttc" id="aclass_o_n___simple_array_html"><div class="ttname"><a href="class_o_n___simple_array.html">ON_SimpleArray&lt; ON_COMPONENT_INDEX &gt;</a></div></div>
 <div class="ttc" id="aclass_o_n__w_string_html"><div class="ttname"><a href="class_o_n__w_string.html">ON_wString</a></div><div class="ttdef"><b>Definition:</b> opennurbs_string.h:2136</div></div>
-<div class="ttc" id="aclass_o_n___manifest_map_html"><div class="ttname"><a href="class_o_n___manifest_map.html">ON_ManifestMap</a></div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:1652</div></div>
-<div class="ttc" id="aclass_o_n___component_manifest_html"><div class="ttname"><a href="class_o_n___component_manifest.html">ON_ComponentManifest</a></div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:605</div></div>
-<div class="ttc" id="aclass_o_n___aggregate_component_status_html"><div class="ttname"><a href="class_o_n___aggregate_component_status.html">ON_AggregateComponentStatus</a></div><div class="ttdef"><b>Definition:</b> opennurbs_compstat.h:491</div></div>
+<div class="ttc" id="aclass_o_n___manifest_map_html"><div class="ttname"><a href="class_o_n___manifest_map.html">ON_ManifestMap</a></div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:1673</div></div>
+<div class="ttc" id="aclass_o_n___component_manifest_html"><div class="ttname"><a href="class_o_n___component_manifest.html">ON_ComponentManifest</a></div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:627</div></div>
+<div class="ttc" id="aclass_o_n___aggregate_component_status_html"><div class="ttname"><a href="class_o_n___aggregate_component_status.html">ON_AggregateComponentStatus</a></div><div class="ttdef"><b>Definition:</b> opennurbs_compstat.h:537</div></div>
 <div class="ttc" id="aclass_o_n___class_id_html"><div class="ttname"><a href="class_o_n___class_id.html">ON_ClassId</a></div><div class="ttdoc">used for runtime class identification</div><div class="ttdef"><b>Definition:</b> opennurbs_object.h:47</div></div>
 <div class="ttc" id="aclass_o_n___component_status_html"><div class="ttname"><a href="class_o_n___component_status.html">ON_ComponentStatus</a></div><div class="ttdef"><b>Definition:</b> opennurbs_compstat.h:93</div></div>
-<div class="ttc" id="aclass_o_n___binary_archive_html"><div class="ttname"><a href="class_o_n___binary_archive.html">ON_BinaryArchive</a></div><div class="ttdoc">&lt; use for generic serialization of binary data</div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:2014</div></div>
+<div class="ttc" id="aclass_o_n___binary_archive_html"><div class="ttname"><a href="class_o_n___binary_archive.html">ON_BinaryArchive</a></div><div class="ttdoc">&lt; use for generic serialization of binary data</div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:2035</div></div>
 <div class="ttc" id="aclass_o_n___text_log_html"><div class="ttname"><a href="class_o_n___text_log.html">ON_TextLog</a></div><div class="ttdef"><b>Definition:</b> opennurbs_textlog.h:22</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga1b9bbb0fba1d3a5fae3accc23a26e990"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a></div><div class="ttdeci">#define ON_NOEXCEPT</div><div class="ttdef"><b>Definition:</b> opennurbs_system_compiler.h:66</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gaf2a7287f9b5f99d84746d31819cddee8"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gaf2a7287f9b5f99d84746d31819cddee8">ON_Vtable_func</a></div><div class="ttdeci">int(* ON_Vtable_func)(void)</div><div class="ttdef"><b>Definition:</b> opennurbs_object.h:265</div></div>
@@ -1339,7 +1343,7 @@ $(function() {
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gaea03c6f4bab106103ada72c766f7fe5c"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a></div><div class="ttdeci">unsigned int ON__UINT32</div><div class="ttdoc">32 bit unsigned integer</div><div class="ttdef"><b>Definition:</b> opennurbs_system.h:238</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:12:50 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:15 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

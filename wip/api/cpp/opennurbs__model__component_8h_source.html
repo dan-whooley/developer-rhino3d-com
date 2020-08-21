@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -1168,7 +1168,7 @@ $(function() {
 <div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160;<span class="comment">    could be called.</span></div>
 <div class="line"><a name="l01097"></a><span class="lineno"> 1097</span>&#160;<span class="comment">  Remarks:</span></div>
 <div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160;<span class="comment">    About the only good use for this function is when a model compoenent is</span></div>
-<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;<span class="comment">    peristent and the name is needed for a formatted string.  For any</span></div>
+<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;<span class="comment">    persistent and the name is needed for a formatted string.  For any</span></div>
 <div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;<span class="comment">    other use, call the Name() function and store the result in an</span></div>
 <div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;<span class="comment">    ON_wString.  This function is dangerous because the returned pointer</span></div>
 <div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;<span class="comment">    will be invalid if SetName() is called.</span></div>
@@ -1420,550 +1420,555 @@ $(function() {
 <div class="line"><a name="l01348"></a><span class="lineno"> 1348</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> RuntimeSerialNumber() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l01349"></a><span class="lineno"> 1349</span>&#160; </div>
 <div class="line"><a name="l01350"></a><span class="lineno"> 1350</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01351"></a><span class="lineno"> 1351</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l01352"></a><span class="lineno"> 1352</span>&#160;<span class="comment">    Whenever an attribute is changed, the content version number is incremented.</span></div>
-<div class="line"><a name="l01353"></a><span class="lineno"> 1353</span>&#160;<span class="comment">    The ContentVersionNumber() is commonly used by consumers of the model </span></div>
-<div class="line"><a name="l01354"></a><span class="lineno"> 1354</span>&#160;<span class="comment">    component attributes to trigger updates when needed.</span></div>
-<div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160;<span class="comment">  Remarks:</span></div>
-<div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160;<span class="comment">    The ContentVersionNumber value is copied by the copy constructor and operator=.</span></div>
-<div class="line"><a name="l01357"></a><span class="lineno"> 1357</span>&#160;<span class="comment">    The value is not saved in .3dm archives.</span></div>
-<div class="line"><a name="l01358"></a><span class="lineno"> 1358</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01359"></a><span class="lineno"> 1359</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> ContentVersionNumber() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01360"></a><span class="lineno"> 1360</span>&#160; </div>
-<div class="line"><a name="l01361"></a><span class="lineno"> 1361</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01362"></a><span class="lineno"> 1362</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01363"></a><span class="lineno"> 1363</span>&#160;<span class="comment">    True if this model component is a system constant.  </span></div>
-<div class="line"><a name="l01364"></a><span class="lineno"> 1364</span>&#160;<span class="comment">  Remarks:</span></div>
-<div class="line"><a name="l01365"></a><span class="lineno"> 1365</span>&#160;<span class="comment">    An incomplete list of system constant model compoenents is below:</span></div>
-<div class="line"><a name="l01366"></a><span class="lineno"> 1366</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01367"></a><span class="lineno"> 1367</span>&#160;<span class="comment">      ON_ModelComponent::Unset</span></div>
-<div class="line"><a name="l01368"></a><span class="lineno"> 1368</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01369"></a><span class="lineno"> 1369</span>&#160;<span class="comment">      ON_InstanceDefinition::Empty</span></div>
-<div class="line"><a name="l01370"></a><span class="lineno"> 1370</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01371"></a><span class="lineno"> 1371</span>&#160;<span class="comment">      ON_Linetype::Unset</span></div>
-<div class="line"><a name="l01372"></a><span class="lineno"> 1372</span>&#160;<span class="comment">      ON_Linetype::Continuous</span></div>
-<div class="line"><a name="l01373"></a><span class="lineno"> 1373</span>&#160;<span class="comment">      ON_Linetype::ByLayer</span></div>
-<div class="line"><a name="l01374"></a><span class="lineno"> 1374</span>&#160;<span class="comment">      ON_Linetype::ByParent</span></div>
+<div class="line"><a name="l01351"></a><span class="lineno"> 1351</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l01352"></a><span class="lineno"> 1352</span>&#160;<span class="comment">    The next ON_ModelComponent instance will have runtime serial number</span></div>
+<div class="line"><a name="l01353"></a><span class="lineno"> 1353</span>&#160;<span class="comment">    &gt;= ON_ModelComponent::NextRuntimeSerialNumber();</span></div>
+<div class="line"><a name="l01354"></a><span class="lineno"> 1354</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160;  <span class="keyword">static</span> <a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> NextRuntimeSerialNumber();</div>
+<div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160; </div>
+<div class="line"><a name="l01357"></a><span class="lineno"> 1357</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01358"></a><span class="lineno"> 1358</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l01359"></a><span class="lineno"> 1359</span>&#160;<span class="comment">    Whenever an attribute is changed, the content version number is incremented.</span></div>
+<div class="line"><a name="l01360"></a><span class="lineno"> 1360</span>&#160;<span class="comment">    The ContentVersionNumber() is commonly used by consumers of the model </span></div>
+<div class="line"><a name="l01361"></a><span class="lineno"> 1361</span>&#160;<span class="comment">    component attributes to trigger updates when needed.</span></div>
+<div class="line"><a name="l01362"></a><span class="lineno"> 1362</span>&#160;<span class="comment">  Remarks:</span></div>
+<div class="line"><a name="l01363"></a><span class="lineno"> 1363</span>&#160;<span class="comment">    The ContentVersionNumber value is copied by the copy constructor and operator=.</span></div>
+<div class="line"><a name="l01364"></a><span class="lineno"> 1364</span>&#160;<span class="comment">    The value is not saved in .3dm archives.</span></div>
+<div class="line"><a name="l01365"></a><span class="lineno"> 1365</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01366"></a><span class="lineno"> 1366</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> ContentVersionNumber() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01367"></a><span class="lineno"> 1367</span>&#160; </div>
+<div class="line"><a name="l01368"></a><span class="lineno"> 1368</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01369"></a><span class="lineno"> 1369</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l01370"></a><span class="lineno"> 1370</span>&#160;<span class="comment">    True if this model component is a system constant.  </span></div>
+<div class="line"><a name="l01371"></a><span class="lineno"> 1371</span>&#160;<span class="comment">  Remarks:</span></div>
+<div class="line"><a name="l01372"></a><span class="lineno"> 1372</span>&#160;<span class="comment">    An incomplete list of system constant model compoenents is below:</span></div>
+<div class="line"><a name="l01373"></a><span class="lineno"> 1373</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l01374"></a><span class="lineno"> 1374</span>&#160;<span class="comment">      ON_ModelComponent::Unset</span></div>
 <div class="line"><a name="l01375"></a><span class="lineno"> 1375</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01376"></a><span class="lineno"> 1376</span>&#160;<span class="comment">      ON_Layer::Unset</span></div>
-<div class="line"><a name="l01377"></a><span class="lineno"> 1377</span>&#160;<span class="comment">      ON_Layer::Default</span></div>
-<div class="line"><a name="l01378"></a><span class="lineno"> 1378</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;<span class="comment">      ON_TextStyle::Unset</span></div>
-<div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;<span class="comment">      ON_TextStyle::Default</span></div>
-<div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;<span class="comment">      ON_TextStyle::ByLayer</span></div>
-<div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;<span class="comment">      ON_TextStyle::ByParent</span></div>
-<div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01384"></a><span class="lineno"> 1384</span>&#160;<span class="comment">      ON_DimStyle::Unset</span></div>
-<div class="line"><a name="l01385"></a><span class="lineno"> 1385</span>&#160;<span class="comment">      ON_DimStyle::Default</span></div>
-<div class="line"><a name="l01386"></a><span class="lineno"> 1386</span>&#160;<span class="comment">      ON_DimStyle::DefaultInchDecimal</span></div>
-<div class="line"><a name="l01387"></a><span class="lineno"> 1387</span>&#160;<span class="comment">      ON_DimStyle::DefaultInchFractional</span></div>
-<div class="line"><a name="l01388"></a><span class="lineno"> 1388</span>&#160;<span class="comment">      ON_DimStyle::DefaultFootInchArchitecture</span></div>
-<div class="line"><a name="l01389"></a><span class="lineno"> 1389</span>&#160;<span class="comment">      ON_DimStyle::DefaultMillimeterSmall</span></div>
-<div class="line"><a name="l01390"></a><span class="lineno"> 1390</span>&#160;<span class="comment">      ON_DimStyle::DefaultMillimeterLarge</span></div>
-<div class="line"><a name="l01391"></a><span class="lineno"> 1391</span>&#160;<span class="comment">      ON_DimStyle::DefaultMillimeterArchitecture</span></div>
-<div class="line"><a name="l01392"></a><span class="lineno"> 1392</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01393"></a><span class="lineno"> 1393</span>&#160;  <span class="keywordtype">bool</span> IsSystemComponent() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01394"></a><span class="lineno"> 1394</span>&#160; </div>
-<div class="line"><a name="l01395"></a><span class="lineno"> 1395</span>&#160;  <span class="keywordtype">bool</span> EraseIdentification(</div>
-<div class="line"><a name="l01396"></a><span class="lineno"> 1396</span>&#160;    <span class="keywordtype">bool</span> bIgnoreLocks</div>
-<div class="line"><a name="l01397"></a><span class="lineno"> 1397</span>&#160;    );</div>
-<div class="line"><a name="l01398"></a><span class="lineno"> 1398</span>&#160; </div>
-<div class="line"><a name="l01399"></a><span class="lineno"> 1399</span>&#160;  <span class="keywordtype">bool</span> SetAsSystemComponent();</div>
-<div class="line"><a name="l01400"></a><span class="lineno"> 1400</span>&#160;  <span class="keywordtype">bool</span> SetAsUnsetSystemComponent();</div>
+<div class="line"><a name="l01376"></a><span class="lineno"> 1376</span>&#160;<span class="comment">      ON_InstanceDefinition::Empty</span></div>
+<div class="line"><a name="l01377"></a><span class="lineno"> 1377</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l01378"></a><span class="lineno"> 1378</span>&#160;<span class="comment">      ON_Linetype::Unset</span></div>
+<div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;<span class="comment">      ON_Linetype::Continuous</span></div>
+<div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;<span class="comment">      ON_Linetype::ByLayer</span></div>
+<div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;<span class="comment">      ON_Linetype::ByParent</span></div>
+<div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160;<span class="comment">      ON_Layer::Unset</span></div>
+<div class="line"><a name="l01384"></a><span class="lineno"> 1384</span>&#160;<span class="comment">      ON_Layer::Default</span></div>
+<div class="line"><a name="l01385"></a><span class="lineno"> 1385</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l01386"></a><span class="lineno"> 1386</span>&#160;<span class="comment">      ON_TextStyle::Unset</span></div>
+<div class="line"><a name="l01387"></a><span class="lineno"> 1387</span>&#160;<span class="comment">      ON_TextStyle::Default</span></div>
+<div class="line"><a name="l01388"></a><span class="lineno"> 1388</span>&#160;<span class="comment">      ON_TextStyle::ByLayer</span></div>
+<div class="line"><a name="l01389"></a><span class="lineno"> 1389</span>&#160;<span class="comment">      ON_TextStyle::ByParent</span></div>
+<div class="line"><a name="l01390"></a><span class="lineno"> 1390</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l01391"></a><span class="lineno"> 1391</span>&#160;<span class="comment">      ON_DimStyle::Unset</span></div>
+<div class="line"><a name="l01392"></a><span class="lineno"> 1392</span>&#160;<span class="comment">      ON_DimStyle::Default</span></div>
+<div class="line"><a name="l01393"></a><span class="lineno"> 1393</span>&#160;<span class="comment">      ON_DimStyle::DefaultInchDecimal</span></div>
+<div class="line"><a name="l01394"></a><span class="lineno"> 1394</span>&#160;<span class="comment">      ON_DimStyle::DefaultInchFractional</span></div>
+<div class="line"><a name="l01395"></a><span class="lineno"> 1395</span>&#160;<span class="comment">      ON_DimStyle::DefaultFootInchArchitecture</span></div>
+<div class="line"><a name="l01396"></a><span class="lineno"> 1396</span>&#160;<span class="comment">      ON_DimStyle::DefaultMillimeterSmall</span></div>
+<div class="line"><a name="l01397"></a><span class="lineno"> 1397</span>&#160;<span class="comment">      ON_DimStyle::DefaultMillimeterLarge</span></div>
+<div class="line"><a name="l01398"></a><span class="lineno"> 1398</span>&#160;<span class="comment">      ON_DimStyle::DefaultMillimeterArchitecture</span></div>
+<div class="line"><a name="l01399"></a><span class="lineno"> 1399</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01400"></a><span class="lineno"> 1400</span>&#160;  <span class="keywordtype">bool</span> IsSystemComponent() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l01401"></a><span class="lineno"> 1401</span>&#160; </div>
-<div class="line"><a name="l01402"></a><span class="lineno"> 1402</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l01403"></a><span class="lineno"> 1403</span>&#160;  <span class="keywordtype">bool</span> Internal_SetAsSystemComponent(</div>
-<div class="line"><a name="l01404"></a><span class="lineno"> 1404</span>&#160;    <span class="keywordtype">bool</span> bUnsetSystemComponent</div>
-<div class="line"><a name="l01405"></a><span class="lineno"> 1405</span>&#160;    );</div>
-<div class="line"><a name="l01406"></a><span class="lineno"> 1406</span>&#160; </div>
-<div class="line"><a name="l01407"></a><span class="lineno"> 1407</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l01408"></a><span class="lineno"> 1408</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01409"></a><span class="lineno"> 1409</span>&#160;<span class="comment">    Classes derived from ON_ModelComponent should have private data members and</span></div>
-<div class="line"><a name="l01410"></a><span class="lineno"> 1410</span>&#160;<span class="comment">    call IncrementContentVersionNumber() when the data member value changes.</span></div>
-<div class="line"><a name="l01411"></a><span class="lineno"> 1411</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01412"></a><span class="lineno"> 1412</span>&#160;  <span class="keywordtype">void</span> IncrementContentVersionNumber() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01402"></a><span class="lineno"> 1402</span>&#160;  <span class="keywordtype">bool</span> EraseIdentification(</div>
+<div class="line"><a name="l01403"></a><span class="lineno"> 1403</span>&#160;    <span class="keywordtype">bool</span> bIgnoreLocks</div>
+<div class="line"><a name="l01404"></a><span class="lineno"> 1404</span>&#160;    );</div>
+<div class="line"><a name="l01405"></a><span class="lineno"> 1405</span>&#160; </div>
+<div class="line"><a name="l01406"></a><span class="lineno"> 1406</span>&#160;  <span class="keywordtype">bool</span> SetAsSystemComponent();</div>
+<div class="line"><a name="l01407"></a><span class="lineno"> 1407</span>&#160;  <span class="keywordtype">bool</span> SetAsUnsetSystemComponent();</div>
+<div class="line"><a name="l01408"></a><span class="lineno"> 1408</span>&#160; </div>
+<div class="line"><a name="l01409"></a><span class="lineno"> 1409</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l01410"></a><span class="lineno"> 1410</span>&#160;  <span class="keywordtype">bool</span> Internal_SetAsSystemComponent(</div>
+<div class="line"><a name="l01411"></a><span class="lineno"> 1411</span>&#160;    <span class="keywordtype">bool</span> bUnsetSystemComponent</div>
+<div class="line"><a name="l01412"></a><span class="lineno"> 1412</span>&#160;    );</div>
 <div class="line"><a name="l01413"></a><span class="lineno"> 1413</span>&#160; </div>
-<div class="line"><a name="l01414"></a><span class="lineno"> 1414</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l01415"></a><span class="lineno"> 1415</span>&#160;  <span class="keyword">const</span> <a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> m_runtime_serial_number;  </div>
-<div class="line"><a name="l01416"></a><span class="lineno"> 1416</span>&#160;  <span class="keyword">mutable</span> <a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> m_content_version_number = 0;</div>
-<div class="line"><a name="l01417"></a><span class="lineno"> 1417</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a> m_model_serial_number = 0;</div>
-<div class="line"><a name="l01418"></a><span class="lineno"> 1418</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a> m_reference_model_serial_number = 0;</div>
-<div class="line"><a name="l01419"></a><span class="lineno"> 1419</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a> m_linked_idef_serial_number = 0;</div>
-<div class="line"><a name="l01420"></a><span class="lineno"> 1420</span>&#160;  <a class="code" href="class_o_n___model_component.html#a2977d69091b4952cc19b0189a28a0eac">ON_ModelComponent::Type</a> m_component_type = <a class="code" href="class_o_n___model_component.html#a2977d69091b4952cc19b0189a28a0eacac9f88e098f6fe4e4e112eeb05ccb9671">ON_ModelComponent::Type::Unset</a>;</div>
-<div class="line"><a name="l01421"></a><span class="lineno"> 1421</span>&#160; </div>
-<div class="line"><a name="l01422"></a><span class="lineno"> 1422</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_locked_status = 0;</div>
-<div class="line"><a name="l01423"></a><span class="lineno"> 1423</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_set_status = 0;</div>
-<div class="line"><a name="l01424"></a><span class="lineno"> 1424</span>&#160;  <a class="code" href="class_o_n___component_status.html">ON_ComponentStatus</a> m_component_status = <a class="code" href="class_o_n___component_status.html#ae267cd5d4088c8a033fa348d30227223">ON_ComponentStatus::NoneSet</a>;</div>
-<div class="line"><a name="l01425"></a><span class="lineno"> 1425</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga3b6aca42cfeb22b5315f542d04ba024c">ON__UINT8</a> m_reserved1 = 0;</div>
-<div class="line"><a name="l01426"></a><span class="lineno"> 1426</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_reserved2 = 0;</div>
-<div class="line"><a name="l01427"></a><span class="lineno"> 1427</span>&#160; </div>
-<div class="line"><a name="l01428"></a><span class="lineno"> 1428</span>&#160;  <span class="comment">// m_component_index is the index of the component in the model identified </span></div>
-<div class="line"><a name="l01429"></a><span class="lineno"> 1429</span>&#160;  <span class="comment">// by m_model_serial_number.</span></div>
-<div class="line"><a name="l01430"></a><span class="lineno"> 1430</span>&#160;  <span class="comment">//</span></div>
-<div class="line"><a name="l01431"></a><span class="lineno"> 1431</span>&#160;  <span class="comment">// Some components use small negative indices (-1,-2,-3,...) to identify</span></div>
-<div class="line"><a name="l01432"></a><span class="lineno"> 1432</span>&#160;  <span class="comment">// default or constant components.  An incomplete list includes these:</span></div>
-<div class="line"><a name="l01433"></a><span class="lineno"> 1433</span>&#160;  <span class="comment">//   ON_TextStyle::Default, (index = -1) </span></div>
-<div class="line"><a name="l01434"></a><span class="lineno"> 1434</span>&#160;  <span class="comment">//   ON_TextStyle::ByLayer,  (index = -2) </span></div>
-<div class="line"><a name="l01435"></a><span class="lineno"> 1435</span>&#160;  <span class="comment">//   ON_TextStyle::ByParent,  (index = -3) </span></div>
-<div class="line"><a name="l01436"></a><span class="lineno"> 1436</span>&#160;  <span class="comment">//   ON_Linetype::Continuous,  (index = -1) </span></div>
-<div class="line"><a name="l01437"></a><span class="lineno"> 1437</span>&#160;  <span class="comment">//   ON_Linetype::ByLayer,  (index = -2) </span></div>
-<div class="line"><a name="l01438"></a><span class="lineno"> 1438</span>&#160;  <span class="comment">//   ON_Linetype::ByParent,  (index = -3) </span></div>
-<div class="line"><a name="l01439"></a><span class="lineno"> 1439</span>&#160;  <span class="comment">//</span></div>
-<div class="line"><a name="l01440"></a><span class="lineno"> 1440</span>&#160;  <span class="comment">// ON_UNSET_INT_INDEX is a large negative number.</span></div>
-<div class="line"><a name="l01441"></a><span class="lineno"> 1441</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga56cda90a1091ae3495363200bbbaf4e5">ON__INT32</a> m_component_index = <a class="code" href="group__open_n_u_r_b_s.html#ga1a6ce74387d3d7f0cc364a719b8a4eef">ON_UNSET_INT_INDEX</a>;  </div>
-<div class="line"><a name="l01442"></a><span class="lineno"> 1442</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a> m_reserved3 = 0;</div>
-<div class="line"><a name="l01443"></a><span class="lineno"> 1443</span>&#160; </div>
-<div class="line"><a name="l01444"></a><span class="lineno"> 1444</span>&#160;  <a class="code" href="struct_o_n___u_u_i_d__struct.html">ON_UUID</a> m_component_id = <a class="code" href="group__open_n_u_r_b_s.html#gaee59b97a9592c0c7b48a7c660a67926c">ON_nil_uuid</a>;</div>
-<div class="line"><a name="l01445"></a><span class="lineno"> 1445</span>&#160;  <a class="code" href="struct_o_n___u_u_i_d__struct.html">ON_UUID</a> m_component_parent_id = <a class="code" href="group__open_n_u_r_b_s.html#gaee59b97a9592c0c7b48a7c660a67926c">ON_nil_uuid</a>;</div>
-<div class="line"><a name="l01446"></a><span class="lineno"> 1446</span>&#160;  <span class="comment">// lazy evaluation is used top initialize m_component_name_hash</span></div>
-<div class="line"><a name="l01447"></a><span class="lineno"> 1447</span>&#160;  <span class="keyword">mutable</span> <a class="code" href="class_o_n___name_hash.html">ON_NameHash</a> m_component_name_hash;</div>
-<div class="line"><a name="l01448"></a><span class="lineno"> 1448</span>&#160; </div>
-<div class="line"><a name="l01449"></a><span class="lineno"> 1449</span>&#160;  <a class="code" href="class_o_n__w_string.html">ON_wString</a> m_component_name;</div>
-<div class="line"><a name="l01450"></a><span class="lineno"> 1450</span>&#160; </div>
-<div class="line"><a name="l01451"></a><span class="lineno"> 1451</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l01452"></a><span class="lineno"> 1452</span>&#160;  <span class="comment">// For internal use.  Never call this function.</span></div>
-<div class="line"><a name="l01453"></a><span class="lineno"> 1453</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Internal_SystemComponentHelper();</div>
+<div class="line"><a name="l01414"></a><span class="lineno"> 1414</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l01415"></a><span class="lineno"> 1415</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01416"></a><span class="lineno"> 1416</span>&#160;<span class="comment">    Classes derived from ON_ModelComponent should have private data members and</span></div>
+<div class="line"><a name="l01417"></a><span class="lineno"> 1417</span>&#160;<span class="comment">    call IncrementContentVersionNumber() when the data member value changes.</span></div>
+<div class="line"><a name="l01418"></a><span class="lineno"> 1418</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01419"></a><span class="lineno"> 1419</span>&#160;  <span class="keywordtype">void</span> IncrementContentVersionNumber() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01420"></a><span class="lineno"> 1420</span>&#160; </div>
+<div class="line"><a name="l01421"></a><span class="lineno"> 1421</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l01422"></a><span class="lineno"> 1422</span>&#160;  <span class="keyword">const</span> <a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> m_runtime_serial_number;  </div>
+<div class="line"><a name="l01423"></a><span class="lineno"> 1423</span>&#160;  <span class="keyword">mutable</span> <a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> m_content_version_number = 0;</div>
+<div class="line"><a name="l01424"></a><span class="lineno"> 1424</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a> m_model_serial_number = 0;</div>
+<div class="line"><a name="l01425"></a><span class="lineno"> 1425</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a> m_reference_model_serial_number = 0;</div>
+<div class="line"><a name="l01426"></a><span class="lineno"> 1426</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a> m_linked_idef_serial_number = 0;</div>
+<div class="line"><a name="l01427"></a><span class="lineno"> 1427</span>&#160;  <a class="code" href="class_o_n___model_component.html#a2977d69091b4952cc19b0189a28a0eac">ON_ModelComponent::Type</a> m_component_type = <a class="code" href="class_o_n___model_component.html#a2977d69091b4952cc19b0189a28a0eacac9f88e098f6fe4e4e112eeb05ccb9671">ON_ModelComponent::Type::Unset</a>;</div>
+<div class="line"><a name="l01428"></a><span class="lineno"> 1428</span>&#160; </div>
+<div class="line"><a name="l01429"></a><span class="lineno"> 1429</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_locked_status = 0;</div>
+<div class="line"><a name="l01430"></a><span class="lineno"> 1430</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_set_status = 0;</div>
+<div class="line"><a name="l01431"></a><span class="lineno"> 1431</span>&#160;  <a class="code" href="class_o_n___component_status.html">ON_ComponentStatus</a> m_component_status = <a class="code" href="class_o_n___component_status.html#ae267cd5d4088c8a033fa348d30227223">ON_ComponentStatus::NoneSet</a>;</div>
+<div class="line"><a name="l01432"></a><span class="lineno"> 1432</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a> m_reserved2 = 0;</div>
+<div class="line"><a name="l01433"></a><span class="lineno"> 1433</span>&#160; </div>
+<div class="line"><a name="l01434"></a><span class="lineno"> 1434</span>&#160;  <span class="comment">// m_component_index is the index of the component in the model identified </span></div>
+<div class="line"><a name="l01435"></a><span class="lineno"> 1435</span>&#160;  <span class="comment">// by m_model_serial_number.</span></div>
+<div class="line"><a name="l01436"></a><span class="lineno"> 1436</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l01437"></a><span class="lineno"> 1437</span>&#160;  <span class="comment">// Some components use small negative indices (-1,-2,-3,...) to identify</span></div>
+<div class="line"><a name="l01438"></a><span class="lineno"> 1438</span>&#160;  <span class="comment">// default or constant components.  An incomplete list includes these:</span></div>
+<div class="line"><a name="l01439"></a><span class="lineno"> 1439</span>&#160;  <span class="comment">//   ON_TextStyle::Default, (index = -1) </span></div>
+<div class="line"><a name="l01440"></a><span class="lineno"> 1440</span>&#160;  <span class="comment">//   ON_TextStyle::ByLayer,  (index = -2) </span></div>
+<div class="line"><a name="l01441"></a><span class="lineno"> 1441</span>&#160;  <span class="comment">//   ON_TextStyle::ByParent,  (index = -3) </span></div>
+<div class="line"><a name="l01442"></a><span class="lineno"> 1442</span>&#160;  <span class="comment">//   ON_Linetype::Continuous,  (index = -1) </span></div>
+<div class="line"><a name="l01443"></a><span class="lineno"> 1443</span>&#160;  <span class="comment">//   ON_Linetype::ByLayer,  (index = -2) </span></div>
+<div class="line"><a name="l01444"></a><span class="lineno"> 1444</span>&#160;  <span class="comment">//   ON_Linetype::ByParent,  (index = -3) </span></div>
+<div class="line"><a name="l01445"></a><span class="lineno"> 1445</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l01446"></a><span class="lineno"> 1446</span>&#160;  <span class="comment">// ON_UNSET_INT_INDEX is a large negative number.</span></div>
+<div class="line"><a name="l01447"></a><span class="lineno"> 1447</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga56cda90a1091ae3495363200bbbaf4e5">ON__INT32</a> m_component_index = <a class="code" href="group__open_n_u_r_b_s.html#ga1a6ce74387d3d7f0cc364a719b8a4eef">ON_UNSET_INT_INDEX</a>;  </div>
+<div class="line"><a name="l01448"></a><span class="lineno"> 1448</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a> m_reserved3 = 0;</div>
+<div class="line"><a name="l01449"></a><span class="lineno"> 1449</span>&#160; </div>
+<div class="line"><a name="l01450"></a><span class="lineno"> 1450</span>&#160;  <a class="code" href="struct_o_n___u_u_i_d__struct.html">ON_UUID</a> m_component_id = <a class="code" href="group__open_n_u_r_b_s.html#gaee59b97a9592c0c7b48a7c660a67926c">ON_nil_uuid</a>;</div>
+<div class="line"><a name="l01451"></a><span class="lineno"> 1451</span>&#160;  <a class="code" href="struct_o_n___u_u_i_d__struct.html">ON_UUID</a> m_component_parent_id = <a class="code" href="group__open_n_u_r_b_s.html#gaee59b97a9592c0c7b48a7c660a67926c">ON_nil_uuid</a>;</div>
+<div class="line"><a name="l01452"></a><span class="lineno"> 1452</span>&#160;  <span class="comment">// lazy evaluation is used top initialize m_component_name_hash</span></div>
+<div class="line"><a name="l01453"></a><span class="lineno"> 1453</span>&#160;  <span class="keyword">mutable</span> <a class="code" href="class_o_n___name_hash.html">ON_NameHash</a> m_component_name_hash;</div>
 <div class="line"><a name="l01454"></a><span class="lineno"> 1454</span>&#160; </div>
-<div class="line"><a name="l01455"></a><span class="lineno"> 1455</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l01456"></a><span class="lineno"> 1456</span>&#160;<span class="preprocessor">#pragma ON_PRAGMA_WARNING_PUSH</span></div>
-<div class="line"><a name="l01457"></a><span class="lineno"> 1457</span>&#160;<span class="preprocessor">#pragma ON_PRAGMA_WARNING_DISABLE_MSC( 4251 )</span></div>
-<div class="line"><a name="l01458"></a><span class="lineno"> 1458</span>&#160;  <span class="comment">// C4251: ... needs to have dll-interface to be used by clients of class ...</span></div>
-<div class="line"><a name="l01459"></a><span class="lineno"> 1459</span>&#160;  <span class="comment">// This warning is not correct. </span></div>
-<div class="line"><a name="l01460"></a><span class="lineno"> 1460</span>&#160;  <span class="comment">// Internal_RuntimeSerialNumberGenerator is private and all code that manages m_mcr_lists is explicitly implemented in the DLL.</span></div>
-<div class="line"><a name="l01461"></a><span class="lineno"> 1461</span>&#160;  <span class="keyword">static</span> std::atomic&lt;ON__UINT64&gt; Internal_RuntimeSerialNumberGenerator;</div>
-<div class="line"><a name="l01462"></a><span class="lineno"> 1462</span>&#160;<span class="preprocessor">#pragma ON_PRAGMA_WARNING_POP</span></div>
-<div class="line"><a name="l01463"></a><span class="lineno"> 1463</span>&#160;};</div>
-<div class="line"><a name="l01464"></a><span class="lineno"> 1464</span>&#160; </div>
-<div class="line"><a name="l01465"></a><span class="lineno"> 1465</span>&#160; </div>
-<div class="line"><a name="l01466"></a><span class="lineno"> 1466</span>&#160;<span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a></div>
-<div class="line"><a name="l01467"></a><span class="lineno"> 1467</span>&#160;{</div>
-<div class="line"><a name="l01468"></a><span class="lineno"> 1468</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l01469"></a><span class="lineno"><a class="line" href="class_o_n___model_component_content_mark.html"> 1469</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a> <a class="code" href="group__open_n_u_r_b_s.html#gga6f5c1d4d88bb5eccd2afaacde27f9ef3ac9f88e098f6fe4e4e112eeb05ccb9671">Unset</a>;</div>
-<div class="line"><a name="l01470"></a><span class="lineno"> 1470</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l01471"></a><span class="lineno"> 1471</span>&#160;  <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l01472"></a><span class="lineno"><a class="line" href="class_o_n___model_component_content_mark.html#a89586edd7ffd221d7514675c2ce7d31f"> 1472</a></span>&#160;  ~<a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l01473"></a><span class="lineno"> 1473</span>&#160;  <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>(<span class="keyword">const</span> <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>&amp;) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l01474"></a><span class="lineno"> 1474</span>&#160;  <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>&amp;) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l01475"></a><span class="lineno"> 1475</span>&#160; </div>
-<div class="line"><a name="l01476"></a><span class="lineno"> 1476</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01477"></a><span class="lineno"> 1477</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l01478"></a><span class="lineno"> 1478</span>&#160;<span class="comment">    Save the current content state of model_component.</span></div>
-<div class="line"><a name="l01479"></a><span class="lineno"> 1479</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l01480"></a><span class="lineno"> 1480</span>&#160;<span class="comment">    model_component - [in]</span></div>
-<div class="line"><a name="l01481"></a><span class="lineno"> 1481</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01482"></a><span class="lineno"> 1482</span>&#160;  <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>(</div>
-<div class="line"><a name="l01483"></a><span class="lineno"> 1483</span>&#160;    <span class="keyword">const</span> <span class="keyword">class</span> <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>&amp; model_component</div>
-<div class="line"><a name="l01484"></a><span class="lineno"> 1484</span>&#160;  );</div>
-<div class="line"><a name="l01485"></a><span class="lineno"> 1485</span>&#160; </div>
-<div class="line"><a name="l01486"></a><span class="lineno"> 1486</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01487"></a><span class="lineno"> 1487</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l01488"></a><span class="lineno"> 1488</span>&#160;<span class="comment">    Save the current content state of model_component.</span></div>
-<div class="line"><a name="l01489"></a><span class="lineno"> 1489</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l01490"></a><span class="lineno"> 1490</span>&#160;<span class="comment">    model_component - [in]</span></div>
-<div class="line"><a name="l01491"></a><span class="lineno"> 1491</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01492"></a><span class="lineno"> 1492</span>&#160;  <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>(</div>
-<div class="line"><a name="l01493"></a><span class="lineno"> 1493</span>&#160;    <span class="keyword">const</span> <span class="keyword">class</span> <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>* model_component</div>
-<div class="line"><a name="l01494"></a><span class="lineno"> 1494</span>&#160;  );</div>
-<div class="line"><a name="l01495"></a><span class="lineno"> 1495</span>&#160; </div>
-<div class="line"><a name="l01496"></a><span class="lineno"> 1496</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01497"></a><span class="lineno"> 1497</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l01498"></a><span class="lineno"> 1498</span>&#160;<span class="comment">    Save the current content state of model_component.</span></div>
-<div class="line"><a name="l01499"></a><span class="lineno"> 1499</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l01500"></a><span class="lineno"> 1500</span>&#160;<span class="comment">    model_component - [in]</span></div>
-<div class="line"><a name="l01501"></a><span class="lineno"> 1501</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01502"></a><span class="lineno"> 1502</span>&#160;  <span class="keywordtype">void</span> Set(</div>
-<div class="line"><a name="l01503"></a><span class="lineno"> 1503</span>&#160;    <span class="keyword">const</span> <span class="keyword">class</span> <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>&amp; model_component</div>
-<div class="line"><a name="l01504"></a><span class="lineno"> 1504</span>&#160;  );</div>
-<div class="line"><a name="l01505"></a><span class="lineno"> 1505</span>&#160; </div>
-<div class="line"><a name="l01506"></a><span class="lineno"> 1506</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01507"></a><span class="lineno"> 1507</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l01508"></a><span class="lineno"> 1508</span>&#160;<span class="comment">    Save the current content state of model_component.</span></div>
-<div class="line"><a name="l01509"></a><span class="lineno"> 1509</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l01510"></a><span class="lineno"> 1510</span>&#160;<span class="comment">    model_component - [in]</span></div>
-<div class="line"><a name="l01511"></a><span class="lineno"> 1511</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01512"></a><span class="lineno"> 1512</span>&#160;  <span class="keywordtype">void</span> Set(</div>
-<div class="line"><a name="l01513"></a><span class="lineno"> 1513</span>&#160;    <span class="keyword">const</span> <span class="keyword">class</span> <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>* model_component</div>
-<div class="line"><a name="l01514"></a><span class="lineno"> 1514</span>&#160;  );</div>
-<div class="line"><a name="l01515"></a><span class="lineno"> 1515</span>&#160;  </div>
-<div class="line"><a name="l01516"></a><span class="lineno"> 1516</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01517"></a><span class="lineno"> 1517</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l01518"></a><span class="lineno"> 1518</span>&#160;<span class="comment">    model_component - [in]</span></div>
-<div class="line"><a name="l01519"></a><span class="lineno"> 1519</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01520"></a><span class="lineno"> 1520</span>&#160;<span class="comment">    true if the content of model_component is identical</span></div>
-<div class="line"><a name="l01521"></a><span class="lineno"> 1521</span>&#160;<span class="comment">    to the content state saved in this ON_ModelComponentContentMark.</span></div>
-<div class="line"><a name="l01522"></a><span class="lineno"> 1522</span>&#160;<span class="comment">    false otherwise.</span></div>
-<div class="line"><a name="l01523"></a><span class="lineno"> 1523</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01524"></a><span class="lineno"> 1524</span>&#160;  <span class="keywordtype">bool</span> EqualContent(</div>
-<div class="line"><a name="l01525"></a><span class="lineno"> 1525</span>&#160;    <span class="keyword">const</span> <span class="keyword">class</span> <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>&amp; model_component</div>
-<div class="line"><a name="l01526"></a><span class="lineno"> 1526</span>&#160;  ) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01527"></a><span class="lineno"> 1527</span>&#160;    </div>
-<div class="line"><a name="l01528"></a><span class="lineno"> 1528</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01529"></a><span class="lineno"> 1529</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l01530"></a><span class="lineno"> 1530</span>&#160;<span class="comment">    model_component - [in]</span></div>
-<div class="line"><a name="l01531"></a><span class="lineno"> 1531</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01532"></a><span class="lineno"> 1532</span>&#160;<span class="comment">    true if the content of model_component is identical</span></div>
-<div class="line"><a name="l01533"></a><span class="lineno"> 1533</span>&#160;<span class="comment">    to the content state saved in this ON_ModelComponentContentMark.</span></div>
-<div class="line"><a name="l01534"></a><span class="lineno"> 1534</span>&#160;<span class="comment">    false otherwise.</span></div>
-<div class="line"><a name="l01535"></a><span class="lineno"> 1535</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01536"></a><span class="lineno"> 1536</span>&#160;  <span class="keywordtype">bool</span> EqualContent(</div>
-<div class="line"><a name="l01537"></a><span class="lineno"> 1537</span>&#160;    <span class="keyword">const</span> <span class="keyword">class</span> <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>* model_component</div>
-<div class="line"><a name="l01538"></a><span class="lineno"> 1538</span>&#160;  ) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01539"></a><span class="lineno"> 1539</span>&#160;  </div>
-<div class="line"><a name="l01540"></a><span class="lineno"> 1540</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01541"></a><span class="lineno"> 1541</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l01542"></a><span class="lineno"> 1542</span>&#160;<span class="comment">    lhs - [in]</span></div>
-<div class="line"><a name="l01543"></a><span class="lineno"> 1543</span>&#160;<span class="comment">    rhs - [in]</span></div>
-<div class="line"><a name="l01544"></a><span class="lineno"> 1544</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01545"></a><span class="lineno"> 1545</span>&#160;<span class="comment">    true if lhs and rhs are identical.</span></div>
-<div class="line"><a name="l01546"></a><span class="lineno"> 1546</span>&#160;<span class="comment">    false otherwise.</span></div>
-<div class="line"><a name="l01547"></a><span class="lineno"> 1547</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01548"></a><span class="lineno"> 1548</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> EqualContent(</div>
-<div class="line"><a name="l01549"></a><span class="lineno"> 1549</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>&amp; lhs,</div>
-<div class="line"><a name="l01550"></a><span class="lineno"> 1550</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>&amp; rhs</div>
-<div class="line"><a name="l01551"></a><span class="lineno"> 1551</span>&#160;  );</div>
-<div class="line"><a name="l01552"></a><span class="lineno"> 1552</span>&#160; </div>
-<div class="line"><a name="l01553"></a><span class="lineno"> 1553</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01554"></a><span class="lineno"> 1554</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01555"></a><span class="lineno"> 1555</span>&#160;<span class="comment">    Saved model component id.</span></div>
-<div class="line"><a name="l01556"></a><span class="lineno"> 1556</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01557"></a><span class="lineno"> 1557</span>&#160;  <a class="code" href="struct_o_n___u_u_i_d__struct.html">ON_UUID</a> ComponentId() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01455"></a><span class="lineno"> 1455</span>&#160;  <a class="code" href="class_o_n__w_string.html">ON_wString</a> m_component_name;</div>
+<div class="line"><a name="l01456"></a><span class="lineno"> 1456</span>&#160; </div>
+<div class="line"><a name="l01457"></a><span class="lineno"> 1457</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l01458"></a><span class="lineno"> 1458</span>&#160;  <span class="comment">// For internal use.  Never call this function.</span></div>
+<div class="line"><a name="l01459"></a><span class="lineno"> 1459</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Internal_SystemComponentHelper();</div>
+<div class="line"><a name="l01460"></a><span class="lineno"> 1460</span>&#160; </div>
+<div class="line"><a name="l01461"></a><span class="lineno"> 1461</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l01462"></a><span class="lineno"> 1462</span>&#160;<span class="preprocessor">#pragma ON_PRAGMA_WARNING_PUSH</span></div>
+<div class="line"><a name="l01463"></a><span class="lineno"> 1463</span>&#160;<span class="preprocessor">#pragma ON_PRAGMA_WARNING_DISABLE_MSC( 4251 )</span></div>
+<div class="line"><a name="l01464"></a><span class="lineno"> 1464</span>&#160;  <span class="comment">// C4251: ... needs to have dll-interface to be used by clients of class ...</span></div>
+<div class="line"><a name="l01465"></a><span class="lineno"> 1465</span>&#160;  <span class="comment">// This warning is not correct. </span></div>
+<div class="line"><a name="l01466"></a><span class="lineno"> 1466</span>&#160;  <span class="comment">// Internal_RuntimeSerialNumberGenerator is private and all code that manages m_mcr_lists is explicitly implemented in the DLL.</span></div>
+<div class="line"><a name="l01467"></a><span class="lineno"> 1467</span>&#160;  <span class="keyword">static</span> std::atomic&lt;ON__UINT64&gt; Internal_RuntimeSerialNumberGenerator;</div>
+<div class="line"><a name="l01468"></a><span class="lineno"> 1468</span>&#160;<span class="preprocessor">#pragma ON_PRAGMA_WARNING_POP</span></div>
+<div class="line"><a name="l01469"></a><span class="lineno"> 1469</span>&#160;};</div>
+<div class="line"><a name="l01470"></a><span class="lineno"> 1470</span>&#160; </div>
+<div class="line"><a name="l01471"></a><span class="lineno"> 1471</span>&#160; </div>
+<div class="line"><a name="l01472"></a><span class="lineno"> 1472</span>&#160;<span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a></div>
+<div class="line"><a name="l01473"></a><span class="lineno"> 1473</span>&#160;{</div>
+<div class="line"><a name="l01474"></a><span class="lineno"><a class="line" href="class_o_n___model_component_content_mark.html"> 1474</a></span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l01475"></a><span class="lineno"> 1475</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a> <a class="code" href="group__open_n_u_r_b_s.html#gga6f5c1d4d88bb5eccd2afaacde27f9ef3ac9f88e098f6fe4e4e112eeb05ccb9671">Unset</a>;</div>
+<div class="line"><a name="l01476"></a><span class="lineno"> 1476</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l01477"></a><span class="lineno"><a class="line" href="class_o_n___model_component_content_mark.html#a89586edd7ffd221d7514675c2ce7d31f"> 1477</a></span>&#160;  <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l01478"></a><span class="lineno"> 1478</span>&#160;  ~<a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l01479"></a><span class="lineno"> 1479</span>&#160;  <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>(<span class="keyword">const</span> <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l01480"></a><span class="lineno"> 1480</span>&#160;  <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l01481"></a><span class="lineno"> 1481</span>&#160; </div>
+<div class="line"><a name="l01482"></a><span class="lineno"> 1482</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01483"></a><span class="lineno"> 1483</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l01484"></a><span class="lineno"> 1484</span>&#160;<span class="comment">    Save the current content state of model_component.</span></div>
+<div class="line"><a name="l01485"></a><span class="lineno"> 1485</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l01486"></a><span class="lineno"> 1486</span>&#160;<span class="comment">    model_component - [in]</span></div>
+<div class="line"><a name="l01487"></a><span class="lineno"> 1487</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01488"></a><span class="lineno"> 1488</span>&#160;  <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>(</div>
+<div class="line"><a name="l01489"></a><span class="lineno"> 1489</span>&#160;    <span class="keyword">const</span> <span class="keyword">class</span> <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>&amp; model_component</div>
+<div class="line"><a name="l01490"></a><span class="lineno"> 1490</span>&#160;  );</div>
+<div class="line"><a name="l01491"></a><span class="lineno"> 1491</span>&#160; </div>
+<div class="line"><a name="l01492"></a><span class="lineno"> 1492</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01493"></a><span class="lineno"> 1493</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l01494"></a><span class="lineno"> 1494</span>&#160;<span class="comment">    Save the current content state of model_component.</span></div>
+<div class="line"><a name="l01495"></a><span class="lineno"> 1495</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l01496"></a><span class="lineno"> 1496</span>&#160;<span class="comment">    model_component - [in]</span></div>
+<div class="line"><a name="l01497"></a><span class="lineno"> 1497</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01498"></a><span class="lineno"> 1498</span>&#160;  <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>(</div>
+<div class="line"><a name="l01499"></a><span class="lineno"> 1499</span>&#160;    <span class="keyword">const</span> <span class="keyword">class</span> <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>* model_component</div>
+<div class="line"><a name="l01500"></a><span class="lineno"> 1500</span>&#160;  );</div>
+<div class="line"><a name="l01501"></a><span class="lineno"> 1501</span>&#160; </div>
+<div class="line"><a name="l01502"></a><span class="lineno"> 1502</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01503"></a><span class="lineno"> 1503</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l01504"></a><span class="lineno"> 1504</span>&#160;<span class="comment">    Save the current content state of model_component.</span></div>
+<div class="line"><a name="l01505"></a><span class="lineno"> 1505</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l01506"></a><span class="lineno"> 1506</span>&#160;<span class="comment">    model_component - [in]</span></div>
+<div class="line"><a name="l01507"></a><span class="lineno"> 1507</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01508"></a><span class="lineno"> 1508</span>&#160;  <span class="keywordtype">void</span> Set(</div>
+<div class="line"><a name="l01509"></a><span class="lineno"> 1509</span>&#160;    <span class="keyword">const</span> <span class="keyword">class</span> <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>&amp; model_component</div>
+<div class="line"><a name="l01510"></a><span class="lineno"> 1510</span>&#160;  );</div>
+<div class="line"><a name="l01511"></a><span class="lineno"> 1511</span>&#160; </div>
+<div class="line"><a name="l01512"></a><span class="lineno"> 1512</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01513"></a><span class="lineno"> 1513</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l01514"></a><span class="lineno"> 1514</span>&#160;<span class="comment">    Save the current content state of model_component.</span></div>
+<div class="line"><a name="l01515"></a><span class="lineno"> 1515</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l01516"></a><span class="lineno"> 1516</span>&#160;<span class="comment">    model_component - [in]</span></div>
+<div class="line"><a name="l01517"></a><span class="lineno"> 1517</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01518"></a><span class="lineno"> 1518</span>&#160;  <span class="keywordtype">void</span> Set(</div>
+<div class="line"><a name="l01519"></a><span class="lineno"> 1519</span>&#160;    <span class="keyword">const</span> <span class="keyword">class</span> <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>* model_component</div>
+<div class="line"><a name="l01520"></a><span class="lineno"> 1520</span>&#160;  );</div>
+<div class="line"><a name="l01521"></a><span class="lineno"> 1521</span>&#160;  </div>
+<div class="line"><a name="l01522"></a><span class="lineno"> 1522</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01523"></a><span class="lineno"> 1523</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l01524"></a><span class="lineno"> 1524</span>&#160;<span class="comment">    model_component - [in]</span></div>
+<div class="line"><a name="l01525"></a><span class="lineno"> 1525</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l01526"></a><span class="lineno"> 1526</span>&#160;<span class="comment">    true if the content of model_component is identical</span></div>
+<div class="line"><a name="l01527"></a><span class="lineno"> 1527</span>&#160;<span class="comment">    to the content state saved in this ON_ModelComponentContentMark.</span></div>
+<div class="line"><a name="l01528"></a><span class="lineno"> 1528</span>&#160;<span class="comment">    false otherwise.</span></div>
+<div class="line"><a name="l01529"></a><span class="lineno"> 1529</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01530"></a><span class="lineno"> 1530</span>&#160;  <span class="keywordtype">bool</span> EqualContent(</div>
+<div class="line"><a name="l01531"></a><span class="lineno"> 1531</span>&#160;    <span class="keyword">const</span> <span class="keyword">class</span> <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>&amp; model_component</div>
+<div class="line"><a name="l01532"></a><span class="lineno"> 1532</span>&#160;  ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01533"></a><span class="lineno"> 1533</span>&#160;    </div>
+<div class="line"><a name="l01534"></a><span class="lineno"> 1534</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01535"></a><span class="lineno"> 1535</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l01536"></a><span class="lineno"> 1536</span>&#160;<span class="comment">    model_component - [in]</span></div>
+<div class="line"><a name="l01537"></a><span class="lineno"> 1537</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l01538"></a><span class="lineno"> 1538</span>&#160;<span class="comment">    true if the content of model_component is identical</span></div>
+<div class="line"><a name="l01539"></a><span class="lineno"> 1539</span>&#160;<span class="comment">    to the content state saved in this ON_ModelComponentContentMark.</span></div>
+<div class="line"><a name="l01540"></a><span class="lineno"> 1540</span>&#160;<span class="comment">    false otherwise.</span></div>
+<div class="line"><a name="l01541"></a><span class="lineno"> 1541</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01542"></a><span class="lineno"> 1542</span>&#160;  <span class="keywordtype">bool</span> EqualContent(</div>
+<div class="line"><a name="l01543"></a><span class="lineno"> 1543</span>&#160;    <span class="keyword">const</span> <span class="keyword">class</span> <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>* model_component</div>
+<div class="line"><a name="l01544"></a><span class="lineno"> 1544</span>&#160;  ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01545"></a><span class="lineno"> 1545</span>&#160;  </div>
+<div class="line"><a name="l01546"></a><span class="lineno"> 1546</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01547"></a><span class="lineno"> 1547</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l01548"></a><span class="lineno"> 1548</span>&#160;<span class="comment">    lhs - [in]</span></div>
+<div class="line"><a name="l01549"></a><span class="lineno"> 1549</span>&#160;<span class="comment">    rhs - [in]</span></div>
+<div class="line"><a name="l01550"></a><span class="lineno"> 1550</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l01551"></a><span class="lineno"> 1551</span>&#160;<span class="comment">    true if lhs and rhs are identical.</span></div>
+<div class="line"><a name="l01552"></a><span class="lineno"> 1552</span>&#160;<span class="comment">    false otherwise.</span></div>
+<div class="line"><a name="l01553"></a><span class="lineno"> 1553</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01554"></a><span class="lineno"> 1554</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> EqualContent(</div>
+<div class="line"><a name="l01555"></a><span class="lineno"> 1555</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>&amp; lhs,</div>
+<div class="line"><a name="l01556"></a><span class="lineno"> 1556</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>&amp; rhs</div>
+<div class="line"><a name="l01557"></a><span class="lineno"> 1557</span>&#160;  );</div>
 <div class="line"><a name="l01558"></a><span class="lineno"> 1558</span>&#160; </div>
 <div class="line"><a name="l01559"></a><span class="lineno"> 1559</span>&#160;  <span class="comment">/*</span></div>
 <div class="line"><a name="l01560"></a><span class="lineno"> 1560</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01561"></a><span class="lineno"> 1561</span>&#160;<span class="comment">    Saved model component runtime serial number.</span></div>
+<div class="line"><a name="l01561"></a><span class="lineno"> 1561</span>&#160;<span class="comment">    Saved model component id.</span></div>
 <div class="line"><a name="l01562"></a><span class="lineno"> 1562</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01563"></a><span class="lineno"> 1563</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> ComponentRuntimeSerialNumber() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01563"></a><span class="lineno"> 1563</span>&#160;  <a class="code" href="struct_o_n___u_u_i_d__struct.html">ON_UUID</a> ComponentId() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l01564"></a><span class="lineno"> 1564</span>&#160; </div>
 <div class="line"><a name="l01565"></a><span class="lineno"> 1565</span>&#160;  <span class="comment">/*</span></div>
 <div class="line"><a name="l01566"></a><span class="lineno"> 1566</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01567"></a><span class="lineno"> 1567</span>&#160;<span class="comment">    Saved model component content version number.</span></div>
+<div class="line"><a name="l01567"></a><span class="lineno"> 1567</span>&#160;<span class="comment">    Saved model component runtime serial number.</span></div>
 <div class="line"><a name="l01568"></a><span class="lineno"> 1568</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01569"></a><span class="lineno"> 1569</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> ComponentContentVersionNumber() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01569"></a><span class="lineno"> 1569</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> ComponentRuntimeSerialNumber() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l01570"></a><span class="lineno"> 1570</span>&#160; </div>
 <div class="line"><a name="l01571"></a><span class="lineno"> 1571</span>&#160;  <span class="comment">/*</span></div>
 <div class="line"><a name="l01572"></a><span class="lineno"> 1572</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01573"></a><span class="lineno"> 1573</span>&#160;<span class="comment">    Saved model component type.</span></div>
+<div class="line"><a name="l01573"></a><span class="lineno"> 1573</span>&#160;<span class="comment">    Saved model component content version number.</span></div>
 <div class="line"><a name="l01574"></a><span class="lineno"> 1574</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01575"></a><span class="lineno"> 1575</span>&#160;  <a class="code" href="class_o_n___model_component.html#a2977d69091b4952cc19b0189a28a0eac">ON_ModelComponent::Type</a> ComponentType() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01575"></a><span class="lineno"> 1575</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> ComponentContentVersionNumber() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l01576"></a><span class="lineno"> 1576</span>&#160; </div>
 <div class="line"><a name="l01577"></a><span class="lineno"> 1577</span>&#160;  <span class="comment">/*</span></div>
 <div class="line"><a name="l01578"></a><span class="lineno"> 1578</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01579"></a><span class="lineno"> 1579</span>&#160;<span class="comment">    True if a model component content state is saved in this ON_ModelComponentContentMark.</span></div>
-<div class="line"><a name="l01580"></a><span class="lineno"> 1580</span>&#160;<span class="comment">    False otherwise.</span></div>
-<div class="line"><a name="l01581"></a><span class="lineno"> 1581</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01582"></a><span class="lineno"> 1582</span>&#160;  <span class="keywordtype">bool</span> IsSet() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01583"></a><span class="lineno"> 1583</span>&#160; </div>
-<div class="line"><a name="l01584"></a><span class="lineno"> 1584</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01585"></a><span class="lineno"> 1585</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01586"></a><span class="lineno"> 1586</span>&#160;<span class="comment">    True if a model component content state is saved in this ON_ModelComponentContentMark.</span></div>
-<div class="line"><a name="l01587"></a><span class="lineno"> 1587</span>&#160;<span class="comment">    False otherwise.</span></div>
-<div class="line"><a name="l01588"></a><span class="lineno"> 1588</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01589"></a><span class="lineno"> 1589</span>&#160;  <span class="keywordtype">bool</span> IsUnset() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01590"></a><span class="lineno"> 1590</span>&#160; </div>
-<div class="line"><a name="l01591"></a><span class="lineno"> 1591</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l01592"></a><span class="lineno"> 1592</span>&#160;  <a class="code" href="struct_o_n___u_u_i_d__struct.html">ON_UUID</a> m_component_id = <a class="code" href="group__open_n_u_r_b_s.html#gaee59b97a9592c0c7b48a7c660a67926c">ON_nil_uuid</a>;</div>
-<div class="line"><a name="l01593"></a><span class="lineno"> 1593</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> m_component_serial_number = 0;  </div>
-<div class="line"><a name="l01594"></a><span class="lineno"> 1594</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> m_component_content_version_number = 0;</div>
-<div class="line"><a name="l01595"></a><span class="lineno"> 1595</span>&#160;  <a class="code" href="class_o_n___model_component.html#a2977d69091b4952cc19b0189a28a0eac">ON_ModelComponent::Type</a> m_component_type = <a class="code" href="class_o_n___model_component.html#a2977d69091b4952cc19b0189a28a0eacac9f88e098f6fe4e4e112eeb05ccb9671">ON_ModelComponent::Type::Unset</a>;</div>
+<div class="line"><a name="l01579"></a><span class="lineno"> 1579</span>&#160;<span class="comment">    Saved model component type.</span></div>
+<div class="line"><a name="l01580"></a><span class="lineno"> 1580</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01581"></a><span class="lineno"> 1581</span>&#160;  <a class="code" href="class_o_n___model_component.html#a2977d69091b4952cc19b0189a28a0eac">ON_ModelComponent::Type</a> ComponentType() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01582"></a><span class="lineno"> 1582</span>&#160; </div>
+<div class="line"><a name="l01583"></a><span class="lineno"> 1583</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01584"></a><span class="lineno"> 1584</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l01585"></a><span class="lineno"> 1585</span>&#160;<span class="comment">    True if a model component content state is saved in this ON_ModelComponentContentMark.</span></div>
+<div class="line"><a name="l01586"></a><span class="lineno"> 1586</span>&#160;<span class="comment">    False otherwise.</span></div>
+<div class="line"><a name="l01587"></a><span class="lineno"> 1587</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01588"></a><span class="lineno"> 1588</span>&#160;  <span class="keywordtype">bool</span> IsSet() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01589"></a><span class="lineno"> 1589</span>&#160; </div>
+<div class="line"><a name="l01590"></a><span class="lineno"> 1590</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01591"></a><span class="lineno"> 1591</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l01592"></a><span class="lineno"> 1592</span>&#160;<span class="comment">    True if a model component content state is saved in this ON_ModelComponentContentMark.</span></div>
+<div class="line"><a name="l01593"></a><span class="lineno"> 1593</span>&#160;<span class="comment">    False otherwise.</span></div>
+<div class="line"><a name="l01594"></a><span class="lineno"> 1594</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01595"></a><span class="lineno"> 1595</span>&#160;  <span class="keywordtype">bool</span> IsUnset() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l01596"></a><span class="lineno"> 1596</span>&#160; </div>
 <div class="line"><a name="l01597"></a><span class="lineno"> 1597</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l01598"></a><span class="lineno"> 1598</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_reserved1 = 0;</div>
-<div class="line"><a name="l01599"></a><span class="lineno"> 1599</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_reserved2 = 0;</div>
-<div class="line"><a name="l01600"></a><span class="lineno"> 1600</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_reserved3 = 0;</div>
-<div class="line"><a name="l01601"></a><span class="lineno"> 1601</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_reserved4 = 0;</div>
-<div class="line"><a name="l01602"></a><span class="lineno"> 1602</span>&#160;};</div>
-<div class="line"><a name="l01603"></a><span class="lineno"> 1603</span>&#160; </div>
-<div class="line"><a name="l01604"></a><span class="lineno"> 1604</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__open_n_u_r_b_s.html#ga8bf13acff0ada59e23b2138b8f23a2fb">operator==</a>(</div>
-<div class="line"><a name="l01605"></a><span class="lineno"> 1605</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>&amp; lhs,</div>
-<div class="line"><a name="l01606"></a><span class="lineno"> 1606</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>&amp; rhs</div>
-<div class="line"><a name="l01607"></a><span class="lineno"> 1607</span>&#160;  );</div>
-<div class="line"><a name="l01608"></a><span class="lineno"> 1608</span>&#160; </div>
-<div class="line"><a name="l01609"></a><span class="lineno"> 1609</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__open_n_u_r_b_s.html#ga06b3b0ca58bccbd69e5c6a8edf9a23fe">operator!=</a>(</div>
-<div class="line"><a name="l01610"></a><span class="lineno"> 1610</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>&amp; lhs,</div>
-<div class="line"><a name="l01611"></a><span class="lineno"> 1611</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>&amp; rhs</div>
-<div class="line"><a name="l01612"></a><span class="lineno"> 1612</span>&#160;  );</div>
-<div class="line"><a name="l01613"></a><span class="lineno"> 1613</span>&#160; </div>
-<div class="line"><a name="l01614"></a><span class="lineno"> 1614</span>&#160;<span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a></div>
-<div class="line"><a name="l01615"></a><span class="lineno"> 1615</span>&#160;{</div>
-<div class="line"><a name="l01616"></a><span class="lineno"> 1616</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l01617"></a><span class="lineno"><a class="line" href="class_o_n___model_component_type_iterator.html"> 1617</a></span>&#160;  <span class="comment">// Default constructor creates ON_ModelComponentTypeIterator::Empty</span></div>
-<div class="line"><a name="l01618"></a><span class="lineno"> 1618</span>&#160;  <a class="code" href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a>() <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
+<div class="line"><a name="l01598"></a><span class="lineno"> 1598</span>&#160;  <a class="code" href="struct_o_n___u_u_i_d__struct.html">ON_UUID</a> m_component_id = <a class="code" href="group__open_n_u_r_b_s.html#gaee59b97a9592c0c7b48a7c660a67926c">ON_nil_uuid</a>;</div>
+<div class="line"><a name="l01599"></a><span class="lineno"> 1599</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> m_component_serial_number = 0;  </div>
+<div class="line"><a name="l01600"></a><span class="lineno"> 1600</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> m_component_content_version_number = 0;</div>
+<div class="line"><a name="l01601"></a><span class="lineno"> 1601</span>&#160;  <a class="code" href="class_o_n___model_component.html#a2977d69091b4952cc19b0189a28a0eac">ON_ModelComponent::Type</a> m_component_type = <a class="code" href="class_o_n___model_component.html#a2977d69091b4952cc19b0189a28a0eacac9f88e098f6fe4e4e112eeb05ccb9671">ON_ModelComponent::Type::Unset</a>;</div>
+<div class="line"><a name="l01602"></a><span class="lineno"> 1602</span>&#160; </div>
+<div class="line"><a name="l01603"></a><span class="lineno"> 1603</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l01604"></a><span class="lineno"> 1604</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_reserved1 = 0;</div>
+<div class="line"><a name="l01605"></a><span class="lineno"> 1605</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_reserved2 = 0;</div>
+<div class="line"><a name="l01606"></a><span class="lineno"> 1606</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_reserved3 = 0;</div>
+<div class="line"><a name="l01607"></a><span class="lineno"> 1607</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_reserved4 = 0;</div>
+<div class="line"><a name="l01608"></a><span class="lineno"> 1608</span>&#160;};</div>
+<div class="line"><a name="l01609"></a><span class="lineno"> 1609</span>&#160; </div>
+<div class="line"><a name="l01610"></a><span class="lineno"> 1610</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__open_n_u_r_b_s.html#ga8bf13acff0ada59e23b2138b8f23a2fb">operator==</a>(</div>
+<div class="line"><a name="l01611"></a><span class="lineno"> 1611</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>&amp; lhs,</div>
+<div class="line"><a name="l01612"></a><span class="lineno"> 1612</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>&amp; rhs</div>
+<div class="line"><a name="l01613"></a><span class="lineno"> 1613</span>&#160;  );</div>
+<div class="line"><a name="l01614"></a><span class="lineno"> 1614</span>&#160; </div>
+<div class="line"><a name="l01615"></a><span class="lineno"> 1615</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__open_n_u_r_b_s.html#ga06b3b0ca58bccbd69e5c6a8edf9a23fe">operator!=</a>(</div>
+<div class="line"><a name="l01616"></a><span class="lineno"> 1616</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>&amp; lhs,</div>
+<div class="line"><a name="l01617"></a><span class="lineno"> 1617</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a>&amp; rhs</div>
+<div class="line"><a name="l01618"></a><span class="lineno"> 1618</span>&#160;  );</div>
 <div class="line"><a name="l01619"></a><span class="lineno"> 1619</span>&#160; </div>
-<div class="line"><a name="l01620"></a><span class="lineno"> 1620</span>&#160;  ~<a class="code" href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a>() = default;</div>
-<div class="line"><a name="l01621"></a><span class="lineno"> 1621</span>&#160;  <a class="code" href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a>(const <a class="code" href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a>&amp;) = default;</div>
-<div class="line"><a name="l01622"></a><span class="lineno"> 1622</span>&#160;  <a class="code" href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a>&amp; operator=(const <a class="code" href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a>&amp;) = default;</div>
-<div class="line"><a name="l01623"></a><span class="lineno"> 1623</span>&#160; </div>
-<div class="line"><a name="l01624"></a><span class="lineno"> 1624</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01625"></a><span class="lineno"> 1625</span>&#160;<span class="comment">  Paramters:</span></div>
-<div class="line"><a name="l01626"></a><span class="lineno"> 1626</span>&#160;<span class="comment">    type_count - [in] number of types</span></div>
-<div class="line"><a name="l01627"></a><span class="lineno"> 1627</span>&#160;<span class="comment">    types - [in]</span></div>
-<div class="line"><a name="l01628"></a><span class="lineno"> 1628</span>&#160;<span class="comment">      list of types to iterate over</span></div>
-<div class="line"><a name="l01629"></a><span class="lineno"> 1629</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01630"></a><span class="lineno"> 1630</span>&#160;  <a class="code" href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a>(</div>
-<div class="line"><a name="l01631"></a><span class="lineno"> 1631</span>&#160;    <span class="keywordtype">size_t</span> type_count,</div>
-<div class="line"><a name="l01632"></a><span class="lineno"> 1632</span>&#160;    const <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>::Type* types</div>
-<div class="line"><a name="l01633"></a><span class="lineno"> 1633</span>&#160;    ) <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
-<div class="line"><a name="l01634"></a><span class="lineno"> 1634</span>&#160;  </div>
-<div class="line"><a name="l01635"></a><span class="lineno"> 1635</span>&#160;  <span class="comment">// Contains no types</span></div>
-<div class="line"><a name="l01636"></a><span class="lineno"> 1636</span>&#160;  static const <a class="code" href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a> Empty;</div>
-<div class="line"><a name="l01637"></a><span class="lineno"> 1637</span>&#160; </div>
-<div class="line"><a name="l01638"></a><span class="lineno"> 1638</span>&#160;  <span class="comment">// Contains all explicit component types (excludes Unset and Mixed).</span></div>
-<div class="line"><a name="l01639"></a><span class="lineno"><a class="line" href="class_o_n___model_component_type_iterator.html#abd2a5d7b9b96a899eb8029496b5e25d4"> 1639</a></span>&#160;  static const <a class="code" href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a> ExplicitComponentTypes;</div>
-<div class="line"><a name="l01640"></a><span class="lineno"> 1640</span>&#160; </div>
-<div class="line"><a name="l01641"></a><span class="lineno"> 1641</span>&#160;  <span class="comment">// Every type in ON_ModelComponentTypeIterator::ExplicitComponents</span></div>
-<div class="line"><a name="l01642"></a><span class="lineno"><a class="line" href="class_o_n___model_component_type_iterator.html#a1d45344f33c04305750a1a06b4a077bb"> 1642</a></span>&#160;  <span class="comment">// except Image, RenderLight, ModelGeometry, and HistoryRecord</span></div>
-<div class="line"><a name="l01643"></a><span class="lineno"> 1643</span>&#160;  <span class="comment">// The types in ON_ModelComponentTypeIterator::Tables</span></div>
-<div class="line"><a name="l01644"></a><span class="lineno"> 1644</span>&#160;  <span class="comment">// identify the most commonly used &quot;table&quot; component types.</span></div>
-<div class="line"><a name="l01645"></a><span class="lineno"> 1645</span>&#160;  static const <a class="code" href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a> TableComponentTypes;</div>
+<div class="line"><a name="l01620"></a><span class="lineno"> 1620</span>&#160;<span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a></div>
+<div class="line"><a name="l01621"></a><span class="lineno"> 1621</span>&#160;{</div>
+<div class="line"><a name="l01622"></a><span class="lineno"><a class="line" href="class_o_n___model_component_type_iterator.html"> 1622</a></span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l01623"></a><span class="lineno"> 1623</span>&#160;  <span class="comment">// Default constructor creates ON_ModelComponentTypeIterator::Empty</span></div>
+<div class="line"><a name="l01624"></a><span class="lineno"> 1624</span>&#160;  <a class="code" href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a>() <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
+<div class="line"><a name="l01625"></a><span class="lineno"> 1625</span>&#160; </div>
+<div class="line"><a name="l01626"></a><span class="lineno"> 1626</span>&#160;  ~<a class="code" href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a>() = default;</div>
+<div class="line"><a name="l01627"></a><span class="lineno"> 1627</span>&#160;  <a class="code" href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a>(const <a class="code" href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a>&amp;) = default;</div>
+<div class="line"><a name="l01628"></a><span class="lineno"> 1628</span>&#160;  <a class="code" href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a>&amp; operator=(const <a class="code" href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a>&amp;) = default;</div>
+<div class="line"><a name="l01629"></a><span class="lineno"> 1629</span>&#160; </div>
+<div class="line"><a name="l01630"></a><span class="lineno"> 1630</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01631"></a><span class="lineno"> 1631</span>&#160;<span class="comment">  Paramters:</span></div>
+<div class="line"><a name="l01632"></a><span class="lineno"> 1632</span>&#160;<span class="comment">    type_count - [in] number of types</span></div>
+<div class="line"><a name="l01633"></a><span class="lineno"> 1633</span>&#160;<span class="comment">    types - [in]</span></div>
+<div class="line"><a name="l01634"></a><span class="lineno"> 1634</span>&#160;<span class="comment">      list of types to iterate over</span></div>
+<div class="line"><a name="l01635"></a><span class="lineno"> 1635</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01636"></a><span class="lineno"> 1636</span>&#160;  <a class="code" href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a>(</div>
+<div class="line"><a name="l01637"></a><span class="lineno"> 1637</span>&#160;    <span class="keywordtype">size_t</span> type_count,</div>
+<div class="line"><a name="l01638"></a><span class="lineno"> 1638</span>&#160;    const <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>::Type* types</div>
+<div class="line"><a name="l01639"></a><span class="lineno"> 1639</span>&#160;    ) <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
+<div class="line"><a name="l01640"></a><span class="lineno"> 1640</span>&#160;  </div>
+<div class="line"><a name="l01641"></a><span class="lineno"> 1641</span>&#160;  <span class="comment">// Contains no types</span></div>
+<div class="line"><a name="l01642"></a><span class="lineno"> 1642</span>&#160;  static const <a class="code" href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a> Empty;</div>
+<div class="line"><a name="l01643"></a><span class="lineno"> 1643</span>&#160; </div>
+<div class="line"><a name="l01644"></a><span class="lineno"><a class="line" href="class_o_n___model_component_type_iterator.html#abd2a5d7b9b96a899eb8029496b5e25d4"> 1644</a></span>&#160;  <span class="comment">// Contains all explicit component types (excludes Unset and Mixed).</span></div>
+<div class="line"><a name="l01645"></a><span class="lineno"> 1645</span>&#160;  static const <a class="code" href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a> ExplicitComponentTypes;</div>
 <div class="line"><a name="l01646"></a><span class="lineno"> 1646</span>&#160; </div>
-<div class="line"><a name="l01647"></a><span class="lineno"> 1647</span>&#160;  <span class="comment">// Number of types in the iterator</span></div>
-<div class="line"><a name="l01648"></a><span class="lineno"><a class="line" href="class_o_n___model_component_type_iterator.html#a6b7cc236382a82e71f864301d9754cf3"> 1648</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> TypeCount() const;</div>
-<div class="line"><a name="l01649"></a><span class="lineno"> 1649</span>&#160; </div>
-<div class="line"><a name="l01650"></a><span class="lineno"> 1650</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01651"></a><span class="lineno"> 1651</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l01652"></a><span class="lineno"> 1652</span>&#160;<span class="comment">    Sets the iterator to point to the first available type. </span></div>
-<div class="line"><a name="l01653"></a><span class="lineno"> 1653</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01654"></a><span class="lineno"> 1654</span>&#160;<span class="comment">    The first available type.</span></div>
-<div class="line"><a name="l01655"></a><span class="lineno"> 1655</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01656"></a><span class="lineno"> 1656</span>&#160;  <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>::Type FirstType();</div>
-<div class="line"><a name="l01657"></a><span class="lineno"> 1657</span>&#160; </div>
-<div class="line"><a name="l01658"></a><span class="lineno"> 1658</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01659"></a><span class="lineno"> 1659</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l01660"></a><span class="lineno"> 1660</span>&#160;<span class="comment">    Sets the iterator to point to the last available type. </span></div>
-<div class="line"><a name="l01661"></a><span class="lineno"> 1661</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01662"></a><span class="lineno"> 1662</span>&#160;<span class="comment">    The last available type.</span></div>
-<div class="line"><a name="l01663"></a><span class="lineno"> 1663</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01664"></a><span class="lineno"> 1664</span>&#160;  <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>::Type LastType();</div>
-<div class="line"><a name="l01665"></a><span class="lineno"> 1665</span>&#160; </div>
-<div class="line"><a name="l01666"></a><span class="lineno"> 1666</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01667"></a><span class="lineno"> 1667</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l01668"></a><span class="lineno"> 1668</span>&#160;<span class="comment">    Increments the iterator and returns the new type.</span></div>
-<div class="line"><a name="l01669"></a><span class="lineno"> 1669</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01670"></a><span class="lineno"> 1670</span>&#160;<span class="comment">    The new type.</span></div>
-<div class="line"><a name="l01671"></a><span class="lineno"> 1671</span>&#160;<span class="comment">    ON_ModelComponent::Type::Unset if the iterator is incremented the last type.</span></div>
-<div class="line"><a name="l01672"></a><span class="lineno"> 1672</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01673"></a><span class="lineno"> 1673</span>&#160;  <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>::Type NextType();</div>
-<div class="line"><a name="l01674"></a><span class="lineno"> 1674</span>&#160;  </div>
-<div class="line"><a name="l01675"></a><span class="lineno"> 1675</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01676"></a><span class="lineno"> 1676</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l01677"></a><span class="lineno"> 1677</span>&#160;<span class="comment">    Decrements the iterator and returns the new type.</span></div>
-<div class="line"><a name="l01678"></a><span class="lineno"> 1678</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01679"></a><span class="lineno"> 1679</span>&#160;<span class="comment">    The new type</span></div>
-<div class="line"><a name="l01680"></a><span class="lineno"> 1680</span>&#160;<span class="comment">    ON_ModelComponent::Type::Unset if the iterator is decrented the first type.</span></div>
-<div class="line"><a name="l01681"></a><span class="lineno"> 1681</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01682"></a><span class="lineno"> 1682</span>&#160;  <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>::Type PreviousType();</div>
-<div class="line"><a name="l01683"></a><span class="lineno"> 1683</span>&#160; </div>
-<div class="line"><a name="l01684"></a><span class="lineno"> 1684</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01685"></a><span class="lineno"> 1685</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l01686"></a><span class="lineno"> 1686</span>&#160;<span class="comment">    Decrements the iterator and returns the new type.</span></div>
-<div class="line"><a name="l01687"></a><span class="lineno"> 1687</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01688"></a><span class="lineno"> 1688</span>&#160;<span class="comment">    The current type.</span></div>
-<div class="line"><a name="l01689"></a><span class="lineno"> 1689</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01690"></a><span class="lineno"> 1690</span>&#160;  <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>::Type CurrentType() const;</div>
-<div class="line"><a name="l01691"></a><span class="lineno"> 1691</span>&#160; </div>
-<div class="line"><a name="l01692"></a><span class="lineno"> 1692</span>&#160;private:</div>
-<div class="line"><a name="l01693"></a><span class="lineno"> 1693</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga56cda90a1091ae3495363200bbbaf4e5">ON__INT32</a> m_type_count = 0;</div>
-<div class="line"><a name="l01694"></a><span class="lineno"> 1694</span>&#160; </div>
-<div class="line"><a name="l01695"></a><span class="lineno"> 1695</span>&#160;  <span class="comment">// -1 iterated before first, m_type_count = iteratated past last</span></div>
-<div class="line"><a name="l01696"></a><span class="lineno"> 1696</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga56cda90a1091ae3495363200bbbaf4e5">ON__INT32</a> m_current_index = <a class="code" href="group__open_n_u_r_b_s.html#ga507bcdb4c7af9ee9debce233c851507c">ON_UNSET_UINT_INDEX</a>; </div>
+<div class="line"><a name="l01647"></a><span class="lineno"><a class="line" href="class_o_n___model_component_type_iterator.html#a1d45344f33c04305750a1a06b4a077bb"> 1647</a></span>&#160;  <span class="comment">// Every type in ON_ModelComponentTypeIterator::ExplicitComponents</span></div>
+<div class="line"><a name="l01648"></a><span class="lineno"> 1648</span>&#160;  <span class="comment">// except Image, RenderLight, ModelGeometry, and HistoryRecord</span></div>
+<div class="line"><a name="l01649"></a><span class="lineno"> 1649</span>&#160;  <span class="comment">// The types in ON_ModelComponentTypeIterator::Tables</span></div>
+<div class="line"><a name="l01650"></a><span class="lineno"> 1650</span>&#160;  <span class="comment">// identify the most commonly used &quot;table&quot; component types.</span></div>
+<div class="line"><a name="l01651"></a><span class="lineno"> 1651</span>&#160;  static const <a class="code" href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a> TableComponentTypes;</div>
+<div class="line"><a name="l01652"></a><span class="lineno"> 1652</span>&#160; </div>
+<div class="line"><a name="l01653"></a><span class="lineno"><a class="line" href="class_o_n___model_component_type_iterator.html#a6b7cc236382a82e71f864301d9754cf3"> 1653</a></span>&#160;  <span class="comment">// Number of types in the iterator</span></div>
+<div class="line"><a name="l01654"></a><span class="lineno"> 1654</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> TypeCount() const;</div>
+<div class="line"><a name="l01655"></a><span class="lineno"> 1655</span>&#160; </div>
+<div class="line"><a name="l01656"></a><span class="lineno"> 1656</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01657"></a><span class="lineno"> 1657</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l01658"></a><span class="lineno"> 1658</span>&#160;<span class="comment">    Sets the iterator to point to the first available type. </span></div>
+<div class="line"><a name="l01659"></a><span class="lineno"> 1659</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l01660"></a><span class="lineno"> 1660</span>&#160;<span class="comment">    The first available type.</span></div>
+<div class="line"><a name="l01661"></a><span class="lineno"> 1661</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01662"></a><span class="lineno"> 1662</span>&#160;  <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>::Type FirstType();</div>
+<div class="line"><a name="l01663"></a><span class="lineno"> 1663</span>&#160; </div>
+<div class="line"><a name="l01664"></a><span class="lineno"> 1664</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01665"></a><span class="lineno"> 1665</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l01666"></a><span class="lineno"> 1666</span>&#160;<span class="comment">    Sets the iterator to point to the last available type. </span></div>
+<div class="line"><a name="l01667"></a><span class="lineno"> 1667</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l01668"></a><span class="lineno"> 1668</span>&#160;<span class="comment">    The last available type.</span></div>
+<div class="line"><a name="l01669"></a><span class="lineno"> 1669</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01670"></a><span class="lineno"> 1670</span>&#160;  <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>::Type LastType();</div>
+<div class="line"><a name="l01671"></a><span class="lineno"> 1671</span>&#160; </div>
+<div class="line"><a name="l01672"></a><span class="lineno"> 1672</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01673"></a><span class="lineno"> 1673</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l01674"></a><span class="lineno"> 1674</span>&#160;<span class="comment">    Increments the iterator and returns the new type.</span></div>
+<div class="line"><a name="l01675"></a><span class="lineno"> 1675</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l01676"></a><span class="lineno"> 1676</span>&#160;<span class="comment">    The new type.</span></div>
+<div class="line"><a name="l01677"></a><span class="lineno"> 1677</span>&#160;<span class="comment">    ON_ModelComponent::Type::Unset if the iterator is incremented the last type.</span></div>
+<div class="line"><a name="l01678"></a><span class="lineno"> 1678</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01679"></a><span class="lineno"> 1679</span>&#160;  <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>::Type NextType();</div>
+<div class="line"><a name="l01680"></a><span class="lineno"> 1680</span>&#160;  </div>
+<div class="line"><a name="l01681"></a><span class="lineno"> 1681</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01682"></a><span class="lineno"> 1682</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l01683"></a><span class="lineno"> 1683</span>&#160;<span class="comment">    Decrements the iterator and returns the new type.</span></div>
+<div class="line"><a name="l01684"></a><span class="lineno"> 1684</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l01685"></a><span class="lineno"> 1685</span>&#160;<span class="comment">    The new type</span></div>
+<div class="line"><a name="l01686"></a><span class="lineno"> 1686</span>&#160;<span class="comment">    ON_ModelComponent::Type::Unset if the iterator is decrented the first type.</span></div>
+<div class="line"><a name="l01687"></a><span class="lineno"> 1687</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01688"></a><span class="lineno"> 1688</span>&#160;  <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>::Type PreviousType();</div>
+<div class="line"><a name="l01689"></a><span class="lineno"> 1689</span>&#160; </div>
+<div class="line"><a name="l01690"></a><span class="lineno"> 1690</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01691"></a><span class="lineno"> 1691</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l01692"></a><span class="lineno"> 1692</span>&#160;<span class="comment">    Decrements the iterator and returns the new type.</span></div>
+<div class="line"><a name="l01693"></a><span class="lineno"> 1693</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l01694"></a><span class="lineno"> 1694</span>&#160;<span class="comment">    The current type.</span></div>
+<div class="line"><a name="l01695"></a><span class="lineno"> 1695</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01696"></a><span class="lineno"> 1696</span>&#160;  <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>::Type CurrentType() const;</div>
 <div class="line"><a name="l01697"></a><span class="lineno"> 1697</span>&#160; </div>
-<div class="line"><a name="l01698"></a><span class="lineno"> 1698</span>&#160;  <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>::Type m_types[32];</div>
-<div class="line"><a name="l01699"></a><span class="lineno"> 1699</span>&#160;};</div>
-<div class="line"><a name="l01700"></a><span class="lineno"> 1700</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01701"></a><span class="lineno"> 1701</span>&#160;<span class="comment">/// &lt;summary&gt;</span></div>
-<div class="line"><a name="l01702"></a><span class="lineno"> 1702</span>&#160;<span class="comment">/// ON_ModelComponentReference is a persistent reference to a model component.</span></div>
-<div class="line"><a name="l01703"></a><span class="lineno"> 1703</span>&#160;<span class="comment">/// ON_ModelComponentReference and ON_ModelComponentWeakReference are based on</span></div>
-<div class="line"><a name="l01704"></a><span class="lineno"> 1704</span>&#160;<span class="comment">/// like std::shared_ptr and std::weak_ptr.</span></div>
-<div class="line"><a name="l01705"></a><span class="lineno"> 1705</span>&#160;<span class="comment">/// &lt;/summary&gt;</span></div>
-<div class="line"><a name="l01706"></a><span class="lineno"> 1706</span>&#160;<span class="comment"></span>class <a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a></div>
-<div class="line"><a name="l01707"></a><span class="lineno"> 1707</span>&#160;{</div>
-<div class="line"><a name="l01708"></a><span class="lineno"> 1708</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l01709"></a><span class="lineno"><a class="line" href="class_o_n___model_component_reference.html"> 1709</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a> Empty;</div>
-<div class="line"><a name="l01710"></a><span class="lineno"> 1710</span>&#160;  </div>
-<div class="line"><a name="l01711"></a><span class="lineno"> 1711</span>&#160;  <span class="comment">// No = default to insure m_sp is completely managed in the openurbs DLL.</span></div>
-<div class="line"><a name="l01712"></a><span class="lineno"><a class="line" href="class_o_n___model_component_reference.html#a9278e10e1b398fd7af277345419d7943"> 1712</a></span>&#160;  <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>() <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>; <span class="comment">// No = default to insure m_sp is completely managed in the openurbs DLL.</span></div>
-<div class="line"><a name="l01713"></a><span class="lineno"> 1713</span>&#160;  ~<a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>(); <span class="comment">// No = default to insure m_sp is completely managed in the openurbs DLL.</span></div>
-<div class="line"><a name="l01714"></a><span class="lineno"> 1714</span>&#160;  <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>(const <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>&amp;) <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>; <span class="comment">// No = default to insure m_sp is completely managed in the openurbs DLL.</span></div>
-<div class="line"><a name="l01715"></a><span class="lineno"> 1715</span>&#160;  <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>&amp; operator=(const <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>&amp;); <span class="comment">// No = default to insure m_sp is completely managed in the openurbs DLL.</span></div>
+<div class="line"><a name="l01698"></a><span class="lineno"> 1698</span>&#160;private:</div>
+<div class="line"><a name="l01699"></a><span class="lineno"> 1699</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga56cda90a1091ae3495363200bbbaf4e5">ON__INT32</a> m_type_count = 0;</div>
+<div class="line"><a name="l01700"></a><span class="lineno"> 1700</span>&#160; </div>
+<div class="line"><a name="l01701"></a><span class="lineno"> 1701</span>&#160;  <span class="comment">// -1 iterated before first, m_type_count = iteratated past last</span></div>
+<div class="line"><a name="l01702"></a><span class="lineno"> 1702</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga56cda90a1091ae3495363200bbbaf4e5">ON__INT32</a> m_current_index = <a class="code" href="group__open_n_u_r_b_s.html#ga507bcdb4c7af9ee9debce233c851507c">ON_UNSET_UINT_INDEX</a>; </div>
+<div class="line"><a name="l01703"></a><span class="lineno"> 1703</span>&#160; </div>
+<div class="line"><a name="l01704"></a><span class="lineno"> 1704</span>&#160;  <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>::Type m_types[32];</div>
+<div class="line"><a name="l01705"></a><span class="lineno"> 1705</span>&#160;};</div>
+<div class="line"><a name="l01706"></a><span class="lineno"> 1706</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l01707"></a><span class="lineno"> 1707</span>&#160;<span class="comment">/// &lt;summary&gt;</span></div>
+<div class="line"><a name="l01708"></a><span class="lineno"> 1708</span>&#160;<span class="comment">/// ON_ModelComponentReference is a persistent reference to a model component.</span></div>
+<div class="line"><a name="l01709"></a><span class="lineno"> 1709</span>&#160;<span class="comment">/// ON_ModelComponentReference and ON_ModelComponentWeakReference are based on</span></div>
+<div class="line"><a name="l01710"></a><span class="lineno"> 1710</span>&#160;<span class="comment">/// like std::shared_ptr and std::weak_ptr.</span></div>
+<div class="line"><a name="l01711"></a><span class="lineno"> 1711</span>&#160;<span class="comment">/// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l01712"></a><span class="lineno"> 1712</span>&#160;<span class="comment"></span>class <a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a></div>
+<div class="line"><a name="l01713"></a><span class="lineno"> 1713</span>&#160;{</div>
+<div class="line"><a name="l01714"></a><span class="lineno"><a class="line" href="class_o_n___model_component_reference.html"> 1714</a></span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l01715"></a><span class="lineno"> 1715</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a> Empty;</div>
 <div class="line"><a name="l01716"></a><span class="lineno"> 1716</span>&#160;  </div>
-<div class="line"><a name="l01717"></a><span class="lineno"> 1717</span>&#160;<span class="preprocessor">#if defined(ON_HAS_RVALUEREF)</span></div>
-<div class="line"><a name="l01718"></a><span class="lineno"> 1718</span>&#160;  <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>( <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>&amp;&amp; ) <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
-<div class="line"><a name="l01719"></a><span class="lineno"> 1719</span>&#160;  <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>&amp; operator=( <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>&amp;&amp; );</div>
-<div class="line"><a name="l01720"></a><span class="lineno"> 1720</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l01721"></a><span class="lineno"> 1721</span>&#160; </div>
-<div class="line"><a name="l01722"></a><span class="lineno"> 1722</span>&#160;  <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>(</div>
-<div class="line"><a name="l01723"></a><span class="lineno"> 1723</span>&#160;    <span class="keyword">const</span> <span class="keyword">class</span> <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>&amp; weak_ref</div>
-<div class="line"><a name="l01724"></a><span class="lineno"> 1724</span>&#160;  )  <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
-<div class="line"><a name="l01725"></a><span class="lineno"> 1725</span>&#160; </div>
-<div class="line"><a name="l01726"></a><span class="lineno"> 1726</span>&#160;  <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>&amp; operator=( <span class="keyword">const</span> <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>&amp; );</div>
+<div class="line"><a name="l01717"></a><span class="lineno"><a class="line" href="class_o_n___model_component_reference.html#a9278e10e1b398fd7af277345419d7943"> 1717</a></span>&#160;  <span class="comment">// No = default to insure m_sp is completely managed in the openurbs DLL.</span></div>
+<div class="line"><a name="l01718"></a><span class="lineno"> 1718</span>&#160;  <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>() <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>; <span class="comment">// No = default to insure m_sp is completely managed in the openurbs DLL.</span></div>
+<div class="line"><a name="l01719"></a><span class="lineno"> 1719</span>&#160;  ~<a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>(); <span class="comment">// No = default to insure m_sp is completely managed in the openurbs DLL.</span></div>
+<div class="line"><a name="l01720"></a><span class="lineno"> 1720</span>&#160;  <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>(const <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>&amp;) <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>; <span class="comment">// No = default to insure m_sp is completely managed in the openurbs DLL.</span></div>
+<div class="line"><a name="l01721"></a><span class="lineno"> 1721</span>&#160;  <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>&amp; operator=(const <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>&amp;); <span class="comment">// No = default to insure m_sp is completely managed in the openurbs DLL.</span></div>
+<div class="line"><a name="l01722"></a><span class="lineno"> 1722</span>&#160;  </div>
+<div class="line"><a name="l01723"></a><span class="lineno"> 1723</span>&#160;<span class="preprocessor">#if defined(ON_HAS_RVALUEREF)</span></div>
+<div class="line"><a name="l01724"></a><span class="lineno"> 1724</span>&#160;  <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>( <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>&amp;&amp; ) <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
+<div class="line"><a name="l01725"></a><span class="lineno"> 1725</span>&#160;  <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>&amp; operator=( <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>&amp;&amp; );</div>
+<div class="line"><a name="l01726"></a><span class="lineno"> 1726</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l01727"></a><span class="lineno"> 1727</span>&#160; </div>
-<div class="line"><a name="l01728"></a><span class="lineno"> 1728</span>&#160; </div>
-<div class="line"><a name="l01729"></a><span class="lineno"> 1729</span>&#160;  <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>(</div>
-<div class="line"><a name="l01730"></a><span class="lineno"> 1730</span>&#160;    std::shared_ptr&lt;ON_ModelComponent&gt;&amp; sp</div>
-<div class="line"><a name="l01731"></a><span class="lineno"> 1731</span>&#160;    ) <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
-<div class="line"><a name="l01732"></a><span class="lineno"> 1732</span>&#160; </div>
-<div class="line"><a name="l01733"></a><span class="lineno"> 1733</span>&#160;  <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>&amp; operator=(</div>
-<div class="line"><a name="l01734"></a><span class="lineno"> 1734</span>&#160;    std::shared_ptr&lt;ON_ModelComponent&gt;&amp; sp</div>
-<div class="line"><a name="l01735"></a><span class="lineno"> 1735</span>&#160;    );</div>
-<div class="line"><a name="l01736"></a><span class="lineno"> 1736</span>&#160;  </div>
-<div class="line"><a name="l01737"></a><span class="lineno"> 1737</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01738"></a><span class="lineno"> 1738</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l01739"></a><span class="lineno"> 1739</span>&#160;<span class="comment">    constant_system_component - [in]</span></div>
-<div class="line"><a name="l01740"></a><span class="lineno"> 1740</span>&#160;<span class="comment">      A constant system component that exists for the duration of </span></div>
-<div class="line"><a name="l01741"></a><span class="lineno"> 1741</span>&#160;<span class="comment">      the application.</span></div>
-<div class="line"><a name="l01742"></a><span class="lineno"> 1742</span>&#160;<span class="comment">  Remarks:</span></div>
-<div class="line"><a name="l01743"></a><span class="lineno"> 1743</span>&#160;<span class="comment">    See ON_ModelComponent::CreateConstantSystemComponentReference()</span></div>
-<div class="line"><a name="l01744"></a><span class="lineno"> 1744</span>&#160;<span class="comment">    for more information about constant system components.</span></div>
-<div class="line"><a name="l01745"></a><span class="lineno"> 1745</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01746"></a><span class="lineno"> 1746</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01747"></a><span class="lineno"> 1747</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a> CreateConstantSystemComponentReference(</div>
-<div class="line"><a name="l01748"></a><span class="lineno"> 1748</span>&#160;    <span class="keyword">const</span> <span class="keyword">class</span> <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>&amp; constant_system_component</div>
-<div class="line"><a name="l01749"></a><span class="lineno"> 1749</span>&#160;    ) <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
-<div class="line"><a name="l01750"></a><span class="lineno"> 1750</span>&#160; </div>
-<div class="line"><a name="l01751"></a><span class="lineno"> 1751</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01752"></a><span class="lineno"> 1752</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l01753"></a><span class="lineno"> 1753</span>&#160;<span class="comment">    model_component - [in]</span></div>
-<div class="line"><a name="l01754"></a><span class="lineno"> 1754</span>&#160;<span class="comment">    bManagedComponentReference - [in]</span></div>
-<div class="line"><a name="l01755"></a><span class="lineno"> 1755</span>&#160;<span class="comment">      true</span></div>
-<div class="line"><a name="l01756"></a><span class="lineno"> 1756</span>&#160;<span class="comment">        model_component will be deleted by the last ON_ModelComponentReference</span></div>
-<div class="line"><a name="l01757"></a><span class="lineno"> 1757</span>&#160;<span class="comment">        and must have been created by call to operator new() with heap allocation.</span></div>
-<div class="line"><a name="l01758"></a><span class="lineno"> 1758</span>&#160;<span class="comment">      false </span></div>
-<div class="line"><a name="l01759"></a><span class="lineno"> 1759</span>&#160;<span class="comment">        model_component must remain in scope until the last ON_ModelComponentReference</span></div>
-<div class="line"><a name="l01760"></a><span class="lineno"> 1760</span>&#160;<span class="comment">        is destroyed.</span></div>
-<div class="line"><a name="l01761"></a><span class="lineno"> 1761</span>&#160;<span class="comment">  Remarks:</span></div>
-<div class="line"><a name="l01762"></a><span class="lineno"> 1762</span>&#160;<span class="comment">    The input pointer will be managed and deleted by the returned</span></div>
-<div class="line"><a name="l01763"></a><span class="lineno"> 1763</span>&#160;<span class="comment">    by ON_ModelComponentReference.</span></div>
-<div class="line"><a name="l01764"></a><span class="lineno"> 1764</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01765"></a><span class="lineno"> 1765</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a> CreateForExperts(</div>
-<div class="line"><a name="l01766"></a><span class="lineno"> 1766</span>&#160;    <span class="keyword">class</span> <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>* model_component,</div>
-<div class="line"><a name="l01767"></a><span class="lineno"> 1767</span>&#160;    <span class="keywordtype">bool</span> bManagedComponentReference</div>
-<div class="line"><a name="l01768"></a><span class="lineno"> 1768</span>&#160;    ) <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
-<div class="line"><a name="l01769"></a><span class="lineno"> 1769</span>&#160; </div>
-<div class="line"><a name="l01770"></a><span class="lineno"> 1770</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01771"></a><span class="lineno"> 1771</span>&#160;<span class="comment">  Return:</span></div>
-<div class="line"><a name="l01772"></a><span class="lineno"> 1772</span>&#160;<span class="comment">    A pointer to the managed model component or nullptr.</span></div>
-<div class="line"><a name="l01773"></a><span class="lineno"> 1773</span>&#160;<span class="comment">  See Also:</span></div>
-<div class="line"><a name="l01774"></a><span class="lineno"> 1774</span>&#160;<span class="comment">    ON_ModelComponentRef::ExclusiveModelComponent();</span></div>
-<div class="line"><a name="l01775"></a><span class="lineno"> 1775</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01776"></a><span class="lineno"> 1776</span>&#160;  <span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>* ModelComponent() const <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
-<div class="line"><a name="l01777"></a><span class="lineno"> 1777</span>&#160; </div>
-<div class="line"><a name="l01778"></a><span class="lineno"> 1778</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01779"></a><span class="lineno"> 1779</span>&#160;<span class="comment">  Return:</span></div>
-<div class="line"><a name="l01780"></a><span class="lineno"> 1780</span>&#160;<span class="comment">    If this is the only referance to a component, the a pointer to</span></div>
-<div class="line"><a name="l01781"></a><span class="lineno"> 1781</span>&#160;<span class="comment">    that component is returned.</span></div>
-<div class="line"><a name="l01782"></a><span class="lineno"> 1782</span>&#160;<span class="comment">    Otherwise, nullptr is returned</span></div>
-<div class="line"><a name="l01783"></a><span class="lineno"> 1783</span>&#160;<span class="comment">  See Also:</span></div>
-<div class="line"><a name="l01784"></a><span class="lineno"> 1784</span>&#160;<span class="comment">    ON_ModelGeometryComponent::Attributes()</span></div>
-<div class="line"><a name="l01785"></a><span class="lineno"> 1785</span>&#160;<span class="comment">    ON_ModelGeometryComponent::Geometry()</span></div>
-<div class="line"><a name="l01786"></a><span class="lineno"> 1786</span>&#160;<span class="comment">    ON_ModelGeometryComponent::ExclusiveAttributes()</span></div>
-<div class="line"><a name="l01787"></a><span class="lineno"> 1787</span>&#160;<span class="comment">    ON_ModelGeometryComponent::ExclusiveGeometry();</span></div>
-<div class="line"><a name="l01788"></a><span class="lineno"> 1788</span>&#160;<span class="comment">    ON_ModelComponentRef::ExclusiveModelComponent();</span></div>
-<div class="line"><a name="l01789"></a><span class="lineno"> 1789</span>&#160;<span class="comment">    ONX_Model::ComponentFromRuntimeSerialNumber()</span></div>
-<div class="line"><a name="l01790"></a><span class="lineno"> 1790</span>&#160;<span class="comment">  Remarks:</span></div>
-<div class="line"><a name="l01791"></a><span class="lineno"> 1791</span>&#160;<span class="comment">    If .NET or other wrappers using &quot;lazy garbage collection&quot; memory management are in use,</span></div>
-<div class="line"><a name="l01792"></a><span class="lineno"> 1792</span>&#160;<span class="comment">    there may be stale references awaiting gargage collection and this function will return</span></div>
-<div class="line"><a name="l01793"></a><span class="lineno"> 1793</span>&#160;<span class="comment">    nullptr when you think it should not. </span></div>
-<div class="line"><a name="l01794"></a><span class="lineno"> 1794</span>&#160;<span class="comment">    For this function to work reliably, the ONX_Model and its components </span></div>
-<div class="line"><a name="l01795"></a><span class="lineno"> 1795</span>&#160;<span class="comment">    and references should be in well constructed C++ code with carefully </span></div>
-<div class="line"><a name="l01796"></a><span class="lineno"> 1796</span>&#160;<span class="comment">    crafted memory management.</span></div>
-<div class="line"><a name="l01797"></a><span class="lineno"> 1797</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01798"></a><span class="lineno"> 1798</span>&#160;  class <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>* ExclusiveModelComponent() const <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
-<div class="line"><a name="l01799"></a><span class="lineno"> 1799</span>&#160; </div>
-<div class="line"><a name="l01800"></a><span class="lineno"> 1800</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> ModelComponentRuntimeSerialNumber() const <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
-<div class="line"><a name="l01801"></a><span class="lineno"> 1801</span>&#160;  const <a class="code" href="struct_o_n___u_u_i_d__struct.html">ON_UUID</a> ModelComponentId() const <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
-<div class="line"><a name="l01802"></a><span class="lineno"> 1802</span>&#160;  const <a class="code" href="class_o_n___name_hash.html">ON_NameHash</a> ModelComponentNameHash() const <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
-<div class="line"><a name="l01803"></a><span class="lineno"> 1803</span>&#160;  <span class="keywordtype">int</span> ModelComponentIndex() const <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
-<div class="line"><a name="l01804"></a><span class="lineno"> 1804</span>&#160; </div>
-<div class="line"><a name="l01805"></a><span class="lineno"> 1805</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ReferenceCount() const <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
-<div class="line"><a name="l01806"></a><span class="lineno"> 1806</span>&#160;  </div>
-<div class="line"><a name="l01807"></a><span class="lineno"> 1807</span>&#160;  <span class="keywordtype">bool</span> IsEmpty() const <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
-<div class="line"><a name="l01808"></a><span class="lineno"> 1808</span>&#160; </div>
-<div class="line"><a name="l01809"></a><span class="lineno"> 1809</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_o_n___model_component.html#aebee8c1655e072f442bd71d873240770">Dump</a>(</div>
-<div class="line"><a name="l01810"></a><span class="lineno"> 1810</span>&#160;    <a class="code" href="class_o_n___text_log.html">ON_TextLog</a>&amp; text_log</div>
-<div class="line"><a name="l01811"></a><span class="lineno"> 1811</span>&#160;    ) const;</div>
-<div class="line"><a name="l01812"></a><span class="lineno"> 1812</span>&#160; </div>
-<div class="line"><a name="l01813"></a><span class="lineno"> 1813</span>&#160;private:</div>
-<div class="line"><a name="l01814"></a><span class="lineno"> 1814</span>&#160;  friend class <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>;</div>
-<div class="line"><a name="l01815"></a><span class="lineno"> 1815</span>&#160; </div>
-<div class="line"><a name="l01816"></a><span class="lineno"> 1816</span>&#160;<span class="preprocessor">#pragma ON_PRAGMA_WARNING_PUSH</span></div>
-<div class="line"><a name="l01817"></a><span class="lineno"><a class="line" href="class_o_n___model_component_reference.html#a4a53dc36733db145626f0ab88e2ed755"> 1817</a></span>&#160;<span class="preprocessor">#pragma ON_PRAGMA_WARNING_DISABLE_MSC( 4251 ) </span></div>
-<div class="line"><a name="l01818"></a><span class="lineno"> 1818</span>&#160;  <span class="comment">// C4251: ... needs to have dll-interface to be used by clients of class ...</span></div>
-<div class="line"><a name="l01819"></a><span class="lineno"> 1819</span>&#160;  <span class="comment">// m_sp is private and all code that manages m_sp is explicitly implemented in the DLL.</span></div>
-<div class="line"><a name="l01820"></a><span class="lineno"> 1820</span>&#160;  std::shared_ptr&lt;ON_ModelComponent&gt; m_sp;</div>
-<div class="line"><a name="l01821"></a><span class="lineno"> 1821</span>&#160;<span class="preprocessor">#pragma ON_PRAGMA_WARNING_POP</span></div>
-<div class="line"><a name="l01822"></a><span class="lineno"> 1822</span>&#160;};</div>
-<div class="line"><a name="l01823"></a><span class="lineno"> 1823</span>&#160; </div>
-<div class="line"><a name="l01824"></a><span class="lineno"> 1824</span>&#160;<span class="preprocessor">#if defined(ON_DLL_TEMPLATE)</span></div>
-<div class="line"><a name="l01825"></a><span class="lineno"> 1825</span>&#160;ON_DLL_TEMPLATE <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___class_array.html">ON_ClassArray&lt;ON_ModelComponentReference&gt;</a>;</div>
-<div class="line"><a name="l01826"></a><span class="lineno"> 1826</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l01827"></a><span class="lineno"> 1827</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01828"></a><span class="lineno"> 1828</span>&#160;<span class="comment">/// &lt;summary&gt;</span></div>
-<div class="line"><a name="l01829"></a><span class="lineno"> 1829</span>&#160;<span class="comment">/// ON_ModelComponentWeakReference is a weak shared reference to a model component.</span></div>
-<div class="line"><a name="l01830"></a><span class="lineno"> 1830</span>&#160;<span class="comment">/// ON_ModelComponentReference and ON_ModelComponentWeakReference are based on</span></div>
-<div class="line"><a name="l01831"></a><span class="lineno"> 1831</span>&#160;<span class="comment">/// like std::shared_ptr and std::weak_ptr.</span></div>
-<div class="line"><a name="l01832"></a><span class="lineno"> 1832</span>&#160;<span class="comment">/// &lt;/summary&gt;</span></div>
-<div class="line"><a name="l01833"></a><span class="lineno"> 1833</span>&#160;<span class="comment"></span><span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a></div>
-<div class="line"><a name="l01834"></a><span class="lineno"> 1834</span>&#160;{</div>
-<div class="line"><a name="l01835"></a><span class="lineno"> 1835</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l01836"></a><span class="lineno"><a class="line" href="class_o_n___model_component_weak_reference.html"> 1836</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a> Empty;</div>
-<div class="line"><a name="l01837"></a><span class="lineno"> 1837</span>&#160; </div>
-<div class="line"><a name="l01838"></a><span class="lineno"> 1838</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l01839"></a><span class="lineno"><a class="line" href="class_o_n___model_component_weak_reference.html#aaed2ac51098358a7e9f2d958461cef8d"> 1839</a></span>&#160;  <span class="comment">// No = default to insure m_sp is completely managed in the openurbs DLL.</span></div>
-<div class="line"><a name="l01840"></a><span class="lineno"> 1840</span>&#160;  <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>() <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>; <span class="comment">// No = default to insure m_sp is completely managed in the openurbs DLL.</span></div>
-<div class="line"><a name="l01841"></a><span class="lineno"> 1841</span>&#160;  ~<a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>(); <span class="comment">// No = default to insure m_sp is completely managed in the openurbs DLL.</span></div>
-<div class="line"><a name="l01842"></a><span class="lineno"> 1842</span>&#160;  <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>(const <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>&amp;) <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>; <span class="comment">// No = default to insure m_sp is completely managed in the openurbs DLL.</span></div>
-<div class="line"><a name="l01843"></a><span class="lineno"> 1843</span>&#160;  <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>&amp; operator=(const <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>&amp;); <span class="comment">// No = default to insure m_sp is completely managed in the openurbs DLL.</span></div>
-<div class="line"><a name="l01844"></a><span class="lineno"> 1844</span>&#160;  </div>
-<div class="line"><a name="l01845"></a><span class="lineno"> 1845</span>&#160;<span class="preprocessor">#if defined(ON_HAS_RVALUEREF)</span></div>
-<div class="line"><a name="l01846"></a><span class="lineno"> 1846</span>&#160;  <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>( <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>&amp;&amp; ) <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
-<div class="line"><a name="l01847"></a><span class="lineno"> 1847</span>&#160;  <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>&amp; operator=( <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>&amp;&amp; );</div>
-<div class="line"><a name="l01848"></a><span class="lineno"> 1848</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l01849"></a><span class="lineno"> 1849</span>&#160; </div>
-<div class="line"><a name="l01850"></a><span class="lineno"> 1850</span>&#160;  <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>(</div>
-<div class="line"><a name="l01851"></a><span class="lineno"> 1851</span>&#160;    <span class="keyword">const</span> <span class="keyword">class</span> <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>&amp;</div>
-<div class="line"><a name="l01852"></a><span class="lineno"> 1852</span>&#160;  )  <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
-<div class="line"><a name="l01853"></a><span class="lineno"> 1853</span>&#160; </div>
-<div class="line"><a name="l01854"></a><span class="lineno"> 1854</span>&#160;  <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>&amp; <a class="code" href="class_o_n___model_component.html#a0b6390d0141faa7ba14271dacb57ae35">operator=</a>( <span class="keyword">const</span> <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>&amp; );</div>
+<div class="line"><a name="l01728"></a><span class="lineno"> 1728</span>&#160;  <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>(</div>
+<div class="line"><a name="l01729"></a><span class="lineno"> 1729</span>&#160;    <span class="keyword">const</span> <span class="keyword">class</span> <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>&amp; weak_ref</div>
+<div class="line"><a name="l01730"></a><span class="lineno"> 1730</span>&#160;  )  <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
+<div class="line"><a name="l01731"></a><span class="lineno"> 1731</span>&#160; </div>
+<div class="line"><a name="l01732"></a><span class="lineno"> 1732</span>&#160;  <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>&amp; operator=( <span class="keyword">const</span> <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>&amp; );</div>
+<div class="line"><a name="l01733"></a><span class="lineno"> 1733</span>&#160; </div>
+<div class="line"><a name="l01734"></a><span class="lineno"> 1734</span>&#160; </div>
+<div class="line"><a name="l01735"></a><span class="lineno"> 1735</span>&#160;  <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>(</div>
+<div class="line"><a name="l01736"></a><span class="lineno"> 1736</span>&#160;    std::shared_ptr&lt;ON_ModelComponent&gt;&amp; sp</div>
+<div class="line"><a name="l01737"></a><span class="lineno"> 1737</span>&#160;    ) <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
+<div class="line"><a name="l01738"></a><span class="lineno"> 1738</span>&#160; </div>
+<div class="line"><a name="l01739"></a><span class="lineno"> 1739</span>&#160;  <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>&amp; operator=(</div>
+<div class="line"><a name="l01740"></a><span class="lineno"> 1740</span>&#160;    std::shared_ptr&lt;ON_ModelComponent&gt;&amp; sp</div>
+<div class="line"><a name="l01741"></a><span class="lineno"> 1741</span>&#160;    );</div>
+<div class="line"><a name="l01742"></a><span class="lineno"> 1742</span>&#160;  </div>
+<div class="line"><a name="l01743"></a><span class="lineno"> 1743</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01744"></a><span class="lineno"> 1744</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l01745"></a><span class="lineno"> 1745</span>&#160;<span class="comment">    constant_system_component - [in]</span></div>
+<div class="line"><a name="l01746"></a><span class="lineno"> 1746</span>&#160;<span class="comment">      A constant system component that exists for the duration of </span></div>
+<div class="line"><a name="l01747"></a><span class="lineno"> 1747</span>&#160;<span class="comment">      the application.</span></div>
+<div class="line"><a name="l01748"></a><span class="lineno"> 1748</span>&#160;<span class="comment">  Remarks:</span></div>
+<div class="line"><a name="l01749"></a><span class="lineno"> 1749</span>&#160;<span class="comment">    See ON_ModelComponent::CreateConstantSystemComponentReference()</span></div>
+<div class="line"><a name="l01750"></a><span class="lineno"> 1750</span>&#160;<span class="comment">    for more information about constant system components.</span></div>
+<div class="line"><a name="l01751"></a><span class="lineno"> 1751</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l01752"></a><span class="lineno"> 1752</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01753"></a><span class="lineno"> 1753</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a> CreateConstantSystemComponentReference(</div>
+<div class="line"><a name="l01754"></a><span class="lineno"> 1754</span>&#160;    <span class="keyword">const</span> <span class="keyword">class</span> <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>&amp; constant_system_component</div>
+<div class="line"><a name="l01755"></a><span class="lineno"> 1755</span>&#160;    ) <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
+<div class="line"><a name="l01756"></a><span class="lineno"> 1756</span>&#160; </div>
+<div class="line"><a name="l01757"></a><span class="lineno"> 1757</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01758"></a><span class="lineno"> 1758</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l01759"></a><span class="lineno"> 1759</span>&#160;<span class="comment">    model_component - [in]</span></div>
+<div class="line"><a name="l01760"></a><span class="lineno"> 1760</span>&#160;<span class="comment">    bManagedComponentReference - [in]</span></div>
+<div class="line"><a name="l01761"></a><span class="lineno"> 1761</span>&#160;<span class="comment">      true</span></div>
+<div class="line"><a name="l01762"></a><span class="lineno"> 1762</span>&#160;<span class="comment">        model_component will be deleted by the last ON_ModelComponentReference</span></div>
+<div class="line"><a name="l01763"></a><span class="lineno"> 1763</span>&#160;<span class="comment">        and must have been created by call to operator new() with heap allocation.</span></div>
+<div class="line"><a name="l01764"></a><span class="lineno"> 1764</span>&#160;<span class="comment">      false </span></div>
+<div class="line"><a name="l01765"></a><span class="lineno"> 1765</span>&#160;<span class="comment">        model_component must remain in scope until the last ON_ModelComponentReference</span></div>
+<div class="line"><a name="l01766"></a><span class="lineno"> 1766</span>&#160;<span class="comment">        is destroyed.</span></div>
+<div class="line"><a name="l01767"></a><span class="lineno"> 1767</span>&#160;<span class="comment">  Remarks:</span></div>
+<div class="line"><a name="l01768"></a><span class="lineno"> 1768</span>&#160;<span class="comment">    The input pointer will be managed and deleted by the returned</span></div>
+<div class="line"><a name="l01769"></a><span class="lineno"> 1769</span>&#160;<span class="comment">    by ON_ModelComponentReference.</span></div>
+<div class="line"><a name="l01770"></a><span class="lineno"> 1770</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01771"></a><span class="lineno"> 1771</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a> CreateForExperts(</div>
+<div class="line"><a name="l01772"></a><span class="lineno"> 1772</span>&#160;    <span class="keyword">class</span> <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>* model_component,</div>
+<div class="line"><a name="l01773"></a><span class="lineno"> 1773</span>&#160;    <span class="keywordtype">bool</span> bManagedComponentReference</div>
+<div class="line"><a name="l01774"></a><span class="lineno"> 1774</span>&#160;    ) <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
+<div class="line"><a name="l01775"></a><span class="lineno"> 1775</span>&#160; </div>
+<div class="line"><a name="l01776"></a><span class="lineno"> 1776</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01777"></a><span class="lineno"> 1777</span>&#160;<span class="comment">  Return:</span></div>
+<div class="line"><a name="l01778"></a><span class="lineno"> 1778</span>&#160;<span class="comment">    A pointer to the managed model component or nullptr.</span></div>
+<div class="line"><a name="l01779"></a><span class="lineno"> 1779</span>&#160;<span class="comment">  See Also:</span></div>
+<div class="line"><a name="l01780"></a><span class="lineno"> 1780</span>&#160;<span class="comment">    ON_ModelComponentRef::ExclusiveModelComponent();</span></div>
+<div class="line"><a name="l01781"></a><span class="lineno"> 1781</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01782"></a><span class="lineno"> 1782</span>&#160;  <span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>* ModelComponent() const <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
+<div class="line"><a name="l01783"></a><span class="lineno"> 1783</span>&#160; </div>
+<div class="line"><a name="l01784"></a><span class="lineno"> 1784</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01785"></a><span class="lineno"> 1785</span>&#160;<span class="comment">  Return:</span></div>
+<div class="line"><a name="l01786"></a><span class="lineno"> 1786</span>&#160;<span class="comment">    If this is the only referance to a component, the a pointer to</span></div>
+<div class="line"><a name="l01787"></a><span class="lineno"> 1787</span>&#160;<span class="comment">    that component is returned.</span></div>
+<div class="line"><a name="l01788"></a><span class="lineno"> 1788</span>&#160;<span class="comment">    Otherwise, nullptr is returned</span></div>
+<div class="line"><a name="l01789"></a><span class="lineno"> 1789</span>&#160;<span class="comment">  See Also:</span></div>
+<div class="line"><a name="l01790"></a><span class="lineno"> 1790</span>&#160;<span class="comment">    ON_ModelGeometryComponent::Attributes()</span></div>
+<div class="line"><a name="l01791"></a><span class="lineno"> 1791</span>&#160;<span class="comment">    ON_ModelGeometryComponent::Geometry()</span></div>
+<div class="line"><a name="l01792"></a><span class="lineno"> 1792</span>&#160;<span class="comment">    ON_ModelGeometryComponent::ExclusiveAttributes()</span></div>
+<div class="line"><a name="l01793"></a><span class="lineno"> 1793</span>&#160;<span class="comment">    ON_ModelGeometryComponent::ExclusiveGeometry();</span></div>
+<div class="line"><a name="l01794"></a><span class="lineno"> 1794</span>&#160;<span class="comment">    ON_ModelComponentRef::ExclusiveModelComponent();</span></div>
+<div class="line"><a name="l01795"></a><span class="lineno"> 1795</span>&#160;<span class="comment">    ONX_Model::ComponentFromRuntimeSerialNumber()</span></div>
+<div class="line"><a name="l01796"></a><span class="lineno"> 1796</span>&#160;<span class="comment">  Remarks:</span></div>
+<div class="line"><a name="l01797"></a><span class="lineno"> 1797</span>&#160;<span class="comment">    If .NET or other wrappers using &quot;lazy garbage collection&quot; memory management are in use,</span></div>
+<div class="line"><a name="l01798"></a><span class="lineno"> 1798</span>&#160;<span class="comment">    there may be stale references awaiting gargage collection and this function will return</span></div>
+<div class="line"><a name="l01799"></a><span class="lineno"> 1799</span>&#160;<span class="comment">    nullptr when you think it should not. </span></div>
+<div class="line"><a name="l01800"></a><span class="lineno"> 1800</span>&#160;<span class="comment">    For this function to work reliably, the ONX_Model and its components </span></div>
+<div class="line"><a name="l01801"></a><span class="lineno"> 1801</span>&#160;<span class="comment">    and references should be in well constructed C++ code with carefully </span></div>
+<div class="line"><a name="l01802"></a><span class="lineno"> 1802</span>&#160;<span class="comment">    crafted memory management.</span></div>
+<div class="line"><a name="l01803"></a><span class="lineno"> 1803</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01804"></a><span class="lineno"> 1804</span>&#160;  class <a class="code" href="class_o_n___model_component.html">ON_ModelComponent</a>* ExclusiveModelComponent() const <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
+<div class="line"><a name="l01805"></a><span class="lineno"> 1805</span>&#160; </div>
+<div class="line"><a name="l01806"></a><span class="lineno"> 1806</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> ModelComponentRuntimeSerialNumber() const <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
+<div class="line"><a name="l01807"></a><span class="lineno"> 1807</span>&#160;  const <a class="code" href="struct_o_n___u_u_i_d__struct.html">ON_UUID</a> ModelComponentId() const <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
+<div class="line"><a name="l01808"></a><span class="lineno"> 1808</span>&#160;  const <a class="code" href="class_o_n___name_hash.html">ON_NameHash</a> ModelComponentNameHash() const <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
+<div class="line"><a name="l01809"></a><span class="lineno"> 1809</span>&#160;  <span class="keywordtype">int</span> ModelComponentIndex() const <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
+<div class="line"><a name="l01810"></a><span class="lineno"> 1810</span>&#160; </div>
+<div class="line"><a name="l01811"></a><span class="lineno"> 1811</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ReferenceCount() const <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
+<div class="line"><a name="l01812"></a><span class="lineno"> 1812</span>&#160;  </div>
+<div class="line"><a name="l01813"></a><span class="lineno"> 1813</span>&#160;  <span class="keywordtype">bool</span> IsEmpty() const <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
+<div class="line"><a name="l01814"></a><span class="lineno"> 1814</span>&#160; </div>
+<div class="line"><a name="l01815"></a><span class="lineno"> 1815</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_o_n___model_component.html#aebee8c1655e072f442bd71d873240770">Dump</a>(</div>
+<div class="line"><a name="l01816"></a><span class="lineno"> 1816</span>&#160;    <a class="code" href="class_o_n___text_log.html">ON_TextLog</a>&amp; text_log</div>
+<div class="line"><a name="l01817"></a><span class="lineno"> 1817</span>&#160;    ) const;</div>
+<div class="line"><a name="l01818"></a><span class="lineno"> 1818</span>&#160; </div>
+<div class="line"><a name="l01819"></a><span class="lineno"> 1819</span>&#160;private:</div>
+<div class="line"><a name="l01820"></a><span class="lineno"> 1820</span>&#160;  friend class <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>;</div>
+<div class="line"><a name="l01821"></a><span class="lineno"> 1821</span>&#160; </div>
+<div class="line"><a name="l01822"></a><span class="lineno"><a class="line" href="class_o_n___model_component_reference.html#a4a53dc36733db145626f0ab88e2ed755"> 1822</a></span>&#160;<span class="preprocessor">#pragma ON_PRAGMA_WARNING_PUSH</span></div>
+<div class="line"><a name="l01823"></a><span class="lineno"> 1823</span>&#160;<span class="preprocessor">#pragma ON_PRAGMA_WARNING_DISABLE_MSC( 4251 ) </span></div>
+<div class="line"><a name="l01824"></a><span class="lineno"> 1824</span>&#160;  <span class="comment">// C4251: ... needs to have dll-interface to be used by clients of class ...</span></div>
+<div class="line"><a name="l01825"></a><span class="lineno"> 1825</span>&#160;  <span class="comment">// m_sp is private and all code that manages m_sp is explicitly implemented in the DLL.</span></div>
+<div class="line"><a name="l01826"></a><span class="lineno"> 1826</span>&#160;  std::shared_ptr&lt;ON_ModelComponent&gt; m_sp;</div>
+<div class="line"><a name="l01827"></a><span class="lineno"> 1827</span>&#160;<span class="preprocessor">#pragma ON_PRAGMA_WARNING_POP</span></div>
+<div class="line"><a name="l01828"></a><span class="lineno"> 1828</span>&#160;};</div>
+<div class="line"><a name="l01829"></a><span class="lineno"> 1829</span>&#160; </div>
+<div class="line"><a name="l01830"></a><span class="lineno"> 1830</span>&#160;<span class="preprocessor">#if defined(ON_DLL_TEMPLATE)</span></div>
+<div class="line"><a name="l01831"></a><span class="lineno"> 1831</span>&#160;ON_DLL_TEMPLATE <span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___class_array.html">ON_ClassArray&lt;ON_ModelComponentReference&gt;</a>;</div>
+<div class="line"><a name="l01832"></a><span class="lineno"> 1832</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01833"></a><span class="lineno"> 1833</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l01834"></a><span class="lineno"> 1834</span>&#160;<span class="comment">/// &lt;summary&gt;</span></div>
+<div class="line"><a name="l01835"></a><span class="lineno"> 1835</span>&#160;<span class="comment">/// ON_ModelComponentWeakReference is a weak shared reference to a model component.</span></div>
+<div class="line"><a name="l01836"></a><span class="lineno"> 1836</span>&#160;<span class="comment">/// ON_ModelComponentReference and ON_ModelComponentWeakReference are based on</span></div>
+<div class="line"><a name="l01837"></a><span class="lineno"> 1837</span>&#160;<span class="comment">/// like std::shared_ptr and std::weak_ptr.</span></div>
+<div class="line"><a name="l01838"></a><span class="lineno"> 1838</span>&#160;<span class="comment">/// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l01839"></a><span class="lineno"> 1839</span>&#160;<span class="comment"></span><span class="keyword">class </span><a class="code" href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a> <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a></div>
+<div class="line"><a name="l01840"></a><span class="lineno"> 1840</span>&#160;{</div>
+<div class="line"><a name="l01841"></a><span class="lineno"><a class="line" href="class_o_n___model_component_weak_reference.html"> 1841</a></span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l01842"></a><span class="lineno"> 1842</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a> Empty;</div>
+<div class="line"><a name="l01843"></a><span class="lineno"> 1843</span>&#160; </div>
+<div class="line"><a name="l01844"></a><span class="lineno"><a class="line" href="class_o_n___model_component_weak_reference.html#aaed2ac51098358a7e9f2d958461cef8d"> 1844</a></span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l01845"></a><span class="lineno"> 1845</span>&#160;  <span class="comment">// No = default to insure m_sp is completely managed in the openurbs DLL.</span></div>
+<div class="line"><a name="l01846"></a><span class="lineno"> 1846</span>&#160;  <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>() <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>; <span class="comment">// No = default to insure m_sp is completely managed in the openurbs DLL.</span></div>
+<div class="line"><a name="l01847"></a><span class="lineno"> 1847</span>&#160;  ~<a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>(); <span class="comment">// No = default to insure m_sp is completely managed in the openurbs DLL.</span></div>
+<div class="line"><a name="l01848"></a><span class="lineno"> 1848</span>&#160;  <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>(const <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>&amp;) <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>; <span class="comment">// No = default to insure m_sp is completely managed in the openurbs DLL.</span></div>
+<div class="line"><a name="l01849"></a><span class="lineno"> 1849</span>&#160;  <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>&amp; operator=(const <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>&amp;); <span class="comment">// No = default to insure m_sp is completely managed in the openurbs DLL.</span></div>
+<div class="line"><a name="l01850"></a><span class="lineno"> 1850</span>&#160;  </div>
+<div class="line"><a name="l01851"></a><span class="lineno"> 1851</span>&#160;<span class="preprocessor">#if defined(ON_HAS_RVALUEREF)</span></div>
+<div class="line"><a name="l01852"></a><span class="lineno"> 1852</span>&#160;  <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>( <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>&amp;&amp; ) <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
+<div class="line"><a name="l01853"></a><span class="lineno"> 1853</span>&#160;  <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>&amp; operator=( <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>&amp;&amp; );</div>
+<div class="line"><a name="l01854"></a><span class="lineno"> 1854</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l01855"></a><span class="lineno"> 1855</span>&#160; </div>
-<div class="line"><a name="l01856"></a><span class="lineno"> 1856</span>&#160; </div>
-<div class="line"><a name="l01857"></a><span class="lineno"> 1857</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l01858"></a><span class="lineno"> 1858</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>;</div>
-<div class="line"><a name="l01859"></a><span class="lineno"> 1859</span>&#160;<span class="preprocessor">#pragma ON_PRAGMA_WARNING_PUSH</span></div>
-<div class="line"><a name="l01860"></a><span class="lineno"> 1860</span>&#160;<span class="preprocessor">#pragma ON_PRAGMA_WARNING_DISABLE_MSC( 4251 ) </span></div>
-<div class="line"><a name="l01861"></a><span class="lineno"><a class="line" href="class_o_n___model_component_weak_reference.html#a3d92b272e542be63aef8d53550bba791"> 1861</a></span>&#160;  <span class="comment">// C4251: ... needs to have dll-interface to be used by clients of class ...</span></div>
-<div class="line"><a name="l01862"></a><span class="lineno"> 1862</span>&#160;  <span class="comment">// m_weak_sp is private and all code that manages m_weak_sp is explicitly implemented in the DLL.</span></div>
-<div class="line"><a name="l01863"></a><span class="lineno"> 1863</span>&#160;  std::weak_ptr&lt;ON_ModelComponent&gt; m_wp;</div>
-<div class="line"><a name="l01864"></a><span class="lineno"> 1864</span>&#160;<span class="preprocessor">#pragma ON_PRAGMA_WARNING_POP</span></div>
-<div class="line"><a name="l01865"></a><span class="lineno"> 1865</span>&#160;};</div>
-<div class="line"><a name="l01866"></a><span class="lineno"> 1866</span>&#160; </div>
-<div class="line"><a name="l01867"></a><span class="lineno"> 1867</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01856"></a><span class="lineno"> 1856</span>&#160;  <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>(</div>
+<div class="line"><a name="l01857"></a><span class="lineno"> 1857</span>&#160;    <span class="keyword">const</span> <span class="keyword">class</span> <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>&amp;</div>
+<div class="line"><a name="l01858"></a><span class="lineno"> 1858</span>&#160;  )  <a class="code" href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a>;</div>
+<div class="line"><a name="l01859"></a><span class="lineno"> 1859</span>&#160; </div>
+<div class="line"><a name="l01860"></a><span class="lineno"> 1860</span>&#160;  <a class="code" href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a>&amp; <a class="code" href="class_o_n___model_component.html#a0b6390d0141faa7ba14271dacb57ae35">operator=</a>( <span class="keyword">const</span> <a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>&amp; );</div>
+<div class="line"><a name="l01861"></a><span class="lineno"> 1861</span>&#160; </div>
+<div class="line"><a name="l01862"></a><span class="lineno"> 1862</span>&#160; </div>
+<div class="line"><a name="l01863"></a><span class="lineno"> 1863</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l01864"></a><span class="lineno"> 1864</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a>;</div>
+<div class="line"><a name="l01865"></a><span class="lineno"> 1865</span>&#160;<span class="preprocessor">#pragma ON_PRAGMA_WARNING_PUSH</span></div>
+<div class="line"><a name="l01866"></a><span class="lineno"><a class="line" href="class_o_n___model_component_weak_reference.html#a3d92b272e542be63aef8d53550bba791"> 1866</a></span>&#160;<span class="preprocessor">#pragma ON_PRAGMA_WARNING_DISABLE_MSC( 4251 ) </span></div>
+<div class="line"><a name="l01867"></a><span class="lineno"> 1867</span>&#160;  <span class="comment">// C4251: ... needs to have dll-interface to be used by clients of class ...</span></div>
+<div class="line"><a name="l01868"></a><span class="lineno"> 1868</span>&#160;  <span class="comment">// m_weak_sp is private and all code that manages m_weak_sp is explicitly implemented in the DLL.</span></div>
+<div class="line"><a name="l01869"></a><span class="lineno"> 1869</span>&#160;  std::weak_ptr&lt;ON_ModelComponent&gt; m_wp;</div>
+<div class="line"><a name="l01870"></a><span class="lineno"> 1870</span>&#160;<span class="preprocessor">#pragma ON_PRAGMA_WARNING_POP</span></div>
+<div class="line"><a name="l01871"></a><span class="lineno"> 1871</span>&#160;};</div>
+<div class="line"><a name="l01872"></a><span class="lineno"> 1872</span>&#160; </div>
+<div class="line"><a name="l01873"></a><span class="lineno"> 1873</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gaeec70151e703b808ab57d0626db20e1f"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gaeec70151e703b808ab57d0626db20e1f">ON_OBJECT_DECLARE</a></div><div class="ttdeci">#define ON_OBJECT_DECLARE(cls)</div><div class="ttdef"><b>Definition:</b> opennurbs_object.h:312</div></div>
-<div class="ttc" id="aclass_o_n___model_component_type_iterator_html"><div class="ttname"><a href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a></div><div class="ttdef"><b>Definition:</b> opennurbs_model_component.h:1617</div></div>
-<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga507bcdb4c7af9ee9debce233c851507c"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga507bcdb4c7af9ee9debce233c851507c">ON_UNSET_UINT_INDEX</a></div><div class="ttdeci">#define ON_UNSET_UINT_INDEX</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:248</div></div>
+<div class="ttc" id="aclass_o_n___model_component_type_iterator_html"><div class="ttname"><a href="class_o_n___model_component_type_iterator.html">ON_ModelComponentTypeIterator</a></div><div class="ttdef"><b>Definition:</b> opennurbs_model_component.h:1622</div></div>
+<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga507bcdb4c7af9ee9debce233c851507c"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga507bcdb4c7af9ee9debce233c851507c">ON_UNSET_UINT_INDEX</a></div><div class="ttdeci">#define ON_UNSET_UINT_INDEX</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:250</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga8bf13acff0ada59e23b2138b8f23a2fb"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga8bf13acff0ada59e23b2138b8f23a2fb">operator==</a></div><div class="ttdeci">bool operator==(const ON_ModelComponentContentMark &amp;lhs, const ON_ModelComponentContentMark &amp;rhs)</div></div>
 <div class="ttc" id="agroup___rhino_html_ggaf2392ae606e7fb725ce1de9fea95bf0fa1270ec6930150b50ca550c0dc799d263"><div class="ttname"><a href="group___rhino.html#ggaf2392ae606e7fb725ce1de9fea95bf0fa1270ec6930150b50ca550c0dc799d263">RhinoPropertiesPanelPageType::TextureMapping</a></div><div class="ttdeci">@ TextureMapping</div><div class="ttdoc">Replace the texture mapping page with this page; only works for the current render plug-in.</div></div>
-<div class="ttc" id="aclass_o_n___class_array_html"><div class="ttname"><a href="class_o_n___class_array.html">ON_ClassArray</a></div><div class="ttdef"><b>Definition:</b> opennurbs_array.h:416</div></div>
+<div class="ttc" id="aclass_o_n___class_array_html"><div class="ttname"><a href="class_o_n___class_array.html">ON_ClassArray</a></div><div class="ttdef"><b>Definition:</b> opennurbs_array.h:421</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gaee59b97a9592c0c7b48a7c660a67926c"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gaee59b97a9592c0c7b48a7c660a67926c">ON_nil_uuid</a></div><div class="ttdeci">ON_BEGIN_EXTERNC const ON_EXTERN_DECL ON_UUID ON_nil_uuid</div></div>
 <div class="ttc" id="aclass_o_n___model_component_html"><div class="ttname"><a href="class_o_n___model_component.html">ON_ModelComponent</a></div><div class="ttdef"><b>Definition:</b> opennurbs_model_component.h:28</div></div>
 <div class="ttc" id="aclass_o_n___object_html"><div class="ttname"><a href="class_o_n___object.html">ON_Object</a></div><div class="ttdef"><b>Definition:</b> opennurbs_object.h:467</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga5e466b0525d08412a4fc62b352f60685"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a></div><div class="ttdeci">unsigned short ON__UINT16</div><div class="ttdoc">16 bit unsigned integer</div><div class="ttdef"><b>Definition:</b> opennurbs_system.h:232</div></div>
-<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga1a6ce74387d3d7f0cc364a719b8a4eef"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga1a6ce74387d3d7f0cc364a719b8a4eef">ON_UNSET_INT_INDEX</a></div><div class="ttdeci">#define ON_UNSET_INT_INDEX</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:254</div></div>
+<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga1a6ce74387d3d7f0cc364a719b8a4eef"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga1a6ce74387d3d7f0cc364a719b8a4eef">ON_UNSET_INT_INDEX</a></div><div class="ttdeci">#define ON_UNSET_INT_INDEX</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:256</div></div>
 <div class="ttc" id="aclass_o_n___model_component_html_ab89963a3ae7d6ebae18eb5e00ca469bc"><div class="ttname"><a href="class_o_n___model_component.html#ab89963a3ae7d6ebae18eb5e00ca469bc">ON_ModelComponent::Attributes</a></div><div class="ttdeci">Attributes</div><div class="ttdef"><b>Definition:</b> opennurbs_model_component.h:281</div></div>
-<div class="ttc" id="aclass_o_n___model_component_reference_html"><div class="ttname"><a href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a></div><div class="ttdoc">ON_ModelComponentReference is a persistent reference to a model component. ON_ModelComponentReference...</div><div class="ttdef"><b>Definition:</b> opennurbs_model_component.h:1709</div></div>
+<div class="ttc" id="aclass_o_n___model_component_reference_html"><div class="ttname"><a href="class_o_n___model_component_reference.html">ON_ModelComponentReference</a></div><div class="ttdoc">ON_ModelComponentReference is a persistent reference to a model component. ON_ModelComponentReference...</div><div class="ttdef"><b>Definition:</b> opennurbs_model_component.h:1714</div></div>
 <div class="ttc" id="aclass_o_n___object_html_a0299df21bfed90d7b5bfb24cdcf5e6c1"><div class="ttname"><a href="class_o_n___object.html#a0299df21bfed90d7b5bfb24cdcf5e6c1">ON_Object::SizeOf</a></div><div class="ttdeci">virtual unsigned int SizeOf() const</div></div>
 <div class="ttc" id="aclass_o_n___object_html_af51d5fcec9379ad9b7a56ac4dfc9a8b2"><div class="ttname"><a href="class_o_n___object.html#af51d5fcec9379ad9b7a56ac4dfc9a8b2">ON_Object::DataCRC</a></div><div class="ttdeci">virtual ON__UINT32 DataCRC(ON__UINT32 current_remainder) const</div></div>
-<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga3b6aca42cfeb22b5315f542d04ba024c"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga3b6aca42cfeb22b5315f542d04ba024c">ON__UINT8</a></div><div class="ttdeci">unsigned char ON__UINT8</div><div class="ttdoc">8 bit unsigned integer</div><div class="ttdef"><b>Definition:</b> opennurbs_system.h:226</div></div>
 <div class="ttc" id="aclass_o_n__w_string_html"><div class="ttname"><a href="class_o_n__w_string.html">ON_wString</a></div><div class="ttdef"><b>Definition:</b> opennurbs_string.h:2136</div></div>
-<div class="ttc" id="aclass_o_n___model_component_weak_reference_html"><div class="ttname"><a href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a></div><div class="ttdoc">ON_ModelComponentWeakReference is a weak shared reference to a model component. ON_ModelComponentRefe...</div><div class="ttdef"><b>Definition:</b> opennurbs_model_component.h:1836</div></div>
-<div class="ttc" id="aclass_o_n___model_component_content_mark_html"><div class="ttname"><a href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a></div><div class="ttdef"><b>Definition:</b> opennurbs_model_component.h:1469</div></div>
-<div class="ttc" id="aclass_o_n___component_manifest_html"><div class="ttname"><a href="class_o_n___component_manifest.html">ON_ComponentManifest</a></div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:605</div></div>
-<div class="ttc" id="aclass_o_n___name_hash_html"><div class="ttname"><a href="class_o_n___name_hash.html">ON_NameHash</a></div><div class="ttdef"><b>Definition:</b> opennurbs_string.h:3822</div></div>
-<div class="ttc" id="agroup___r_d_k_html_gaf90e122cbfab5162a93357be721917f2"><div class="ttname"><a href="group___r_d_k.html#gaf90e122cbfab5162a93357be721917f2">Layer</a></div><div class="ttdeci">enum RHRDK_SDK enum RHRDK_SDK Layer</div><div class="ttdef"><b>Definition:</b> RhRdkDefinitions.h:67</div></div>
+<div class="ttc" id="aclass_o_n___model_component_weak_reference_html"><div class="ttname"><a href="class_o_n___model_component_weak_reference.html">ON_ModelComponentWeakReference</a></div><div class="ttdoc">ON_ModelComponentWeakReference is a weak shared reference to a model component. ON_ModelComponentRefe...</div><div class="ttdef"><b>Definition:</b> opennurbs_model_component.h:1841</div></div>
+<div class="ttc" id="aclass_o_n___model_component_content_mark_html"><div class="ttname"><a href="class_o_n___model_component_content_mark.html">ON_ModelComponentContentMark</a></div><div class="ttdef"><b>Definition:</b> opennurbs_model_component.h:1474</div></div>
+<div class="ttc" id="aclass_o_n___component_manifest_html"><div class="ttname"><a href="class_o_n___component_manifest.html">ON_ComponentManifest</a></div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:627</div></div>
+<div class="ttc" id="aclass_o_n___name_hash_html"><div class="ttname"><a href="class_o_n___name_hash.html">ON_NameHash</a></div><div class="ttdef"><b>Definition:</b> opennurbs_string.h:3825</div></div>
+<div class="ttc" id="agroup___r_d_k_html_gaf90e122cbfab5162a93357be721917f2"><div class="ttname"><a href="group___r_d_k.html#gaf90e122cbfab5162a93357be721917f2">Layer</a></div><div class="ttdeci">enum RHRDK_SDK enum RHRDK_SDK Layer</div><div class="ttdef"><b>Definition:</b> RhRdkDefinitions.h:51</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gga6f5c1d4d88bb5eccd2afaacde27f9ef3ac9f88e098f6fe4e4e112eeb05ccb9671"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gga6f5c1d4d88bb5eccd2afaacde27f9ef3ac9f88e098f6fe4e4e112eeb05ccb9671">ON_3dmArchiveTableType::Unset</a></div><div class="ttdeci">@ Unset</div></div>
 <div class="ttc" id="aclass_o_n___component_status_html"><div class="ttname"><a href="class_o_n___component_status.html">ON_ComponentStatus</a></div><div class="ttdef"><b>Definition:</b> opennurbs_compstat.h:93</div></div>
 <div class="ttc" id="aclass_o_n___object_html_a21c508d3b53458e252adbcd29e62ed09"><div class="ttname"><a href="class_o_n___object.html#a21c508d3b53458e252adbcd29e62ed09">ON_Object::ModelObjectId</a></div><div class="ttdeci">virtual ON_UUID ModelObjectId() const</div></div>
-<div class="ttc" id="aclass_o_n___binary_archive_html"><div class="ttname"><a href="class_o_n___binary_archive.html">ON_BinaryArchive</a></div><div class="ttdoc">&lt; use for generic serialization of binary data</div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:2014</div></div>
+<div class="ttc" id="aclass_o_n___binary_archive_html"><div class="ttname"><a href="class_o_n___binary_archive.html">ON_BinaryArchive</a></div><div class="ttdoc">&lt; use for generic serialization of binary data</div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:2035</div></div>
 <div class="ttc" id="aclass_o_n___text_log_html"><div class="ttname"><a href="class_o_n___text_log.html">ON_TextLog</a></div><div class="ttdef"><b>Definition:</b> opennurbs_textlog.h:22</div></div>
 <div class="ttc" id="aclass_o_n___component_status_html_ae267cd5d4088c8a033fa348d30227223"><div class="ttname"><a href="class_o_n___component_status.html#ae267cd5d4088c8a033fa348d30227223">ON_ComponentStatus::NoneSet</a></div><div class="ttdeci">static const ON_ComponentStatus NoneSet</div><div class="ttdef"><b>Definition:</b> opennurbs_compstat.h:97</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga06b3b0ca58bccbd69e5c6a8edf9a23fe"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga06b3b0ca58bccbd69e5c6a8edf9a23fe">operator!=</a></div><div class="ttdeci">bool operator!=(const ON_ModelComponentContentMark &amp;lhs, const ON_ModelComponentContentMark &amp;rhs)</div></div>
@@ -1974,7 +1979,7 @@ $(function() {
 <div class="ttc" id="aclass_o_n___model_component_html_a2977d69091b4952cc19b0189a28a0eacac9f88e098f6fe4e4e112eeb05ccb9671"><div class="ttname"><a href="class_o_n___model_component.html#a2977d69091b4952cc19b0189a28a0eacac9f88e098f6fe4e4e112eeb05ccb9671">ON_ModelComponent::Type::Unset</a></div><div class="ttdeci">@ Unset</div><div class="ttdoc">summary&gt;No value set.</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gac741bf9e3823a5cd9e18198228f2329e"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a></div><div class="ttdeci">#define ON_CLASS</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:115</div></div>
 <div class="ttc" id="aclass_o_n___object_html_a7212696724553dc4d365479a10150c0d"><div class="ttname"><a href="class_o_n___object.html#a7212696724553dc4d365479a10150c0d">ON_Object::IsValid</a></div><div class="ttdeci">virtual bool IsValid(class ON_TextLog *text_log=nullptr) const</div></div>
-<div class="ttc" id="aclass_o_n___component_manifest_item_html"><div class="ttname"><a href="class_o_n___component_manifest_item.html">ON_ComponentManifestItem</a></div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:1206</div></div>
+<div class="ttc" id="aclass_o_n___component_manifest_item_html"><div class="ttname"><a href="class_o_n___component_manifest_item.html">ON_ComponentManifestItem</a></div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:1228</div></div>
 <div class="ttc" id="astruct_o_n___u_u_i_d__struct_html"><div class="ttname"><a href="struct_o_n___u_u_i_d__struct.html">ON_UUID_struct</a></div><div class="ttdoc">ON_UUID is a 16 byte universally unique identifier.</div><div class="ttdef"><b>Definition:</b> opennurbs_uuid.h:35</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga56cda90a1091ae3495363200bbbaf4e5"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga56cda90a1091ae3495363200bbbaf4e5">ON__INT32</a></div><div class="ttdeci">int ON__INT32</div><div class="ttdoc">32 bit integer</div><div class="ttdef"><b>Definition:</b> opennurbs_system.h:235</div></div>
 <div class="ttc" id="aclass_o_n___model_component_html_a2977d69091b4952cc19b0189a28a0eac"><div class="ttname"><a href="class_o_n___model_component.html#a2977d69091b4952cc19b0189a28a0eac">ON_ModelComponent::Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">The ON_ModelComponent::Type enum has a value for each explicit component type and two special values,...</div><div class="ttdef"><b>Definition:</b> opennurbs_model_component.h:56</div></div>
@@ -1982,7 +1987,7 @@ $(function() {
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gaea03c6f4bab106103ada72c766f7fe5c"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a></div><div class="ttdeci">unsigned int ON__UINT32</div><div class="ttdoc">32 bit unsigned integer</div><div class="ttdef"><b>Definition:</b> opennurbs_system.h:238</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:12:50 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:15 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

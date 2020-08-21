@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -220,26 +220,43 @@ $(function() {
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> callback_delta</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    );</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  bool (*m_callback_function)(ON__UINT_PTR) = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  ON__UINT_PTR m_callback_context = 0;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> m_previous_query_clock = 0;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keywordtype">bool</span> m_bTerminationRequested = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keywordtype">bool</span> m_reserved1[7];</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  ON__UINT_PTR m_thread_id = 0;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> m_reserved2[2];</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;};</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">    If bAllow is true, the worker thread cancellation handling (escape key presses etc) will cause RequestTermination to be called.</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment">    If bAllow is false, cancellation must be implemented through the callback function, otherwise all cancellation will be disabled.</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment">    bAllow - [in] (see above)</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <span class="keywordtype">void</span> SetAllowDefaultCancellationHandling(<span class="keywordtype">bool</span> bAllow);</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">    returns true if default cancellation processing is allowed, otherwise false.  See SetAllowDefaultCancellationHandling</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="keywordtype">bool</span> AllowDefaultCancellationHandling(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  bool (*m_callback_function)(ON__UINT_PTR) = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  ON__UINT_PTR m_callback_context = 0;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> m_previous_query_clock = 0;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="keywordtype">bool</span> m_bTerminationRequested = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <span class="keywordtype">bool</span> m_bAllowDefaultCancellationHandling = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <span class="keywordtype">bool</span> m_reserved1[6];</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  ON__UINT_PTR m_thread_id = 0;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> m_reserved2[2];</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;};</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_o_n___terminator_html"><div class="ttname"><a href="class_o_n___terminator.html">ON_Terminator</a></div><div class="ttdef"><b>Definition:</b> opennurbs_terminator.h:23</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga3c46136e2570983319c47553f753932e"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a></div><div class="ttdeci">unsigned long long ON__UINT64</div><div class="ttdoc">64 bit unsigned integer</div><div class="ttdef"><b>Definition:</b> opennurbs_system.h:250</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gac741bf9e3823a5cd9e18198228f2329e"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a></div><div class="ttdeci">#define ON_CLASS</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:115</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:12:51 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:16 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

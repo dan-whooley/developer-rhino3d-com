@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -91,6 +91,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abcefcbadf5bfe8de76168ccdb4365cab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb8f0cf5fb03bca4f578fa87d923c82f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_layer_table.html#aeb8f0cf5fb03bca4f578fa87d923c82f">AddLayer</a> (const wchar_t *layer_name, <a class="el" href="class_o_n___color.html">ON_Color</a> layer_color, bool bReturnExistingLayer)</td></tr>
 <tr class="separator:aeb8f0cf5fb03bca4f578fa87d923c82f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a435cd1935627f654c5065964203e4092"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_layer_table.html#a435cd1935627f654c5065964203e4092">ChangeLayerSortOrder</a> (const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n__2dex.html">ON_2dex</a> &gt; &amp;sort_order)</td></tr>
+<tr class="separator:a435cd1935627f654c5065964203e4092"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d865fe4d8f558f428d4aa2025af8a97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_layer_table.html#a2d865fe4d8f558f428d4aa2025af8a97">CreateLayer</a> (const <a class="el" href="class_o_n___layer.html">ON_Layer</a> &amp;layer, unsigned int layer_type, unsigned int worksession_ref_model_sn, unsigned int linked_idef_sn)</td></tr>
 <tr class="separator:a2d865fe4d8f558f428d4aa2025af8a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37e4a2683c30055350215e34cb2d3d0d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_c_rhino_layer.html">CRhinoLayer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_layer_table.html#a37e4a2683c30055350215e34cb2d3d0d">CurrentLayer</a> () const</td></tr>
@@ -103,6 +105,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4728e97813a1035826fbbab476bd5586"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a102dfc2c2e99fde5ff67870e7ae963a7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_layer_table.html#a102dfc2c2e99fde5ff67870e7ae963a7">DeleteLayers</a> (int layer_index_count, const int *layer_index_list, bool bQuiet)</td></tr>
 <tr class="separator:a102dfc2c2e99fde5ff67870e7ae963a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60ff43844b1e11a8ba4b829b355ef8de"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_layer_table.html#a60ff43844b1e11a8ba4b829b355ef8de">DeleteLayers</a> (int layer_index_count, const int *layer_index_list, bool bQuiet, int delete_objects_warning)</td></tr>
+<tr class="separator:a60ff43844b1e11a8ba4b829b355ef8de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d6a3b4b67b0e42bea5d2767cc0677db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_rhino_doc.html">CRhinoDoc</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_layer_table.html#a7d6a3b4b67b0e42bea5d2767cc0677db">Document</a> () const</td></tr>
 <tr class="separator:a7d6a3b4b67b0e42bea5d2767cc0677db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a032c0cc37982790ef17f600536ee4a57"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_layer_table.html#a032c0cc37982790ef17f600536ee4a57">FindLayerFromFullPathName</a> (const wchar_t *layer_full_path_name, int not_found_return_value) const</td></tr>
@@ -163,6 +167,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a67b1ce3b7460c6a630362ad6e49b31e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa56b01a253618e5a187e4d4d75cbc0c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_layer_table.html#afa56b01a253618e5a187e4d4d75cbc0c">UndoModifyLayer</a> (int layer_index, unsigned int ur_sn=0)</td></tr>
 <tr class="separator:afa56b01a253618e5a187e4d4d75cbc0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dd578a2efa3138609ffe8d63ab4fb91"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_layer_table.html#a7dd578a2efa3138609ffe8d63ab4fb91">UnsortLayer</a> (int layer_index, int sort_index)</td></tr>
+<tr class="separator:a7dd578a2efa3138609ffe8d63ab4fb91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -274,6 +280,24 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Description: Create a new layer with a specified name and color. Parameters: layer_name - [in] If the name is nullptr or an empty string, an unsused layer name is automatically used. layer_color - [in] If layer_color is <a class="el" href="class_o_n___color.html#a54c9448a0e7a53032cdb7f111163aca9" title="0xFFFFFFFFu">ON_Color::UnsetColor</a>, the default layer color is used bReturnExistingLayer - [in] If there is a layer named layer_name and bReturnExistingLayer is true, then the index of the existing layer is returned. If there is a layer named layer_name and bReturnExistingLayer is false, then the ON_UNSET_INT_INDEX is returned. Returns: &gt;= 0: index of the layer ON_UNSET_INT_INDEX: layer could not be added because layer_name was invalid or a layer named layer_name and bReturnExistingLayer was false. </p>
+
+</div>
+</div>
+<a id="a435cd1935627f654c5065964203e4092"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a435cd1935627f654c5065964203e4092">&#9670;&nbsp;</a></span>ChangeLayerSortOrder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRhinoLayerTable::ChangeLayerSortOrder </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n__2dex.html">ON_2dex</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sort_order</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -407,7 +431,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a id="a102dfc2c2e99fde5ff67870e7ae963a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a102dfc2c2e99fde5ff67870e7ae963a7">&#9670;&nbsp;</a></span>DeleteLayers()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a102dfc2c2e99fde5ff67870e7ae963a7">&#9670;&nbsp;</a></span>DeleteLayers() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -437,8 +461,48 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Deletes multiple layers</p>
-<p>Parameters: layer_index_count - [in] length of layer_index[] array. layer_index - [in] array zero based indices of layers to delete. The indices must be in the range 0 &lt;= layer_index &lt; <a class="el" href="class_c_rhino_layer_table.html#aff5673a8def2a696bb4051a3eb8288f1">LayerCount()</a>. bQuiet - [in] If true, no warning message box appears if a layer cannot be deleted because it is the current layer, contains active geometry, and so on. Returns: Number of layers that were deleted. If this is &lt; layer_index_count, you can dig through the layer table and check which ones were not deleted. </p>
+<p>Description: Deletes multiple layers. Parameters: layer_index_count - [in] length of layer_index[] array. layer_index_list - [in] array zero based indices of layers to delete. The indices must be in the range 0 &lt;= layer_index &lt; <a class="el" href="class_c_rhino_layer_table.html#aff5673a8def2a696bb4051a3eb8288f1">LayerCount()</a>. bQuiet - [in] If true, no warning message box appears if a layer cannot be deleted because it is the current layer, contains active geometry, and so on. Returns: Number of layers that were deleted. If this is &lt; layer_index_count, you can dig through the layer table and check which ones were not deleted. </p>
+
+</div>
+</div>
+<a id="a60ff43844b1e11a8ba4b829b355ef8de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60ff43844b1e11a8ba4b829b355ef8de">&#9670;&nbsp;</a></span>DeleteLayers() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CRhinoLayerTable::DeleteLayers </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>layer_index_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int *&#160;</td>
+          <td class="paramname"><em>layer_index_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bQuiet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>delete_objects_warning</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Deletes multiple layers. Parameters: layer_index_count - [in] length of layer_index_list[] array. layer_index_list - [in] array zero based indices of layers to delete. The indices must be in the range 0 &lt;= layer_index &lt; <a class="el" href="class_c_rhino_layer_table.html#aff5673a8def2a696bb4051a3eb8288f1">LayerCount()</a>. bQuiet - [in] If true, no warning message box appears if a layer cannot be deleted because it is the current layer, contains active geometry, and so on. delete_objects_warning - [in] Action to take when multiple delete warnings occur, where: 0 == No to all, 1 == Yes to all, 2 == Ask the user. Returns: Number of layers that were deleted. If this is &lt; layer_index_count, you can dig through the layer table and check which ones were not deleted. </p>
 
 </div>
 </div>
@@ -1291,6 +1355,34 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a7dd578a2efa3138609ffe8d63ab4fb91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dd578a2efa3138609ffe8d63ab4fb91">&#9670;&nbsp;</a></span>UnsortLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CRhinoLayerTable::UnsortLayer </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>layer_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sort_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
 <a id="a90258f01ce1e144ed14cd1157be4dc7a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a90258f01ce1e144ed14cd1157be4dc7a">&#9670;&nbsp;</a></span>CRhinoDoc</h2>
@@ -1425,7 +1517,7 @@ Friends</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:04 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:29 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

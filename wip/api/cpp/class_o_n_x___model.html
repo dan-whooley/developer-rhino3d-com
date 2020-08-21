@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -266,9 +266,15 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ab52f4f2ee2c23b6990343b1327da20a7"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n_x___model.html#ab52f4f2ee2c23b6990343b1327da20a7">GetRDKDocumentInformation</a> (const <a class="el" href="class_o_n_x___model___user_data.html">ONX_Model_UserData</a> &amp;docud, <a class="el" href="class_o_n__w_string.html">ON_wString</a> &amp;rdk_xml_document_data)</td></tr>
 <tr class="separator:ab52f4f2ee2c23b6990343b1327da20a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab69e0f56d66378d9bdf81a5b39b17f5f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n_x___model.html#ab69e0f56d66378d9bdf81a5b39b17f5f">GetRDKEmbeddedFile</a> (const <a class="el" href="class_o_n_x___model___user_data.html">ONX_Model_UserData</a> &amp;docud, const wchar_t *path, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; unsigned char &gt; &amp;bytes)</td></tr>
+<tr class="memdesc:ab69e0f56d66378d9bdf81a5b39b17f5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function extracts one embedded file from the support files written with this document. Use the exact path as returned from GetRDKEmbeddedFilePaths.  <a href="class_o_n_x___model.html#ab69e0f56d66378d9bdf81a5b39b17f5f">More...</a><br /></td></tr>
+<tr class="separator:ab69e0f56d66378d9bdf81a5b39b17f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81b610834bac070c042ef2c9a1539e98"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n_x___model.html#a81b610834bac070c042ef2c9a1539e98">GetRDKEmbeddedFilePaths</a> (const <a class="el" href="class_o_n_x___model___user_data.html">ONX_Model_UserData</a> &amp;docud, <a class="el" href="class_o_n___class_array.html">ON_ClassArray</a>&lt; <a class="el" href="class_o_n__w_string.html">ON_wString</a> &gt; &amp;paths)</td></tr>
+<tr class="separator:a81b610834bac070c042ef2c9a1539e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa633ebd7f486a231e85127bf3d52c7ad"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n_x___model.html#aa633ebd7f486a231e85127bf3d52c7ad">GetRDKEmbeddedFiles</a> (const <a class="el" href="class_o_n_x___model___user_data.html">ONX_Model_UserData</a> &amp;docud, <a class="el" href="class_o_n___class_array.html">ON_ClassArray</a>&lt; <a class="el" href="class_o_n__w_string.html">ON_wString</a> &gt; &amp;paths, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; unsigned char * &gt; &amp;embedded_files_as_buffers)</td></tr>
-<tr class="memdesc:aa633ebd7f486a231e85127bf3d52c7ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is only supported for Version 6 files onwards.  <a href="class_o_n_x___model.html#aa633ebd7f486a231e85127bf3d52c7ad">More...</a><br /></td></tr>
 <tr class="separator:aa633ebd7f486a231e85127bf3d52c7ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6f01bd21d10392970fc3f73af31e595"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n_x___model.html#ab6f01bd21d10392970fc3f73af31e595">GetRDKEmbeddedFiles</a> (const <a class="el" href="class_o_n_x___model___user_data.html">ONX_Model_UserData</a> &amp;docud, <a class="el" href="class_o_n___class_array.html">ON_ClassArray</a>&lt; <a class="el" href="class_o_n__w_string.html">ON_wString</a> &gt; &amp;paths, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; unsigned char * &gt; &amp;embedded_files_as_buffers, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; size_t &gt; &amp;buffer_sizes)</td></tr>
+<tr class="separator:ab6f01bd21d10392970fc3f73af31e595"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38aa996ae9bdb37446b075fe2aef83d1"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n_x___model.html#a38aa996ae9bdb37446b075fe2aef83d1">GetRDKObjectInformation</a> (const <a class="el" href="class_o_n___object.html">ON_Object</a> &amp;object, <a class="el" href="class_o_n__w_string.html">ON_wString</a> &amp;rdk_xml_object_data)</td></tr>
 <tr class="separator:a38aa996ae9bdb37446b075fe2aef83d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63146698c65611528ed462458608594c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n_x___model.html#a63146698c65611528ed462458608594c">IsRDKDocumentInformation</a> (const <a class="el" href="class_o_n_x___model___user_data.html">ONX_Model_UserData</a> &amp;docud)</td></tr>
@@ -1445,11 +1451,93 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>This function returns the entire XML associated with the RDK document data for this file. The XML will include details about materials, textures and environments as well as sun, skylighting, ground plane and so on. Returns true if RDK document information is available. </p>
+
+</div>
+</div>
+<a id="ab69e0f56d66378d9bdf81a5b39b17f5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab69e0f56d66378d9bdf81a5b39b17f5f">&#9670;&nbsp;</a></span>GetRDKEmbeddedFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ONX_Model::GetRDKEmbeddedFile </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n_x___model___user_data.html">ONX_Model_UserData</a> &amp;&#160;</td>
+          <td class="paramname"><em>docud</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; unsigned char &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bytes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This function extracts one embedded file from the support files written with this document. Use the exact path as returned from GetRDKEmbeddedFilePaths. </p>
+
+</div>
+</div>
+<a id="a81b610834bac070c042ef2c9a1539e98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81b610834bac070c042ef2c9a1539e98">&#9670;&nbsp;</a></span>GetRDKEmbeddedFilePaths()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ONX_Model::GetRDKEmbeddedFilePaths </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n_x___model___user_data.html">ONX_Model_UserData</a> &amp;&#160;</td>
+          <td class="paramname"><em>docud</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___class_array.html">ON_ClassArray</a>&lt; <a class="el" href="class_o_n__w_string.html">ON_wString</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>paths</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This function returns the paths of the embedded support files written with this document. The returned arrays will be empty if no support filers were saved. This function is similar to GetRDKEmbeddedFiles, but is faster and uses less memory to return only the paths. Use the paths (exactly the strings returned from this function) to extract the embedded files using GetRDKEmbeddedFile </p>
 
 </div>
 </div>
 <a id="aa633ebd7f486a231e85127bf3d52c7ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa633ebd7f486a231e85127bf3d52c7ad">&#9670;&nbsp;</a></span>GetRDKEmbeddedFiles()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa633ebd7f486a231e85127bf3d52c7ad">&#9670;&nbsp;</a></span>GetRDKEmbeddedFiles() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1487,8 +1575,56 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>This function returns the embedded support files written with this document. The returned arrays will be empty if no support filers were saved. Typically, these files will be used by materials and environments. Rhino unpacks these files into a folder with the suffix "embedded_files" next to the 3dm file on disk. This is only supported for Version 6 files onwards. Returns true if embedded files were found. </p>
 
-<p>This is only supported for Version 6 files onwards. </p>
+</div>
+</div>
+<a id="ab6f01bd21d10392970fc3f73af31e595"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6f01bd21d10392970fc3f73af31e595">&#9670;&nbsp;</a></span>GetRDKEmbeddedFiles() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ONX_Model::GetRDKEmbeddedFiles </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n_x___model___user_data.html">ONX_Model_UserData</a> &amp;&#160;</td>
+          <td class="paramname"><em>docud</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___class_array.html">ON_ClassArray</a>&lt; <a class="el" href="class_o_n__w_string.html">ON_wString</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>paths</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; unsigned char * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>embedded_files_as_buffers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; size_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>buffer_sizes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This function returns the embedded support files written with this document. The returned arrays will be empty if no support filers were saved. Typically, these files will be used by materials and environments. Rhino unpacks these files into a folder with the suffix "embedded_files" next to the 3dm file on disk. This is only supported for Version 6 files onwards. Returns true if embedded files were found. </p>
 
 </div>
 </div>
@@ -1525,6 +1661,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>This function returns the entire XML associated with the RDK object. The XML includes details about decals. Returns true if RDK object information is available. </p>
 
 </div>
 </div>
@@ -1795,7 +1932,8 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>END model text dump tools BEGIN Render Development Toolkit (RDK) information </p>
+<p>END model text dump tools BEGIN Render Development Toolkit (RDK) information</p>
+<p>The following functions allow the developer access to the information saved per document or per-object in the 3dm file by the RDK plug-in, built into Rhino. There are two parts to this information - the XML data that constitutes the information about materials, textures and environments in addition to some of the document settings such as sun data, skylighting ground plane and so on - and the embedded support files which are saved as byte-per-byte copies of the actual file data for the original files. Typically, these embedded files will be textured used by materials, environments or decals. Call this function to determine if RDK document information has been saved in this model and can be read using the GetRDKDocumentInfomation function. Returns true if RDK document information is available. </p>
 
 </div>
 </div>
@@ -1822,6 +1960,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Call this function to determine if RDK object information has saved in this model and can be read using the GetRDKObjectInformation function. Returns true if RDK object information is available. </p>
 
 </div>
 </div>
@@ -2947,7 +3086,7 @@ Friends</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:31 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:59 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

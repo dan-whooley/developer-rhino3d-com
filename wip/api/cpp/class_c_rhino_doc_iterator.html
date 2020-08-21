@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -82,6 +82,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a682cb06e85a863e3ce08d7a2b83d059d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a357b13d5e9b743d04cb0f699391d777d"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="class_c_rhino_doc.html">CRhinoDoc</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_doc_iterator.html#a357b13d5e9b743d04cb0f699391d777d">First</a> ()</td></tr>
 <tr class="separator:a357b13d5e9b743d04cb0f699391d777d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a280d48bb2983f33c60c9d7a578d42d5c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_doc_iterator.html#a280d48bb2983f33c60c9d7a578d42d5c">IncludeHeadlessDocuments</a> () const</td></tr>
+<tr class="separator:a280d48bb2983f33c60c9d7a578d42d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addc8c01c5ae3be80ec7035041a698ad6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_doc_iterator.html#addc8c01c5ae3be80ec7035041a698ad6">IncludeHeadlessDocuments</a> (bool doInclude)</td></tr>
+<tr class="separator:addc8c01c5ae3be80ec7035041a698ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5aeca94795ce039786ab20703029c6c0"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="class_c_rhino_doc.html">CRhinoDoc</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_doc_iterator.html#a5aeca94795ce039786ab20703029c6c0">Next</a> ()</td></tr>
 <tr class="separator:a5aeca94795ce039786ab20703029c6c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -100,7 +104,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Example: Iteratate all documents: <a class="el" href="class_c_rhino_doc_iterator.html">CRhinoDocIterator</a> doc_it; for ( CRhinoDoc* doc = doc_it.First(); 0 != doc; doc = doc_it.Next() ) { ... } </p>
+<p>Example: Iterate all documents: <a class="el" href="class_c_rhino_doc_iterator.html">CRhinoDocIterator</a> doc_it; for ( CRhinoDoc* doc = doc_it.First(); 0 != doc; doc = doc_it.Next() ) { ... } </p>
 
 </div>
 </div>
@@ -161,6 +165,41 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a280d48bb2983f33c60c9d7a578d42d5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a280d48bb2983f33c60c9d7a578d42d5c">&#9670;&nbsp;</a></span>IncludeHeadlessDocuments() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CRhinoDocIterator::IncludeHeadlessDocuments </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="addc8c01c5ae3be80ec7035041a698ad6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addc8c01c5ae3be80ec7035041a698ad6">&#9670;&nbsp;</a></span>IncludeHeadlessDocuments() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRhinoDocIterator::IncludeHeadlessDocuments </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>doInclude</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a5aeca94795ce039786ab20703029c6c0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5aeca94795ce039786ab20703029c6c0">&#9670;&nbsp;</a></span>Next()</h2>
 
@@ -185,7 +224,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:01 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:26 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

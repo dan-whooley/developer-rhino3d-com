@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -115,6 +115,13 @@ Public Types</h2></td></tr>
 <a class="el" href="class_c_display_pipeline_attributes.html#ab8e72cbe8bd754036ee65c26cf5689dead336aef7f19daacb5caa2bafcc683015">StereoRenderContext::RenderingBothEyes</a> = RenderingLeftEye | RenderingRightEye
  }</td></tr>
 <tr class="separator:ab8e72cbe8bd754036ee65c26cf5689de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6e4824e35f7fecb8a1d73619594bd69"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#ad6e4824e35f7fecb8a1d73619594bd69">SubDEdgeType</a> : int { <a class="el" href="class_c_display_pipeline_attributes.html#ad6e4824e35f7fecb8a1d73619594bd69aaa9bbefb077ed9cff3aad4cca926f61a">SubDEdgeType::SmoothInterior</a> = 0, 
+<a class="el" href="class_c_display_pipeline_attributes.html#ad6e4824e35f7fecb8a1d73619594bd69a1c2ac564073b07d44002703042bc67ba">SubDEdgeType::CreaseInterior</a> = 1, 
+<a class="el" href="class_c_display_pipeline_attributes.html#ad6e4824e35f7fecb8a1d73619594bd69ab470c755a52df363c2334a50db9e6778">SubDEdgeType::NonManifold</a> = 2, 
+<a class="el" href="class_c_display_pipeline_attributes.html#ad6e4824e35f7fecb8a1d73619594bd69ae234de581c9c5ef91322f1469a585f9e">SubDEdgeType::Boundary</a> =3
+ }</td></tr>
+<tr class="memdesc:ad6e4824e35f7fecb8a1d73619594bd69"><td class="mdescLeft">&#160;</td><td class="mdescRight">SubD specific attributes...  <a href="class_c_display_pipeline_attributes.html#ad6e4824e35f7fecb8a1d73619594bd69">More...</a><br /></td></tr>
+<tr class="separator:ad6e4824e35f7fecb8a1d73619594bd69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -151,10 +158,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a28df815ca10688eb9ba2debbb56c7cd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a28df815ca10688eb9ba2debbb56c7cd0">GetGridAttributes</a> (<a class="el" href="class_c_rhino_app_grid_settings.html">CRhinoAppGridSettings</a> &amp;grattr) const</td></tr>
 <tr class="separator:a28df815ca10688eb9ba2debbb56c7cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57344053a6899a2d646e0ec864ca261f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a57344053a6899a2d646e0ec864ca261f">GetMeshWireAttributes</a> (<a class="el" href="class_o_n___color.html">ON_Color</a> colors[4], float thicknesses[4], unsigned int patterns[4]) const</td></tr>
-<tr class="memdesc:a57344053a6899a2d646e0ec864ca261f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mesh and SubD specific attributes...  <a href="class_c_display_pipeline_attributes.html#a57344053a6899a2d646e0ec864ca261f">More...</a><br /></td></tr>
+<tr class="memdesc:a57344053a6899a2d646e0ec864ca261f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mesh specific attributes...  <a href="class_c_display_pipeline_attributes.html#a57344053a6899a2d646e0ec864ca261f">More...</a><br /></td></tr>
 <tr class="separator:a57344053a6899a2d646e0ec864ca261f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf1bda65ce6ecd413ce886c624c48b47"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#adf1bda65ce6ecd413ce886c624c48b47">GetSkylightShadowQuality</a> () const</td></tr>
+<tr class="separator:adf1bda65ce6ecd413ce886c624c48b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a352eeff8a84bfbb5c34283d64afbc5d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_display_pipeline_attributes.html#ab8e72cbe8bd754036ee65c26cf5689de">StereoRenderContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a352eeff8a84bfbb5c34283d64afbc5d3">GetStereoRenderContext</a> () const</td></tr>
 <tr class="separator:a352eeff8a84bfbb5c34283d64afbc5d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55ca18fbc94e058f5eafc70060d9baaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a55ca18fbc94e058f5eafc70060d9baaf">GetSubDColorReductions</a> (int[4]) const</td></tr>
+<tr class="separator:a55ca18fbc94e058f5eafc70060d9baaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa337670f16994c8512a12cd6f6a2418"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#aaa337670f16994c8512a12cd6f6a2418">GetSubDEdgeVisibility</a> (<a class="el" href="class_c_display_pipeline_attributes.html#ad6e4824e35f7fecb8a1d73619594bd69">SubDEdgeType</a> edgeType) const</td></tr>
+<tr class="separator:aaa337670f16994c8512a12cd6f6a2418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae72d56e1de7b88a3e2507dc3b4978516"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#ae72d56e1de7b88a3e2507dc3b4978516">GetSubDUsageIndexes</a> (int[4]) const</td></tr>
+<tr class="separator:ae72d56e1de7b88a3e2507dc3b4978516"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e4183c66ea7177a76fe7e5df9446f71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a4e4183c66ea7177a76fe7e5df9446f71">GetSubDWireAttributes</a> (<a class="el" href="class_o_n___color.html">ON_Color</a> colors[4], float thicknesses[4], bool applyXforms=true) const</td></tr>
+<tr class="separator:a4e4183c66ea7177a76fe7e5df9446f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf4364bb03620e0ff7c5d78543aa6436"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#adf4364bb03620e0ff7c5d78543aa6436">Id</a> () const</td></tr>
 <tr class="separator:adf4364bb03620e0ff7c5d78543aa6436"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4aed504009fe92bcbadede9b47f162ca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a4aed504009fe92bcbadede9b47f162ca">IsGroundPlaneOff</a> () const</td></tr>
@@ -183,8 +200,30 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7075a38881d8c73448eae97a87a1e8d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33c4e7e8e96d8499ccdaa18edd303fb2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a33c4e7e8e96d8499ccdaa18edd303fb2">RealtimeRenderPasses</a> (void) const</td></tr>
 <tr class="separator:a33c4e7e8e96d8499ccdaa18edd303fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ad20a67eb64d5db5501c8f4f68b22e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___color.html">ON_Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a5ad20a67eb64d5db5501c8f4f68b22e1">ReflectionAxisLineColor</a> (void) const</td></tr>
+<tr class="separator:a5ad20a67eb64d5db5501c8f4f68b22e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad963d4725d96772f7234086c43b89dc4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#ad963d4725d96772f7234086c43b89dc4">ReflectionAxisLineThickness</a> (void) const</td></tr>
+<tr class="separator:ad963d4725d96772f7234086c43b89dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8699ef5c8c9e3c85c6e978995e6486cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a8699ef5c8c9e3c85c6e978995e6486cb">ReflectionColorPercentage</a> (void) const</td></tr>
+<tr class="separator:a8699ef5c8c9e3c85c6e978995e6486cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a586f7b532ebe9e7906eb1d470e7d0d1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___plane_equation.html">ON_PlaneEquation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a586f7b532ebe9e7906eb1d470e7d0d1c">ReflectionPlane</a> (void) const</td></tr>
+<tr class="separator:a586f7b532ebe9e7906eb1d470e7d0d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7945adf86fb9a43d7496b3d8b2e11fb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#ac7945adf86fb9a43d7496b3d8b2e11fb">ReflectionPlaneAxisLineOn</a> (void) const</td></tr>
+<tr class="separator:ac7945adf86fb9a43d7496b3d8b2e11fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb7e9fad00049a0af9e4578e7581623a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___color.html">ON_Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#afb7e9fad00049a0af9e4578e7581623a">ReflectionPlaneColor</a> (const <a class="el" href="class_o_n___color.html">ON_Color</a> &amp;) const</td></tr>
+<tr class="separator:afb7e9fad00049a0af9e4578e7581623a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f273e7c29c95b6f722ef29f4c7f25e2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a9f273e7c29c95b6f722ef29f4c7f25e2">ReflectionPlaneColorUsage</a> (void) const</td></tr>
+<tr class="separator:a9f273e7c29c95b6f722ef29f4c7f25e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac59005b025d18cfff020bfb6786ce8ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#ac59005b025d18cfff020bfb6786ce8ab">ReflectionPlaneExists</a> (void) const</td></tr>
+<tr class="memdesc:ac59005b025d18cfff020bfb6786ce8ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the "current" reflected plane preview drawing settings...  <a href="class_c_display_pipeline_attributes.html#ac59005b025d18cfff020bfb6786ce8ab">More...</a><br /></td></tr>
+<tr class="separator:ac59005b025d18cfff020bfb6786ce8ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a951870077cf11608d722be56217db6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a0a951870077cf11608d722be56217db6">ReflectionPlanePreviewOn</a> (void) const</td></tr>
+<tr class="separator:a0a951870077cf11608d722be56217db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb15304614fab5e68d0433fbff87a74d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#abb15304614fab5e68d0433fbff87a74d">ResetMaterialHash</a> ()</td></tr>
 <tr class="separator:abb15304614fab5e68d0433fbff87a74d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a415cb57c06ee9d91a5ea941ef542a70a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a415cb57c06ee9d91a5ea941ef542a70a">ResetReflectionPlaneSettings</a> (void)</td></tr>
+<tr class="memdesc:a415cb57c06ee9d91a5ea941ef542a70a"><td class="mdescLeft">&#160;</td><td class="mdescRight">turns off reflected plane preview drawing (for runtime evaluation)...  <a href="class_c_display_pipeline_attributes.html#a415cb57c06ee9d91a5ea941ef542a70a">More...</a><br /></td></tr>
+<tr class="separator:a415cb57c06ee9d91a5ea941ef542a70a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd955419050e651dc1b7d4789d418922"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#abd955419050e651dc1b7d4789d418922">SaveProfile</a> (const wchar_t *lpsSection, <a class="el" href="class_c_rhino_profile_context.html">CRhinoProfileContext</a> &amp;) const</td></tr>
 <tr class="separator:abd955419050e651dc1b7d4789d418922"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacbbe8b9cc9dbbae82adb8dac69bf8c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#aacbbe8b9cc9dbbae82adb8dac69bf8c9">SetActiveCacheHandle</a> (<a class="el" href="class_c_rhino_cache_handle.html">CRhinoCacheHandle</a> *cache)</td></tr>
@@ -207,28 +246,82 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a19fcfcbe904af467ee4963a52f8a3b60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af49d5f90db99ed480387ca8b3806392a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#af49d5f90db99ed480387ca8b3806392a">SetRealtimeRenderPasses</a> (int)</td></tr>
 <tr class="separator:af49d5f90db99ed480387ca8b3806392a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80f3a465c3a76a6ab9b01ac3a677dbc3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a80f3a465c3a76a6ab9b01ac3a677dbc3">SetShadowIntensity</a> (int)</td></tr>
+<tr class="separator:a80f3a465c3a76a6ab9b01ac3a677dbc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2702a0f7f2d0082911e3f0fec79ba4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#af2702a0f7f2d0082911e3f0fec79ba4d">SetShowRealtimeRenderProgressBar</a> (bool)</td></tr>
 <tr class="separator:af2702a0f7f2d0082911e3f0fec79ba4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a889a88b2455f2ad15437397de32879f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a889a88b2455f2ad15437397de32879f0">SetShowTangentEdges</a> (bool show)</td></tr>
 <tr class="separator:a889a88b2455f2ad15437397de32879f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0a8a56642635b5f82a54a04293d8a8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#ad0a8a56642635b5f82a54a04293d8a8c">SetShowTangentSeams</a> (bool show)</td></tr>
 <tr class="separator:ad0a8a56642635b5f82a54a04293d8a8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86ad5238ca6bb25ddce366e157098426"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a86ad5238ca6bb25ddce366e157098426">SetSkylightShadowQuality</a> (int iSkylightShadowQuality) const</td></tr>
+<tr class="separator:a86ad5238ca6bb25ddce366e157098426"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0caf1bc1015ab936356b20e8c0cb4e5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a0caf1bc1015ab936356b20e8c0cb4e5d">SetStereoRenderContext</a> (<a class="el" href="class_c_display_pipeline_attributes.html#ab8e72cbe8bd754036ee65c26cf5689de">StereoRenderContext</a> stereo_render_context)</td></tr>
 <tr class="separator:a0caf1bc1015ab936356b20e8c0cb4e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a291e122e25b659408ef2a87fcc34b51c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a291e122e25b659408ef2a87fcc34b51c">SetSubDEdgeColor</a> (<a class="el" href="class_c_display_pipeline_attributes.html#ad6e4824e35f7fecb8a1d73619594bd69">SubDEdgeType</a> edgeType, const <a class="el" href="class_o_n___color.html">ON_Color</a> &amp;color)</td></tr>
+<tr class="separator:a291e122e25b659408ef2a87fcc34b51c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a912f00db08e21a443ea65e133f68b71a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a912f00db08e21a443ea65e133f68b71a">SetSubDEdgeColorReduction</a> (<a class="el" href="class_c_display_pipeline_attributes.html#ad6e4824e35f7fecb8a1d73619594bd69">SubDEdgeType</a> edgeType, int reduction)</td></tr>
+<tr class="separator:a912f00db08e21a443ea65e133f68b71a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f74a47496708eaf1805cf3730455db5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a2f74a47496708eaf1805cf3730455db5">SetSubDEdgeThickness</a> (<a class="el" href="class_c_display_pipeline_attributes.html#ad6e4824e35f7fecb8a1d73619594bd69">SubDEdgeType</a> edgeType, float thickness)</td></tr>
+<tr class="separator:a2f74a47496708eaf1805cf3730455db5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fca78dd6f98bf829628f39abd1d4d61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a5fca78dd6f98bf829628f39abd1d4d61">SetSubDEdgeUsage</a> (<a class="el" href="class_c_display_pipeline_attributes.html#ad6e4824e35f7fecb8a1d73619594bd69">SubDEdgeType</a> edgeType, int usage)</td></tr>
+<tr class="separator:a5fca78dd6f98bf829628f39abd1d4d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af138ad2db5e35f5c183706949391e3bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#af138ad2db5e35f5c183706949391e3bd">SetSubDEdgeVisibility</a> (<a class="el" href="class_c_display_pipeline_attributes.html#ad6e4824e35f7fecb8a1d73619594bd69">SubDEdgeType</a> edgeType, bool <a class="el" href="class_c_display_pipeline_attributes.html#a6980badce18ddd0943c40806413ae391">on</a>)</td></tr>
+<tr class="separator:af138ad2db5e35f5c183706949391e3bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0a21ec0bf3f7e3ad37f16af8be611b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#ac0a21ec0bf3f7e3ad37f16af8be611b9">SetSubDReflectionAxisLineColor</a> (const <a class="el" href="class_o_n___color.html">ON_Color</a> &amp;)</td></tr>
+<tr class="separator:ac0a21ec0bf3f7e3ad37f16af8be611b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add1194e04eefb1068e55710422845da3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#add1194e04eefb1068e55710422845da3">SetSubDReflectionAxisLineThickness</a> (float)</td></tr>
+<tr class="separator:add1194e04eefb1068e55710422845da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76ebf2e797e45cfd4dd9e0e2a64fdb93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a76ebf2e797e45cfd4dd9e0e2a64fdb93">SetSubDReflectionColorPercentage</a> (int)</td></tr>
+<tr class="separator:a76ebf2e797e45cfd4dd9e0e2a64fdb93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0a3243159e577fb209a29e6da5ebf90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#aa0a3243159e577fb209a29e6da5ebf90">SetSubDReflectionPlane</a> (const <a class="el" href="class_o_n___plane_equation.html">ON_PlaneEquation</a> *pe)</td></tr>
+<tr class="separator:aa0a3243159e577fb209a29e6da5ebf90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a738c4a7659dab1dbb62889ca3e8d72d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a738c4a7659dab1dbb62889ca3e8d72d7">SetSubDReflectionPlaneColor</a> (const <a class="el" href="class_o_n___color.html">ON_Color</a> &amp;)</td></tr>
+<tr class="separator:a738c4a7659dab1dbb62889ca3e8d72d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abffbc336ecfa17f6eb684f158f5e2fd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#abffbc336ecfa17f6eb684f158f5e2fd8">SetSubDReflectionPlaneColorUsage</a> (int)</td></tr>
+<tr class="separator:abffbc336ecfa17f6eb684f158f5e2fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c6c4ae794d48c72ab215e895f549d82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a9c6c4ae794d48c72ab215e895f549d82">SetSubDUsageIndexes</a> (int[4])</td></tr>
+<tr class="separator:a9c6c4ae794d48c72ab215e895f549d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e7a098562c08fdf335faf71a42eeabf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a7e7a098562c08fdf335faf71a42eeabf">SetSupportsCustomRenderMeshes</a> (bool bSupports)</td></tr>
 <tr class="separator:a7e7a098562c08fdf335faf71a42eeabf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a696d9fb70fc11031f695d42c605cd3b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a696d9fb70fc11031f695d42c605cd3b0">SetUuid</a> (<a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a>)</td></tr>
 <tr class="separator:a696d9fb70fc11031f695d42c605cd3b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ec92400b4928419cf7f4ea6ca977b0d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a3ec92400b4928419cf7f4ea6ca977b0d">ShadowIntensity</a> (void) const</td></tr>
+<tr class="separator:a3ec92400b4928419cf7f4ea6ca977b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab57200b13a9d46256ae54ca3369ab81"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#aab57200b13a9d46256ae54ca3369ab81">ShowRealtimeRenderProgressBar</a> (void) const</td></tr>
 <tr class="separator:aab57200b13a9d46256ae54ca3369ab81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abce7980e4425605e2ce727f993d5da35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#abce7980e4425605e2ce727f993d5da35">ShowSubDReflectionPlaneAxisLine</a> (bool show)</td></tr>
+<tr class="separator:abce7980e4425605e2ce727f993d5da35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc05ef48059b84cb5df6d5cf92cc9772"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#afc05ef48059b84cb5df6d5cf92cc9772">ShowSubDReflectionPlanePreview</a> (bool show)</td></tr>
+<tr class="memdesc:afc05ef48059b84cb5df6d5cf92cc9772"><td class="mdescLeft">&#160;</td><td class="mdescRight">SubD Reflection plane previewing attributes...  <a href="class_c_display_pipeline_attributes.html#afc05ef48059b84cb5df6d5cf92cc9772">More...</a><br /></td></tr>
+<tr class="separator:afc05ef48059b84cb5df6d5cf92cc9772"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac5042e925c6397806e011793aa9b4de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#aac5042e925c6397806e011793aa9b4de">ShowTangentEdges</a> () const</td></tr>
 <tr class="separator:aac5042e925c6397806e011793aa9b4de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abaeac53cdb0dece0354e5b431410b293"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#abaeac53cdb0dece0354e5b431410b293">ShowTangentSeams</a> () const</td></tr>
 <tr class="separator:abaeac53cdb0dece0354e5b431410b293"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a238571613e9dc4a8968da149b889dd12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___color.html">ON_Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a238571613e9dc4a8968da149b889dd12">SubDReflectionAxisLineColor</a> (void) const</td></tr>
+<tr class="separator:a238571613e9dc4a8968da149b889dd12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13a0b2b7244c0d6957202180a2416393"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a13a0b2b7244c0d6957202180a2416393">SubDReflectionAxisLineThickness</a> (void) const</td></tr>
+<tr class="separator:a13a0b2b7244c0d6957202180a2416393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89f9abf94bdc9c877d4265e526e5aba8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a89f9abf94bdc9c877d4265e526e5aba8">SubDReflectionColorPercentage</a> (void) const</td></tr>
+<tr class="separator:a89f9abf94bdc9c877d4265e526e5aba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d58fe4282b6fa199ba012c7a47ea2e7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a2d58fe4282b6fa199ba012c7a47ea2e7">SubDReflectionPlane</a> (<a class="el" href="class_o_n___plane_equation.html">ON_PlaneEquation</a> &amp;pe) const</td></tr>
+<tr class="separator:a2d58fe4282b6fa199ba012c7a47ea2e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40543b1497b4fdf8c321a91308d3c50b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a40543b1497b4fdf8c321a91308d3c50b">SubDReflectionPlaneAxisLineOn</a> (void) const</td></tr>
+<tr class="separator:a40543b1497b4fdf8c321a91308d3c50b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a172b2add115f47b1abe68bcb13f61717"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___color.html">ON_Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a172b2add115f47b1abe68bcb13f61717">SubDReflectionPlaneColor</a> (void) const</td></tr>
+<tr class="separator:a172b2add115f47b1abe68bcb13f61717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af00d1078872dc555dcd26db879b190d1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#af00d1078872dc555dcd26db879b190d1">SubDReflectionPlaneColorUsage</a> (void) const</td></tr>
+<tr class="separator:af00d1078872dc555dcd26db879b190d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a135deb045fafc93c82a28b55c6f15597"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a135deb045fafc93c82a28b55c6f15597">SubDReflectionPlanePreviewOn</a> (void) const</td></tr>
+<tr class="separator:a135deb045fafc93c82a28b55c6f15597"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb9ca92aeac4fd5e1ed05edf62f005f3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#acb9ca92aeac4fd5e1ed05edf62f005f3">SupportsCustomRenderMeshes</a> (void) const</td></tr>
 <tr class="separator:acb9ca92aeac4fd5e1ed05edf62f005f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62d12b49b65783b4458426a53a459e38"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a62d12b49b65783b4458426a53a459e38">SurfaceColorWriting</a> () const</td></tr>
 <tr class="separator:a62d12b49b65783b4458426a53a459e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64a538349b4b7efc318ab156e9c9bcbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a64a538349b4b7efc318ab156e9c9bcbd">UseSubDReflectionPlaneSettings</a> (void)</td></tr>
+<tr class="memdesc:a64a538349b4b7efc318ab156e9c9bcbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets up reflected plane preview drawing based on the SubD's settings (this may turn it on or off at runtime)  <a href="class_c_display_pipeline_attributes.html#a64a538349b4b7efc318ab156e9c9bcbd">More...</a><br /></td></tr>
+<tr class="separator:a64a538349b4b7efc318ab156e9c9bcbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -409,17 +502,17 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a8e22ae7e8a4de56b59384f0209eb2f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8375910ec4ce209ef40c68a08c947861"><td class="memItemLeft" align="right" valign="top">COLORREF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a8375910ec4ce209ef40c68a08c947861">m_CurveColor</a></td></tr>
 <tr class="separator:a8375910ec4ce209ef40c68a08c947861"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83d273bf2ba49e637f8b39ad924f9ccf"><td class="memItemLeft" >struct {</td></tr>
-<tr class="memitem:a8d0bd976e2001c9d58b5e95088ab4e6c"><td class="memItemLeft" >&#160;&#160;&#160;double&#160;&#160;&#160;<a class="el" href="class_c_display_pipeline_attributes.html#a644dae4ec1cfb3bef7778263e1da2e26">altitude</a> = 0.0</td></tr>
-<tr class="separator:a8d0bd976e2001c9d58b5e95088ab4e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01fb589f76d31b87d85acd215c7f0704"><td class="memItemLeft" >&#160;&#160;&#160;bool&#160;&#160;&#160;<a class="el" href="class_c_display_pipeline_attributes.html#a0b7085f6893037064722daeedde03350">automaticAltitude</a> = true</td></tr>
-<tr class="separator:a01fb589f76d31b87d85acd215c7f0704"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62b5ed756100f016cfddd90dcd8ea69f"><td class="memItemLeft" >&#160;&#160;&#160;bool&#160;&#160;&#160;<a class="el" href="class_c_display_pipeline_attributes.html#a6980badce18ddd0943c40806413ae391">on</a> = true</td></tr>
-<tr class="separator:a62b5ed756100f016cfddd90dcd8ea69f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b8e69872a6ed76490b65ae21d077c2c"><td class="memItemLeft" >&#160;&#160;&#160;bool&#160;&#160;&#160;<a class="el" href="class_c_display_pipeline_attributes.html#acb0af5dea304c5c8fdfe95d8602d3859">shadowOnly</a> = true</td></tr>
-<tr class="separator:a8b8e69872a6ed76490b65ae21d077c2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83d273bf2ba49e637f8b39ad924f9ccf"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a83d273bf2ba49e637f8b39ad924f9ccf">m_customGroundPlaneSettings</a></td></tr>
-<tr class="separator:a83d273bf2ba49e637f8b39ad924f9ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1b03bdba89664af5efe75056e45d070"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:ad4fd9be1b06cc3e2be1adac62d5a8cfb"><td class="memItemLeft" >&#160;&#160;&#160;double&#160;&#160;&#160;<a class="el" href="class_c_display_pipeline_attributes.html#a644dae4ec1cfb3bef7778263e1da2e26">altitude</a> = 0.0</td></tr>
+<tr class="separator:ad4fd9be1b06cc3e2be1adac62d5a8cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66e0742812fc61eda066bf3b9ee136d5"><td class="memItemLeft" >&#160;&#160;&#160;bool&#160;&#160;&#160;<a class="el" href="class_c_display_pipeline_attributes.html#a0b7085f6893037064722daeedde03350">automaticAltitude</a> = true</td></tr>
+<tr class="separator:a66e0742812fc61eda066bf3b9ee136d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa14e36a2739753f7fb303ad03662fbb1"><td class="memItemLeft" >&#160;&#160;&#160;bool&#160;&#160;&#160;<a class="el" href="class_c_display_pipeline_attributes.html#a6980badce18ddd0943c40806413ae391">on</a> = true</td></tr>
+<tr class="separator:aa14e36a2739753f7fb303ad03662fbb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a382d07493b028bf73f3572cc10707c66"><td class="memItemLeft" >&#160;&#160;&#160;bool&#160;&#160;&#160;<a class="el" href="class_c_display_pipeline_attributes.html#acb0af5dea304c5c8fdfe95d8602d3859">shadowOnly</a> = true</td></tr>
+<tr class="separator:a382d07493b028bf73f3572cc10707c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1b03bdba89664af5efe75056e45d070"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#ab1b03bdba89664af5efe75056e45d070">m_customGroundPlaneSettings</a></td></tr>
+<tr class="separator:ab1b03bdba89664af5efe75056e45d070"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d81ef44ddfc27b82d426a9eb6b2e4b7"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="group___rhino.html#gac7cff1e910b2374d20cd2265d4f976dd">RHINO_SDK_CLASS</a> <a class="el" href="class_c_display_pipeline_attributes_1_1_linear_workflow.html">CDisplayPipelineAttributes::LinearWorkflow</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a4d81ef44ddfc27b82d426a9eb6b2e4b7">m_customLinearWorkflowSettings</a></td></tr>
 <tr class="separator:a4d81ef44ddfc27b82d426a9eb6b2e4b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7135e9335b11d24e223ae4eaea73e992"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a7135e9335b11d24e223ae4eaea73e992">m_dHorzScale</a></td></tr>
@@ -713,10 +806,14 @@ Protected Member Functions</h2></td></tr>
 Friends</h2></td></tr>
 <tr class="memitem:a0de3b2bf97e1f9ac90dc0302f75a1f73"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a0de3b2bf97e1f9ac90dc0302f75a1f73">CDisplayAttrsPage</a></td></tr>
 <tr class="separator:a0de3b2bf97e1f9ac90dc0302f75a1f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66acb5bf04a6e7150306516455a31c68"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a66acb5bf04a6e7150306516455a31c68">CRhDisplayPipelineAttributesPrivate</a></td></tr>
+<tr class="separator:a66acb5bf04a6e7150306516455a31c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0264fe5f2cbe0e9ab14f54f233735121"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a0264fe5f2cbe0e9ab14f54f233735121">CRhinoDisplayAttrsMgr</a></td></tr>
 <tr class="separator:a0264fe5f2cbe0e9ab14f54f233735121"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace221e63b71b749b710a941b4c4a78fe"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#ace221e63b71b749b710a941b4c4a78fe">CRhinoDisplayPipeline</a></td></tr>
 <tr class="separator:ace221e63b71b749b710a941b4c4a78fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35c8dcfcc969b49cc4018e11500ba3df"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a35c8dcfcc969b49cc4018e11500ba3df">CShadowsAttributesPage</a></td></tr>
+<tr class="separator:a35c8dcfcc969b49cc4018e11500ba3df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a942ef1f1d3a561e1155ee55710a5a81f"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#a942ef1f1d3a561e1155ee55710a5a81f">DisplayAttrsMgrList</a></td></tr>
 <tr class="separator:a942ef1f1d3a561e1155ee55710a5a81f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abba508165233ed19d20a9fedfc1486e6"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_display_pipeline_attributes.html#abba508165233ed19d20a9fedfc1486e6">DisplayAttrsMgrListDesc</a></td></tr>
@@ -839,6 +936,36 @@ Friends</h2></td></tr>
 <tr><td class="fieldname"><a id="ab8e72cbe8bd754036ee65c26cf5689deabd7529f956e058de41a03e9cc083eaaf"></a>RenderingLeftEye&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ab8e72cbe8bd754036ee65c26cf5689dea2b8ad8570fcc1d77c10c3024d9e6d0be"></a>RenderingRightEye&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ab8e72cbe8bd754036ee65c26cf5689dead336aef7f19daacb5caa2bafcc683015"></a>RenderingBothEyes&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ad6e4824e35f7fecb8a1d73619594bd69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6e4824e35f7fecb8a1d73619594bd69">&#9670;&nbsp;</a></span>SubDEdgeType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_c_display_pipeline_attributes.html#ad6e4824e35f7fecb8a1d73619594bd69">CDisplayPipelineAttributes::SubDEdgeType</a> : int</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SubD specific attributes... </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad6e4824e35f7fecb8a1d73619594bd69aaa9bbefb077ed9cff3aad4cca926f61a"></a>SmoothInterior&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad6e4824e35f7fecb8a1d73619594bd69a1c2ac564073b07d44002703042bc67ba"></a>CreaseInterior&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad6e4824e35f7fecb8a1d73619594bd69ab470c755a52df363c2334a50db9e6778"></a>NonManifold&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad6e4824e35f7fecb8a1d73619594bd69ae234de581c9c5ef91322f1469a585f9e"></a>Boundary&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -1200,8 +1327,25 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Mesh and SubD specific attributes... </p>
+<p>Mesh specific attributes... </p>
 <p>[0] == non-manifold wires (3 or more faces attach to the edge) [1] == crease wires (2 faces attach to a crease or break edge) [2] == manifold wires (2 faces attach to a smooth edge) [3] == naked edge wires (boundary edge - 1 face) </p>
+
+</div>
+</div>
+<a id="adf1bda65ce6ecd413ce886c624c48b47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf1bda65ce6ecd413ce886c624c48b47">&#9670;&nbsp;</a></span>GetSkylightShadowQuality()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CDisplayPipelineAttributes::GetSkylightShadowQuality </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1219,6 +1363,95 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a55ca18fbc94e058f5eafc70060d9baaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55ca18fbc94e058f5eafc70060d9baaf">&#9670;&nbsp;</a></span>GetSubDColorReductions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDisplayPipelineAttributes::GetSubDColorReductions </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">[4]</td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa337670f16994c8512a12cd6f6a2418"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa337670f16994c8512a12cd6f6a2418">&#9670;&nbsp;</a></span>GetSubDEdgeVisibility()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDisplayPipelineAttributes::GetSubDEdgeVisibility </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_display_pipeline_attributes.html#ad6e4824e35f7fecb8a1d73619594bd69">SubDEdgeType</a>&#160;</td>
+          <td class="paramname"><em>edgeType</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae72d56e1de7b88a3e2507dc3b4978516"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae72d56e1de7b88a3e2507dc3b4978516">&#9670;&nbsp;</a></span>GetSubDUsageIndexes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDisplayPipelineAttributes::GetSubDUsageIndexes </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">[4]</td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e4183c66ea7177a76fe7e5df9446f71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e4183c66ea7177a76fe7e5df9446f71">&#9670;&nbsp;</a></span>GetSubDWireAttributes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDisplayPipelineAttributes::GetSubDWireAttributes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_o_n___color.html">ON_Color</a>&#160;</td>
+          <td class="paramname"><em>colors</em>[4], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>thicknesses</em>[4], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>applyXforms</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>[0] == smooth interior [1] == crease interior [2] == non-manifold [3] == boundary </p>
 
 </div>
 </div>
@@ -1500,6 +1733,170 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a5ad20a67eb64d5db5501c8f4f68b22e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ad20a67eb64d5db5501c8f4f68b22e1">&#9670;&nbsp;</a></span>ReflectionAxisLineColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_o_n___color.html">ON_Color</a> CDisplayPipelineAttributes::ReflectionAxisLineColor </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad963d4725d96772f7234086c43b89dc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad963d4725d96772f7234086c43b89dc4">&#9670;&nbsp;</a></span>ReflectionAxisLineThickness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CDisplayPipelineAttributes::ReflectionAxisLineThickness </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8699ef5c8c9e3c85c6e978995e6486cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8699ef5c8c9e3c85c6e978995e6486cb">&#9670;&nbsp;</a></span>ReflectionColorPercentage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CDisplayPipelineAttributes::ReflectionColorPercentage </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a586f7b532ebe9e7906eb1d470e7d0d1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a586f7b532ebe9e7906eb1d470e7d0d1c">&#9670;&nbsp;</a></span>ReflectionPlane()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_o_n___plane_equation.html">ON_PlaneEquation</a> CDisplayPipelineAttributes::ReflectionPlane </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7945adf86fb9a43d7496b3d8b2e11fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7945adf86fb9a43d7496b3d8b2e11fb">&#9670;&nbsp;</a></span>ReflectionPlaneAxisLineOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDisplayPipelineAttributes::ReflectionPlaneAxisLineOn </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb7e9fad00049a0af9e4578e7581623a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb7e9fad00049a0af9e4578e7581623a">&#9670;&nbsp;</a></span>ReflectionPlaneColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_o_n___color.html">ON_Color</a> CDisplayPipelineAttributes::ReflectionPlaneColor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___color.html">ON_Color</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f273e7c29c95b6f722ef29f4c7f25e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f273e7c29c95b6f722ef29f4c7f25e2">&#9670;&nbsp;</a></span>ReflectionPlaneColorUsage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CDisplayPipelineAttributes::ReflectionPlaneColorUsage </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac59005b025d18cfff020bfb6786ce8ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac59005b025d18cfff020bfb6786ce8ab">&#9670;&nbsp;</a></span>ReflectionPlaneExists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDisplayPipelineAttributes::ReflectionPlaneExists </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the "current" reflected plane preview drawing settings... </p>
+
+</div>
+</div>
+<a id="a0a951870077cf11608d722be56217db6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a951870077cf11608d722be56217db6">&#9670;&nbsp;</a></span>ReflectionPlanePreviewOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDisplayPipelineAttributes::ReflectionPlanePreviewOn </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="abb15304614fab5e68d0433fbff87a74d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb15304614fab5e68d0433fbff87a74d">&#9670;&nbsp;</a></span>ResetMaterialHash()</h2>
 
@@ -1514,6 +1911,26 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a415cb57c06ee9d91a5ea941ef542a70a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a415cb57c06ee9d91a5ea941ef542a70a">&#9670;&nbsp;</a></span>ResetReflectionPlaneSettings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDisplayPipelineAttributes::ResetReflectionPlaneSettings </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>turns off reflected plane preview drawing (for runtime evaluation)... </p>
 
 </div>
 </div>
@@ -1727,6 +2144,24 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a80f3a465c3a76a6ab9b01ac3a677dbc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80f3a465c3a76a6ab9b01ac3a677dbc3">&#9670;&nbsp;</a></span>SetShadowIntensity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDisplayPipelineAttributes::SetShadowIntensity </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af2702a0f7f2d0082911e3f0fec79ba4d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af2702a0f7f2d0082911e3f0fec79ba4d">&#9670;&nbsp;</a></span>SetShowRealtimeRenderProgressBar()</h2>
 
@@ -1781,6 +2216,24 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a86ad5238ca6bb25ddce366e157098426"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86ad5238ca6bb25ddce366e157098426">&#9670;&nbsp;</a></span>SetSkylightShadowQuality()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDisplayPipelineAttributes::SetSkylightShadowQuality </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iSkylightShadowQuality</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a0caf1bc1015ab936356b20e8c0cb4e5d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0caf1bc1015ab936356b20e8c0cb4e5d">&#9670;&nbsp;</a></span>SetStereoRenderContext()</h2>
 
@@ -1792,6 +2245,272 @@ Friends</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_c_display_pipeline_attributes.html#ab8e72cbe8bd754036ee65c26cf5689de">StereoRenderContext</a>&#160;</td>
           <td class="paramname"><em>stereo_render_context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a291e122e25b659408ef2a87fcc34b51c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a291e122e25b659408ef2a87fcc34b51c">&#9670;&nbsp;</a></span>SetSubDEdgeColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDisplayPipelineAttributes::SetSubDEdgeColor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_display_pipeline_attributes.html#ad6e4824e35f7fecb8a1d73619594bd69">SubDEdgeType</a>&#160;</td>
+          <td class="paramname"><em>edgeType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_o_n___color.html">ON_Color</a> &amp;&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a912f00db08e21a443ea65e133f68b71a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a912f00db08e21a443ea65e133f68b71a">&#9670;&nbsp;</a></span>SetSubDEdgeColorReduction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDisplayPipelineAttributes::SetSubDEdgeColorReduction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_display_pipeline_attributes.html#ad6e4824e35f7fecb8a1d73619594bd69">SubDEdgeType</a>&#160;</td>
+          <td class="paramname"><em>edgeType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>reduction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f74a47496708eaf1805cf3730455db5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f74a47496708eaf1805cf3730455db5">&#9670;&nbsp;</a></span>SetSubDEdgeThickness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDisplayPipelineAttributes::SetSubDEdgeThickness </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_display_pipeline_attributes.html#ad6e4824e35f7fecb8a1d73619594bd69">SubDEdgeType</a>&#160;</td>
+          <td class="paramname"><em>edgeType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>thickness</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5fca78dd6f98bf829628f39abd1d4d61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fca78dd6f98bf829628f39abd1d4d61">&#9670;&nbsp;</a></span>SetSubDEdgeUsage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDisplayPipelineAttributes::SetSubDEdgeUsage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_display_pipeline_attributes.html#ad6e4824e35f7fecb8a1d73619594bd69">SubDEdgeType</a>&#160;</td>
+          <td class="paramname"><em>edgeType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>usage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af138ad2db5e35f5c183706949391e3bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af138ad2db5e35f5c183706949391e3bd">&#9670;&nbsp;</a></span>SetSubDEdgeVisibility()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDisplayPipelineAttributes::SetSubDEdgeVisibility </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_display_pipeline_attributes.html#ad6e4824e35f7fecb8a1d73619594bd69">SubDEdgeType</a>&#160;</td>
+          <td class="paramname"><em>edgeType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>on</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0a21ec0bf3f7e3ad37f16af8be611b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0a21ec0bf3f7e3ad37f16af8be611b9">&#9670;&nbsp;</a></span>SetSubDReflectionAxisLineColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDisplayPipelineAttributes::SetSubDReflectionAxisLineColor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___color.html">ON_Color</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add1194e04eefb1068e55710422845da3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add1194e04eefb1068e55710422845da3">&#9670;&nbsp;</a></span>SetSubDReflectionAxisLineThickness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDisplayPipelineAttributes::SetSubDReflectionAxisLineThickness </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76ebf2e797e45cfd4dd9e0e2a64fdb93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76ebf2e797e45cfd4dd9e0e2a64fdb93">&#9670;&nbsp;</a></span>SetSubDReflectionColorPercentage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDisplayPipelineAttributes::SetSubDReflectionColorPercentage </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0a3243159e577fb209a29e6da5ebf90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0a3243159e577fb209a29e6da5ebf90">&#9670;&nbsp;</a></span>SetSubDReflectionPlane()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDisplayPipelineAttributes::SetSubDReflectionPlane </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___plane_equation.html">ON_PlaneEquation</a> *&#160;</td>
+          <td class="paramname"><em>pe</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a738c4a7659dab1dbb62889ca3e8d72d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a738c4a7659dab1dbb62889ca3e8d72d7">&#9670;&nbsp;</a></span>SetSubDReflectionPlaneColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDisplayPipelineAttributes::SetSubDReflectionPlaneColor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___color.html">ON_Color</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abffbc336ecfa17f6eb684f158f5e2fd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abffbc336ecfa17f6eb684f158f5e2fd8">&#9670;&nbsp;</a></span>SetSubDReflectionPlaneColorUsage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDisplayPipelineAttributes::SetSubDReflectionPlaneColorUsage </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c6c4ae794d48c72ab215e895f549d82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c6c4ae794d48c72ab215e895f549d82">&#9670;&nbsp;</a></span>SetSubDUsageIndexes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDisplayPipelineAttributes::SetSubDUsageIndexes </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">[4]</td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1835,6 +2554,24 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a3ec92400b4928419cf7f4ea6ca977b0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ec92400b4928419cf7f4ea6ca977b0d">&#9670;&nbsp;</a></span>ShadowIntensity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CDisplayPipelineAttributes::ShadowIntensity </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aab57200b13a9d46256ae54ca3369ab81"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aab57200b13a9d46256ae54ca3369ab81">&#9670;&nbsp;</a></span>ShowRealtimeRenderProgressBar()</h2>
 
@@ -1850,6 +2587,44 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="abce7980e4425605e2ce727f993d5da35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abce7980e4425605e2ce727f993d5da35">&#9670;&nbsp;</a></span>ShowSubDReflectionPlaneAxisLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDisplayPipelineAttributes::ShowSubDReflectionPlaneAxisLine </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>show</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc05ef48059b84cb5df6d5cf92cc9772"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc05ef48059b84cb5df6d5cf92cc9772">&#9670;&nbsp;</a></span>ShowSubDReflectionPlanePreview()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDisplayPipelineAttributes::ShowSubDReflectionPlanePreview </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>show</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SubD Reflection plane previewing attributes... </p>
 
 </div>
 </div>
@@ -1879,6 +2654,150 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">bool CDisplayPipelineAttributes::ShowTangentSeams </td>
           <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a238571613e9dc4a8968da149b889dd12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a238571613e9dc4a8968da149b889dd12">&#9670;&nbsp;</a></span>SubDReflectionAxisLineColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_o_n___color.html">ON_Color</a> CDisplayPipelineAttributes::SubDReflectionAxisLineColor </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13a0b2b7244c0d6957202180a2416393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13a0b2b7244c0d6957202180a2416393">&#9670;&nbsp;</a></span>SubDReflectionAxisLineThickness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CDisplayPipelineAttributes::SubDReflectionAxisLineThickness </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89f9abf94bdc9c877d4265e526e5aba8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f9abf94bdc9c877d4265e526e5aba8">&#9670;&nbsp;</a></span>SubDReflectionColorPercentage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CDisplayPipelineAttributes::SubDReflectionColorPercentage </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d58fe4282b6fa199ba012c7a47ea2e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d58fe4282b6fa199ba012c7a47ea2e7">&#9670;&nbsp;</a></span>SubDReflectionPlane()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDisplayPipelineAttributes::SubDReflectionPlane </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_o_n___plane_equation.html">ON_PlaneEquation</a> &amp;&#160;</td>
+          <td class="paramname"><em>pe</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40543b1497b4fdf8c321a91308d3c50b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40543b1497b4fdf8c321a91308d3c50b">&#9670;&nbsp;</a></span>SubDReflectionPlaneAxisLineOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDisplayPipelineAttributes::SubDReflectionPlaneAxisLineOn </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a172b2add115f47b1abe68bcb13f61717"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a172b2add115f47b1abe68bcb13f61717">&#9670;&nbsp;</a></span>SubDReflectionPlaneColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_o_n___color.html">ON_Color</a> CDisplayPipelineAttributes::SubDReflectionPlaneColor </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af00d1078872dc555dcd26db879b190d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af00d1078872dc555dcd26db879b190d1">&#9670;&nbsp;</a></span>SubDReflectionPlaneColorUsage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CDisplayPipelineAttributes::SubDReflectionPlaneColorUsage </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a135deb045fafc93c82a28b55c6f15597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a135deb045fafc93c82a28b55c6f15597">&#9670;&nbsp;</a></span>SubDReflectionPlanePreviewOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDisplayPipelineAttributes::SubDReflectionPlanePreviewOn </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
@@ -1922,6 +2841,26 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a64a538349b4b7efc318ab156e9c9bcbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64a538349b4b7efc318ab156e9c9bcbd">&#9670;&nbsp;</a></span>UseSubDReflectionPlaneSettings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDisplayPipelineAttributes::UseSubDReflectionPlaneSettings </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>sets up reflected plane preview drawing based on the SubD's settings (this may turn it on or off at runtime) </p>
+
+</div>
+</div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
 <a id="a0de3b2bf97e1f9ac90dc0302f75a1f73"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0de3b2bf97e1f9ac90dc0302f75a1f73">&#9670;&nbsp;</a></span>CDisplayAttrsPage</h2>
@@ -1934,6 +2873,28 @@ Friends</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">friend class CDisplayAttrsPage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66acb5bf04a6e7150306516455a31c68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66acb5bf04a6e7150306516455a31c68">&#9670;&nbsp;</a></span>CRhDisplayPipelineAttributesPrivate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class CRhDisplayPipelineAttributesPrivate</td>
         </tr>
       </table>
   </td>
@@ -1978,6 +2939,28 @@ Friends</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">friend class <a class="el" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35c8dcfcc969b49cc4018e11500ba3df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35c8dcfcc969b49cc4018e11500ba3df">&#9670;&nbsp;</a></span>CShadowsAttributesPage</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class CShadowsAttributesPage</td>
         </tr>
       </table>
   </td>
@@ -3217,8 +4200,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a83d273bf2ba49e637f8b39ad924f9ccf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83d273bf2ba49e637f8b39ad924f9ccf">&#9670;&nbsp;</a></span>m_customGroundPlaneSettings</h2>
+<a id="ab1b03bdba89664af5efe75056e45d070"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1b03bdba89664af5efe75056e45d070">&#9670;&nbsp;</a></span>m_customGroundPlaneSettings</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5079,7 +6062,7 @@ Friends</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:12:58 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:24 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

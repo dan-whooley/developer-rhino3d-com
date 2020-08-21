@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -214,97 +214,211 @@ $(function() {
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">Description:</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">  Make a 1-Rail or 2-Rail sweep with one or two rail curves and one or more shape curves</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">Parameters:</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment">  output_surfaces - [out] Array that will return sweep results</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment">  pRail           - [in]  Curve to use for sweep rail</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment">  shapes          - [in]  Array of curves to use for sweep shapes</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">                            Shape curves must be going the correct direction</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment">                            They will be sorted for position along the rail.</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment">  bClosed         - [in]  If the rail curve is closed this determines if the </span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">                            sweep will be closed or will use only part of the rail.</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">                          If there are more than one shape and bClosed is false</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment">                            the sweep will go only between the first and last </span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment">                            shape as sorted along the rail.</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment">                          If there is one shape and bClosed is false, the sweep </span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment">                            will go from the shape to the end of the rail.</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">  tolerance       - [in]  Tolerance used by the sweep function for fitting</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment">                            the surface.</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment">Returns:</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment">  true  - success</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">  false - error</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group___rhino.html#gaf8a72270f5f6a8ed147e5ad9211402e3">Rhino1RailSweep</a>(</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_Brep*&gt;</a>&amp; output_surfaces,     <span class="comment">// sweep results</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___curve.html">ON_Curve</a>* pRail,                         <span class="comment">// rail going the right direction</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;const ON_Curve*&gt;</a> shapes,  <span class="comment">// shapes will be sorted on rail</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="keywordtype">bool</span> bClosed = <span class="keyword">false</span>,                          <span class="comment">// only matters if rail is closed</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <span class="keywordtype">double</span> tolerance = 0.01                        <span class="comment">// tolerance for fitting surface and rails</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;);</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group___rhino.html#ga4ee6db5d792508f88a5e40860cd637a0">Rhino1RailSweepSegmented</a>(</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_Brep*&gt;</a>&amp; output_surfaces,     <span class="comment">// sweep results</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___curve.html">ON_Curve</a>* pRail,                         <span class="comment">// rail going the right direction</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;const ON_Curve*&gt;</a> shapes,  <span class="comment">// shapes will be sorted on rail</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="keywordtype">bool</span> bClosed = <span class="keyword">false</span>,                          <span class="comment">// only matters if rail is closed</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  <span class="keywordtype">double</span> tolerance = 0.01                        <span class="comment">// tolerance for fitting surface and rails</span></div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group___rhino.html#gaefc0b487cf77bea2f866da2f2eeb5260">Rhino2RailSweep</a>(</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_Brep*&gt;</a>&amp; output_surfaces,     <span class="comment">// sweep results</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___curve.html">ON_Curve</a>* pRail[2],                      <span class="comment">// 2 rails going the right direction</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;const ON_Curve*&gt;</a> shapes,  <span class="comment">// shapes will be sorted on rail</span></div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="keywordtype">bool</span> bClosed = <span class="keyword">false</span>,                          <span class="comment">// only matters if rails are closed</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="keywordtype">double</span> tolerance = 0.01                        <span class="comment">// tolerance for fitting surface and rails</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;);</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group___rhino.html#gaefc0b487cf77bea2f866da2f2eeb5260">Rhino2RailSweep</a>(</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_Brep*&gt;</a>&amp; output_surfaces,     <span class="comment">// sweep results</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___curve.html">ON_Curve</a>* pRail[2],                      <span class="comment">// 2 rails going the right direction</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;const ON_Curve*&gt;</a> shapes,  <span class="comment">// shapes will be sorted on rail</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a> start_point,                        <span class="comment">// start point, specify ON_UNSET_POINT to ignore</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a> end_point,                          <span class="comment">// end point, specify ON_UNSET_POINT to ignore</span></div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  <span class="keywordtype">bool</span> bClosed = <span class="keyword">false</span>,                          <span class="comment">// only matters if rails are closed</span></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  <span class="keywordtype">double</span> tolerance = 0.01,                       <span class="comment">// tolerance for fitting surface and rails</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <span class="keywordtype">int</span> rebuild_mode = 0,                          <span class="comment">// 0 = no rebuild, 1 = rebuild through points, 2 = refit to tolerance</span></div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keywordtype">int</span> rebuild_points = 0,                        <span class="comment">// if 1 == rebuild_mode, the number of points, otherwise set to 0</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <span class="keywordtype">double</span> refit_tolerance = 0.0,                  <span class="comment">// if 2 == rebuild_mode, the refit tolerance, otherwise set to 0.0</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  <span class="keywordtype">bool</span> bPreserveHeight = <span class="keyword">false</span>                   <span class="comment">// removes the association between the height scaling from the width scaling</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;);</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group___rhino.html#gaefc0b487cf77bea2f866da2f2eeb5260">Rhino2RailSweep</a>(</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_Brep*&gt;</a>&amp; output_surfaces,     <span class="comment">// sweep results</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___curve.html">ON_Curve</a>* pRail[2],                      <span class="comment">// 2 rails going the right direction</span></div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;const ON_Curve*&gt;</a> shapes,  <span class="comment">// shapes will be sorted on rail</span></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  <span class="keywordtype">int</span> rebuild_mode,                              <span class="comment">// 0 = no rebuild, 1 = refit to tolerance, 2 = rebuild to #points</span></div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  <span class="keywordtype">int</span> rebuild_points,                            <span class="comment">// if 2 == rebuild_mode, the number of points</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  <span class="keywordtype">double</span> refit_tolerance,                        <span class="comment">// if 2 == rebuild_mode, the refit tolerance</span></div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  <span class="keywordtype">bool</span> bPreserveHeight,                          <span class="comment">// removes the association between the height scaling from the width scaling</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <span class="keywordtype">bool</span> bClosed = <span class="keyword">false</span>,                          <span class="comment">// only matters if rails are closed</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <span class="keywordtype">double</span> tolerance = 0.01);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group___rhino.html#ga477694dccef39c65c02072b5b6a6bd62">Rhino2RailSweepInParts</a>(</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_Brep*&gt;</a>&amp; output_surfaces,     <span class="comment">// sweep results</span></div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___curve.html">ON_Curve</a>* pRail[2],                      <span class="comment">// 2 rails going the right direction</span></div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt; const ON_Curve* &gt;</a>&amp; shapes,</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <span class="keywordtype">bool</span> bClosed = <span class="keyword">false</span>,</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  <span class="keywordtype">double</span> tolerance = 0.01);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">  Sweep1 function that fits a surface through profile curves that define the surface cross-sections</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">  and one curve that defines a surface edge.</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group___rhino.html#gaf8a72270f5f6a8ed147e5ad9211402e3">Rhino1RailSweep</a>(</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_Brep*&gt;</a>&amp; output_surfaces,     <span class="comment">// sweep results</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___curve.html">ON_Curve</a>* pRail,                         <span class="comment">// rail going the right direction</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;const ON_Curve*&gt;</a> shapes,  <span class="comment">// shapes will be sorted on rail</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keywordtype">bool</span> bClosed = <span class="keyword">false</span>,                          <span class="comment">// only matters if rail is closed</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordtype">double</span> tolerance = 0.01                        <span class="comment">// tolerance for fitting surface and rails</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment">Description:</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">  Sweep1 function that fits a surface through profile curves that define the surface cross-sections</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment">  and one curve that defines a surface edge.</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group___rhino.html#gaf8a72270f5f6a8ed147e5ad9211402e3">Rhino1RailSweep</a>(</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_Brep*&gt;</a>&amp; output_surfaces,              <span class="comment">// Sweep results</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___curve.html">ON_Curve</a>* pRailCurve,                             <span class="comment">// Rail going the right direction</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;const ON_Curve*&gt;</a> shapes,           <span class="comment">// Shapes will be sorted on rail</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a> start_point,                                 <span class="comment">// The start point, specify ON_3dPoint::UnsetPoint to ignore.</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a> end_point,                                   <span class="comment">// The ending point, specify ON_3dPoint::UnsetPoint to ignore.</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <span class="keywordtype">int</span> frame_type = 0,                                     <span class="comment">// The frame type: 0 = freeform, 1 = roadlike</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <a class="code" href="class_o_n__3d_vector.html">ON_3dVector</a> roadlike_normal = <a class="code" href="group__open_n_u_r_b_s.html#gaa62d84d9817922de5f60ef3b057ed0be">ON_3dVector::UnsetVector</a>, <span class="comment">// The roadlike normal direction, or ON_3dVector::UnsetVector to ignore.</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="keywordtype">bool</span> bClosed = <span class="keyword">false</span>,                                   <span class="comment">// Only matters if rails are closed</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <span class="keywordtype">int</span> blend_type = 0,                                     <span class="comment">// The blend type: 0 = local, 1 = global.</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <span class="keywordtype">int</span> miter_type = 0,                                     <span class="comment">// The miter type: 0 = none, 1 = trimmed, 2 = untrimmed miters</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="keywordtype">double</span> tolerance = 0.01,                                <span class="comment">// tolerance for fitting surface and rails</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keywordtype">int</span> rebuild_mode = 0,                                   <span class="comment">// 0 = no rebuild, 1 = rebuild through points, 2 = refit to tolerance</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="keywordtype">int</span> rebuild_points = 0,                                 <span class="comment">// if 1 == rebuild_mode, the number of points, otherwise set to 0</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <span class="keywordtype">double</span> refit_tolerance = 0.0                            <span class="comment">// if 2 == rebuild_mode, the refit tolerance, otherwise set to 0.0</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="comment">Description:</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="comment">  Sweep1 function that fits a surface through profile curves that define the surface cross-sections</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="comment">  and one curve that defines a surface edge. The Segmented version breaks the rail at curvature kinks</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="comment">  and sweeps each piece separately, then put the results together into a Brep.</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group___rhino.html#ga4ee6db5d792508f88a5e40860cd637a0">Rhino1RailSweepSegmented</a>(</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_Brep*&gt;</a>&amp; output_surfaces,     <span class="comment">// sweep results</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___curve.html">ON_Curve</a>* pRail,                         <span class="comment">// rail going the right direction</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;const ON_Curve*&gt;</a> shapes,  <span class="comment">// shapes will be sorted on rail</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="keywordtype">bool</span> bClosed = <span class="keyword">false</span>,                          <span class="comment">// only matters if rail is closed</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  <span class="keywordtype">double</span> tolerance = 0.01                        <span class="comment">// tolerance for fitting surface and rails</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="comment">Description:</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="comment">  Sweep1 function that fits a surface through profile curves that define the surface cross-sections</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="comment">  and one curve that defines a surface edge. The Segmented version breaks the rail at curvature kinks</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment">  and sweeps each piece separately, then put the results together into a Brep.</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group___rhino.html#gaec8e2bca414dcf2cda64ae90e648bb6d">Rh1RailSweepSegmented</a>(</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_Brep*&gt;</a>&amp; output_surfaces,              <span class="comment">// Sweep results</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___curve.html">ON_Curve</a>* pRailCurve,                             <span class="comment">// Rail going the right direction</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;const ON_Curve*&gt;</a> shapes,           <span class="comment">// Shapes will be sorted on rail</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a> start_point,                                 <span class="comment">// The start point, specify ON_3dPoint::UnsetPoint to ignore.</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a> end_point,                                   <span class="comment">// The ending point, specify ON_3dPoint::UnsetPoint to ignore.</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  <span class="keywordtype">int</span> frame_type = 0,                                     <span class="comment">// The frame type: 0 = freeform, 1 = roadlike</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  <a class="code" href="class_o_n__3d_vector.html">ON_3dVector</a> roadlike_normal = <a class="code" href="group__open_n_u_r_b_s.html#gaa62d84d9817922de5f60ef3b057ed0be">ON_3dVector::UnsetVector</a>, <span class="comment">// The roadlike normal direction, or ON_3dVector::UnsetVector to ignore.</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  <span class="keywordtype">bool</span> bClosed = <span class="keyword">false</span>,                                   <span class="comment">// Only matters if rails are closed</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  <span class="keywordtype">int</span> blend_type = 0,                                     <span class="comment">// The blend type: 0 = local, 1 = global.</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <span class="keywordtype">int</span> miter_type = 0,                                     <span class="comment">// The miter type: 0 = none, 1 = trimmed, 2 = untrimmed miters</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="keywordtype">double</span> tolerance = 0.01,                                <span class="comment">// tolerance for fitting surface and rails</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  <span class="keywordtype">int</span> rebuild_mode = 0,                                   <span class="comment">// 0 = no rebuild, 1 = rebuild through points, 2 = refit to tolerance</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  <span class="keywordtype">int</span> rebuild_points = 0,                                 <span class="comment">// if 1 == rebuild_mode, the number of points, otherwise set to 0</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  <span class="keywordtype">double</span> refit_tolerance = 0.0                            <span class="comment">// if 2 == rebuild_mode, the refit tolerance, otherwise set to 0.0</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="comment">Description:</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="comment">  Sweep2 function that fits a surface through profile curves that define the surface cross-sections</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="comment">  and two curves that defines the surface edges.</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group___rhino.html#gaefc0b487cf77bea2f866da2f2eeb5260">Rhino2RailSweep</a>(</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_Brep*&gt;</a>&amp; output_surfaces,     <span class="comment">// sweep results</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___curve.html">ON_Curve</a>* pRail[2],                      <span class="comment">// 2 rails going the right direction</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;const ON_Curve*&gt;</a> shapes,  <span class="comment">// shapes will be sorted on rail</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  <span class="keywordtype">bool</span> bClosed = <span class="keyword">false</span>,                          <span class="comment">// only matters if rails are closed</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <span class="keywordtype">double</span> tolerance = 0.01                        <span class="comment">// tolerance for fitting surface and rails</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="comment">Description:</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="comment">  Sweep2 function that fits a surface through profile curves that define the surface cross-sections</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="comment">  and two curves that defines the surface edges.</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group___rhino.html#gaefc0b487cf77bea2f866da2f2eeb5260">Rhino2RailSweep</a>(</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_Brep*&gt;</a>&amp; output_surfaces,     <span class="comment">// sweep results</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___curve.html">ON_Curve</a>* pRail[2],                      <span class="comment">// 2 rails going the right direction</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;const ON_Curve*&gt;</a> shapes,  <span class="comment">// shapes will be sorted on rail</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a> start_point,                        <span class="comment">// start point, specify ON_UNSET_POINT to ignore</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a> end_point,                          <span class="comment">// end point, specify ON_UNSET_POINT to ignore</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  <span class="keywordtype">bool</span> bClosed = <span class="keyword">false</span>,                          <span class="comment">// only matters if rails are closed</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  <span class="keywordtype">double</span> tolerance = 0.01,                       <span class="comment">// tolerance for fitting surface and rails</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="keywordtype">int</span> rebuild_mode = 0,                          <span class="comment">// 0 = no rebuild, 1 = rebuild through points, 2 = refit to tolerance</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <span class="keywordtype">int</span> rebuild_points = 0,                        <span class="comment">// if 1 == rebuild_mode, the number of points, otherwise set to 0</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="keywordtype">double</span> refit_tolerance = 0.0,                  <span class="comment">// if 2 == rebuild_mode, the refit tolerance, otherwise set to 0.0</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <span class="keywordtype">bool</span> bPreserveHeight = <span class="keyword">false</span>                   <span class="comment">// removes the association between the height scaling from the width scaling</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="comment">Description:</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="comment">  Sweep2 function that fits a surface through profile curves that define the surface cross-sections</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="comment">  and two curves that defines the surface edges.</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group___rhino.html#gaefc0b487cf77bea2f866da2f2eeb5260">Rhino2RailSweep</a>(</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_Brep*&gt;</a>&amp; output_surfaces,     <span class="comment">// sweep results</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___curve.html">ON_Curve</a>* pRail[2],                      <span class="comment">// 2 rails going the right direction</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;const ON_Curve*&gt;</a> shapes,  <span class="comment">// shapes will be sorted on rail</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keywordtype">int</span> rebuild_mode,                              <span class="comment">// 0 = no rebuild, 1 = refit to tolerance, 2 = rebuild to #points</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  <span class="keywordtype">int</span> rebuild_points,                            <span class="comment">// if 2 == rebuild_mode, the number of points</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <span class="keywordtype">double</span> refit_tolerance,                        <span class="comment">// if 2 == rebuild_mode, the refit tolerance</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <span class="keywordtype">bool</span> bPreserveHeight,                          <span class="comment">// removes the association between the height scaling from the width scaling</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  <span class="keywordtype">bool</span> bClosed = <span class="keyword">false</span>,                          <span class="comment">// only matters if rails are closed</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <span class="keywordtype">double</span> tolerance = 0.01);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="comment">Description:</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="comment">  Sweep2 function that fits a surface through profile curves that define the surface cross-sections</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="comment">  and two curves that defines the surface edges. Result are split where parameterization along</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="comment">  a rail changes abruptly.</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group___rhino.html#ga477694dccef39c65c02072b5b6a6bd62">Rhino2RailSweepInParts</a>(</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_Brep*&gt;</a>&amp; output_surfaces,     <span class="comment">// sweep results</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___curve.html">ON_Curve</a>* pRail[2],                      <span class="comment">// 2 rails going the right direction</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt; const ON_Curve* &gt;</a>&amp; shapes,</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="keywordtype">bool</span> bClosed = <span class="keyword">false</span>,</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  <span class="keywordtype">double</span> tolerance = 0.01);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="comment">Description:</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="comment">  Fits a SubD surface through a series of profile curves that define the SubD cross-sections and one curve that defines a SubD edge.</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="comment">Parameters:</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="comment">  rail_curve   [in] - A SubD-friendly NURBS curve to sweep along.</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="comment">  shape_curves [in] - Array of SubD-friendly NURBS curves to sweep through.</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="comment">  bSubDCorners [in] - With open curves, adds creased vertices to the SubD at both ends of the first and last curves.</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="comment">  bClosedSweep [in] - Creates a SubD that is closed in the rail curve direction.</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="comment">  bFrameStyle  [in] - Determines how sweep frame rotations are calculated:</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="comment">                      true: Freeform - Frames are propogated based on a refrence direction taken from the rail curve curvature direction.</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="comment">                      false: Roadlike - Frame rotations are calculated based on a vector supplied in &quot;frameup&quot; and the world coordinate system.</span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="comment">  frame_up     [in] - A 3D vector used to calculate the frame rotations for sweep shapes (not used if bFrameStyle is true).</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="comment">  result_subd  [in/out] - Pointer to an empty SubD to return the sweep result.</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="comment">Returns:</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="comment">  true if successful, false otherwise.</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="comment">Remarks:</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="comment">  Shape curves must be in the proper order and orientation.</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="comment">  Shape curves must have the same point counts and rail curves must have the same point counts.</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="comment">  Shape curves will relocated to the nearest pair of Greville points on the rails.</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="comment">  Shape curves will be made at each pair of rail edit points where there isn&#39;t an input shape.</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group___rhino.html#gac6491168aa51fcd7d1927217f0f83683">RhinoSubDSweep1</a>(</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a>* rail_curve,</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;const ON_NurbsCurve*&gt;</a>&amp; shape_curves,</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  <span class="keywordtype">bool</span> bSubDCorners,</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  <span class="keywordtype">bool</span> bClosedSweep,</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  <span class="keywordtype">bool</span> bFrameStyle,</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  <a class="code" href="class_o_n__3d_vector.html">ON_3dVector</a> frame_up,</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  <a class="code" href="class_o_n___sub_d.html">ON_SubD</a>* result_subd</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;);</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="comment">Description:</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="comment">  Fits a SubD surface through a series of profile curves that define the SubD cross-sections and two curves that defines SubD edges.</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="comment">Parameters:</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="comment">  rail_curves  [in] - Array of 2 SubD-friendly NURBS curve to sweep along.</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="comment">  shape_curves [in] - Array of SubD-friendly NURBS curves to sweep through.</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="comment">  bSubDCorners [in] - With open curves, adds creased vertices to the SubD at both ends of the first and last curves.</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="comment">  bClosedSweep [in] - Creates a SubD that is closed, continuing past the last curve around to the first curve.</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="comment">  result_subd  [in/out] - Pointer to an empty SubD to return the sweep result.</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="comment">Returns:</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="comment">  true if successful, false otherwise.</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="comment">Remarks:</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="comment">  Shape curves must be in the proper order and orientation.</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="comment">  Shape curves must have the same point counts and rail curves must have the same point counts.</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="comment">  Shape curves will relocated to the nearest pair of Greville points on the rails.</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="comment">  Shape curves will be made at each pair of rail edit points where there isn&#39;t an input shape.</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group___rhino.html#gab561a67bc8b3cba113d33155c4611b6c">RhinoSubDSweep2</a>(</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;const ON_NurbsCurve*&gt;</a>&amp; rail_curves,</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;const ON_NurbsCurve*&gt;</a>&amp; shape_curves,</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  <span class="keywordtype">bool</span> bSubDCorners,</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;  <span class="keywordtype">bool</span> bClosedSweep,</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;  <a class="code" href="class_o_n___sub_d.html">ON_SubD</a>* result_subd</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;);</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_o_n__3d_vector_html"><div class="ttname"><a href="class_o_n__3d_vector.html">ON_3dVector</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:1185</div></div>
+<div class="ttc" id="aclass_o_n__3d_vector_html"><div class="ttname"><a href="class_o_n__3d_vector.html">ON_3dVector</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:1263</div></div>
 <div class="ttc" id="agroup___rhino_html_gac7cff1e910b2374d20cd2265d4f976dd"><div class="ttname"><a href="group___rhino.html#gac7cff1e910b2374d20cd2265d4f976dd">RHINO_SDK_CLASS</a></div><div class="ttdeci">#define RHINO_SDK_CLASS</div><div class="ttdef"><b>Definition:</b> rhinoSdk.h:285</div></div>
 <div class="ttc" id="aclass_o_n___class_array_html"><div class="ttname"><a href="class_o_n___class_array.html">ON_ClassArray&lt; CRhinoObjRef &gt;</a></div></div>
+<div class="ttc" id="aclass_o_n___nurbs_curve_html"><div class="ttname"><a href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a></div><div class="ttdef"><b>Definition:</b> opennurbs_nurbscurve.h:29</div></div>
 <div class="ttc" id="agroup___rhino_html_gaf8a72270f5f6a8ed147e5ad9211402e3"><div class="ttname"><a href="group___rhino.html#gaf8a72270f5f6a8ed147e5ad9211402e3">Rhino1RailSweep</a></div><div class="ttdeci">RHINO_SDK_FUNCTION bool Rhino1RailSweep(ON_SimpleArray&lt; ON_Brep * &gt; &amp;output_surfaces, const ON_Curve *pRail, const ON_SimpleArray&lt; const ON_Curve * &gt; shapes, bool bClosed=false, double tolerance=0.01)</div></div>
 <div class="ttc" id="aclass_c_args_rhino_sweep2_html_afae1c41260c848514cf801bbe71c6f13"><div class="ttname"><a href="class_c_args_rhino_sweep2.html#afae1c41260c848514cf801bbe71c6f13">CArgsRhinoSweep2::eSweep2Simplify</a></div><div class="ttdeci">eSweep2Simplify</div><div class="ttdef"><b>Definition:</b> rhinoSdkSweep.h:84</div></div>
+<div class="ttc" id="agroup___rhino_html_gaec8e2bca414dcf2cda64ae90e648bb6d"><div class="ttname"><a href="group___rhino.html#gaec8e2bca414dcf2cda64ae90e648bb6d">Rh1RailSweepSegmented</a></div><div class="ttdeci">RHINO_SDK_FUNCTION bool Rh1RailSweepSegmented(ON_SimpleArray&lt; ON_Brep * &gt; &amp;output_surfaces, const ON_Curve *pRailCurve, const ON_SimpleArray&lt; const ON_Curve * &gt; shapes, ON_3dPoint start_point, ON_3dPoint end_point, int frame_type=0, ON_3dVector roadlike_normal=ON_3dVector::UnsetVector, bool bClosed=false, int blend_type=0, int miter_type=0, double tolerance=0.01, int rebuild_mode=0, int rebuild_points=0, double refit_tolerance=0.0)</div></div>
 <div class="ttc" id="agroup___rhino_html_gae0ca1c334125e1735d6bf07ae91bbb66"><div class="ttname"><a href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div><div class="ttdeci">#define RHINO_SDK_FUNCTION</div><div class="ttdef"><b>Definition:</b> rhinoSdk.h:287</div></div>
 <div class="ttc" id="agroup___rhino_html_ga2cacf4c7b311fbdcbd271ab73daeccc4"><div class="ttname"><a href="group___rhino.html#ga2cacf4c7b311fbdcbd271ab73daeccc4">RhinoSweep1Ex</a></div><div class="ttdeci">RHINO_SDK_FUNCTION BOOL RhinoSweep1Ex(CArgsRhinoSweep1 &amp;args, int shape_blending, ON_SimpleArray&lt; ON_Brep * &gt; &amp;brep_array)</div></div>
 <div class="ttc" id="aclass_o_n___curve_html"><div class="ttname"><a href="class_o_n___curve.html">ON_Curve</a></div><div class="ttdef"><b>Definition:</b> opennurbs_curve.h:94</div></div>
@@ -312,18 +426,22 @@ $(function() {
 <div class="ttc" id="aclass_o_n___simple_array_html"><div class="ttname"><a href="class_o_n___simple_array.html">ON_SimpleArray&lt; ON_Curve * &gt;</a></div></div>
 <div class="ttc" id="agroup___rhino_html_gaefc0b487cf77bea2f866da2f2eeb5260"><div class="ttname"><a href="group___rhino.html#gaefc0b487cf77bea2f866da2f2eeb5260">Rhino2RailSweep</a></div><div class="ttdeci">RHINO_SDK_FUNCTION bool Rhino2RailSweep(ON_SimpleArray&lt; ON_Brep * &gt; &amp;output_surfaces, const ON_Curve *pRail[2], const ON_SimpleArray&lt; const ON_Curve * &gt; shapes, bool bClosed=false, double tolerance=0.01)</div></div>
 <div class="ttc" id="aclass_c_rhino_poly_edge_html"><div class="ttname"><a href="class_c_rhino_poly_edge.html">CRhinoPolyEdge</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkPolyEdge.h:18</div></div>
+<div class="ttc" id="aclass_o_n___sub_d_html"><div class="ttname"><a href="class_o_n___sub_d.html">ON_SubD</a></div><div class="ttdef"><b>Definition:</b> opennurbs_subd.h:2305</div></div>
 <div class="ttc" id="agroup___rhino_html_ga8d33086b474a5860679831f36f678591"><div class="ttname"><a href="group___rhino.html#ga8d33086b474a5860679831f36f678591">RhinoSweep1</a></div><div class="ttdeci">RHINO_SDK_FUNCTION BOOL RhinoSweep1(CArgsRhinoSweep1 &amp;args, ON_SimpleArray&lt; ON_Brep * &gt; &amp;brep_array)</div></div>
+<div class="ttc" id="agroup___rhino_html_gac6491168aa51fcd7d1927217f0f83683"><div class="ttname"><a href="group___rhino.html#gac6491168aa51fcd7d1927217f0f83683">RhinoSubDSweep1</a></div><div class="ttdeci">RHINO_SDK_FUNCTION bool RhinoSubDSweep1(const ON_NurbsCurve *rail_curve, const ON_SimpleArray&lt; const ON_NurbsCurve * &gt; &amp;shape_curves, bool bSubDCorners, bool bClosedSweep, bool bFrameStyle, ON_3dVector frame_up, ON_SubD *result_subd)</div></div>
+<div class="ttc" id="agroup___rhino_html_gab561a67bc8b3cba113d33155c4611b6c"><div class="ttname"><a href="group___rhino.html#gab561a67bc8b3cba113d33155c4611b6c">RhinoSubDSweep2</a></div><div class="ttdeci">RHINO_SDK_FUNCTION bool RhinoSubDSweep2(const ON_SimpleArray&lt; const ON_NurbsCurve * &gt; &amp;rail_curves, const ON_SimpleArray&lt; const ON_NurbsCurve * &gt; &amp;shape_curves, bool bSubDCorners, bool bClosedSweep, ON_SubD *result_subd)</div></div>
 <div class="ttc" id="aclass_c_args_rhino_sweep1_html"><div class="ttname"><a href="class_c_args_rhino_sweep1.html">CArgsRhinoSweep1</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkSweep.h:18</div></div>
-<div class="ttc" id="aclass_o_n__3d_point_html"><div class="ttname"><a href="class_o_n__3d_point.html">ON_3dPoint</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:483</div></div>
+<div class="ttc" id="aclass_o_n__3d_point_html"><div class="ttname"><a href="class_o_n__3d_point.html">ON_3dPoint</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:517</div></div>
 <div class="ttc" id="agroup___rhino_html_ga477694dccef39c65c02072b5b6a6bd62"><div class="ttname"><a href="group___rhino.html#ga477694dccef39c65c02072b5b6a6bd62">Rhino2RailSweepInParts</a></div><div class="ttdeci">RHINO_SDK_FUNCTION bool Rhino2RailSweepInParts(ON_SimpleArray&lt; ON_Brep * &gt; &amp;output_surfaces, const ON_Curve *pRail[2], const ON_SimpleArray&lt; const ON_Curve * &gt; &amp;shapes, bool bClosed=false, double tolerance=0.01)</div></div>
 <div class="ttc" id="agroup___rhino_html_ga6663a281cb683f5e84766d01abe01ebc"><div class="ttname"><a href="group___rhino.html#ga6663a281cb683f5e84766d01abe01ebc">RhinoSweep2</a></div><div class="ttdeci">RHINO_SDK_FUNCTION BOOL RhinoSweep2(CArgsRhinoSweep2 &amp;args, ON_SimpleArray&lt; ON_Brep * &gt; &amp;brep_array)</div></div>
 <div class="ttc" id="aclass_c_args_rhino_sweep1_html_a37e678d4aa8a725a76cf2a90a8f451d9"><div class="ttname"><a href="class_c_args_rhino_sweep1.html#a37e678d4aa8a725a76cf2a90a8f451d9">CArgsRhinoSweep1::eSweep1Style</a></div><div class="ttdeci">eSweep1Style</div><div class="ttdef"><b>Definition:</b> rhinoSdkSweep.h:21</div></div>
 <div class="ttc" id="aclass_c_args_rhino_sweep2_html"><div class="ttname"><a href="class_c_args_rhino_sweep2.html">CArgsRhinoSweep2</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkSweep.h:81</div></div>
 <div class="ttc" id="aclass_c_args_rhino_sweep1_html_ab31da606dede0e1d736460b93feb5a10"><div class="ttname"><a href="class_c_args_rhino_sweep1.html#ab31da606dede0e1d736460b93feb5a10">CArgsRhinoSweep1::eSweep1Simplify</a></div><div class="ttdeci">eSweep1Simplify</div><div class="ttdef"><b>Definition:</b> rhinoSdkSweep.h:29</div></div>
 <div class="ttc" id="aclass_c_rhino_obj_ref_html"><div class="ttname"><a href="class_c_rhino_obj_ref.html">CRhinoObjRef</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkObject.h:2187</div></div>
+<div class="ttc" id="agroup__open_n_u_r_b_s_html_gaa62d84d9817922de5f60ef3b057ed0be"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gaa62d84d9817922de5f60ef3b057ed0be">ON_3dVector::UnsetVector</a></div><div class="ttdeci">static const ON_3dVector UnsetVector</div><div class="ttdoc">(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)</div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:1280</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:12:55 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:20 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

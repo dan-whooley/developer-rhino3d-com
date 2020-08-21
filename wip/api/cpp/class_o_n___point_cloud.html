@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -87,6 +87,11 @@ Inheritance diagram for ON_PointCloud:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1bab7558cdc4b96b7442807837fa6d6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___point_cloud.html#a1bab7558cdc4b96b7442807837fa6d6d">ON_PointCloud</a> ()</td></tr>
 <tr class="separator:a1bab7558cdc4b96b7442807837fa6d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad36c46dd43e45282337fea038801779"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___point_cloud.html#aad36c46dd43e45282337fea038801779">ON_PointCloud</a> (const double *P0, int dim, bool is_rat, int count)</td></tr>
+<tr class="memdesc:aad36c46dd43e45282337fea038801779"><td class="mdescLeft">&#160;</td><td class="mdescRight">0&lt;dim&lt;4 stride is dim+is_rat  <a href="class_o_n___point_cloud.html#aad36c46dd43e45282337fea038801779">More...</a><br /></td></tr>
+<tr class="separator:aad36c46dd43e45282337fea038801779"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf9e8c76a30a49df9c14370619ea217d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___point_cloud.html#adf9e8c76a30a49df9c14370619ea217d">ON_PointCloud</a> (const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> *P0, int count)</td></tr>
+<tr class="separator:adf9e8c76a30a49df9c14370619ea217d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bfba85d6105f346f3640a5f24f9784c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___point_cloud.html#a3bfba85d6105f346f3640a5f24f9784c">ON_PointCloud</a> (const <a class="el" href="class_o_n___point_cloud.html">ON_PointCloud</a> &amp;)</td></tr>
 <tr class="separator:a3bfba85d6105f346f3640a5f24f9784c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac557ff4cd54f08a662d7884b955156b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___point_cloud.html#ac557ff4cd54f08a662d7884b955156b2">ON_PointCloud</a> (int)</td></tr>
@@ -319,7 +324,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:afb9ab6358ffdd028e93ddd90d6fbe318"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71362920fa5fc1ce3b3c9082141781ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___point_cloud.html#a71362920fa5fc1ce3b3c9082141781ff">m_N</a></td></tr>
 <tr class="separator:a71362920fa5fc1ce3b3c9082141781ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a256cabd81dbd085e233d8433ecbd43e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___point_cloud.html#a256cabd81dbd085e233d8433ecbd43e0">m_P</a></td></tr>
+<tr class="memitem:a256cabd81dbd085e233d8433ecbd43e0"><td class="memItemLeft" align="right" valign="top">ON_3dPointArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___point_cloud.html#a256cabd81dbd085e233d8433ecbd43e0">m_P</a></td></tr>
 <tr class="memdesc:a256cabd81dbd085e233d8433ecbd43e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation.  <a href="class_o_n___point_cloud.html#a256cabd81dbd085e233d8433ecbd43e0">More...</a><br /></td></tr>
 <tr class="separator:a256cabd81dbd085e233d8433ecbd43e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba31ed459ba176b4efbe5e490b9be511"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___plane.html">ON_Plane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___point_cloud.html#aba31ed459ba176b4efbe5e490b9be511">m_plane</a></td></tr>
@@ -352,7 +357,7 @@ Additional Inherited Members</h2></td></tr>
  / For complete openNURBS copyright information see <a href="http://www.opennurbs.org">http://www.opennurbs.org</a>. / ////////////////////////////////////////////////////////////// Class <a class="el" href="class_o_n___point_cloud.html">ON_PointCloud</a> - unordered set of points ON_PointField - point height field </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1bab7558cdc4b96b7442807837fa6d6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1bab7558cdc4b96b7442807837fa6d6d">&#9670;&nbsp;</a></span>ON_PointCloud() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bab7558cdc4b96b7442807837fa6d6d">&#9670;&nbsp;</a></span>ON_PointCloud() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -369,7 +374,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="ac557ff4cd54f08a662d7884b955156b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac557ff4cd54f08a662d7884b955156b2">&#9670;&nbsp;</a></span>ON_PointCloud() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac557ff4cd54f08a662d7884b955156b2">&#9670;&nbsp;</a></span>ON_PointCloud() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -387,7 +392,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a3bfba85d6105f346f3640a5f24f9784c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3bfba85d6105f346f3640a5f24f9784c">&#9670;&nbsp;</a></span>ON_PointCloud() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bfba85d6105f346f3640a5f24f9784c">&#9670;&nbsp;</a></span>ON_PointCloud() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -418,6 +423,76 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf9e8c76a30a49df9c14370619ea217d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf9e8c76a30a49df9c14370619ea217d">&#9670;&nbsp;</a></span>ON_PointCloud() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ON_PointCloud::ON_PointCloud </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> *&#160;</td>
+          <td class="paramname"><em>P0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad36c46dd43e45282337fea038801779"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad36c46dd43e45282337fea038801779">&#9670;&nbsp;</a></span>ON_PointCloud() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ON_PointCloud::ON_PointCloud </td>
+          <td>(</td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>P0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_rat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>0&lt;dim&lt;4 stride is dim+is_rat </p>
 
 </div>
 </div>
@@ -1124,7 +1199,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Get a point cloud point from an <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a>. Parameters: ci - [in] a component index with m_typ set to <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html#a62d45db62efab7150c8a3415feb1bff1aba63a4ea5783667ee147e2c63551eddc">ON_COMPONENT_INDEX::pointcloud_point</a> and 0 &lt;= m_index and m_index &lt; m_P.Count(). Returns: Point at [ci.m_index] or <a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a> if ci is not valid. </p>
+<p>Description: Get a point cloud point from an <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a>. Parameters: ci - [in] a component index with m_typ set to <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html#a62d45db62efab7150c8a3415feb1bff1aba63a4ea5783667ee147e2c63551eddc">ON_COMPONENT_INDEX::pointcloud_point</a> and 0 &lt;= m_index and m_index &lt; m_P.Count(). Returns: Point at [ci.m_index] or <a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a> if ci is not valid. </p>
 
 </div>
 </div>
@@ -1459,7 +1534,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> ON_PointCloud::m_P</td>
+          <td class="memname">ON_3dPointArray ON_PointCloud::m_P</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1500,7 +1575,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:27 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:54 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

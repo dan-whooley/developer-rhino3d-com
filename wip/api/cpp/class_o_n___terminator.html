@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -79,12 +79,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af747120bc6042550e073aaeaa62c792f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5c393cf03f61f81c7425032d08a83e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___terminator.html#aa5c393cf03f61f81c7425032d08a83e2">~ON_Terminator</a> ()</td></tr>
 <tr class="separator:aa5c393cf03f61f81c7425032d08a83e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabf0b660978a983d15f8a2f22930cc4c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___terminator.html#aabf0b660978a983d15f8a2f22930cc4c">AllowDefaultCancellationHandling</a> (void) const</td></tr>
+<tr class="separator:aabf0b660978a983d15f8a2f22930cc4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e05e2d0600c001d828c10de0991d22c"><td class="memItemLeft" align="right" valign="top">ON__UINT_PTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___terminator.html#a4e05e2d0600c001d828c10de0991d22c">CallbackContext</a> () const</td></tr>
 <tr class="separator:a4e05e2d0600c001d828c10de0991d22c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25fbf15125ebdcf385ad6b5b7440f584"><td class="memItemLeft" align="right" valign="top">ON__UINT_PTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___terminator.html#a25fbf15125ebdcf385ad6b5b7440f584">CallbackFunction</a> () const</td></tr>
 <tr class="separator:a25fbf15125ebdcf385ad6b5b7440f584"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a665a583aeb9c5f152e48d2e6aef533e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___terminator.html#a665a583aeb9c5f152e48d2e6aef533e5">RequestTermination</a> ()</td></tr>
 <tr class="separator:a665a583aeb9c5f152e48d2e6aef533e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa47f923c22730c5643de7966ab8c8e58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___terminator.html#aa47f923c22730c5643de7966ab8c8e58">SetAllowDefaultCancellationHandling</a> (bool bAllow)</td></tr>
+<tr class="separator:aa47f923c22730c5643de7966ab8c8e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2070e70db7ccc68a3af8769472c41a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___terminator.html#ab2070e70db7ccc68a3af8769472c41a7">SetTerminationQueryCallbackFunction</a> (bool(*callback_function)(ON__UINT_PTR context), ON__UINT_PTR callback_context)</td></tr>
 <tr class="separator:ab2070e70db7ccc68a3af8769472c41a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0d4beb109848233be52494fc5804cd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___terminator.html#ab0d4beb109848233be52494fc5804cd3">SetThreadId</a> (ON__UINT_PTR thread_id)</td></tr>
@@ -141,6 +145,25 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aabf0b660978a983d15f8a2f22930cc4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabf0b660978a983d15f8a2f22930cc4c">&#9670;&nbsp;</a></span>AllowDefaultCancellationHandling()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_Terminator::AllowDefaultCancellationHandling </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: returns true if default cancellation processing is allowed, otherwise false. See SetAllowDefaultCancellationHandling </p>
+
+</div>
+</div>
 <a id="a4e05e2d0600c001d828c10de0991d22c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4e05e2d0600c001d828c10de0991d22c">&#9670;&nbsp;</a></span>CallbackContext()</h2>
 
@@ -218,6 +241,25 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Description: If terminator is not nullptr, sets terminator-&gt;m_bTerminationRequested = true. If terminator is not nullptr, all future calls to TerminationRequested(terminator) will return true. Parameters: terminator - [in] (can be nullptr) Remarks: This is convenience function and is identical to the code</p>
 <p>if (nullptr != terminator) terminator-&gt;<a class="el" href="class_o_n___terminator.html#a665a583aeb9c5f152e48d2e6aef533e5">RequestTermination()</a>; </p>
+
+</div>
+</div>
+<a id="aa47f923c22730c5643de7966ab8c8e58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa47f923c22730c5643de7966ab8c8e58">&#9670;&nbsp;</a></span>SetAllowDefaultCancellationHandling()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ON_Terminator::SetAllowDefaultCancellationHandling </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bAllow</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: If bAllow is true, the worker thread cancellation handling (escape key presses etc) will cause RequestTermination to be called. If bAllow is false, cancellation must be implemented through the callback function, otherwise all cancellation will be disabled. Parameters: bAllow - [in] (see above) </p>
 
 </div>
 </div>
@@ -357,7 +399,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:29 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:57 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

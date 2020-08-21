@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -96,7 +96,7 @@ Public Types</h2></td></tr>
 <a class="el" href="class_o_n.html#afa8c376acc027e2d9642e6b8fe404ecfac9f88e098f6fe4e4e112eeb05ccb9671">AngleUnitSystem::Unset</a> = 255
 <br />
  }</td></tr>
-<tr class="memdesc:afa8c376acc027e2d9642e6b8fe404ecf"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_o_n.html#afa8c376acc027e2d9642e6b8fe404ecf" title="ON::AngleUnitSystem identifies an angle unit system ///">ON::AngleUnitSystem</a> identifies an angle unit system ///  <a href="class_o_n.html#afa8c376acc027e2d9642e6b8fe404ecf">More...</a><br /></td></tr>
+<tr class="memdesc:afa8c376acc027e2d9642e6b8fe404ecf"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_o_n.html#afa8c376acc027e2d9642e6b8fe404ecf" title="ON::AngleUnitSystem identifies an angle unit system">ON::AngleUnitSystem</a> identifies an angle unit system  <a href="class_o_n.html#afa8c376acc027e2d9642e6b8fe404ecf">More...</a><br /></td></tr>
 <tr class="separator:afa8c376acc027e2d9642e6b8fe404ecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21f538b91118a107f517692f59287684"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n.html#a21f538b91118a107f517692f59287684">AnnotationType</a> : unsigned char { <br />
 &#160;&#160;<a class="el" href="class_o_n.html#a21f538b91118a107f517692f59287684ac9f88e098f6fe4e4e112eeb05ccb9671">AnnotationType::Unset</a> = 0, 
@@ -518,7 +518,8 @@ Public Types</h2></td></tr>
 <tr class="separator:a5420591d9eb040b20dbac38d025e6169"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ecbf4c0cfa728f369714752fae40573"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n.html#a0ecbf4c0cfa728f369714752fae40573">TextHorizontalAlignment</a> : unsigned char { <a class="el" href="class_o_n.html#a0ecbf4c0cfa728f369714752fae40573a945d5e233cf7d6240f6b783b36a374ff">TextHorizontalAlignment::Left</a> = 0, 
 <a class="el" href="class_o_n.html#a0ecbf4c0cfa728f369714752fae40573a4f1f6016fc9f3f2353c0cc7c67b292bd">TextHorizontalAlignment::Center</a> = 1, 
-<a class="el" href="class_o_n.html#a0ecbf4c0cfa728f369714752fae40573a92b09c7c48c520c3c55e497875da437c">TextHorizontalAlignment::Right</a> = 2
+<a class="el" href="class_o_n.html#a0ecbf4c0cfa728f369714752fae40573a92b09c7c48c520c3c55e497875da437c">TextHorizontalAlignment::Right</a> = 2, 
+<a class="el" href="class_o_n.html#a0ecbf4c0cfa728f369714752fae40573a06b9281e396db002010bde1de57262eb">TextHorizontalAlignment::Auto</a> = 3
  }</td></tr>
 <tr class="memdesc:a0ecbf4c0cfa728f369714752fae40573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Horizontal location of text attach point relative to text  <a href="class_o_n.html#a0ecbf4c0cfa728f369714752fae40573">More...</a><br /></td></tr>
 <tr class="separator:a0ecbf4c0cfa728f369714752fae40573"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -838,7 +839,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_o_n.html#afa8c376acc027e2d9642e6b8fe404ecf" title="ON::AngleUnitSystem identifies an angle unit system ///">ON::AngleUnitSystem</a> identifies an angle unit system /// </p>
+<p><a class="el" href="class_o_n.html#afa8c376acc027e2d9642e6b8fe404ecf" title="ON::AngleUnitSystem identifies an angle unit system">ON::AngleUnitSystem</a> identifies an angle unit system </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afa8c376acc027e2d9642e6b8fe404ecfa6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"><p>summary&gt; <a class="el" href="class_o_n.html#afa8c376acc027e2d9642e6b8fe404ecfa6adf97f83acf6453d4a6a4b1070f3754">ON::AngleUnitSystem::None</a> indicates no angle unit system is specified and model angle unit system should be used. /summary&gt; summary&gt; 1 turn = 2pi radians. /summary&gt; </p>
 </td></tr>
@@ -1647,25 +1648,26 @@ at the end parameter of a curve rather than twice.
 </td></tr>
 <tr><td class="fieldname"><a id="a328d22b5ad7bf9d4e9ba1123355d3cf9aa9f137b98d629d8650590c11d3b4c99b"></a>morph_control_object&#160;</td><td class="fielddoc"><p>some type of <a class="el" href="class_o_n___morph_control.html">ON_MorphControl</a> </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a328d22b5ad7bf9d4e9ba1123355d3cf9aa30446f013936060ec1531f3df79b2d9"></a>subd_object&#160;</td><td class="fielddoc"><p>some type of ON_SubD, ON_SubDRef, ON_SubDComponentRef, ON_SubD.... </p>
+<tr><td class="fieldname"><a id="a328d22b5ad7bf9d4e9ba1123355d3cf9aa30446f013936060ec1531f3df79b2d9"></a>subd_object&#160;</td><td class="fielddoc"><p>some type of <a class="el" href="class_o_n___sub_d.html">ON_SubD</a>, <a class="el" href="class_o_n___sub_d_ref.html">ON_SubDRef</a>, <a class="el" href="class_o_n___sub_d_component_ref.html">ON_SubDComponentRef</a>, <a class="el" href="class_o_n___sub_d.html">ON_SubD</a>.... </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a328d22b5ad7bf9d4e9ba1123355d3cf9ac81e4e33894402f1dae5e28b8b92d784"></a>loop_object&#160;</td><td class="fielddoc"><p>some type of <a class="el" href="class_o_n___brep_loop.html">ON_BrepLoop</a> </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a328d22b5ad7bf9d4e9ba1123355d3cf9a3d29fe2b1e39e1c701d5da5056ab8980"></a>brepvertex_filter&#160;</td><td class="fielddoc"><p>selection filter value - not a real object type (<a class="el" href="class_o_n___brep_edge.html">ON_BrepEdge</a>, ON_SubDVertex) </p>
+<tr><td class="fieldname"><a id="a328d22b5ad7bf9d4e9ba1123355d3cf9a3d29fe2b1e39e1c701d5da5056ab8980"></a>brepvertex_filter&#160;</td><td class="fielddoc"><p>selection filter value - not a real object type (<a class="el" href="class_o_n___brep_vertex.html">ON_BrepVertex</a>) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a328d22b5ad7bf9d4e9ba1123355d3cf9a96396652ca5cacc9346ff2056bc3f248"></a>polysrf_filter&#160;</td><td class="fielddoc"><p>selection filter value - not a real object type </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a328d22b5ad7bf9d4e9ba1123355d3cf9af6456bba99f733ed43b8eb3affb41009"></a>edge_filter&#160;</td><td class="fielddoc"><p>selection filter value - not a real object type (<a class="el" href="class_o_n___brep_edge.html">ON_BrepEdge</a>, ON_SubDEdge) </p>
+<tr><td class="fieldname"><a id="a328d22b5ad7bf9d4e9ba1123355d3cf9af6456bba99f733ed43b8eb3affb41009"></a>edge_filter&#160;</td><td class="fielddoc"><p>selection filter value - not a real object type (<a class="el" href="class_o_n___brep_edge.html">ON_BrepEdge</a> with associated <a class="el" href="class_o_n___brep_trim.html">ON_BrepTrim</a>) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a328d22b5ad7bf9d4e9ba1123355d3cf9a70d9264d6da54a29c0f30e928f577b1f"></a>polyedge_filter&#160;</td><td class="fielddoc"><p>selection filter value - not a real object type </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a328d22b5ad7bf9d4e9ba1123355d3cf9a528919b514a2f049ae5892ec378b0caf"></a>meshvertex_filter&#160;</td><td class="fielddoc"><p>selection filter value - not a real object type (<a class="el" href="struct_o_n___mesh_topology_vertex.html">ON_MeshTopologyVertex</a>, ON_SubDVertex) </p>
+<tr><td class="fieldname"><a id="a328d22b5ad7bf9d4e9ba1123355d3cf9a528919b514a2f049ae5892ec378b0caf"></a>meshvertex_filter&#160;</td><td class="fielddoc"><p>selection filter value - not a real object type (<a class="el" href="struct_o_n___mesh_topology_vertex.html">ON_MeshTopologyVertex</a>, <a class="el" href="class_o_n___sub_d_vertex.html">ON_SubDVertex</a>) </p>
+<p>NOTE WELL: The "mesh" vertex/edge/face filters and "meshcomponent_reference" are used to identify <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> and <a class="el" href="class_o_n___sub_d.html">ON_SubD</a> components. By the time subd_object was added, there were not enough unused bits for separate subd component filters. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a328d22b5ad7bf9d4e9ba1123355d3cf9a1ed00c39026111f228f09ee976b890ee"></a>meshedge_filter&#160;</td><td class="fielddoc"><p>selection filter value - not a real object type (<a class="el" href="struct_o_n___mesh_topology_edge.html">ON_MeshTopologyEdge</a>, ON_SubDEdge) </p>
+<tr><td class="fieldname"><a id="a328d22b5ad7bf9d4e9ba1123355d3cf9a1ed00c39026111f228f09ee976b890ee"></a>meshedge_filter&#160;</td><td class="fielddoc"><p>selection filter value - not a real object type (<a class="el" href="struct_o_n___mesh_topology_edge.html">ON_MeshTopologyEdge</a>, <a class="el" href="class_o_n___sub_d_edge.html">ON_SubDEdge</a>) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a328d22b5ad7bf9d4e9ba1123355d3cf9aca46995108166ccd173817d980ab55f7"></a>meshface_filter&#160;</td><td class="fielddoc"><p>selection filter for <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> triangle, quad, ngon, or ON_SubDFace - not a real object type </p>
+<tr><td class="fieldname"><a id="a328d22b5ad7bf9d4e9ba1123355d3cf9aca46995108166ccd173817d980ab55f7"></a>meshface_filter&#160;</td><td class="fielddoc"><p>selection filter for <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> triangle, quad, ngon, or <a class="el" href="class_o_n___sub_d_face.html">ON_SubDFace</a> - not a real object type </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a328d22b5ad7bf9d4e9ba1123355d3cf9a077a50ce73f04470f0995e7680e27201"></a>meshcomponent_reference&#160;</td><td class="fielddoc"><p>an <a class="el" href="class_o_n___mesh_component_ref.html">ON_MeshComponentRef</a> or ON_SubDComponentRef </p>
+<tr><td class="fieldname"><a id="a328d22b5ad7bf9d4e9ba1123355d3cf9a077a50ce73f04470f0995e7680e27201"></a>meshcomponent_reference&#160;</td><td class="fielddoc"><p>an <a class="el" href="class_o_n___mesh_component_ref.html">ON_MeshComponentRef</a> or <a class="el" href="class_o_n___sub_d_component_ref.html">ON_SubDComponentRef</a>) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a328d22b5ad7bf9d4e9ba1123355d3cf9a26bfa923b6678064183ac33922bb7720"></a>cage_object&#160;</td><td class="fielddoc"><p>some type of <a class="el" href="class_o_n___nurbs_cage.html">ON_NurbsCage</a> </p>
 </td></tr>
@@ -2006,6 +2008,8 @@ at the end parameter of a curve rather than twice.
 <tr><td class="fieldname"><a id="a0ecbf4c0cfa728f369714752fae40573a4f1f6016fc9f3f2353c0cc7c67b292bd"></a>Center&#160;</td><td class="fielddoc"><p>Attach point at center of text horizontal advance (not glyph bounding box) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a0ecbf4c0cfa728f369714752fae40573a92b09c7c48c520c3c55e497875da437c"></a>Right&#160;</td><td class="fielddoc"><p>Attach point at right text horizontal advance (not glyph bounding box) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0ecbf4c0cfa728f369714752fae40573a06b9281e396db002010bde1de57262eb"></a>Auto&#160;</td><td class="fielddoc"><p>Used for Leaders only Attach point adjusts to Right or Left depending on leader tail direction in view If tail direction is to the Left, alignment is Right If tail direction is to the Right, alignment is Left </p>
 </td></tr>
 </table>
 
@@ -4972,7 +4976,7 @@ at the end parameter of a curve rather than twice.
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:19 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:45 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -110,6 +110,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acd6f6aa47bdf6be44b174958a51659cf"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_c_rhino_command_option_name.html">CRhinoCommandOptionName</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_args_rhino_get_ellipse.html#acd6f6aa47bdf6be44b174958a51659cf">AroundMeshDensityDirectionPrompt</a> () const</td></tr>
 <tr class="memdesc:acd6f6aa47bdf6be44b174958a51659cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">prompt for number of faces in the around direction  <a href="class_c_args_rhino_get_ellipse.html#acd6f6aa47bdf6be44b174958a51659cf">More...</a><br /></td></tr>
 <tr class="separator:acd6f6aa47bdf6be44b174958a51659cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f140ddf2db9734996b79d0c97b74b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_args_rhino_get_ellipse.html#ae66f140ddf2db9734996b79d0c97b74b">CapFaceStyle</a> () const</td></tr>
+<tr class="separator:ae66f140ddf2db9734996b79d0c97b74b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd6ca4ce0e264866391632165db0ab41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_args_rhino_get_ellipse.html#acd6ca4ce0e264866391632165db0ab41">ClearPrompts</a> (void)</td></tr>
 <tr class="separator:acd6ca4ce0e264866391632165db0ab41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a200df3bc89f17386eb22b0f4cb0e4502"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_args_rhino_get_ellipse.html#a200df3bc89f17386eb22b0f4cb0e4502">Deformable</a> () const</td></tr>
@@ -152,6 +154,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3c56be6c06603eef43568197134e74de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b2aaf1957ca5b914e56c15e54bbaa3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_args_rhino_get_ellipse.html#a5b2aaf1957ca5b914e56c15e54bbaa3b">SetAroundMeshDensityDirectionPrompt</a> (const <a class="el" href="class_c_rhino_command_option_name.html">CRhinoCommandOptionName</a> &amp;)</td></tr>
 <tr class="separator:a5b2aaf1957ca5b914e56c15e54bbaa3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb16e0c5959e4e5244b284afd2567867"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_args_rhino_get_ellipse.html#aeb16e0c5959e4e5244b284afd2567867">SetCapFaceStyle</a> (bool bMakeQuadCaps=true)</td></tr>
+<tr class="memdesc:aeb16e0c5959e4e5244b284afd2567867"><td class="mdescLeft">&#160;</td><td class="mdescRight">false == tris, true == quads  <a href="class_c_args_rhino_get_ellipse.html#aeb16e0c5959e4e5244b284afd2567867">More...</a><br /></td></tr>
+<tr class="separator:aeb16e0c5959e4e5244b284afd2567867"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8cdf96468963948780a1ceaec0a431c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_args_rhino_get_ellipse.html#ad8cdf96468963948780a1ceaec0a431c">SetDeformable</a> (BOOL=TRUE)</td></tr>
 <tr class="separator:ad8cdf96468963948780a1ceaec0a431c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba50536c5d8a489703034b0a3b0d8836"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_args_rhino_get_ellipse.html#aba50536c5d8a489703034b0a3b0d8836">SetDeformablePointCount</a> (int=12)</td></tr>
@@ -260,9 +265,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a09a0deb5c9e10d962aeb50bcb760f1cc"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_args_rhino_get_ellipse.html#a09a0deb5c9e10d962aeb50bcb760f1cc">m_bAcceptNumber</a></td></tr>
 <tr class="memdesc:a09a0deb5c9e10d962aeb50bcb760f1cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">[i] if true, the last prompt accept number. Needed for center_start_end/angle  <a href="class_c_args_rhino_get_ellipse.html#a09a0deb5c9e10d962aeb50bcb760f1cc">More...</a><br /></td></tr>
 <tr class="separator:a09a0deb5c9e10d962aeb50bcb760f1cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad295ffaaa168ad58c5c5d16632f138d"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_args_rhino_get_ellipse.html#aad295ffaaa168ad58c5c5d16632f138d">m_bDeformable</a></td></tr>
-<tr class="memdesc:aad295ffaaa168ad58c5c5d16632f138d"><td class="mdescLeft">&#160;</td><td class="mdescRight">[i/o] when set, the user wants a deformable ellipse  <a href="class_c_args_rhino_get_ellipse.html#aad295ffaaa168ad58c5c5d16632f138d">More...</a><br /></td></tr>
-<tr class="separator:aad295ffaaa168ad58c5c5d16632f138d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af98eaf494454baf36f8a6918be65bddf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_args_rhino_get_ellipse.html#af98eaf494454baf36f8a6918be65bddf">m_bDeformable</a></td></tr>
+<tr class="memdesc:af98eaf494454baf36f8a6918be65bddf"><td class="mdescLeft">&#160;</td><td class="mdescRight">[i/o] when set, the user wants a deformable ellipse  <a href="class_c_args_rhino_get_ellipse.html#af98eaf494454baf36f8a6918be65bddf">More...</a><br /></td></tr>
+<tr class="separator:af98eaf494454baf36f8a6918be65bddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9a26e8a02e76d2e0ca06f316e8e4af9"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_args_rhino_get_ellipse.html#ae9a26e8a02e76d2e0ca06f316e8e4af9">m_bMarkFoci</a></td></tr>
 <tr class="memdesc:ae9a26e8a02e76d2e0ca06f316e8e4af9"><td class="mdescLeft">&#160;</td><td class="mdescRight">[i] when set, the user wants the ellipse foci to be marked with a point  <a href="class_c_args_rhino_get_ellipse.html#ae9a26e8a02e76d2e0ca06f316e8e4af9">More...</a><br /></td></tr>
 <tr class="separator:ae9a26e8a02e76d2e0ca06f316e8e4af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -510,6 +515,23 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>prompt for number of faces in the around direction </p>
+
+</div>
+</div>
+<a id="ae66f140ddf2db9734996b79d0c97b74b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f140ddf2db9734996b79d0c97b74b">&#9670;&nbsp;</a></span>CapFaceStyle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CArgsRhinoGetEllipse::CapFaceStyle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -861,6 +883,26 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb16e0c5959e4e5244b284afd2567867"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb16e0c5959e4e5244b284afd2567867">&#9670;&nbsp;</a></span>SetCapFaceStyle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CArgsRhinoGetEllipse::SetCapFaceStyle </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bMakeQuadCaps</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>false == tris, true == quads </p>
 
 </div>
 </div>
@@ -1560,8 +1602,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aad295ffaaa168ad58c5c5d16632f138d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad295ffaaa168ad58c5c5d16632f138d">&#9670;&nbsp;</a></span>m_bDeformable</h2>
+<a id="af98eaf494454baf36f8a6918be65bddf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af98eaf494454baf36f8a6918be65bddf">&#9670;&nbsp;</a></span>m_bDeformable</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1570,7 +1612,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">BOOL CArgsRhinoGetEllipse::m_bDeformable</td>
+          <td class="memname">int CArgsRhinoGetEllipse::m_bDeformable</td>
         </tr>
       </table>
   </td>
@@ -1581,6 +1623,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>[i/o] when set, the user wants a deformable ellipse </p>
+<p>Fix for RH-56780 - Tim February 3, 2020 Converted m_bDeformable to a bitfield so we can add extra settings without changing the size of the class. </p>
 
 </div>
 </div>
@@ -2296,7 +2339,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:12:58 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:23 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

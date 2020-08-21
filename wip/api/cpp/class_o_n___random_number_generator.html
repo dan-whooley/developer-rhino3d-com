@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -64,6 +64,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="class_o_n___random_number_generator-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ON_RandomNumberGenerator Class Reference<div class="ingroups"><a class="el" href="group__open_n_u_r_b_s.html">OpenNURBS</a></div></div>  </div>
@@ -78,6 +79,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a33bc1bd1b687a4cc1bc1cc3b097daa98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1c26ff218483537e82c8e1b9672a1e1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___random_number_generator.html#af1c26ff218483537e82c8e1b9672a1e1">RandomDouble</a> ()</td></tr>
 <tr class="separator:af1c26ff218483537e82c8e1b9672a1e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95eb93ca6d9cc2bc1944a062b2af8817"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___random_number_generator.html#a95eb93ca6d9cc2bc1944a062b2af8817">RandomDouble</a> (const class <a class="el" href="class_o_n___interval.html">ON_Interval</a> &amp;range)</td></tr>
+<tr class="separator:a95eb93ca6d9cc2bc1944a062b2af8817"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9a63b8163f538d3be732f54a4f2dcb8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___random_number_generator.html#ac9a63b8163f538d3be732f54a4f2dcb8">RandomDouble</a> (double t0, double t1)</td></tr>
 <tr class="separator:ac9a63b8163f538d3be732f54a4f2dcb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b2db54007fefc254a0f5ab92db1feab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___random_number_generator.html#a2b2db54007fefc254a0f5ab92db1feab">RandomNumber</a> ()</td></tr>
@@ -88,6 +91,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7672466176269f6760492882e7ed5c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5c313b6efe814f9c4eb4095acc42660"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___random_number_generator.html#ae5c313b6efe814f9c4eb4095acc42660">Seed</a> (<a class="el" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a> s)</td></tr>
 <tr class="separator:ae5c313b6efe814f9c4eb4095acc42660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a6d3e343583c0ed3d18af96e4880793a3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___random_number_generator.html#a6d3e343583c0ed3d18af96e4880793a3">RandomSeed</a> ()</td></tr>
+<tr class="separator:a6d3e343583c0ed3d18af96e4880793a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a33bc1bd1b687a4cc1bc1cc3b097daa98"></a>
@@ -109,7 +117,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="af1c26ff218483537e82c8e1b9672a1e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1c26ff218483537e82c8e1b9672a1e1">&#9670;&nbsp;</a></span>RandomDouble() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af1c26ff218483537e82c8e1b9672a1e1">&#9670;&nbsp;</a></span>RandomDouble() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -126,8 +134,26 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a95eb93ca6d9cc2bc1944a062b2af8817"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95eb93ca6d9cc2bc1944a062b2af8817">&#9670;&nbsp;</a></span>RandomDouble() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ON_RandomNumberGenerator::RandomDouble </td>
+          <td>(</td>
+          <td class="paramtype">const class <a class="el" href="class_o_n___interval.html">ON_Interval</a> &amp;&#160;</td>
+          <td class="paramname"><em>range</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ac9a63b8163f538d3be732f54a4f2dcb8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9a63b8163f538d3be732f54a4f2dcb8">&#9670;&nbsp;</a></span>RandomDouble() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9a63b8163f538d3be732f54a4f2dcb8">&#9670;&nbsp;</a></span>RandomDouble() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -208,6 +234,32 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a6d3e343583c0ed3d18af96e4880793a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d3e343583c0ed3d18af96e4880793a3">&#9670;&nbsp;</a></span>RandomSeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a> ON_RandomNumberGenerator::RandomSeed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns: A upredictable seed value for a random number generator. This function is much slower than <a class="el" href="class_o_n___random_number_generator.html#a2b2db54007fefc254a0f5ab92db1feab">ON_RandomNumberGenerator::RandomNumber()</a>. </p>
+
+</div>
+</div>
 <a id="a7672466176269f6760492882e7ed5c6b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7672466176269f6760492882e7ed5c6b">&#9670;&nbsp;</a></span>Seed() <span class="overload">[1/2]</span></h2>
 
@@ -248,7 +300,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:28 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:54 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

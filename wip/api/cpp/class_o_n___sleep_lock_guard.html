@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -74,6 +74,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a5ad826c370f0fb84c9e190a460d3ae62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___sleep_lock_guard.html#a5ad826c370f0fb84c9e190a460d3ae62">ON_SleepLockGuard</a> (class <a class="el" href="class_o_n___fixed_size_pool.html">ON_FixedSizePool</a> &amp;fsp)</td></tr>
+<tr class="separator:a5ad826c370f0fb84c9e190a460d3ae62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae80baa5da6cdd306dbba6954a1adb5f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___sleep_lock_guard.html#ae80baa5da6cdd306dbba6954a1adb5f4">ON_SleepLockGuard</a> (class <a class="el" href="class_o_n___sleep_lock.html">ON_SleepLock</a> &amp;sleep_lock)</td></tr>
 <tr class="separator:ae80baa5da6cdd306dbba6954a1adb5f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30bda18886478fcd17811b295da8318f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___sleep_lock_guard.html#a30bda18886478fcd17811b295da8318f">ON_SleepLockGuard</a> (class <a class="el" href="class_o_n___sleep_lock.html">ON_SleepLock</a> &amp;sleep_lock, unsigned int interval_wait_msecs, unsigned int max_wait_msecs)</td></tr>
@@ -91,7 +93,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae80baa5da6cdd306dbba6954a1adb5f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae80baa5da6cdd306dbba6954a1adb5f4">&#9670;&nbsp;</a></span>ON_SleepLockGuard() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae80baa5da6cdd306dbba6954a1adb5f4">&#9670;&nbsp;</a></span>ON_SleepLockGuard() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -109,8 +111,28 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a5ad826c370f0fb84c9e190a460d3ae62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ad826c370f0fb84c9e190a460d3ae62">&#9670;&nbsp;</a></span>ON_SleepLockGuard() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ON_SleepLockGuard::ON_SleepLockGuard </td>
+          <td>(</td>
+          <td class="paramtype">class <a class="el" href="class_o_n___fixed_size_pool.html">ON_FixedSizePool</a> &amp;&#160;</td>
+          <td class="paramname"><em>fsp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Used by The ThreadSafe...() functions and for expert users to use when managing memory controlled by this pool. Best to ingnore this unless you have a very clear idea of what you are doing, why you are doing it, and when you are doing it. Otherwise, you'll find yourself waiting forever on a nested access request. <br  />
+ </p>
+
+</div>
+</div>
 <a id="a30bda18886478fcd17811b295da8318f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30bda18886478fcd17811b295da8318f">&#9670;&nbsp;</a></span>ON_SleepLockGuard() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a30bda18886478fcd17811b295da8318f">&#9670;&nbsp;</a></span>ON_SleepLockGuard() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -145,7 +167,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="afb6cbea9227ba70f37ecb24d78735004"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb6cbea9227ba70f37ecb24d78735004">&#9670;&nbsp;</a></span>ON_SleepLockGuard() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afb6cbea9227ba70f37ecb24d78735004">&#9670;&nbsp;</a></span>ON_SleepLockGuard() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -204,7 +226,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="afa83dcd3047c09c9fa1222a9aaece29c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa83dcd3047c09c9fa1222a9aaece29c">&#9670;&nbsp;</a></span>ON_SleepLockGuard() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afa83dcd3047c09c9fa1222a9aaece29c">&#9670;&nbsp;</a></span>ON_SleepLockGuard() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -261,7 +283,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:29 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:55 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

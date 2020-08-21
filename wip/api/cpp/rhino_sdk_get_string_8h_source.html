@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -340,13 +340,14 @@ $(function() {
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <a class="code" href="class_c_rhino_get_color.html">CRhinoGetColor</a>&amp; <a class="code" href="class_c_rhino_get_string.html#a90ca8eb3d9f01fceb08fc6586ac9a74f">operator=</a>(<span class="keyword">const</span> <a class="code" href="class_c_rhino_get_color.html">CRhinoGetColor</a>&amp;);</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <a class="code" href="class_c_rhino_get.html#afbb1d0091ccb1306d0fe606405f6b886">CRhinoGet::result</a> GetColor();</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="comment">// If you want to get a string, then use CRhinoGetString.</span></div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="comment">// If you want to get a color, then use CRhinoGetColor.</span></div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  <a class="code" href="class_c_rhino_get.html#afbb1d0091ccb1306d0fe606405f6b886">CRhinoGet::result</a> <a class="code" href="class_c_rhino_get_string.html#abf92094e2934b25739f7821393a5f04a">GetString</a>();</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;};</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  <a class="code" href="class_c_rhino_get.html#afbb1d0091ccb1306d0fe606405f6b886">CRhinoGet::result</a> GetColor(<span class="keywordtype">bool</span> bUseAlpha);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="comment">// If you want to get a string, then use CRhinoGetString.</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  <span class="comment">// If you want to get a color, then use CRhinoGetColor.</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <a class="code" href="class_c_rhino_get.html#afbb1d0091ccb1306d0fe606405f6b886">CRhinoGet::result</a> <a class="code" href="class_c_rhino_get_string.html#abf92094e2934b25739f7821393a5f04a">GetString</a>();</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;};</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_c_rhino_get_option_html"><div class="ttname"><a href="class_c_rhino_get_option.html">CRhinoGetOption</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkGetString.h:73</div></div>
 <div class="ttc" id="agroup___rhino_html_gac7cff1e910b2374d20cd2265d4f976dd"><div class="ttname"><a href="group___rhino.html#gac7cff1e910b2374d20cd2265d4f976dd">RHINO_SDK_CLASS</a></div><div class="ttdeci">#define RHINO_SDK_CLASS</div><div class="ttdef"><b>Definition:</b> rhinoSdk.h:285</div></div>
@@ -356,15 +357,15 @@ $(function() {
 <div class="ttc" id="aclass_c_rhino_get_string_html_a90ca8eb3d9f01fceb08fc6586ac9a74f"><div class="ttname"><a href="class_c_rhino_get_string.html#a90ca8eb3d9f01fceb08fc6586ac9a74f">CRhinoGetString::operator=</a></div><div class="ttdeci">CRhinoGetString &amp; operator=(const CRhinoGetString &amp;)</div><div class="ttdoc">prompt and options inherited</div></div>
 <div class="ttc" id="aclass_c_rhino_get_string_html"><div class="ttname"><a href="class_c_rhino_get_string.html">CRhinoGetString</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkGetString.h:20</div></div>
 <div class="ttc" id="aclass_c_rhino_get_html_ad15e4ca3b9cb4a87a2f24f6ed34ec75e"><div class="ttname"><a href="class_c_rhino_get.html#ad15e4ca3b9cb4a87a2f24f6ed34ec75e">CRhinoGet::operator=</a></div><div class="ttdeci">CRhinoGet &amp; operator=(const CRhinoGet &amp;)</div></div>
-<div class="ttc" id="aclass_c_rhino_get_html"><div class="ttname"><a href="class_c_rhino_get.html">CRhinoGet</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkGet.h:227</div></div>
+<div class="ttc" id="aclass_c_rhino_get_html"><div class="ttname"><a href="class_c_rhino_get.html">CRhinoGet</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkGet.h:235</div></div>
 <div class="ttc" id="aclass_c_rhino_get_string_html_abf92094e2934b25739f7821393a5f04a"><div class="ttname"><a href="class_c_rhino_get_string.html#abf92094e2934b25739f7821393a5f04a">CRhinoGetString::GetString</a></div><div class="ttdeci">CRhinoGet::result GetString()</div></div>
 <div class="ttc" id="aclass_c_rhino_get_number_html"><div class="ttname"><a href="class_c_rhino_get_number.html">CRhinoGetNumber</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkGetString.h:128</div></div>
-<div class="ttc" id="aclass_c_rhino_get_html_a4259a5b3864a3f70d3d74ce8f0a4611c"><div class="ttname"><a href="class_c_rhino_get.html#a4259a5b3864a3f70d3d74ce8f0a4611c">CRhinoGet::TYPE</a></div><div class="ttdeci">TYPE</div><div class="ttdef"><b>Definition:</b> rhinoSdkGet.h:250</div></div>
-<div class="ttc" id="aclass_c_rhino_get_html_afbb1d0091ccb1306d0fe606405f6b886"><div class="ttname"><a href="class_c_rhino_get.html#afbb1d0091ccb1306d0fe606405f6b886">CRhinoGet::result</a></div><div class="ttdeci">result</div><div class="ttdef"><b>Definition:</b> rhinoSdkGet.h:333</div></div>
+<div class="ttc" id="aclass_c_rhino_get_html_a4259a5b3864a3f70d3d74ce8f0a4611c"><div class="ttname"><a href="class_c_rhino_get.html#a4259a5b3864a3f70d3d74ce8f0a4611c">CRhinoGet::TYPE</a></div><div class="ttdeci">TYPE</div><div class="ttdef"><b>Definition:</b> rhinoSdkGet.h:258</div></div>
+<div class="ttc" id="aclass_c_rhino_get_html_afbb1d0091ccb1306d0fe606405f6b886"><div class="ttname"><a href="class_c_rhino_get.html#afbb1d0091ccb1306d0fe606405f6b886">CRhinoGet::result</a></div><div class="ttdeci">result</div><div class="ttdef"><b>Definition:</b> rhinoSdkGet.h:341</div></div>
 <div class="ttc" id="aclass_c_rhino_get_color_html"><div class="ttname"><a href="class_c_rhino_get_color.html">CRhinoGetColor</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkGetString.h:265</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:12:54 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:19 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

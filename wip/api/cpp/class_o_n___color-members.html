@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -97,6 +97,10 @@ $(function() {
   <tr><td class="entry"><a class="el" href="class_o_n___color.html#ae7914e57b622fb8fbfe4cdcd86c080d3">ON_Color</a>(unsigned int colorref)</td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_o_n___color.html#a7614e1a16c7eef264ebe0eac8053e96b">operator unsigned int</a>() const</td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_o_n___color.html#a4f380f264b8cb88e9640998d19d41826">operator=</a>(const ON_Color &amp;)=default</td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_o_n___color.html#adff0477c192800ead531f3aa10fa0f7f">RandomColor</a>()</td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_o_n___color.html#aaee0f466c036857c07da436ceb7ceeb9">RandomColor</a>(ON_Interval hue_range, ON_Interval saturation_range, ON_Interval value_range)</td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_o_n___color.html#a13b585b30b1bf0632f6f89958374c467">RandomColor</a>(ON__UINT32 seed)</td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_o_n___color.html#a307f30e8ad02de117c83f9522f8b24dd">RandomColor</a>(ON__UINT32 seed, ON_Interval hue_range, ON_Interval saturation_range, ON_Interval value_range)</td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_o_n___color.html#a8c87062a853e9aeae568efe8aabe2248">Red</a>() const</td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_o_n___color.html#aad1fbe896cda408e4bdab60adc73bb38">RGBA_byte_index</a> enum name</td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_o_n___color.html#a87ebcde089bd7e3df2e614b862165792">RGBA_shift</a> enum name</td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"></td></tr>
@@ -114,15 +118,18 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="class_o_n___color.html#a7df2fce03d0654608a47b5b0bac3da19">SetHSV</a>(double h, double s, double v)</td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_o_n___color.html#a4de730dfabb8c85b499d24e51f63eb01">SetRGB</a>(int red, int green, int blue)</td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_o_n___color.html#a7cd9f186403f69d96d25253aa480aedc">SetRGBA</a>(int red, int green, int blue, int alpha)</td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_o_n___color.html#a54c9448a0e7a53032cdb7f111163aca9">UnsetColor</a></td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_o_n___color.html#aebd6c2a9d0015196e2d64529babf8b7c">Value</a>() const</td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_o_n___color.html#ab8657f1e46506e08a1a32f09d15e12b9">White</a></td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_o_n___color.html#ab2eb5b3654fd1dc025650e8d73ec074f">WindowsRGB</a>() const</td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_o_n___color.html#a50a2128f23865dcc3311d6c3d2c0e053">~ON_Color</a>()=default</td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0">TextFormat</a> enum name</td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_o_n___color.html#a9d38b0e52ba53bde420b4498003f8f25">ToString</a>(ON_Color::TextFormat format, wchar_t separator, bool bFormatUnsetColor, class ON_TextLog &amp;text_log) const</td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_o_n___color.html#ae438f9df9111e3bc48e89a10f7b54d93">ToText</a>(ON_Color::TextFormat format, wchar_t separator, bool bFormatUnsetColor, class ON_TextLog &amp;text_log) const</td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_o_n___color.html#a54c9448a0e7a53032cdb7f111163aca9">UnsetColor</a></td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_o_n___color.html#aebd6c2a9d0015196e2d64529babf8b7c">Value</a>() const</td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_o_n___color.html#ab8657f1e46506e08a1a32f09d15e12b9">White</a></td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_o_n___color.html#ab2eb5b3654fd1dc025650e8d73ec074f">WindowsRGB</a>() const</td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_o_n___color.html#a50a2128f23865dcc3311d6c3d2c0e053">~ON_Color</a>()=default</td><td class="entry"><a class="el" href="class_o_n___color.html">ON_Color</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:22 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:48 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

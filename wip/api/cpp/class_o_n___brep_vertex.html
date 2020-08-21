@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -107,6 +107,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab077c0e7e7951d5155bde41da83bf4cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b91566cf2a25ebf8704223c3972d835"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep_vertex.html#a6b91566cf2a25ebf8704223c3972d835">Point</a> () const</td></tr>
 <tr class="separator:a6b91566cf2a25ebf8704223c3972d835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39d695b40a4ac79056084a3cf8a6236f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep_vertex.html#a39d695b40a4ac79056084a3cf8a6236f">ProxyBrepSubDVertexId</a> () const</td></tr>
+<tr class="separator:a39d695b40a4ac79056084a3cf8a6236f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d3109720a666f88db20c6f2d205e0de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep_vertex.html#a1d3109720a666f88db20c6f2d205e0de">Read</a> (<a class="el" href="class_o_n___binary_archive.html">ON_BinaryArchive</a> &amp;) override</td></tr>
 <tr class="memdesc:a1d3109720a666f88db20c6f2d205e0de"><td class="mdescLeft">&#160;</td><td class="mdescRight">virtual <a class="el" href="class_o_n___object.html#a09ac9742ead91dd8f9cdd579bcbfed10">ON_Object::Read()</a> override  <a href="class_o_n___brep_vertex.html#a1d3109720a666f88db20c6f2d205e0de">More...</a><br /></td></tr>
 <tr class="separator:a1d3109720a666f88db20c6f2d205e0de"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -545,6 +547,24 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a39d695b40a4ac79056084a3cf8a6236f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39d695b40a4ac79056084a3cf8a6236f">&#9670;&nbsp;</a></span>ProxyBrepSubDVertexId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ON_BrepVertex::ProxyBrepSubDVertexId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns: If this vertex is part of a brep created by <a class="el" href="class_o_n___sub_d.html#ac0c535f015caf4aa27dfa95f3d768deb" title="SubD proxy brep interface.">ON_SubD::ProxyBrep()</a>, then the subd component id of the corresponding SubD vertex is returned. Otherwise 0 is returned. </p>
+
+</div>
+</div>
 <a id="a1d3109720a666f88db20c6f2d205e0de"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d3109720a666f88db20c6f2d205e0de">&#9670;&nbsp;</a></span>Read()</h2>
 
@@ -688,7 +708,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implementation. </p>
 <p>indices of edges starting/ending at this vertex</p>
-<p>For closed edges, edge.m_vi[0] = edge.m_vi[1] and edge.m_edge_index appears twice in the m_ei[] array. /// The first occurance of edge.m_edge_index in m_ei[] is for the closed edge starting the vertex. The second occurance of edge,m_edge_index in m_ei[] is for the closed edge ending at the vertex. C.f. ON_Brep::Next/PrevEdge(). </p>
+<p>For closed edges, edge.m_vi[0] = edge.m_vi[1] and edge.m_edge_index appears twice in the m_ei[] array. The first occurrence of edge.m_edge_index in m_ei[] is for the closed edge starting the vertex. The second occurrence of edge,m_edge_index in m_ei[] is for the closed edge ending at the vertex. C.f. ON_Brep::Next/PrevEdge(). </p>
 
 </div>
 </div>
@@ -775,7 +795,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:22 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:48 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

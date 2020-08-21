@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -91,8 +91,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a76ed49dcd89237fae6eab37ae311df48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00909cda03e4a5b966ace1cf5ac64c80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_flow_space_morph.html#a00909cda03e4a5b966ace1cf5ac64c80">FlowCleanup</a> ()</td></tr>
 <tr class="separator:a00909cda03e4a5b966ace1cf5ac64c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c5caaf2333fa857a3c3fcc7e9964a23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_flow_space_morph.html#a9c5caaf2333fa857a3c3fcc7e9964a23">FlowInit</a> (const <a class="el" href="class_o_n___curve.html">ON_Curve</a> *crv_from, bool bReverseFrom, const <a class="el" href="class_o_n___curve.html">ON_Curve</a> *crv_to, bool bReverseTo, bool bPreventStretching)</td></tr>
-<tr class="separator:a9c5caaf2333fa857a3c3fcc7e9964a23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd7c8e2115b36c20dbababf9be6d3aaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_flow_space_morph.html#acd7c8e2115b36c20dbababf9be6d3aaa">FlowInit</a> (const <a class="el" href="class_o_n___curve.html">ON_Curve</a> *crv_from, bool bReverseFrom, const <a class="el" href="class_o_n___curve.html">ON_Curve</a> *crv_to, bool bReverseTo, bool bPreventStretching, const <a class="el" href="class_o_n___surface.html">ON_Surface</a> *srf_to=nullptr)</td></tr>
+<tr class="separator:acd7c8e2115b36c20dbababf9be6d3aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affe2cb7d407eb8c5420374e08d3603b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_flow_space_morph.html#affe2cb7d407eb8c5420374e08d3603b3">MorphPoint</a> (<a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> pt) const</td></tr>
 <tr class="memdesc:affe2cb7d407eb8c5420374e08d3603b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">virtual <a class="el" href="class_o_n___space_morph.html">ON_SpaceMorph</a> override  <a href="class_c_rhino_flow_space_morph.html#affe2cb7d407eb8c5420374e08d3603b3">More...</a><br /></td></tr>
 <tr class="separator:affe2cb7d407eb8c5420374e08d3603b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,6 +156,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a6f51db1b5aa55b401fe32eadfe01ef23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6874a1a538ee8392766b33ac67d09026"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_flow_space_morph.html#a6874a1a538ee8392766b33ac67d09026">m_fastflow_length_to</a></td></tr>
 <tr class="separator:a6874a1a538ee8392766b33ac67d09026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a991c4c959ac473a15703ac569c54ef98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___surface.html">ON_Surface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_flow_space_morph.html#a991c4c959ac473a15703ac569c54ef98">m_fastflow_srf_to</a></td></tr>
+<tr class="separator:a991c4c959ac473a15703ac569c54ef98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af803ce2ec1329a7a5c217a7649d6f64e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_flow_space_morph.html#af803ce2ec1329a7a5c217a7649d6f64e">m_fastflow_to_t</a></td></tr>
 <tr class="separator:af803ce2ec1329a7a5c217a7649d6f64e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2644bbd1dfe1da0b975502317b8dd76e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_flow_space_morph.html#a2644bbd1dfe1da0b975502317b8dd76e">m_fastflow_to_up</a></td></tr>
@@ -216,8 +218,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a9c5caaf2333fa857a3c3fcc7e9964a23"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c5caaf2333fa857a3c3fcc7e9964a23">&#9670;&nbsp;</a></span>FlowInit()</h2>
+<a id="acd7c8e2115b36c20dbababf9be6d3aaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd7c8e2115b36c20dbababf9be6d3aaa">&#9670;&nbsp;</a></span>FlowInit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -250,7 +252,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bPreventStretching</em>&#160;</td>
+          <td class="paramname"><em>bPreventStretching</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_o_n___surface.html">ON_Surface</a> *&#160;</td>
+          <td class="paramname"><em>srf_to</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -260,6 +268,12 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>30 June 2004 Dale Lear: Stuff that FastMorphPoint() needs to work. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">srf_to</td><td>optional target surface. If supplied crv_to should be on srf_to for predictable results. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -422,6 +436,20 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a991c4c959ac473a15703ac569c54ef98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a991c4c959ac473a15703ac569c54ef98">&#9670;&nbsp;</a></span>m_fastflow_srf_to</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_o_n___surface.html">ON_Surface</a>* CRhinoFlowSpaceMorph::m_fastflow_srf_to</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af803ce2ec1329a7a5c217a7649d6f64e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af803ce2ec1329a7a5c217a7649d6f64e">&#9670;&nbsp;</a></span>m_fastflow_to_t</h2>
 
@@ -453,7 +481,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:02 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:27 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

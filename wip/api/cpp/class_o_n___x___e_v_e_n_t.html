@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -126,6 +126,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a9fa34bc560cbaf3f978f122649bd8e55"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___x___e_v_e_n_t.html#a9fa34bc560cbaf3f978f122649bd8e55">Compare</a> (const <a class="el" href="class_o_n___x___e_v_e_n_t.html">ON_X_EVENT</a> *a, const <a class="el" href="class_o_n___x___e_v_e_n_t.html">ON_X_EVENT</a> *b)</td></tr>
 <tr class="memdesc:a9fa34bc560cbaf3f978f122649bd8e55"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class must use default copy constructor, operator=, and destructor.  <a href="class_o_n___x___e_v_e_n_t.html#a9fa34bc560cbaf3f978f122649bd8e55">More...</a><br /></td></tr>
 <tr class="separator:a9fa34bc560cbaf3f978f122649bd8e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2248a0e995809761a09f2350afe0a034"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___x___e_v_e_n_t.html#a2248a0e995809761a09f2350afe0a034">CompareEquivalent</a> (const <a class="el" href="class_o_n___x___e_v_e_n_t.html">ON_X_EVENT</a> &amp;XA, const <a class="el" href="class_o_n___x___e_v_e_n_t.html">ON_X_EVENT</a> &amp;XB, double RelativePointTol, <a class="el" href="class_o_n___text_log.html">ON_TextLog</a> *log)</td></tr>
+<tr class="separator:a2248a0e995809761a09f2350afe0a034"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11e7f216ffd2bfa151c924d9a087a088"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___x___e_v_e_n_t.html#a11e7f216ffd2bfa151c924d9a087a088">CopyEventPart</a> (const <a class="el" href="class_o_n___x___e_v_e_n_t.html">ON_X_EVENT</a> &amp;src, int src_end, <a class="el" href="class_o_n___x___e_v_e_n_t.html">ON_X_EVENT</a> &amp;dst, int dst_end)</td></tr>
 <tr class="separator:a11e7f216ffd2bfa151c924d9a087a088"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13feb12d7dde551edec2438c14e1e449"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___x___e_v_e_n_t.html#a13feb12d7dde551edec2438c14e1e449">IntersectionTolerance</a> (double intersection_tolerance)</td></tr>
@@ -353,6 +355,55 @@ Public Attributes</h2></td></tr>
 
 <p>This class must use default copy constructor, operator=, and destructor. </p>
 <p>Description: Compares intersection events and sorts them in the canonical order. Returns: @untitled table -1 this &lt; other 0 this == other +1 this &gt; other Remarks: ON_CX_EVENT::Compare is used to sort intersection events into canonical order. </p>
+
+</div>
+</div>
+<a id="a2248a0e995809761a09f2350afe0a034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2248a0e995809761a09f2350afe0a034">&#9670;&nbsp;</a></span>CompareEquivalent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ON_X_EVENT::CompareEquivalent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___x___e_v_e_n_t.html">ON_X_EVENT</a> &amp;&#160;</td>
+          <td class="paramname"><em>XA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_o_n___x___e_v_e_n_t.html">ON_X_EVENT</a> &amp;&#160;</td>
+          <td class="paramname"><em>XB</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>RelativePointTol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___text_log.html">ON_TextLog</a> *&#160;</td>
+          <td class="paramname"><em>log</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Description: Compare intersection events Parameters: XA, XB are a pair of events to compare for equivalence RelativePointTol - 3d points are compared by || Pa - Pb || &lt; ( 1 + ||Pa||) * RelativePointTol log [in] if not null and false is returned then a description of the error is appended to log. Returns: @untitled table true if the XA and XB represent the same intersections Remarks: use RelativePointTol=ON_UNSET_VALUE to use the default value of ON_SQRT_EPSILON </p>
 
 </div>
 </div>
@@ -1142,7 +1193,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:31 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:59 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

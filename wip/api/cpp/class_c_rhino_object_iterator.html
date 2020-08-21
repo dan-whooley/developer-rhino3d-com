@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -161,9 +161,9 @@ Friends</h2></td></tr>
 <tr class="separator:ace221e63b71b749b710a941b4c4a78fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Description: The <a class="el" href="class_c_rhino_object_iterator.html">CRhinoObjectIterator</a> class is used to interate through the objects in a <a class="el" href="class_c_rhino_doc.html">CRhinoDoc</a>.</p>
+<div class="textblock"><p>Description: The <a class="el" href="class_c_rhino_object_iterator.html">CRhinoObjectIterator</a> class is used to iterate through the objects in a <a class="el" href="class_c_rhino_doc.html">CRhinoDoc</a>.</p>
 <p>Example:</p>
-<p>/ The default <a class="el" href="class_c_rhino_object_iterator.html">CRhinoObjectIterator</a> iteratates / through all visible objects in the active document. <a class="el" href="class_c_rhino_object_iterator.html">CRhinoObjectIterator</a> it(); CRhino3Object* pObject; for ( pObject = it.First(); pObject; pObject = it.Next() ) { ... } </p>
+<p>/ The default <a class="el" href="class_c_rhino_object_iterator.html">CRhinoObjectIterator</a> iterates / through all visible objects in the active document. <a class="el" href="class_c_rhino_object_iterator.html">CRhinoObjectIterator</a> it(); CRhino3Object* pObject; for ( pObject = it.First(); pObject; pObject = it.Next() ) { ... } </p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a80a31c84215a309c0206efb7ecc368f1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a80a31c84215a309c0206efb7ecc368f1">&#9670;&nbsp;</a></span>object_category</h2>
@@ -255,7 +255,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: This constructor iteratates through all active documents</p>
+<p>Description: This constructor iterates through all active documents</p>
 <p>Parameters: s - [in] specifies what object states should be iterated c - [in] specifies what object categories should be iterated </p>
 
 </div>
@@ -416,7 +416,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Description: If the selected filter is enabled, then the iterator will limit itself to selected objects. The default is to ignore selection state.</p>
 <p>Parameters: b - [in] true limits the iteration to selected objects. bCheckSubObjects - [in] if true and b=true, then the iteration will include objects that have some subset of the object selected, like some edges of a surface. The default is ignore objects where the entire object is not selected.</p>
-<p>Example: If you want to interate through the list of selected points and curves, then you would do something like: </p><pre class="fragment">CRhinoObjectIterator it();
+<p>Example: If you want to iterate through the list of selected points and curves, then you would do something like: </p><pre class="fragment">CRhinoObjectIterator it();
 it.EnableSelectedFilter(true);
 it.SetObjectFilter( ON::point_object | ON::curve_object );
 CRhino3Object* pObject;
@@ -489,7 +489,7 @@ for ( pObject = it.First(); pObject; pObject = it.Next() )
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: The default object iterator does not iterate through grip objects. If you want the iterator to include lights, then call IncludeGrips(true). Paramters: bIncludeGrips - [in] true to include grips in the iteration </p>
+<p>Description: The default object iterator does not iterate through grip objects. If you want the iterator to include lights, then call IncludeGrips(true). Parameters: bIncludeGrips - [in] true to include grips in the iteration </p>
 
 </div>
 </div>
@@ -508,7 +508,7 @@ for ( pObject = it.First(); pObject; pObject = it.Next() )
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: The default object iterator does not iterate through render light objects. If you want the iterator to include lights, then call IncludeLights(true). Paramters: bIncludeLights - [in] true to include lights in the iteration Remarks: If you just want to look at render lights, it may be easier to use the <a class="el" href="class_c_rhino_doc.html#a80b68b6a1a401e41b4e8d37612c56a33">CRhinoDoc::m_light_table</a>[] array. </p>
+<p>Description: The default object iterator does not iterate through render light objects. If you want the iterator to include lights, then call IncludeLights(true). Parameters: bIncludeLights - [in] true to include lights in the iteration Remarks: If you just want to look at render lights, it may be easier to use the <a class="el" href="class_c_rhino_doc.html#a80b68b6a1a401e41b4e8d37612c56a33">CRhinoDoc::m_light_table</a>[] array. </p>
 
 </div>
 </div>
@@ -527,7 +527,7 @@ for ( pObject = it.First(); pObject; pObject = it.Next() )
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: The default object iterator does not iterate through phantom objects. If you want the iterator to include phantoms, then call IncludePhantoms(true). Paramters: bIncludePhantoms - [in] true to include phantom objects in the iteration </p>
+<p>Description: The default object iterator does not iterate through phantom objects. If you want the iterator to include phantoms, then call IncludePhantoms(true). Parameters: bIncludePhantoms - [in] true to include phantom objects in the iteration </p>
 
 </div>
 </div>
@@ -613,7 +613,7 @@ Parameters:
   layer_index - [in] index of layer or -1 do disable layer
      filtering.
 Example:
-  If you want to interate through the list of objects
+  If you want to iterate through the list of objects
   that are on mesh and
   brep objects, then you would do something like:
 
@@ -656,14 +656,14 @@ See Also:
 </div><div class="memdoc">
 <p>Description: The object filter can be used to limit the iteration to specific types of geometry.</p>
 <p>Parameters: object_filter - [in] an unsigned int made by or-ing ( | ) values from the <a class="el" href="class_o_n.html#a328d22b5ad7bf9d4e9ba1123355d3cf9">ON::object_type</a> enum. If you pass 0, then all objects will be iterated.</p>
-<p>Example: If you want to interate through the list of mesh and brep objects, then you would do something like: </p><pre class="fragment">  CRhinoObjectIterator it();
+<p>Example: If you want to iterate through the list of mesh and brep objects, then you would do something like: </p><pre class="fragment">  CRhinoObjectIterator it();
   it.SetObjectFilter( ON::brep_object | ON::mesh_object );
   CRhino3Object* pObject;
   for ( pObject = it.First(); pObject; pObject = it.Next() )
   {
     ...
   }
-</pre><p>Remarks: If object_filter has the <a class="el" href="class_o_n.html#a328d22b5ad7bf9d4e9ba1123355d3cf9a966329165c6709bc5b47dab93ac31e66" title="some type of ON_Light">ON::light_object</a> bit set, then iterating throught lights is automatically enabled.</p>
+</pre><p>Remarks: If object_filter has the <a class="el" href="class_o_n.html#a328d22b5ad7bf9d4e9ba1123355d3cf9a966329165c6709bc5b47dab93ac31e66" title="some type of ON_Light">ON::light_object</a> bit set, then iterating through lights is automatically enabled.</p>
 <p>See Also: <a class="el" href="class_c_rhino_object_iterator.html#aa0c81ea6768c14efd8f1828a020971f7">CRhinoObjectIterator::SetObjectFilter</a> <a class="el" href="class_c_rhino_object_iterator.html#a00a256c788ada72568d6427a498f8c2b">CRhinoObjectIterator::SetLayerFilter</a> <a class="el" href="class_c_rhino_object_iterator.html#a579e99f4ddad400f389ccc357876686c">CRhinoObjectIterator::EnableSelectedFilter</a> <a class="el" href="class_c_rhino_object_iterator.html#a73df7e9d2a2429bc134ad17c03a5185e">CRhinoObjectIterator::EnableVisibleFilter</a> </p>
 
 </div>
@@ -741,7 +741,7 @@ for ( pObject = it.First(); pObject; pObject = it.Next() )
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: This function is a one-call way to set up the common filter that quicky weeds out objects in the wrong space or on the wrong page view.</p>
+<p>Description: This function is a one-call way to set up the common filter that quickly weeds out objects in the wrong space or on the wrong page view.</p>
 <p>if ( <a class="el" href="class_o_n.html#a2dafb3795977579badb110f474671ae2abb435616c31d73a6fcb5f5fd30591e61">ON::page_view_type</a> == viewport.m_v.m_view_type ) { SetSpaceFilter(true,ON::page_space,true); SetViewportIdFilter(true,viewport.ViewportId(),true); } else { SetSpaceFilter(true,ON::model_space,true); SetViewportIdFilter(false,ON_nil_uuid,false); }</p>
 <p>Parameters: viewport - [in] </p>
 
@@ -826,7 +826,7 @@ for ( pObject = it.First(); pObject; pObject = it.Next() )
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:05 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:30 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

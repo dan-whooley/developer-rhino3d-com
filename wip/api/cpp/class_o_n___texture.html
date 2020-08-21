@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -123,10 +123,37 @@ Public Types</h2></td></tr>
 <tr class="memitem:a1e73ed16dda764adcb0618dbf8097558"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558">TYPE</a> : unsigned int { <br />
 &#160;&#160;<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558a0c4c778d26ec0741015303e47eefc190">TYPE::no_texture_type</a> = 0U, 
 <a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558a1381ce013ac0c864a7cc6c201206055d">TYPE::bitmap_texture</a> = 1U, 
+<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558a18b36faf2fadaee773f42c252015deac">TYPE::diffuse_texture</a> = 1U, 
 <a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558adf9b255a46a5ac80324c3df588fa8c1d">TYPE::bump_texture</a> = 2U, 
-<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558aa8a41fbbb8dc22587105d0525f5053c4">TYPE::transparency_texture</a> = 3U, 
 <br />
-&#160;&#160;<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558aa2c78836b230eda463be3f14b207345a">TYPE::emap_texture</a> = 86U
+&#160;&#160;<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558aa8a41fbbb8dc22587105d0525f5053c4">TYPE::transparency_texture</a> = 3U, 
+<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558a7265b8168da8f67dfaca0967a60414bf">TYPE::opacity_texture</a> = 3U, 
+<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558a8786d8c11041b24b4b91d0d1e1276b60">TYPE::pbr_base_color_texture</a> = 1U, 
+<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558aa8cbcce8dcceef8f3c55463c634ee5e4">TYPE::pbr_subsurface_texture</a> = 10U, 
+<br />
+&#160;&#160;<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558a120883ba3a61349948cd8e78f304718a">TYPE::pbr_subsurface_scattering_texture</a> = 11U, 
+<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558a2dc5f13a8e897480942395871ec1d66d">TYPE::pbr_subsurface_scattering_radius_texture</a> = 12U, 
+<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558a53758d873fed8ead62d476f429bfc40c">TYPE::pbr_metallic_texture</a> = 13U, 
+<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558a242206b700f47c7569c907bda51cb32c">TYPE::pbr_specular_texture</a> = 14U, 
+<br />
+&#160;&#160;<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558a88333614c810ba88366d8cff98914519">TYPE::pbr_specular_tint_texture</a> = 15U, 
+<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558a080a537c5077445a87c31fb739e59bcc">TYPE::pbr_roughness_texture</a> = 16U, 
+<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558ae69ee7d3670caff6ca284f4df14a974c">TYPE::pbr_anisotropic_texture</a> = 17U, 
+<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558a1b46c036480e1f9002e13dfd13ecc162">TYPE::pbr_anisotropic_rotation_texture</a> = 18U, 
+<br />
+&#160;&#160;<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558a50f7fa9fdbafab077af9664c852c3357">TYPE::pbr_sheen_texture</a> = 19U, 
+<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558aee180539f0e51ec3803188d46ed6fc47">TYPE::pbr_sheen_tint_texture</a> = 20U, 
+<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558a91292d45993b7c944f58e2e8725670b4">TYPE::pbr_clearcoat_texture</a> = 21U, 
+<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558ac4b1897d1468592dba9f27f625b6c0fb">TYPE::pbr_clearcoat_roughness_texture</a> = 22U, 
+<br />
+&#160;&#160;<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558a18193f275388d679994c8e0ae5c2d3e0">TYPE::pbr_opacity_ior_texture</a> = 23U, 
+<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558a223d272476408c7b78b43f58b58c225a">TYPE::pbr_opacity_roughness_texture</a> = 24U, 
+<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558a223fe111f28989bb7e8414a5af853b1c">TYPE::pbr_emission_texture</a> = 25U, 
+<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558a09e7615abb38089cfb518b1dbca9e64b">TYPE::pbr_ambient_occlusion_texture</a> = 26U, 
+<br />
+&#160;&#160;<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558abd6e5bed160ec975c01106c946f68863">TYPE::pbr_displacement_texture</a> = 28U, 
+<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558a441b2f47a228334110b4624fad453adf">TYPE::pbr_clearcoat_bump_texture</a> = 29U, 
+<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558aa2c78836b230eda463be3f14b207345a">TYPE::emap_texture</a> = 86U
 <br />
  }</td></tr>
 <tr class="separator:a1e73ed16dda764adcb0618dbf8097558"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -316,7 +343,9 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a12f58185089dbf41577615a938c4a57f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16a2594836fac4d3358b012d2cf6bb14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___color.html">ON_Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___texture.html#a16a2594836fac4d3358b012d2cf6bb14">m_border_color</a> = <a class="el" href="group__open_n_u_r_b_s.html#ga768e6ba42c38dfcbcf1e9e8f6db69f15">ON_UNSET_COLOR</a></td></tr>
 <tr class="separator:a16a2594836fac4d3358b012d2cf6bb14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae75d2b3d5de103380bb1c017f754df68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___interval.html">ON_Interval</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___texture.html#ae75d2b3d5de103380bb1c017f754df68">m_bump_scale</a> = <a class="el" href="class_o_n___interval.html#a737857e2200ea8d9731ca40c5fa21196">ON_Interval::ZeroToOne</a></td></tr>
+<tr class="memitem:ab3669df954e8032dbc39f1cd0038cbe8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___texture.html#ab3669df954e8032dbc39f1cd0038cbe8">m_bTreatAsLinear</a> = false</td></tr>
+<tr class="separator:ab3669df954e8032dbc39f1cd0038cbe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae75d2b3d5de103380bb1c017f754df68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___interval.html">ON_Interval</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___texture.html#ae75d2b3d5de103380bb1c017f754df68">m_bump_scale</a> = <a class="el" href="group__open_n_u_r_b_s.html#ga737857e2200ea8d9731ca40c5fa21196">ON_Interval::ZeroToOne</a></td></tr>
 <tr class="separator:ae75d2b3d5de103380bb1c017f754df68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2faf89d33eec5fbf8d8d1b273b8837d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___file_reference.html">ON_FileReference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___texture.html#a2faf89d33eec5fbf8d8d1b273b8837d3">m_image_file_reference</a> = <a class="el" href="class_o_n___file_reference.html#a06f1799b2ed593bd0f8c9270a9719ec2">ON_FileReference::Unset</a></td></tr>
 <tr class="separator:a2faf89d33eec5fbf8d8d1b273b8837d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -345,6 +374,10 @@ Public Attributes</h2></td></tr>
 <tr class="separator:aeda29069d6d09276b8af40ee15b87707"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52e99beb7311fe78c8c3aab296c2abc5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___texture.html#a72a1b0964dbb42b3ba6d66bbbfa8adab">WRAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___texture.html#a52e99beb7311fe78c8c3aab296c2abc5">m_wrapw</a> = <a class="el" href="class_o_n___texture.html#a72a1b0964dbb42b3ba6d66bbbfa8adaba10d04aab962da2ba5294bbab630cd664">ON_Texture::WRAP::repeat_wrap</a></td></tr>
 <tr class="separator:a52e99beb7311fe78c8c3aab296c2abc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72c00fcc3bb0fb87678c945b1df079c4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___texture.html#a72c00fcc3bb0fb87678c945b1df079c4">reserved2</a> = false</td></tr>
+<tr class="separator:a72c00fcc3bb0fb87678c945b1df079c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a310be534e1996fafb1024b3d121fbf87"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___texture.html#a310be534e1996fafb1024b3d121fbf87">reserved3</a> = false</td></tr>
+<tr class="separator:a310be534e1996fafb1024b3d121fbf87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -484,12 +517,39 @@ Static Public Attributes</h2></td></tr>
 <p>do not change TYPE enum values - they are saved in 3dm files. The "TYPE" setting controls how the pixels in the bitmap are interpreted. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558a0c4c778d26ec0741015303e47eefc190"></a>no_texture_type&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558a1381ce013ac0c864a7cc6c201206055d"></a>bitmap_texture&#160;</td><td class="fielddoc"><p>"standard" image texture. </p>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558a1381ce013ac0c864a7cc6c201206055d"></a>bitmap_texture&#160;</td><td class="fielddoc"><p>"standard" image texture. ///&lt; Deprecated. Use Diffuse. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558a18b36faf2fadaee773f42c252015deac"></a>diffuse_texture&#160;</td><td class="fielddoc"><p>ideally albedo. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558adf9b255a46a5ac80324c3df588fa8c1d"></a>bump_texture&#160;</td><td class="fielddoc"><p>bump map - see m_bump_scale comment </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558aa8a41fbbb8dc22587105d0525f5053c4"></a>transparency_texture&#160;</td><td class="fielddoc"><p>value = alpha (see m_tranparancy_id) </p>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558aa8a41fbbb8dc22587105d0525f5053c4"></a>transparency_texture&#160;</td><td class="fielddoc"><p>value = alpha (see m_tranparancy_id) Deprecated. Use Opacity. No change needed to functionality - transparency in Rhino has always meant opacity. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558a7265b8168da8f67dfaca0967a60414bf"></a>opacity_texture&#160;</td><td class="fielddoc"><p>value = alpha. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558a8786d8c11041b24b4b91d0d1e1276b60"></a>pbr_base_color_texture&#160;</td><td class="fielddoc"><p>Reuse diffuse texture. </p>
+<p>The following textures are only for PBR materials They are not supported by the basic <a class="el" href="class_o_n___material.html">ON_Material</a> definition, and should only be used when rendering physically based (PBR) materials. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558aa8cbcce8dcceef8f3c55463c634ee5e4"></a>pbr_subsurface_texture&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558a120883ba3a61349948cd8e78f304718a"></a>pbr_subsurface_scattering_texture&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558a2dc5f13a8e897480942395871ec1d66d"></a>pbr_subsurface_scattering_radius_texture&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558a53758d873fed8ead62d476f429bfc40c"></a>pbr_metallic_texture&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558a242206b700f47c7569c907bda51cb32c"></a>pbr_specular_texture&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558a88333614c810ba88366d8cff98914519"></a>pbr_specular_tint_texture&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558a080a537c5077445a87c31fb739e59bcc"></a>pbr_roughness_texture&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558ae69ee7d3670caff6ca284f4df14a974c"></a>pbr_anisotropic_texture&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558a1b46c036480e1f9002e13dfd13ecc162"></a>pbr_anisotropic_rotation_texture&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558a50f7fa9fdbafab077af9664c852c3357"></a>pbr_sheen_texture&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558aee180539f0e51ec3803188d46ed6fc47"></a>pbr_sheen_tint_texture&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558a91292d45993b7c944f58e2e8725670b4"></a>pbr_clearcoat_texture&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558ac4b1897d1468592dba9f27f625b6c0fb"></a>pbr_clearcoat_roughness_texture&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558a18193f275388d679994c8e0ae5c2d3e0"></a>pbr_opacity_ior_texture&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558a223d272476408c7b78b43f58b58c225a"></a>pbr_opacity_roughness_texture&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558a223fe111f28989bb7e8414a5af853b1c"></a>pbr_emission_texture&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558a09e7615abb38089cfb518b1dbca9e64b"></a>pbr_ambient_occlusion_texture&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558abd6e5bed160ec975c01106c946f68863"></a>pbr_displacement_texture&#160;</td><td class="fielddoc"><p>pbr_smudge_texture = 27U, </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558a441b2f47a228334110b4624fad453adf"></a>pbr_clearcoat_bump_texture&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558aa2c78836b230eda463be3f14b207345a"></a>emap_texture&#160;</td><td class="fielddoc"><p>emap_texture is OBSOLETE - set m_mapping_channel_id = ON_MappingChannel::emap_mapping </p>
 <p>spherical environment mapping. </p>
 </td></tr>
@@ -1544,6 +1604,21 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ab3669df954e8032dbc39f1cd0038cbe8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3669df954e8032dbc39f1cd0038cbe8">&#9670;&nbsp;</a></span>m_bTreatAsLinear</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_Texture::m_bTreatAsLinear = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>If false, the texture color values should be correctly by the linear workflow pre-process gamma value (in the document) if linear workflow is on. Otherwise, if the values is true, the values should be used raw from the texture. </p>
+
+</div>
+</div>
 <a id="ae75d2b3d5de103380bb1c017f754df68"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae75d2b3d5de103380bb1c017f754df68">&#9670;&nbsp;</a></span>m_bump_scale</h2>
 
@@ -1551,7 +1626,7 @@ Static Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_o_n___interval.html">ON_Interval</a> ON_Texture::m_bump_scale = <a class="el" href="class_o_n___interval.html#a737857e2200ea8d9731ca40c5fa21196">ON_Interval::ZeroToOne</a></td>
+          <td class="memname"><a class="el" href="class_o_n___interval.html">ON_Interval</a> ON_Texture::m_bump_scale = <a class="el" href="group__open_n_u_r_b_s.html#ga737857e2200ea8d9731ca40c5fa21196">ON_Interval::ZeroToOne</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1752,10 +1827,38 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a72c00fcc3bb0fb87678c945b1df079c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72c00fcc3bb0fb87678c945b1df079c4">&#9670;&nbsp;</a></span>reserved2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_Texture::reserved2 = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a310be534e1996fafb1024b3d121fbf87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a310be534e1996fafb1024b3d121fbf87">&#9670;&nbsp;</a></span>reserved3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_Texture::reserved3 = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:30 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:58 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

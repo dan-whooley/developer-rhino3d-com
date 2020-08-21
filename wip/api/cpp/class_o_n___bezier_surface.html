@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -64,6 +64,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_o_n___bezier_surface-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -203,6 +204,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a116552c837b252a280efd7659151e291"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___bezier_surface.html#a116552c837b252a280efd7659151e291">ZeroCVs</a> ()</td></tr>
 <tr class="memdesc:a116552c837b252a280efd7659151e291"><td class="mdescLeft">&#160;</td><td class="mdescRight">zeros control vertices and, if rational, sets weights to 1  <a href="class_o_n___bezier_surface.html#a116552c837b252a280efd7659151e291">More...</a><br /></td></tr>
 <tr class="separator:a116552c837b252a280efd7659151e291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a88476e81f6a8de939f6e72664e396c87"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___bezier_surface.html#a88476e81f6a8de939f6e72664e396c87">MatchTangency</a> (<a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___bezier_surface.html">ON_BezierSurface</a> * &gt; &amp;BezArray, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> P, <a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a> N, double *pMaxAngleDeviation)</td></tr>
+<tr class="separator:a88476e81f6a8de939f6e72664e396c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -1130,6 +1136,55 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a88476e81f6a8de939f6e72664e396c87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88476e81f6a8de939f6e72664e396c87">&#9670;&nbsp;</a></span>MatchTangency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ON_BezierSurface::MatchTangency </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___bezier_surface.html">ON_BezierSurface</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>BezArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a>&#160;</td>
+          <td class="paramname"><em>P</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a>&#160;</td>
+          <td class="paramname"><em>N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>pMaxAngleDeviation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Description: Given a set of bicubic bezier surfaces that share a vertex P, and form a complete ring around V, with common edges having identical control points, adjust the control points at and adjacent to V so that the normals at V are all N, and the angle between normals along common edges is minimized. Parameters: BezArray - [in, out] The input bezier surfaces. The do not have to be in order around the common vertex. They will be adusted in place. P - [in] The desired location of the common vertex N - [in] The desired normal at the vertex. pMaxAngleDeviation - [out] max angle between normals along a shared edge (degrees). Returns: true if successful. false if the input beziers do not meet the criterion or if there are other failures. Note: Since only the control points at or adjacent to the vertex are changed, The normals and locations along the edges opposite the vertex do not change. </p>
+
+</div>
+</div>
 <a id="a7ef02dabc39779d1cdc3bcdd71d9ed12"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7ef02dabc39779d1cdc3bcdd71d9ed12">&#9670;&nbsp;</a></span>Morph()</h2>
 
@@ -1776,7 +1831,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:21 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:47 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

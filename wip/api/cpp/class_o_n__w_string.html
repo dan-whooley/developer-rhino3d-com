@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -510,6 +510,13 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a4821fe214307fe04f30aed20f09e85ee"><td class="memItemLeft" align="right" valign="top">static const wchar_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n__w_string.html#a4821fe214307fe04f30aed20f09e85ee">CarriageReturn</a></td></tr>
 <tr class="memdesc:a4821fe214307fe04f30aed20f09e85ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unicode CARRIAGE RETURN control U+000D.  <a href="class_o_n__w_string.html#a4821fe214307fe04f30aed20f09e85ee">More...</a><br /></td></tr>
 <tr class="separator:a4821fe214307fe04f30aed20f09e85ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cafddbb69a041caa84288e5ee947574"><td class="memItemLeft" align="right" valign="top">static const wchar_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n__w_string.html#a5cafddbb69a041caa84288e5ee947574">DecimalAsComma</a></td></tr>
+<tr class="memdesc:a5cafddbb69a041caa84288e5ee947574"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unicode COMMA U+002C.  <a href="class_o_n__w_string.html#a5cafddbb69a041caa84288e5ee947574">More...</a><br /></td></tr>
+<tr class="separator:a5cafddbb69a041caa84288e5ee947574"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03906bda7b40164e3dab592902855b2d"><td class="memItemLeft" align="right" valign="top">static const wchar_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n__w_string.html#a03906bda7b40164e3dab592902855b2d">DecimalAsPeriod</a></td></tr>
+<tr class="memdesc:a03906bda7b40164e3dab592902855b2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unicode PERIOD U+002E <br  />
+  <a href="class_o_n__w_string.html#a03906bda7b40164e3dab592902855b2d">More...</a><br /></td></tr>
+<tr class="separator:a03906bda7b40164e3dab592902855b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9c20b8013ccb7ca12828a2fd935f5ad"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n__w_string.html">ON_wString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n__w_string.html#ab9c20b8013ccb7ca12828a2fd935f5ad">EmptyString</a></td></tr>
 <tr class="separator:ab9c20b8013ccb7ca12828a2fd935f5ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c565501cb737171f08f843328e9bf3e"><td class="memItemLeft" align="right" valign="top">static const wchar_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n__w_string.html#a2c565501cb737171f08f843328e9bf3e">Escape</a></td></tr>
@@ -5330,7 +5337,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Expert user funtion to reserve and gain access to string memory. Parameters: capacity - [in] If capacity &gt; <a class="el" href="class_o_n___string.html#aa50ded5f5032edbd6054156173a0824ba960f8e16c89ed83aa35c7983aa79ba22">ON_String::MaximumStringLength</a>, then nullptr is returned. If capacity &lt;= 0, then nullptr is returned. </p>
+<p>Description: Expert user funtion to reserve and gain access to string memory. Parameters: capacity - [in] If capacity &gt; <a class="el" href="class_o_n___string.html#a1b5d8a7e2a699d74aea3a0e89c629612a960f8e16c89ed83aa35c7983aa79ba22">ON_String::MaximumStringLength</a>, then nullptr is returned. If capacity &lt;= 0, then nullptr is returned. </p>
 
 </div>
 </div>
@@ -6536,6 +6543,55 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a5cafddbb69a041caa84288e5ee947574"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cafddbb69a041caa84288e5ee947574">&#9670;&nbsp;</a></span>DecimalAsComma</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const wchar_t ON_wString::DecimalAsComma</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unicode COMMA U+002C. </p>
+
+</div>
+</div>
+<a id="a03906bda7b40164e3dab592902855b2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03906bda7b40164e3dab592902855b2d">&#9670;&nbsp;</a></span>DecimalAsPeriod</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const wchar_t ON_wString::DecimalAsPeriod</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unicode PERIOD U+002E <br  />
+ </p>
+
+</div>
+</div>
 <a id="ab9c20b8013ccb7ca12828a2fd935f5ad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab9c20b8013ccb7ca12828a2fd935f5ad">&#9670;&nbsp;</a></span>EmptyString</h2>
 
@@ -6851,7 +6907,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:31 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:59 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

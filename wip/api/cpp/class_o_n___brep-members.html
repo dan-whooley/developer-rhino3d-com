@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -92,6 +92,8 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="class_o_n___brep.html#a3e453036900222c04f07ffa1e8d6a1de">ClearComponentStates</a>(ON_ComponentStatus states_to_clear) const override</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_o_n___brep.html#aad47a740758f748dfa30528d1d79e64c">ClearComponentStates</a>(ON_COMPONENT_INDEX component_index, ON_ComponentStatus states_to_clear) const override</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_o_n___brep.html#a501086673ba6f67c8de7c5f42084b1ba">ClearEdgeVertices</a>()</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_o_n___brep.html#a349bc04278ba86e00c4cfceb041db089">ClearPerFaceColors</a>() const</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_o_n___brep.html#a955ba2e7dc8a85b53c21a946dda5b9c0">ClearPerFaceMaterialChannelIndices</a>()</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_o_n___brep.html#a709088c64f158587dbcb0529d6881be2">ClearTrimVertices</a>()</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_o_n___brep.html#af981e669c792c0106f342ea6f0d2baef">CloseTrimGap</a>(ON_BrepTrim &amp;trim0, ON_BrepTrim &amp;trim1)</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_o_n___brep.html#a7440558880c487c00426871deac0f83a">CollapseEdge</a>(int edge_index, bool bCloseTrimGap=true, int vertex_index=-1)</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"></td></tr>
@@ -171,6 +173,8 @@ $(function() {
   <tr><td class="entry"><a class="el" href="class_o_n___object.html#ac285fba1506b2b9b821e3655582939c4">GetUserStringKeys</a>(ON_ClassArray&lt; ON_wString &gt; &amp;user_string_keys) const</td><td class="entry"><a class="el" href="class_o_n___object.html">ON_Object</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_o_n___object.html#a004ab49490f69fcdc7681919c3837a33">GetUserStrings</a>(ON_ClassArray&lt; ON_UserString &gt; &amp;user_strings) const</td><td class="entry"><a class="el" href="class_o_n___object.html">ON_Object</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_o_n___brep.html#a7bd44fdbe8610cc3e404d863000b691b">HasBrepForm</a>() const override</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_o_n___brep.html#afd4b408f7839536c13a4b750652906a7">HasPerFaceColors</a>() const</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_o_n___brep.html#ab6c143908332aec36507ce40835703d3">HasPerFaceMaterialChannelIndices</a>() const</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_o_n___brep.html#a6eb5a7379abf6cf2e07b9e637d24ff92">HasRegionTopology</a>() const</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_o_n___brep.html#aeff521224dfae78f13fea6f7131a7975">HasSlits</a>() const</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_o_n___brep.html#a1e3ebe887970b193b403881de2e6b8f3">HasSlits</a>(const ON_BrepFace &amp;F) const</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"></td></tr>
@@ -299,9 +303,11 @@ $(function() {
   <tr><td class="entry"><a class="el" href="class_o_n___brep.html#ae525c494c02d8111a2666dfc2554f90e">operator=</a>(const ON_Brep &amp;)</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_o_n___geometry.html#a071e7617820ea38c40f4b3966e7daee0">ON_Geometry::operator=</a>(const ON_Geometry &amp;)=default</td><td class="entry"><a class="el" href="class_o_n___geometry.html">ON_Geometry</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_o_n___object.html#aba6166c9aecef42639e684a2a3fda223">ON_Object::operator=</a>(const ON_Object &amp;)</td><td class="entry"><a class="el" href="class_o_n___object.html">ON_Object</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_o_n___brep.html#a365813ea93518ba8bbddbecd8953453b">PrevEdge</a>(int current_edge_index, int endi, int *prev_endi=nullptr) const</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_o_n___brep.html#aea7d834eee697407bdcdc6d6c08dcb4e">PrevNonsingularTrim</a>(int) const</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_o_n___brep.html#ac22e83fea944d2e5d055a9c8055513b9">PrevTrim</a>(int) const</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_o_n___brep.html#aac21e11cf1af48365c4fe5daee6c8ea7">PackFaces</a>()</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_o_n___brep.html#a365813ea93518ba8bbddbecd8953453b">PrevEdge</a>(int current_edge_index, int endi, int *prev_endi=nullptr) const</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_o_n___brep.html#aea7d834eee697407bdcdc6d6c08dcb4e">PrevNonsingularTrim</a>(int) const</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_o_n___brep.html#ac22e83fea944d2e5d055a9c8055513b9">PrevTrim</a>(int) const</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_o_n___brep.html#a01706aec64228e8f4663cdd52016631c">ProxyBrepSubDRuntimeSerialNumber</a>() const</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_o_n___object.html#a88b61cafc0024ecb7a4bd22da2718680">PurgeUserData</a>()</td><td class="entry"><a class="el" href="class_o_n___object.html">ON_Object</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_o_n___brep.html#a59d9ce80429fb3df537f905836e8e1ee">Read</a>(ON_BinaryArchive &amp;) override</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_o_n___brep.html#a8fe308dc2e1b01f53a8aea677c0bb9e2">Read100_BrepCurve</a>(ON_BinaryArchive &amp;) const</td><td class="entry"><a class="el" href="class_o_n___brep.html">ON_Brep</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
@@ -412,7 +418,7 @@ $(function() {
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:21 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:47 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

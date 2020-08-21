@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -65,6 +65,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="class_o_n___color-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -84,6 +85,26 @@ Public Types</h2></td></tr>
 <tr class="separator:aad1fbe896cda408e4bdab60adc73bb38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87ebcde089bd7e3df2e614b862165792"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___color.html#a87ebcde089bd7e3df2e614b862165792">RGBA_shift</a> : unsigned int </td></tr>
 <tr class="separator:a87ebcde089bd7e3df2e614b862165792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a513c92c70be3bafb5e0d7d49fe07a1a0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0">TextFormat</a> : unsigned char { <br />
+&#160;&#160;<a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0ac9f88e098f6fe4e4e112eeb05ccb9671">TextFormat::Unset</a> = 0, 
+<a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0a07307ecfd6489fa35e122244fc87f7bd">TextFormat::FractionalRGB</a> = 1, 
+<a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0a3a5e0a7dc097d5d7a34aa900694c5647">TextFormat::FractionalRGBa</a> = 2, 
+<a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0aae3d7e61b30e2af29395046f8282d01f">TextFormat::FractionalRGBA</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0a26f58386b67c107a7e49aa4542bca1ac">TextFormat::DecimalRGB</a> = 4, 
+<a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0a08fb3d668a8bc4d965e8c1d98b5be53a">TextFormat::DecimalRGBa</a> = 5, 
+<a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0aecc2094fd4cfd85504e2330d3b3f61d2">TextFormat::DecimalRGBA</a> = 6, 
+<a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0a5d76e56af4aa1e69d27e174a8eacfdaa">TextFormat::HexadecimalRGB</a> = 7, 
+<br />
+&#160;&#160;<a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0a9bd201b2e0bce2ef76ffe7292833fe83">TextFormat::HexadecimalRGBa</a> = 8, 
+<a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0a1630785aea02c8dd35d9a3a198e73bea">TextFormat::HexadecimalRGBA</a> = 9, 
+<a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0a6878315e698a7cbfd0d97d77f6619c5f">TextFormat::HSV</a> = 10, 
+<a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0a33e44af6e448d55bde183989855611bd">TextFormat::HSVa</a> = 11, 
+<br />
+&#160;&#160;<a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0a488f161e4a2914686506928a568a39b2">TextFormat::HSVA</a> = 12
+<br />
+ }</td></tr>
+<tr class="separator:a513c92c70be3bafb5e0d7d49fe07a1a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -152,11 +173,26 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4de730dfabb8c85b499d24e51f63eb01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cd9f186403f69d96d25253aa480aedc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___color.html#a7cd9f186403f69d96d25253aa480aedc">SetRGBA</a> (int red, int green, int blue, int alpha)</td></tr>
 <tr class="separator:a7cd9f186403f69d96d25253aa480aedc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d38b0e52ba53bde420b4498003f8f25"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_o_n__w_string.html">ON_wString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___color.html#a9d38b0e52ba53bde420b4498003f8f25">ToString</a> (<a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0">ON_Color::TextFormat</a> format, wchar_t separator, bool bFormatUnsetColor, class <a class="el" href="class_o_n___text_log.html">ON_TextLog</a> &amp;text_log) const</td></tr>
+<tr class="separator:a9d38b0e52ba53bde420b4498003f8f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae438f9df9111e3bc48e89a10f7b54d93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___color.html#ae438f9df9111e3bc48e89a10f7b54d93">ToText</a> (<a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0">ON_Color::TextFormat</a> format, wchar_t separator, bool bFormatUnsetColor, class <a class="el" href="class_o_n___text_log.html">ON_TextLog</a> &amp;text_log) const</td></tr>
+<tr class="separator:ae438f9df9111e3bc48e89a10f7b54d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebd6c2a9d0015196e2d64529babf8b7c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___color.html#aebd6c2a9d0015196e2d64529babf8b7c">Value</a> () const</td></tr>
 <tr class="memdesc:aebd6c2a9d0015196e2d64529babf8b7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns 0.0 (black) to 1.0 (white)  <a href="class_o_n___color.html#aebd6c2a9d0015196e2d64529babf8b7c">More...</a><br /></td></tr>
 <tr class="separator:aebd6c2a9d0015196e2d64529babf8b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2eb5b3654fd1dc025650e8d73ec074f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___color.html#ab2eb5b3654fd1dc025650e8d73ec074f">WindowsRGB</a> () const</td></tr>
 <tr class="separator:ab2eb5b3654fd1dc025650e8d73ec074f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:adff0477c192800ead531f3aa10fa0f7f"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n___color.html">ON_Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___color.html#adff0477c192800ead531f3aa10fa0f7f">RandomColor</a> ()</td></tr>
+<tr class="separator:adff0477c192800ead531f3aa10fa0f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13b585b30b1bf0632f6f89958374c467"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n___color.html">ON_Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___color.html#a13b585b30b1bf0632f6f89958374c467">RandomColor</a> (<a class="el" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a> seed)</td></tr>
+<tr class="separator:a13b585b30b1bf0632f6f89958374c467"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a307f30e8ad02de117c83f9522f8b24dd"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n___color.html">ON_Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___color.html#a307f30e8ad02de117c83f9522f8b24dd">RandomColor</a> (<a class="el" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a> seed, <a class="el" href="class_o_n___interval.html">ON_Interval</a> hue_range, <a class="el" href="class_o_n___interval.html">ON_Interval</a> saturation_range, <a class="el" href="class_o_n___interval.html">ON_Interval</a> value_range)</td></tr>
+<tr class="separator:a307f30e8ad02de117c83f9522f8b24dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaee0f466c036857c07da436ceb7ceeb9"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n___color.html">ON_Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___color.html#aaee0f466c036857c07da436ceb7ceeb9">RandomColor</a> (<a class="el" href="class_o_n___interval.html">ON_Interval</a> hue_range, <a class="el" href="class_o_n___interval.html">ON_Interval</a> saturation_range, <a class="el" href="class_o_n___interval.html">ON_Interval</a> value_range)</td></tr>
+<tr class="separator:aaee0f466c036857c07da436ceb7ceeb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -244,6 +280,55 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>If you need to use shifting to convert RGBA components to and from an unsigned int ON_COlor value and you want your code to work on both little and big endian computers, use the RGBA_shift enum.</p>
 <p>unsigned int u = 0; u |= ((((unsigned int)red) &amp; 0xFFU) &lt;&lt; ON_Color::RGBA_shift::kRedShift); u |= ((((unsigned int)green) &amp; 0xFFU) &lt;&lt; ON_Color::RGBA_shift::kGreenShift); u |= ((((unsigned int)blue) &amp; 0xFFU) &lt;&lt; ON_Color::RGBA_shift::kBlueShift); u |= ((((unsigned int)alpha) &amp; 0xFFU) &lt;&lt; ON_Color::RGBA_shift::kAlphaShift); <a class="el" href="class_o_n___color.html">ON_Color</a> color = u; </p>
+
+</div>
+</div>
+<a id="a513c92c70be3bafb5e0d7d49fe07a1a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a513c92c70be3bafb5e0d7d49fe07a1a0">&#9670;&nbsp;</a></span>TextFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0">ON_Color::TextFormat</a> : unsigned char</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a513c92c70be3bafb5e0d7d49fe07a1a0ac9f88e098f6fe4e4e112eeb05ccb9671"></a>Unset&#160;</td><td class="fielddoc"><p>summary&gt; Indicates no format has been selected. Empty text is created. /summary&gt; summary&gt; red,green,blue as floating point values from 0.0 to 1.0. /summary&gt; </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a513c92c70be3bafb5e0d7d49fe07a1a0a07307ecfd6489fa35e122244fc87f7bd"></a>FractionalRGB&#160;</td><td class="fielddoc"><p>summary&gt; red,green,blue as floating point values from 0.0 to 1.0. alpha is appended if it is not zero. /summary&gt; </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a513c92c70be3bafb5e0d7d49fe07a1a0a3a5e0a7dc097d5d7a34aa900694c5647"></a>FractionalRGBa&#160;</td><td class="fielddoc"><p>summary&gt; red,green,blue,alpha as floating point values from 0.0 to 1.0. /summary&gt; </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a513c92c70be3bafb5e0d7d49fe07a1a0aae3d7e61b30e2af29395046f8282d01f"></a>FractionalRGBA&#160;</td><td class="fielddoc"><p>summary&gt; red,green,blue as decimal integers from 0 to 255. /summary&gt; </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a513c92c70be3bafb5e0d7d49fe07a1a0a26f58386b67c107a7e49aa4542bca1ac"></a>DecimalRGB&#160;</td><td class="fielddoc"><p>summary&gt; red,green,blue as decimal integers from 0 to 255. alpha is appended if it is not zero. /summary&gt; </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a513c92c70be3bafb5e0d7d49fe07a1a0a08fb3d668a8bc4d965e8c1d98b5be53a"></a>DecimalRGBa&#160;</td><td class="fielddoc"><p>summary&gt; red,green,blue,alpha as decimal integers from 0 to 255. /summary&gt; </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a513c92c70be3bafb5e0d7d49fe07a1a0aecc2094fd4cfd85504e2330d3b3f61d2"></a>DecimalRGBA&#160;</td><td class="fielddoc"><p>summary&gt; red,green,blue as hexadecimal integers from 0 to 255. /summary&gt; </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a513c92c70be3bafb5e0d7d49fe07a1a0a5d76e56af4aa1e69d27e174a8eacfdaa"></a>HexadecimalRGB&#160;</td><td class="fielddoc"><p>summary&gt; red,green,blue as hexadecimal integers from 0 to 255. alpha is appended if it is not zero. /summary&gt; </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a513c92c70be3bafb5e0d7d49fe07a1a0a9bd201b2e0bce2ef76ffe7292833fe83"></a>HexadecimalRGBa&#160;</td><td class="fielddoc"><p>summary&gt; red,green,blue,alpha as hexadecimal integers from 0 to 255. /summary&gt; </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a513c92c70be3bafb5e0d7d49fe07a1a0a1630785aea02c8dd35d9a3a198e73bea"></a>HexadecimalRGBA&#160;</td><td class="fielddoc"><p>summary&gt; hue (0 to 2pi), saturation (0 to 1), value (0 to 1) as floating point values. /summary&gt; </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a513c92c70be3bafb5e0d7d49fe07a1a0a6878315e698a7cbfd0d97d77f6619c5f"></a>HSV&#160;</td><td class="fielddoc"><p>summary&gt; hue (0 to 2pi), saturation (0 to 1), value (0 to 1) as floating point values. alpha (0 to 1) is appended if it is not zero. /summary&gt; </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a513c92c70be3bafb5e0d7d49fe07a1a0a33e44af6e448d55bde183989855611bd"></a>HSVa&#160;</td><td class="fielddoc"><p>summary&gt; hue (0 to 2pi), saturation (0 to 1), value (0 to 1), alpha (0 to 1) as floating point values. /summary&gt; </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a513c92c70be3bafb5e0d7d49fe07a1a0a488f161e4a2914686506928a568a39b2"></a>HSVA&#160;</td><td class="fielddoc"></td></tr>
+</table>
 
 </div>
 </div>
@@ -655,6 +740,151 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="adff0477c192800ead531f3aa10fa0f7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adff0477c192800ead531f3aa10fa0f7f">&#9670;&nbsp;</a></span>RandomColor() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="class_o_n___color.html">ON_Color</a> ON_Color::RandomColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns: A random color. </p>
+
+</div>
+</div>
+<a id="a13b585b30b1bf0632f6f89958374c467"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13b585b30b1bf0632f6f89958374c467">&#9670;&nbsp;</a></span>RandomColor() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="class_o_n___color.html">ON_Color</a> ON_Color::RandomColor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a>&#160;</td>
+          <td class="paramname"><em>seed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns: A color generated from seed. The color for a given seed will always be the same. </p>
+
+</div>
+</div>
+<a id="a307f30e8ad02de117c83f9522f8b24dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a307f30e8ad02de117c83f9522f8b24dd">&#9670;&nbsp;</a></span>RandomColor() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="class_o_n___color.html">ON_Color</a> ON_Color::RandomColor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a>&#160;</td>
+          <td class="paramname"><em>seed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___interval.html">ON_Interval</a>&#160;</td>
+          <td class="paramname"><em>hue_range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___interval.html">ON_Interval</a>&#160;</td>
+          <td class="paramname"><em>saturation_range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___interval.html">ON_Interval</a>&#160;</td>
+          <td class="paramname"><em>value_range</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Parameters: seed - [in] hue_range - [in] range of hues. Use <a class="el" href="group__open_n_u_r_b_s.html#gad843bb578a893163ff9102a2f1a6d996" title="(0.0, 2.0*ON_PI)">ON_Interval::ZeroToTwoPi</a> for all hues. saturation_range - [in] range of saturations. Use <a class="el" href="group__open_n_u_r_b_s.html#ga737857e2200ea8d9731ca40c5fa21196" title="(0.0, 1.0)">ON_Interval::ZeroToOne</a> for all saturations. value_range - [in] range of values. Use <a class="el" href="group__open_n_u_r_b_s.html#ga737857e2200ea8d9731ca40c5fa21196" title="(0.0, 1.0)">ON_Interval::ZeroToOne</a> for all values. Returns: A color generated from seed. The color for a given seed will always be the same. </p>
+
+</div>
+</div>
+<a id="aaee0f466c036857c07da436ceb7ceeb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaee0f466c036857c07da436ceb7ceeb9">&#9670;&nbsp;</a></span>RandomColor() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="class_o_n___color.html">ON_Color</a> ON_Color::RandomColor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_o_n___interval.html">ON_Interval</a>&#160;</td>
+          <td class="paramname"><em>hue_range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___interval.html">ON_Interval</a>&#160;</td>
+          <td class="paramname"><em>saturation_range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___interval.html">ON_Interval</a>&#160;</td>
+          <td class="paramname"><em>value_range</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Parameters: seed - [in] hue_range - [in] range of hues. Use <a class="el" href="group__open_n_u_r_b_s.html#gad843bb578a893163ff9102a2f1a6d996" title="(0.0, 2.0*ON_PI)">ON_Interval::ZeroToTwoPi</a> for all hues. saturation_range - [in] range of saturations. Use <a class="el" href="group__open_n_u_r_b_s.html#ga737857e2200ea8d9731ca40c5fa21196" title="(0.0, 1.0)">ON_Interval::ZeroToOne</a> for all saturations. value_range - [in] range of values. Use <a class="el" href="group__open_n_u_r_b_s.html#ga737857e2200ea8d9731ca40c5fa21196" title="(0.0, 1.0)">ON_Interval::ZeroToOne</a> for all values. Returns: A color generated from seed. The color for a given seed will always be the same. </p>
+
+</div>
+</div>
 <a id="a8c87062a853e9aeae568efe8aabe2248"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8c87062a853e9aeae568efe8aabe2248">&#9670;&nbsp;</a></span>Red()</h2>
 
@@ -865,6 +1095,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>summary&gt; Formats used by <a class="el" href="class_o_n___color.html#ae438f9df9111e3bc48e89a10f7b54d93">ON_Color::ToText()</a> and <a class="el" href="class_o_n___color.html#a9d38b0e52ba53bde420b4498003f8f25">ON_Color::ToString()</a>. /summary&gt; </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">h</td><td>hue in radians 0 to 2*pi </td></tr>
@@ -964,6 +1195,88 @@ Static Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a9d38b0e52ba53bde420b4498003f8f25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d38b0e52ba53bde420b4498003f8f25">&#9670;&nbsp;</a></span>ToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_o_n__w_string.html">ON_wString</a> ON_Color::ToString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0">ON_Color::TextFormat</a>&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">wchar_t&#160;</td>
+          <td class="paramname"><em>separator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bFormatUnsetColor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">class <a class="el" href="class_o_n___text_log.html">ON_TextLog</a> &amp;&#160;</td>
+          <td class="paramname"><em>text_log</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Parameters: format - [in] separator - [in] character to sepearate numbers (unicode code point - UTF-16 surrogate pairs not supported) pass 0 for default. bFormatUnsetColor - [in] If true, <a class="el" href="class_o_n___color.html#a54c9448a0e7a53032cdb7f111163aca9" title="0xFFFFFFFFu">ON_Color::UnsetColor</a> will return "UnsetColor". Otherwise <a class="el" href="class_o_n___color.html#a54c9448a0e7a53032cdb7f111163aca9" title="0xFFFFFFFFu">ON_Color::UnsetColor</a> will return the empty string. text_log - [in] destination of the text. </p>
+
+</div>
+</div>
+<a id="ae438f9df9111e3bc48e89a10f7b54d93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae438f9df9111e3bc48e89a10f7b54d93">&#9670;&nbsp;</a></span>ToText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ON_Color::ToText </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0">ON_Color::TextFormat</a>&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">wchar_t&#160;</td>
+          <td class="paramname"><em>separator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bFormatUnsetColor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">class <a class="el" href="class_o_n___text_log.html">ON_TextLog</a> &amp;&#160;</td>
+          <td class="paramname"><em>text_log</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Parameters: format - [in] If format is <a class="el" href="class_o_n___color.html#a513c92c70be3bafb5e0d7d49fe07a1a0ac9f88e098f6fe4e4e112eeb05ccb9671">ON_Color::TextFormat::Unset</a>, then text_log.ColorFormat is used. separator - [in] character to sepearate numbers (unicode code point - UTF-16 surrogate pairs not supported) pass 0 for default. bFormatUnsetColor - [in] If true, <a class="el" href="class_o_n___color.html#a54c9448a0e7a53032cdb7f111163aca9" title="0xFFFFFFFFu">ON_Color::UnsetColor</a> will return "UnsetColor". Otherwise <a class="el" href="class_o_n___color.html#a54c9448a0e7a53032cdb7f111163aca9" title="0xFFFFFFFFu">ON_Color::UnsetColor</a> will return the empty string. text_log - [in] destination of the text. </p>
 
 </div>
 </div>
@@ -1374,7 +1687,7 @@ Static Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:22 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:48 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

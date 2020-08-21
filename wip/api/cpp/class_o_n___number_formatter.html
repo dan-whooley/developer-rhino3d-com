@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -82,6 +82,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a88e293a7393b159ee52681f1faf3f089"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab212e31502d9012f6fb36471798d1657"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___number_formatter.html#ab212e31502d9012f6fb36471798d1657">FormatAngleStringDMS</a> (double angle_degrees, <a class="el" href="class_o_n__w_string.html">ON_wString</a> &amp;formatted_string)</td></tr>
 <tr class="separator:ab212e31502d9012f6fb36471798d1657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abff212644fcf92e1d7b515e33c6fa2c0"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___number_formatter.html#abff212644fcf92e1d7b515e33c6fa2c0">FormatAngleStringDMS</a> (double angle_radians, int resolution, <a class="el" href="class_o_n__w_string.html">ON_wString</a> &amp;formatted_string)</td></tr>
+<tr class="separator:abff212644fcf92e1d7b515e33c6fa2c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a914656f8164b26486cfc030b583c2c28"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___number_formatter.html#a914656f8164b26486cfc030b583c2c28">FormatLength</a> (double distance, <a class="el" href="class_o_n___dim_style.html#af27da5e20982ca9c8efeb3a4fab055c4">ON_DimStyle::LengthDisplay</a> output_lengthdisplay, double round_off, int resolution, <a class="el" href="class_o_n___dim_style.html#a837e18d965995041e841cf510e83cd44">ON_DimStyle::suppress_zero</a> zero_suppress, bool bracket_fractions, <a class="el" href="class_o_n__w_string.html">ON_wString</a> &amp;output)</td></tr>
 <tr class="separator:a914656f8164b26486cfc030b583c2c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71c6c78b444dae70b622895136c3232c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___number_formatter.html#a71c6c78b444dae70b622895136c3232c">FormatNumber</a> (double distance, <a class="el" href="class_o_n___dim_style.html#aeece0b5c27a6d625454cdeb931352840">ON_DimStyle::OBSOLETE_length_format</a> output_lengthformat, double round_off, int resolution, <a class="el" href="class_o_n___dim_style.html#a837e18d965995041e841cf510e83cd44">ON_DimStyle::suppress_zero</a> zero_suppress, bool bracket_fractions, <a class="el" href="class_o_n__w_string.html">ON_wString</a> &amp;output)</td></tr>
@@ -158,7 +160,7 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="ab212e31502d9012f6fb36471798d1657"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab212e31502d9012f6fb36471798d1657">&#9670;&nbsp;</a></span>FormatAngleStringDMS()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab212e31502d9012f6fb36471798d1657">&#9670;&nbsp;</a></span>FormatAngleStringDMS() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -171,6 +173,48 @@ Static Public Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>angle_degrees</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n__w_string.html">ON_wString</a> &amp;&#160;</td>
+          <td class="paramname"><em>formatted_string</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abff212644fcf92e1d7b515e33c6fa2c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abff212644fcf92e1d7b515e33c6fa2c0">&#9670;&nbsp;</a></span>FormatAngleStringDMS() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ON_NumberFormatter::FormatAngleStringDMS </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>angle_radians</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>resolution</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -485,7 +529,7 @@ Static Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:26 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:53 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

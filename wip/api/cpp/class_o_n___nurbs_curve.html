@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -122,6 +122,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad654cac20e156f05855efff9987e6212"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adae903fba702c647cd6eda89387a7c6c"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#adae903fba702c647cd6eda89387a7c6c">CV</a> (int cv_index) const</td></tr>
 <tr class="separator:adae903fba702c647cd6eda89387a7c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c7eed9196b44e951908223f8f02f760"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#a3c7eed9196b44e951908223f8f02f760">CVCapacity</a> () const</td></tr>
+<tr class="separator:a3c7eed9196b44e951908223f8f02f760"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acaf683ad88b48abfaa6e6b9a32691dc1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#acaf683ad88b48abfaa6e6b9a32691dc1">CVCount</a> (void) const</td></tr>
 <tr class="separator:acaf683ad88b48abfaa6e6b9a32691dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affead01c1c81f9cb571d1dc228fb2581"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#affead01c1c81f9cb571d1dc228fb2581">CVSize</a> (void) const</td></tr>
@@ -193,8 +195,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5085e7adaa672ee043ccad3bb6f6cb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b9a8886fe40bdf03846f4f1a4f94e23"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#a9b9a8886fe40bdf03846f4f1a4f94e23">IsArc</a> (const <a class="el" href="class_o_n___plane.html">ON_Plane</a> *plane=nullptr, <a class="el" href="class_o_n___arc.html">ON_Arc</a> *arc=nullptr, double tolerance=<a class="el" href="group__open_n_u_r_b_s.html#ga384d9713cff6f46d203437be118aab80">ON_ZERO_TOLERANCE</a>) const override</td></tr>
 <tr class="separator:a9b9a8886fe40bdf03846f4f1a4f94e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a389503a0e9a7e84c3f655b1880aecfc6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#a389503a0e9a7e84c3f655b1880aecfc6">IsClamped</a> (int=2) const</td></tr>
-<tr class="separator:a389503a0e9a7e84c3f655b1880aecfc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae10627d5ede599458e8d938a227f4389"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#ae10627d5ede599458e8d938a227f4389">IsClamped</a> (int end=2) const</td></tr>
+<tr class="separator:ae10627d5ede599458e8d938a227f4389"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4fe8e5f17cb1b93507b333c515f632e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#ab4fe8e5f17cb1b93507b333c515f632e">IsClosed</a> () const override</td></tr>
 <tr class="separator:ab4fe8e5f17cb1b93507b333c515f632e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e4af21d4300a5c91ac3728561303687"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#a0e4af21d4300a5c91ac3728561303687">IsContinuous</a> (<a class="el" href="class_o_n.html#a7cec8c08d6bc50e082fb9e6507b5f668">ON::continuity</a> c, double t, int *hint=nullptr, double point_tolerance=<a class="el" href="group__open_n_u_r_b_s.html#ga384d9713cff6f46d203437be118aab80">ON_ZERO_TOLERANCE</a>, double d1_tolerance=<a class="el" href="group__open_n_u_r_b_s.html#ga384d9713cff6f46d203437be118aab80">ON_ZERO_TOLERANCE</a>, double d2_tolerance=<a class="el" href="group__open_n_u_r_b_s.html#ga384d9713cff6f46d203437be118aab80">ON_ZERO_TOLERANCE</a>, double cos_angle_tolerance=<a class="el" href="group__open_n_u_r_b_s.html#ga48817c15522bb78629b75ea385be6d06">ON_DEFAULT_ANGLE_TOLERANCE_COSINE</a>, double curvature_tolerance=<a class="el" href="group__open_n_u_r_b_s.html#gaf3d09b48940087a94d71e0489cc394ac">ON_SQRT_EPSILON</a>) const override</td></tr>
@@ -211,6 +213,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0f56d77bd085e599701bc4cba8b97e8b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#a0f56d77bd085e599701bc4cba8b97e8b">IsMorphable</a> () const override</td></tr>
 <tr class="memdesc:a0f56d77bd085e599701bc4cba8b97e8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">virtual <a class="el" href="class_o_n___geometry.html">ON_Geometry</a> override  <a href="class_o_n___nurbs_curve.html#a0f56d77bd085e599701bc4cba8b97e8b">More...</a><br /></td></tr>
 <tr class="separator:a0f56d77bd085e599701bc4cba8b97e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91270caaa2de80e6366a16fa85b6828b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#a91270caaa2de80e6366a16fa85b6828b">IsNatural</a> (int end=2) const</td></tr>
+<tr class="separator:a91270caaa2de80e6366a16fa85b6828b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8737f336e0ff7016aeb51dc01fbe0a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#aa8737f336e0ff7016aeb51dc01fbe0a3">IsPeriodic</a> () const override</td></tr>
 <tr class="separator:aa8737f336e0ff7016aeb51dc01fbe0a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89189d381ed587c088349810aa42340e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#a89189d381ed587c088349810aa42340e">IsPlanar</a> (<a class="el" href="class_o_n___plane.html">ON_Plane</a> *plane=nullptr, double tolerance=<a class="el" href="group__open_n_u_r_b_s.html#ga384d9713cff6f46d203437be118aab80">ON_ZERO_TOLERANCE</a>) const override</td></tr>
@@ -224,6 +228,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a68f6fa0b5ecfaf40f250af2164c34baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ecac459ced56970d0a2e459c8f95aef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#a0ecac459ced56970d0a2e459c8f95aef">IsSingular</a> () const</td></tr>
 <tr class="separator:a0ecac459ced56970d0a2e459c8f95aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5cc1cf1483263238f6d61305bb2cfa8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#ab5cc1cf1483263238f6d61305bb2cfa8">IsSubDFriendly</a> (bool bPermitCreases) const</td></tr>
+<tr class="separator:ab5cc1cf1483263238f6d61305bb2cfa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5f832bbf39edcecc8ac527ce91e1880"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#ac5f832bbf39edcecc8ac527ce91e1880">IsValid</a> (class <a class="el" href="class_o_n___text_log.html">ON_TextLog</a> *text_log=nullptr) const override</td></tr>
 <tr class="memdesc:ac5f832bbf39edcecc8ac527ce91e1880"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_o_n___object.html">ON_Object</a> overrides.  <a href="class_o_n___nurbs_curve.html#ac5f832bbf39edcecc8ac527ce91e1880">More...</a><br /></td></tr>
 <tr class="separator:ac5f832bbf39edcecc8ac527ce91e1880"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -231,6 +237,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7f48ebb778e171d2b2c58c6ffe228112"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6083945f13800dc6fd04dffc822c016"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#af6083945f13800dc6fd04dffc822c016">Knot</a> (int knot_index) const</td></tr>
 <tr class="separator:af6083945f13800dc6fd04dffc822c016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae674458f11b8dd3402aa9b050a831b81"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#ae674458f11b8dd3402aa9b050a831b81">KnotCapacity</a> () const</td></tr>
+<tr class="separator:ae674458f11b8dd3402aa9b050a831b81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af96df4a5c5a3558b209132e4be2f4327"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#af96df4a5c5a3558b209132e4be2f4327">KnotCount</a> (void) const</td></tr>
 <tr class="separator:af96df4a5c5a3558b209132e4be2f4327"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cbabace7ca53384de8b8987a2349c41"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#a3cbabace7ca53384de8b8987a2349c41">KnotMultiplicity</a> (int knot_index) const</td></tr>
@@ -248,6 +256,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac179535e6030c6726d2ef73e1315ebb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d2c3c59968998c5dfaf958ca52cf200"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#a0d2c3c59968998c5dfaf958ca52cf200">MakeRational</a> ()</td></tr>
 <tr class="separator:a0d2c3c59968998c5dfaf958ca52cf200"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47f0e7151c6afab468caf394e4cfd7d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#a47f0e7151c6afab468caf394e4cfd7d9">ManageKnotForExperts</a> (int knot_capacity, double *knot)</td></tr>
+<tr class="separator:a47f0e7151c6afab468caf394e4cfd7d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad309ad23cf76ecce7a02343953106e2d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#ad309ad23cf76ecce7a02343953106e2d">Morph</a> (const <a class="el" href="class_o_n___space_morph.html">ON_SpaceMorph</a> &amp;morph) override</td></tr>
 <tr class="memdesc:ad309ad23cf76ecce7a02343953106e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">virtual <a class="el" href="class_o_n___geometry.html">ON_Geometry</a> override  <a href="class_o_n___nurbs_curve.html#ad309ad23cf76ecce7a02343953106e2d">More...</a><br /></td></tr>
 <tr class="separator:ad309ad23cf76ecce7a02343953106e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -294,6 +304,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa57fdf2af5b0ff3f531d008fba7b7c82"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#aa57fdf2af5b0ff3f531d008fba7b7c82">SetStartPoint</a> (<a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> start_point) override</td></tr>
 <tr class="memdesc:aa57fdf2af5b0ff3f531d008fba7b7c82"><td class="mdescLeft">&#160;</td><td class="mdescRight">virtual  <a href="class_o_n___nurbs_curve.html#aa57fdf2af5b0ff3f531d008fba7b7c82">More...</a><br /></td></tr>
 <tr class="separator:aa57fdf2af5b0ff3f531d008fba7b7c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28a9241965860be56ab71cbdd392d2af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#a28a9241965860be56ab71cbdd392d2af">SetSubDFriendlyTag</a> (bool bSubDFriendlyTag)</td></tr>
+<tr class="separator:a28a9241965860be56ab71cbdd392d2af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8db558ea0f18d3ccf68db4d8a70ea578"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#a8db558ea0f18d3ccf68db4d8a70ea578">SetWeight</a> (int, double)</td></tr>
 <tr class="separator:a8db558ea0f18d3ccf68db4d8a70ea578"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a519796fb199145d307fd14579ebc0db3"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#a519796fb199145d307fd14579ebc0db3">SizeOf</a> () const override</td></tr>
@@ -309,6 +321,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad19bb0475e5ccbe5eba3182a09dd5097"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7c3377f4c0b675df37cdb0f1af189d5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#ae7c3377f4c0b675df37cdb0f1af189d5">Split</a> (double split_param, <a class="el" href="class_o_n___curve.html">ON_Curve</a> *&amp;left_result, <a class="el" href="class_o_n___curve.html">ON_Curve</a> *&amp;right_result) const override</td></tr>
 <tr class="separator:ae7c3377f4c0b675df37cdb0f1af189d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a872492e98c53b6481e4cc620a7de8d91"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#a872492e98c53b6481e4cc620a7de8d91">SubDFriendlyTag</a> () const</td></tr>
+<tr class="separator:a872492e98c53b6481e4cc620a7de8d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cd8608ed72018b60470dd8611de9794"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#a5cd8608ed72018b60470dd8611de9794">SuperfluousKnot</a> (int) const</td></tr>
 <tr class="separator:a5cd8608ed72018b60470dd8611de9794"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af03ea606562ab12a73ce5291dce5d3ed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#af03ea606562ab12a73ce5291dce5d3ed">SwapCoordinates</a> (int i, int j) override</td></tr>
@@ -319,6 +333,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac5a5f0259b22d7bd7d88ecaf8e4bf56f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9c1ba6a5a5d0322f241812b9d9bcc39"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#ac9c1ba6a5a5d0322f241812b9d9bcc39">TrimClosedCurve</a> (const <a class="el" href="class_o_n___interval.html">ON_Interval</a> &amp;in)</td></tr>
 <tr class="separator:ac9c1ba6a5a5d0322f241812b9d9bcc39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a434bc3a4873f752845ba8951d975bef5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#a434bc3a4873f752845ba8951d975bef5">UnmanageKnotForExperts</a> (int &amp;knot_capacity, double *&amp;knot)</td></tr>
+<tr class="separator:a434bc3a4873f752845ba8951d975bef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa7b2afff48b28e183429fae8f6a9d1e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#aaa7b2afff48b28e183429fae8f6a9d1e">Weight</a> (int) const</td></tr>
 <tr class="separator:aaa7b2afff48b28e183429fae8f6a9d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7c8d550cd0321d43d586d8de9e6ce28"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#ad7c8d550cd0321d43d586d8de9e6ce28">Write</a> (<a class="el" href="class_o_n___binary_archive.html">ON_BinaryArchive</a> &amp;binary_archive) const override</td></tr>
@@ -566,9 +582,6 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ad28e127080693cc4ef87ca43a0d9b080"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abaa83533288bb330b748342d0cfb74d0"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#abaa83533288bb330b748342d0cfb74d0">m_knot</a></td></tr>
 <tr class="separator:abaa83533288bb330b748342d0cfb74d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc9e06e08825006c5c7df1f72e3023d9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#afc9e06e08825006c5c7df1f72e3023d9">m_knot_capacity</a></td></tr>
-<tr class="memdesc:afc9e06e08825006c5c7df1f72e3023d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">knot vector memory  <a href="class_o_n___nurbs_curve.html#afc9e06e08825006c5c7df1f72e3023d9">More...</a><br /></td></tr>
-<tr class="separator:afc9e06e08825006c5c7df1f72e3023d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26503298565b83b632d89414def1cde9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___nurbs_curve.html#a26503298565b83b632d89414def1cde9">m_order</a></td></tr>
 <tr class="memdesc:a26503298565b83b632d89414def1cde9"><td class="mdescLeft">&#160;</td><td class="mdescRight">order = degree+1 ( order &gt;=2 )  <a href="class_o_n___nurbs_curve.html#a26503298565b83b632d89414def1cde9">More...</a><br /></td></tr>
 <tr class="separator:a26503298565b83b632d89414def1cde9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -841,7 +854,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Clamp end knots. Does not modify control points. Parameters: end - [in] 0 = clamp start, 1 = clamp end, 2 = clamp start and end Returns: true if successful </p>
+<p>Description: Clamp end knots. Does not modify the curve location, but can modify knots and control verticies near the ends. Parameters: end - [in] 0 = clamp start, 1 = clamp end, 2 = clamp start and end Returns: true if successful </p>
 
 </div>
 </div>
@@ -860,7 +873,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Parameters: cv_index - [in] zero based control point index Returns: Control point as an <a class="el" href="class_o_n__4d_point.html">ON_4dPoint</a>. Remarks: If cv_index or the nurbs curve is not valid, then <a class="el" href="class_o_n__4d_point.html#a83f0c10fc5a0eb0d8929a66c5131e150" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_4dPoint::Nan</a> is returned. If dim &lt; 3, unused coordinates are zero. If dim &gt;= 4, the first three coordinates are returned. If is_rat is false, the weight is 1. </p>
+<p>Parameters: cv_index - [in] zero based control point index Returns: Control point as an <a class="el" href="class_o_n__4d_point.html">ON_4dPoint</a>. Remarks: If cv_index or the nurbs curve is not valid, then <a class="el" href="group__open_n_u_r_b_s.html#ga83f0c10fc5a0eb0d8929a66c5131e150" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_4dPoint::Nan</a> is returned. If dim &lt; 3, unused coordinates are zero. If dim &gt;= 4, the first three coordinates are returned. If is_rat is false, the weight is 1. </p>
 
 </div>
 </div>
@@ -1063,6 +1076,24 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Description: Expert user function to get a pointer to control vertex memory. If you are not an expert user, please use ON_NurbsCurve::GetCV( ON_3dPoint&amp; ) or ON_NurbsCurve::GetCV( ON_4dPoint&amp; ). Parameters: cv_index - [in] Returns: Pointer to control vertex. Remarks: If the NURBS curve is rational, the format of the returned array is a homogeneos rational point with length m_dim+1. If the NURBS curve is not rational, the format of the returned array is a nonrational euclidean point with length m_dim. See Also <a class="el" href="class_o_n___nurbs_curve.html#adf58cfe325e12e51c2ec9fbe90712847">ON_NurbsCurve::CVStyle</a> <a class="el" href="class_o_n___nurbs_curve.html#af57730bec3e1626d7b46b7c6e6cdc482">ON_NurbsCurve::GetCV</a> <a class="el" href="class_o_n___nurbs_curve.html#aaa7b2afff48b28e183429fae8f6a9d1e">ON_NurbsCurve::Weight</a> </p>
+
+</div>
+</div>
+<a id="a3c7eed9196b44e951908223f8f02f760"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c7eed9196b44e951908223f8f02f760">&#9670;&nbsp;</a></span>CVCapacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ON_NurbsCurve::CVCapacity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns: If this class is managing m_cv, then <a class="el" href="class_o_n___nurbs_curve.html#a3c7eed9196b44e951908223f8f02f760">CVCapacity()</a> is the number of doubles m_cv[] can accomodate. Otherwise, <a class="el" href="class_o_n___nurbs_curve.html#a3c7eed9196b44e951908223f8f02f760">CVCapacity()</a> is 0. </p>
 
 </div>
 </div>
@@ -1456,7 +1487,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">bool ON_NurbsCurve::GetClosestPoint </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>test_point</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1499,7 +1530,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p>Reimplemented from <a class="el" href="class_o_n___curve.html#ad5a68aa7745e0f2c056ac1bf15265aee">ON_Curve</a>.</p>
+<p>Reimplemented from <a class="el" href="class_o_n___curve.html#af9de44ea2c03b30312f12fae4ad273d6">ON_Curve</a>.</p>
 
 </div>
 </div>
@@ -1950,9 +1981,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: virtual <a class="el" href="class_o_n___curve.html#ae619c78b795518c251c5ac32d34d568f">ON_Curve::GetSpanVector</a> override. Get number of parameters of distinct knots in NURBS curve's domain. Parameters: knot_values - [out] an array of length <a class="el" href="class_o_n___nurbs_curve.html#aa6ac461f346b5b39e40285648b2f7c9b">SpanCount()</a>+1 is filled in with the distinct knot values in the list (m_knot[m_order-2],...,m_knot[m_cv_count-1) Returns: true if successful </p>
+<p>Description: virtual <a class="el" href="class_o_n___curve.html#a4c6903f3c0a52d0faa42fb80c2834ba3">ON_Curve::GetSpanVector</a> override. Get number of parameters of distinct knots in NURBS curve's domain. Parameters: knot_values - [out] an array of length <a class="el" href="class_o_n___nurbs_curve.html#aa6ac461f346b5b39e40285648b2f7c9b">SpanCount()</a>+1 is filled in with the distinct knot values in the list (m_knot[m_order-2],...,m_knot[m_cv_count-1) Returns: true if successful </p>
 
-<p>Implements <a class="el" href="class_o_n___curve.html#ae619c78b795518c251c5ac32d34d568f">ON_Curve</a>.</p>
+<p>Implements <a class="el" href="class_o_n___curve.html#a4c6903f3c0a52d0faa42fb80c2834ba3">ON_Curve</a>.</p>
 
 </div>
 </div>
@@ -2131,8 +2162,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a389503a0e9a7e84c3f655b1880aecfc6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a389503a0e9a7e84c3f655b1880aecfc6">&#9670;&nbsp;</a></span>IsClamped()</h2>
+<a id="ae10627d5ede599458e8d938a227f4389"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae10627d5ede599458e8d938a227f4389">&#9670;&nbsp;</a></span>IsClamped()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2141,11 +2172,12 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">bool ON_NurbsCurve::IsClamped </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"> = <code>2</code></td><td>)</td>
+          <td class="paramname"><em>end</em> = <code>2</code></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Description: Test the knot vector to see if it is clamped. Parameters: end: 0: test start 1: test end 2: test start and end. </p>
 
 </div>
 </div>
@@ -2414,6 +2446,25 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a91270caaa2de80e6366a16fa85b6828b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91270caaa2de80e6366a16fa85b6828b">&#9670;&nbsp;</a></span>IsNatural()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_NurbsCurve::IsNatural </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>end</em> = <code>2</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Test the start or end of a curve to see if it's natural (Zero 2nd derivative). Parameters: end: 0: test start 1: test end 2: test start and end. </p>
+
+</div>
+</div>
 <a id="aa8737f336e0ff7016aeb51dc01fbe0a3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa8737f336e0ff7016aeb51dc01fbe0a3">&#9670;&nbsp;</a></span>IsPeriodic()</h2>
 
@@ -2603,6 +2654,25 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ab5cc1cf1483263238f6d61305bb2cfa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5cc1cf1483263238f6d61305bb2cfa8">&#9670;&nbsp;</a></span>IsSubDFriendly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_NurbsCurve::IsSubDFriendly </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bPermitCreases</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns: True if this NURBS curve is cubic, non-rational, uniform, and is either periodic or has clamped end knots. Parameters: bPermitCreases - [in] If true, then a curve with clamped end knots may have interior triple knots. Remarks: The value of <a class="el" href="class_o_n___nurbs_curve.html#a872492e98c53b6481e4cc620a7de8d91">SubDFriendlyTag()</a> is ignored. See Also: <a class="el" href="class_o_n___nurbs_curve.html#a872492e98c53b6481e4cc620a7de8d91">SubDFriendlyTag()</a>. </p>
+
+</div>
+</div>
 <a id="ac5f832bbf39edcecc8ac527ce91e1880"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac5f832bbf39edcecc8ac527ce91e1880">&#9670;&nbsp;</a></span>IsValid()</h2>
 
@@ -2667,6 +2737,24 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Description: Get knot value. Parameters: knot_index - [in] 0 &lt;= knot_index &lt;= <a class="el" href="class_o_n___nurbs_curve.html#af96df4a5c5a3558b209132e4be2f4327">KnotCount()</a>-1 Returns: knot value = m_knot[knot_index] See Also: <a class="el" href="class_o_n___nurbs_curve.html#aadbe513a703f18538aa1f080346b4a79">ON_NurbsCurve::SetKnot</a>, <a class="el" href="class_o_n___nurbs_curve.html#a3cbabace7ca53384de8b8987a2349c41">ON_NurbsCurve::KnotMultiplicity</a> </p>
+
+</div>
+</div>
+<a id="ae674458f11b8dd3402aa9b050a831b81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae674458f11b8dd3402aa9b050a831b81">&#9670;&nbsp;</a></span>KnotCapacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ON_NurbsCurve::KnotCapacity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns: If this class is managing m_knot, then <a class="el" href="class_o_n___nurbs_curve.html#ae674458f11b8dd3402aa9b050a831b81">KnotCapacity()</a> is the number of doubles m_knot[] can accomodate. Otherwise, <a class="el" href="class_o_n___nurbs_curve.html#ae674458f11b8dd3402aa9b050a831b81">KnotCapacity()</a> is 0. </p>
 
 </div>
 </div>
@@ -2824,6 +2912,35 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a47f0e7151c6afab468caf394e4cfd7d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47f0e7151c6afab468caf394e4cfd7d9">&#9670;&nbsp;</a></span>ManageKnotForExperts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ON_NurbsCurve::ManageKnotForExperts </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>knot_capacity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>knot</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Unconditionally transfer knot management to this NURBS curve. Sets <a class="el" href="class_o_n___nurbs_curve.html#ae674458f11b8dd3402aa9b050a831b81">KnotCapacity()</a> to knot_capacity and m_knot to knot. If knot_capacity &gt; 0, then knot must point to memory allocated by <a class="el" href="group__open_n_u_r_b_s.html#gacadf2b280c0895b23634d3ad33a6a04b">onmalloc()</a>/onrealloc(). Parameters: knot_capacity - [in] <a class="el" href="class_o_n___nurbs_curve.html#ae674458f11b8dd3402aa9b050a831b81">KnotCapacity()</a> is set to knot_capacity. knot - [in] m_knot is set to knot. </p>
 
 </div>
 </div>
@@ -3519,6 +3636,25 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a28a9241965860be56ab71cbdd392d2af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28a9241965860be56ab71cbdd392d2af">&#9670;&nbsp;</a></span>SetSubDFriendlyTag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ON_NurbsCurve::SetSubDFriendlyTag </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bSubDFriendlyTag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Set the curve's <a class="el" href="class_o_n___nurbs_curve.html#a872492e98c53b6481e4cc620a7de8d91">SubDFriendlyTag()</a> property. Parameters: bSubDFriendlyTag - [in] If bSubDFriendlyTag is true and IsSubDFriendly(true) is true, then the <a class="el" href="class_o_n___nurbs_curve.html#a872492e98c53b6481e4cc620a7de8d91">SubDFriendlyTag()</a> property is set to true. Otherwise the SubDFriendlyTag property is set to false. </p>
+
+</div>
+</div>
 <a id="a8db558ea0f18d3ccf68db4d8a70ea578"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8db558ea0f18d3ccf68db4d8a70ea578">&#9670;&nbsp;</a></span>SetWeight()</h2>
 
@@ -3760,6 +3896,24 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a872492e98c53b6481e4cc620a7de8d91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a872492e98c53b6481e4cc620a7de8d91">&#9670;&nbsp;</a></span>SubDFriendlyTag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_NurbsCurve::SubDFriendlyTag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns: True if this curve was explicitly tagged as SubDFriendly and is currently SubDFriendly. </p>
+
+</div>
+</div>
 <a id="a5cd8608ed72018b60470dd8611de9794"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5cd8608ed72018b60470dd8611de9794">&#9670;&nbsp;</a></span>SuperfluousKnot()</h2>
 
@@ -3893,6 +4047,35 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Description: If in is increasing, call <a class="el" href="group___rhino.html#gga83f7f17737758ec5bc52fc8c5840aa4ba1fc5884251ca9f20a4fd5f79a458f94f">Trim(in)</a>. If in is not increasing - If this is closed, make the subcurve given by the subdomain, [in[0], this-&gt;<a class="el" href="class_o_n___nurbs_curve.html#a60ddb0a327eeaf23fded63a7a3f62406" title="ON_Curve overrides.">Domain()</a>[1]] U [this-&gt;domain, in[1]]. The resulting domain will be [in[1], in[0]+this-&gt;Domain.Length()] Otherwise fail. Parameters: in - [in] a proper subdomain of the curve. Returns: true if successful. </p>
+
+</div>
+</div>
+<a id="a434bc3a4873f752845ba8951d975bef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a434bc3a4873f752845ba8951d975bef5">&#9670;&nbsp;</a></span>UnmanageKnotForExperts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ON_NurbsCurve::UnmanageKnotForExperts </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>knot_capacity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&amp;&#160;</td>
+          <td class="paramname"><em>knot</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Unconditionally transfer knot managment to caller and zero m_knot and <a class="el" href="class_o_n___nurbs_curve.html#ae674458f11b8dd3402aa9b050a831b81">KnotCapacity()</a>. Parameters: knot_capacity - [out] knot_capacity is set to input value of <a class="el" href="class_o_n___nurbs_curve.html#ae674458f11b8dd3402aa9b050a831b81">KnotCapacity()</a> and then <a class="el" href="class_o_n___nurbs_curve.html#ae674458f11b8dd3402aa9b050a831b81">KnotCapacity()</a> is set to 0. knot - [out] knot is set to input value of m_knot and then this-&gt;m_knot is set to nullptr. Remarks: If knot_capacity &gt; 0, then knot points to memory allocated by <a class="el" href="group__open_n_u_r_b_s.html#gacadf2b280c0895b23634d3ad33a6a04b">onmalloc()</a>/onrealloc(). </p>
 
 </div>
 </div>
@@ -4073,24 +4256,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Knot vector. ( The knot vector has length m_order+m_cv_count-2. ) </p>
-
-</div>
-</div>
-<a id="afc9e06e08825006c5c7df1f72e3023d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc9e06e08825006c5c7df1f72e3023d9">&#9670;&nbsp;</a></span>m_knot_capacity</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ON_NurbsCurve::m_knot_capacity</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>knot vector memory </p>
-<p>If m_knot_capacity &gt; 0, then m_knot[] is an array of at least m_knot_capacity doubles whose memory is managed by the <a class="el" href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a> class using <a class="el" href="group__open_n_u_r_b_s.html#gacadf2b280c0895b23634d3ad33a6a04b">onmalloc()</a>, <a class="el" href="group__open_n_u_r_b_s.html#ga4a8fe5a63aa8db84884b76d53e32b74b">onrealloc()</a>, and <a class="el" href="group__open_n_u_r_b_s.html#ga11bd5c38846c84d11a00bd1b1cd31e61">onfree()</a>. If m_knot_capacity is 0 and m_knot is not nullptr, then m_knot[] is assumed to be big enough for any requested operation and m_knot[] is not deleted by the destructor. </p>
+<p>unsigned int tags = (m_knot_capacity_and_tags &amp; ON_NurbsCurve::masks::tags); unsigned intknot_capacity = (m_knot_capacity_and_tags &amp; ON_NurbsCurve::masks::knot_capacity_mask); If knot_capacity &gt; 0, then m_knot[] is an array of at least knot_capacity doubles whose memory is managed by the <a class="el" href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a> class using <a class="el" href="group__open_n_u_r_b_s.html#gacadf2b280c0895b23634d3ad33a6a04b">onmalloc()</a>, <a class="el" href="group__open_n_u_r_b_s.html#ga4a8fe5a63aa8db84884b76d53e32b74b">onrealloc()</a>, and <a class="el" href="group__open_n_u_r_b_s.html#ga11bd5c38846c84d11a00bd1b1cd31e61">onfree()</a>. If knot_capacity is 0 and m_knot is not nullptr, then m_knot[] is assumed to be big enough for any requested operation and m_knot[] is not deleted by the destructor. Knot vector. ( The knot vector has length m_order+m_cv_count-2. ) </p>
 
 </div>
 </div>
@@ -4113,7 +4279,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:26 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:53 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

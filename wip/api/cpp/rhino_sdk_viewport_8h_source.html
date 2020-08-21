@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -1023,506 +1023,510 @@ $(function() {
 <div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;<span class="comment"></span>  <span class="comment">// returns true if construction plane z axis is parallel</span></div>
 <div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;  <span class="comment">// to camera direction.</span></div>
 <div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;  <span class="keywordtype">bool</span> IsPlanView() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160; </div>
-<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;<span class="comment">    Dolly the camera (change its location) so that the </span></div>
-<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;<span class="comment">    bbox is centered in the viewport and fills the </span></div>
-<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;<span class="comment">    central region of the viewport.  The &quot;target&quot; point</span></div>
-<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;<span class="comment">    is updated to be the center of the bounding box.</span></div>
-<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;<span class="comment">  Paramters:</span></div>
-<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;<span class="comment">    bbox - [in]</span></div>
-<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;<span class="comment">    cs - [in] coordinates system of the bounding box.</span></div>
-<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;<span class="comment">      NOTE WELL:</span></div>
-<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;<span class="comment">        If cs is anything besides ON::world_cs, the</span></div>
-<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;<span class="comment">        the coodinates are with respect to the current</span></div>
-<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;<span class="comment">        projection returned by this-&gt;VP().  Note</span></div>
-<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;<span class="comment">        that the call to DollyExtents will change the </span></div>
-<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;<span class="comment">        projection so that any non-world coordinate</span></div>
-<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;<span class="comment">        bbox will not be valid after the function </span></div>
-<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;<span class="comment">        returns.  If this is confusing, then restrict</span></div>
-<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;<span class="comment">        yourself to using world coordinate bounding boxes</span></div>
-<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;<span class="comment">        and cs = ON::world_cs.</span></div>
-<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;<span class="comment">  Remarks:</span></div>
-<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;<span class="comment">    The Rhino &quot;ZoomExtents&quot; command uses DollyExtents</span></div>
-<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;<span class="comment">    to calculate the view projection.  Technically,</span></div>
-<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;<span class="comment">    &quot;zoom&quot; would leave the camera location fixed and</span></div>
-<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;<span class="comment">    modify the camera angle.</span></div>
-<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;  <span class="keywordtype">bool</span> DollyExtents( </div>
-<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;    <a class="code" href="class_o_n___bounding_box.html">ON_BoundingBox</a> bbox,</div>
-<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;    <a class="code" href="class_o_n.html#a0601f59125faa5f99e9a281d6566978b">ON::coordinate_system</a> cs</div>
-<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;    );</div>
-<div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160; </div>
-<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;  <span class="comment">// mouse interaction tools</span></div>
-<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;  </div>
-<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;<span class="comment">    Rotate view around target.</span></div>
-<div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;  <span class="keywordtype">bool</span> MouseRotateView( <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse0, <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse1 );</div>
-<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160; </div>
-<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;<span class="comment">    Rotate view around camera location.</span></div>
-<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;  <span class="keywordtype">bool</span> MouseRotateCamera( <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse0, <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse1 );</div>
-<div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160; </div>
-<div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;  <span class="keywordtype">bool</span> MouseLateralDolly( <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse0, <span class="keyword">const</span> <a class="code" href="class_o_n__2i_vector.html">ON_2iVector</a>&amp; mouse1 );</div>
-<div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;  <span class="keywordtype">bool</span> MouseInOutDolly( <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse0, <span class="keyword">const</span> <a class="code" href="class_o_n__2i_vector.html">ON_2iVector</a>&amp; mouse1 );</div>
-<div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;  <span class="keywordtype">bool</span> MouseMagnify( <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse0, <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse1 );</div>
-<div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;  <span class="keywordtype">bool</span> MouseTilt( <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse0, <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse1 );</div>
-<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;  <span class="keywordtype">bool</span> MouseAdjustLensLength( <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse0, <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse1, <span class="keywordtype">bool</span> bMoveTarget = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;  <span class="keywordtype">bool</span> MouseDollyZoom( <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse0, <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse1);</div>
-<div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160; </div>
-<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;  <a class="code" href="class_o_n__3d_vector.html">ON_3dVector</a> MouseTrackballVector( </div>
-<div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;    <span class="keywordtype">int</span>, <span class="keywordtype">int</span> <span class="comment">// mousex, mousey</span></div>
-<div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160;    ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;<span class="comment">  //////////</span></div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;<span class="comment"></span>  <span class="comment">// returns true if the view is very similar to an existing named view in the document</span></div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;  <span class="keywordtype">bool</span> IsNamedView(<span class="keywordtype">bool</span>&amp; modified);</div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160; </div>
+<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;<span class="comment">    Dolly the camera (change its location) so that the </span></div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;<span class="comment">    bbox is centered in the viewport and fills the </span></div>
+<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;<span class="comment">    central region of the viewport.  The &quot;target&quot; point</span></div>
+<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;<span class="comment">    is updated to be the center of the bounding box.</span></div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;<span class="comment">  Paramters:</span></div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;<span class="comment">    bbox - [in]</span></div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;<span class="comment">    cs - [in] coordinates system of the bounding box.</span></div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;<span class="comment">      NOTE WELL:</span></div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;<span class="comment">        If cs is anything besides ON::world_cs, the</span></div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;<span class="comment">        the coodinates are with respect to the current</span></div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;<span class="comment">        projection returned by this-&gt;VP().  Note</span></div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;<span class="comment">        that the call to DollyExtents will change the </span></div>
+<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;<span class="comment">        projection so that any non-world coordinate</span></div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;<span class="comment">        bbox will not be valid after the function </span></div>
+<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;<span class="comment">        returns.  If this is confusing, then restrict</span></div>
+<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;<span class="comment">        yourself to using world coordinate bounding boxes</span></div>
+<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;<span class="comment">        and cs = ON::world_cs.</span></div>
+<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;<span class="comment">  Remarks:</span></div>
+<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;<span class="comment">    The Rhino &quot;ZoomExtents&quot; command uses DollyExtents</span></div>
+<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;<span class="comment">    to calculate the view projection.  Technically,</span></div>
+<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;<span class="comment">    &quot;zoom&quot; would leave the camera location fixed and</span></div>
+<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;<span class="comment">    modify the camera angle.</span></div>
+<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;  <span class="keywordtype">bool</span> DollyExtents( </div>
+<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;    <a class="code" href="class_o_n___bounding_box.html">ON_BoundingBox</a> bbox,</div>
+<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;    <a class="code" href="class_o_n.html#a0601f59125faa5f99e9a281d6566978b">ON::coordinate_system</a> cs</div>
+<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;    );</div>
+<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160; </div>
+<div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;  <span class="comment">// mouse interaction tools</span></div>
+<div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;  </div>
+<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;<span class="comment">    Rotate view around target.</span></div>
+<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;  <span class="keywordtype">bool</span> MouseRotateView( <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse0, <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse1 );</div>
+<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160; </div>
+<div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;<span class="comment">    Rotate view around camera location.</span></div>
+<div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;  <span class="keywordtype">bool</span> MouseRotateCamera( <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse0, <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse1 );</div>
+<div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160; </div>
+<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;  <span class="keywordtype">bool</span> MouseLateralDolly( <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse0, <span class="keyword">const</span> <a class="code" href="class_o_n__2i_vector.html">ON_2iVector</a>&amp; mouse1 );</div>
+<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;  <span class="keywordtype">bool</span> MouseInOutDolly( <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse0, <span class="keyword">const</span> <a class="code" href="class_o_n__2i_vector.html">ON_2iVector</a>&amp; mouse1 );</div>
+<div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;  <span class="keywordtype">bool</span> MouseMagnify( <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse0, <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse1 );</div>
+<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;  <span class="keywordtype">bool</span> MouseTilt( <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse0, <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse1 );</div>
+<div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;  <span class="keywordtype">bool</span> MouseAdjustLensLength( <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse0, <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse1, <span class="keywordtype">bool</span> bMoveTarget = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160;  <span class="keywordtype">bool</span> MouseDollyZoom( <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse0, <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; mouse1);</div>
 <div class="line"><a name="l01009"></a><span class="lineno"> 1009</span>&#160; </div>
-<div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160;  <span class="comment">// keyboard arrow key interaction tools</span></div>
-<div class="line"><a name="l01011"></a><span class="lineno"> 1011</span>&#160;  <span class="keywordtype">bool</span> LeftRightRotate( <span class="keywordtype">double</span> ); <span class="comment">// left &lt; 0 &lt; right</span></div>
-<div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160;  <span class="keywordtype">bool</span> DownUpRotate( <span class="keywordtype">double</span> );    <span class="comment">// down &lt; 0 &lt; up</span></div>
-<div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;  <span class="keywordtype">bool</span> LeftRightDolly( <span class="keywordtype">double</span> );  <span class="comment">// left &lt; 0 &lt; right</span></div>
-<div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160;  <span class="keywordtype">bool</span> DownUpDolly( <span class="keywordtype">double</span> );     <span class="comment">// down &lt; 0 &lt; up</span></div>
-<div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;  <span class="keywordtype">bool</span> InOutDolly( <span class="keywordtype">double</span> );     <span class="comment">// out &lt; 0 &lt; in</span></div>
-<div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;  <span class="keywordtype">bool</span> LateralDolly( <span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y );    <span class="comment">// left x &lt; 0 &lt; right x, down y &lt; 0 &lt; up y</span></div>
-<div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;  <span class="keywordtype">bool</span> Magnify( </div>
-<div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;          <span class="keywordtype">double</span>, <span class="comment">// magnification factor</span></div>
-<div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160;          <span class="keywordtype">int</span>,    <span class="comment">// 0 performs a &quot;dolly&quot; magnification by moving the </span></div>
-<div class="line"><a name="l01020"></a><span class="lineno"> 1020</span>&#160;                  <span class="comment">//   camera towards/away from the target so that the</span></div>
-<div class="line"><a name="l01021"></a><span class="lineno"> 1021</span>&#160;                  <span class="comment">//   amount of the screen subtended by an object</span></div>
-<div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160;                  <span class="comment">//   changes.</span></div>
-<div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160;                  <span class="comment">// 1 performs a &quot;zoom&quot; magnification by adjusting the</span></div>
-<div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160;                  <span class="comment">//   &quot;lense&quot; angle           </span></div>
-<div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;           <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>* = <span class="keyword">nullptr</span> <span class="comment">// optional fixed screen point</span></div>
-<div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160;          );</div>
-<div class="line"><a name="l01027"></a><span class="lineno"> 1027</span>&#160; </div>
-<div class="line"><a name="l01028"></a><span class="lineno"> 1028</span>&#160; </div>
-<div class="line"><a name="l01029"></a><span class="lineno"> 1029</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01030"></a><span class="lineno"> 1030</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160;<span class="comment">    Set the model transformation that is applied to geometry before</span></div>
-<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;<span class="comment">    it is drawn.</span></div>
-<div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;<span class="comment">    model_xform - [in]</span></div>
-<div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;<span class="comment">  Remarks:</span></div>
-<div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160;<span class="comment">    The default model transformation is the identity.  The</span></div>
-<div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;<span class="comment">    model transformation is intended to be used for dynamic</span></div>
-<div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;<span class="comment">    drawing of objects.  The camera and projection transformations</span></div>
-<div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;<span class="comment">    are handled in the m_v settings.</span></div>
-<div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;<span class="comment">  See Also:</span></div>
-<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;<span class="comment">    CRhinoViewport::SetDisplayXform</span></div>
-<div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;<span class="comment">    CRhinoViewport::GetModelXform</span></div>
-<div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;  <span class="keywordtype">void</span> SetModelXform( <span class="keyword">const</span> <a class="code" href="class_o_n___xform.html">ON_Xform</a>&amp; model_xform );</div>
-<div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160; </div>
-<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;<span class="comment">    Get the model transformation that is applied to geometry before</span></div>
-<div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;<span class="comment">    it is drawn.</span></div>
-<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;<span class="comment">    model_xform - [out]</span></div>
-<div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;<span class="comment">  Remarks:</span></div>
-<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;<span class="comment">    The default model transformation is the identity.  The</span></div>
-<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;<span class="comment">    model transformation is intended to be used for dynamic</span></div>
-<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;<span class="comment">    drawing of objects.  The camera and projection transformations</span></div>
-<div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;<span class="comment">    are handled in the m_v settings.</span></div>
-<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;<span class="comment">  See Also:</span></div>
-<div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;<span class="comment">    CRhinoViewport::SetModelXform</span></div>
-<div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;  <span class="keywordtype">void</span> GetModelXform( <a class="code" href="class_o_n___xform.html">ON_Xform</a>&amp; model_xform ) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160; </div>
-<div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;<span class="comment">    Set the display transformation that is applied to the projected</span></div>
-<div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;<span class="comment">    geometry immediately before it is drawn.  </span></div>
-<div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;<span class="comment">    display_xform - [in]</span></div>
-<div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;<span class="comment">  Remarks:</span></div>
-<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;<span class="comment">    The default display transformation is the identity.  The</span></div>
-<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;<span class="comment">    display transformation is intended to be used in printing</span></div>
-<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;<span class="comment">    applications.  The camera and projection transformations</span></div>
-<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;<span class="comment">    are handled in the m_v settings.</span></div>
-<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;<span class="comment">  See Also:</span></div>
-<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;<span class="comment">    CRhinoViewport::SetModelXform</span></div>
-<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;<span class="comment">    CRhinoViewport::GetDisplayXform</span></div>
-<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#gaa63845128782a6f08b19807e4395f41f">ON_DEPRECATED</a> <span class="keywordtype">void</span> SetDisplayXform( <span class="keyword">const</span> <a class="code" href="class_o_n___xform.html">ON_Xform</a>&amp; display_xform );</div>
-<div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160; </div>
-<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;<span class="comment">    Get the display transformation that is applied to the projected</span></div>
-<div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;<span class="comment">    geometry immediately before it is drawn.  </span></div>
-<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;<span class="comment">    display_xform - [out]</span></div>
-<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;<span class="comment">  Remarks:</span></div>
-<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;<span class="comment">    The default display transformation is the identity.  The</span></div>
-<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;<span class="comment">    display transformation is intended to be used in printing</span></div>
-<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;<span class="comment">    applications.  The camera and projection transformations</span></div>
-<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;<span class="comment">    are handled in the m_v settings.</span></div>
-<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;<span class="comment">  See Also:</span></div>
-<div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160;<span class="comment">    CRhinoViewport::SetDisplayXform</span></div>
-<div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#gaa63845128782a6f08b19807e4395f41f">ON_DEPRECATED</a> <span class="keywordtype">void</span> GetDisplayXform( <a class="code" href="class_o_n___xform.html">ON_Xform</a>&amp; display_xform ) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160; </div>
-<div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l01097"></a><span class="lineno"> 1097</span>&#160;<span class="comment">    Set the display transformation that is applied to marked objects.</span></div>
-<div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;<span class="comment">    mark_value - [in] if not zero, then objects with this mark value</span></div>
-<div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;<span class="comment">            are displayed using the marked_object_xform.</span></div>
-<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;<span class="comment">    marked_object_xform - [in]</span></div>
-<div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;<span class="comment">  Remarks:</span></div>
-<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;<span class="comment">    The default marked object transformation is the identity.</span></div>
-<div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;<span class="comment">    The marked object transformation is intended to be used when</span></div>
-<div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;<span class="comment">    inserting models.</span></div>
-<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;<span class="comment">  See Also:</span></div>
-<div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;<span class="comment">    CRhinoViewport::SetModelXform</span></div>
-<div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;<span class="comment">    CRhinoViewport::GetMarkedObjectXform</span></div>
-<div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;  <span class="keywordtype">void</span> SetMarkedObjectXform( </div>
-<div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;          <span class="keywordtype">int</span> mark_value,</div>
-<div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;          <span class="keyword">const</span> <a class="code" href="class_o_n___xform.html">ON_Xform</a>&amp; marked_object_xform </div>
-<div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;          );</div>
-<div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160; </div>
-<div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;<span class="comment">    Get the display transformation that is applied to marked objects.</span></div>
-<div class="line"><a name="l01118"></a><span class="lineno"> 1118</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;<span class="comment">    mark_value - [out]</span></div>
-<div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;<span class="comment">    marked_object_xform - [out]</span></div>
-<div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;<span class="comment">  See Also:</span></div>
-<div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;<span class="comment">    CRhinoViewport::SetMarkedObjectXform</span></div>
-<div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;  <span class="keywordtype">void</span> GetMarkedObjectXform( </div>
-<div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;        <span class="keywordtype">int</span>* mark_value, </div>
-<div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;        <a class="code" href="class_o_n___xform.html">ON_Xform</a>&amp; marked_object_xform </div>
-<div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160;        ) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01128"></a><span class="lineno"> 1128</span>&#160; </div>
-<div class="line"><a name="l01129"></a><span class="lineno"> 1129</span>&#160;  <span class="comment">// picking</span></div>
-<div class="line"><a name="l01130"></a><span class="lineno"> 1130</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01131"></a><span class="lineno"> 1131</span>&#160;<span class="comment">  //////////</span></div>
-<div class="line"><a name="l01132"></a><span class="lineno"> 1132</span>&#160;<span class="comment"></span>  <span class="comment">// GetPickXform takes a rectangle in screen coordinates and returns </span></div>
-<div class="line"><a name="l01133"></a><span class="lineno"> 1133</span>&#160;  <span class="comment">// a transformation that maps the 3d frustum defined by the rectangle</span></div>
-<div class="line"><a name="l01134"></a><span class="lineno"> 1134</span>&#160;  <span class="comment">// to a -1/+1 clipping coordinate box.</span></div>
-<div class="line"><a name="l01135"></a><span class="lineno"> 1135</span>&#160;  <span class="keywordtype">bool</span> GetPickXform( </div>
-<div class="line"><a name="l01136"></a><span class="lineno"> 1136</span>&#160;         <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="comment">// screen coordinates of a mouse click</span></div>
-<div class="line"><a name="l01137"></a><span class="lineno"> 1137</span>&#160;         <a class="code" href="class_o_n___xform.html">ON_Xform</a>&amp; </div>
-<div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;         ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160;  <a class="code" href="class_o_n__3d_vector.html">ON_3dVector</a> MouseTrackballVector( </div>
+<div class="line"><a name="l01011"></a><span class="lineno"> 1011</span>&#160;    <span class="keywordtype">int</span>, <span class="keywordtype">int</span> <span class="comment">// mousex, mousey</span></div>
+<div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160;    ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160; </div>
+<div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160;  <span class="comment">// keyboard arrow key interaction tools</span></div>
+<div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;  <span class="keywordtype">bool</span> LeftRightRotate( <span class="keywordtype">double</span> ); <span class="comment">// left &lt; 0 &lt; right</span></div>
+<div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;  <span class="keywordtype">bool</span> DownUpRotate( <span class="keywordtype">double</span> );    <span class="comment">// down &lt; 0 &lt; up</span></div>
+<div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;  <span class="keywordtype">bool</span> LeftRightDolly( <span class="keywordtype">double</span> );  <span class="comment">// left &lt; 0 &lt; right</span></div>
+<div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;  <span class="keywordtype">bool</span> DownUpDolly( <span class="keywordtype">double</span> );     <span class="comment">// down &lt; 0 &lt; up</span></div>
+<div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160;  <span class="keywordtype">bool</span> InOutDolly( <span class="keywordtype">double</span> );     <span class="comment">// out &lt; 0 &lt; in</span></div>
+<div class="line"><a name="l01020"></a><span class="lineno"> 1020</span>&#160;  <span class="keywordtype">bool</span> LateralDolly( <span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y );    <span class="comment">// left x &lt; 0 &lt; right x, down y &lt; 0 &lt; up y</span></div>
+<div class="line"><a name="l01021"></a><span class="lineno"> 1021</span>&#160;  <span class="keywordtype">bool</span> Magnify( </div>
+<div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160;          <span class="keywordtype">double</span>, <span class="comment">// magnification factor</span></div>
+<div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160;          <span class="keywordtype">int</span>,    <span class="comment">// 0 performs a &quot;dolly&quot; magnification by moving the </span></div>
+<div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160;                  <span class="comment">//   camera towards/away from the target so that the</span></div>
+<div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;                  <span class="comment">//   amount of the screen subtended by an object</span></div>
+<div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160;                  <span class="comment">//   changes.</span></div>
+<div class="line"><a name="l01027"></a><span class="lineno"> 1027</span>&#160;                  <span class="comment">// 1 performs a &quot;zoom&quot; magnification by adjusting the</span></div>
+<div class="line"><a name="l01028"></a><span class="lineno"> 1028</span>&#160;                  <span class="comment">//   &quot;lense&quot; angle           </span></div>
+<div class="line"><a name="l01029"></a><span class="lineno"> 1029</span>&#160;           <span class="keyword">const</span> <a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>* = <span class="keyword">nullptr</span> <span class="comment">// optional fixed screen point</span></div>
+<div class="line"><a name="l01030"></a><span class="lineno"> 1030</span>&#160;          );</div>
+<div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160; </div>
+<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160; </div>
+<div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;<span class="comment">    Set the model transformation that is applied to geometry before</span></div>
+<div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160;<span class="comment">    it is drawn.</span></div>
+<div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;<span class="comment">    model_xform - [in]</span></div>
+<div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;<span class="comment">  Remarks:</span></div>
+<div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;<span class="comment">    The default model transformation is the identity.  The</span></div>
+<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;<span class="comment">    model transformation is intended to be used for dynamic</span></div>
+<div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;<span class="comment">    drawing of objects.  The camera and projection transformations</span></div>
+<div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;<span class="comment">    are handled in the m_v settings.</span></div>
+<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;<span class="comment">  See Also:</span></div>
+<div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;<span class="comment">    CRhinoViewport::SetDisplayXform</span></div>
+<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;<span class="comment">    CRhinoViewport::GetModelXform</span></div>
+<div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;  <span class="keywordtype">void</span> SetModelXform( <span class="keyword">const</span> <a class="code" href="class_o_n___xform.html">ON_Xform</a>&amp; model_xform );</div>
+<div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160; </div>
+<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;<span class="comment">    Get the model transformation that is applied to geometry before</span></div>
+<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;<span class="comment">    it is drawn.</span></div>
+<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;<span class="comment">    model_xform - [out]</span></div>
+<div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;<span class="comment">  Remarks:</span></div>
+<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;<span class="comment">    The default model transformation is the identity.  The</span></div>
+<div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;<span class="comment">    model transformation is intended to be used for dynamic</span></div>
+<div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;<span class="comment">    drawing of objects.  The camera and projection transformations</span></div>
+<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;<span class="comment">    are handled in the m_v settings.</span></div>
+<div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160;<span class="comment">  See Also:</span></div>
+<div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;<span class="comment">    CRhinoViewport::SetModelXform</span></div>
+<div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;  <span class="keywordtype">void</span> GetModelXform( <a class="code" href="class_o_n___xform.html">ON_Xform</a>&amp; model_xform ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160; </div>
+<div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;<span class="comment">    Set the display transformation that is applied to the projected</span></div>
+<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;<span class="comment">    geometry immediately before it is drawn.  </span></div>
+<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;<span class="comment">    display_xform - [in]</span></div>
+<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;<span class="comment">  Remarks:</span></div>
+<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;<span class="comment">    The default display transformation is the identity.  The</span></div>
+<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;<span class="comment">    display transformation is intended to be used in printing</span></div>
+<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;<span class="comment">    applications.  The camera and projection transformations</span></div>
+<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;<span class="comment">    are handled in the m_v settings.</span></div>
+<div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;<span class="comment">  See Also:</span></div>
+<div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;<span class="comment">    CRhinoViewport::SetModelXform</span></div>
+<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;<span class="comment">    CRhinoViewport::GetDisplayXform</span></div>
+<div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#gaa63845128782a6f08b19807e4395f41f">ON_DEPRECATED</a> <span class="keywordtype">void</span> SetDisplayXform( <span class="keyword">const</span> <a class="code" href="class_o_n___xform.html">ON_Xform</a>&amp; display_xform );</div>
+<div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160; </div>
+<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;<span class="comment">    Get the display transformation that is applied to the projected</span></div>
+<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;<span class="comment">    geometry immediately before it is drawn.  </span></div>
+<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;<span class="comment">    display_xform - [out]</span></div>
+<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;<span class="comment">  Remarks:</span></div>
+<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;<span class="comment">    The default display transformation is the identity.  The</span></div>
+<div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160;<span class="comment">    display transformation is intended to be used in printing</span></div>
+<div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;<span class="comment">    applications.  The camera and projection transformations</span></div>
+<div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;<span class="comment">    are handled in the m_v settings.</span></div>
+<div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160;<span class="comment">  See Also:</span></div>
+<div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160;<span class="comment">    CRhinoViewport::SetDisplayXform</span></div>
+<div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01097"></a><span class="lineno"> 1097</span>&#160;  <a class="code" href="group__open_n_u_r_b_s.html#gaa63845128782a6f08b19807e4395f41f">ON_DEPRECATED</a> <span class="keywordtype">void</span> GetDisplayXform( <a class="code" href="class_o_n___xform.html">ON_Xform</a>&amp; display_xform ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160; </div>
+<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;<span class="comment">    Set the display transformation that is applied to marked objects.</span></div>
+<div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;<span class="comment">    mark_value - [in] if not zero, then objects with this mark value</span></div>
+<div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;<span class="comment">            are displayed using the marked_object_xform.</span></div>
+<div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;<span class="comment">    marked_object_xform - [in]</span></div>
+<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;<span class="comment">  Remarks:</span></div>
+<div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;<span class="comment">    The default marked object transformation is the identity.</span></div>
+<div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;<span class="comment">    The marked object transformation is intended to be used when</span></div>
+<div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;<span class="comment">    inserting models.</span></div>
+<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;<span class="comment">  See Also:</span></div>
+<div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;<span class="comment">    CRhinoViewport::SetModelXform</span></div>
+<div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;<span class="comment">    CRhinoViewport::GetMarkedObjectXform</span></div>
+<div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160;  <span class="keywordtype">void</span> SetMarkedObjectXform( </div>
+<div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160;          <span class="keywordtype">int</span> mark_value,</div>
+<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;          <span class="keyword">const</span> <a class="code" href="class_o_n___xform.html">ON_Xform</a>&amp; marked_object_xform </div>
+<div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;          );</div>
+<div class="line"><a name="l01118"></a><span class="lineno"> 1118</span>&#160; </div>
+<div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;<span class="comment">    Get the display transformation that is applied to marked objects.</span></div>
+<div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;<span class="comment">    mark_value - [out]</span></div>
+<div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;<span class="comment">    marked_object_xform - [out]</span></div>
+<div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;<span class="comment">  See Also:</span></div>
+<div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;<span class="comment">    CRhinoViewport::SetMarkedObjectXform</span></div>
+<div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01128"></a><span class="lineno"> 1128</span>&#160;  <span class="keywordtype">void</span> GetMarkedObjectXform( </div>
+<div class="line"><a name="l01129"></a><span class="lineno"> 1129</span>&#160;        <span class="keywordtype">int</span>* mark_value, </div>
+<div class="line"><a name="l01130"></a><span class="lineno"> 1130</span>&#160;        <a class="code" href="class_o_n___xform.html">ON_Xform</a>&amp; marked_object_xform </div>
+<div class="line"><a name="l01131"></a><span class="lineno"> 1131</span>&#160;        ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01132"></a><span class="lineno"> 1132</span>&#160; </div>
+<div class="line"><a name="l01133"></a><span class="lineno"> 1133</span>&#160;  <span class="comment">// picking</span></div>
+<div class="line"><a name="l01134"></a><span class="lineno"> 1134</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l01135"></a><span class="lineno"> 1135</span>&#160;<span class="comment">  //////////</span></div>
+<div class="line"><a name="l01136"></a><span class="lineno"> 1136</span>&#160;<span class="comment"></span>  <span class="comment">// GetPickXform takes a rectangle in screen coordinates and returns </span></div>
+<div class="line"><a name="l01137"></a><span class="lineno"> 1137</span>&#160;  <span class="comment">// a transformation that maps the 3d frustum defined by the rectangle</span></div>
+<div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;  <span class="comment">// to a -1/+1 clipping coordinate box.</span></div>
 <div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160;  <span class="keywordtype">bool</span> GetPickXform( </div>
-<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_o_n__4i_rect.html">ON_4iRect</a>&amp;, <span class="comment">// screen coordinates of a rectangle defining the picking frustum</span></div>
-<div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;    <a class="code" href="class_o_n___xform.html">ON_Xform</a>&amp; </div>
-<div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160;    ) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160;  <span class="keywordtype">bool</span> SetClippingRegionTransformation(</div>
-<div class="line"><a name="l01144"></a><span class="lineno"> 1144</span>&#160;    <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="comment">// screen coordinates of a mouse click</span></div>
-<div class="line"><a name="l01145"></a><span class="lineno"> 1145</span>&#160;    <span class="keyword">class</span> <a class="code" href="class_o_n___clipping_region.html">ON_ClippingRegion</a>&amp; clip_region</div>
+<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;         <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="comment">// screen coordinates of a mouse click</span></div>
+<div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;         <a class="code" href="class_o_n___xform.html">ON_Xform</a>&amp; </div>
+<div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160;         ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160;  <span class="keywordtype">bool</span> GetPickXform( </div>
+<div class="line"><a name="l01144"></a><span class="lineno"> 1144</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_o_n__4i_rect.html">ON_4iRect</a>&amp;, <span class="comment">// screen coordinates of a rectangle defining the picking frustum</span></div>
+<div class="line"><a name="l01145"></a><span class="lineno"> 1145</span>&#160;    <a class="code" href="class_o_n___xform.html">ON_Xform</a>&amp; </div>
 <div class="line"><a name="l01146"></a><span class="lineno"> 1146</span>&#160;    ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l01147"></a><span class="lineno"> 1147</span>&#160;  <span class="keywordtype">bool</span> SetClippingRegionTransformation(</div>
-<div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_o_n__4i_rect.html">ON_4iRect</a>&amp;, <span class="comment">// screen coordinates of a rectangle defining the picking frustum</span></div>
+<div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160;    <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="comment">// screen coordinates of a mouse click</span></div>
 <div class="line"><a name="l01149"></a><span class="lineno"> 1149</span>&#160;    <span class="keyword">class</span> <a class="code" href="class_o_n___clipping_region.html">ON_ClippingRegion</a>&amp; clip_region</div>
 <div class="line"><a name="l01150"></a><span class="lineno"> 1150</span>&#160;    ) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01151"></a><span class="lineno"> 1151</span>&#160; </div>
-<div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;  <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>*  DisplayPipeline(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01153"></a><span class="lineno"> 1153</span>&#160;  <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>*  AttachPipeline(<a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>*);</div>
-<div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160; </div>
+<div class="line"><a name="l01151"></a><span class="lineno"> 1151</span>&#160;  <span class="keywordtype">bool</span> SetClippingRegionTransformation(</div>
+<div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_o_n__4i_rect.html">ON_4iRect</a>&amp;, <span class="comment">// screen coordinates of a rectangle defining the picking frustum</span></div>
+<div class="line"><a name="l01153"></a><span class="lineno"> 1153</span>&#160;    <span class="keyword">class</span> <a class="code" href="class_o_n___clipping_region.html">ON_ClippingRegion</a>&amp; clip_region</div>
+<div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160;    ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160; </div>
-<div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;  <span class="comment">//Description:</span></div>
-<div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;  <span class="comment">//  Convert a point in parent CRhinoView client window coordinates to the ON_Viewport screen port</span></div>
-<div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;  <span class="comment">//  client coordinates. The screen port of a CRhinoViewport may not match the client area of</span></div>
-<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;  <span class="comment">//  the parent CRhinoView. This occurs in cases when the CRhinoViewport is a nested child viewport</span></div>
-<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;  <span class="comment">//Parameters:</span></div>
-<div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;  <span class="comment">//  pt [in/out]: point in client coordinates of parent CRhinoView window as input. This is</span></div>
-<div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;  <span class="comment">//               converted to the screen port client coordinates of the ON_Viewport as output</span></div>
-<div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;  <span class="comment">//Returns:</span></div>
-<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;  <span class="comment">//  true if the point is inside of the CRhinoViewport&#39;s screen port rectangle</span></div>
-<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;  <span class="keywordtype">bool</span> ClientToScreenPort(<a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; pt) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160; </div>
-<div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;  <span class="comment">// Description:</span></div>
-<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;  <span class="comment">//   Determines if this viewport is the main viewport for a page view. Page views</span></div>
-<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;  <span class="comment">//   should be able to be panned and zoomed, but not rotated or changed to a</span></div>
-<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;  <span class="comment">//   different camera view vector. This is used by functions that attempt to set the</span></div>
-<div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;  <span class="comment">//   viewport&#39;s projection. If the projection is not compatible with a page view and</span></div>
-<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;  <span class="comment">//   IsPageViewMainViewport() == true, then the setting of the projection is not allowed</span></div>
-<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;  <span class="comment">// Return:</span></div>
-<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;  <span class="comment">//   true if thie viewport is the main viewport for a CRhinoPageView</span></div>
-<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;  <span class="keywordtype">bool</span> IsPageViewMainViewport() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160; </div>
-<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;  <span class="comment">// Description:</span></div>
-<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;  <span class="comment">//   Similar to an operator= except this will not modify the viewport id unless told to.</span></div>
-<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;  <span class="comment">//   Items not copied are: m_draw_step, m_vp_iteration, m_xform_iteration, m_dp</span></div>
-<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;  <span class="comment">//                         m_cplane_stack, m_cplane_stack_index</span></div>
-<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;  <span class="comment">// Parameters:</span></div>
-<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;  <span class="comment">//   src [in]: CRhinoViewport to copy information from</span></div>
-<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;  <span class="comment">//   copy_id [in]: If true, this viewport&#39;s id will be changed to match that of src. This is</span></div>
-<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;  <span class="comment">//                 typically NOT something that you want to do. This set to true for operations</span></div>
-<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;  <span class="comment">//                 like printing in order to work with a temporary CRhinoViewport that is an</span></div>
-<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;  <span class="comment">//                 exact duplicate of teh src viewport</span></div>
-<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;  <span class="keywordtype">void</span> CopyFrom(<span class="keyword">const</span> <a class="code" href="class_c_rhino_viewport.html">CRhinoViewport</a>&amp; src, <span class="keywordtype">bool</span> copy_id = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;  <span class="keywordtype">void</span> CopyFrom(<span class="keyword">const</span> <a class="code" href="class_c_rhino_viewport.html">CRhinoViewport</a>&amp; src, <span class="keywordtype">bool</span> copy_id, <span class="keywordtype">bool</span> copy_parent_view);</div>
-<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160; </div>
-<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;  <span class="comment">// Description:</span></div>
-<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;  <span class="comment">//   Determines if printing or &quot;print display&quot; is active for this viewport</span></div>
-<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;  <span class="comment">// Parameters:</span></div>
-<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;  <span class="comment">//   thickness_scale [out] - optional. Scale applied to an object&#39;s plot thickness for</span></div>
-<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;  <span class="comment">//                           displaying on the screen or printing</span></div>
-<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;  <span class="comment">// Returns:</span></div>
-<div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;  <span class="comment">//   true if printing or print display is active for this viewport</span></div>
-<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;  <span class="keywordtype">bool</span> IsThickDisplayActive(<span class="keywordtype">double</span>* thickness_scale = <span class="keyword">nullptr</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160; </div>
-<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;  <span class="keyword">const</span> <span class="keyword">class </span>CRhTraceImage* GetTraceImage(<span class="keywordtype">void</span>)     <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;  <span class="keyword">const</span> <span class="keyword">class </span>CRhWallpaper*  GetWallpaperImage(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160; </div>
-<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;  <span class="keywordtype">int</span> ScreenWidth()  <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;  <span class="keywordtype">int</span> ScreenHeight() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;  <span class="keywordtype">int</span> Iteration()<span class="keyword">    const </span>{ <span class="keywordflow">return</span> m_vp_iteration;  }</div>
+<div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;  <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>*  DisplayPipeline(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;  <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>*  AttachPipeline(<a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>*);</div>
+<div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160; </div>
+<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160; </div>
+<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;  <span class="comment">//Description:</span></div>
+<div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;  <span class="comment">//  Convert a point in parent CRhinoView client window coordinates to the ON_Viewport screen port</span></div>
+<div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;  <span class="comment">//  client coordinates. The screen port of a CRhinoViewport may not match the client area of</span></div>
+<div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;  <span class="comment">//  the parent CRhinoView. This occurs in cases when the CRhinoViewport is a nested child viewport</span></div>
+<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;  <span class="comment">//Parameters:</span></div>
+<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;  <span class="comment">//  pt [in/out]: point in client coordinates of parent CRhinoView window as input. This is</span></div>
+<div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;  <span class="comment">//               converted to the screen port client coordinates of the ON_Viewport as output</span></div>
+<div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;  <span class="comment">//Returns:</span></div>
+<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;  <span class="comment">//  true if the point is inside of the CRhinoViewport&#39;s screen port rectangle</span></div>
+<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;  <span class="keywordtype">bool</span> ClientToScreenPort(<a class="code" href="class_o_n__2i_point.html">ON_2iPoint</a>&amp; pt) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160; </div>
+<div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;  <span class="comment">// Description:</span></div>
+<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;  <span class="comment">//   Determines if this viewport is the main viewport for a page view. Page views</span></div>
+<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;  <span class="comment">//   should be able to be panned and zoomed, but not rotated or changed to a</span></div>
+<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;  <span class="comment">//   different camera view vector. This is used by functions that attempt to set the</span></div>
+<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;  <span class="comment">//   viewport&#39;s projection. If the projection is not compatible with a page view and</span></div>
+<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;  <span class="comment">//   IsPageViewMainViewport() == true, then the setting of the projection is not allowed</span></div>
+<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;  <span class="comment">// Return:</span></div>
+<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;  <span class="comment">//   true if thie viewport is the main viewport for a CRhinoPageView</span></div>
+<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;  <span class="keywordtype">bool</span> IsPageViewMainViewport() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160; </div>
+<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;  <span class="comment">// Description:</span></div>
+<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;  <span class="comment">//   Similar to an operator= except this will not modify the viewport id unless told to.</span></div>
+<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;  <span class="comment">//   Items not copied are: m_draw_step, m_vp_iteration, m_xform_iteration, m_dp</span></div>
+<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;  <span class="comment">//                         m_cplane_stack, m_cplane_stack_index</span></div>
+<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;  <span class="comment">// Parameters:</span></div>
+<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;  <span class="comment">//   src [in]: CRhinoViewport to copy information from</span></div>
+<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;  <span class="comment">//   copy_id [in]: If true, this viewport&#39;s id will be changed to match that of src. This is</span></div>
+<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;  <span class="comment">//                 typically NOT something that you want to do. This set to true for operations</span></div>
+<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;  <span class="comment">//                 like printing in order to work with a temporary CRhinoViewport that is an</span></div>
+<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;  <span class="comment">//                 exact duplicate of teh src viewport</span></div>
+<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;  <span class="keywordtype">void</span> CopyFrom(<span class="keyword">const</span> <a class="code" href="class_c_rhino_viewport.html">CRhinoViewport</a>&amp; src, <span class="keywordtype">bool</span> copy_id = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;  <span class="keywordtype">void</span> CopyFrom(<span class="keyword">const</span> <a class="code" href="class_c_rhino_viewport.html">CRhinoViewport</a>&amp; src, <span class="keywordtype">bool</span> copy_id, <span class="keywordtype">bool</span> copy_parent_view);</div>
+<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160; </div>
+<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;  <span class="comment">// Description:</span></div>
+<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;  <span class="comment">//   Determines if printing or &quot;print display&quot; is active for this viewport</span></div>
+<div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;  <span class="comment">// Parameters:</span></div>
+<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;  <span class="comment">//   thickness_scale [out] - optional. Scale applied to an object&#39;s plot thickness for</span></div>
+<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;  <span class="comment">//                           displaying on the screen or printing</span></div>
+<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;  <span class="comment">// Returns:</span></div>
+<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;  <span class="comment">//   true if printing or print display is active for this viewport</span></div>
+<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;  <span class="keywordtype">bool</span> IsThickDisplayActive(<span class="keywordtype">double</span>* thickness_scale = <span class="keyword">nullptr</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160; </div>
+<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;  <span class="keyword">const</span> <span class="keyword">class </span>CRhTraceImage* GetTraceImage(<span class="keywordtype">void</span>)     <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;  <span class="keyword">const</span> <span class="keyword">class </span>CRhWallpaper*  GetWallpaperImage(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160; </div>
-<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l01207"></a><span class="lineno"><a class="line" href="class_c_rhino_viewport.html#aafa6bf2e7d24a19123c6e4c34d7bba28"> 1207</a></span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;<span class="comment">    Update the transform cache.  If m_xform_iteration != m_vp_iteration</span></div>
-<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;<span class="comment">    or bForceUpdate is true, the cache is updated.</span></div>
-<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;<span class="comment">    true if the transformations are set.</span></div>
-<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;  <span class="keywordtype">bool</span> UpdateTransforms( BOOL bForceUpdate = <span class="keyword">false</span> );</div>
-<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160; </div>
-<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;  <span class="comment">// pretend these are private and you&#39;ll be happier.</span></div>
-<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;  <a class="code" href="class_o_n__3dm_view.html">ON_3dmView</a> m_v; <span class="comment">// viewport settings</span></div>
-<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;  <a class="code" href="class_o_n___class_array.html">ON_ClassArray&lt;ON_3dmView&gt;</a> m_view_stack;</div>
-<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;  <span class="keywordtype">int</span> m_view_stack_index = -1; <span class="comment">// -1 or index of view in use</span></div>
-<div class="line"><a name="l01221"></a><span class="lineno"><a class="line" href="class_c_rhino_viewport.html#aff016891776447ccf0b40fdf93fe052c"> 1221</a></span>&#160; </div>
-<div class="line"><a name="l01222"></a><span class="lineno"><a class="line" href="class_c_rhino_viewport.html#a029b5acf5465aa4c5171c6e97a9c5bec"> 1222</a></span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l01223"></a><span class="lineno"><a class="line" href="class_c_rhino_viewport.html#a2d9cc14e72e4979945222aa37383a285"> 1223</a></span>&#160;  <span class="keyword">class </span>CRhWallpaper* m_wallpaper = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;  <span class="keyword">class </span>CRhTraceImage* m_traceimage = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160; </div>
-<div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;  <span class="comment">// special shaded display settings</span></div>
-<div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160;  <span class="keywordtype">bool</span> m_bFlatShade = <span class="keyword">false</span>;     <span class="comment">// applies to mesh objects in shaded mode</span></div>
-<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;  <span class="keywordtype">bool</span> m_bSelectedShade = <span class="keyword">false</span>; <span class="comment">// applies to mesh, surface, and polysrf objects in shaded mode</span></div>
+<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;  <span class="keywordtype">int</span> ScreenWidth()  <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;  <span class="keywordtype">int</span> ScreenHeight() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;  <span class="keywordtype">int</span> Iteration()<span class="keyword">    const </span>{ <span class="keywordflow">return</span> m_vp_iteration;  }</div>
+<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160; </div>
+<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l01211"></a><span class="lineno"><a class="line" href="class_c_rhino_viewport.html#aafa6bf2e7d24a19123c6e4c34d7bba28"> 1211</a></span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;<span class="comment">    Update the transform cache.  If m_xform_iteration != m_vp_iteration</span></div>
+<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;<span class="comment">    or bForceUpdate is true, the cache is updated.</span></div>
+<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;<span class="comment">    true if the transformations are set.</span></div>
+<div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;  <span class="keywordtype">bool</span> UpdateTransforms( BOOL bForceUpdate = <span class="keyword">false</span> );</div>
+<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160; </div>
+<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;  <span class="comment">// pretend these are private and you&#39;ll be happier.</span></div>
+<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;  <a class="code" href="class_o_n__3dm_view.html">ON_3dmView</a> m_v; <span class="comment">// viewport settings</span></div>
+<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;  <a class="code" href="class_o_n___class_array.html">ON_ClassArray&lt;ON_3dmView&gt;</a> m_view_stack;</div>
+<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;  <span class="keywordtype">int</span> m_view_stack_index = -1; <span class="comment">// -1 or index of view in use</span></div>
+<div class="line"><a name="l01225"></a><span class="lineno"><a class="line" href="class_c_rhino_viewport.html#aff016891776447ccf0b40fdf93fe052c"> 1225</a></span>&#160; </div>
+<div class="line"><a name="l01226"></a><span class="lineno"><a class="line" href="class_c_rhino_viewport.html#a029b5acf5465aa4c5171c6e97a9c5bec"> 1226</a></span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l01227"></a><span class="lineno"><a class="line" href="class_c_rhino_viewport.html#a2d9cc14e72e4979945222aa37383a285"> 1227</a></span>&#160;  <span class="keyword">class </span>CRhWallpaper* m_wallpaper = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;  <span class="keyword">class </span>CRhTraceImage* m_traceimage = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160; </div>
-<div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;  <span class="comment">// if m_marked_object_xform is not the identity, then marked</span></div>
-<div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;  <span class="comment">// objects will be drawn with this xform applied.  This is </span></div>
-<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;  <span class="comment">// used in commands like &quot;Insert&quot;.</span></div>
-<div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160;  <span class="keywordtype">int</span> m_marked_object_mark_value = 0;</div>
-<div class="line"><a name="l01234"></a><span class="lineno"> 1234</span>&#160;  <a class="code" href="class_o_n___xform.html">ON_Xform</a> m_marked_object_xform; <span class="comment">// default = identity;</span></div>
-<div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160; </div>
-<div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160;  <a class="code" href="class_o_n___xform.html">ON_Xform</a> m_model_xform;   <span class="comment">// default = identity</span></div>
-<div class="line"><a name="l01237"></a><span class="lineno"> 1237</span>&#160; </div>
-<div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m__parent_view_sn = 0;  <span class="comment">// parent CRhinoView</span></div>
+<div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;  <span class="comment">// special shaded display settings</span></div>
+<div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;  <span class="keywordtype">bool</span> m_bFlatShade = <span class="keyword">false</span>;     <span class="comment">// applies to mesh objects in shaded mode</span></div>
+<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;  <span class="keywordtype">bool</span> m_bSelectedShade = <span class="keyword">false</span>; <span class="comment">// applies to mesh, surface, and polysrf objects in shaded mode</span></div>
+<div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160; </div>
+<div class="line"><a name="l01234"></a><span class="lineno"> 1234</span>&#160;  <span class="comment">// if m_marked_object_xform is not the identity, then marked</span></div>
+<div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160;  <span class="comment">// objects will be drawn with this xform applied.  This is </span></div>
+<div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160;  <span class="comment">// used in commands like &quot;Insert&quot;.</span></div>
+<div class="line"><a name="l01237"></a><span class="lineno"> 1237</span>&#160;  <span class="keywordtype">int</span> m_marked_object_mark_value = 0;</div>
+<div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160;  <a class="code" href="class_o_n___xform.html">ON_Xform</a> m_marked_object_xform; <span class="comment">// default = identity;</span></div>
 <div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160; </div>
-<div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> m_vp_iteration = 1; <span class="comment">// incremented every time the view projection changes (never 0)</span></div>
-<div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160;  <span class="keywordtype">int</span>           m_clip_z = 1;       <span class="comment">// true to z-clip wires and points</span></div>
-<div class="line"><a name="l01242"></a><span class="lineno"> 1242</span>&#160; </div>
-<div class="line"><a name="l01243"></a><span class="lineno"> 1243</span>&#160;  <a class="code" href="class_o_n___class_array.html">ON_ClassArray&lt;ON_3dmConstructionPlane&gt;</a> m_cplane_stack;</div>
-<div class="line"><a name="l01244"></a><span class="lineno"> 1244</span>&#160;  <span class="keywordtype">int</span> m_cplane_stack_index = -1; <span class="comment">// -1 or index of cplane in use</span></div>
-<div class="line"><a name="l01245"></a><span class="lineno"> 1245</span>&#160; </div>
-<div class="line"><a name="l01246"></a><span class="lineno"> 1246</span>&#160;  <span class="comment">// if m_xform_iteration != m_vp_iteration, transforms are not up to date</span></div>
-<div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> m_xform_iteration = 0; </div>
-<div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160; </div>
-<div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160;  <span class="comment">// world to clip transformation (includes model transformation)</span></div>
-<div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;  <a class="code" href="class_o_n___xform.html">ON_Xform</a> m_w2c;</div>
-<div class="line"><a name="l01251"></a><span class="lineno"> 1251</span>&#160; </div>
-<div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160;  <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>* m_dp = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l01253"></a><span class="lineno"> 1253</span>&#160; </div>
-<div class="line"><a name="l01254"></a><span class="lineno"> 1254</span>&#160;  ON__UINT_PTR m_sdk_reserved = 0;</div>
-<div class="line"><a name="l01255"></a><span class="lineno"> 1255</span>&#160;<span class="keyword">private</span>:<span class="comment"></span></div>
-<div class="line"><a name="l01256"></a><span class="lineno"> 1256</span>&#160;<span class="comment">  //// no implementation on purpose ////</span></div>
-<div class="line"><a name="l01257"></a><span class="lineno"> 1257</span>&#160;<span class="comment"></span>  <a class="code" href="class_c_rhino_viewport.html">CRhinoViewport</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_c_rhino_viewport.html">CRhinoViewport</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l01258"></a><span class="lineno"> 1258</span>&#160;  <a class="code" href="class_c_rhino_viewport.html">CRhinoViewport</a>(<span class="keyword">const</span> <a class="code" href="class_c_rhino_viewport.html">CRhinoViewport</a>&amp;);</div>
-<div class="line"><a name="l01259"></a><span class="lineno"> 1259</span>&#160; </div>
-<div class="line"><a name="l01260"></a><span class="lineno"> 1260</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_c_rhino_view.html">CRhinoView</a>;</div>
-<div class="line"><a name="l01261"></a><span class="lineno"> 1261</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_c_rhino_detail_view_object.html">CRhinoDetailViewObject</a>;</div>
-<div class="line"><a name="l01262"></a><span class="lineno"> 1262</span>&#160; </div>
-<div class="line"><a name="l01263"></a><span class="lineno"><a class="line" href="class_c_rhino_viewport.html#af8a87904e1063e4014f29754e51a37e2"> 1263</a></span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l01264"></a><span class="lineno"><a class="line" href="class_c_rhino_viewport.html#a6b236a6639a0ebd8672faf9dfcb65a4c"> 1264</a></span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(<span class="stringliteral">&quot;use CRhinoDisplayPipeline::SetObjectColor&quot;</span>)</div>
-<div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160;  <a class="code" href="class_o_n___color.html">ON_Color</a> SetDrawColor(COLORREF color);</div>
-<div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::ObjectColor&quot;)</div>
-<div class="line"><a name="l01267"></a><span class="lineno"> 1267</span>&#160;  <a class="code" href="class_o_n___color.html">ON_Color</a> DrawColor() const;</div>
-<div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::InterruptDrawing&quot;)</div>
-<div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160;  <span class="keywordtype">bool</span> InterruptDrawing() const;</div>
-<div class="line"><a name="l01270"></a><span class="lineno"> 1270</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawConstructionPlane&quot;)</div>
-<div class="line"><a name="l01271"></a><span class="lineno"> 1271</span>&#160;  <span class="keywordtype">void</span> DrawConstructionPlane(</div>
-<div class="line"><a name="l01272"></a><span class="lineno"> 1272</span>&#160;    const <a class="code" href="class_o_n__3dm_construction_plane.html">ON_3dmConstructionPlane</a>&amp; cplane,</div>
-<div class="line"><a name="l01273"></a><span class="lineno"> 1273</span>&#160;    BOOL bShowConstructionGrid,</div>
-<div class="line"><a name="l01274"></a><span class="lineno"> 1274</span>&#160;    BOOL bShowConstructionAxes,</div>
-<div class="line"><a name="l01275"></a><span class="lineno"> 1275</span>&#160;    BOOL bShowConstructionZAxis,</div>
-<div class="line"><a name="l01276"></a><span class="lineno"> 1276</span>&#160;    COLORREF thin_line_color = <a class="code" href="group__open_n_u_r_b_s.html#ga768e6ba42c38dfcbcf1e9e8f6db69f15">ON_UNSET_COLOR</a>,</div>
-<div class="line"><a name="l01277"></a><span class="lineno"> 1277</span>&#160;    COLORREF thick_line_color = <a class="code" href="group__open_n_u_r_b_s.html#ga768e6ba42c38dfcbcf1e9e8f6db69f15">ON_UNSET_COLOR</a>,</div>
-<div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160;    COLORREF grid_x_axis_color = <a class="code" href="group__open_n_u_r_b_s.html#ga768e6ba42c38dfcbcf1e9e8f6db69f15">ON_UNSET_COLOR</a>,</div>
-<div class="line"><a name="l01279"></a><span class="lineno"> 1279</span>&#160;    COLORREF grid_y_axis_color = <a class="code" href="group__open_n_u_r_b_s.html#ga768e6ba42c38dfcbcf1e9e8f6db69f15">ON_UNSET_COLOR</a></div>
-<div class="line"><a name="l01280"></a><span class="lineno"> 1280</span>&#160;  );</div>
-<div class="line"><a name="l01281"></a><span class="lineno"> 1281</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawPoint&quot;)</div>
-<div class="line"><a name="l01282"></a><span class="lineno"> 1282</span>&#160;  <span class="keywordtype">void</span> DrawPoint(const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp;, const <a class="code" href="class_o_n__3d_vector.html">ON_3dVector</a>* = <span class="keywordtype">nullptr</span>);</div>
-<div class="line"><a name="l01283"></a><span class="lineno"> 1283</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawLine&quot;)</div>
-<div class="line"><a name="l01284"></a><span class="lineno"> 1284</span>&#160;  <span class="keywordtype">void</span> DrawLine(const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp;, const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp;);</div>
-<div class="line"><a name="l01285"></a><span class="lineno"> 1285</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawDottedLine&quot;)</div>
-<div class="line"><a name="l01286"></a><span class="lineno"> 1286</span>&#160;  <span class="keywordtype">void</span> DrawDottedLine(const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp;, const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp;);</div>
-<div class="line"><a name="l01287"></a><span class="lineno"> 1287</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawArc&quot;)</div>
-<div class="line"><a name="l01288"></a><span class="lineno"> 1288</span>&#160;  <span class="keywordtype">void</span> DrawArc(const <a class="code" href="class_o_n___arc.html">ON_Arc</a>&amp;);</div>
-<div class="line"><a name="l01289"></a><span class="lineno"> 1289</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawCircle&quot;)</div>
-<div class="line"><a name="l01290"></a><span class="lineno"> 1290</span>&#160;  <span class="keywordtype">void</span> DrawCircle(const <a class="code" href="class_o_n___circle.html">ON_Circle</a>&amp;);</div>
-<div class="line"><a name="l01291"></a><span class="lineno"> 1291</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawPoints&quot;)</div>
-<div class="line"><a name="l01292"></a><span class="lineno"> 1292</span>&#160;  <span class="keywordtype">void</span> DrawPointCloud(<span class="keywordtype">int</span> point_count, const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>* points, const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp; origin);</div>
-<div class="line"><a name="l01293"></a><span class="lineno"> 1293</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawSphere&quot;)</div>
-<div class="line"><a name="l01294"></a><span class="lineno"> 1294</span>&#160;  <span class="keywordtype">void</span> DrawSphere(const <a class="code" href="class_o_n___sphere.html">ON_Sphere</a>&amp; sphere);</div>
-<div class="line"><a name="l01295"></a><span class="lineno"> 1295</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawTorus&quot;)</div>
-<div class="line"><a name="l01296"></a><span class="lineno"> 1296</span>&#160;  <span class="keywordtype">void</span> DrawTorus(const <a class="code" href="class_o_n___torus.html">ON_Torus</a>&amp; torus);</div>
-<div class="line"><a name="l01297"></a><span class="lineno"> 1297</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawCylinder&quot;)</div>
-<div class="line"><a name="l01298"></a><span class="lineno"> 1298</span>&#160;  <span class="keywordtype">void</span> DrawCylinder(const <a class="code" href="class_o_n___cylinder.html">ON_Cylinder</a>&amp; cylinder);</div>
-<div class="line"><a name="l01299"></a><span class="lineno"> 1299</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawCone&quot;)</div>
-<div class="line"><a name="l01300"></a><span class="lineno"> 1300</span>&#160;  <span class="keywordtype">void</span> DrawCone(const <a class="code" href="class_o_n___cone.html">ON_Cone</a>&amp; cone);</div>
-<div class="line"><a name="l01301"></a><span class="lineno"> 1301</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawBox&quot;)</div>
-<div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;  <span class="keywordtype">void</span> DrawBox(const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>* box_corners);</div>
-<div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawLight&quot;)</div>
-<div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;  <span class="keywordtype">void</span> DrawLight(const <a class="code" href="class_o_n___light.html">ON_Light</a>&amp; light, COLORREF wireframe_color);</div>
-<div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawCurve&quot;)</div>
-<div class="line"><a name="l01306"></a><span class="lineno"> 1306</span>&#160;  <span class="keywordtype">void</span> DrawCurve(const <a class="code" href="class_o_n___curve.html">ON_Curve</a>&amp; curve);</div>
-<div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawNurbsCurve&quot;)</div>
-<div class="line"><a name="l01308"></a><span class="lineno"> 1308</span>&#160;  <span class="keywordtype">void</span> DrawNurbsCurve(const <a class="code" href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a>&amp; nurbs_curve);</div>
-<div class="line"><a name="l01309"></a><span class="lineno"> 1309</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawWireframeMesh&quot;)</div>
-<div class="line"><a name="l01310"></a><span class="lineno"> 1310</span>&#160;  <span class="keywordtype">void</span> DrawWireframeMesh(const <a class="code" href="class_o_n___mesh.html">ON_Mesh</a>*, BOOL bCullCW);</div>
-<div class="line"><a name="l01311"></a><span class="lineno"> 1311</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawShadedMesh&quot;)</div>
-<div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;  <span class="keywordtype">void</span> DrawShadedMesh(const <a class="code" href="class_o_n___mesh.html">ON_Mesh</a>*, <span class="keywordtype">bool</span> bCullCW, <span class="keywordtype">bool</span> bFlatShade, <span class="keywordtype">bool</span> bHighlighted);</div>
-<div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawShadedMesh&quot;)</div>
-<div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160;  <span class="keywordtype">void</span> DrawRenderPreviewMesh(const <a class="code" href="class_o_n___mesh.html">ON_Mesh</a>*, const <a class="code" href="class_c_rhino_material.html">CRhinoMaterial</a>&amp; render_material, BOOL bCullCW, BOOL bHighlighted);</div>
+<div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>&#160;  <a class="code" href="class_o_n___xform.html">ON_Xform</a> m_model_xform;   <span class="comment">// default = identity</span></div>
+<div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160; </div>
+<div class="line"><a name="l01242"></a><span class="lineno"> 1242</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m__parent_view_sn = 0;  <span class="comment">// parent CRhinoView</span></div>
+<div class="line"><a name="l01243"></a><span class="lineno"> 1243</span>&#160; </div>
+<div class="line"><a name="l01244"></a><span class="lineno"> 1244</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> m_vp_iteration = 1; <span class="comment">// incremented every time the view projection changes (never 0)</span></div>
+<div class="line"><a name="l01245"></a><span class="lineno"> 1245</span>&#160;  <span class="keywordtype">int</span>           m_clip_z = 1;       <span class="comment">// true to z-clip wires and points</span></div>
+<div class="line"><a name="l01246"></a><span class="lineno"> 1246</span>&#160; </div>
+<div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160;  <a class="code" href="class_o_n___class_array.html">ON_ClassArray&lt;ON_3dmConstructionPlane&gt;</a> m_cplane_stack;</div>
+<div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160;  <span class="keywordtype">int</span> m_cplane_stack_index = -1; <span class="comment">// -1 or index of cplane in use</span></div>
+<div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160; </div>
+<div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;  <span class="comment">// if m_xform_iteration != m_vp_iteration, transforms are not up to date</span></div>
+<div class="line"><a name="l01251"></a><span class="lineno"> 1251</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> m_xform_iteration = 0; </div>
+<div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160; </div>
+<div class="line"><a name="l01253"></a><span class="lineno"> 1253</span>&#160;  <span class="comment">// world to clip transformation (includes model transformation)</span></div>
+<div class="line"><a name="l01254"></a><span class="lineno"> 1254</span>&#160;  <a class="code" href="class_o_n___xform.html">ON_Xform</a> m_w2c;</div>
+<div class="line"><a name="l01255"></a><span class="lineno"> 1255</span>&#160; </div>
+<div class="line"><a name="l01256"></a><span class="lineno"> 1256</span>&#160;  <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>* m_dp = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l01257"></a><span class="lineno"> 1257</span>&#160; </div>
+<div class="line"><a name="l01258"></a><span class="lineno"> 1258</span>&#160;  ON__UINT_PTR m_sdk_reserved = 0;</div>
+<div class="line"><a name="l01259"></a><span class="lineno"> 1259</span>&#160;<span class="keyword">private</span>:<span class="comment"></span></div>
+<div class="line"><a name="l01260"></a><span class="lineno"> 1260</span>&#160;<span class="comment">  //// no implementation on purpose ////</span></div>
+<div class="line"><a name="l01261"></a><span class="lineno"> 1261</span>&#160;<span class="comment"></span>  <a class="code" href="class_c_rhino_viewport.html">CRhinoViewport</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_c_rhino_viewport.html">CRhinoViewport</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l01262"></a><span class="lineno"> 1262</span>&#160;  <a class="code" href="class_c_rhino_viewport.html">CRhinoViewport</a>(<span class="keyword">const</span> <a class="code" href="class_c_rhino_viewport.html">CRhinoViewport</a>&amp;);</div>
+<div class="line"><a name="l01263"></a><span class="lineno"> 1263</span>&#160; </div>
+<div class="line"><a name="l01264"></a><span class="lineno"> 1264</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_c_rhino_view.html">CRhinoView</a>;</div>
+<div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_c_rhino_detail_view_object.html">CRhinoDetailViewObject</a>;</div>
+<div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160; </div>
+<div class="line"><a name="l01267"></a><span class="lineno"><a class="line" href="class_c_rhino_viewport.html#af8a87904e1063e4014f29754e51a37e2"> 1267</a></span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l01268"></a><span class="lineno"><a class="line" href="class_c_rhino_viewport.html#a6b236a6639a0ebd8672faf9dfcb65a4c"> 1268</a></span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(<span class="stringliteral">&quot;use CRhinoDisplayPipeline::SetObjectColor&quot;</span>)</div>
+<div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160;  <a class="code" href="class_o_n___color.html">ON_Color</a> SetDrawColor(COLORREF color);</div>
+<div class="line"><a name="l01270"></a><span class="lineno"> 1270</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::ObjectColor&quot;)</div>
+<div class="line"><a name="l01271"></a><span class="lineno"> 1271</span>&#160;  <a class="code" href="class_o_n___color.html">ON_Color</a> DrawColor() const;</div>
+<div class="line"><a name="l01272"></a><span class="lineno"> 1272</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::InterruptDrawing&quot;)</div>
+<div class="line"><a name="l01273"></a><span class="lineno"> 1273</span>&#160;  <span class="keywordtype">bool</span> InterruptDrawing() const;</div>
+<div class="line"><a name="l01274"></a><span class="lineno"> 1274</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawConstructionPlane&quot;)</div>
+<div class="line"><a name="l01275"></a><span class="lineno"> 1275</span>&#160;  <span class="keywordtype">void</span> DrawConstructionPlane(</div>
+<div class="line"><a name="l01276"></a><span class="lineno"> 1276</span>&#160;    const <a class="code" href="class_o_n__3dm_construction_plane.html">ON_3dmConstructionPlane</a>&amp; cplane,</div>
+<div class="line"><a name="l01277"></a><span class="lineno"> 1277</span>&#160;    BOOL bShowConstructionGrid,</div>
+<div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160;    BOOL bShowConstructionAxes,</div>
+<div class="line"><a name="l01279"></a><span class="lineno"> 1279</span>&#160;    BOOL bShowConstructionZAxis,</div>
+<div class="line"><a name="l01280"></a><span class="lineno"> 1280</span>&#160;    COLORREF thin_line_color = <a class="code" href="group__open_n_u_r_b_s.html#ga768e6ba42c38dfcbcf1e9e8f6db69f15">ON_UNSET_COLOR</a>,</div>
+<div class="line"><a name="l01281"></a><span class="lineno"> 1281</span>&#160;    COLORREF thick_line_color = <a class="code" href="group__open_n_u_r_b_s.html#ga768e6ba42c38dfcbcf1e9e8f6db69f15">ON_UNSET_COLOR</a>,</div>
+<div class="line"><a name="l01282"></a><span class="lineno"> 1282</span>&#160;    COLORREF grid_x_axis_color = <a class="code" href="group__open_n_u_r_b_s.html#ga768e6ba42c38dfcbcf1e9e8f6db69f15">ON_UNSET_COLOR</a>,</div>
+<div class="line"><a name="l01283"></a><span class="lineno"> 1283</span>&#160;    COLORREF grid_y_axis_color = <a class="code" href="group__open_n_u_r_b_s.html#ga768e6ba42c38dfcbcf1e9e8f6db69f15">ON_UNSET_COLOR</a></div>
+<div class="line"><a name="l01284"></a><span class="lineno"> 1284</span>&#160;  );</div>
+<div class="line"><a name="l01285"></a><span class="lineno"> 1285</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawPoint&quot;)</div>
+<div class="line"><a name="l01286"></a><span class="lineno"> 1286</span>&#160;  <span class="keywordtype">void</span> DrawPoint(const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp;, const <a class="code" href="class_o_n__3d_vector.html">ON_3dVector</a>* = <span class="keywordtype">nullptr</span>);</div>
+<div class="line"><a name="l01287"></a><span class="lineno"> 1287</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawLine&quot;)</div>
+<div class="line"><a name="l01288"></a><span class="lineno"> 1288</span>&#160;  <span class="keywordtype">void</span> DrawLine(const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp;, const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp;);</div>
+<div class="line"><a name="l01289"></a><span class="lineno"> 1289</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawDottedLine&quot;)</div>
+<div class="line"><a name="l01290"></a><span class="lineno"> 1290</span>&#160;  <span class="keywordtype">void</span> DrawDottedLine(const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp;, const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp;);</div>
+<div class="line"><a name="l01291"></a><span class="lineno"> 1291</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawArc&quot;)</div>
+<div class="line"><a name="l01292"></a><span class="lineno"> 1292</span>&#160;  <span class="keywordtype">void</span> DrawArc(const <a class="code" href="class_o_n___arc.html">ON_Arc</a>&amp;);</div>
+<div class="line"><a name="l01293"></a><span class="lineno"> 1293</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawCircle&quot;)</div>
+<div class="line"><a name="l01294"></a><span class="lineno"> 1294</span>&#160;  <span class="keywordtype">void</span> DrawCircle(const <a class="code" href="class_o_n___circle.html">ON_Circle</a>&amp;);</div>
+<div class="line"><a name="l01295"></a><span class="lineno"> 1295</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawPoints&quot;)</div>
+<div class="line"><a name="l01296"></a><span class="lineno"> 1296</span>&#160;  <span class="keywordtype">void</span> DrawPointCloud(<span class="keywordtype">int</span> point_count, const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>* points, const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp; origin);</div>
+<div class="line"><a name="l01297"></a><span class="lineno"> 1297</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawSphere&quot;)</div>
+<div class="line"><a name="l01298"></a><span class="lineno"> 1298</span>&#160;  <span class="keywordtype">void</span> DrawSphere(const <a class="code" href="class_o_n___sphere.html">ON_Sphere</a>&amp; sphere);</div>
+<div class="line"><a name="l01299"></a><span class="lineno"> 1299</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawTorus&quot;)</div>
+<div class="line"><a name="l01300"></a><span class="lineno"> 1300</span>&#160;  <span class="keywordtype">void</span> DrawTorus(const <a class="code" href="class_o_n___torus.html">ON_Torus</a>&amp; torus);</div>
+<div class="line"><a name="l01301"></a><span class="lineno"> 1301</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawCylinder&quot;)</div>
+<div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;  <span class="keywordtype">void</span> DrawCylinder(const <a class="code" href="class_o_n___cylinder.html">ON_Cylinder</a>&amp; cylinder);</div>
+<div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawCone&quot;)</div>
+<div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;  <span class="keywordtype">void</span> DrawCone(const <a class="code" href="class_o_n___cone.html">ON_Cone</a>&amp; cone);</div>
+<div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawBox&quot;)</div>
+<div class="line"><a name="l01306"></a><span class="lineno"> 1306</span>&#160;  <span class="keywordtype">void</span> DrawBox(const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>* box_corners);</div>
+<div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawLight&quot;)</div>
+<div class="line"><a name="l01308"></a><span class="lineno"> 1308</span>&#160;  <span class="keywordtype">void</span> DrawLight(const <a class="code" href="class_o_n___light.html">ON_Light</a>&amp; light, COLORREF wireframe_color);</div>
+<div class="line"><a name="l01309"></a><span class="lineno"> 1309</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawCurve&quot;)</div>
+<div class="line"><a name="l01310"></a><span class="lineno"> 1310</span>&#160;  <span class="keywordtype">void</span> DrawCurve(const <a class="code" href="class_o_n___curve.html">ON_Curve</a>&amp; curve);</div>
+<div class="line"><a name="l01311"></a><span class="lineno"> 1311</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawNurbsCurve&quot;)</div>
+<div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;  <span class="keywordtype">void</span> DrawNurbsCurve(const <a class="code" href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a>&amp; nurbs_curve);</div>
+<div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawWireframeMesh&quot;)</div>
+<div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160;  <span class="keywordtype">void</span> DrawWireframeMesh(const <a class="code" href="class_o_n___mesh.html">ON_Mesh</a>*, BOOL bCullCW);</div>
 <div class="line"><a name="l01315"></a><span class="lineno"> 1315</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawShadedMesh&quot;)</div>
-<div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160;  <span class="keywordtype">void</span> DrawFalseColorMesh(const <a class="code" href="class_o_n___mesh.html">ON_Mesh</a>*, <span class="keywordtype">bool</span> bCullCW, COLORREF edge_color = <a class="code" href="group__open_n_u_r_b_s.html#ga768e6ba42c38dfcbcf1e9e8f6db69f15">ON_UNSET_COLOR</a>);</div>
-<div class="line"><a name="l01317"></a><span class="lineno"> 1317</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawPoint&quot;)</div>
-<div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160;  <span class="keywordtype">void</span> DrawActivePoint(const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp;);</div>
-<div class="line"><a name="l01319"></a><span class="lineno"> 1319</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawBox&quot;)</div>
-<div class="line"><a name="l01320"></a><span class="lineno"> 1320</span>&#160;  <span class="keywordtype">void</span> DrawBoundingBox(const <a class="code" href="class_o_n___bounding_box.html">ON_BoundingBox</a>&amp;);</div>
-<div class="line"><a name="l01321"></a><span class="lineno"> 1321</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawBezier&quot;)</div>
-<div class="line"><a name="l01322"></a><span class="lineno"> 1322</span>&#160;  <span class="keywordtype">void</span> DrawBezier(const <a class="code" href="class_o_n___bezier_curve.html">ON_BezierCurve</a>&amp;);</div>
-<div class="line"><a name="l01323"></a><span class="lineno"> 1323</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawSurface&quot;)</div>
-<div class="line"><a name="l01324"></a><span class="lineno"> 1324</span>&#160;  <span class="keywordtype">void</span> DrawSurface(const <a class="code" href="class_o_n___surface.html">ON_Surface</a>&amp;, <span class="keywordtype">int</span> display_density = 1);</div>
-<div class="line"><a name="l01325"></a><span class="lineno"> 1325</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawNurbsSurface&quot;)</div>
-<div class="line"><a name="l01326"></a><span class="lineno"> 1326</span>&#160;  <span class="keywordtype">void</span> DrawNurbsSurface(const <a class="code" href="class_o_n___nurbs_surface.html">ON_NurbsSurface</a>&amp;, <span class="keywordtype">int</span> display_density = 1);</div>
-<div class="line"><a name="l01327"></a><span class="lineno"> 1327</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawBezierSurface&quot;)</div>
-<div class="line"><a name="l01328"></a><span class="lineno"> 1328</span>&#160;  <span class="keywordtype">void</span> DrawBezierSurface(const <a class="code" href="class_o_n___bezier_surface.html">ON_BezierSurface</a>&amp;, <span class="keywordtype">int</span> display_density = 1);</div>
-<div class="line"><a name="l01329"></a><span class="lineno"> 1329</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawNurbsCage&quot;)</div>
-<div class="line"><a name="l01330"></a><span class="lineno"> 1330</span>&#160;  <span class="keywordtype">void</span> DrawNurbsCage(const <a class="code" href="class_o_n___nurbs_cage.html">ON_NurbsCage</a>&amp;, <span class="keywordtype">int</span> display_density = 1);</div>
-<div class="line"><a name="l01331"></a><span class="lineno"> 1331</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawBezierCage&quot;)</div>
-<div class="line"><a name="l01332"></a><span class="lineno"> 1332</span>&#160;  <span class="keywordtype">void</span> DrawBezierCage(const <a class="code" href="class_o_n___bezier_surface.html">ON_BezierSurface</a>&amp;, <span class="keywordtype">int</span> display_density = 1);</div>
-<div class="line"><a name="l01333"></a><span class="lineno"> 1333</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawBrep&quot;)</div>
-<div class="line"><a name="l01334"></a><span class="lineno"> 1334</span>&#160;  <span class="keywordtype">void</span> DrawBrep(const <a class="code" href="class_o_n___brep.html">ON_Brep</a>&amp;, <span class="keywordtype">int</span> display_density = 1);</div>
-<div class="line"><a name="l01335"></a><span class="lineno"> 1335</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawExtrusion&quot;)</div>
-<div class="line"><a name="l01336"></a><span class="lineno"> 1336</span>&#160;  <span class="keywordtype">void</span> DrawExtrusion(const <a class="code" href="class_o_n___extrusion.html">ON_Extrusion</a>&amp;);</div>
-<div class="line"><a name="l01337"></a><span class="lineno"> 1337</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawObject&quot;)</div>
-<div class="line"><a name="l01338"></a><span class="lineno"> 1338</span>&#160;  <span class="keywordtype">void</span> DrawRhinoObject(const <a class="code" href="class_c_rhino_object.html">CRhinoObject</a>*, <a class="code" href="class_o_n___xform.html">ON_Xform</a> xform, <a class="code" href="class_o_n___color.html">ON_Color</a> color = <a class="code" href="group__open_n_u_r_b_s.html#ga768e6ba42c38dfcbcf1e9e8f6db69f15">ON_UNSET_COLOR</a>);</div>
-<div class="line"><a name="l01339"></a><span class="lineno"> 1339</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawDot&quot;)</div>
-<div class="line"><a name="l01340"></a><span class="lineno"> 1340</span>&#160;  <span class="keywordtype">void</span> DrawDot(<span class="keywordtype">int</span> screen_x, <span class="keywordtype">int</span> screen_y, const <span class="keywordtype">wchar_t</span>* text = NULL, COLORREF dot_color = <a class="code" href="group___r_d_k.html#gga76db87c0658e96e63e7238cb2415f74fa889574aebacda6bfd3e534e2b49b8028">RGB</a>(0, 0, 0), COLORREF text_color = <a class="code" href="group__open_n_u_r_b_s.html#ga768e6ba42c38dfcbcf1e9e8f6db69f15">ON_UNSET_COLOR</a>);</div>
-<div class="line"><a name="l01341"></a><span class="lineno"> 1341</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawDot&quot;)</div>
-<div class="line"><a name="l01342"></a><span class="lineno"> 1342</span>&#160;  <span class="keywordtype">void</span> DrawDot(<a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a> point, const <span class="keywordtype">wchar_t</span>* text = NULL, COLORREF dot_color = <a class="code" href="group___r_d_k.html#gga76db87c0658e96e63e7238cb2415f74fa889574aebacda6bfd3e534e2b49b8028">RGB</a>(0, 0, 0), COLORREF text_color = <a class="code" href="group__open_n_u_r_b_s.html#ga768e6ba42c38dfcbcf1e9e8f6db69f15">ON_UNSET_COLOR</a>);</div>
-<div class="line"><a name="l01343"></a><span class="lineno"> 1343</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawString&quot;)</div>
-<div class="line"><a name="l01344"></a><span class="lineno"> 1344</span>&#160;  <span class="keywordtype">void</span> DrawString(const <span class="keywordtype">wchar_t</span>* <span class="keywordtype">string</span>, <span class="keywordtype">int</span> slength, const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp; point,</div>
-<div class="line"><a name="l01345"></a><span class="lineno"> 1345</span>&#160;    <span class="keywordtype">int</span> bMiddle = false, <span class="keywordtype">int</span> rotation = 0, <span class="keywordtype">int</span> height = 12, const <span class="keywordtype">wchar_t</span>* fontface = L&quot;Arial&quot; );</div>
-<div class="line"><a name="l01346"></a><span class="lineno"> 1346</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawTriangle&quot;)</div>
-<div class="line"><a name="l01347"></a><span class="lineno"> 1347</span>&#160;  <span class="keywordtype">void</span> DrawTriangle(const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a> corners[3]);</div>
-<div class="line"><a name="l01348"></a><span class="lineno"> 1348</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawTriangle&quot;)</div>
-<div class="line"><a name="l01349"></a><span class="lineno"> 1349</span>&#160;  <span class="keywordtype">void</span> DrawTriangle(const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp; p0, const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp; p1, const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp; p2);</div>
-<div class="line"><a name="l01350"></a><span class="lineno"> 1350</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawDirectionArrow&quot;)</div>
-<div class="line"><a name="l01351"></a><span class="lineno"> 1351</span>&#160;  <span class="keywordtype">void</span> DrawDirectionArrow(const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp;, const <a class="code" href="class_o_n__3d_vector.html">ON_3dVector</a>&amp;, <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>* head_point = NULL);</div>
-<div class="line"><a name="l01352"></a><span class="lineno"> 1352</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawTangentBar&quot;)</div>
-<div class="line"><a name="l01353"></a><span class="lineno"> 1353</span>&#160;  <span class="keywordtype">void</span> DrawTangentBar(const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp;, const <a class="code" href="class_o_n__3d_vector.html">ON_3dVector</a>&amp;, <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>* start_point = NULL, <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>* end_point = NULL);</div>
-<div class="line"><a name="l01354"></a><span class="lineno"> 1354</span>&#160;};</div>
-<div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160; </div>
-<div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160;class <a class="code" href="group___rhino.html#gac7cff1e910b2374d20cd2265d4f976dd">RHINO_SDK_CLASS</a> <a class="code" href="class_c_rhino_viewport_iterator.html">CRhinoViewportIterator</a></div>
-<div class="line"><a name="l01357"></a><span class="lineno"> 1357</span>&#160;{</div>
-<div class="line"><a name="l01358"></a><span class="lineno"> 1358</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01359"></a><span class="lineno"><a class="line" href="class_c_rhino_viewport_iterator.html"> 1359</a></span>&#160;<span class="comment">  Example:</span></div>
-<div class="line"><a name="l01360"></a><span class="lineno"> 1360</span>&#160;<span class="comment">    Iteratate all viewports:</span></div>
-<div class="line"><a name="l01361"></a><span class="lineno"> 1361</span>&#160;<span class="comment">    unsinged int rhino_doc_sn = 0 or CRhinoDoc.RuntimeSerialNumber();</span></div>
-<div class="line"><a name="l01362"></a><span class="lineno"> 1362</span>&#160;<span class="comment">    unsinged int rhino_view_sn = 0 or CRhinoView.RuntimeSerialNumber();</span></div>
-<div class="line"><a name="l01363"></a><span class="lineno"> 1363</span>&#160;<span class="comment">    CRhinoDocIterator doc_it(rhino_doc_sn,rhino_view_sn);</span></div>
-<div class="line"><a name="l01364"></a><span class="lineno"> 1364</span>&#160;<span class="comment">    for ( CRhinoViewport* rhino_viewport = viewport_it.First();</span></div>
-<div class="line"><a name="l01365"></a><span class="lineno"> 1365</span>&#160;<span class="comment">          0 != rhino_viewport; </span></div>
-<div class="line"><a name="l01366"></a><span class="lineno"> 1366</span>&#160;<span class="comment">          rhino_viewport = viewport_it.Next() </span></div>
-<div class="line"><a name="l01367"></a><span class="lineno"> 1367</span>&#160;<span class="comment">        )</span></div>
-<div class="line"><a name="l01368"></a><span class="lineno"> 1368</span>&#160;<span class="comment">    {</span></div>
-<div class="line"><a name="l01369"></a><span class="lineno"> 1369</span>&#160;<span class="comment">      ...</span></div>
-<div class="line"><a name="l01370"></a><span class="lineno"> 1370</span>&#160;<span class="comment">    }</span></div>
-<div class="line"><a name="l01371"></a><span class="lineno"> 1371</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01372"></a><span class="lineno"> 1372</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l01373"></a><span class="lineno"> 1373</span>&#160; </div>
-<div class="line"><a name="l01374"></a><span class="lineno"> 1374</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01375"></a><span class="lineno"> 1375</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01376"></a><span class="lineno"> 1376</span>&#160;<span class="comment">     0: iteration ignores the document a viewportport is associated with.</span></div>
-<div class="line"><a name="l01377"></a><span class="lineno"> 1377</span>&#160;<span class="comment">    &gt;0: iteration is restricted to viewportports associated with a specific document.</span></div>
-<div class="line"><a name="l01378"></a><span class="lineno"> 1378</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> DocRuntimeSerialNumber() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160; </div>
-<div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160;<span class="comment">     0: iteration ignores the viewport a viewportport is associated with.</span></div>
-<div class="line"><a name="l01384"></a><span class="lineno"> 1384</span>&#160;<span class="comment">    &gt;0: iteration is restricted to viewportports associated with the specified viewport.</span></div>
-<div class="line"><a name="l01385"></a><span class="lineno"> 1385</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01386"></a><span class="lineno"> 1386</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ViewRuntimeSerialNumber() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01387"></a><span class="lineno"> 1387</span>&#160; </div>
-<div class="line"><a name="l01388"></a><span class="lineno"> 1388</span>&#160; </div>
-<div class="line"><a name="l01389"></a><span class="lineno"> 1389</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01390"></a><span class="lineno"> 1390</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l01391"></a><span class="lineno"> 1391</span>&#160;<span class="comment">    rhino_doc_sn - [in]</span></div>
-<div class="line"><a name="l01392"></a><span class="lineno"> 1392</span>&#160;<span class="comment">       0: iteration ignores the document a viewportport is associated with.</span></div>
-<div class="line"><a name="l01393"></a><span class="lineno"> 1393</span>&#160;<span class="comment">      &gt;0: iteration is restricted to viewportports associated with a specific document.</span></div>
-<div class="line"><a name="l01394"></a><span class="lineno"> 1394</span>&#160;<span class="comment">    rhino_view_sn - [in]</span></div>
-<div class="line"><a name="l01395"></a><span class="lineno"> 1395</span>&#160;<span class="comment">       0: iteration ignores the viewport a viewportport is associated with.</span></div>
-<div class="line"><a name="l01396"></a><span class="lineno"> 1396</span>&#160;<span class="comment">      &gt;0: iteration is restricted to viewportports associated with the specified viewport.</span></div>
-<div class="line"><a name="l01397"></a><span class="lineno"> 1397</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01398"></a><span class="lineno"> 1398</span>&#160;  <a class="code" href="class_c_rhino_viewport_iterator.html">CRhinoViewportIterator</a>(</div>
-<div class="line"><a name="l01399"></a><span class="lineno"> 1399</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> rhino_doc_sn,</div>
-<div class="line"><a name="l01400"></a><span class="lineno"> 1400</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> rhino_view_sn</div>
-<div class="line"><a name="l01401"></a><span class="lineno"> 1401</span>&#160;    );</div>
-<div class="line"><a name="l01402"></a><span class="lineno"> 1402</span>&#160; </div>
-<div class="line"><a name="l01403"></a><span class="lineno"> 1403</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01404"></a><span class="lineno"> 1404</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01405"></a><span class="lineno"> 1405</span>&#160;<span class="comment">    The first viewport that exists.</span></div>
-<div class="line"><a name="l01406"></a><span class="lineno"> 1406</span>&#160;<span class="comment">  Remarks:</span></div>
-<div class="line"><a name="l01407"></a><span class="lineno"> 1407</span>&#160;<span class="comment">    You may call First() multiple times on the same iterator.</span></div>
-<div class="line"><a name="l01408"></a><span class="lineno"> 1408</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01409"></a><span class="lineno"> 1409</span>&#160;  <span class="keyword">class </span><a class="code" href="class_c_rhino_viewport.html">CRhinoViewport</a>* First();</div>
-<div class="line"><a name="l01410"></a><span class="lineno"> 1410</span>&#160; </div>
-<div class="line"><a name="l01411"></a><span class="lineno"> 1411</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01412"></a><span class="lineno"> 1412</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01413"></a><span class="lineno"> 1413</span>&#160;<span class="comment">    The next viewport that exists.</span></div>
-<div class="line"><a name="l01414"></a><span class="lineno"> 1414</span>&#160;<span class="comment">  Remarks:</span></div>
-<div class="line"><a name="l01415"></a><span class="lineno"> 1415</span>&#160;<span class="comment">    - Once Next() returns null, it will continue to return null</span></div>
-<div class="line"><a name="l01416"></a><span class="lineno"> 1416</span>&#160;<span class="comment">      until First() is called.</span></div>
-<div class="line"><a name="l01417"></a><span class="lineno"> 1417</span>&#160;<span class="comment">    - If First() has not be called, the first call to Next()</span></div>
-<div class="line"><a name="l01418"></a><span class="lineno"> 1418</span>&#160;<span class="comment">      returns the first viewport in Rhino.  This is done</span></div>
-<div class="line"><a name="l01419"></a><span class="lineno"> 1419</span>&#160;<span class="comment">      so that people can write while loops like</span></div>
-<div class="line"><a name="l01420"></a><span class="lineno"> 1420</span>&#160;<span class="comment">      CRhinoViewportIterator it(rhino_doc_sn);</span></div>
-<div class="line"><a name="l01421"></a><span class="lineno"> 1421</span>&#160;<span class="comment">      while ( CRhinoViewport* rhino_viewport = it.Next() )</span></div>
-<div class="line"><a name="l01422"></a><span class="lineno"> 1422</span>&#160;<span class="comment">      {</span></div>
-<div class="line"><a name="l01423"></a><span class="lineno"> 1423</span>&#160;<span class="comment">         ...</span></div>
-<div class="line"><a name="l01424"></a><span class="lineno"> 1424</span>&#160;<span class="comment">      }</span></div>
-<div class="line"><a name="l01425"></a><span class="lineno"> 1425</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01426"></a><span class="lineno"> 1426</span>&#160;  <span class="keyword">class </span><a class="code" href="class_c_rhino_viewport.html">CRhinoViewport</a>* <a class="code" href="group__open_n_u_r_b_s.html#ggae8a05bed50b6494cabcc8115689037eea10ac3d04253ef7e1ddc73e6091c0cd55">Next</a>();</div>
-<div class="line"><a name="l01427"></a><span class="lineno"> 1427</span>&#160; </div>
-<div class="line"><a name="l01428"></a><span class="lineno"> 1428</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01429"></a><span class="lineno"> 1429</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01430"></a><span class="lineno"> 1430</span>&#160;<span class="comment">    The current value of the iterator.</span></div>
-<div class="line"><a name="l01431"></a><span class="lineno"> 1431</span>&#160;<span class="comment">  Remarks:</span></div>
-<div class="line"><a name="l01432"></a><span class="lineno"> 1432</span>&#160;<span class="comment">    - If First() or Next() has not been called, then Current()</span></div>
-<div class="line"><a name="l01433"></a><span class="lineno"> 1433</span>&#160;<span class="comment">      will return null.</span></div>
-<div class="line"><a name="l01434"></a><span class="lineno"> 1434</span>&#160;<span class="comment">    - If the viewport returned by First() or Next() has been deleted</span></div>
-<div class="line"><a name="l01435"></a><span class="lineno"> 1435</span>&#160;<span class="comment">      since the call to First() or Next(), then CurrentViewport() will</span></div>
-<div class="line"><a name="l01436"></a><span class="lineno"> 1436</span>&#160;<span class="comment">      return a null pointer.</span></div>
-<div class="line"><a name="l01437"></a><span class="lineno"> 1437</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01438"></a><span class="lineno"> 1438</span>&#160;  <span class="keyword">class </span><a class="code" href="class_c_rhino_viewport.html">CRhinoViewport</a>* CurrentViewport() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01439"></a><span class="lineno"> 1439</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> CurrentViewportRuntimeSerialNumber() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01440"></a><span class="lineno"> 1440</span>&#160; </div>
-<div class="line"><a name="l01441"></a><span class="lineno"> 1441</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l01442"></a><span class="lineno"> 1442</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_rhino_doc_sn;  <span class="comment">// 0 or identifies a specific CRhinoDoc</span></div>
-<div class="line"><a name="l01443"></a><span class="lineno"> 1443</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_rhino_view_sn; <span class="comment">// 0 or identifies a specific CRhinoView</span></div>
-<div class="line"><a name="l01444"></a><span class="lineno"> 1444</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_current_viewport_sn;</div>
-<div class="line"><a name="l01445"></a><span class="lineno"> 1445</span>&#160;  <span class="comment">// NOTE:</span></div>
-<div class="line"><a name="l01446"></a><span class="lineno"> 1446</span>&#160;  <span class="comment">//  The iterator can handle an arbitrary number of serial numbers.</span></div>
-<div class="line"><a name="l01447"></a><span class="lineno"> 1447</span>&#160;  <span class="comment">//  The buffer is refilled as needed.</span></div>
-<div class="line"><a name="l01448"></a><span class="lineno"> 1448</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_sn_index;  </div>
-<div class="line"><a name="l01449"></a><span class="lineno"> 1449</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_sn_count;</div>
-<div class="line"><a name="l01450"></a><span class="lineno"> 1450</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_sn_buffer[59];</div>
-<div class="line"><a name="l01451"></a><span class="lineno"> 1451</span>&#160;};</div>
+<div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160;  <span class="keywordtype">void</span> DrawShadedMesh(const <a class="code" href="class_o_n___mesh.html">ON_Mesh</a>*, <span class="keywordtype">bool</span> bCullCW, <span class="keywordtype">bool</span> bFlatShade, <span class="keywordtype">bool</span> bHighlighted);</div>
+<div class="line"><a name="l01317"></a><span class="lineno"> 1317</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawShadedMesh&quot;)</div>
+<div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160;  <span class="keywordtype">void</span> DrawRenderPreviewMesh(const <a class="code" href="class_o_n___mesh.html">ON_Mesh</a>*, const <a class="code" href="class_c_rhino_material.html">CRhinoMaterial</a>&amp; render_material, BOOL bCullCW, BOOL bHighlighted);</div>
+<div class="line"><a name="l01319"></a><span class="lineno"> 1319</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawShadedMesh&quot;)</div>
+<div class="line"><a name="l01320"></a><span class="lineno"> 1320</span>&#160;  <span class="keywordtype">void</span> DrawFalseColorMesh(const <a class="code" href="class_o_n___mesh.html">ON_Mesh</a>*, <span class="keywordtype">bool</span> bCullCW, COLORREF edge_color = <a class="code" href="group__open_n_u_r_b_s.html#ga768e6ba42c38dfcbcf1e9e8f6db69f15">ON_UNSET_COLOR</a>);</div>
+<div class="line"><a name="l01321"></a><span class="lineno"> 1321</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawPoint&quot;)</div>
+<div class="line"><a name="l01322"></a><span class="lineno"> 1322</span>&#160;  <span class="keywordtype">void</span> DrawActivePoint(const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp;);</div>
+<div class="line"><a name="l01323"></a><span class="lineno"> 1323</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawBox&quot;)</div>
+<div class="line"><a name="l01324"></a><span class="lineno"> 1324</span>&#160;  <span class="keywordtype">void</span> DrawBoundingBox(const <a class="code" href="class_o_n___bounding_box.html">ON_BoundingBox</a>&amp;);</div>
+<div class="line"><a name="l01325"></a><span class="lineno"> 1325</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawBezier&quot;)</div>
+<div class="line"><a name="l01326"></a><span class="lineno"> 1326</span>&#160;  <span class="keywordtype">void</span> DrawBezier(const <a class="code" href="class_o_n___bezier_curve.html">ON_BezierCurve</a>&amp;);</div>
+<div class="line"><a name="l01327"></a><span class="lineno"> 1327</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawSurface&quot;)</div>
+<div class="line"><a name="l01328"></a><span class="lineno"> 1328</span>&#160;  <span class="keywordtype">void</span> DrawSurface(const <a class="code" href="class_o_n___surface.html">ON_Surface</a>&amp;, <span class="keywordtype">int</span> display_density = 1);</div>
+<div class="line"><a name="l01329"></a><span class="lineno"> 1329</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawNurbsSurface&quot;)</div>
+<div class="line"><a name="l01330"></a><span class="lineno"> 1330</span>&#160;  <span class="keywordtype">void</span> DrawNurbsSurface(const <a class="code" href="class_o_n___nurbs_surface.html">ON_NurbsSurface</a>&amp;, <span class="keywordtype">int</span> display_density = 1);</div>
+<div class="line"><a name="l01331"></a><span class="lineno"> 1331</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawBezierSurface&quot;)</div>
+<div class="line"><a name="l01332"></a><span class="lineno"> 1332</span>&#160;  <span class="keywordtype">void</span> DrawBezierSurface(const <a class="code" href="class_o_n___bezier_surface.html">ON_BezierSurface</a>&amp;, <span class="keywordtype">int</span> display_density = 1);</div>
+<div class="line"><a name="l01333"></a><span class="lineno"> 1333</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawNurbsCage&quot;)</div>
+<div class="line"><a name="l01334"></a><span class="lineno"> 1334</span>&#160;  <span class="keywordtype">void</span> DrawNurbsCage(const <a class="code" href="class_o_n___nurbs_cage.html">ON_NurbsCage</a>&amp;, <span class="keywordtype">int</span> display_density = 1);</div>
+<div class="line"><a name="l01335"></a><span class="lineno"> 1335</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawBezierCage&quot;)</div>
+<div class="line"><a name="l01336"></a><span class="lineno"> 1336</span>&#160;  <span class="keywordtype">void</span> DrawBezierCage(const <a class="code" href="class_o_n___bezier_surface.html">ON_BezierSurface</a>&amp;, <span class="keywordtype">int</span> display_density = 1);</div>
+<div class="line"><a name="l01337"></a><span class="lineno"> 1337</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawBrep&quot;)</div>
+<div class="line"><a name="l01338"></a><span class="lineno"> 1338</span>&#160;  <span class="keywordtype">void</span> DrawBrep(const <a class="code" href="class_o_n___brep.html">ON_Brep</a>&amp;, <span class="keywordtype">int</span> display_density = 1);</div>
+<div class="line"><a name="l01339"></a><span class="lineno"> 1339</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawExtrusion&quot;)</div>
+<div class="line"><a name="l01340"></a><span class="lineno"> 1340</span>&#160;  <span class="keywordtype">void</span> DrawExtrusion(const <a class="code" href="class_o_n___extrusion.html">ON_Extrusion</a>&amp;);</div>
+<div class="line"><a name="l01341"></a><span class="lineno"> 1341</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawObject&quot;)</div>
+<div class="line"><a name="l01342"></a><span class="lineno"> 1342</span>&#160;  <span class="keywordtype">void</span> DrawRhinoObject(const <a class="code" href="class_c_rhino_object.html">CRhinoObject</a>*, <a class="code" href="class_o_n___xform.html">ON_Xform</a> xform, <a class="code" href="class_o_n___color.html">ON_Color</a> color = <a class="code" href="group__open_n_u_r_b_s.html#ga768e6ba42c38dfcbcf1e9e8f6db69f15">ON_UNSET_COLOR</a>);</div>
+<div class="line"><a name="l01343"></a><span class="lineno"> 1343</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawDot&quot;)</div>
+<div class="line"><a name="l01344"></a><span class="lineno"> 1344</span>&#160;  <span class="keywordtype">void</span> DrawDot(<span class="keywordtype">int</span> screen_x, <span class="keywordtype">int</span> screen_y, const <span class="keywordtype">wchar_t</span>* text = NULL, COLORREF dot_color = <a class="code" href="group___r_d_k.html#gga55db026e4b44abc83b38464fd5a4e58aa889574aebacda6bfd3e534e2b49b8028">RGB</a>(0, 0, 0), COLORREF text_color = <a class="code" href="group__open_n_u_r_b_s.html#ga768e6ba42c38dfcbcf1e9e8f6db69f15">ON_UNSET_COLOR</a>);</div>
+<div class="line"><a name="l01345"></a><span class="lineno"> 1345</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawDot&quot;)</div>
+<div class="line"><a name="l01346"></a><span class="lineno"> 1346</span>&#160;  <span class="keywordtype">void</span> DrawDot(<a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a> point, const <span class="keywordtype">wchar_t</span>* text = NULL, COLORREF dot_color = <a class="code" href="group___r_d_k.html#gga55db026e4b44abc83b38464fd5a4e58aa889574aebacda6bfd3e534e2b49b8028">RGB</a>(0, 0, 0), COLORREF text_color = <a class="code" href="group__open_n_u_r_b_s.html#ga768e6ba42c38dfcbcf1e9e8f6db69f15">ON_UNSET_COLOR</a>);</div>
+<div class="line"><a name="l01347"></a><span class="lineno"> 1347</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawString&quot;)</div>
+<div class="line"><a name="l01348"></a><span class="lineno"> 1348</span>&#160;  <span class="keywordtype">void</span> DrawString(const <span class="keywordtype">wchar_t</span>* <span class="keywordtype">string</span>, <span class="keywordtype">int</span> slength, const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp; point,</div>
+<div class="line"><a name="l01349"></a><span class="lineno"> 1349</span>&#160;    <span class="keywordtype">int</span> bMiddle = false, <span class="keywordtype">int</span> rotation = 0, <span class="keywordtype">int</span> height = 12, const <span class="keywordtype">wchar_t</span>* fontface = L&quot;Arial&quot; );</div>
+<div class="line"><a name="l01350"></a><span class="lineno"> 1350</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawTriangle&quot;)</div>
+<div class="line"><a name="l01351"></a><span class="lineno"> 1351</span>&#160;  <span class="keywordtype">void</span> DrawTriangle(const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a> corners[3]);</div>
+<div class="line"><a name="l01352"></a><span class="lineno"> 1352</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawTriangle&quot;)</div>
+<div class="line"><a name="l01353"></a><span class="lineno"> 1353</span>&#160;  <span class="keywordtype">void</span> DrawTriangle(const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp; p0, const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp; p1, const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp; p2);</div>
+<div class="line"><a name="l01354"></a><span class="lineno"> 1354</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawDirectionArrow&quot;)</div>
+<div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160;  <span class="keywordtype">void</span> DrawDirectionArrow(const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp;, const <a class="code" href="class_o_n__3d_vector.html">ON_3dVector</a>&amp;, <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>* head_point = NULL);</div>
+<div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160;  <a class="code" href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a>(&quot;use <a class="code" href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a>::DrawTangentBar&quot;)</div>
+<div class="line"><a name="l01357"></a><span class="lineno"> 1357</span>&#160;  <span class="keywordtype">void</span> DrawTangentBar(const <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp;, const <a class="code" href="class_o_n__3d_vector.html">ON_3dVector</a>&amp;, <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>* start_point = NULL, <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>* end_point = NULL);</div>
+<div class="line"><a name="l01358"></a><span class="lineno"> 1358</span>&#160;};</div>
+<div class="line"><a name="l01359"></a><span class="lineno"> 1359</span>&#160; </div>
+<div class="line"><a name="l01360"></a><span class="lineno"> 1360</span>&#160;class <a class="code" href="group___rhino.html#gac7cff1e910b2374d20cd2265d4f976dd">RHINO_SDK_CLASS</a> <a class="code" href="class_c_rhino_viewport_iterator.html">CRhinoViewportIterator</a></div>
+<div class="line"><a name="l01361"></a><span class="lineno"> 1361</span>&#160;{</div>
+<div class="line"><a name="l01362"></a><span class="lineno"> 1362</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01363"></a><span class="lineno"><a class="line" href="class_c_rhino_viewport_iterator.html"> 1363</a></span>&#160;<span class="comment">  Example:</span></div>
+<div class="line"><a name="l01364"></a><span class="lineno"> 1364</span>&#160;<span class="comment">    Iteratate all viewports:</span></div>
+<div class="line"><a name="l01365"></a><span class="lineno"> 1365</span>&#160;<span class="comment">    unsinged int rhino_doc_sn = 0 or CRhinoDoc.RuntimeSerialNumber();</span></div>
+<div class="line"><a name="l01366"></a><span class="lineno"> 1366</span>&#160;<span class="comment">    unsinged int rhino_view_sn = 0 or CRhinoView.RuntimeSerialNumber();</span></div>
+<div class="line"><a name="l01367"></a><span class="lineno"> 1367</span>&#160;<span class="comment">    CRhinoDocIterator doc_it(rhino_doc_sn,rhino_view_sn);</span></div>
+<div class="line"><a name="l01368"></a><span class="lineno"> 1368</span>&#160;<span class="comment">    for ( CRhinoViewport* rhino_viewport = viewport_it.First();</span></div>
+<div class="line"><a name="l01369"></a><span class="lineno"> 1369</span>&#160;<span class="comment">          0 != rhino_viewport; </span></div>
+<div class="line"><a name="l01370"></a><span class="lineno"> 1370</span>&#160;<span class="comment">          rhino_viewport = viewport_it.Next() </span></div>
+<div class="line"><a name="l01371"></a><span class="lineno"> 1371</span>&#160;<span class="comment">        )</span></div>
+<div class="line"><a name="l01372"></a><span class="lineno"> 1372</span>&#160;<span class="comment">    {</span></div>
+<div class="line"><a name="l01373"></a><span class="lineno"> 1373</span>&#160;<span class="comment">      ...</span></div>
+<div class="line"><a name="l01374"></a><span class="lineno"> 1374</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l01375"></a><span class="lineno"> 1375</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01376"></a><span class="lineno"> 1376</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l01377"></a><span class="lineno"> 1377</span>&#160; </div>
+<div class="line"><a name="l01378"></a><span class="lineno"> 1378</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;<span class="comment">     0: iteration ignores the document a viewportport is associated with.</span></div>
+<div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;<span class="comment">    &gt;0: iteration is restricted to viewportports associated with a specific document.</span></div>
+<div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> DocRuntimeSerialNumber() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01384"></a><span class="lineno"> 1384</span>&#160; </div>
+<div class="line"><a name="l01385"></a><span class="lineno"> 1385</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01386"></a><span class="lineno"> 1386</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l01387"></a><span class="lineno"> 1387</span>&#160;<span class="comment">     0: iteration ignores the viewport a viewportport is associated with.</span></div>
+<div class="line"><a name="l01388"></a><span class="lineno"> 1388</span>&#160;<span class="comment">    &gt;0: iteration is restricted to viewportports associated with the specified viewport.</span></div>
+<div class="line"><a name="l01389"></a><span class="lineno"> 1389</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01390"></a><span class="lineno"> 1390</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ViewRuntimeSerialNumber() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01391"></a><span class="lineno"> 1391</span>&#160; </div>
+<div class="line"><a name="l01392"></a><span class="lineno"> 1392</span>&#160; </div>
+<div class="line"><a name="l01393"></a><span class="lineno"> 1393</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01394"></a><span class="lineno"> 1394</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l01395"></a><span class="lineno"> 1395</span>&#160;<span class="comment">    rhino_doc_sn - [in]</span></div>
+<div class="line"><a name="l01396"></a><span class="lineno"> 1396</span>&#160;<span class="comment">       0: iteration ignores the document a viewportport is associated with.</span></div>
+<div class="line"><a name="l01397"></a><span class="lineno"> 1397</span>&#160;<span class="comment">      &gt;0: iteration is restricted to viewportports associated with a specific document.</span></div>
+<div class="line"><a name="l01398"></a><span class="lineno"> 1398</span>&#160;<span class="comment">    rhino_view_sn - [in]</span></div>
+<div class="line"><a name="l01399"></a><span class="lineno"> 1399</span>&#160;<span class="comment">       0: iteration ignores the viewport a viewportport is associated with.</span></div>
+<div class="line"><a name="l01400"></a><span class="lineno"> 1400</span>&#160;<span class="comment">      &gt;0: iteration is restricted to viewportports associated with the specified viewport.</span></div>
+<div class="line"><a name="l01401"></a><span class="lineno"> 1401</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01402"></a><span class="lineno"> 1402</span>&#160;  <a class="code" href="class_c_rhino_viewport_iterator.html">CRhinoViewportIterator</a>(</div>
+<div class="line"><a name="l01403"></a><span class="lineno"> 1403</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> rhino_doc_sn,</div>
+<div class="line"><a name="l01404"></a><span class="lineno"> 1404</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> rhino_view_sn</div>
+<div class="line"><a name="l01405"></a><span class="lineno"> 1405</span>&#160;    );</div>
+<div class="line"><a name="l01406"></a><span class="lineno"> 1406</span>&#160; </div>
+<div class="line"><a name="l01407"></a><span class="lineno"> 1407</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01408"></a><span class="lineno"> 1408</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l01409"></a><span class="lineno"> 1409</span>&#160;<span class="comment">    The first viewport that exists.</span></div>
+<div class="line"><a name="l01410"></a><span class="lineno"> 1410</span>&#160;<span class="comment">  Remarks:</span></div>
+<div class="line"><a name="l01411"></a><span class="lineno"> 1411</span>&#160;<span class="comment">    You may call First() multiple times on the same iterator.</span></div>
+<div class="line"><a name="l01412"></a><span class="lineno"> 1412</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01413"></a><span class="lineno"> 1413</span>&#160;  <span class="keyword">class </span><a class="code" href="class_c_rhino_viewport.html">CRhinoViewport</a>* First();</div>
+<div class="line"><a name="l01414"></a><span class="lineno"> 1414</span>&#160; </div>
+<div class="line"><a name="l01415"></a><span class="lineno"> 1415</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01416"></a><span class="lineno"> 1416</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l01417"></a><span class="lineno"> 1417</span>&#160;<span class="comment">    The next viewport that exists.</span></div>
+<div class="line"><a name="l01418"></a><span class="lineno"> 1418</span>&#160;<span class="comment">  Remarks:</span></div>
+<div class="line"><a name="l01419"></a><span class="lineno"> 1419</span>&#160;<span class="comment">    - Once Next() returns null, it will continue to return null</span></div>
+<div class="line"><a name="l01420"></a><span class="lineno"> 1420</span>&#160;<span class="comment">      until First() is called.</span></div>
+<div class="line"><a name="l01421"></a><span class="lineno"> 1421</span>&#160;<span class="comment">    - If First() has not be called, the first call to Next()</span></div>
+<div class="line"><a name="l01422"></a><span class="lineno"> 1422</span>&#160;<span class="comment">      returns the first viewport in Rhino.  This is done</span></div>
+<div class="line"><a name="l01423"></a><span class="lineno"> 1423</span>&#160;<span class="comment">      so that people can write while loops like</span></div>
+<div class="line"><a name="l01424"></a><span class="lineno"> 1424</span>&#160;<span class="comment">      CRhinoViewportIterator it(rhino_doc_sn);</span></div>
+<div class="line"><a name="l01425"></a><span class="lineno"> 1425</span>&#160;<span class="comment">      while ( CRhinoViewport* rhino_viewport = it.Next() )</span></div>
+<div class="line"><a name="l01426"></a><span class="lineno"> 1426</span>&#160;<span class="comment">      {</span></div>
+<div class="line"><a name="l01427"></a><span class="lineno"> 1427</span>&#160;<span class="comment">         ...</span></div>
+<div class="line"><a name="l01428"></a><span class="lineno"> 1428</span>&#160;<span class="comment">      }</span></div>
+<div class="line"><a name="l01429"></a><span class="lineno"> 1429</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01430"></a><span class="lineno"> 1430</span>&#160;  <span class="keyword">class </span><a class="code" href="class_c_rhino_viewport.html">CRhinoViewport</a>* <a class="code" href="group__open_n_u_r_b_s.html#ggae8a05bed50b6494cabcc8115689037eea10ac3d04253ef7e1ddc73e6091c0cd55">Next</a>();</div>
+<div class="line"><a name="l01431"></a><span class="lineno"> 1431</span>&#160; </div>
+<div class="line"><a name="l01432"></a><span class="lineno"> 1432</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01433"></a><span class="lineno"> 1433</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l01434"></a><span class="lineno"> 1434</span>&#160;<span class="comment">    The current value of the iterator.</span></div>
+<div class="line"><a name="l01435"></a><span class="lineno"> 1435</span>&#160;<span class="comment">  Remarks:</span></div>
+<div class="line"><a name="l01436"></a><span class="lineno"> 1436</span>&#160;<span class="comment">    - If First() or Next() has not been called, then Current()</span></div>
+<div class="line"><a name="l01437"></a><span class="lineno"> 1437</span>&#160;<span class="comment">      will return null.</span></div>
+<div class="line"><a name="l01438"></a><span class="lineno"> 1438</span>&#160;<span class="comment">    - If the viewport returned by First() or Next() has been deleted</span></div>
+<div class="line"><a name="l01439"></a><span class="lineno"> 1439</span>&#160;<span class="comment">      since the call to First() or Next(), then CurrentViewport() will</span></div>
+<div class="line"><a name="l01440"></a><span class="lineno"> 1440</span>&#160;<span class="comment">      return a null pointer.</span></div>
+<div class="line"><a name="l01441"></a><span class="lineno"> 1441</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01442"></a><span class="lineno"> 1442</span>&#160;  <span class="keyword">class </span><a class="code" href="class_c_rhino_viewport.html">CRhinoViewport</a>* CurrentViewport() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01443"></a><span class="lineno"> 1443</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> CurrentViewportRuntimeSerialNumber() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01444"></a><span class="lineno"> 1444</span>&#160; </div>
+<div class="line"><a name="l01445"></a><span class="lineno"> 1445</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l01446"></a><span class="lineno"> 1446</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_rhino_doc_sn;  <span class="comment">// 0 or identifies a specific CRhinoDoc</span></div>
+<div class="line"><a name="l01447"></a><span class="lineno"> 1447</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_rhino_view_sn; <span class="comment">// 0 or identifies a specific CRhinoView</span></div>
+<div class="line"><a name="l01448"></a><span class="lineno"> 1448</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_current_viewport_sn;</div>
+<div class="line"><a name="l01449"></a><span class="lineno"> 1449</span>&#160;  <span class="comment">// NOTE:</span></div>
+<div class="line"><a name="l01450"></a><span class="lineno"> 1450</span>&#160;  <span class="comment">//  The iterator can handle an arbitrary number of serial numbers.</span></div>
+<div class="line"><a name="l01451"></a><span class="lineno"> 1451</span>&#160;  <span class="comment">//  The buffer is refilled as needed.</span></div>
+<div class="line"><a name="l01452"></a><span class="lineno"> 1452</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_sn_index;  </div>
+<div class="line"><a name="l01453"></a><span class="lineno"> 1453</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_sn_count;</div>
+<div class="line"><a name="l01454"></a><span class="lineno"> 1454</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_sn_buffer[59];</div>
+<div class="line"><a name="l01455"></a><span class="lineno"> 1455</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_o_n__3d_vector_html"><div class="ttname"><a href="class_o_n__3d_vector.html">ON_3dVector</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:1185</div></div>
+<div class="ttc" id="aclass_o_n__3d_vector_html"><div class="ttname"><a href="class_o_n__3d_vector.html">ON_3dVector</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:1263</div></div>
 <div class="ttc" id="agroup___rhino_html_gac7cff1e910b2374d20cd2265d4f976dd"><div class="ttname"><a href="group___rhino.html#gac7cff1e910b2374d20cd2265d4f976dd">RHINO_SDK_CLASS</a></div><div class="ttdeci">#define RHINO_SDK_CLASS</div><div class="ttdef"><b>Definition:</b> rhinoSdk.h:285</div></div>
 <div class="ttc" id="aclass_o_n___cone_html"><div class="ttname"><a href="class_o_n___cone.html">ON_Cone</a></div><div class="ttdef"><b>Definition:</b> opennurbs_cone.h:29</div></div>
 <div class="ttc" id="aclass_c_rhino_viewport_html"><div class="ttname"><a href="class_c_rhino_viewport.html">CRhinoViewport</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkViewport.h:18</div></div>
@@ -1537,47 +1541,47 @@ $(function() {
 <div class="ttc" id="aclass_o_n___curve_html"><div class="ttname"><a href="class_o_n___curve.html">ON_Curve</a></div><div class="ttdef"><b>Definition:</b> opennurbs_curve.h:94</div></div>
 <div class="ttc" id="aclass_o_n__4i_rect_html"><div class="ttname"><a href="class_o_n__4i_rect.html">ON_4iRect</a></div><div class="ttdef"><b>Definition:</b> opennurbs_ipoint.h:339</div></div>
 <div class="ttc" id="aclass_o_n___xform_html"><div class="ttname"><a href="class_o_n___xform.html">ON_Xform</a></div><div class="ttdef"><b>Definition:</b> opennurbs_xform.h:31</div></div>
+<div class="ttc" id="agroup___r_d_k_html_gga55db026e4b44abc83b38464fd5a4e58aa889574aebacda6bfd3e534e2b49b8028"><div class="ttname"><a href="group___r_d_k.html#gga55db026e4b44abc83b38464fd5a4e58aa889574aebacda6bfd3e534e2b49b8028">ComponentOrder::RGB</a></div><div class="ttdeci">@ RGB</div></div>
 <div class="ttc" id="aclass_o_n___simple_array_html"><div class="ttname"><a href="class_o_n___simple_array.html">ON_SimpleArray&lt; unsigned int &gt;</a></div></div>
 <div class="ttc" id="aclass_o_n___bounding_box_html"><div class="ttname"><a href="class_o_n___bounding_box.html">ON_BoundingBox</a></div><div class="ttdef"><b>Definition:</b> opennurbs_bounding_box.h:28</div></div>
 <div class="ttc" id="aclass_c_rhino_material_html"><div class="ttname"><a href="class_c_rhino_material.html">CRhinoMaterial</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkMaterial.h:18</div></div>
 <div class="ttc" id="aclass_o_n___cylinder_html"><div class="ttname"><a href="class_o_n___cylinder.html">ON_Cylinder</a></div><div class="ttdef"><b>Definition:</b> opennurbs_cylinder.h:31</div></div>
 <div class="ttc" id="agroup___rhino_html_ggaf2392ae606e7fb725ce1de9fea95bf0fa4351cfebe4b61d8aa5efa1d020710005"><div class="ttname"><a href="group___rhino.html#ggaf2392ae606e7fb725ce1de9fea95bf0fa4351cfebe4b61d8aa5efa1d020710005">RhinoPropertiesPanelPageType::View</a></div><div class="ttdeci">@ View</div><div class="ttdoc">Page is a view properties page and uses view properties methods. Does not use object properties metho...</div></div>
 <div class="ttc" id="aclass_o_n__3dm_view_trace_image_html"><div class="ttname"><a href="class_o_n__3dm_view_trace_image.html">ON_3dmViewTraceImage</a></div><div class="ttdef"><b>Definition:</b> opennurbs_3dm_settings.h:409</div></div>
-<div class="ttc" id="aclass_o_n___clipping_region_html"><div class="ttname"><a href="class_o_n___clipping_region.html">ON_ClippingRegion</a></div><div class="ttdef"><b>Definition:</b> opennurbs_xform.h:1102</div></div>
+<div class="ttc" id="aclass_o_n___clipping_region_html"><div class="ttname"><a href="class_o_n___clipping_region.html">ON_ClippingRegion</a></div><div class="ttdef"><b>Definition:</b> opennurbs_xform.h:1113</div></div>
 <div class="ttc" id="aclass_o_n___sphere_html"><div class="ttname"><a href="class_o_n___sphere.html">ON_Sphere</a></div><div class="ttdef"><b>Definition:</b> opennurbs_sphere.h:25</div></div>
 <div class="ttc" id="aclass_o_n__w_string_html"><div class="ttname"><a href="class_o_n__w_string.html">ON_wString</a></div><div class="ttdef"><b>Definition:</b> opennurbs_string.h:2136</div></div>
 <div class="ttc" id="aclass_o_n___torus_html"><div class="ttname"><a href="class_o_n___torus.html">ON_Torus</a></div><div class="ttdef"><b>Definition:</b> opennurbs_torus.h:32</div></div>
 <div class="ttc" id="aclass_o_n___nurbs_surface_html"><div class="ttname"><a href="class_o_n___nurbs_surface.html">ON_NurbsSurface</a></div><div class="ttdef"><b>Definition:</b> opennurbs_nurbssurface.h:65</div></div>
 <div class="ttc" id="aclass_o_n___color_html"><div class="ttname"><a href="class_o_n___color.html">ON_Color</a></div><div class="ttdef"><b>Definition:</b> opennurbs_color.h:27</div></div>
 <div class="ttc" id="aclass_o_n___surface_html"><div class="ttname"><a href="class_o_n___surface.html">ON_Surface</a></div><div class="ttdef"><b>Definition:</b> opennurbs_surface.h:59</div></div>
-<div class="ttc" id="agroup___r_d_k_html_gga76db87c0658e96e63e7238cb2415f74fa889574aebacda6bfd3e534e2b49b8028"><div class="ttname"><a href="group___r_d_k.html#gga76db87c0658e96e63e7238cb2415f74fa889574aebacda6bfd3e534e2b49b8028">ComponentOrder::RGB</a></div><div class="ttdeci">@ RGB</div></div>
-<div class="ttc" id="aclass_o_n___mesh_html"><div class="ttname"><a href="class_o_n___mesh.html">ON_Mesh</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:2346</div></div>
+<div class="ttc" id="aclass_o_n___mesh_html"><div class="ttname"><a href="class_o_n___mesh.html">ON_Mesh</a></div><div class="ttdef"><b>Definition:</b> opennurbs_mesh.h:2893</div></div>
 <div class="ttc" id="aclass_o_n___line_html"><div class="ttname"><a href="class_o_n___line.html">ON_Line</a></div><div class="ttdef"><b>Definition:</b> opennurbs_line.h:23</div></div>
 <div class="ttc" id="aclass_o_n___extrusion_html"><div class="ttname"><a href="class_o_n___extrusion.html">ON_Extrusion</a></div><div class="ttdef"><b>Definition:</b> opennurbs_beam.h:55</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ggae8a05bed50b6494cabcc8115689037eea10ac3d04253ef7e1ddc73e6091c0cd55"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ggae8a05bed50b6494cabcc8115689037eea10ac3d04253ef7e1ddc73e6091c0cd55">ON_ChainDirection::Next</a></div><div class="ttdeci">@ Next</div></div>
-<div class="ttc" id="aclass_o_n___brep_html"><div class="ttname"><a href="class_o_n___brep.html">ON_Brep</a></div><div class="ttdef"><b>Definition:</b> opennurbs_brep.h:1688</div></div>
-<div class="ttc" id="aclass_c_rhino_viewport_iterator_html"><div class="ttname"><a href="class_c_rhino_viewport_iterator.html">CRhinoViewportIterator</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkViewport.h:1359</div></div>
+<div class="ttc" id="aclass_o_n___brep_html"><div class="ttname"><a href="class_o_n___brep.html">ON_Brep</a></div><div class="ttdef"><b>Definition:</b> opennurbs_brep.h:1865</div></div>
+<div class="ttc" id="aclass_c_rhino_viewport_iterator_html"><div class="ttname"><a href="class_c_rhino_viewport_iterator.html">CRhinoViewportIterator</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkViewport.h:1363</div></div>
 <div class="ttc" id="agroup___rhino_html_ga8e6f5833c898be05daa508d60b72b22f"><div class="ttname"><a href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a></div><div class="ttdeci">ON_DEPRECATED_MSG(&quot;This function will be removed in Rhino Version 7. \n&quot; &quot;For assistance replacing this function post on discourse.mcneel.com/c/rhino-developer.&quot;) RHINO_SDK_FUNCTION bool RhinoBrepGet2dProjection(unsigned int rhino_doc_sn</div></div>
 <div class="ttc" id="aclass_o_n__2i_vector_html"><div class="ttname"><a href="class_o_n__2i_vector.html">ON_2iVector</a></div><div class="ttdef"><b>Definition:</b> opennurbs_ipoint.h:106</div></div>
 <div class="ttc" id="aclass_c_rhino_object_html"><div class="ttname"><a href="class_c_rhino_object.html">CRhinoObject</a></div><div class="ttdoc">Base class for all runtime Rhino objects.</div><div class="ttdef"><b>Definition:</b> rhinoSdkObject.h:43</div></div>
-<div class="ttc" id="aclass_c_rhino_doc_html"><div class="ttname"><a href="class_c_rhino_doc.html">CRhinoDoc</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkDoc.h:655</div></div>
-<div class="ttc" id="aclass_o_n_html_a0601f59125faa5f99e9a281d6566978b"><div class="ttname"><a href="class_o_n.html#a0601f59125faa5f99e9a281d6566978b">ON::coordinate_system</a></div><div class="ttdeci">coordinate_system</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:1764</div></div>
-<div class="ttc" id="aclass_o_n__3d_point_html"><div class="ttname"><a href="class_o_n__3d_point.html">ON_3dPoint</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:483</div></div>
-<div class="ttc" id="aclass_o_n___nurbs_cage_html"><div class="ttname"><a href="class_o_n___nurbs_cage.html">ON_NurbsCage</a></div><div class="ttdef"><b>Definition:</b> opennurbs_nurbssurface.h:1104</div></div>
+<div class="ttc" id="aclass_c_rhino_doc_html"><div class="ttname"><a href="class_c_rhino_doc.html">CRhinoDoc</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkDoc.h:683</div></div>
+<div class="ttc" id="aclass_o_n_html_a0601f59125faa5f99e9a281d6566978b"><div class="ttname"><a href="class_o_n.html#a0601f59125faa5f99e9a281d6566978b">ON::coordinate_system</a></div><div class="ttdeci">coordinate_system</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:1797</div></div>
+<div class="ttc" id="aclass_o_n__3d_point_html"><div class="ttname"><a href="class_o_n__3d_point.html">ON_3dPoint</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:517</div></div>
+<div class="ttc" id="aclass_o_n___nurbs_cage_html"><div class="ttname"><a href="class_o_n___nurbs_cage.html">ON_NurbsCage</a></div><div class="ttdef"><b>Definition:</b> opennurbs_nurbssurface.h:1191</div></div>
 <div class="ttc" id="aclass_o_n___viewport_html"><div class="ttname"><a href="class_o_n___viewport.html">ON_Viewport</a></div><div class="ttdef"><b>Definition:</b> opennurbs_viewport.h:34</div></div>
 <div class="ttc" id="aclass_o_n___bezier_curve_html"><div class="ttname"><a href="class_o_n___bezier_curve.html">ON_BezierCurve</a></div><div class="ttdef"><b>Definition:</b> opennurbs_bezier.h:151</div></div>
 <div class="ttc" id="aclass_o_n__2i_point_html"><div class="ttname"><a href="class_o_n__2i_point.html">ON_2iPoint</a></div><div class="ttdef"><b>Definition:</b> opennurbs_ipoint.h:27</div></div>
 <div class="ttc" id="aclass_c_rhino_display_pipeline_html"><div class="ttname"><a href="class_c_rhino_display_pipeline.html">CRhinoDisplayPipeline</a></div><div class="ttdef"><b>Definition:</b> RhinoSdkDisplayPipeline.h:153</div></div>
 <div class="ttc" id="aclass_c_rhino_z_buffer_html"><div class="ttname"><a href="class_c_rhino_z_buffer.html">CRhinoZBuffer</a></div><div class="ttdef"><b>Definition:</b> RhinoSdkDisplayPipeline_OGL.h:193</div></div>
 <div class="ttc" id="astruct_o_n___u_u_i_d__struct_html"><div class="ttname"><a href="struct_o_n___u_u_i_d__struct.html">ON_UUID_struct</a></div><div class="ttdoc">ON_UUID is a 16 byte universally unique identifier.</div><div class="ttdef"><b>Definition:</b> opennurbs_uuid.h:35</div></div>
-<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga768e6ba42c38dfcbcf1e9e8f6db69f15"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga768e6ba42c38dfcbcf1e9e8f6db69f15">ON_UNSET_COLOR</a></div><div class="ttdeci">#define ON_UNSET_COLOR</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:349</div></div>
+<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga768e6ba42c38dfcbcf1e9e8f6db69f15"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga768e6ba42c38dfcbcf1e9e8f6db69f15">ON_UNSET_COLOR</a></div><div class="ttdeci">#define ON_UNSET_COLOR</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:358</div></div>
 <div class="ttc" id="aclass_o_n___bezier_surface_html"><div class="ttname"><a href="class_o_n___bezier_surface.html">ON_BezierSurface</a></div><div class="ttdef"><b>Definition:</b> opennurbs_bezier.h:1417</div></div>
 <div class="ttc" id="aclass_o_n__3dm_view_html"><div class="ttname"><a href="class_o_n__3dm_view.html">ON_3dmView</a></div><div class="ttdef"><b>Definition:</b> opennurbs_3dm_settings.h:552</div></div>
 <div class="ttc" id="aclass_o_n___arc_html"><div class="ttname"><a href="class_o_n___arc.html">ON_Arc</a></div><div class="ttdef"><b>Definition:</b> opennurbs_arc.h:37</div></div>
 <div class="ttc" id="aclass_o_n___light_html"><div class="ttname"><a href="class_o_n___light.html">ON_Light</a></div><div class="ttdef"><b>Definition:</b> opennurbs_light.h:23</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:12:56 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:21 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

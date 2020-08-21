@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -78,7 +78,8 @@ Inheritance diagram for IRhRdkLinearWorkflow:</div>
  <div class="center">
   <img src="class_i_rh_rdk_linear_workflow.png" usemap="#IRhRdkLinearWorkflow_map" alt=""/>
   <map id="IRhRdkLinearWorkflow_map" name="IRhRdkLinearWorkflow_map">
-<area href="class_c_rh_rdk_linear_workflow.html" alt="CRhRdkLinearWorkflow" shape="rect" coords="0,56,145,80"/>
+<area href="class_c_rh_rdk_linear_workflow.html" alt="CRhRdkLinearWorkflow" shape="rect" coords="0,56,159,80"/>
+<area href="class_c_rh_rdk_linear_workflow_ex.html" alt="CRhRdkLinearWorkflowEx" shape="rect" coords="0,112,159,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -100,14 +101,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a09a6f2f5d10982bd6d7de9f6af0e6f0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4332cc81c55107db26d7e44ef27a75c7"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_linear_workflow.html#a4332cc81c55107db26d7e44ef27a75c7">EndChange</a> (void)=0</td></tr>
 <tr class="separator:a4332cc81c55107db26d7e44ef27a75c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fdb54c16e52e9256e5fc13138edf084"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_linear_workflow.html#a7fdb54c16e52e9256e5fc13138edf084">EVF</a> (const wchar_t *, void *)=0</td></tr>
-<tr class="separator:a7fdb54c16e52e9256e5fc13138edf084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10f476f5bf801dd313b69360def3b0d6"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_linear_workflow.html#a10f476f5bf801dd313b69360def3b0d6">EVF</a> (const wchar_t *wszFunc, void *pvData)=0</td></tr>
+<tr class="separator:a10f476f5bf801dd313b69360def3b0d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b4acc24b7108c5dd6c34064bfbab356"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_linear_workflow.html#a5b4acc24b7108c5dd6c34064bfbab356">IsEqual</a> (const <a class="el" href="class_i_rh_rdk_linear_workflow.html">IRhRdkLinearWorkflow</a> &amp;lw) const =0</td></tr>
 <tr class="separator:a5b4acc24b7108c5dd6c34064bfbab356"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcae4e03682cdfa52d445832b07d7b4a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_linear_workflow.html#adcae4e03682cdfa52d445832b07d7b4a">PostProcessFrameBuffer</a> (void) const =0</td></tr>
 <tr class="separator:adcae4e03682cdfa52d445832b07d7b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d760e1e55f874aa41fe8484f4a4713e"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_linear_workflow.html#a1d760e1e55f874aa41fe8484f4a4713e">PostProcessGamma</a> (void) const =0</td></tr>
 <tr class="separator:a1d760e1e55f874aa41fe8484f4a4713e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3c57a652d310ce481c0af694853e9ca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_linear_workflow.html#ab3c57a652d310ce481c0af694853e9ca">PostProcessGammaOn</a> (void) const</td></tr>
+<tr class="separator:ab3c57a652d310ce481c0af694853e9ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc81804a46bc24caa498a2b15baabab8"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_linear_workflow.html#acc81804a46bc24caa498a2b15baabab8">PostProcessGammaReciprocal</a> (void) const =0</td></tr>
 <tr class="separator:acc81804a46bc24caa498a2b15baabab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f59a744368f8c3130e4cd87027788c4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_linear_workflow.html#a5f59a744368f8c3130e4cd87027788c4">PreProcessColors</a> (void) const =0</td></tr>
@@ -120,6 +123,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac60b48cabf9c4096012ede5a9372cfe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9249e070e7bed0ebbeebc4f1ca354074"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_linear_workflow.html#a9249e070e7bed0ebbeebc4f1ca354074">SetPostProcessGamma</a> (float f)=0</td></tr>
 <tr class="separator:a9249e070e7bed0ebbeebc4f1ca354074"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b18217de1ba1560708f678ad56ebfa6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_linear_workflow.html#a0b18217de1ba1560708f678ad56ebfa6">SetPostProcessGammaOn</a> (bool)</td></tr>
+<tr class="separator:a0b18217de1ba1560708f678ad56ebfa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7179dc7d8afa6e12273d5924d1b4fc59"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_linear_workflow.html#a7179dc7d8afa6e12273d5924d1b4fc59">SetPreProcessColors</a> (bool b)=0</td></tr>
 <tr class="separator:a7179dc7d8afa6e12273d5924d1b4fc59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01d15ffa7a602df9efbb15289ad074c1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_linear_workflow.html#a01d15ffa7a602df9efbb15289ad074c1">SetPreProcessGamma</a> (float f)=0</td></tr>
@@ -193,7 +198,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_c_rh_rdk_linear_workflow.html#ada92c71506c9e8191f3db2009d4c026b">CRhRdkLinearWorkflow</a>.</p>
+<p>Implemented in <a class="el" href="class_c_rh_rdk_linear_workflow_ex.html#a255c105d1bb48ae3eb433fecd177e91b">CRhRdkLinearWorkflowEx</a>, and <a class="el" href="class_c_rh_rdk_linear_workflow.html#ada92c71506c9e8191f3db2009d4c026b">CRhRdkLinearWorkflow</a>.</p>
 
 </div>
 </div>
@@ -220,7 +225,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Applies pre process gamma correction to a dib (i.e., an LDR texture) if PreProcessTextures is true. Note that if this texture comes from a <a class="el" href="class_c_rh_rdk_texture.html">CRhRdkTexture</a>, you should first check <a class="el" href="class_c_rh_rdk_texture.html#a4ba03dbab9636b10946efe2ae3cfca8b">CRhRdkTexture::IsLinear</a>. If the texture is linear, it will require no further processing. </p>
+<p>Applies pre-process gamma correction to a dib (i.e., an LDR texture) if PreProcessTextures is true. </p><dl class="section note"><dt>Note</dt><dd>If this texture comes from a <a class="el" href="class_c_rh_rdk_texture.html">CRhRdkTexture</a>, you should first check <a class="el" href="class_c_rh_rdk_texture.html#a4ba03dbab9636b10946efe2ae3cfca8b">CRhRdkTexture::IsLinear()</a>. If the texture is linear, it will require no further processing. </dd></dl>
 
 <p>Implemented in <a class="el" href="class_c_rh_rdk_linear_workflow.html#ad51d6f8996e7c68b180e66c5367ecf01">CRhRdkLinearWorkflow</a>.</p>
 
@@ -259,7 +264,12 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Applies pre-process gamma correction to a color if linear workflow is active. /param bForTexture Set this value to true if the color is part of a texture. See notes below for checking <a class="el" href="class_c_rh_rdk_texture.html#a4ba03dbab9636b10946efe2ae3cfca8b">CRhRdkTexture::IsLinear</a>. </p>
+<p>Applies pre-process gamma correction to a color if linear workflow is active. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bForTexture</td><td>is <em>true</em> if the color is part of a texture. See notes below for checking <a class="el" href="class_c_rh_rdk_texture.html#a4ba03dbab9636b10946efe2ae3cfca8b">CRhRdkTexture::IsLinear()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="class_c_rh_rdk_linear_workflow.html#a22ea169431c08e701e03d139f78feae0">CRhRdkLinearWorkflow</a>.</p>
 
@@ -380,8 +390,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7fdb54c16e52e9256e5fc13138edf084"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fdb54c16e52e9256e5fc13138edf084">&#9670;&nbsp;</a></span>EVF()</h2>
+<a id="a10f476f5bf801dd313b69360def3b0d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10f476f5bf801dd313b69360def3b0d6">&#9670;&nbsp;</a></span>EVF()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -393,13 +403,13 @@ Static Public Member Functions</h2></td></tr>
           <td class="memname">virtual void* IRhRdkLinearWorkflow::EVF </td>
           <td>(</td>
           <td class="paramtype">const wchar_t *&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>wszFunc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>pvData</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -413,9 +423,9 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Emergency virtual function for future expansion. </p>
+<p>Emergency virtual function for future expansion. Currently implemented wszFunc: "PostProcessGammaOn" (pvData = null; returns pointer to bool). "SetPostProcessGammaOn" (pvData is pointer to bool). </p>
 
-<p>Implemented in <a class="el" href="class_c_rh_rdk_linear_workflow.html#a4b6e4078d676ec3c34733b3d9c08f532">CRhRdkLinearWorkflow</a>.</p>
+<p>Implemented in <a class="el" href="class_c_rh_rdk_linear_workflow_ex.html#a73ca752c665cb817f83fe71806f20c5c">CRhRdkLinearWorkflowEx</a>, and <a class="el" href="class_c_rh_rdk_linear_workflow.html#a4b6e4078d676ec3c34733b3d9c08f532">CRhRdkLinearWorkflow</a>.</p>
 
 </div>
 </div>
@@ -526,9 +536,28 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>gamma for frame buffer (post-process). This is not the value to applied - this is the value that appears in the UI. See PostProcessGamma_Reciprocal. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>post-process gamma for frame buffer. This is not the value applied, this is the value that appears in the UI. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_i_rh_rdk_linear_workflow.html#acc81804a46bc24caa498a2b15baabab8">PostProcessGammaReciprocal()</a>. </dd></dl>
 
 <p>Implemented in <a class="el" href="class_c_rh_rdk_linear_workflow.html#a158d12bfd40e5e1b8f14985915317c3c">CRhRdkLinearWorkflow</a>.</p>
+
+</div>
+</div>
+<a id="ab3c57a652d310ce481c0af694853e9ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3c57a652d310ce481c0af694853e9ca">&#9670;&nbsp;</a></span>PostProcessGammaOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IRhRdkLinearWorkflow::PostProcessGammaOn </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -555,7 +584,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>gamma reciprocal for frame buffer. This is the value that is applied to each color channel for post and is supplied here as an optimization. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>gamma reciprocal for frame buffer. This is the value that is applied to each color channel for post-process and is supplied here as an optimization. </dd></dl>
 
 <p>Implemented in <a class="el" href="class_c_rh_rdk_linear_workflow.html#af8eafcfd1637d56d47bb2db02834743c">CRhRdkLinearWorkflow</a>.</p>
 
@@ -613,7 +642,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>gamma for input textures and colors (pre-process). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>pre-process gamma for input textures and colors. </dd></dl>
 
 <p>Implemented in <a class="el" href="class_c_rh_rdk_linear_workflow.html#a7c3a65f9f2e8021cb1f0ca162c513f43">CRhRdkLinearWorkflow</a>.</p>
 
@@ -642,7 +671,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>linear workflow active state for textures (also check IsLinear) . </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>linear workflow active state for textures (also check IsLinear()). </dd></dl>
 
 <p>Implemented in <a class="el" href="class_c_rh_rdk_linear_workflow.html#a04020c23b1a551c72a8fb50a444c4002">CRhRdkLinearWorkflow</a>.</p>
 
@@ -700,9 +729,27 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set gamma. This will generally be &gt;= 1.0 - usually 2.2. The actual value to be applied is the reciprocal. </p>
+<p>Set post-process gamma. This will generally be &gt;= 1.0 (usually 2.2). The actual value to be applied in post-process is the reciprocal. </p>
 
 <p>Implemented in <a class="el" href="class_c_rh_rdk_linear_workflow.html#a5f99ab5f71981f476a6fd292dfdf7595">CRhRdkLinearWorkflow</a>.</p>
+
+</div>
+</div>
+<a id="a0b18217de1ba1560708f678ad56ebfa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b18217de1ba1560708f678ad56ebfa6">&#9670;&nbsp;</a></span>SetPostProcessGammaOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IRhRdkLinearWorkflow::SetPostProcessGammaOn </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -758,7 +805,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set gamma. This will generally be &gt;= 1.0 - usually 2.2. This is the actual value appied in pre-process. </p>
+<p>Set pre-process gamma. This will generally be &gt;= 1.0 (usually 2.2). This is the actual value applied in pre-process. </p>
 
 <p>Implemented in <a class="el" href="class_c_rh_rdk_linear_workflow.html#ab4b1e79219e260f6d9412ae9a31ddaf5">CRhRdkLinearWorkflow</a>.</p>
 
@@ -796,7 +843,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:18 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:44 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -88,7 +88,7 @@ $(function() {
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">class </span><a class="code" href="group___rhino.html#gac7cff1e910b2374d20cd2265d4f976dd">RHINO_SDK_CLASS</a> <a class="code" href="class_c_rhino_linetype.html">CRhinoLinetype</a> : <span class="keyword">public</span> <a class="code" href="class_o_n___linetype.html">ON_Linetype</a></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_c_rhino_linetype.html">   19</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NextRuntimeSerialNumber();</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_c_rhino_linetype.html">   19</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_o_n___model_component.html#a544efa96ab3a822b74501aadc4816eb6">NextRuntimeSerialNumber</a>();</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="class_c_rhino_linetype_table.html">CRhinoLinetypeTable</a>&amp; m_doc_linetype_table;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
@@ -174,7 +174,7 @@ $(function() {
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <a class="code" href="class_c_rhino_linetype.html">CRhinoLinetype</a>( <span class="keyword">const</span> <a class="code" href="class_c_rhino_linetype.html">CRhinoLinetype</a>&amp; ) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <a class="code" href="class_c_rhino_linetype.html">CRhinoLinetype</a>&amp; <a class="code" href="class_o_n___linetype.html#ab403cfd3df0fef1f6d6d1359e31d3529">operator=</a>(<span class="keyword">const</span> <a class="code" href="class_c_rhino_linetype.html">CRhinoLinetype</a>&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_bDeleted = 0; <span class="comment">// true if the linetype has been deleted from the model</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_reserved = 0U;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keyword">class </span>CRhLinetypeUndo* m_undo = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  </div>
@@ -716,29 +716,30 @@ $(function() {
 <div class="ttc" id="aclass_o_n__4i_rect_html"><div class="ttname"><a href="class_o_n__4i_rect.html">ON_4iRect</a></div><div class="ttdef"><b>Definition:</b> opennurbs_ipoint.h:339</div></div>
 <div class="ttc" id="aclass_o_n___simple_array_html"><div class="ttname"><a href="class_o_n___simple_array.html">ON_SimpleArray</a></div><div class="ttdef"><b>Definition:</b> opennurbs_array.h:39</div></div>
 <div class="ttc" id="aclass_o_n___model_component_html_a5bc2c0cb6df27a80db5554fa2630279f"><div class="ttname"><a href="class_o_n___model_component.html#a5bc2c0cb6df27a80db5554fa2630279f">ON_ModelComponent::IsDeleted</a></div><div class="ttdeci">bool IsDeleted() const</div></div>
-<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga56a43009d39635f9c0a08272391b5951"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga56a43009d39635f9c0a08272391b5951">ON_SimpleArray::Destroy</a></div><div class="ttdeci">void Destroy()</div><div class="ttdoc">onfree any memory and set count and capacity to zero</div><div class="ttdef"><b>Definition:</b> opennurbs_array_defs.h:865</div></div>
+<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga56a43009d39635f9c0a08272391b5951"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga56a43009d39635f9c0a08272391b5951">ON_SimpleArray::Destroy</a></div><div class="ttdeci">void Destroy()</div><div class="ttdoc">onfree any memory and set count and capacity to zero</div><div class="ttdef"><b>Definition:</b> opennurbs_array_defs.h:901</div></div>
 <div class="ttc" id="aclass_c_rhino_doc_html_a4a536a154eaebfd1026299a73ba5651d"><div class="ttname"><a href="class_c_rhino_doc.html#a4a536a154eaebfd1026299a73ba5651d">CRhinoDoc::PurgeWorkSessionReferenceModel</a></div><div class="ttdeci">unsigned int PurgeWorkSessionReferenceModel(unsigned int worksession_ref_model_sn)</div></div>
 <div class="ttc" id="aclass_o_n__w_string_html"><div class="ttname"><a href="class_o_n__w_string.html">ON_wString</a></div><div class="ttdef"><b>Definition:</b> opennurbs_string.h:2136</div></div>
 <div class="ttc" id="aclass_o_n___linetype_html_ab403cfd3df0fef1f6d6d1359e31d3529"><div class="ttname"><a href="class_o_n___linetype.html#ab403cfd3df0fef1f6d6d1359e31d3529">ON_Linetype::operator=</a></div><div class="ttdeci">ON_Linetype &amp; operator=(const ON_Linetype &amp;)=default</div></div>
-<div class="ttc" id="aclass_o_n___component_manifest_html"><div class="ttname"><a href="class_o_n___component_manifest.html">ON_ComponentManifest</a></div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:605</div></div>
+<div class="ttc" id="aclass_o_n___component_manifest_html"><div class="ttname"><a href="class_o_n___component_manifest.html">ON_ComponentManifest</a></div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:627</div></div>
 <div class="ttc" id="aclass_c_rhino_doc_html_a4deb6fc9498e5383303003a2560e26a8"><div class="ttname"><a href="class_c_rhino_doc.html#a4deb6fc9498e5383303003a2560e26a8">CRhinoDoc::ClearUndoRecords</a></div><div class="ttdeci">void ClearUndoRecords(bool=false)</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gad64a5a71533d8a06eb1a4961628b6ea2"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gad64a5a71533d8a06eb1a4961628b6ea2">ON_SimpleArray::operator=</a></div><div class="ttdeci">ON_SimpleArray&lt; T &gt; &amp; operator=(const ON_SimpleArray&lt; T &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> opennurbs_array_defs.h:99</div></div>
 <div class="ttc" id="aclass_o_n___linetype_html"><div class="ttname"><a href="class_o_n___linetype.html">ON_Linetype</a></div><div class="ttdoc">class ON_Linetype</div><div class="ttdef"><b>Definition:</b> opennurbs_linetype.h:43</div></div>
 <div class="ttc" id="aclass_c_rhino_linetype_table_html"><div class="ttname"><a href="class_c_rhino_linetype_table.html">CRhinoLinetypeTable</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkLinetype.h:125</div></div>
 <div class="ttc" id="aclass_o_n___object_array_html"><div class="ttname"><a href="class_o_n___object_array.html">ON_ObjectArray&lt; ON_Linetype &gt;</a></div></div>
 <div class="ttc" id="aclass_o_n___text_log_html"><div class="ttname"><a href="class_o_n___text_log.html">ON_TextLog</a></div><div class="ttdef"><b>Definition:</b> opennurbs_textlog.h:22</div></div>
-<div class="ttc" id="aclass_o_n_html_aa1aad694d6307b3f378bbe369c769407"><div class="ttname"><a href="class_o_n.html#aa1aad694d6307b3f378bbe369c769407">ON::object_linetype_source</a></div><div class="ttdeci">object_linetype_source</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:1846</div></div>
-<div class="ttc" id="aclass_c_rhino_doc_html"><div class="ttname"><a href="class_c_rhino_doc.html">CRhinoDoc</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkDoc.h:655</div></div>
+<div class="ttc" id="aclass_o_n_html_aa1aad694d6307b3f378bbe369c769407"><div class="ttname"><a href="class_o_n.html#aa1aad694d6307b3f378bbe369c769407">ON::object_linetype_source</a></div><div class="ttdeci">object_linetype_source</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:1879</div></div>
+<div class="ttc" id="aclass_c_rhino_doc_html"><div class="ttname"><a href="class_c_rhino_doc.html">CRhinoDoc</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkDoc.h:683</div></div>
+<div class="ttc" id="aclass_o_n___model_component_html_a544efa96ab3a822b74501aadc4816eb6"><div class="ttname"><a href="class_o_n___model_component.html#a544efa96ab3a822b74501aadc4816eb6">ON_ModelComponent::NextRuntimeSerialNumber</a></div><div class="ttdeci">static ON__UINT64 NextRuntimeSerialNumber()</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga3c46136e2570983319c47553f753932e"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a></div><div class="ttdeci">unsigned long long ON__UINT64</div><div class="ttdoc">64 bit unsigned integer</div><div class="ttdef"><b>Definition:</b> opennurbs_system.h:250</div></div>
 <div class="ttc" id="agroup___rhino_html_gae7c53d8e1e8d269ea7b00b5f5f45074e"><div class="ttname"><a href="group___rhino.html#gae7c53d8e1e8d269ea7b00b5f5f45074e">RhinoReadLinetypesFromFile</a></div><div class="ttdeci">RHINO_SDK_FUNCTION int RhinoReadLinetypesFromFile(const wchar_t *filename, ON_ObjectArray&lt; ON_Linetype &gt; &amp;linetypes)</div></div>
-<div class="ttc" id="aclass_o_n_html_aa1aad694d6307b3f378bbe369c769407a745ae78e12145213de50b2863698897f"><div class="ttname"><a href="class_o_n.html#aa1aad694d6307b3f378bbe369c769407a745ae78e12145213de50b2863698897f">ON::linetype_from_layer</a></div><div class="ttdeci">@ linetype_from_layer</div><div class="ttdoc">use line style assigned to layer</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:1848</div></div>
+<div class="ttc" id="aclass_o_n_html_aa1aad694d6307b3f378bbe369c769407a745ae78e12145213de50b2863698897f"><div class="ttname"><a href="class_o_n.html#aa1aad694d6307b3f378bbe369c769407a745ae78e12145213de50b2863698897f">ON::linetype_from_layer</a></div><div class="ttdeci">@ linetype_from_layer</div><div class="ttdoc">use line style assigned to layer</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:1881</div></div>
 <div class="ttc" id="aclass_c_rhino_linetype_html"><div class="ttname"><a href="class_c_rhino_linetype.html">CRhinoLinetype</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkLinetype.h:19</div></div>
 <div class="ttc" id="aclass_c_rhino_doc_table_reference_html"><div class="ttname"><a href="class_c_rhino_doc_table_reference.html">CRhinoDocTableReference</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkBitmap.h:18</div></div>
 <div class="ttc" id="astruct_o_n___u_u_i_d__struct_html"><div class="ttname"><a href="struct_o_n___u_u_i_d__struct.html">ON_UUID_struct</a></div><div class="ttdoc">ON_UUID is a 16 byte universally unique identifier.</div><div class="ttdef"><b>Definition:</b> opennurbs_uuid.h:35</div></div>
-<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga14e3d8c3c9542339ffabe5b404b76062"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga14e3d8c3c9542339ffabe5b404b76062">ON_SimpleArray::Sort</a></div><div class="ttdeci">bool Sort(ON::sort_algorithm sort_algorithm, int *, int(*)(const T *, const T *)) const</div><div class="ttdef"><b>Definition:</b> opennurbs_array_defs.h:789</div></div>
+<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga14e3d8c3c9542339ffabe5b404b76062"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga14e3d8c3c9542339ffabe5b404b76062">ON_SimpleArray::Sort</a></div><div class="ttdeci">bool Sort(ON::sort_algorithm sort_algorithm, int *, int(*)(const T *, const T *)) const</div><div class="ttdef"><b>Definition:</b> opennurbs_array_defs.h:825</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:12:55 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:20 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

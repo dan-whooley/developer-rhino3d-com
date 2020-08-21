@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -93,14 +93,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aedd0c78c954eea2dd4be99043caa8664"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3550a39437af02b98408061dfe9b26f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_dithering.html#aa3550a39437af02b98408061dfe9b26f">EndChange</a> (void)=0</td></tr>
 <tr class="separator:aa3550a39437af02b98408061dfe9b26f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f7d34bab7e1c87c86334f7eeb67a69a"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_dithering.html#a9f7d34bab7e1c87c86334f7eeb67a69a">EVF</a> (const wchar_t *, void *)=0</td></tr>
-<tr class="separator:a9f7d34bab7e1c87c86334f7eeb67a69a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9322be1994ae22fa42899d368581bf61"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_dithering.html#a9322be1994ae22fa42899d368581bf61">EVF</a> (const wchar_t *wszFunc, void *pvData)=0</td></tr>
+<tr class="separator:a9322be1994ae22fa42899d368581bf61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab595a5ca3273310a078fc16b0e97dc03"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_dithering.html#ab595a5ca3273310a078fc16b0e97dc03">IsEqual</a> (const <a class="el" href="class_i_rh_rdk_dithering.html">IRhRdkDithering</a> &amp;dit) const =0</td></tr>
 <tr class="separator:ab595a5ca3273310a078fc16b0e97dc03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa59bb2227e0e2d4bd9c5c36741c1ee2d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_rh_rdk_dithering.html#a3d78ff983c48790a622287cbde1acb7f">Methods</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_dithering.html#aa59bb2227e0e2d4bd9c5c36741c1ee2d">Method</a> (void) const =0</td></tr>
 <tr class="separator:aa59bb2227e0e2d4bd9c5c36741c1ee2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf3e5b787c3809ffda884078e6b98f20"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_dithering.html#adf3e5b787c3809ffda884078e6b98f20">On</a> (void) const</td></tr>
+<tr class="separator:adf3e5b787c3809ffda884078e6b98f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada6d72e448b721611b5205ac9e60053f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_dithering.html#ada6d72e448b721611b5205ac9e60053f">SetMethod</a> (<a class="el" href="class_i_rh_rdk_dithering.html#a3d78ff983c48790a622287cbde1acb7f">Methods</a> m)=0</td></tr>
 <tr class="separator:ada6d72e448b721611b5205ac9e60053f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a179b29e44d13a8ab28f2c504ba81f6d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_dithering.html#a179b29e44d13a8ab28f2c504ba81f6d0">SetOn</a> (bool bOn)</td></tr>
+<tr class="separator:a179b29e44d13a8ab28f2c504ba81f6d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -132,8 +136,6 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Dithering algorithm. </p>
-<p><br  />
- </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3d78ff983c48790a622287cbde1acb7fa6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"><p>No dithering </p>
 </td></tr>
@@ -252,8 +254,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9f7d34bab7e1c87c86334f7eeb67a69a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f7d34bab7e1c87c86334f7eeb67a69a">&#9670;&nbsp;</a></span>EVF()</h2>
+<a id="a9322be1994ae22fa42899d368581bf61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9322be1994ae22fa42899d368581bf61">&#9670;&nbsp;</a></span>EVF()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -265,13 +267,13 @@ Static Public Member Functions</h2></td></tr>
           <td class="memname">virtual void* IRhRdkDithering::EVF </td>
           <td>(</td>
           <td class="paramtype">const wchar_t *&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>wszFunc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>pvData</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -285,7 +287,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Emergency virtual function for future expansion. </p>
+<p>Emergency virtual function for future expansion. Currently implemented wszFunc: "On" (pvData = null; returns pointer to bool). "SetOn" (pvData is pointer to bool). </p>
 
 </div>
 </div>
@@ -369,6 +371,24 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="adf3e5b787c3809ffda884078e6b98f20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf3e5b787c3809ffda884078e6b98f20">&#9670;&nbsp;</a></span>On()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IRhRdkDithering::On </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ada6d72e448b721611b5205ac9e60053f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ada6d72e448b721611b5205ac9e60053f">&#9670;&nbsp;</a></span>SetMethod()</h2>
 
@@ -396,10 +416,28 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a179b29e44d13a8ab28f2c504ba81f6d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a179b29e44d13a8ab28f2c504ba81f6d0">&#9670;&nbsp;</a></span>SetOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IRhRdkDithering::SetOn </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bOn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:17 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:43 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

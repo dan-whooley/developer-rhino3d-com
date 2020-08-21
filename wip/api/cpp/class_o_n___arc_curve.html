@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -442,7 +442,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:adfacdada9d5f0a460c43506d259e8432"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15ec1a5cd6175aa75a40213dfc54b5b8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___arc_curve.html#a15ec1a5cd6175aa75a40213dfc54b5b8">m_dim</a> = 3</td></tr>
 <tr class="separator:a15ec1a5cd6175aa75a40213dfc54b5b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92b50fe2499c91f317d551ae9b3b705b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___interval.html">ON_Interval</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___arc_curve.html#a92b50fe2499c91f317d551ae9b3b705b">m_t</a> = <a class="el" href="class_o_n___interval.html#ad843bb578a893163ff9102a2f1a6d996">ON_Interval::ZeroToTwoPi</a></td></tr>
+<tr class="memitem:a92b50fe2499c91f317d551ae9b3b705b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___interval.html">ON_Interval</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___arc_curve.html#a92b50fe2499c91f317d551ae9b3b705b">m_t</a> = <a class="el" href="group__open_n_u_r_b_s.html#gad843bb578a893163ff9102a2f1a6d996">ON_Interval::ZeroToTwoPi</a></td></tr>
 <tr class="separator:a92b50fe2499c91f317d551ae9b3b705b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -1074,7 +1074,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Find parameter of the point on a curve that is closest to test_point. If the maximum_distance parameter is &gt; 0, then only points whose distance to the given point is &lt;= maximum_distance will be returned. Using a positive value of maximum_distance can substantially speed up the search. If the sub_domain parameter is not nullptr, then the search is restricted to the specified portion of the curve.</p>
 <p>true if returned if the search is successful. false is returned if the search fails. </p>
 
-<p>Reimplemented from <a class="el" href="class_o_n___curve.html#ad5a68aa7745e0f2c056ac1bf15265aee">ON_Curve</a>.</p>
+<p>Reimplemented from <a class="el" href="class_o_n___curve.html#af9de44ea2c03b30312f12fae4ad273d6">ON_Curve</a>.</p>
 
 </div>
 </div>
@@ -1429,7 +1429,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">bool ON_ArcCurve::GetSpanVector </td>
           <td>(</td>
           <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>knots</em></td><td>)</td>
+          <td class="paramname"><em>span_parameters</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1439,9 +1439,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Get number of parameters of "knots". Parameters: knots - [out] an array of length <a class="el" href="class_o_n___arc_curve.html#abfbb21095d4b15e686ba1d820d2e9caf" title="number of smooth spans in curve">SpanCount()</a>+1 is filled in with the parameters where the curve is not smooth (C-infinity). Returns: true if successful </p>
+<p>Description: Get number of parameters of "knots". Parameters: span_parameters - [out] an array of length <a class="el" href="class_o_n___arc_curve.html#abfbb21095d4b15e686ba1d820d2e9caf" title="number of smooth spans in curve">SpanCount()</a>+1 is filled in with the parameters where the curve is not smooth (C-infinity). Returns: true if successful </p>
 
-<p>Implements <a class="el" href="class_o_n___curve.html#ae619c78b795518c251c5ac32d34d568f">ON_Curve</a>.</p>
+<p>Implements <a class="el" href="class_o_n___curve.html#a4c6903f3c0a52d0faa42fb80c2834ba3">ON_Curve</a>.</p>
 
 </div>
 </div>
@@ -2416,7 +2416,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_o_n___interval.html">ON_Interval</a> ON_ArcCurve::m_t = <a class="el" href="class_o_n___interval.html#ad843bb578a893163ff9102a2f1a6d996">ON_Interval::ZeroToTwoPi</a></td>
+          <td class="memname"><a class="el" href="class_o_n___interval.html">ON_Interval</a> ON_ArcCurve::m_t = <a class="el" href="group__open_n_u_r_b_s.html#gad843bb578a893163ff9102a2f1a6d996">ON_Interval::ZeroToTwoPi</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2426,7 +2426,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:21 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:47 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

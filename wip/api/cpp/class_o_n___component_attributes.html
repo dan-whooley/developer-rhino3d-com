@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -75,32 +75,40 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a771d8615898e996a98ab39510328b811"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811">EdgeFlags</a> : unsigned int { <br />
-&#160;&#160;<a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811a69060f8d22beca7de07380dbbf1a18ee">Open</a> = 1, 
-<a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811add02384cd3e6225da38bfd98dd0a15f3">Closed</a> = 2, 
-<a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811af527a9c0e116ce442d1d99cbbdaee9f5">Wire</a> = 4, 
-<a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811a71c7ede5cb53d371be4cb4d26b4f720e">Boundary</a> = 8, 
+<tr class="memitem:a6cb53ff240dfaad5400fc0de9ad7eb2c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: unsigned int { <a class="el" href="class_o_n___component_attributes.html#a6cb53ff240dfaad5400fc0de9ad7eb2cac15d89f96adc524dcf63a5afc8220b4f">Damaged</a> = 0x80000000U
+ }</td></tr>
+<tr class="separator:a6cb53ff240dfaad5400fc0de9ad7eb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d29d48bc4024598cba93dc7903abd8a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8a">EdgeAttributes</a> : unsigned int { <br />
+&#160;&#160;<a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8aa69060f8d22beca7de07380dbbf1a18ee">Open</a> = 1, 
+<a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8aadd02384cd3e6225da38bfd98dd0a15f3">Closed</a> = 2, 
+<a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8aad558d1d91c1ef876eac33df048af80c6">ZeroLength</a> = 4, 
+<a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8aa81e014307498eb1274c7d0e660578c8c">NonzeroLength</a> = 8, 
 <br />
-&#160;&#160;<a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811a190cd1fcadb8698f18758624092d97c1">Interior</a> = 16, 
-<a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811aedfbbfcad1c474c8842a1c2292d6034e">Nonmanifold</a> = 32, 
-<a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811af5aaf750ad49662c9c7bf4f97a3cb298">Oriented</a> = 64, 
-<a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811aed9a656da1e8af769ece55f9d5ec144c">NotOriented</a> = 128, 
+&#160;&#160;<a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8aaf527a9c0e116ce442d1d99cbbdaee9f5">Wire</a> = 16, 
+<a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8aa71c7ede5cb53d371be4cb4d26b4f720e">Boundary</a> = 32, 
+<a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8aa190cd1fcadb8698f18758624092d97c1">Interior</a> = 64, 
+<a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8aaedfbbfcad1c474c8842a1c2292d6034e">Nonmanifold</a> = 128, 
 <br />
-&#160;&#160;<a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811ad8c457eb9144c86e72a23dfe41143ccc">Smooth</a> = 256, 
-<a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811a30e6d2f2ce05fc24700799973ab11777">Crease</a> = 512, 
-<a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811a7cd179c4cf9b847496cffbdd367b1f03">Dart</a> = 1024, 
-<a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811aba968a764140d77eabb58aa024642b3d">Seam</a> = 2048, 
+&#160;&#160;<a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8aabc4392a23f0a3479b389132223ccd3e3">InteriorOriented</a> = 256, 
+<a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8aa70781678f37f6e1b311aeb8e4ea3603e">InteriorNotOriented</a> = 512, 
+<a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8aad1abf60ccfe087006933f1d7fa0af345">InteriorSmooth</a> = 1024, 
+<a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8aa2d0ab02e48bbc4deb4aef2cef6efbcd8">InteriorCrease</a> = 2048, 
 <br />
-&#160;&#160;<a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811a55433de96acbca3424b5b4d7d32fa827">Slit</a> = 4096, 
-<a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811afb87049d435134dd5b02e640f9e2fd6a">Degenerate</a> = 4096, 
-<a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811ac15d89f96adc524dcf63a5afc8220b4f">Damaged</a> = 32768, 
-<a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811a6677074f901796cb086657e0fb74fca1">Mask</a> = 0xFFFF
+&#160;&#160;<a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8aadba3c73069d0191c38640acd7401b560">InteriorTwoFaced</a> = 4096, 
+<a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8aa3f8ac6d0d08b6b8a937e0c02bede9177">InteriorSeam</a> = 8192, 
+<a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8aaa99829accdfcadd567261560454b87e1">InteriorSlit</a> = 16384, 
+<a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8aa6677074f901796cb086657e0fb74fca1">Mask</a> = 0xFFFF
 <br />
  }</td></tr>
-<tr class="separator:a771d8615898e996a98ab39510328b811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a2d29d48bc4024598cba93dc7903abd8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a8b3cb638436aa622d766efdeea744457"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___component_attributes.html#a8b3cb638436aa622d766efdeea744457">EdgeIsEligible</a> (unsigned int edge_attributes_filter, const class <a class="el" href="class_o_n___sub_d_edge.html">ON_SubDEdge</a> *edge)</td></tr>
+<tr class="memdesc:a8b3cb638436aa622d766efdeea744457"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspects edge attributes to determine if the edge is has the attributes specified by the edge_attributes_filter.  <a href="class_o_n___component_attributes.html#a8b3cb638436aa622d766efdeea744457">More...</a><br /></td></tr>
+<tr class="separator:a8b3cb638436aa622d766efdeea744457"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac07481cdc80f9890cb4b9085a15d48f9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___component_attributes.html#ac07481cdc80f9890cb4b9085a15d48f9">EdgeIsEligible</a> (unsigned int edge_attributes_filter, unsigned int edge_attributes)</td></tr>
+<tr class="separator:ac07481cdc80f9890cb4b9085a15d48f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30896a00e0c9eb3c2a4801328cfed3cc"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___component_attributes.html#a30896a00e0c9eb3c2a4801328cfed3cc">HasBoundary</a> (unsigned int aggregate_edge_component_attributes)</td></tr>
 <tr class="memdesc:a30896a00e0c9eb3c2a4801328cfed3cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspects aggregate edge demographics to determine if there is a boundary edge.  <a href="class_o_n___component_attributes.html#a30896a00e0c9eb3c2a4801328cfed3cc">More...</a><br /></td></tr>
 <tr class="separator:a30896a00e0c9eb3c2a4801328cfed3cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,58 +133,152 @@ Static Public Member Functions</h2></td></tr>
 <p>/ / Copyright (c) 1993-2015 Robert McNeel &amp; Associates. All rights reserved. / OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert / McNeel &amp; Associates. / / THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY. / ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF / MERCHANTABILITY ARE HEREBY DISCLAIMED. / <br  />
  / For complete openNURBS copyright information see <a href="http://www.opennurbs.org">http://www.opennurbs.org</a>. / ////////////////////////////////////////////////////////////// </p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="a771d8615898e996a98ab39510328b811"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a771d8615898e996a98ab39510328b811">&#9670;&nbsp;</a></span>EdgeFlags</h2>
+<a id="a6cb53ff240dfaad5400fc0de9ad7eb2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cb53ff240dfaad5400fc0de9ad7eb2c">&#9670;&nbsp;</a></span>anonymous enum</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811">ON_ComponentAttributes::EdgeFlags</a> : unsigned int</td>
+          <td class="memname">anonymous enum : unsigned int</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6cb53ff240dfaad5400fc0de9ad7eb2cac15d89f96adc524dcf63a5afc8220b4f"></a>Damaged&#160;</td><td class="fielddoc"><p>summary&gt; The Damaged bit is set when an vertex, edge, or face component has a critical data structure flaw. /summary&gt; </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a2d29d48bc4024598cba93dc7903abd8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d29d48bc4024598cba93dc7903abd8a">&#9670;&nbsp;</a></span>EdgeAttributes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8a">ON_ComponentAttributes::EdgeAttributes</a> : unsigned int</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p></p>
-<p>ON_EdgeAttributeFlags are used to report attributes of single edge objects, like ON_SubDEdge and <a class="el" href="class_o_n___brep_edge.html">ON_BrepEdge</a>, and aggregate edge demographics in objects with topology like ON_SubD, <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> and <a class="el" href="class_o_n___brep.html">ON_Brep</a>.</p>
-<dl class="section see"><dt>See also</dt><dd>ON_BrepEdge::ComponentAttributes, ON_SubDEdge::ComponentAttributes, ON_Brep::AggregateEdgeComponentAttributes, ON_Mesh::AggregateEdgeComponentAttributes, ON_SubD::AggregateEdgeComponentAttributes</dd></dl>
+<p>ON_EdgeAttributeFlags are used to report attributes of single edge objects, like <a class="el" href="class_o_n___sub_d_edge.html">ON_SubDEdge</a> and <a class="el" href="class_o_n___brep_edge.html">ON_BrepEdge</a>, and aggregate edge demographics in objects with topology like <a class="el" href="class_o_n___sub_d.html">ON_SubD</a>, <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> and <a class="el" href="class_o_n___brep.html">ON_Brep</a>.</p>
+<dl class="section see"><dt>See also</dt><dd>ON_BrepEdge::EdgeFlags, ON_SubDEdge::EdgeFlags, ON_Brep::AggregateEdgeFlags, ON_Mesh::AggregateEdgeFlags, ON_SubD::AggregateEdgeFlags</dd></dl>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a771d8615898e996a98ab39510328b811a69060f8d22beca7de07380dbbf1a18ee"></a>Open&#160;</td><td class="fielddoc"><p>summary&gt; The Open bit is set when an edge has distinct start and end vertices. /summary&gt; summary&gt; The Closed bit is set when an edge begins and ends at the same vertex. /summary&gt; </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2d29d48bc4024598cba93dc7903abd8aa69060f8d22beca7de07380dbbf1a18ee"></a>Open&#160;</td><td class="fielddoc"><p>summary&gt; The Open bit is set when an edge has distinct start and end vertices. Open and Closed are mutually exclusive edge attributes. Note that an open edge can have zero length when two distict vertices have identical locations and the edge's geometry is a zero length curve. /summary&gt; summary&gt; The Closed bit is set when an edge begins and ends at the same vertex. Open and Closed are mutually exclusive edge attributes. Note that a closed edge can have zero length or nonzero length. /summary&gt; </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a771d8615898e996a98ab39510328b811add02384cd3e6225da38bfd98dd0a15f3"></a>Closed&#160;</td><td class="fielddoc"><p>summary&gt; The Wire bit when an edge has no faces. /summary&gt; </p>
+<tr><td class="fieldname"><a id="a2d29d48bc4024598cba93dc7903abd8aadd02384cd3e6225da38bfd98dd0a15f3"></a>Closed&#160;</td><td class="fielddoc"><p>summary&gt; The ZeroLength edge has zero length. It can be open or closed. ZeroLength and NonzeroLength are mutually exclusive edge attributes. /summary&gt; </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a771d8615898e996a98ab39510328b811af527a9c0e116ce442d1d99cbbdaee9f5"></a>Wire&#160;</td><td class="fielddoc"><p>summary&gt; The Boundary bit is set when an edge has one face. /summary&gt; </p>
+<tr><td class="fieldname"><a id="a2d29d48bc4024598cba93dc7903abd8aad558d1d91c1ef876eac33df048af80c6"></a>ZeroLength&#160;</td><td class="fielddoc"><p>summary&gt; The NonzeroLength edge has non zero length. It can be open or closed. ZeroLength and NonzeroLength are mutually exclusive edge attributes. /summary&gt; </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a771d8615898e996a98ab39510328b811a71c7ede5cb53d371be4cb4d26b4f720e"></a>Boundary&#160;</td><td class="fielddoc"><p>summary&gt; The Interior bit is set when an edge has two distinct faces. /summary&gt; </p>
+<tr><td class="fieldname"><a id="a2d29d48bc4024598cba93dc7903abd8aa81e014307498eb1274c7d0e660578c8c"></a>NonzeroLength&#160;</td><td class="fielddoc"><p>summary&gt; The Wire edge has no faces. Wire, Boundary, Interior, and Nonmanifold are mutually exclusive edge attributes. /summary&gt; </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a771d8615898e996a98ab39510328b811a190cd1fcadb8698f18758624092d97c1"></a>Interior&#160;</td><td class="fielddoc"><p>summary&gt; The Nonmanifold bit is set when an edge has three or more faces. /summary&gt; </p>
+<tr><td class="fieldname"><a id="a2d29d48bc4024598cba93dc7903abd8aaf527a9c0e116ce442d1d99cbbdaee9f5"></a>Wire&#160;</td><td class="fielddoc"><p>summary&gt; The Boundary edge has one face. Wire, Boundary, Interior, and Nonmanifold are mutually exclusive edge attributes. /summary&gt; </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a771d8615898e996a98ab39510328b811aedfbbfcad1c474c8842a1c2292d6034e"></a>Nonmanifold&#160;</td><td class="fielddoc"><p>summary&gt; The Oriented bit is set when an edge has two faces with compatible orientations. /summary&gt; </p>
+<tr><td class="fieldname"><a id="a2d29d48bc4024598cba93dc7903abd8aa71c7ede5cb53d371be4cb4d26b4f720e"></a>Boundary&#160;</td><td class="fielddoc"><p>summary&gt; The Interior edge has two faces. Wire, Boundary, Interior, and Nonmanifold are mutually exclusive edge attributes. /summary&gt; </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a771d8615898e996a98ab39510328b811af5aaf750ad49662c9c7bf4f97a3cb298"></a>Oriented&#160;</td><td class="fielddoc"><p>summary&gt; The NotOriented bit is set when an edge has two faces with opposited orientations. /summary&gt; </p>
+<tr><td class="fieldname"><a id="a2d29d48bc4024598cba93dc7903abd8aa190cd1fcadb8698f18758624092d97c1"></a>Interior&#160;</td><td class="fielddoc"><p>summary&gt; The Nonmanifold edge has three or more faces. Wire, Boundary, Interior, and Nonmanifold are mutually exclusive edge attributes. /summary&gt; </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a771d8615898e996a98ab39510328b811aed9a656da1e8af769ece55f9d5ec144c"></a>NotOriented&#160;</td><td class="fielddoc"><p>summary&gt; The Smooth bit is set when an an edge has two faces with a guaranteed surface tangent continuity. /summary&gt; </p>
+<tr><td class="fieldname"><a id="a2d29d48bc4024598cba93dc7903abd8aaedfbbfcad1c474c8842a1c2292d6034e"></a>Nonmanifold&#160;</td><td class="fielddoc"><p>summary&gt; The InteriorOriented edge has two faces with compatible face orientations. InteriorOriented and InteriorNotOriented are mutually exclusive interior edge attributes. /summary&gt; </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a771d8615898e996a98ab39510328b811ad8c457eb9144c86e72a23dfe41143ccc"></a>Smooth&#160;</td><td class="fielddoc"><p>summary&gt; The Crease bit is set when an edge has two faces with a possible surface tangent discontinuity /summary&gt; </p>
+<tr><td class="fieldname"><a id="a2d29d48bc4024598cba93dc7903abd8aabc4392a23f0a3479b389132223ccd3e3"></a>InteriorOriented&#160;</td><td class="fielddoc"><p>summary&gt; The InteriorNotOriented edge has two faces with opposite face orientations. InteriorOriented and InteriorNotOriented are mutually exclusive interior edge attributes. /summary&gt; </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a771d8615898e996a98ab39510328b811a30e6d2f2ce05fc24700799973ab11777"></a>Crease&#160;</td><td class="fielddoc"><p>summary&gt; The Dart bit is set when an edge has two faces with a possible surface tangent discontinuity at one end and guaranteed surface tangent space continuity at the other end. /summary&gt; </p>
+<tr><td class="fieldname"><a id="a2d29d48bc4024598cba93dc7903abd8aa70781678f37f6e1b311aeb8e4ea3603e"></a>InteriorNotOriented&#160;</td><td class="fielddoc"><p>summary&gt; The InteriorSmooth edge has two faces with a guaranteed surface tangent continuity. InteriorSmooth and InteriorCrease are mutually exclusive interior edge attributes. /summary&gt; </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a771d8615898e996a98ab39510328b811a7cd179c4cf9b847496cffbdd367b1f03"></a>Dart&#160;</td><td class="fielddoc"><p>summary&gt; The Seam bit is set when an edge has two faces that are identical and the edge is on the parametric boundary of the face's surface. /summary&gt; example&gt; Parametric surfaces that are cylinders are an example of a situation where seam edges occur. /example&gt; </p>
+<tr><td class="fieldname"><a id="a2d29d48bc4024598cba93dc7903abd8aad1abf60ccfe087006933f1d7fa0af345"></a>InteriorSmooth&#160;</td><td class="fielddoc"><p>summary&gt; The InteriorCrease edge has two faces with a possible surface tangent discontinuity InteriorSmooth and InteriorCrease are mutually exclusive interior edge attributes. /summary&gt; </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a771d8615898e996a98ab39510328b811aba968a764140d77eabb58aa024642b3d"></a>Seam&#160;</td><td class="fielddoc"><p>summary&gt; The Slit bit is set when edge has two faces that are identical and the edges is not a seam. /summary&gt; </p>
+<tr><td class="fieldname"><a id="a2d29d48bc4024598cba93dc7903abd8aa2d0ab02e48bbc4deb4aef2cef6efbcd8"></a>InteriorCrease&#160;</td><td class="fielddoc"><p>summary&gt; The InteriorTwoFaced edge has two distinct faces. InteriorTwoFaced, InteriorSeam, and InteriorSlit are mutually exclusive interior edge attributes. /summary&gt; </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a771d8615898e996a98ab39510328b811a55433de96acbca3424b5b4d7d32fa827"></a>Slit&#160;</td><td class="fielddoc"><p>summary&gt; The Slit bit is set when an edge has zero length. /summary&gt; </p>
+<tr><td class="fieldname"><a id="a2d29d48bc4024598cba93dc7903abd8aadba3c73069d0191c38640acd7401b560"></a>InteriorTwoFaced&#160;</td><td class="fielddoc"><p>summary&gt; The InteriorSeam edge has two faces that are identical and the edge is on the parametric boundary of the face's surface. InteriorTwoFaced, InteriorSeam, and InteriorSlit are mutually exclusive interior edge attributes. /summary&gt; example&gt; Parametric surfaces that are cylinders are an example of a situation where seam edges occur. /example&gt; </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a771d8615898e996a98ab39510328b811afb87049d435134dd5b02e640f9e2fd6a"></a>Degenerate&#160;</td><td class="fielddoc"><p>summary&gt; The Damaged bit is set when an edge has a critical flaw like missing vertex information. /summary&gt; </p>
+<tr><td class="fieldname"><a id="a2d29d48bc4024598cba93dc7903abd8aa3f8ac6d0d08b6b8a937e0c02bede9177"></a>InteriorSeam&#160;</td><td class="fielddoc"><p>summary&gt; The InteriorSlit edge has two faces that are identical and the edges is not a seam. InteriorTwoFaced, InteriorSeam, and InteriorSlit are mutually exclusive interior edge attributes. /summary&gt; </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a771d8615898e996a98ab39510328b811ac15d89f96adc524dcf63a5afc8220b4f"></a>Damaged&#160;</td><td class="fielddoc"><p>summary&gt; Mask can be used to isolate EdgeFlags bits from an unsigned int bit field containing other information. /summary&gt; example&gt; Determine if two unsigned ints have identical EdgeFlags settings. code&gt; unsigned int combined_flags1 = ...; unsigned int combined_flags2 = ...; unsigned int edge_flags1 = (ON_ComponentAttributes::EdgeFlags::Mask &amp; combined_flags1); unsigned int edge_flags2 = (ON_ComponentAttributes::EdgeFlags::Mask &amp; combined_flags2); if ( edge_flags1 == edge_flags1) { ... edges flags are identical ... } /code&gt; /example&gt; </p>
+<tr><td class="fieldname"><a id="a2d29d48bc4024598cba93dc7903abd8aaa99829accdfcadd567261560454b87e1"></a>InteriorSlit&#160;</td><td class="fielddoc"><p>summary&gt; ON_ComponentAttributes::EdgeAttributes::Mask can be used to isolate EdgeAttributes bits from an unsigned int bit field containing other information. /summary&gt; example&gt; Determine if two unsigned ints have identical <a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8a">ON_ComponentAttributes::EdgeAttributes</a> settings. code&gt; unsigned int combined_flags1 = ...; unsigned int combined_flags2 = ...; unsigned int edge_flags1 = (ON_ComponentAttributes::EdgeAttributes::Mask &amp; combined_flags1); unsigned int edge_flags2 = (ON_ComponentAttributes::EdgeAttributes::Mask &amp; combined_flags2); if ( edge_flags1 == edge_flags1) { ... edges flags are identical ... } /code&gt; /example&gt; </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a771d8615898e996a98ab39510328b811a6677074f901796cb086657e0fb74fca1"></a>Mask&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2d29d48bc4024598cba93dc7903abd8aa6677074f901796cb086657e0fb74fca1"></a>Mask&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8b3cb638436aa622d766efdeea744457"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b3cb638436aa622d766efdeea744457">&#9670;&nbsp;</a></span>EdgeIsEligible() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ON_ComponentAttributes::EdgeIsEligible </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>edge_attributes_filter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const class <a class="el" href="class_o_n___sub_d_edge.html">ON_SubDEdge</a> *&#160;</td>
+          <td class="paramname"><em>edge</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inspects edge attributes to determine if the edge is has the attributes specified by the edge_attributes_filter. </p>
+<p><br  />
+ </p>
+
+</div>
+</div>
+<a id="ac07481cdc80f9890cb4b9085a15d48f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac07481cdc80f9890cb4b9085a15d48f9">&#9670;&nbsp;</a></span>EdgeIsEligible() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ON_ComponentAttributes::EdgeIsEligible </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>edge_attributes_filter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>edge_attributes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a30896a00e0c9eb3c2a4801328cfed3cc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a30896a00e0c9eb3c2a4801328cfed3cc">&#9670;&nbsp;</a></span>HasBoundary()</h2>
 
@@ -204,7 +306,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Inspects aggregate edge demographics to determine if there is a boundary edge. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aggregate_edge_component_attributes</td><td>Value made by bitwise or of <a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811">ON_ComponentAttributes::EdgeFlags</a> values for every edge in the object. </td></tr>
+    <tr><td class="paramname">aggregate_edge_component_attributes</td><td>Value made by bitwise or of <a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8a">ON_ComponentAttributes::EdgeAttributes</a> values for every edge in the object. </td></tr>
   </table>
   </dd>
 </dl>
@@ -239,7 +341,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Inspects aggregate edge demographics to determine if the object is a manifold, possibly with boundary. Face orientation is ignored. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aggregate_edge_component_attributes</td><td>Value made by bitwise or of <a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811">ON_ComponentAttributes::EdgeFlags</a> values for every edge in the object. </td></tr>
+    <tr><td class="paramname">aggregate_edge_component_attributes</td><td>Value made by bitwise or of <a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8a">ON_ComponentAttributes::EdgeAttributes</a> values for every edge in the object. </td></tr>
   </table>
   </dd>
 </dl>
@@ -274,7 +376,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Inspects aggregate edge demographics to determine if the object is a not manifold. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aggregate_edge_component_attributes</td><td>Value made by bitwise or of <a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811">ON_ComponentAttributes::EdgeFlags</a> values for every edge in the object. </td></tr>
+    <tr><td class="paramname">aggregate_edge_component_attributes</td><td>Value made by bitwise or of <a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8a">ON_ComponentAttributes::EdgeAttributes</a> values for every edge in the object. </td></tr>
   </table>
   </dd>
 </dl>
@@ -311,7 +413,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Inspects aggregate edge demographics to determine if the faces have a compatible orientations. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aggregate_edge_component_attributes</td><td>Value made by bitwise or of <a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811">ON_ComponentAttributes::EdgeFlags</a> values for every edge in the object. </td></tr>
+    <tr><td class="paramname">aggregate_edge_component_attributes</td><td>Value made by bitwise or of <a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8a">ON_ComponentAttributes::EdgeAttributes</a> values for every edge in the object. </td></tr>
   </table>
   </dd>
 </dl>
@@ -346,7 +448,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Inspects aggregate edge demographics to determine if the faces have a compatible orientations. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aggregate_edge_demographics</td><td>Value made by bitwise or of <a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811">ON_ComponentAttributes::EdgeFlags</a> values for every edge in the object. </td></tr>
+    <tr><td class="paramname">aggregate_edge_demographics</td><td>Value made by bitwise or of <a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8a">ON_ComponentAttributes::EdgeAttributes</a> values for every edge in the object. </td></tr>
   </table>
   </dd>
 </dl>
@@ -380,7 +482,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Inspects aggregate edge demographics to determine if every edge has exactly two faces and all the faces have a compatible orientations. </p>
 <p><br  />
- This sample shows how to determine if an ON_SubD is a solid. </p><div class="fragment"><div class="line">ON_SubD subd = ...;</div>
+ This sample shows how to determine if an <a class="el" href="class_o_n___sub_d.html">ON_SubD</a> is a solid. </p><div class="fragment"><div class="line"><a class="code" href="class_o_n___sub_d.html">ON_SubD</a> subd = ...;</div>
 <div class="line"><span class="keywordflow">if</span> (<a class="code" href="class_o_n___component_attributes.html#abf9bbeda8527d0024c2fe7eb6f4ac046">ON_ComponentAttributes::IsSolid</a>(subd.AggregateEdgeComponentAttributes())</div>
 <div class="line">{ <span class="comment"></span></div>
 <div class="line"><span class="comment">  ///&lt; subd is a solid</span></div>
@@ -388,7 +490,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="line">}</div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aggregate_edge_component_attributes</td><td>Value made by bitwise or of <a class="el" href="class_o_n___component_attributes.html#a771d8615898e996a98ab39510328b811">ON_ComponentAttributes::EdgeFlags</a> values for every edge in the object. </td></tr>
+    <tr><td class="paramname">aggregate_edge_component_attributes</td><td>Value made by bitwise or of <a class="el" href="class_o_n___component_attributes.html#a2d29d48bc4024598cba93dc7903abd8a">ON_ComponentAttributes::EdgeAttributes</a> values for every edge in the object. </td></tr>
   </table>
   </dd>
 </dl>
@@ -398,10 +500,11 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 </div><!-- contents -->
+<div class="ttc" id="aclass_o_n___sub_d_html"><div class="ttname"><a href="class_o_n___sub_d.html">ON_SubD</a></div><div class="ttdef"><b>Definition:</b> opennurbs_subd.h:2305</div></div>
 <div class="ttc" id="aclass_o_n___component_attributes_html_abf9bbeda8527d0024c2fe7eb6f4ac046"><div class="ttname"><a href="class_o_n___component_attributes.html#abf9bbeda8527d0024c2fe7eb6f4ac046">ON_ComponentAttributes::IsSolid</a></div><div class="ttdeci">static bool IsSolid(unsigned int aggregate_edge_component_attributes)</div><div class="ttdoc">Inspects aggregate edge demographics to determine if every edge has exactly two faces and all the fac...</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:22 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:48 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

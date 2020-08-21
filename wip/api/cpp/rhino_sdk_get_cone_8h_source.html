@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -119,60 +119,63 @@ $(function() {
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">double</span> Height() <span class="keyword">const</span>;                <span class="comment">// Get the m_Height value</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">void</span> SetHeight( <span class="keywordtype">double</span> );                   <span class="comment">// Set the m_Height value</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="comment">// m_bShowHeight is only ever set in constructors so a function to set it is not included</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_bShowHeight; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">double</span> m_Height;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="comment">// Reserved variables for future use without SDK breakage</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="class_o_n__w_string.html">ON_wString</a> m_ReservedPrompt1; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="class_o_n__w_string.html">ON_wString</a> m_ReservedPrompt2; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="class_o_n__w_string.html">ON_wString</a> m_ReservedPrompt3; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <a class="code" href="class_o_n__w_string.html">ON_wString</a> m_ReservedPrompt4; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">double</span> m_ReservedDouble1;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">double</span> m_ReservedDouble2;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">double</span> m_ReservedDouble3;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">double</span> m_ReservedDouble4;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_ReservedUChar1;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_ReservedUChar2;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_ReservedUChar3;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_ReservedUChar4;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_ReservedUInt1;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_ReservedUInt2;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_ReservedUInt3;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_ReservedUInt4;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">// Description:</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">//   UI tool to get a cone.</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">// Parameters:</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">//   args - [in] controls get point prompts, options, etc.</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">//   cone - [out] cone returned here</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">// Returns:</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">//   CRhinoCommand::success if successful.</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<a class="code" href="class_c_rhino_command.html#adbb5e7e7a2c0f6659abdc77d70860e4d">CRhinoCommand::result</a> <a class="code" href="group___rhino_get.html#ga065a7ae89dece28e4c53f31ef0a46349">RhinoGetCone</a>( </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="class_c_args_rhino_get_cone.html">CArgsRhinoGetCone</a>&amp; args,</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="class_o_n___cone.html">ON_Cone</a>&amp; cone</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    );</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">// Description:</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">//   New and improved UI tool to get a cone.</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">//   Prompts for and maintains height. </span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">// Parameters:</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">//   args - [in] controls get point prompts, options, etc.</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">//   cone - [out] cone returned here</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">// Returns:</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">//   CRhinoCommand::success if successful.</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<a class="code" href="class_c_rhino_command.html#adbb5e7e7a2c0f6659abdc77d70860e4d">CRhinoCommand::result</a> <a class="code" href="group___rhino_get.html#ga065a7ae89dece28e4c53f31ef0a46349">RhinoGetCone</a>( </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="class_c_args_rhino_get_cone_extra.html">CArgsRhinoGetConeExtra</a>&amp; args,</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="class_o_n___cone.html">ON_Cone</a>&amp; cone</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    );</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">void</span> SetCapFaceStyle(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>);         <span class="comment">// 0 means do not prompt, 3 for triangle, 4 for quads</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> CapFaceStyle();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="comment">// m_bShowHeight is only ever set in constructors so a function to set it is not included</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_bShowHeight; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">double</span> m_Height;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="comment">// Reserved variables for future use without SDK breakage</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <a class="code" href="class_o_n__w_string.html">ON_wString</a> m_ReservedPrompt1; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="class_o_n__w_string.html">ON_wString</a> m_ReservedPrompt2; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <a class="code" href="class_o_n__w_string.html">ON_wString</a> m_ReservedPrompt3; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <a class="code" href="class_o_n__w_string.html">ON_wString</a> m_ReservedPrompt4; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">double</span> m_ReservedDouble1;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">double</span> m_ReservedDouble2;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">double</span> m_ReservedDouble3;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">double</span> m_ReservedDouble4;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_ReservedUChar1;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_ReservedUChar2;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_ReservedUChar3;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_ReservedUChar4;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_CapFaceStyle;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_ReservedUInt2;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_ReservedUInt3;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_ReservedUInt4;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">// Description:</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">//   UI tool to get a cone.</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">// Parameters:</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">//   args - [in] controls get point prompts, options, etc.</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">//   cone - [out] cone returned here</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">// Returns:</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">//   CRhinoCommand::success if successful.</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<a class="code" href="class_c_rhino_command.html#adbb5e7e7a2c0f6659abdc77d70860e4d">CRhinoCommand::result</a> <a class="code" href="group___rhino_get.html#ga065a7ae89dece28e4c53f31ef0a46349">RhinoGetCone</a>( </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="class_c_args_rhino_get_cone.html">CArgsRhinoGetCone</a>&amp; args,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="class_o_n___cone.html">ON_Cone</a>&amp; cone</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    );</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">// Description:</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">//   New and improved UI tool to get a cone.</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">//   Prompts for and maintains height. </span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">// Parameters:</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">//   args - [in] controls get point prompts, options, etc.</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">//   cone - [out] cone returned here</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">// Returns:</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">//   CRhinoCommand::success if successful.</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<a class="code" href="class_c_rhino_command.html#adbb5e7e7a2c0f6659abdc77d70860e4d">CRhinoCommand::result</a> <a class="code" href="group___rhino_get.html#ga065a7ae89dece28e4c53f31ef0a46349">RhinoGetCone</a>( </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="class_c_args_rhino_get_cone_extra.html">CArgsRhinoGetConeExtra</a>&amp; args,</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="class_o_n___cone.html">ON_Cone</a>&amp; cone</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    );</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="agroup___rhino_html_gac7cff1e910b2374d20cd2265d4f976dd"><div class="ttname"><a href="group___rhino.html#gac7cff1e910b2374d20cd2265d4f976dd">RHINO_SDK_CLASS</a></div><div class="ttdeci">#define RHINO_SDK_CLASS</div><div class="ttdef"><b>Definition:</b> rhinoSdk.h:285</div></div>
 <div class="ttc" id="aclass_c_args_rhino_get_cone_html_a783800bca720f998e3a0704f3f5092f8"><div class="ttname"><a href="class_c_args_rhino_get_cone.html#a783800bca720f998e3a0704f3f5092f8">CArgsRhinoGetCone::operator=</a></div><div class="ttdeci">CArgsRhinoGetCone &amp; operator=(const CArgsRhinoGetCone &amp;)</div></div>
@@ -187,7 +190,7 @@ $(function() {
 <div class="ttc" id="aclass_c_args_rhino_get_circle_html"><div class="ttname"><a href="class_c_args_rhino_get_circle.html">CArgsRhinoGetCircle</a></div><div class="ttdoc">Input to the RhinoGetCircle()</div><div class="ttdef"><b>Definition:</b> rhinoSdkGetCircle.h:22</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:12:54 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:19 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

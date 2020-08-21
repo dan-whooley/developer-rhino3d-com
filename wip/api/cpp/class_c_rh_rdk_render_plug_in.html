@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -139,6 +139,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac00aba8829b5135b960d37584647a223"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae305cfe67d44aea086d5bdf807306d60"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rh_rdk_render_plug_in.html#ae305cfe67d44aea086d5bdf807306d60">CreateQuickPreview</a> (const <a class="el" href="class_o_n__2i_size.html">ON_2iSize</a> &amp;size, const <a class="el" href="class_i_rh_rdk_preview_scene_server.html">IRhRdkPreviewSceneServer</a> &amp;ss, <a class="el" href="class_c_rh_rdk_render_plug_in.html#a5b9b1d76168dcfc18154b6b342812f36">QuickPreviewReason</a> reason, <a class="el" href="class_c_rhino_dib.html">CRhinoDib</a> &amp;dibOut)</td></tr>
 <tr class="separator:ae305cfe67d44aea086d5bdf807306d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61fd2f24e0151a260e140d299a977120"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__w_string.html">ON_wString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rh_rdk_render_plug_in.html#a61fd2f24e0151a260e140d299a977120">CustomChannelName</a> (const UUID &amp;uuidChan) const</td></tr>
+<tr class="separator:a61fd2f24e0151a260e140d299a977120"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc0730182b2de54c1252e064ad973cd7"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="class_i_rh_rdk_decal_support.html">IRhRdkDecalSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rh_rdk_render_plug_in.html#adc0730182b2de54c1252e064ad973cd7">DecalSupport</a> (void) const</td></tr>
 <tr class="separator:adc0730182b2de54c1252e064ad973cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e8658f9b70ca03a56b7a2c9a5c4481b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rh_rdk_render_plug_in.html#a7e8658f9b70ca03a56b7a2c9a5c4481b">DisableAutoUpdatePreview</a> (void) const</td></tr>
@@ -165,6 +167,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad52288659dee3f381d6d62b5b624c501"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affd84cb95a52306ee743345294dbfb98"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rh_rdk_render_plug_in.html#affd84cb95a52306ee743345294dbfb98">SaveCustomRenderFile</a> (const wchar_t *wszFilename, <a class="el" href="class_c_rh_rdk_file_type.html">CRhRdkFileType</a> &amp;type, const UUID &amp;uuidRenderSession, bool bSaveAlpha) const</td></tr>
 <tr class="separator:affd84cb95a52306ee743345294dbfb98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaa0aaa17e15d008dc518f59e3889693"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rh_rdk_render_plug_in.html#adaa0aaa17e15d008dc518f59e3889693">SupportedChannels</a> (<a class="el" href="group___r_d_k.html#gaec78e7a9e90a406a56f859ee456e8eae">OUT</a> <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; UUID &gt; &amp;aChan) const</td></tr>
+<tr class="separator:adaa0aaa17e15d008dc518f59e3889693"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05bc89a33bd4d9712df7fb025c68f841"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rh_rdk_render_plug_in.html#a05bc89a33bd4d9712df7fb025c68f841">SupportsFeature</a> (const UUID &amp;uuidFeature) const</td></tr>
 <tr class="separator:a05bc89a33bd4d9712df7fb025c68f841"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6ffad0b040de58a2784b71c1acf6710"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rh_rdk_render_plug_in.html#ae6ffad0b040de58a2784b71c1acf6710">UiContentTypes</a> (<a class="el" href="group___r_d_k.html#gaec78e7a9e90a406a56f859ee456e8eae">OUT</a> <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; UUID &gt; &amp;aTypes) const</td></tr>
@@ -810,6 +814,25 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a61fd2f24e0151a260e140d299a977120"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61fd2f24e0151a260e140d299a977120">&#9670;&nbsp;</a></span>CustomChannelName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_o_n__w_string.html">ON_wString</a> CRhRdkRenderPlugIn::CustomChannelName </td>
+          <td>(</td>
+          <td class="paramtype">const UUID &amp;&#160;</td>
+          <td class="paramname"><em>uuidChan</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Helper function. Calls EVF(L"CustomChannelName"). Override <a class="el" href="class_c_rh_rdk_object.html#a74e1af2c8bb545b6cf4328c47fc1dfd3">EVF()</a> to implement this. Return the localized name of your custom channel. </p>
+
+</div>
+</div>
 <a id="adc0730182b2de54c1252e064ad973cd7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adc0730182b2de54c1252e064ad973cd7">&#9670;&nbsp;</a></span>DecalSupport()</h2>
 
@@ -1143,7 +1166,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Overide this function to implement a custom version of RenderArctic for your engine. </p><dl class="section return"><dt>Returns</dt><dd>a valid command result. Default implementation forces render settings to all-white and calls RunScript(L"_Render"); </dd></dl>
+<p>Override this function to implement a custom version of RenderArctic for your engine. </p><dl class="section return"><dt>Returns</dt><dd>a valid command result. Default implementation forces render settings to all-white and calls RunScript(L"_Render"); </dd></dl>
 
 </div>
 </div>
@@ -1237,6 +1260,25 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="adaa0aaa17e15d008dc518f59e3889693"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaa0aaa17e15d008dc518f59e3889693">&#9670;&nbsp;</a></span>SupportedChannels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRhRdkRenderPlugIn::SupportedChannels </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___r_d_k.html#gaec78e7a9e90a406a56f859ee456e8eae">OUT</a> <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; UUID &gt; &amp;&#160;</td>
+          <td class="paramname"><em>aChan</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Helper function. Calls EVF(L"SupportedChannels"). Override <a class="el" href="class_c_rh_rdk_object.html#a74e1af2c8bb545b6cf4328c47fc1dfd3">EVF()</a> to implement this. Return a list of channels your renderer supports. Custom channels are allowed. </p>
+
+</div>
+</div>
 <a id="a05bc89a33bd4d9712df7fb025c68f841"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a05bc89a33bd4d9712df7fb025c68f841">&#9670;&nbsp;</a></span>SupportsFeature()</h2>
 
@@ -1302,7 +1344,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:14 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:40 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

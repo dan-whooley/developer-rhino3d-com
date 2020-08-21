@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -146,15 +146,27 @@ $(function() {
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <a class="code" href="class_c_rhino_mouse_callback.html">CRhinoMouseCallback</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_c_rhino_mouse_callback.html">CRhinoMouseCallback</a>&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <a class="code" href="class_c_rhino_mouse_callback.html">CRhinoMouseCallback</a>(<span class="keyword">const</span> <a class="code" href="class_c_rhino_mouse_callback.html">CRhinoMouseCallback</a>&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">// Same as a CWaitCursor with the difference that no wait cursor</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">// is applied when Rhino is &quot;headless&quot;</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">class </span><a class="code" href="group___rhino.html#gac7cff1e910b2374d20cd2265d4f976dd">RHINO_SDK_CLASS</a> <a class="code" href="class_c_rhino_wait_cursor.html">CRhinoWaitCursor</a></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_c_rhino_wait_cursor.html">   83</a></span>&#160;  <a class="code" href="class_c_rhino_wait_cursor.html">CRhinoWaitCursor</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  ~<a class="code" href="class_c_rhino_wait_cursor.html">CRhinoWaitCursor</a>();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keyword">class </span>CRhWaitCursor* m_private = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_c_rhino_mouse_callback_html"><div class="ttname"><a href="class_c_rhino_mouse_callback.html">CRhinoMouseCallback</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkMouse.h:18</div></div>
 <div class="ttc" id="agroup___rhino_html_gac7cff1e910b2374d20cd2265d4f976dd"><div class="ttname"><a href="group___rhino.html#gac7cff1e910b2374d20cd2265d4f976dd">RHINO_SDK_CLASS</a></div><div class="ttdeci">#define RHINO_SDK_CLASS</div><div class="ttdef"><b>Definition:</b> rhinoSdk.h:285</div></div>
 <div class="ttc" id="aclass_c_rhino_view_html"><div class="ttname"><a href="class_c_rhino_view.html">CRhinoView</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkView.h:17</div></div>
 <div class="ttc" id="aclass_c_rhino_mouse_callback_html_a182c2c4fa5e81f7da958b6e10499c218"><div class="ttname"><a href="class_c_rhino_mouse_callback.html#a182c2c4fa5e81f7da958b6e10499c218">CRhinoMouseCallback::mouse_button</a></div><div class="ttdeci">mouse_button</div><div class="ttdef"><b>Definition:</b> rhinoSdkMouse.h:32</div></div>
+<div class="ttc" id="aclass_c_rhino_wait_cursor_html"><div class="ttname"><a href="class_c_rhino_wait_cursor.html">CRhinoWaitCursor</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkMouse.h:83</div></div>
 <div class="ttc" id="aclass_o_n__2i_point_html"><div class="ttname"><a href="class_o_n__2i_point.html">ON_2iPoint</a></div><div class="ttdef"><b>Definition:</b> opennurbs_ipoint.h:27</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:12:55 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:20 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

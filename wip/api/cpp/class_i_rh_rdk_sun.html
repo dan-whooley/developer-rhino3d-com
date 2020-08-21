@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -117,6 +117,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afcbde1342077c8d203e8898ccbae4e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7167b372c13f82d0b9e9eb37fe3f0d8a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_sun.html#a7167b372c13f82d0b9e9eb37fe3f0d8a">SetEnableOn</a> (bool bOn)=0</td></tr>
 <tr class="separator:a7167b372c13f82d0b9e9eb37fe3f0d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71849ab4f058c2169eb029331d6f20ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_sun.html#a71849ab4f058c2169eb029331d6f20ff">SetIntensity</a> (double dIntensity)</td></tr>
+<tr class="separator:a71849ab4f058c2169eb029331d6f20ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3dc42c8c7654f8c4dbce3fc5c777e1b9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_sun.html#a3dc42c8c7654f8c4dbce3fc5c777e1b9">SetLatitude</a> (double dLatitude)=0</td></tr>
 <tr class="separator:a3dc42c8c7654f8c4dbce3fc5c777e1b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4f1eb29b8bf8adeb53a4ff3f9f2d88a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_sun.html#af4f1eb29b8bf8adeb53a4ff3f9f2d88a">SetLocalDateTime</a> (int iYear, int iMonth, int iDay, double dHours)=0</td></tr>
@@ -156,6 +158,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2ad9a11f70ed2d835fcc0c9db4c7f4fd inherit pub_methods_class_i_rh_rdk_sun_r_o"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbde770b114b02b37e1abfcfecb30019 inherit pub_methods_class_i_rh_rdk_sun_r_o"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_sun_r_o.html#acbde770b114b02b37e1abfcfecb30019">EVF</a> (const wchar_t *, void *)=0</td></tr>
 <tr class="separator:acbde770b114b02b37e1abfcfecb30019 inherit pub_methods_class_i_rh_rdk_sun_r_o"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15a5b92a55d76372628138a67786b846 inherit pub_methods_class_i_rh_rdk_sun_r_o"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_sun_r_o.html#a15a5b92a55d76372628138a67786b846">Intensity</a> (void) const</td></tr>
+<tr class="separator:a15a5b92a55d76372628138a67786b846 inherit pub_methods_class_i_rh_rdk_sun_r_o"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a463a93dd9f19a3ba4c7e2dcc4d45771e inherit pub_methods_class_i_rh_rdk_sun_r_o"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_sun_r_o.html#a463a93dd9f19a3ba4c7e2dcc4d45771e">IsEqual</a> (const class <a class="el" href="class_i_rh_rdk_sun.html">IRhRdkSun</a> &amp;other) const =0</td></tr>
 <tr class="separator:a463a93dd9f19a3ba4c7e2dcc4d45771e inherit pub_methods_class_i_rh_rdk_sun_r_o"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90d7cdf6c6b2cf26ee33d0873a28f708 inherit pub_methods_class_i_rh_rdk_sun_r_o"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_rh_rdk_sun_r_o.html#a90d7cdf6c6b2cf26ee33d0873a28f708">IsValid</a> (void) const =0</td></tr>
@@ -700,6 +704,25 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a71849ab4f058c2169eb029331d6f20ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71849ab4f058c2169eb029331d6f20ff">&#9670;&nbsp;</a></span>SetIntensity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IRhRdkSun::SetIntensity </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dIntensity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the intensity to be used for the sun. This is 1.0 by default. </p>
+
+</div>
+</div>
 <a id="a3dc42c8c7654f8c4dbce3fc5c777e1b9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3dc42c8c7654f8c4dbce3fc5c777e1b9">&#9670;&nbsp;</a></span>SetLatitude()</h2>
 
@@ -1096,7 +1119,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:18 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:45 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

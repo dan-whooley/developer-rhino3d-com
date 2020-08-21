@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -156,6 +156,8 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a7924c82e5416f1d278e50090e9560526"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___outline_figure.html#a7924c82e5416f1d278e50090e9560526">DefaultPolylineTolerance</a> (double units_per_em)</td></tr>
 <tr class="separator:a7924c82e5416f1d278e50090e9560526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13f9f6840a273c2a414c64b05b835499"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_o_n___outline_figure.html#a1bccce4aa0a712c69ff86c7f9791dacb">ON_OutlineFigure::Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___outline_figure.html#a13f9f6840a273c2a414c64b05b835499">FigureTypeFromField10Description</a> (const <a class="el" href="class_o_n__w_string.html">ON_wString</a> field_10_description)</td></tr>
+<tr class="separator:a13f9f6840a273c2a414c64b05b835499"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb5bfbc275b4c7722654c0eb0b1b1fa4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_o_n___outline_figure.html#a1bccce4aa0a712c69ff86c7f9791dacb">ON_OutlineFigure::Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___outline_figure.html#abb5bfbc275b4c7722654c0eb0b1b1fa4">FigureTypeFromFontName</a> (const wchar_t *font_name)</td></tr>
 <tr class="separator:abb5bfbc275b4c7722654c0eb0b1b1fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a854bf4a939498006738d62ec281e8775"><td class="memItemLeft" align="right" valign="top">static const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___outline_figure.html#a854bf4a939498006738d62ec281e8775">OrientationToWideString</a> (<a class="el" href="class_o_n___outline_figure.html#a08bf65c27a46ab74729e4774448637d3">ON_OutlineFigure::Orientation</a> orientation)</td></tr>
@@ -472,6 +474,33 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Returns: Figure type. </p>
+
+</div>
+</div>
+<a id="a13f9f6840a273c2a414c64b05b835499"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13f9f6840a273c2a414c64b05b835499">&#9670;&nbsp;</a></span>FigureTypeFromField10Description()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_o_n___outline_figure.html#a1bccce4aa0a712c69ff86c7f9791dacb">ON_OutlineFigure::Type</a> ON_OutlineFigure::FigureTypeFromField10Description </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n__w_string.html">ON_wString</a>&#160;</td>
+          <td class="paramname"><em>field_10_description</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Description: Opennurbs searches the description saved in field 10 of the name table for the strings "Engraving - single stroke" / "Engraving - double stroke" / "Engraving" to identify fonts that are desgned for engraving (and which tend to render poorly when used to dispaly text devices like screens, monitors, and printers). The SLF (single line fonts) are examples of fonts that have Engraving in field 10. Parameters: field_10_description - [in] Field 10 string from the font name table. Returns: If the description contains "single stroke", returns <a class="el" href="class_o_n___outline_figure.html#a1bccce4aa0a712c69ff86c7f9791dacbaf117e40ecaad5c4193680d3a5f90f354">ON_OutlineFigure::Type::SingleStroke</a>. If the description contains "double stroke", returns <a class="el" href="class_o_n___outline_figure.html#a1bccce4aa0a712c69ff86c7f9791dacbaf8da9479d79bd934017c8147b5a65c68">ON_OutlineFigure::Type::DoubleStroke</a>. Otherwise returns <a class="el" href="class_o_n___outline_figure.html#a1bccce4aa0a712c69ff86c7f9791dacbac9f88e098f6fe4e4e112eeb05ccb9671">ON_OutlineFigure::Type::Unset</a>; </p>
 
 </div>
 </div>
@@ -939,7 +968,7 @@ Friends</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:27 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:53 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

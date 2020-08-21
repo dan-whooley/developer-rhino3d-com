@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -101,6 +101,10 @@ Public Types</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="class_c_rhino_plug_in.html#af96faa0019d39747ba99ef3e72c09fb2ad9cd159170ac4bf64f32166e2f52ec02">evaluation_is_expired</a> = 0x8, 
 <a class="el" href="class_c_rhino_plug_in.html#af96faa0019d39747ba99ef3e72c09fb2a9741c08f6ff877b43851810041e25e69">supports_rhino_accounts</a> = 0x10, 
+<a class="el" href="class_c_rhino_plug_in.html#af96faa0019d39747ba99ef3e72c09fb2aa2424e15caca29e7ccca622052f71c3f">supports_standalone</a> = 0x20, 
+<a class="el" href="class_c_rhino_plug_in.html#af96faa0019d39747ba99ef3e72c09fb2a472e1d069cade08a149f600a235ae0ff">supports_zoo_per_user</a> = 0x40, 
+<br />
+&#160;&#160;<a class="el" href="class_c_rhino_plug_in.html#af96faa0019d39747ba99ef3e72c09fb2a7d9075e6acf46abd150fec1233925835">supports_zoo_per_core</a> = 0x80, 
 <a class="el" href="class_c_rhino_plug_in.html#af96faa0019d39747ba99ef3e72c09fb2a7673c0346cc28ff744871da370a0695f">license_dialog_buttons_force_32bit</a> = 0xFFFFFFFF
 <br />
  }</td></tr>
@@ -432,7 +436,14 @@ Friends</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="af96faa0019d39747ba99ef3e72c09fb2ad9cd159170ac4bf64f32166e2f52ec02"></a>evaluation_is_expired&#160;</td><td class="fielddoc"><p>Shows "Evaluate" button disabled. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="af96faa0019d39747ba99ef3e72c09fb2a9741c08f6ff877b43851810041e25e69"></a>supports_rhino_accounts&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af96faa0019d39747ba99ef3e72c09fb2a9741c08f6ff877b43851810041e25e69"></a>supports_rhino_accounts&#160;</td><td class="fielddoc"><p>Enables UI and interaction with Cloud Zoo for the product requesting a license. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af96faa0019d39747ba99ef3e72c09fb2aa2424e15caca29e7ccca622052f71c3f"></a>supports_standalone&#160;</td><td class="fielddoc"><p>Enables UI and support for standalone licenses for the product requesting a license. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af96faa0019d39747ba99ef3e72c09fb2a472e1d069cade08a149f600a235ae0ff"></a>supports_zoo_per_user&#160;</td><td class="fielddoc"><p>Enables UI and interaction with Zoo using one license per user for the product requesting a license. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af96faa0019d39747ba99ef3e72c09fb2a7d9075e6acf46abd150fec1233925835"></a>supports_zoo_per_core&#160;</td><td class="fielddoc"><p>Enables UI and interaction with Zoo using one license per core for the product requesting a license </p>
+</td></tr>
 <tr><td class="fieldname"><a id="af96faa0019d39747ba99ef3e72c09fb2a7673c0346cc28ff744871da370a0695f"></a>license_dialog_buttons_force_32bit&#160;</td><td class="fielddoc"><p>for internal use only, this allows adding additional values without breaking the SDK in the future </p>
 </td></tr>
 </table>
@@ -608,8 +619,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Override this function if you want to extend the object properties dialog. Parameters: collection [out] - Add <a class="el" href="class_i_rhino_options_page.html">IRhinoOptionsPage</a> objects to this collection. Remarks: Make sure you include the following macro prior to calling new: AFX_MANAGE_STATE(AfxGetStaticModuleState()); Please see MFC Technical Notes 33 and 58 for additional details.</p>
-<p>This method is called once at the completion of loading the plug-in. The <a class="el" href="class_i_rhino_properties_panel_page.html">IRhinoPropertiesPanelPage</a> objects are notified when CRhinoObjects are added to the properties control bar. </p>
+<p>Description: DEPRICATED method, use <a class="el" href="class_i_rhino_add_properties_pages.html">IRhinoAddPropertiesPages</a> to add object properties panels instead. </p>
 
 </div>
 </div>
@@ -662,7 +672,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Called by Rhino to determine if the plug-in name should be added to the Rhino /// Help/Plug-ins menu.</p>
+<p>Description: Called by Rhino to determine if the plug-in name should be added to the Rhino Help/Plug-ins menu.</p>
 <p>Returns: true = Plug-in name is added to menu. false = Plug-in name is not added to menu.</p>
 <p>Remarks: Default is false, to automatically add your plug-in to the Rhino help menu override and return true. </p>
 
@@ -922,7 +932,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Description: Called by Rhino when a plug-in added menu or menu item is activated and the main Rhino windows CFrameWnd::GetMessageString() method is called. The string placed in wMessage will be displayed in the status bar at the bottom of the main Rhino window.</p>
 <p>Parameters: hMenu [in] Menu which is requesting the help string nID [in] Menu item ID to get help string for wMessage [out] String to display on the status bar</p>
-<p>Remarks: If plug-in adds menu items and wants to check/un-check or gray them out it should override this function. </p>
+<p>Remarks: If plug-in adds menu items and wants to check/uncheck or gray them out it should override this function. </p>
 
 </div>
 </div>
@@ -1117,7 +1127,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Override this function if you want to return an interface pointer for a COM object in your plug-in. Note, if you want your plugin to support scripting with RhinoScript, you must return the interface pointer of an IDispatch-derived object (IID_IDispatch). Parameter: iid [in] - The requested interface. Return: The IUnknown pointer of the requested interface, if successful. Return NULL on error or if the interface is not supported. Notes: It is the responsibility of the application calling this function to increment and decrement the object's reference count using AddRef() and Release(). If the plug-in object being request is a stack variable, then you will also want to increment the reference counter yourself so the object will not be destroyed when released by the calling application. </p>
+<p>Description: Override this function if you want to return an interface pointer for a COM object in your plug-in. Note, if you want your plug-in to support scripting with RhinoScript, you must return the interface pointer of an IDispatch-derived object (IID_IDispatch). Parameter: iid [in] - The requested interface. Return: The IUnknown pointer of the requested interface, if successful. Return NULL on error or if the interface is not supported. Notes: It is the responsibility of the application calling this function to increment and decrement the object's reference count using AddRef() and Release(). If the plug-in object being request is a stack variable, then you will also want to increment the reference counter yourself so the object will not be destroyed when released by the calling application. </p>
 
 </div>
 </div>
@@ -1189,7 +1199,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Insert an item anywhere in rhino menus Returns: /// true = Added false = Not added </p>
+<p>Description: Insert an item anywhere in rhino menus Returns: true = Added false = Not added </p>
 
 </div>
 </div>
@@ -1339,7 +1349,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Description: Load registered plug-in .</p>
 <p>Parameters: uuid - [in] Plug-in ID of registered plug-in to load. bQuietly - [in] If true then error messages are not displayed ignore_load_failed - [in] Load plug-in even if previous attempt to load has failed</p>
-<p>Returns values less than zero mean an error occured values 0 and greater mean success </p>
+<p>Returns values less than zero mean an error occurred values 0 and greater mean success </p>
 
 </div>
 </div>
@@ -1495,7 +1505,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Description: Called by Rhino when a plug-in adds a menu or menu item to the Rhino menu and a associate WM_INITMENUPOPUP message is received.</p>
 <p>Parameters: Same as Windows WM_INITMENUPOPUP message</p>
-<p>Remarks: If plug-in adds menu items and wants to check/un-check or gray them out it should override this function. </p>
+<p>Remarks: If plug-in adds menu items and wants to check/uncheck or gray them out it should override this function. </p>
 
 </div>
 </div>
@@ -1715,7 +1725,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Resturns number of registered and loaded plug-ins. </p>
+<p>Description: Returns number of registered and loaded plug-ins. </p>
 
 </div>
 </div>
@@ -1813,7 +1823,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: The following virtual functions must be overridden Description: Plug-in unique identifier. Returns: Reference to a unique plug-in GUID. Remarks: Use Windows's GUIDGEN.EXE to create a GUID. </p>
+<p>Description: The following virtual functions must be overridden Description: Plug-in unique identifier. Returns: Reference to a unique plug-in GUID. Remarks: Use Window's GUIDGEN.EXE to create a GUID. </p>
 
 </div>
 </div>
@@ -2166,7 +2176,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Override this function if your plugin has "do not show this dialog again" dialogs and you want on place to reset any/all settings to show that those dialogs. </p>
+<p>Description: Override this function if your plug-in has "do not show this dialog again" dialogs and you want on place to reset any/all settings to show that those dialogs. </p>
 
 </div>
 </div>
@@ -2220,7 +2230,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Called whenever a Rhino 4 is about to save a version 3 .3dm file. Returns: True if the plug-in wants to save document or object user data in the version 3 .3dm file. The default returns false. Remarks: If you want to save plug-in document data when a model is saved in a version 3 .3dm file, then you must override this function to return true and you must override <a class="el" href="class_c_rhino_plug_in.html#a6d69ef980d53d9c8e1af46ce0fdfa1d0">WriteDocument()</a>. </p>
+<p>Description: Called whenever a Rhino is about to save a version 3 .3dm file. Returns: True if the plug-in wants to save document or object user data in the version 3 .3dm file. The default returns false. Remarks: If you want to save plug-in document data when a model is saved in a version 3 .3dm file, then you must override this function to return true and you must override <a class="el" href="class_c_rhino_plug_in.html#a6d69ef980d53d9c8e1af46ce0fdfa1d0">WriteDocument()</a>. </p>
 
 </div>
 </div>
@@ -2552,7 +2562,7 @@ Friends</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:05 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:30 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

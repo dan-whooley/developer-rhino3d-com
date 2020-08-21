@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -606,7 +606,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Description: Brep trim information is stored in <a class="el" href="class_o_n___brep_trim.html">ON_BrepTrim</a> classes. <a class="el" href="class_o_n___brep.html#a162b6c45769458bd7f675069731e3b56" title="trims">ON_Brep.m_T</a>[] is an array of all the trim in the brep.</p>
 <p>An <a class="el" href="class_o_n___brep_trim.html">ON_BrepTrim</a> is derived from <a class="el" href="class_o_n___curve_proxy.html">ON_CurveProxy</a> so the the trim can supply easy to use evaluation tools via the <a class="el" href="class_o_n___curve.html">ON_Curve</a> virtual member functions.</p>
-<p>Note well that the domains and orientations of the curve m_C2[trim.m_c2i] and the trin as a curve may not agree. </p>
+<p>Note well that the domains and orientations of the curve m_C2[trim.m_c2i] and the trim as a curve may not agree. </p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a4e2b20d9b31e02383f6cb3c36670d833"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4e2b20d9b31e02383f6cb3c36670d833">&#9670;&nbsp;</a></span>TYPE</h2>
@@ -627,7 +627,7 @@ Additional Inherited Members</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a4e2b20d9b31e02383f6cb3c36670d833a6ecc1456b406ac80d364306be19d0253"></a>mated&#160;</td><td class="fielddoc"><p>trim is connected to an edge, is part of an outer, inner or slit loop, no other trim from the same loop is connected to the edge, and at least one trim from a different loop is connected to the edge. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a4e2b20d9b31e02383f6cb3c36670d833a35c725ae4bc838f5030fa0c321b0b20a"></a>seam&#160;</td><td class="fielddoc"><p>trim is connected to an edge, is part of an outer, inner or slit loop, and one other trim from the same loop is connected to the edge. (There can be other mated trims that are also connected to the edge. For example, the non-mainfold edge that results when a surface edge lies in the middle of another surface.) Non-mainfold "cuts" have seam trims too. </p>
+<tr><td class="fieldname"><a id="a4e2b20d9b31e02383f6cb3c36670d833a35c725ae4bc838f5030fa0c321b0b20a"></a>seam&#160;</td><td class="fielddoc"><p>trim is connected to an edge, is part of an outer, inner or slit loop, and one other trim from the same loop is connected to the edge. (There can be other mated trims that are also connected to the edge. For example, the non-manifold edge that results when a surface edge lies in the middle of another surface.) Non-manifold "cuts" have seam trims too. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a4e2b20d9b31e02383f6cb3c36670d833a4d4dab3c67ac2c1852b53c85e9ab8eae"></a>singular&#160;</td><td class="fielddoc"><p>trim is part of an outer loop, the trim's 2d curve runs along the singular side of a surface, and the trim is NOT connected to an edge. (There is no 3d edge because the surface side is singular.) </p>
 </td></tr>
@@ -748,7 +748,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Interface. </p>
-<p>Not necessary Base clasee does the same. / virtual <a class="el" href="class_o_n___curve.html#ab6db85b7bd367cab86201db1a6b5a1b5">ON_Curve::SetStartPoint</a> override bool SetStartPoint( <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> start_point ) override;</p>
+<p>Not necessary Base class does the same. / virtual <a class="el" href="class_o_n___curve.html#ab6db85b7bd367cab86201db1a6b5a1b5">ON_Curve::SetStartPoint</a> override bool SetStartPoint( <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> start_point ) override;</p>
 <p>/ virtual <a class="el" href="class_o_n___curve.html#a96e8ee83e56e84c16a14637fe48a42ee">ON_Curve::SetEndPoint</a> override bool SetEndPoint( <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> end_point ) override; Description: Expert user tool that replaces the 2d curve geometry of a trim Parameters; c2i - [in] brep 2d curve index of new curve Returns: True if successful. Example: </p><pre class="fragment">      ON_Curve* pCurve = ...;
       int c2i = brep.AddTrimCurve(pCurve);
       trim.ChangeTrimCurve(c2i);
@@ -1047,7 +1047,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p><a class="el" href="class_o_n___object.html">ON_Object</a> overrides</p>
-<p>(Trims are purely topologicial - geometry queries should be directed at the trim's 2d curve or the trim's edge's 3d curve.) </p>
+<p>(Trims are purely topological - geometry queries should be directed at the trim's 2d curve or the trim's edge's 3d curve.) </p>
 
 <p>Reimplemented from <a class="el" href="class_o_n___object.html#a7212696724553dc4d365479a10150c0d">ON_Object</a>.</p>
 
@@ -1231,7 +1231,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>virtual <a class="el" href="class_o_n___curve.html#a506b1c3a2ad743b87d5a4085fe3d0b1a">ON_Curve::Reverse</a> override Reverses curve - caller must make sure trim's m_bRev3d flags are properly updated. Use ON_Brep::FlipTrim to reverse and trim and update all m_bRev3d informtion. </p>
+<p>virtual <a class="el" href="class_o_n___curve.html#a506b1c3a2ad743b87d5a4085fe3d0b1a">ON_Curve::Reverse</a> override Reverses curve - caller must make sure trim's m_bRev3d flags are properly updated. Use ON_Brep::FlipTrim to reverse and trim and update all m_bRev3d information. </p>
 
 <p>Implements <a class="el" href="class_o_n___curve.html#a506b1c3a2ad743b87d5a4085fe3d0b1a">ON_Curve</a>.</p>
 
@@ -1317,7 +1317,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Expert user tool that tranforms all the parameter space (2d) trimming curves in this loop. Only 2d curve geometry is changed. The caller is responsible for reversing loops, toggle m_bRev, flags, etc. Parameters: xform - [in] Transformation applied to 2d curve geometry. Returns True if successful. If false is returned, the brep may be invalid. </p>
+<p>Description: Expert user tool that transforms all the parameter space (2d) trimming curves in this loop. Only 2d curve geometry is changed. The caller is responsible for reversing loops, toggle m_bRev, flags, etc. Parameters: xform - [in] Transformation applied to 2d curve geometry. Returns True if successful. If false is returned, the brep may be invalid. </p>
 
 </div>
 </div>
@@ -1641,7 +1641,7 @@ Additional Inherited Members</h2></td></tr>
 <p>The values in m_tolerance[] record the accuracy of the parameter space trimming curves.</p>
 <p>Remarks: m_tolerance[0] = accuracy of parameter space curve in first ( "u" ) parameter</p>
 <p>m_tolerance[1] = accuracy of parameter space curve in second ( "v" ) parameter</p>
-<p>A value of ON_UNSET_VALUE indicates that the tolerance should be computed. If the value &gt;= 0.0, then the tolerance is set. If the value is ON_UNSET_VALUE, then the tolrance needs to be computed.</p>
+<p>A value of ON_UNSET_VALUE indicates that the tolerance should be computed. If the value &gt;= 0.0, then the tolerance is set. If the value is ON_UNSET_VALUE, then the tolerance needs to be computed.</p>
 <p>If the trim is not singular, then the trim must have an edge. If P is a 3d point on the edge's curve and surface(u,v) = Q is the point on the surface that is closest to P, then there must be a parameter t in the interval [m_t[0], m_t[1]] such that</p>
 <p>|u - curve2d(t)[0]| &lt;= m_tolerance[0]</p>
 <p>and</p>
@@ -1726,7 +1726,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:22 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:48 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -271,6 +271,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9d36852dc3aa3249420784b40f41f224"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3529b4c93cdc3e9fbb6c907e51e9fc1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_get_object.html#ad3529b4c93cdc3e9fbb6c907e51e9fc1">EnablePressEnterWhenDonePrompt</a> (bool bEnable=true)</td></tr>
 <tr class="separator:ad3529b4c93cdc3e9fbb6c907e51e9fc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7f6f37c66b771c4d4c7421d46f195fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_get_object.html#ad7f6f37c66b771c4d4c7421d46f195fb">EnableProxyBrepFromSubD</a> (bool bEnable)</td></tr>
+<tr class="separator:ad7f6f37c66b771c4d4c7421d46f195fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cb67eaa6f1c1a73223d7ca59a75d505"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_get_object.html#a7cb67eaa6f1c1a73223d7ca59a75d505">EnableReferenceObjectSelect</a> (BOOL=true)</td></tr>
 <tr class="separator:a7cb67eaa6f1c1a73223d7ca59a75d505"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68f76ca402adb4ce4c69846cf653d94d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_get_object.html#a68f76ca402adb4ce4c69846cf653d94d">EnableSelPrev</a> (BOOL=true)</td></tr>
@@ -288,6 +290,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adf99eb44875928ede221e429fd395f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a590387a94114c160cf1c3ab4759e7d23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_rhino_get.html#afbb1d0091ccb1306d0fe606405f6b886">CRhinoGet::result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_get_object.html#a590387a94114c160cf1c3ab4759e7d23">GetObjects</a> (int minimum_number=1, int maximum_number=1)</td></tr>
 <tr class="separator:a590387a94114c160cf1c3ab4759e7d23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06dea8df155e31609747b3a3b0e5a2bd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_get_object.html#a06dea8df155e31609747b3a3b0e5a2bd">GetSubDComponentList</a> (<a class="el" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a> subd_runtime_serial_number, <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html#a62d45db62efab7150c8a3415feb1bff1">ON_COMPONENT_INDEX::TYPE</a> component_type, class <a class="el" href="class_o_n___sub_d_component_ref_list.html">ON_SubDComponentRefList</a> &amp;subd_component_list) const</td></tr>
+<tr class="separator:a06dea8df155e31609747b3a3b0e5a2bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b3290c3c16c82fa33ae7571f08fe29c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_get_object.html#a7b3290c3c16c82fa33ae7571f08fe29c">GroupSelect</a> () const</td></tr>
 <tr class="separator:a7b3290c3c16c82fa33ae7571f08fe29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b53f73baf99cb5b7844d8af473a7f23"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_get_object.html#a9b53f73baf99cb5b7844d8af473a7f23">IgnoreHistoryDependents</a> () const</td></tr>
@@ -314,6 +318,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a40c025bde4250a7b522357b8aab7e511"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_get_object.html#a40c025bde4250a7b522357b8aab7e511">PostObjectSelectionChangedEvent</a> (const <a class="el" href="class_c_rhino_view.html">CRhinoView</a> *view) const</td></tr>
 <tr class="memdesc:a40c025bde4250a7b522357b8aab7e511"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posts an event to Rhino that object selection has changed.  <a href="class_c_rhino_get_object.html#a40c025bde4250a7b522357b8aab7e511">More...</a><br /></td></tr>
 <tr class="separator:a40c025bde4250a7b522357b8aab7e511"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37eef840ef1db1137f8b4dde2e260266"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_get_object.html#a37eef840ef1db1137f8b4dde2e260266">ProxyBrepFromSubD</a> () const</td></tr>
+<tr class="separator:a37eef840ef1db1137f8b4dde2e260266"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad84e38c092b34d24ad6c684bc9330883"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_get_object.html#ad84e38c092b34d24ad6c684bc9330883">ReferenceObjectSelect</a> () const</td></tr>
 <tr class="separator:ad84e38c092b34d24ad6c684bc9330883"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf886e80dd4ab8b52504eea0f639ff60"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_get_object.html#abf886e80dd4ab8b52504eea0f639ff60">SerialNumber</a> () const</td></tr>
@@ -352,6 +358,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a06c36605d005ce46a1783a1b57f79421 inherit pub_methods_class_c_rhino_get"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37cb551a7dbc76a22efca8794e6c106e inherit pub_methods_class_c_rhino_get"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_get.html#a37cb551a7dbc76a22efca8794e6c106e">AddCommandOption</a> (<a class="el" href="class_c_rhino_command_option_name.html">CRhinoCommandOptionName</a> option_name, double number_value)</td></tr>
 <tr class="separator:a37cb551a7dbc76a22efca8794e6c106e inherit pub_methods_class_c_rhino_get"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26a50de2daa1624d34f3117f1eddb457 inherit pub_methods_class_c_rhino_get"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_get.html#a26a50de2daa1624d34f3117f1eddb457">AddCommandOption</a> (<a class="el" href="class_c_rhino_command_option_name.html">CRhinoCommandOptionName</a> option_name, int number_value)</td></tr>
+<tr class="separator:a26a50de2daa1624d34f3117f1eddb457 inherit pub_methods_class_c_rhino_get"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27fdd6d3a055ef0e794cd0915502d939 inherit pub_methods_class_c_rhino_get"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_get.html#a27fdd6d3a055ef0e794cd0915502d939">AddCommandOptionColor</a> (<a class="el" href="class_c_rhino_command_option_name.html">CRhinoCommandOptionName</a> option_name, <a class="el" href="class_o_n___color.html">ON_Color</a> *color_value, const wchar_t *option_prompt=nullptr)</td></tr>
 <tr class="separator:a27fdd6d3a055ef0e794cd0915502d939 inherit pub_methods_class_c_rhino_get"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1144e54f5fe63bb3fcd9f9e6f612382f inherit pub_methods_class_c_rhino_get"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_get.html#a1144e54f5fe63bb3fcd9f9e6f612382f">AddCommandOptionInteger</a> (<a class="el" href="class_c_rhino_command_option_name.html">CRhinoCommandOptionName</a> option_name, int *integer_value, const wchar_t *option_prompt=nullptr, double lower_limit=<a class="el" href="group__open_n_u_r_b_s.html#ga586b2913cf0137fe229a3097c2a119ff">ON_UNSET_VALUE</a>, double upper_limit=<a class="el" href="group__open_n_u_r_b_s.html#ga586b2913cf0137fe229a3097c2a119ff">ON_UNSET_VALUE</a>)</td></tr>
@@ -412,8 +420,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7723f982482696dd9291119cecc830eb inherit pub_methods_class_c_rhino_get"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaad9beb10b4c9e91fc3e8350fd0f7197 inherit pub_methods_class_c_rhino_get"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_c_rhino_command_option.html">CRhinoCommandOption</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_get.html#aaad9beb10b4c9e91fc3e8350fd0f7197">Option</a> () const</td></tr>
 <tr class="separator:aaad9beb10b4c9e91fc3e8350fd0f7197 inherit pub_methods_class_c_rhino_get"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6400cf30f862c325a63859a98c790ed4 inherit pub_methods_class_c_rhino_get"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_get.html#a6400cf30f862c325a63859a98c790ed4">OptionCurrentListOptionIndex</a> () const</td></tr>
+<tr class="separator:a6400cf30f862c325a63859a98c790ed4 inherit pub_methods_class_c_rhino_get"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d09e0a3cb894142433cc7e62fdcd9cd inherit pub_methods_class_c_rhino_get"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_get.html#a4d09e0a3cb894142433cc7e62fdcd9cd">OptionIndex</a> () const</td></tr>
 <tr class="separator:a4d09e0a3cb894142433cc7e62fdcd9cd inherit pub_methods_class_c_rhino_get"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a760325ae94378392ac959f7dcdd38dff inherit pub_methods_class_c_rhino_get"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_rhino_command_option.html#a850223b5327ca82b90acfb89fbb7cc96">CRhinoCommandOption::COMMAND_OPTION_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_get.html#a760325ae94378392ac959f7dcdd38dff">OptionType</a> () const</td></tr>
+<tr class="separator:a760325ae94378392ac959f7dcdd38dff inherit pub_methods_class_c_rhino_get"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a105d4fcba07afa95d0f317f254e4ca5f inherit pub_methods_class_c_rhino_get"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__4i_rect.html">ON_4iRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_get.html#a105d4fcba07afa95d0f317f254e4ca5f">PickRect</a> () const</td></tr>
 <tr class="separator:a105d4fcba07afa95d0f317f254e4ca5f inherit pub_methods_class_c_rhino_get"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46f3043b41e1abc602840b9ce4031faf inherit pub_methods_class_c_rhino_get"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_get.html#a46f3043b41e1abc602840b9ce4031faf">Point</a> () const</td></tr>
@@ -736,25 +748,26 @@ Additional Inherited Members</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a5651c680f46eb277d01c7156547956dcaea18b7aa7f1af102666f19c83b2dee8b"></a>loop_object&#160;</td><td class="fielddoc"><p>brep loop </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5651c680f46eb277d01c7156547956dcaf39e918362cc1e02ee028d8e81d465ee"></a>brepvertex_filter&#160;</td><td class="fielddoc"><p>brep vertex, ON_SubDVertex </p>
+<tr><td class="fieldname"><a id="a5651c680f46eb277d01c7156547956dcaf39e918362cc1e02ee028d8e81d465ee"></a>brepvertex_filter&#160;</td><td class="fielddoc"><p>brep vertex </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a5651c680f46eb277d01c7156547956dca3a70dc11a3331aa4beb8692e0a9d3e3e"></a>mesh_object&#160;</td><td class="fielddoc"><p><a class="el" href="class_o_n___mesh.html">ON_Mesh</a>. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a5651c680f46eb277d01c7156547956dca4f9e3db65365655575556dfacec74c43"></a>annotation_object&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a5651c680f46eb277d01c7156547956dca5077562010c5819591e343d0e6cb9cba"></a>light_object&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a5651c680f46eb277d01c7156547956dca0e38b3227ddda4b8af70534973ae2c9a"></a>instance_reference&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5651c680f46eb277d01c7156547956dca90535e919e4dbe11af26678104226855"></a>meshvertex_filter&#160;</td><td class="fielddoc"><p><a class="el" href="class_o_n___mesh.html#a6cc720e646b5fb26e5285b1838f71c7d">ON_Mesh.m_V</a>[] index, <a class="el" href="struct_o_n___mesh_topology_vertex.html">ON_MeshTopologyVertex</a>, ON_SubDVertex. </p>
+<tr><td class="fieldname"><a id="a5651c680f46eb277d01c7156547956dca90535e919e4dbe11af26678104226855"></a>meshvertex_filter&#160;</td><td class="fielddoc"><p><a class="el" href="class_o_n___mesh.html#a6cc720e646b5fb26e5285b1838f71c7d">ON_Mesh.m_V</a>[] index, <a class="el" href="struct_o_n___mesh_topology_vertex.html">ON_MeshTopologyVertex</a>, <a class="el" href="class_o_n___sub_d_vertex.html">ON_SubDVertex</a>. </p>
+<p>NOTE: meshvertex_filter,meshedge_filter,meshface_filter,meshcomponent_reference are used for selection filter that accept <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> and <a class="el" href="class_o_n___sub_d.html">ON_SubD</a> components. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5651c680f46eb277d01c7156547956dcada559590d324736ddcf4562779686ac3"></a>meshedge_filter&#160;</td><td class="fielddoc"><p><a class="el" href="struct_o_n___mesh_topology_edge.html">ON_MeshTopologyEdge</a>, ON_SubDEdge. </p>
+<tr><td class="fieldname"><a id="a5651c680f46eb277d01c7156547956dcada559590d324736ddcf4562779686ac3"></a>meshedge_filter&#160;</td><td class="fielddoc"><p><a class="el" href="struct_o_n___mesh_topology_edge.html">ON_MeshTopologyEdge</a>, <a class="el" href="class_o_n___sub_d_edge.html">ON_SubDEdge</a>. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5651c680f46eb277d01c7156547956dca7ad8285c378b601c4ab491740b9662e4"></a>meshface_filter&#160;</td><td class="fielddoc"><p>selection filter for <a class="el" href="class_o_n___mesh.html#a005e7e4b0f04014c289264e06e496450" title="m_F[] facets (triangles or quads)">ON_Mesh.m_F</a>[] index, <a class="el" href="struct_o_n___mesh_topology_face.html">ON_MeshTopologyFace</a>, ON_SubDFace </p>
+<tr><td class="fieldname"><a id="a5651c680f46eb277d01c7156547956dca7ad8285c378b601c4ab491740b9662e4"></a>meshface_filter&#160;</td><td class="fielddoc"><p>selection filter for <a class="el" href="class_o_n___mesh.html#a005e7e4b0f04014c289264e06e496450" title="m_F[] facets (triangles or quads)">ON_Mesh.m_F</a>[] index, <a class="el" href="struct_o_n___mesh_topology_face.html">ON_MeshTopologyFace</a>, <a class="el" href="class_o_n___sub_d_face.html">ON_SubDFace</a> </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5651c680f46eb277d01c7156547956dca89e98da9a5d33e5c2e2492191ce45b8f"></a>meshcomponent_reference&#160;</td><td class="fielddoc"><p><a class="el" href="class_o_n___mesh_component_ref.html">ON_MeshComponentRef</a> or ON_SubDComponentRef. </p>
+<tr><td class="fieldname"><a id="a5651c680f46eb277d01c7156547956dca89e98da9a5d33e5c2e2492191ce45b8f"></a>meshcomponent_reference&#160;</td><td class="fielddoc"><p><a class="el" href="class_o_n___mesh_component_ref.html">ON_MeshComponentRef</a> or <a class="el" href="class_o_n___sub_d_component_ref.html">ON_SubDComponentRef</a>. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a5651c680f46eb277d01c7156547956dcadbce0a6be620750855e281335c752513"></a>cage_object&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a5651c680f46eb277d01c7156547956dca1e5ca4008fb755db68e6d497c2af61b6"></a>hatch_object&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a5651c680f46eb277d01c7156547956dca3d2eb22f61eb41b003ce3ca13f70d97e"></a>morph_control_object&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5651c680f46eb277d01c7156547956dca86fbbfdc45ad5c5facc581b9759d2392"></a>subd_object&#160;</td><td class="fielddoc"><p>ON_SubD, ON_SubDRef, ON_SubDComponentRef, ON_SubD.... </p>
+<tr><td class="fieldname"><a id="a5651c680f46eb277d01c7156547956dca86fbbfdc45ad5c5facc581b9759d2392"></a>subd_object&#160;</td><td class="fielddoc"><p><a class="el" href="class_o_n___sub_d.html">ON_SubD</a>, <a class="el" href="class_o_n___sub_d_ref.html">ON_SubDRef</a>, <a class="el" href="class_o_n___sub_d_component_ref.html">ON_SubDComponentRef</a>, <a class="el" href="class_o_n___sub_d.html">ON_SubD</a>.... </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a5651c680f46eb277d01c7156547956dca5057da1e2e448e6866807316422d1b81"></a>phantom_object&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a5651c680f46eb277d01c7156547956dcabe71db307fbd92cd84186cb6b297290c"></a>extrusion_object&#160;</td><td class="fielddoc"></td></tr>
@@ -944,7 +957,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Checks geometry to see if it can be selected. The default always returns true. Override to provide fancy filtering. Parameters: object - [in] parent object being considered. geometry - [in] geometry being considered. component_index - [in] if &gt;= 0, geometry is a proper sub-part of object-&gt;Geometry() with component_index. Remarks: The default simply returns true. All obvious geometry filter checks have been performed by the time <a class="el" href="class_c_rhino_get_object.html#ae179328e1d44d6cb7582e5f2816a7442">CustomGeometryFilter()</a> is called. </p>
+<p>Description: Checks geometry to see if it can be selected. The default always returns true. Override to provide fancy filtering. Parameters: object - [in] parent object being considered. geometry - [in] geometry being considered. component_index - [in] if &gt;= 0, geometry is a proper sub-part of object-&gt;<a class="el" href="group__open_n_u_r_b_s.html#gga870f5c5708f131b6a2bdf3d138607fd9ad9c6333623e6357515fcbf17be806273">Geometry()</a> with component_index. Remarks: The default simply returns true. All obvious geometry filter checks have been performed by the time <a class="el" href="class_c_rhino_get_object.html#ae179328e1d44d6cb7582e5f2816a7442">CustomGeometryFilter()</a> is called. </p>
 
 </div>
 </div>
@@ -1019,7 +1032,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: By default, if a call to GetObject is permitted to select different parts fo the same object, like a polysurface and an edge of that polysurface, then the top-most object is automatically selected. If you want the choose-one-object mechanism to include pop up in these cases, then call EnableChooseOneQuestion(true) before calling <a class="el" href="class_c_rhino_get_object.html#a590387a94114c160cf1c3ab4759e7d23">GetObjects()</a>. Parameters: bEnableChooseOneQuestion - [in] By default, if a call to GetObject is permitted to select different parts fo the same object, like a polysurface and an edge of that polysurface, then the top/bottom-most object is automatically selected. If you want the choose-one-object mechanism to include pop up in these cases, then call EnableChooseOneQuestion(true) before calling <a class="el" href="class_c_rhino_get_object.html#a590387a94114c160cf1c3ab4759e7d23">GetObjects()</a>. See Also: <a class="el" href="class_c_rhino_get_object.html#a38aede756ecee588f7190696b2df44c3">CRhinoGetObject::ChooseOneQuestion</a> </p>
+<p>Description: By default, if a call to GetObject is permitted to select different parts fo the same object, like a polysurface and an edge of that polysurface, then the top-most object is automatically selected. If you want the choose-one-object mechanism to include pop up in these cases, then call EnableChooseOneQuestion(true) before calling <a class="el" href="class_c_rhino_get_object.html#a590387a94114c160cf1c3ab4759e7d23">GetObjects()</a>. Parameters: bEnableChooseOneQuestion - [in] By default, if a call to GetObject is permitted to select different parts fo the same object, like a polysurface and an edge of that polysurface, then the top/bottom-most object is automatically selected. If you want the choose-one-object mechanism to include pop up in these cases, then call EnableChooseOneQuestion(true) before calling <a class="el" href="class_c_rhino_get_object.html#a590387a94114c160cf1c3ab4759e7d23">GetObjects()</a>. See Also: <a class="el" href="class_c_rhino_get_object.html#a38aede756ecee588f7190696b2df44c3">CRhinoGetObject::ChooseOneQuestion</a> <br  />
+ </p>
 
 </div>
 </div>
@@ -1252,6 +1266,25 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ad7f6f37c66b771c4d4c7421d46f195fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7f6f37c66b771c4d4c7421d46f195fb">&#9670;&nbsp;</a></span>EnableProxyBrepFromSubD()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRhinoGetObject::EnableProxyBrepFromSubD </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bEnable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Parameters: bEnable - [in] true - if a subd (or a subd component) cannot be selected, but a brep (or brep component) can be selected, then automatically create and use a proxy brep. false Never create or use a proxy brep for a subd object. Remarks: Default = true; </p>
+
+</div>
+</div>
 <a id="a7cb67eaa6f1c1a73223d7ca59a75d505"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7cb67eaa6f1c1a73223d7ca59a75d505">&#9670;&nbsp;</a></span>EnableReferenceObjectSelect()</h2>
 
@@ -1429,6 +1462,41 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>STEP 4: Call <a class="el" href="class_c_rhino_get_object.html#a590387a94114c160cf1c3ab4759e7d23">GetObjects()</a> to get a list of objects. Description: Call to select objects. Parameters: minimum_number - [in] minimum number of objects to select. maximum_number - [in] maximum number of objects to select. If 0, then the user must press enter to finish object selection. If -1, then object selection stops as soon as there are at least minimum_number of object selected. If &gt;0, then the picking stops when there are maximum_number objects. If a window pick, crossing pick, or Sel* command attempts to add more than maximum_number, then the attempt is ignored. Example: / pick 3 or more curves and/or meshes <a class="el" href="class_c_rhino_get_object.html">CRhinoGetObject</a> go; double x = 0.0; for (;;) { go.SetCommandPrompt("Select curves and meshes or type a number.\n"); go.SetGeometryFilter( <a class="el" href="class_c_rhino_get_object.html#a5651c680f46eb277d01c7156547956dcae80bd804bfa2866607f31ce10a60b8e9" title="curve (can be edge in a brep)">CRhinoGetObject::curve_object</a> | <a class="el" href="class_c_rhino_get_object.html#a5651c680f46eb277d01c7156547956dca3a70dc11a3331aa4beb8692e0a9d3e3e" title="ON_Mesh.">CRhinoGetObject::mesh_object</a> ); go.AcceptNumber( true ); go.GetObject(3,0); if ( go.Result() == <a class="el" href="class_c_rhino_get.html#afbb1d0091ccb1306d0fe606405f6b886a22b44338fd318fd3746ad8c0c475d9ed" title="user entered a real number - call Number() to get value">CRhinoGet::number</a> ) { x = go.Number(); continue; } break; } if ( go.Result() == <a class="el" href="class_c_rhino_get.html#afbb1d0091ccb1306d0fe606405f6b886aca42e767ad34b4224b5f7326a5e4d72a" title="user selected an object - call Object() to get object">CRhinoGet::object</a> ) { int i, object_count = go.ObjectCount(); for ( i = 0; i &lt; object_count; i++ ) { <a class="el" href="class_c_rhino_obj_ref.html">CRhinoObjRef</a> obj_ref = go.Object(i); } } See Also: CRhinGetObject::EnablePressEnterWhenDonePrompt Returns: CRhinoGet::success - objects selected. <a class="el" href="class_c_rhino_get.html#afbb1d0091ccb1306d0fe606405f6b886a235c2995d5ed612698e3b1ad2f35ad39" title="user wants to cancel current command">CRhinoGet::cancel</a> - user pressed ESCAPE to cancel the get. See <a class="el" href="class_c_rhino_get.html#afbb1d0091ccb1306d0fe606405f6b886">CRhinoGet::result</a> for other possible values that may be returned when options, numbers, etc., are acceptable responses. </p>
+
+</div>
+</div>
+<a id="a06dea8df155e31609747b3a3b0e5a2bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06dea8df155e31609747b3a3b0e5a2bd">&#9670;&nbsp;</a></span>GetSubDComponentList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CRhinoGetObject::GetSubDComponentList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__open_n_u_r_b_s.html#ga3c46136e2570983319c47553f753932e">ON__UINT64</a>&#160;</td>
+          <td class="paramname"><em>subd_runtime_serial_number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html#a62d45db62efab7150c8a3415feb1bff1">ON_COMPONENT_INDEX::TYPE</a>&#160;</td>
+          <td class="paramname"><em>component_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">class <a class="el" href="class_o_n___sub_d_component_ref_list.html">ON_SubDComponentRefList</a> &amp;&#160;</td>
+          <td class="paramname"><em>subd_component_list</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Call GetSubDComponents() after calling GetObjects(...) to get a list of the subd components that were selected. Parameters: subd_runtime_serial_number - [in] If subd_runtime_serial_number &gt; 0 and &lt; 0xFFFFFFFFFFFFFFFFllu, then only components from that subd will be added to component_type - [in] If component_type is ON_COMPONENT_INDEX::TYPE::subd_vertex, ON_COMPONENT_INDEX::TYPE::subd_edge, or ON_COMPONENT_INDEX::TYPE::subd_face, then only components of that type will be added. Returns: Number of components added to subd_component_list. </p>
 
 </div>
 </div>
@@ -1612,7 +1680,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Checks geometry to see if it passes the basic GeometryAttributeFilter. Parameters: object - [in] parent object being considered. geometry - [in] geometry being considered. component_index - [in] if &gt;= 0, geometry is a proper sub-part of object-&gt;Geometry() with component_index. Remarks: The default simply checks that the geometry passes the filter returned by <a class="el" href="class_c_rhino_get_object.html#a1fb881a3a419291957309143704e7d10">GeometryAttributeFilter()</a>. See Also: <a class="el" href="class_c_rhino_get_object.html#ae55700095a7f2f9807c2cf83cde6bb43">CRhinoGetObject::EnablePostSelect</a> CRhinoGetObject::PassesGeometryTypeFilter </p>
+<p>Description: Checks geometry to see if it passes the basic GeometryAttributeFilter. Parameters: object - [in] parent object being considered. geometry - [in] geometry being considered. component_index - [in] if &gt;= 0, geometry is a proper sub-part of object-&gt;<a class="el" href="group__open_n_u_r_b_s.html#gga870f5c5708f131b6a2bdf3d138607fd9ad9c6333623e6357515fcbf17be806273">Geometry()</a> with component_index. Remarks: The default simply checks that the geometry passes the filter returned by <a class="el" href="class_c_rhino_get_object.html#a1fb881a3a419291957309143704e7d10">GeometryAttributeFilter()</a>. See Also: <a class="el" href="class_c_rhino_get_object.html#ae55700095a7f2f9807c2cf83cde6bb43">CRhinoGetObject::EnablePostSelect</a> CRhinoGetObject::PassesGeometryTypeFilter </p>
 
 </div>
 </div>
@@ -1651,6 +1719,24 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Posts an event to Rhino that object selection has changed. </p>
+
+</div>
+</div>
+<a id="a37eef840ef1db1137f8b4dde2e260266"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37eef840ef1db1137f8b4dde2e260266">&#9670;&nbsp;</a></span>ProxyBrepFromSubD()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CRhinoGetObject::ProxyBrepFromSubD </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns: true - if a subd (or a subd component) cannot be selected, but a brep (or brep component) can be selected, then automatically create and use a proxy brep. false Never create or use a proxy brep for a subd object. Remarks: Default = true; </p>
 
 </div>
 </div>
@@ -2054,7 +2140,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:02 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:27 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

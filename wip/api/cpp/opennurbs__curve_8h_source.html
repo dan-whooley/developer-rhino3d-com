@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -333,13 +333,13 @@ $(function() {
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="comment">// Description:</span></div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <span class="comment">//   Get number of parameters of &quot;knots&quot;.</span></div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="comment">// Parameters:</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  <span class="comment">//   knots - [out] an array of length SpanCount()+1 is filled in</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  <span class="comment">//   span_parameters - [out] an array of length SpanCount()+1 is filled in</span></div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <span class="comment">//       with the parameters where the curve is not smooth (C-infinity).</span></div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <span class="comment">// Returns:</span></div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  <span class="comment">//   true if successful</span></div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <span class="keyword">virtual</span></div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  <span class="keywordtype">bool</span> GetSpanVector(</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="keywordtype">double</span>* knots</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="keywordtype">double</span>* span_parameters</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        ) <span class="keyword">const</span> = 0; <span class="comment">// </span></div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="comment">  //////////</span></div>
@@ -971,7 +971,7 @@ $(function() {
 <div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;  <span class="comment">// the search fails.</span></div>
 <div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;  <span class="keyword">virtual</span></div>
 <div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;  <span class="keywordtype">bool</span> GetClosestPoint( </div>
-<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;          <span class="keyword">const</span> <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp;, <span class="comment">// test_point</span></div>
+<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;          <span class="keyword">const</span> <a class="code" href="class_o_n__3d_point.html">ON_3dPoint</a>&amp; test_point,</div>
 <div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;          <span class="keywordtype">double</span>* t,       <span class="comment">// parameter of local closest point returned here</span></div>
 <div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;          <span class="keywordtype">double</span> maximum_distance = 0.0,  <span class="comment">// maximum_distance</span></div>
 <div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;          <span class="keyword">const</span> <a class="code" href="class_o_n___interval.html">ON_Interval</a>* sub_domain = <span class="keyword">nullptr</span> <span class="comment">// sub_domain</span></div>
@@ -2108,10 +2108,10 @@ $(function() {
 <div class="line"><a name="l02036"></a><span class="lineno"> 2036</span>&#160; </div>
 <div class="line"><a name="l02037"></a><span class="lineno"> 2037</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_o_n__3d_vector_html"><div class="ttname"><a href="class_o_n__3d_vector.html">ON_3dVector</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:1185</div></div>
+<div class="ttc" id="aclass_o_n__3d_vector_html"><div class="ttname"><a href="class_o_n__3d_vector.html">ON_3dVector</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:1263</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gaeec70151e703b808ab57d0626db20e1f"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gaeec70151e703b808ab57d0626db20e1f">ON_OBJECT_DECLARE</a></div><div class="ttdeci">#define ON_OBJECT_DECLARE(cls)</div><div class="ttdef"><b>Definition:</b> opennurbs_object.h:312</div></div>
 <div class="ttc" id="agroup___rhino_html_gga83f7f17737758ec5bc52fc8c5840aa4ba8a9e64d86ed12ad40de129bc7f4683b2"><div class="ttname"><a href="group___rhino.html#gga83f7f17737758ec5bc52fc8c5840aa4ba8a9e64d86ed12ad40de129bc7f4683b2">RhinoFilletSurfaceSplitType::Split</a></div><div class="ttdeci">@ Split</div></div>
-<div class="ttc" id="agroup__open_n_u_r_b_s_html_gaf3d09b48940087a94d71e0489cc394ac"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gaf3d09b48940087a94d71e0489cc394ac">ON_SQRT_EPSILON</a></div><div class="ttdeci">#define ON_SQRT_EPSILON</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:201</div></div>
+<div class="ttc" id="agroup__open_n_u_r_b_s_html_gaf3d09b48940087a94d71e0489cc394ac"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gaf3d09b48940087a94d71e0489cc394ac">ON_SQRT_EPSILON</a></div><div class="ttdeci">#define ON_SQRT_EPSILON</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:203</div></div>
 <div class="ttc" id="aclass_o_n___interval_html"><div class="ttname"><a href="class_o_n___interval.html">ON_Interval</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:49</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga2b0c7dc7edd0f9056f36a9dc90cd80de"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga2b0c7dc7edd0f9056f36a9dc90cd80de">ON_CurveOrientationArea</a></div><div class="ttdeci">ON_DECL double ON_CurveOrientationArea(const ON_Curve *curve, const ON_Interval *domain, const ON_Xform *xform, bool bReverseCurve)</div></div>
 <div class="ttc" id="aclass_o_n___mass_properties_html"><div class="ttname"><a href="class_o_n___mass_properties.html">ON_MassProperties</a></div><div class="ttdef"><b>Definition:</b> opennurbs_plus_massprop.h:32</div></div>
@@ -2120,13 +2120,13 @@ $(function() {
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gaff239c048340c5907911b0f9d0c9f806"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gaff239c048340c5907911b0f9d0c9f806">ON_SortLines</a></div><div class="ttdeci">ON_DECL bool ON_SortLines(int line_count, const ON_Line *line_list, int *index, bool *bReverse)</div></div>
 <div class="ttc" id="aclass_o_n___nurbs_curve_html"><div class="ttname"><a href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a></div><div class="ttdef"><b>Definition:</b> opennurbs_nurbscurve.h:29</div></div>
 <div class="ttc" id="aclass_o_n___object_html_af8435c33ab53af41c22dac75e8917569"><div class="ttname"><a href="class_o_n___object.html#af8435c33ab53af41c22dac75e8917569">ON_Object::DestroyRuntimeCache</a></div><div class="ttdeci">virtual void DestroyRuntimeCache(bool bDelete=true)</div></div>
-<div class="ttc" id="aclass_o_n_html_a93987c3500773205a5b293934af98290"><div class="ttname"><a href="class_o_n.html#a93987c3500773205a5b293934af98290">ON::cubic_loft_end_condition</a></div><div class="ttdeci">cubic_loft_end_condition</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:2102</div></div>
+<div class="ttc" id="aclass_o_n_html_a93987c3500773205a5b293934af98290"><div class="ttname"><a href="class_o_n.html#a93987c3500773205a5b293934af98290">ON::cubic_loft_end_condition</a></div><div class="ttdeci">cubic_loft_end_condition</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:2143</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga59fb488a26cef0e7bf900a815eb92b88"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga59fb488a26cef0e7bf900a815eb92b88">ON_DECL</a></div><div class="ttdeci">#define ON_DECL</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:116</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gaee079cb76d92c884ad774c9066260e8d"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gaee079cb76d92c884ad774c9066260e8d">ON_TrimCurve</a></div><div class="ttdeci">ON_DECL ON_Curve * ON_TrimCurve(const ON_Curve &amp;curve, ON_Interval trim_parameters)</div></div>
 <div class="ttc" id="aclass_o_n___curve_array_html"><div class="ttname"><a href="class_o_n___curve_array.html">ON_CurveArray</a></div><div class="ttdef"><b>Definition:</b> opennurbs_curve.h:1735</div></div>
 <div class="ttc" id="aclass_o_n___object_html_afa19aee4a411a8fda53aff00bd02d86e"><div class="ttname"><a href="class_o_n___object.html#afa19aee4a411a8fda53aff00bd02d86e">ON_Object::ObjectType</a></div><div class="ttdeci">virtual ON::object_type ObjectType() const</div></div>
-<div class="ttc" id="aclass_o_n_html_a328d22b5ad7bf9d4e9ba1123355d3cf9"><div class="ttname"><a href="class_o_n.html#a328d22b5ad7bf9d4e9ba1123355d3cf9">ON::object_type</a></div><div class="ttdeci">object_type</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:1977</div></div>
-<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga48817c15522bb78629b75ea385be6d06"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga48817c15522bb78629b75ea385be6d06">ON_DEFAULT_ANGLE_TOLERANCE_COSINE</a></div><div class="ttdeci">#define ON_DEFAULT_ANGLE_TOLERANCE_COSINE</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:406</div></div>
+<div class="ttc" id="aclass_o_n_html_a328d22b5ad7bf9d4e9ba1123355d3cf9"><div class="ttname"><a href="class_o_n.html#a328d22b5ad7bf9d4e9ba1123355d3cf9">ON::object_type</a></div><div class="ttdeci">object_type</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:2010</div></div>
+<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga48817c15522bb78629b75ea385be6d06"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga48817c15522bb78629b75ea385be6d06">ON_DEFAULT_ANGLE_TOLERANCE_COSINE</a></div><div class="ttdeci">#define ON_DEFAULT_ANGLE_TOLERANCE_COSINE</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:417</div></div>
 <div class="ttc" id="aclass_o_n___curve_html"><div class="ttname"><a href="class_o_n___curve.html">ON_Curve</a></div><div class="ttdef"><b>Definition:</b> opennurbs_curve.h:94</div></div>
 <div class="ttc" id="aclass_o_n___geometry_html_add710872e89bc29e1ed1321b3e70b1b1"><div class="ttname"><a href="class_o_n___geometry.html#add710872e89bc29e1ed1321b3e70b1b1">ON_Geometry::Transform</a></div><div class="ttdeci">virtual bool Transform(const ON_Xform &amp;xform)</div></div>
 <div class="ttc" id="aclass_o_n___xform_html"><div class="ttname"><a href="class_o_n___xform.html">ON_Xform</a></div><div class="ttdef"><b>Definition:</b> opennurbs_xform.h:31</div></div>
@@ -2144,25 +2144,25 @@ $(function() {
 <div class="ttc" id="aclass_o_n___plane_html"><div class="ttname"><a href="class_o_n___plane.html">ON_Plane</a></div><div class="ttdef"><b>Definition:</b> opennurbs_plane.h:23</div></div>
 <div class="ttc" id="aclass_o_n___curve_html_a0ab4600f60f44cd2dbff85d5c127ea61"><div class="ttname"><a href="class_o_n___curve.html#a0ab4600f60f44cd2dbff85d5c127ea61">ON_Curve::MeshCurve</a></div><div class="ttdeci">class ON_PolylineCurve * MeshCurve(ON_MeshCurveParameters &amp;mp, ON_PolylineCurve *polyline, bool bSkipFirstPoint, const ON_Interval *domain) const</div></div>
 <div class="ttc" id="agroup___rhino_html_gga83f7f17737758ec5bc52fc8c5840aa4ba1fc5884251ca9f20a4fd5f79a458f94f"><div class="ttname"><a href="group___rhino.html#gga83f7f17737758ec5bc52fc8c5840aa4ba1fc5884251ca9f20a4fd5f79a458f94f">RhinoFilletSurfaceSplitType::Trim</a></div><div class="ttdeci">@ Trim</div></div>
-<div class="ttc" id="aclass_o_n___binary_archive_html"><div class="ttname"><a href="class_o_n___binary_archive.html">ON_BinaryArchive</a></div><div class="ttdoc">&lt; use for generic serialization of binary data</div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:2014</div></div>
+<div class="ttc" id="aclass_o_n___binary_archive_html"><div class="ttname"><a href="class_o_n___binary_archive.html">ON_BinaryArchive</a></div><div class="ttdoc">&lt; use for generic serialization of binary data</div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:2035</div></div>
 <div class="ttc" id="aclass_o_n___mesh_curve_parameters_html"><div class="ttname"><a href="class_o_n___mesh_curve_parameters.html">ON_MeshCurveParameters</a></div><div class="ttdef"><b>Definition:</b> opennurbs_curve.h:32</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga1b9bbb0fba1d3a5fae3accc23a26e990"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga1b9bbb0fba1d3a5fae3accc23a26e990">ON_NOEXCEPT</a></div><div class="ttdeci">#define ON_NOEXCEPT</div><div class="ttdef"><b>Definition:</b> opennurbs_system_compiler.h:66</div></div>
-<div class="ttc" id="aclass_o_n_html_a7cec8c08d6bc50e082fb9e6507b5f668"><div class="ttname"><a href="class_o_n.html#a7cec8c08d6bc50e082fb9e6507b5f668">ON::continuity</a></div><div class="ttdeci">continuity</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:1590</div></div>
-<div class="ttc" id="aclass_o_n__3d_point_html"><div class="ttname"><a href="class_o_n__3d_point.html">ON_3dPoint</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:483</div></div>
+<div class="ttc" id="aclass_o_n_html_a7cec8c08d6bc50e082fb9e6507b5f668"><div class="ttname"><a href="class_o_n.html#a7cec8c08d6bc50e082fb9e6507b5f668">ON::continuity</a></div><div class="ttdeci">continuity</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:1623</div></div>
+<div class="ttc" id="aclass_o_n__3d_point_html"><div class="ttname"><a href="class_o_n__3d_point.html">ON_3dPoint</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:517</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gabfa1ef9314bde63f10b50776d3c1f002"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gabfa1ef9314bde63f10b50776d3c1f002">ON_SortCurves</a></div><div class="ttdeci">ON_DECL bool ON_SortCurves(int curve_count, const ON_Curve *const *curve_list, int *index, bool *bReverse)</div></div>
 <div class="ttc" id="aclass_o_n___polyline_curve_html"><div class="ttname"><a href="class_o_n___polyline_curve.html">ON_PolylineCurve</a></div><div class="ttdef"><b>Definition:</b> opennurbs_polylinecurve.h:24</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gac741bf9e3823a5cd9e18198228f2329e"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gac741bf9e3823a5cd9e18198228f2329e">ON_CLASS</a></div><div class="ttdeci">#define ON_CLASS</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:115</div></div>
-<div class="ttc" id="aclass_o_n_html_a93987c3500773205a5b293934af98290ab13be3adf563def4e2892f993b2ea2e6"><div class="ttname"><a href="class_o_n.html#a93987c3500773205a5b293934af98290ab13be3adf563def4e2892f993b2ea2e6">ON::cubic_loft_ec_quadratic</a></div><div class="ttdeci">@ cubic_loft_ec_quadratic</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:2104</div></div>
+<div class="ttc" id="aclass_o_n_html_a93987c3500773205a5b293934af98290ab13be3adf563def4e2892f993b2ea2e6"><div class="ttname"><a href="class_o_n.html#a93987c3500773205a5b293934af98290ab13be3adf563def4e2892f993b2ea2e6">ON::cubic_loft_ec_quadratic</a></div><div class="ttdeci">@ cubic_loft_ec_quadratic</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:2145</div></div>
 <div class="ttc" id="aclass_o_n___ellipse_html"><div class="ttname"><a href="class_o_n___ellipse.html">ON_Ellipse</a></div><div class="ttdef"><b>Definition:</b> opennurbs_ellipse.h:26</div></div>
 <div class="ttc" id="aclass_o_n___geometry_html_ab59968e400d15d016517b7b4f2e32ea4"><div class="ttname"><a href="class_o_n___geometry.html#ab59968e400d15d016517b7b4f2e32ea4">ON_Geometry::GetTightBoundingBox</a></div><div class="ttdeci">virtual bool GetTightBoundingBox(class ON_BoundingBox &amp;tight_bbox, bool bGrowBox=false, const class ON_Xform *xform=nullptr) const</div></div>
-<div class="ttc" id="aclass_o_n___plane_equation_html"><div class="ttname"><a href="class_o_n___plane_equation.html">ON_PlaneEquation</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:1467</div></div>
-<div class="ttc" id="aclass_o_n___curve_tree_html"><div class="ttname"><a href="class_o_n___curve_tree.html">ON_CurveTree</a></div><div class="ttdef"><b>Definition:</b> opennurbs_plus.h:1127</div></div>
+<div class="ttc" id="aclass_o_n___plane_equation_html"><div class="ttname"><a href="class_o_n___plane_equation.html">ON_PlaneEquation</a></div><div class="ttdef"><b>Definition:</b> opennurbs_point.h:1558</div></div>
+<div class="ttc" id="aclass_o_n___curve_tree_html"><div class="ttname"><a href="class_o_n___curve_tree.html">ON_CurveTree</a></div><div class="ttdef"><b>Definition:</b> opennurbs_plus.h:1132</div></div>
 <div class="ttc" id="aclass_o_n___geometry_html_adcb646d6ca698c092b73f2f05373bfc2"><div class="ttname"><a href="class_o_n___geometry.html#adcb646d6ca698c092b73f2f05373bfc2">ON_Geometry::EvaluatePoint</a></div><div class="ttdeci">virtual bool EvaluatePoint(const class ON_ObjRef &amp;objref, ON_3dPoint &amp;P) const</div></div>
-<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga384d9713cff6f46d203437be118aab80"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga384d9713cff6f46d203437be118aab80">ON_ZERO_TOLERANCE</a></div><div class="ttdeci">#define ON_ZERO_TOLERANCE</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:362</div></div>
+<div class="ttc" id="agroup__open_n_u_r_b_s_html_ga384d9713cff6f46d203437be118aab80"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga384d9713cff6f46d203437be118aab80">ON_ZERO_TOLERANCE</a></div><div class="ttdeci">#define ON_ZERO_TOLERANCE</div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:371</div></div>
 <div class="ttc" id="aclass_o_n___arc_html"><div class="ttname"><a href="class_o_n___arc.html">ON_Arc</a></div><div class="ttdef"><b>Definition:</b> opennurbs_arc.h:37</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:12:49 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:14 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

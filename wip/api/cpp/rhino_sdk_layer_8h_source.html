@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -407,7 +407,7 @@ $(function() {
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="comment">  */</span></div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;  <span class="keywordtype">void</span> DeleteSavedSettings();</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160; </div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NextRuntimeSerialNumber();</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_o_n___model_component.html#a544efa96ab3a822b74501aadc4816eb6">NextRuntimeSerialNumber</a>();</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_c_rhino_layer_table.html">CRhinoLayerTable</a>;</div>
@@ -1025,355 +1025,381 @@ $(function() {
 <div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160; </div>
 <div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;  <span class="comment">/*</span></div>
 <div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;<span class="comment">    Deletes multiple layers</span></div>
-<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;<span class="comment"> </span></div>
-<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;<span class="comment">    layer_index_count - [in] </span></div>
-<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;<span class="comment">       length of layer_index[] array.</span></div>
-<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;<span class="comment">    layer_index - [in] array zero based indices of layers to delete.</span></div>
-<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;<span class="comment">        The indices must be in the range 0 &lt;= layer_index &lt; LayerCount().</span></div>
-<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;<span class="comment">    bQuiet - [in] If true, no warning message box appears if a layer</span></div>
-<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;<span class="comment">        cannot be deleted because it is the current layer,</span></div>
-<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;<span class="comment">        contains active geometry, and so on.</span></div>
-<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;<span class="comment">    Number of layers that were deleted.  If this is &lt; layer_index_count,</span></div>
-<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;<span class="comment">    you can dig through the layer table and check which ones were</span></div>
-<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;<span class="comment">    not deleted.</span></div>
-<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;  <span class="keywordtype">int</span> DeleteLayers(</div>
-<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;     <span class="keywordtype">int</span> layer_index_count,</div>
-<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;     const <span class="keywordtype">int</span>* layer_index_list,</div>
-<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;     <span class="keywordtype">bool</span>  bQuiet</div>
-<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;     );</div>
-<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160; </div>
-<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;  <span class="comment">// Description:</span></div>
-<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;  <span class="comment">//   Undeletes a layer that has been deleted by DeleteLayer().</span></div>
-<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;  <span class="comment">//</span></div>
-<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;  <span class="comment">// Parameters:</span></div>
-<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;  <span class="comment">//   layer_index - [in] zero based index of layer to undelete.</span></div>
-<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;  <span class="comment">//       This must be in the range 0 &lt;= layer_index &lt; LayerCount().</span></div>
-<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;  <span class="comment">//</span></div>
-<div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;  <span class="comment">// Returns:</span></div>
-<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;  <span class="comment">//   true if successful.</span></div>
-<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;  <span class="keywordtype">bool</span> UndeleteLayer(</div>
-<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;     <span class="keywordtype">int</span> layer_index</div>
-<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;     );</div>
-<div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160; </div>
-<div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;  <span class="comment">// Description:</span></div>
-<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;  <span class="comment">//   Use this to set CRhinoLayer::m_sort_index so that</span></div>
-<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;  <span class="comment">//   the values of m_sort_index run from 0 to LayerCount()-1</span></div>
-<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;  <span class="comment">//   and compare(layer_table[i],layer_table[j]) &lt; 0 ) implies </span></div>
-<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;  <span class="comment">//   layer_table[i].m_sort_index &lt; layer_table[j].m_sort_index.</span></div>
-<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;  <span class="comment">//</span></div>
-<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;  <span class="comment">// Parameters:</span></div>
-<div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;  <span class="comment">//   compare - [in] compare function with prototype</span></div>
-<div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;  <span class="comment">//       int compare(const CRhinoLayer* arg1,const CRhinoLayer* arg2,void* p).</span></div>
-<div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;  <span class="comment">//       that returns &lt;0 if arg1&lt;arg2, 0 if arg1=arg2, </span></div>
-<div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;  <span class="comment">//       and &gt;0 if arg1&gt;arg2.</span></div>
-<div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;  <span class="comment">//       If you want to preserve the existing sort order, pass null</span></div>
-<div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;  <span class="comment">//       for the compare function.</span></div>
-<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;  <span class="comment">//   cull - [in] optional filter function with prototype</span></div>
-<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;  <span class="comment">//       bool cull(const CRhinoLayer* arg,void* p).</span></div>
-<div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;  <span class="comment">//       that returns true if the layer should be ignored</span></div>
-<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;  <span class="comment">//       when sorting.  Layers that are ignored are not included</span></div>
-<div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;  <span class="comment">//       in the list returned by GetSortedList(). Pass 0</span></div>
-<div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160;  <span class="comment">//       if you do not need to cull layers</span></div>
-<div class="line"><a name="l01009"></a><span class="lineno"> 1009</span>&#160;  <span class="comment">//   p - [in] pointer passed as last argument to compare() and cull().</span></div>
-<div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160;  <span class="comment">//</span></div>
-<div class="line"><a name="l01011"></a><span class="lineno"> 1011</span>&#160;  <span class="comment">// Remarks:</span></div>
-<div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160;  <span class="comment">//   After calling Sort(), you can repeatedly call GetSortedList()</span></div>
-<div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;  <span class="comment">//   to get a sorted list of CRhinoLayer pointers.  Sort() and</span></div>
-<div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160;  <span class="comment">//   GetSortedList() do not modify the order or persistent information</span></div>
-<div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;  <span class="comment">//   in the layer table.  They are intended to be used to get</span></div>
-<div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;  <span class="comment">//   sorted lists of layers for dialogs, etc.</span></div>
-<div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;  <span class="keywordtype">void</span> Sort( </div>
-<div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;    <span class="keywordtype">int</span> (*compare)(const <a class="code" href="class_c_rhino_layer.html">CRhinoLayer</a>*,const <a class="code" href="class_c_rhino_layer.html">CRhinoLayer</a>*,<span class="keywordtype">void</span>*),</div>
-<div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160;    <span class="keywordtype">int</span> (*cull)(const <a class="code" href="class_c_rhino_layer.html">CRhinoLayer</a>*,<span class="keywordtype">void</span>*),</div>
-<div class="line"><a name="l01020"></a><span class="lineno"> 1020</span>&#160;    <span class="keywordtype">void</span>* p=0</div>
-<div class="line"><a name="l01021"></a><span class="lineno"> 1021</span>&#160;    );</div>
-<div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160; </div>
-<div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160;  <span class="comment">// Description:</span></div>
-<div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160;  <span class="comment">//   Gets an array of pointers to layers that is sorted by</span></div>
-<div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;  <span class="comment">//   the values of CRhinoLayer::m_sort_index.</span></div>
-<div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160;  <span class="comment">//</span></div>
-<div class="line"><a name="l01027"></a><span class="lineno"> 1027</span>&#160;  <span class="comment">// Parameters:</span></div>
-<div class="line"><a name="l01028"></a><span class="lineno"> 1028</span>&#160;  <span class="comment">//   sorted_list - [out] this array is returned with length</span></div>
-<div class="line"><a name="l01029"></a><span class="lineno"> 1029</span>&#160;  <span class="comment">//       LayerCount() and is sorted by the values of</span></div>
-<div class="line"><a name="l01030"></a><span class="lineno"> 1030</span>&#160;  <span class="comment">//       CRhinoLayer::m_sort_index.</span></div>
-<div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160;  <span class="comment">//   bIgnoreDeleted - [in] true means don&#39;t include</span></div>
-<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;  <span class="comment">//       deleted layers.</span></div>
-<div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;  <span class="comment">//</span></div>
-<div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;  <span class="comment">// Remarks:</span></div>
-<div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;  <span class="comment">//   Use Sort() to set the values of m_sort_index.</span></div>
-<div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160;  <span class="keywordtype">void</span> GetSortedList(</div>
-<div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;    <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt;const <a class="code" href="class_c_rhino_layer.html">CRhinoLayer</a>*&gt;&amp;, <span class="comment">// sorted_list</span></div>
-<div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;    <span class="keywordtype">bool</span> = false <span class="comment">// bIgnoreDeleted</span></div>
-<div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;    ) const;</div>
-<div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160; </div>
-<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;<span class="comment">    Gets unused layer name used as default when creating new layers.</span></div>
-<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;<span class="comment">   Parameters:</span></div>
-<div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;<span class="comment">    root_name - [in]</span></div>
-<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;<span class="comment">      The returned name is &quot;root_name nn&quot;  If root_name is empty,</span></div>
-<div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;<span class="comment">      then &quot;Layer&quot; (localized) is used.</span></div>
-<div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;<span class="comment">    layer_name - [out]</span></div>
-<div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;<span class="comment">      A valid layer name that is not in use.</span></div>
-<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;<span class="comment">    bIgnoreDeleted - [in] </span></div>
-<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;<span class="comment">      When bIgnoreDeleted is true, then the returned name may</span></div>
-<div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;<span class="comment">      be used by a deleted layer.</span></div>
-<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;  <span class="keywordtype">void</span> GetUnusedLayerName(</div>
-<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;    <a class="code" href="class_o_n__w_string.html">ON_wString</a>&amp; unused_layer_name</div>
-<div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;    ) const;</div>
-<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160; </div>
-<div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;  <span class="keywordtype">void</span> GetUnusedLayerName( </div>
-<div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;    const <span class="keywordtype">wchar_t</span>* root_name,</div>
-<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;    <a class="code" href="class_o_n__w_string.html">ON_wString</a>&amp; unused_layer_name</div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;<span class="comment">    Deletes multiple layers.</span></div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;<span class="comment">    layer_index_count - [in] length of layer_index[] array.</span></div>
+<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;<span class="comment">    layer_index_list  - [in] array zero based indices of layers to delete.</span></div>
+<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;<span class="comment">                             The indices must be in the range 0 &lt;= layer_index &lt; LayerCount().</span></div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;<span class="comment">    bQuiet            - [in] If true, no warning message box appears if a layer</span></div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;<span class="comment">                             cannot be deleted because it is the current layer,</span></div>
+<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;<span class="comment">                             contains active geometry, and so on.</span></div>
+<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;<span class="comment">    Number of layers that were deleted.  If this is &lt; layer_index_count,</span></div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;<span class="comment">    you can dig through the layer table and check which ones were</span></div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;<span class="comment">    not deleted.</span></div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;  <span class="keywordtype">int</span> DeleteLayers(</div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;     <span class="keywordtype">int</span> layer_index_count,</div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;     const <span class="keywordtype">int</span>* layer_index_list,</div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;     <span class="keywordtype">bool</span> bQuiet</div>
+<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;     );</div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160; </div>
+<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;<span class="comment">    Deletes multiple layers.</span></div>
+<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;<span class="comment">    layer_index_count      - [in] length of layer_index_list[] array.</span></div>
+<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;<span class="comment">    layer_index_list       - [in] array zero based indices of layers to delete.</span></div>
+<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;<span class="comment">                             The indices must be in the range 0 &lt;= layer_index &lt; LayerCount().</span></div>
+<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;<span class="comment">    bQuiet                 - [in] If true, no warning message box appears if a layer</span></div>
+<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;<span class="comment">                             cannot be deleted because it is the current layer,</span></div>
+<div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;<span class="comment">                             contains active geometry, and so on.</span></div>
+<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;<span class="comment">    delete_objects_warning - [in] Action to take when multiple delete warnings occur, where:</span></div>
+<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;<span class="comment">                             0 == No to all, 1 == Yes to all, 2 == Ask the user.</span></div>
+<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;<span class="comment">    Number of layers that were deleted.  If this is &lt; layer_index_count,</span></div>
+<div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;<span class="comment">    you can dig through the layer table and check which ones were</span></div>
+<div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;<span class="comment">    not deleted.</span></div>
+<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;  <span class="keywordtype">int</span> DeleteLayers(</div>
+<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;    <span class="keywordtype">int</span> layer_index_count,</div>
+<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;    const <span class="keywordtype">int</span>* layer_index_list,</div>
+<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;    <span class="keywordtype">bool</span> bQuiet,</div>
+<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;    <span class="keywordtype">int</span> delete_objects_warning</div>
+<div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;  );</div>
+<div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160; </div>
+<div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;  <span class="comment">// Description:</span></div>
+<div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;  <span class="comment">//   Undeletes a layer that has been deleted by DeleteLayer().</span></div>
+<div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;  <span class="comment">// Parameters:</span></div>
+<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;  <span class="comment">//   layer_index - [in] zero based index of layer to undelete.</span></div>
+<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;  <span class="comment">//       This must be in the range 0 &lt;= layer_index &lt; LayerCount().</span></div>
+<div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;  <span class="comment">// Returns:</span></div>
+<div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;  <span class="comment">//   true if successful.</span></div>
+<div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160;  <span class="keywordtype">bool</span> UndeleteLayer(</div>
+<div class="line"><a name="l01009"></a><span class="lineno"> 1009</span>&#160;     <span class="keywordtype">int</span> layer_index</div>
+<div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160;     );</div>
+<div class="line"><a name="l01011"></a><span class="lineno"> 1011</span>&#160; </div>
+<div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160;  <span class="comment">// Description:</span></div>
+<div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;  <span class="comment">//   Use this to set CRhinoLayer::m_sort_index so that</span></div>
+<div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160;  <span class="comment">//   the values of m_sort_index run from 0 to LayerCount()-1</span></div>
+<div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;  <span class="comment">//   and compare(layer_table[i],layer_table[j]) &lt; 0 ) implies </span></div>
+<div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;  <span class="comment">//   layer_table[i].m_sort_index &lt; layer_table[j].m_sort_index.</span></div>
+<div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;  <span class="comment">// Parameters:</span></div>
+<div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160;  <span class="comment">//   compare - [in] compare function with prototype</span></div>
+<div class="line"><a name="l01020"></a><span class="lineno"> 1020</span>&#160;  <span class="comment">//       int compare(const CRhinoLayer* arg1,const CRhinoLayer* arg2,void* p).</span></div>
+<div class="line"><a name="l01021"></a><span class="lineno"> 1021</span>&#160;  <span class="comment">//       that returns &lt;0 if arg1&lt;arg2, 0 if arg1=arg2, </span></div>
+<div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160;  <span class="comment">//       and &gt;0 if arg1&gt;arg2.</span></div>
+<div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160;  <span class="comment">//       If you want to preserve the existing sort order, pass null</span></div>
+<div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160;  <span class="comment">//       for the compare function.</span></div>
+<div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;  <span class="comment">//   cull - [in] optional filter function with prototype</span></div>
+<div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160;  <span class="comment">//       bool cull(const CRhinoLayer* arg,void* p).</span></div>
+<div class="line"><a name="l01027"></a><span class="lineno"> 1027</span>&#160;  <span class="comment">//       that returns true if the layer should be ignored</span></div>
+<div class="line"><a name="l01028"></a><span class="lineno"> 1028</span>&#160;  <span class="comment">//       when sorting.  Layers that are ignored are not included</span></div>
+<div class="line"><a name="l01029"></a><span class="lineno"> 1029</span>&#160;  <span class="comment">//       in the list returned by GetSortedList(). Pass 0</span></div>
+<div class="line"><a name="l01030"></a><span class="lineno"> 1030</span>&#160;  <span class="comment">//       if you do not need to cull layers</span></div>
+<div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160;  <span class="comment">//   p - [in] pointer passed as last argument to compare() and cull().</span></div>
+<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;  <span class="comment">// Remarks:</span></div>
+<div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;  <span class="comment">//   After calling Sort(), you can repeatedly call GetSortedList()</span></div>
+<div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;  <span class="comment">//   to get a sorted list of CRhinoLayer pointers.  Sort() and</span></div>
+<div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160;  <span class="comment">//   GetSortedList() do not modify the order or persistent information</span></div>
+<div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;  <span class="comment">//   in the layer table.  They are intended to be used to get</span></div>
+<div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;  <span class="comment">//   sorted lists of layers for dialogs, etc.</span></div>
+<div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;  <span class="keywordtype">void</span> Sort( </div>
+<div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;    <span class="keywordtype">int</span> (*compare)(const <a class="code" href="class_c_rhino_layer.html">CRhinoLayer</a>*,const <a class="code" href="class_c_rhino_layer.html">CRhinoLayer</a>*,<span class="keywordtype">void</span>*),</div>
+<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;    <span class="keywordtype">int</span> (*cull)(const <a class="code" href="class_c_rhino_layer.html">CRhinoLayer</a>*,<span class="keywordtype">void</span>*),</div>
+<div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;    <span class="keywordtype">void</span>* p=0</div>
+<div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;    );</div>
+<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160; </div>
+<div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;  <span class="comment">// Description:</span></div>
+<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;  <span class="comment">//   Gets an array of pointers to layers that is sorted by</span></div>
+<div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;  <span class="comment">//   the values of CRhinoLayer::m_sort_index.</span></div>
+<div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;  <span class="comment">// Parameters:</span></div>
+<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;  <span class="comment">//   sorted_list - [out] this array is returned with length</span></div>
+<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;  <span class="comment">//       LayerCount() and is sorted by the values of</span></div>
+<div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;  <span class="comment">//       CRhinoLayer::m_sort_index.</span></div>
+<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;  <span class="comment">//   bIgnoreDeleted - [in] true means don&#39;t include</span></div>
+<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;  <span class="comment">//       deleted layers.</span></div>
+<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;  <span class="comment">// Remarks:</span></div>
+<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;  <span class="comment">//   Use Sort() to set the values of m_sort_index.</span></div>
+<div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;  <span class="keywordtype">void</span> GetSortedList(</div>
+<div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;    <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt;const <a class="code" href="class_c_rhino_layer.html">CRhinoLayer</a>*&gt;&amp;, <span class="comment">// sorted_list</span></div>
+<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;    <span class="keywordtype">bool</span> = false <span class="comment">// bIgnoreDeleted</span></div>
 <div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160;    ) const;</div>
 <div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160; </div>
-<div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;  <span class="keywordtype">bool</span> SetUnusedLayerName(</div>
-<div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;    const <span class="keywordtype">wchar_t</span>* root_name,</div>
-<div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;    <a class="code" href="class_o_n___layer.html">ON_Layer</a>&amp; layer</div>
-<div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;    ) const;</div>
-<div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160; </div>
-<div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;  <span class="keywordtype">void</span> SetRemapIndex(</div>
-<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;    <span class="keywordtype">int</span> layer_index,</div>
-<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;    <span class="keywordtype">int</span> remap_index</div>
-<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;    );</div>
-<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160; </div>
-<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;  <span class="keywordtype">int</span> RemapIndex(</div>
-<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;    <span class="keywordtype">int</span> layer_index</div>
-<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;    ) const;</div>
-<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160; </div>
-<div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;  <span class="keywordtype">void</span> ListTable(</div>
-<div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;    <a class="code" href="class_o_n___text_log.html">ON_TextLog</a>&amp; text_log,</div>
-<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> level_of_detail</div>
-<div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;    ) const;</div>
-<div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160; </div>
-<div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;<span class="comment">    true </span></div>
-<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;<span class="comment">      The layer is an element in this layer table.</span></div>
-<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;  <span class="keywordtype">bool</span> InLayerTable( const <a class="code" href="class_o_n___layer.html">ON_Layer</a>* layer ) const;</div>
-<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160; </div>
-<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160;<span class="comment">    true </span></div>
-<div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;<span class="comment">      The layer_index is a valid index of a layer</span></div>
-<div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;<span class="comment">      element in this layer table.    </span></div>
-<div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160;  <span class="keywordtype">bool</span> IsValidLayerTableIndex( <span class="keywordtype">int</span> layer_index ) const;</div>
-<div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160; </div>
-<div class="line"><a name="l01097"></a><span class="lineno"> 1097</span>&#160; </div>
-<div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160;private:</div>
-<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;  friend class <a class="code" href="class_c_rhino_doc.html">CRhinoDoc</a>;</div>
-<div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;  friend class CRhinoRead3dmHelper; <span class="comment">// for access to CRhinoLayerTable::FindReferenceParentLayer()</span></div>
-<div class="line"><a name="l01101"></a><span class="lineno"><a class="line" href="class_c_rhino_layer_table.html#a90258f01ce1e144ed14cd1157be4dc7a"> 1101</a></span>&#160; </div>
-<div class="line"><a name="l01102"></a><span class="lineno"><a class="line" href="class_c_rhino_layer_table.html#a1c55291426e0b1f7514be3d32d0c085f"> 1102</a></span>&#160;  <span class="comment">// Constructs a layer table with one default layer.  This is private</span></div>
-<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;  <span class="comment">// because only CRhinoDoc is permitted to create or destroy layer</span></div>
-<div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;  <span class="comment">// tables.</span></div>
-<div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;  <a class="code" href="class_c_rhino_layer_table.html">CRhinoLayerTable</a>(<a class="code" href="class_c_rhino_doc.html">CRhinoDoc</a>&amp;);</div>
-<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;  ~<a class="code" href="class_c_rhino_layer_table.html">CRhinoLayerTable</a>();</div>
-<div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;  </div>
-<div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;  <span class="comment">// pointer to parent doc set when CRhinoDoc creates the layer table.</span></div>
-<div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;  <a class="code" href="class_c_rhino_doc.html">CRhinoDoc</a>&amp; m_doc;</div>
-<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;  <a class="code" href="class_c_rhino_doc_table_reference.html">CRhinoDocTableReference</a> m_table_reference;</div>
-<div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160; </div>
-<div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;  <a class="code" href="class_o_n___component_manifest.html">ON_ComponentManifest</a>&amp; Internal_Manifest();</div>
-<div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160; </div>
-<div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160; </div>
-<div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160;  <span class="comment">// index of current layer</span></div>
-<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;  <span class="comment">// SetCurrentLayerIndex() keeps this value in sync with</span></div>
-<div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;  <span class="comment">// CRhinoDoc::Properties().Settings().m_current_layer_index</span></div>
-<div class="line"><a name="l01118"></a><span class="lineno"> 1118</span>&#160;  <span class="keywordtype">int</span> m_current_layer_index = -1;</div>
-<div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160; </div>
-<div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;private:</div>
-<div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;  friend <span class="keywordtype">bool</span> RhGetGrandParentLayerId( </div>
-<div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;          <a class="code" href="class_c_rhino_doc.html">CRhinoDoc</a>&amp;,</div>
-<div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;          <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>,</div>
-<div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;          <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>,</div>
-<div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;          <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>,</div>
-<div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;          const <span class="keywordtype">wchar_t</span>*,</div>
-<div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160;          const <span class="keywordtype">wchar_t</span>*,</div>
-<div class="line"><a name="l01128"></a><span class="lineno"> 1128</span>&#160;          <a class="code" href="struct_o_n___u_u_i_d__struct.html">ON_UUID</a>*</div>
-<div class="line"><a name="l01129"></a><span class="lineno"> 1129</span>&#160;          );</div>
-<div class="line"><a name="l01130"></a><span class="lineno"> 1130</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01131"></a><span class="lineno"> 1131</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l01132"></a><span class="lineno"> 1132</span>&#160;<span class="comment">    Low level layer table helper function.  </span></div>
-<div class="line"><a name="l01133"></a><span class="lineno"> 1133</span>&#160;<span class="comment">    Do not make this function public because it will change</span></div>
-<div class="line"><a name="l01134"></a><span class="lineno"> 1134</span>&#160;<span class="comment">    from time to time.</span></div>
-<div class="line"><a name="l01135"></a><span class="lineno"> 1135</span>&#160;<span class="comment">  Parameters:</span></div>
-<div class="line"><a name="l01136"></a><span class="lineno"> 1136</span>&#160;<span class="comment">    layer_type - [in]</span></div>
-<div class="line"><a name="l01137"></a><span class="lineno"> 1137</span>&#160;<span class="comment">      2: parent of linked xref file&#39;s layer table</span></div>
-<div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;<span class="comment">         The linked_idef_sn parameter must be a valid linked idef</span></div>
-<div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160;<span class="comment">         serial number.  If the linked idef is in a parent linked</span></div>
-<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;<span class="comment">         idef, then parent_linked_idef_sn must be specified.</span></div>
-<div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;<span class="comment">         If the linked idef is in a worksession reference model, </span></div>
-<div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160;<span class="comment">         then worksession_reference_model_sn must be specified.</span></div>
-<div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160;<span class="comment">      4: parent of worksession reference model file&#39;s layer table</span></div>
-<div class="line"><a name="l01144"></a><span class="lineno"> 1144</span>&#160;<span class="comment">         The worksession_reference_model_sn parameter must be a valid</span></div>
-<div class="line"><a name="l01145"></a><span class="lineno"> 1145</span>&#160;<span class="comment">         worksession reference model serial number.  The </span></div>
-<div class="line"><a name="l01146"></a><span class="lineno"> 1146</span>&#160;<span class="comment">         parent_linked_idef_sn and linked_idef_sn values must be zero.</span></div>
-<div class="line"><a name="l01147"></a><span class="lineno"> 1147</span>&#160;<span class="comment">    worksession_reference_model_sn - [in]</span></div>
-<div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160;<span class="comment">      zero or a valid worksession reference model serial number.  When</span></div>
-<div class="line"><a name="l01149"></a><span class="lineno"> 1149</span>&#160;<span class="comment">      set, it indicates the layer is associated with the specified</span></div>
-<div class="line"><a name="l01150"></a><span class="lineno"> 1150</span>&#160;<span class="comment">      worksession reference model.</span></div>
-<div class="line"><a name="l01151"></a><span class="lineno"> 1151</span>&#160;<span class="comment">    parent_linked_idef_sn - [in]</span></div>
-<div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;<span class="comment">      zero or a valid linked idef serial number.  When set, it </span></div>
-<div class="line"><a name="l01153"></a><span class="lineno"> 1153</span>&#160;<span class="comment">      indicates you are finding/creating a layer for a linked</span></div>
-<div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160;<span class="comment">      idef that is nested in the idef identified by parent_linked_idef_sn.</span></div>
-<div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160;<span class="comment">    linked_idef_sn - [in]</span></div>
-<div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;<span class="comment">      zero or a valid linked idef serial number.  When set, it </span></div>
-<div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;<span class="comment">      indicates you are finding/creating a layer for a linked</span></div>
-<div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;<span class="comment">      idef. If this linked idef is in a worksession reference model,</span></div>
-<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;<span class="comment">      then worksession_reference_model_sn must be specified.</span></div>
-<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;<span class="comment">      If this linked idef is nested in a parent linked idef,</span></div>
-<div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;<span class="comment">      then parent_linked_idef_sn must be specified.</span></div>
-<div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;<span class="comment">    bCreateIfNotFound - [in]</span></div>
-<div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;<span class="comment">      If true, the layer will be created if it cannot be found.</span></div>
-<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;<span class="comment">    sLayerName - [in]</span></div>
-<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;<span class="comment">      root name to use if the layer must be created.  This parameter</span></div>
-<div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;<span class="comment">      is ignored when searching for existing layers.  If the layer</span></div>
-<div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;<span class="comment">      name is in use, it will be decorated with a suffix to make</span></div>
-<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;<span class="comment">      a unique layer name.</span></div>
-<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;<span class="comment">    layer_settings - [in]</span></div>
-<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;<span class="comment">      layer settings (color, parent, visibility, ...) to use</span></div>
-<div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;<span class="comment">      if the layer must be created.</span></div>
-<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;<span class="comment">  Returns:</span></div>
-<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;<span class="comment">    -1: layer not found (and could not be created)</span></div>
-<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;<span class="comment">   &gt;=0: layer table index.</span></div>
-<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;  <span class="keywordtype">int</span> FindReferenceParentLayer( </div>
-<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> layer_type,</div>
-<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> worksession_reference_model_sn,</div>
-<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> parent_linked_idef_sn,</div>
-<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> linked_idef_sn,</div>
-<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;        <span class="keywordtype">bool</span> bCreateIfNotFound,</div>
-<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;        const <span class="keywordtype">wchar_t</span>* sLayerName,</div>
-<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;        const <a class="code" href="class_o_n___layer.html">ON_Layer</a>* layer_settings</div>
-<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;        );</div>
-<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160; </div>
-<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;private:</div>
-<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;  <span class="comment">// Delete all CRhinoLayer.m_undo information</span></div>
-<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;  <span class="keywordtype">void</span> ClearUndoRecords();</div>
-<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160; </div>
-<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;  <span class="keywordtype">void</span> Destroy( class <a class="code" href="class_c_rhino_event_watcher.html">CRhinoEventWatcher</a>* ew );</div>
-<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;  <span class="keywordtype">void</span> Destroy();</div>
-<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160; </div>
-<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> PurgeWorkSessionReferenceModel( </div>
-<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> worksession_ref_model_sn</div>
-<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;    );</div>
-<div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160; </div>
-<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;private:</div>
-<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;  <a class="code" href="class_c_rhino_layer.html">CRhinoLayer</a> m_DefaultLayer;</div>
-<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160; </div>
-<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;public:</div>
-<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;<span class="comment">  Description:</span></div>
-<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;<span class="comment">    CRhinoLayer::DefaultLayer is returned when an invalid index is</span></div>
-<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;<span class="comment">    passed to operator[] and in other emergencies when a valid reference</span></div>
-<div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;<span class="comment">    to a layer is needed and there is there is not a layer in the table that</span></div>
-<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;<span class="comment">    can be used.</span></div>
-<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;<span class="comment">    This is not the layer with the English name &quot;Default&quot;.</span></div>
-<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;<span class="comment">    CRhinoLayer::DefaultLayer is never saved in files.</span></div>
-<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;<span class="comment">      CRhinoLayer::DefaultLayer.Index() = -1</span></div>
-<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;<span class="comment">      CRhinoLayer::DefaultLayer.Id() = nil,</span></div>
-<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;<span class="comment">      CRhinoLayer::DefaultLayer.Name() = &quot;&quot;</span></div>
-<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;  const <a class="code" href="class_c_rhino_layer.html">CRhinoLayer</a>&amp; DefaultLayer;</div>
-<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160; </div>
-<div class="line"><a name="l01217"></a><span class="lineno"><a class="line" href="class_c_rhino_layer_table.html#a5beb96c64a0c93c8fa1530d617e1ab57"> 1217</a></span>&#160;private:</div>
-<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;  <a class="code" href="class_c_rhino_layer_table.html">CRhinoLayerTable</a>() = delete;</div>
-<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;  <a class="code" href="class_c_rhino_layer_table.html">CRhinoLayerTable</a>(const <a class="code" href="class_c_rhino_layer_table.html">CRhinoLayerTable</a>&amp;) = delete;</div>
-<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;  <a class="code" href="class_c_rhino_layer_table.html">CRhinoLayerTable</a>&amp; operator=(const <a class="code" href="class_c_rhino_layer_table.html">CRhinoLayerTable</a>&amp;) = delete;</div>
-<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160; </div>
-<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;private:</div>
-<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;  <span class="keywordtype">bool</span> AddUndoModifyLayerRecord(<span class="keywordtype">int</span> layer_index);</div>
-<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160; </div>
-<div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;<span class="preprocessor">#if defined (ON_RUNTIME_APPLE)</span></div>
-<div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160;  <span class="comment">// create new layer after specified sibling, return index of new layer</span></div>
-<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;  <span class="keywordtype">int</span> AddLayerAfterSibling (<span class="keywordtype">int</span> sibling_index);</div>
-<div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;  <span class="comment">// create new sublayer for parent, return index of new layer</span></div>
-<div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;  <span class="keywordtype">int</span> AddSublayer (<span class="keywordtype">int</span> parent_index);</div>
-<div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;};</div>
-<div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160; </div>
-<div class="line"><a name="l01234"></a><span class="lineno"> 1234</span>&#160; </div>
-<div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160;<span class="comment">Description:</span></div>
-<div class="line"><a name="l01237"></a><span class="lineno"> 1237</span>&#160;<span class="comment">  Duplicates one or more layer and, optionally, all of the objects on the layer.</span></div>
-<div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160;<span class="comment">Parameters:</span></div>
-<div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160;<span class="comment">  doc                 [in] - The document.</span></div>
-<div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>&#160;<span class="comment">  in_layers           [in] - The indices of one or more layers to duplicate.</span></div>
-<div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160;<span class="comment">  bDuplicateObjects   [in] - If true, then layer objects will also be duplicated.</span></div>
-<div class="line"><a name="l01242"></a><span class="lineno"> 1242</span>&#160;<span class="comment">  bDuplicateSublayers [in] - If true, then a layer&#39;s sublayers will also be duplicated.</span></div>
-<div class="line"><a name="l01243"></a><span class="lineno"> 1243</span>&#160;<span class="comment">  out_layers          [out] - The indices of the newly added layers.</span></div>
-<div class="line"><a name="l01244"></a><span class="lineno"> 1244</span>&#160;<span class="comment">Returns:</span></div>
-<div class="line"><a name="l01245"></a><span class="lineno"> 1245</span>&#160;<span class="comment">  The number of layer indices added to out_layers.</span></div>
-<div class="line"><a name="l01246"></a><span class="lineno"> 1246</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
-<div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group___rhino.html#ga253ce07bcaa7d08533e4453bd9eec599">RhinoDuplicateLayers</a>(</div>
-<div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160;  <a class="code" href="class_c_rhino_doc.html">CRhinoDoc</a>&amp; doc,</div>
-<div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;int&gt;</a>&amp; in_layers,</div>
-<div class="line"><a name="l01251"></a><span class="lineno"> 1251</span>&#160;  <span class="keywordtype">bool</span> bDuplicateObjects,</div>
-<div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160;  <span class="keywordtype">bool</span> bDuplicateSublayers,</div>
-<div class="line"><a name="l01253"></a><span class="lineno"> 1253</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;int&gt;</a>&amp; out_layers</div>
-<div class="line"><a name="l01254"></a><span class="lineno"> 1254</span>&#160;);</div>
-<div class="line"><a name="l01255"></a><span class="lineno"> 1255</span>&#160; </div>
-<div class="line"><a name="l01256"></a><span class="lineno"> 1256</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l01257"></a><span class="lineno"> 1257</span>&#160;<span class="comment">Description:</span></div>
-<div class="line"><a name="l01258"></a><span class="lineno"> 1258</span>&#160;<span class="comment">  Redraws the layer manager window, if visible.</span></div>
-<div class="line"><a name="l01259"></a><span class="lineno"> 1259</span>&#160;<span class="comment">Parameters:</span></div>
-<div class="line"><a name="l01260"></a><span class="lineno"> 1260</span>&#160;<span class="comment">  None.</span></div>
-<div class="line"><a name="l01261"></a><span class="lineno"> 1261</span>&#160;<span class="comment">Returns:</span></div>
-<div class="line"><a name="l01262"></a><span class="lineno"> 1262</span>&#160;<span class="comment">  Nothing.</span></div>
-<div class="line"><a name="l01263"></a><span class="lineno"> 1263</span>&#160;<span class="comment">Remarks:</span></div>
-<div class="line"><a name="l01264"></a><span class="lineno"> 1264</span>&#160;<span class="comment">    When adding lots of layers to the layer table, if the layer manager window is open, </span></div>
-<div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160;<span class="comment">  the process can be time consuming. Each addition to the layer table triggers a</span></div>
-<div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160;<span class="comment">  CRhinoEventWatcher::layer_added event, which in turn causes the layer manager window</span></div>
-<div class="line"><a name="l01267"></a><span class="lineno"> 1267</span>&#160;<span class="comment">  to repaint. To add bulk layers expeditiously, you will want to:</span></div>
-<div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;<span class="comment">    1.) Turn off viewport redrawing by calling CRhinoView::EnableDrawing(false).</span></div>
-<div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160;<span class="comment">    2.) Add your bulk layers.</span></div>
-<div class="line"><a name="l01270"></a><span class="lineno"> 1270</span>&#160;<span class="comment">    3.) Turn viewport redrawing back on by calling CRhinoView::EnableDrawing(true).</span></div>
-<div class="line"><a name="l01271"></a><span class="lineno"> 1271</span>&#160;<span class="comment">    4.) Redraw the layer manager window by calling RhinoRedrawLayerManagerWindow().</span></div>
-<div class="line"><a name="l01272"></a><span class="lineno"> 1272</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l01273"></a><span class="lineno"> 1273</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
-<div class="line"><a name="l01274"></a><span class="lineno"> 1274</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___rhino.html#ga2cbf85d27de86462157f0f1964df9ef0">RhinoRedrawLayerManagerWindow</a>();</div>
-<div class="line"><a name="l01275"></a><span class="lineno"> 1275</span>&#160; </div>
-<div class="line"><a name="l01276"></a><span class="lineno"> 1276</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l01277"></a><span class="lineno"> 1277</span>&#160;<span class="comment">Description:</span></div>
-<div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160;<span class="comment">  If the layer manager window is visible, then the function returns the</span></div>
-<div class="line"><a name="l01279"></a><span class="lineno"> 1279</span>&#160;<span class="comment">  layer indices of the selected layer items in the list.</span></div>
-<div class="line"><a name="l01280"></a><span class="lineno"> 1280</span>&#160;<span class="comment">Parameters:</span></div>
-<div class="line"><a name="l01281"></a><span class="lineno"> 1281</span>&#160;<span class="comment">  layers - [out] The layer indices of the selected layer items.</span></div>
-<div class="line"><a name="l01282"></a><span class="lineno"> 1282</span>&#160;<span class="comment">Returns:</span></div>
-<div class="line"><a name="l01283"></a><span class="lineno"> 1283</span>&#160;<span class="comment">  &gt;= 0 - The number of indices added to the output array.</span></div>
-<div class="line"><a name="l01284"></a><span class="lineno"> 1284</span>&#160;<span class="comment">  -1 - If the layer manager window is not visible, or on error.</span></div>
-<div class="line"><a name="l01285"></a><span class="lineno"> 1285</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l01286"></a><span class="lineno"> 1286</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
-<div class="line"><a name="l01287"></a><span class="lineno"> 1287</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group___rhino.html#ga0c0f95f30348c5de9997c1877c5b8967">RhinoLayerManagerSelectedLayers</a>(<a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;int&gt;</a>&amp; layers);</div>
-<div class="line"><a name="l01288"></a><span class="lineno"> 1288</span>&#160; </div>
-<div class="line"><a name="l01289"></a><span class="lineno"> 1289</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l01290"></a><span class="lineno"> 1290</span>&#160;<span class="comment">Description:</span></div>
-<div class="line"><a name="l01291"></a><span class="lineno"> 1291</span>&#160;<span class="comment">  If the layer manager window is visible, then the function selects</span></div>
-<div class="line"><a name="l01292"></a><span class="lineno"> 1292</span>&#160;<span class="comment">  layer items, specified by the layer indices, in the list.</span></div>
-<div class="line"><a name="l01293"></a><span class="lineno"> 1293</span>&#160;<span class="comment">Parameters:</span></div>
-<div class="line"><a name="l01294"></a><span class="lineno"> 1294</span>&#160;<span class="comment">  layers    - [in] The indices of the layers to select.</span></div>
-<div class="line"><a name="l01295"></a><span class="lineno"> 1295</span>&#160;<span class="comment">  bDeselect - [in] If true, then any previously selected layers will be unselected.</span></div>
-<div class="line"><a name="l01296"></a><span class="lineno"> 1296</span>&#160;<span class="comment">Returns:</span></div>
-<div class="line"><a name="l01297"></a><span class="lineno"> 1297</span>&#160;<span class="comment">  &gt;= 0 - The number layer items that were selected.</span></div>
-<div class="line"><a name="l01298"></a><span class="lineno"> 1298</span>&#160;<span class="comment">  -1 - If the layer manager window is not visible, or on error.</span></div>
-<div class="line"><a name="l01299"></a><span class="lineno"> 1299</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l01300"></a><span class="lineno"> 1300</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
-<div class="line"><a name="l01301"></a><span class="lineno"> 1301</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group___rhino.html#gab7ab92390ed8340b355ca2c0ad621f7f">RhinoLayerManagerSelectLayers</a>(<a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;int&gt;</a> layers, <span class="keywordtype">bool</span> bDeselect);</div>
+<div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;<span class="comment">    Gets unused layer name used as default when creating new layers.</span></div>
+<div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;<span class="comment">   Parameters:</span></div>
+<div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;<span class="comment">    root_name - [in]</span></div>
+<div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;<span class="comment">      The returned name is &quot;root_name nn&quot;  If root_name is empty,</span></div>
+<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;<span class="comment">      then &quot;Layer&quot; (localized) is used.</span></div>
+<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;<span class="comment">    layer_name - [out]</span></div>
+<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;<span class="comment">      A valid layer name that is not in use.</span></div>
+<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;<span class="comment">    bIgnoreDeleted - [in] </span></div>
+<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;<span class="comment">      When bIgnoreDeleted is true, then the returned name may</span></div>
+<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;<span class="comment">      be used by a deleted layer.</span></div>
+<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;  <span class="keywordtype">void</span> GetUnusedLayerName(</div>
+<div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;    <a class="code" href="class_o_n__w_string.html">ON_wString</a>&amp; unused_layer_name</div>
+<div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;    ) const;</div>
+<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160; </div>
+<div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;  <span class="keywordtype">void</span> GetUnusedLayerName( </div>
+<div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;    const <span class="keywordtype">wchar_t</span>* root_name,</div>
+<div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;    <a class="code" href="class_o_n__w_string.html">ON_wString</a>&amp; unused_layer_name</div>
+<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;    ) const;</div>
+<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160; </div>
+<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;  <span class="keywordtype">bool</span> SetUnusedLayerName(</div>
+<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;    const <span class="keywordtype">wchar_t</span>* root_name,</div>
+<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;    <a class="code" href="class_o_n___layer.html">ON_Layer</a>&amp; layer</div>
+<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;    ) const;</div>
+<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160; </div>
+<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;  <span class="keywordtype">void</span> SetRemapIndex(</div>
+<div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160;    <span class="keywordtype">int</span> layer_index,</div>
+<div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;    <span class="keywordtype">int</span> remap_index</div>
+<div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;    );</div>
+<div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160; </div>
+<div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160;  <span class="keywordtype">int</span> RemapIndex(</div>
+<div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160;    <span class="keywordtype">int</span> layer_index</div>
+<div class="line"><a name="l01097"></a><span class="lineno"> 1097</span>&#160;    ) const;</div>
+<div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160; </div>
+<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;  <span class="keywordtype">void</span> ListTable(</div>
+<div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;    <a class="code" href="class_o_n___text_log.html">ON_TextLog</a>&amp; text_log,</div>
+<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> level_of_detail</div>
+<div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;    ) const;</div>
+<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160; </div>
+<div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;<span class="comment">    true </span></div>
+<div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;<span class="comment">      The layer is an element in this layer table.</span></div>
+<div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;  <span class="keywordtype">bool</span> InLayerTable( const <a class="code" href="class_o_n___layer.html">ON_Layer</a>* layer ) const;</div>
+<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160; </div>
+<div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;<span class="comment">    true </span></div>
+<div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160;<span class="comment">      The layer_index is a valid index of a layer</span></div>
+<div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160;<span class="comment">      element in this layer table.    </span></div>
+<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;  <span class="keywordtype">bool</span> IsValidLayerTableIndex( <span class="keywordtype">int</span> layer_index ) const;</div>
+<div class="line"><a name="l01118"></a><span class="lineno"> 1118</span>&#160; </div>
+<div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;  <span class="keywordtype">void</span> ChangeLayerSortOrder(const <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt;<a class="code" href="class_o_n__2dex.html">ON_2dex</a>&gt;&amp; sort_order);</div>
+<div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160; </div>
+<div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;private:</div>
+<div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;  friend class <a class="code" href="class_c_rhino_doc.html">CRhinoDoc</a>;</div>
+<div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;  friend class CRhinoRead3dmHelper; <span class="comment">// for access to CRhinoLayerTable::FindReferenceParentLayer()</span></div>
+<div class="line"><a name="l01124"></a><span class="lineno"><a class="line" href="class_c_rhino_layer_table.html#a90258f01ce1e144ed14cd1157be4dc7a"> 1124</a></span>&#160; </div>
+<div class="line"><a name="l01125"></a><span class="lineno"><a class="line" href="class_c_rhino_layer_table.html#a1c55291426e0b1f7514be3d32d0c085f"> 1125</a></span>&#160;  <span class="comment">// Constructs a layer table with one default layer.  This is private</span></div>
+<div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;  <span class="comment">// because only CRhinoDoc is permitted to create or destroy layer</span></div>
+<div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160;  <span class="comment">// tables.</span></div>
+<div class="line"><a name="l01128"></a><span class="lineno"> 1128</span>&#160;  <a class="code" href="class_c_rhino_layer_table.html">CRhinoLayerTable</a>(<a class="code" href="class_c_rhino_doc.html">CRhinoDoc</a>&amp;);</div>
+<div class="line"><a name="l01129"></a><span class="lineno"> 1129</span>&#160;  ~<a class="code" href="class_c_rhino_layer_table.html">CRhinoLayerTable</a>();</div>
+<div class="line"><a name="l01130"></a><span class="lineno"> 1130</span>&#160;  </div>
+<div class="line"><a name="l01131"></a><span class="lineno"> 1131</span>&#160;  <span class="comment">// pointer to parent doc set when CRhinoDoc creates the layer table.</span></div>
+<div class="line"><a name="l01132"></a><span class="lineno"> 1132</span>&#160;  <a class="code" href="class_c_rhino_doc.html">CRhinoDoc</a>&amp; m_doc;</div>
+<div class="line"><a name="l01133"></a><span class="lineno"> 1133</span>&#160;  <a class="code" href="class_c_rhino_doc_table_reference.html">CRhinoDocTableReference</a> m_table_reference;</div>
+<div class="line"><a name="l01134"></a><span class="lineno"> 1134</span>&#160; </div>
+<div class="line"><a name="l01135"></a><span class="lineno"> 1135</span>&#160;  <a class="code" href="class_o_n___component_manifest.html">ON_ComponentManifest</a>&amp; Internal_Manifest();</div>
+<div class="line"><a name="l01136"></a><span class="lineno"> 1136</span>&#160; </div>
+<div class="line"><a name="l01137"></a><span class="lineno"> 1137</span>&#160; </div>
+<div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;  <span class="comment">// index of current layer</span></div>
+<div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160;  <span class="comment">// SetCurrentLayerIndex() keeps this value in sync with</span></div>
+<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;  <span class="comment">// CRhinoDoc::Properties().Settings().m_current_layer_index</span></div>
+<div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;  <span class="keywordtype">int</span> m_current_layer_index = -1;</div>
+<div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160; </div>
+<div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160;private:</div>
+<div class="line"><a name="l01144"></a><span class="lineno"> 1144</span>&#160;  friend <span class="keywordtype">bool</span> RhGetGrandParentLayerId( </div>
+<div class="line"><a name="l01145"></a><span class="lineno"> 1145</span>&#160;          <a class="code" href="class_c_rhino_doc.html">CRhinoDoc</a>&amp;,</div>
+<div class="line"><a name="l01146"></a><span class="lineno"> 1146</span>&#160;          <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>,</div>
+<div class="line"><a name="l01147"></a><span class="lineno"> 1147</span>&#160;          <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>,</div>
+<div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160;          <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>,</div>
+<div class="line"><a name="l01149"></a><span class="lineno"> 1149</span>&#160;          const <span class="keywordtype">wchar_t</span>*,</div>
+<div class="line"><a name="l01150"></a><span class="lineno"> 1150</span>&#160;          const <span class="keywordtype">wchar_t</span>*,</div>
+<div class="line"><a name="l01151"></a><span class="lineno"> 1151</span>&#160;          <a class="code" href="struct_o_n___u_u_i_d__struct.html">ON_UUID</a>*</div>
+<div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;          );</div>
+<div class="line"><a name="l01153"></a><span class="lineno"> 1153</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160;<span class="comment">    Low level layer table helper function.  </span></div>
+<div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;<span class="comment">    Do not make this function public because it will change</span></div>
+<div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;<span class="comment">    from time to time.</span></div>
+<div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;<span class="comment">  Parameters:</span></div>
+<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;<span class="comment">    layer_type - [in]</span></div>
+<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;<span class="comment">      2: parent of linked xref file&#39;s layer table</span></div>
+<div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;<span class="comment">         The linked_idef_sn parameter must be a valid linked idef</span></div>
+<div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;<span class="comment">         serial number.  If the linked idef is in a parent linked</span></div>
+<div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;<span class="comment">         idef, then parent_linked_idef_sn must be specified.</span></div>
+<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;<span class="comment">         If the linked idef is in a worksession reference model, </span></div>
+<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;<span class="comment">         then worksession_reference_model_sn must be specified.</span></div>
+<div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;<span class="comment">      4: parent of worksession reference model file&#39;s layer table</span></div>
+<div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;<span class="comment">         The worksession_reference_model_sn parameter must be a valid</span></div>
+<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;<span class="comment">         worksession reference model serial number.  The </span></div>
+<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;<span class="comment">         parent_linked_idef_sn and linked_idef_sn values must be zero.</span></div>
+<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;<span class="comment">    worksession_reference_model_sn - [in]</span></div>
+<div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;<span class="comment">      zero or a valid worksession reference model serial number.  When</span></div>
+<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;<span class="comment">      set, it indicates the layer is associated with the specified</span></div>
+<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;<span class="comment">      worksession reference model.</span></div>
+<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;<span class="comment">    parent_linked_idef_sn - [in]</span></div>
+<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;<span class="comment">      zero or a valid linked idef serial number.  When set, it </span></div>
+<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;<span class="comment">      indicates you are finding/creating a layer for a linked</span></div>
+<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;<span class="comment">      idef that is nested in the idef identified by parent_linked_idef_sn.</span></div>
+<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;<span class="comment">    linked_idef_sn - [in]</span></div>
+<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;<span class="comment">      zero or a valid linked idef serial number.  When set, it </span></div>
+<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;<span class="comment">      indicates you are finding/creating a layer for a linked</span></div>
+<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;<span class="comment">      idef. If this linked idef is in a worksession reference model,</span></div>
+<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;<span class="comment">      then worksession_reference_model_sn must be specified.</span></div>
+<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;<span class="comment">      If this linked idef is nested in a parent linked idef,</span></div>
+<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;<span class="comment">      then parent_linked_idef_sn must be specified.</span></div>
+<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;<span class="comment">    bCreateIfNotFound - [in]</span></div>
+<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;<span class="comment">      If true, the layer will be created if it cannot be found.</span></div>
+<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;<span class="comment">    sLayerName - [in]</span></div>
+<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;<span class="comment">      root name to use if the layer must be created.  This parameter</span></div>
+<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;<span class="comment">      is ignored when searching for existing layers.  If the layer</span></div>
+<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;<span class="comment">      name is in use, it will be decorated with a suffix to make</span></div>
+<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;<span class="comment">      a unique layer name.</span></div>
+<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;<span class="comment">    layer_settings - [in]</span></div>
+<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;<span class="comment">      layer settings (color, parent, visibility, ...) to use</span></div>
+<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;<span class="comment">      if the layer must be created.</span></div>
+<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;<span class="comment">  Returns:</span></div>
+<div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;<span class="comment">    -1: layer not found (and could not be created)</span></div>
+<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;<span class="comment">   &gt;=0: layer table index.</span></div>
+<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;  <span class="keywordtype">int</span> FindReferenceParentLayer( </div>
+<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> layer_type,</div>
+<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> worksession_reference_model_sn,</div>
+<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> parent_linked_idef_sn,</div>
+<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> linked_idef_sn,</div>
+<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;        <span class="keywordtype">bool</span> bCreateIfNotFound,</div>
+<div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;        const <span class="keywordtype">wchar_t</span>* sLayerName,</div>
+<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;        const <a class="code" href="class_o_n___layer.html">ON_Layer</a>* layer_settings</div>
+<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;        );</div>
+<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160; </div>
+<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;private:</div>
+<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;  <span class="comment">// Delete all CRhinoLayer.m_undo information</span></div>
+<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;  <span class="keywordtype">void</span> ClearUndoRecords();</div>
+<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160; </div>
+<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;  <span class="keywordtype">void</span> Destroy( class <a class="code" href="class_c_rhino_event_watcher.html">CRhinoEventWatcher</a>* ew );</div>
+<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;  <span class="keywordtype">void</span> Destroy();</div>
+<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160; </div>
+<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> PurgeWorkSessionReferenceModel( </div>
+<div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> worksession_ref_model_sn</div>
+<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;    );</div>
+<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160; </div>
+<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;private:</div>
+<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;  <a class="code" href="class_c_rhino_layer.html">CRhinoLayer</a> m_DefaultLayer;</div>
+<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160; </div>
+<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;public:</div>
+<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;<span class="comment">  Description:</span></div>
+<div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;<span class="comment">    CRhinoLayer::DefaultLayer is returned when an invalid index is</span></div>
+<div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160;<span class="comment">    passed to operator[] and in other emergencies when a valid reference</span></div>
+<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;<span class="comment">    to a layer is needed and there is there is not a layer in the table that</span></div>
+<div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;<span class="comment">    can be used.</span></div>
+<div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;<span class="comment">    This is not the layer with the English name &quot;Default&quot;.</span></div>
+<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;<span class="comment">    CRhinoLayer::DefaultLayer is never saved in files.</span></div>
+<div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l01234"></a><span class="lineno"> 1234</span>&#160;<span class="comment">      CRhinoLayer::DefaultLayer.Index() = -1</span></div>
+<div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160;<span class="comment">      CRhinoLayer::DefaultLayer.Id() = nil,</span></div>
+<div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160;<span class="comment">      CRhinoLayer::DefaultLayer.Name() = &quot;&quot;</span></div>
+<div class="line"><a name="l01237"></a><span class="lineno"> 1237</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160;  const <a class="code" href="class_c_rhino_layer.html">CRhinoLayer</a>&amp; DefaultLayer;</div>
+<div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160; </div>
+<div class="line"><a name="l01240"></a><span class="lineno"><a class="line" href="class_c_rhino_layer_table.html#a5beb96c64a0c93c8fa1530d617e1ab57"> 1240</a></span>&#160;  <span class="keywordtype">bool</span> UnsortLayer(<span class="keywordtype">int</span> layer_index, <span class="keywordtype">int</span> sort_index);</div>
+<div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160; </div>
+<div class="line"><a name="l01242"></a><span class="lineno"> 1242</span>&#160;private:</div>
+<div class="line"><a name="l01243"></a><span class="lineno"> 1243</span>&#160;  <a class="code" href="class_c_rhino_layer_table.html">CRhinoLayerTable</a>() = delete;</div>
+<div class="line"><a name="l01244"></a><span class="lineno"> 1244</span>&#160;  <a class="code" href="class_c_rhino_layer_table.html">CRhinoLayerTable</a>(const <a class="code" href="class_c_rhino_layer_table.html">CRhinoLayerTable</a>&amp;) = delete;</div>
+<div class="line"><a name="l01245"></a><span class="lineno"> 1245</span>&#160;  <a class="code" href="class_c_rhino_layer_table.html">CRhinoLayerTable</a>&amp; operator=(const <a class="code" href="class_c_rhino_layer_table.html">CRhinoLayerTable</a>&amp;) = delete;</div>
+<div class="line"><a name="l01246"></a><span class="lineno"> 1246</span>&#160; </div>
+<div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160;private:</div>
+<div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160;  <span class="keywordtype">bool</span> AddUndoModifyLayerRecord(<span class="keywordtype">int</span> layer_index);</div>
+<div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160; </div>
+<div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;<span class="preprocessor">#if defined (ON_RUNTIME_APPLE)</span></div>
+<div class="line"><a name="l01251"></a><span class="lineno"> 1251</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160;  <span class="comment">// create new layer after specified sibling, return index of new layer</span></div>
+<div class="line"><a name="l01253"></a><span class="lineno"> 1253</span>&#160;  <span class="keywordtype">int</span> AddLayerAfterSibling (<span class="keywordtype">int</span> sibling_index);</div>
+<div class="line"><a name="l01254"></a><span class="lineno"> 1254</span>&#160;  <span class="comment">// create new sublayer for parent, return index of new layer</span></div>
+<div class="line"><a name="l01255"></a><span class="lineno"> 1255</span>&#160;  <span class="keywordtype">int</span> AddSublayer (<span class="keywordtype">int</span> parent_index);</div>
+<div class="line"><a name="l01256"></a><span class="lineno"> 1256</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01257"></a><span class="lineno"> 1257</span>&#160;};</div>
+<div class="line"><a name="l01258"></a><span class="lineno"> 1258</span>&#160; </div>
+<div class="line"><a name="l01259"></a><span class="lineno"> 1259</span>&#160; </div>
+<div class="line"><a name="l01260"></a><span class="lineno"> 1260</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l01261"></a><span class="lineno"> 1261</span>&#160;<span class="comment">Description:</span></div>
+<div class="line"><a name="l01262"></a><span class="lineno"> 1262</span>&#160;<span class="comment">  Duplicates one or more layer and, optionally, all of the objects on the layer.</span></div>
+<div class="line"><a name="l01263"></a><span class="lineno"> 1263</span>&#160;<span class="comment">Parameters:</span></div>
+<div class="line"><a name="l01264"></a><span class="lineno"> 1264</span>&#160;<span class="comment">  doc                 [in] - The document.</span></div>
+<div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160;<span class="comment">  in_layers           [in] - The indices of one or more layers to duplicate.</span></div>
+<div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160;<span class="comment">  bDuplicateObjects   [in] - If true, then layer objects will also be duplicated.</span></div>
+<div class="line"><a name="l01267"></a><span class="lineno"> 1267</span>&#160;<span class="comment">  bDuplicateSublayers [in] - If true, then a layer&#39;s sublayers will also be duplicated.</span></div>
+<div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;<span class="comment">  out_layers          [out] - The indices of the newly added layers.</span></div>
+<div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160;<span class="comment">Returns:</span></div>
+<div class="line"><a name="l01270"></a><span class="lineno"> 1270</span>&#160;<span class="comment">  The number of layer indices added to out_layers.</span></div>
+<div class="line"><a name="l01271"></a><span class="lineno"> 1271</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l01272"></a><span class="lineno"> 1272</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
+<div class="line"><a name="l01273"></a><span class="lineno"> 1273</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group___rhino.html#ga253ce07bcaa7d08533e4453bd9eec599">RhinoDuplicateLayers</a>(</div>
+<div class="line"><a name="l01274"></a><span class="lineno"> 1274</span>&#160;  <a class="code" href="class_c_rhino_doc.html">CRhinoDoc</a>&amp; doc,</div>
+<div class="line"><a name="l01275"></a><span class="lineno"> 1275</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;int&gt;</a>&amp; in_layers,</div>
+<div class="line"><a name="l01276"></a><span class="lineno"> 1276</span>&#160;  <span class="keywordtype">bool</span> bDuplicateObjects,</div>
+<div class="line"><a name="l01277"></a><span class="lineno"> 1277</span>&#160;  <span class="keywordtype">bool</span> bDuplicateSublayers,</div>
+<div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160;  <a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;int&gt;</a>&amp; out_layers</div>
+<div class="line"><a name="l01279"></a><span class="lineno"> 1279</span>&#160;);</div>
+<div class="line"><a name="l01280"></a><span class="lineno"> 1280</span>&#160; </div>
+<div class="line"><a name="l01281"></a><span class="lineno"> 1281</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l01282"></a><span class="lineno"> 1282</span>&#160;<span class="comment">Description:</span></div>
+<div class="line"><a name="l01283"></a><span class="lineno"> 1283</span>&#160;<span class="comment">  Redraws the layer manager window, if visible.</span></div>
+<div class="line"><a name="l01284"></a><span class="lineno"> 1284</span>&#160;<span class="comment">Parameters:</span></div>
+<div class="line"><a name="l01285"></a><span class="lineno"> 1285</span>&#160;<span class="comment">  None.</span></div>
+<div class="line"><a name="l01286"></a><span class="lineno"> 1286</span>&#160;<span class="comment">Returns:</span></div>
+<div class="line"><a name="l01287"></a><span class="lineno"> 1287</span>&#160;<span class="comment">  Nothing.</span></div>
+<div class="line"><a name="l01288"></a><span class="lineno"> 1288</span>&#160;<span class="comment">Remarks:</span></div>
+<div class="line"><a name="l01289"></a><span class="lineno"> 1289</span>&#160;<span class="comment">    When adding lots of layers to the layer table, if the layer manager window is open, </span></div>
+<div class="line"><a name="l01290"></a><span class="lineno"> 1290</span>&#160;<span class="comment">  the process can be time consuming. Each addition to the layer table triggers a</span></div>
+<div class="line"><a name="l01291"></a><span class="lineno"> 1291</span>&#160;<span class="comment">  CRhinoEventWatcher::layer_added event, which in turn causes the layer manager window</span></div>
+<div class="line"><a name="l01292"></a><span class="lineno"> 1292</span>&#160;<span class="comment">  to repaint. To add bulk layers expeditiously, you will want to:</span></div>
+<div class="line"><a name="l01293"></a><span class="lineno"> 1293</span>&#160;<span class="comment">    1.) Turn off viewport redrawing by calling CRhinoView::EnableDrawing(false).</span></div>
+<div class="line"><a name="l01294"></a><span class="lineno"> 1294</span>&#160;<span class="comment">    2.) Add your bulk layers.</span></div>
+<div class="line"><a name="l01295"></a><span class="lineno"> 1295</span>&#160;<span class="comment">    3.) Turn viewport redrawing back on by calling CRhinoView::EnableDrawing(true).</span></div>
+<div class="line"><a name="l01296"></a><span class="lineno"> 1296</span>&#160;<span class="comment">    4.) Redraw the layer manager window by calling RhinoRedrawLayerManagerWindow().</span></div>
+<div class="line"><a name="l01297"></a><span class="lineno"> 1297</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l01298"></a><span class="lineno"> 1298</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
+<div class="line"><a name="l01299"></a><span class="lineno"> 1299</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___rhino.html#ga2cbf85d27de86462157f0f1964df9ef0">RhinoRedrawLayerManagerWindow</a>();</div>
+<div class="line"><a name="l01300"></a><span class="lineno"> 1300</span>&#160; </div>
+<div class="line"><a name="l01301"></a><span class="lineno"> 1301</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;<span class="comment">Description:</span></div>
+<div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160;<span class="comment">  If the layer manager window is visible, then the function returns the</span></div>
+<div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;<span class="comment">  layer indices of the selected layer items in the list.</span></div>
+<div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160;<span class="comment">Parameters:</span></div>
+<div class="line"><a name="l01306"></a><span class="lineno"> 1306</span>&#160;<span class="comment">  layers - [out] The layer indices of the selected layer items.</span></div>
+<div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;<span class="comment">Returns:</span></div>
+<div class="line"><a name="l01308"></a><span class="lineno"> 1308</span>&#160;<span class="comment">  &gt;= 0 - The number of indices added to the output array.</span></div>
+<div class="line"><a name="l01309"></a><span class="lineno"> 1309</span>&#160;<span class="comment">  -1 - If the layer manager window is not visible, or on error.</span></div>
+<div class="line"><a name="l01310"></a><span class="lineno"> 1310</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l01311"></a><span class="lineno"> 1311</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
+<div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group___rhino.html#ga0c0f95f30348c5de9997c1877c5b8967">RhinoLayerManagerSelectedLayers</a>(<a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;int&gt;</a>&amp; layers);</div>
+<div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160; </div>
+<div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l01315"></a><span class="lineno"> 1315</span>&#160;<span class="comment">Description:</span></div>
+<div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160;<span class="comment">  If the layer manager window is visible, then the function selects</span></div>
+<div class="line"><a name="l01317"></a><span class="lineno"> 1317</span>&#160;<span class="comment">  layer items, specified by the layer indices, in the list.</span></div>
+<div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160;<span class="comment">Parameters:</span></div>
+<div class="line"><a name="l01319"></a><span class="lineno"> 1319</span>&#160;<span class="comment">  layers    - [in] The indices of the layers to select.</span></div>
+<div class="line"><a name="l01320"></a><span class="lineno"> 1320</span>&#160;<span class="comment">  bDeselect - [in] If true, then any previously selected layers will be unselected.</span></div>
+<div class="line"><a name="l01321"></a><span class="lineno"> 1321</span>&#160;<span class="comment">Returns:</span></div>
+<div class="line"><a name="l01322"></a><span class="lineno"> 1322</span>&#160;<span class="comment">  &gt;= 0 - The number layer items that were selected.</span></div>
+<div class="line"><a name="l01323"></a><span class="lineno"> 1323</span>&#160;<span class="comment">  -1 - If the layer manager window is not visible, or on error.</span></div>
+<div class="line"><a name="l01324"></a><span class="lineno"> 1324</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l01325"></a><span class="lineno"> 1325</span>&#160;<a class="code" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div>
+<div class="line"><a name="l01326"></a><span class="lineno"> 1326</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group___rhino.html#gab7ab92390ed8340b355ca2c0ad621f7f">RhinoLayerManagerSelectLayers</a>(<a class="code" href="class_o_n___simple_array.html">ON_SimpleArray&lt;int&gt;</a> layers, <span class="keywordtype">bool</span> bDeselect);</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="agroup___rhino_html_gac7cff1e910b2374d20cd2265d4f976dd"><div class="ttname"><a href="group___rhino.html#gac7cff1e910b2374d20cd2265d4f976dd">RHINO_SDK_CLASS</a></div><div class="ttdeci">#define RHINO_SDK_CLASS</div><div class="ttdef"><b>Definition:</b> rhinoSdk.h:285</div></div>
 <div class="ttc" id="aclass_c_rhino_event_watcher_html"><div class="ttname"><a href="class_c_rhino_event_watcher.html">CRhinoEventWatcher</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkEventWatcher.h:113</div></div>
+<div class="ttc" id="aclass_o_n__2dex_html"><div class="ttname"><a href="class_o_n__2dex.html">ON_2dex</a></div><div class="ttdef"><b>Definition:</b> opennurbs_defines.h:443</div></div>
 <div class="ttc" id="aclass_o_n___layer_html_a55cd8b956b71de20878398e1dbfa358d"><div class="ttname"><a href="class_o_n___layer.html#a55cd8b956b71de20878398e1dbfa358d">ON_Layer::operator=</a></div><div class="ttdeci">ON_Layer &amp; operator=(const ON_Layer &amp;)=default</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_ga5acea41054fd3321109b75cb7dbe1316"><div class="ttname"><a href="group__open_n_u_r_b_s.html#ga5acea41054fd3321109b75cb7dbe1316">ON_SimpleArray::operator[]</a></div><div class="ttdeci">T &amp; operator[](int)</div><div class="ttdef"><b>Definition:</b> opennurbs_array_defs.h:201</div></div>
 <div class="ttc" id="agroup___rhino_html_gae0ca1c334125e1735d6bf07ae91bbb66"><div class="ttname"><a href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a></div><div class="ttdeci">#define RHINO_SDK_FUNCTION</div><div class="ttdef"><b>Definition:</b> rhinoSdk.h:287</div></div>
@@ -1385,26 +1411,27 @@ $(function() {
 <div class="ttc" id="aclass_o_n___color_html"><div class="ttname"><a href="class_o_n___color.html">ON_Color</a></div><div class="ttdef"><b>Definition:</b> opennurbs_color.h:27</div></div>
 <div class="ttc" id="aclass_c_rhino_get_string_html"><div class="ttname"><a href="class_c_rhino_get_string.html">CRhinoGetString</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkGetString.h:20</div></div>
 <div class="ttc" id="agroup__open_n_u_r_b_s_html_gga6f5c1d4d88bb5eccd2afaacde27f9ef3af67fcde693e5ab115858baf011121270"><div class="ttname"><a href="group__open_n_u_r_b_s.html#gga6f5c1d4d88bb5eccd2afaacde27f9ef3af67fcde693e5ab115858baf011121270">ON_3dmArchiveTableType::layer_table</a></div><div class="ttdeci">@ layer_table</div></div>
-<div class="ttc" id="aclass_o_n___component_manifest_html"><div class="ttname"><a href="class_o_n___component_manifest.html">ON_ComponentManifest</a></div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:605</div></div>
-<div class="ttc" id="agroup___r_d_k_html_gaf90e122cbfab5162a93357be721917f2"><div class="ttname"><a href="group___r_d_k.html#gaf90e122cbfab5162a93357be721917f2">Layer</a></div><div class="ttdeci">enum RHRDK_SDK enum RHRDK_SDK Layer</div><div class="ttdef"><b>Definition:</b> RhRdkDefinitions.h:67</div></div>
+<div class="ttc" id="aclass_o_n___component_manifest_html"><div class="ttname"><a href="class_o_n___component_manifest.html">ON_ComponentManifest</a></div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:627</div></div>
+<div class="ttc" id="agroup___r_d_k_html_gaf90e122cbfab5162a93357be721917f2"><div class="ttname"><a href="group___r_d_k.html#gaf90e122cbfab5162a93357be721917f2">Layer</a></div><div class="ttdeci">enum RHRDK_SDK enum RHRDK_SDK Layer</div><div class="ttdef"><b>Definition:</b> RhRdkDefinitions.h:51</div></div>
 <div class="ttc" id="aclass_c_rh_rdk_material_html"><div class="ttname"><a href="class_c_rh_rdk_material.html">CRhRdkMaterial</a></div><div class="ttdef"><b>Definition:</b> RhRdkMaterial.h:16</div></div>
 <div class="ttc" id="agroup___rhino_html_ga8e6f5833c898be05daa508d60b72b22f"><div class="ttname"><a href="group___rhino.html#ga8e6f5833c898be05daa508d60b72b22f">ON_DEPRECATED_MSG</a></div><div class="ttdeci">ON_DEPRECATED_MSG(&quot;This function will be removed in Rhino Version 7. \n&quot; &quot;For assistance replacing this function post on discourse.mcneel.com/c/rhino-developer.&quot;) RHINO_SDK_FUNCTION bool RhinoBrepGet2dProjection(unsigned int rhino_doc_sn</div></div>
 <div class="ttc" id="agroup___rhino_html_ga0c0f95f30348c5de9997c1877c5b8967"><div class="ttname"><a href="group___rhino.html#ga0c0f95f30348c5de9997c1877c5b8967">RhinoLayerManagerSelectedLayers</a></div><div class="ttdeci">RHINO_SDK_FUNCTION int RhinoLayerManagerSelectedLayers(ON_SimpleArray&lt; int &gt; &amp;layers)</div></div>
 <div class="ttc" id="aclass_c_rhino_layer_node_html"><div class="ttname"><a href="class_c_rhino_layer_node.html">CRhinoLayerNode</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkLayer.h:18</div></div>
 <div class="ttc" id="aclass_o_n___text_log_html"><div class="ttname"><a href="class_o_n___text_log.html">ON_TextLog</a></div><div class="ttdef"><b>Definition:</b> opennurbs_textlog.h:22</div></div>
-<div class="ttc" id="aclass_c_rhino_doc_html"><div class="ttname"><a href="class_c_rhino_doc.html">CRhinoDoc</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkDoc.h:655</div></div>
+<div class="ttc" id="aclass_c_rhino_doc_html"><div class="ttname"><a href="class_c_rhino_doc.html">CRhinoDoc</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkDoc.h:683</div></div>
+<div class="ttc" id="aclass_o_n___model_component_html_a544efa96ab3a822b74501aadc4816eb6"><div class="ttname"><a href="class_o_n___model_component.html#a544efa96ab3a822b74501aadc4816eb6">ON_ModelComponent::NextRuntimeSerialNumber</a></div><div class="ttdeci">static ON__UINT64 NextRuntimeSerialNumber()</div></div>
 <div class="ttc" id="aclass_c_rhino_linetype_html"><div class="ttname"><a href="class_c_rhino_linetype.html">CRhinoLinetype</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkLinetype.h:19</div></div>
 <div class="ttc" id="aclass_c_rhino_doc_table_reference_html"><div class="ttname"><a href="class_c_rhino_doc_table_reference.html">CRhinoDocTableReference</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkBitmap.h:18</div></div>
 <div class="ttc" id="aclass_c_rhino_layer_table_html"><div class="ttname"><a href="class_c_rhino_layer_table.html">CRhinoLayerTable</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkLayer.h:397</div></div>
 <div class="ttc" id="aclass_c_rhino_layer_table_html_a83a4a2d985a544bdff1c46518bcd1b7a"><div class="ttname"><a href="class_c_rhino_layer_table.html#a83a4a2d985a544bdff1c46518bcd1b7a">CRhinoLayerTable::RemapIndex</a></div><div class="ttdeci">int RemapIndex(int layer_index) const</div></div>
-<div class="ttc" id="aclass_o_n___component_manifest_item_html"><div class="ttname"><a href="class_o_n___component_manifest_item.html">ON_ComponentManifestItem</a></div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:1206</div></div>
+<div class="ttc" id="aclass_o_n___component_manifest_item_html"><div class="ttname"><a href="class_o_n___component_manifest_item.html">ON_ComponentManifestItem</a></div><div class="ttdef"><b>Definition:</b> opennurbs_archive.h:1228</div></div>
 <div class="ttc" id="astruct_o_n___u_u_i_d__struct_html"><div class="ttname"><a href="struct_o_n___u_u_i_d__struct.html">ON_UUID_struct</a></div><div class="ttdoc">ON_UUID is a 16 byte universally unique identifier.</div><div class="ttdef"><b>Definition:</b> opennurbs_uuid.h:35</div></div>
 <div class="ttc" id="agroup___rhino_html_gab7ab92390ed8340b355ca2c0ad621f7f"><div class="ttname"><a href="group___rhino.html#gab7ab92390ed8340b355ca2c0ad621f7f">RhinoLayerManagerSelectLayers</a></div><div class="ttdeci">RHINO_SDK_FUNCTION int RhinoLayerManagerSelectLayers(ON_SimpleArray&lt; int &gt; layers, bool bDeselect)</div></div>
 <div class="ttc" id="agroup___rhino_html_ga2cbf85d27de86462157f0f1964df9ef0"><div class="ttname"><a href="group___rhino.html#ga2cbf85d27de86462157f0f1964df9ef0">RhinoRedrawLayerManagerWindow</a></div><div class="ttdeci">RHINO_SDK_FUNCTION void RhinoRedrawLayerManagerWindow()</div></div>
 <div class="ttc" id="aclass_c_rhino_layer_html"><div class="ttname"><a href="class_c_rhino_layer.html">CRhinoLayer</a></div><div class="ttdef"><b>Definition:</b> rhinoSdkLayer.h:116</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:12:55 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:20 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

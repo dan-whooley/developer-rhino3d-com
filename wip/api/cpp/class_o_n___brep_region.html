@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Rhino C++ API
-   &#160;<span id="projectnumber">6.25</span>
+   &#160;<span id="projectnumber">7.0</span>
    </div>
   </td>
  </tr>
@@ -113,7 +113,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ace4e466da4a792a4993c58aec19e591b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac62cc6c573b508d253ab78b1eb90dc23"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="class_o_n___brep_region_topology.html">ON_BrepRegionTopology</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep_region.html#ac62cc6c573b508d253ab78b1eb90dc23">RegionTopology</a> () const</td></tr>
 <tr class="separator:ac62cc6c573b508d253ab78b1eb90dc23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac11a479900d382eef0af74029bb9bb9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep_region.html#aac11a479900d382eef0af74029bb9bb9">VolumeMassProperties</a> (<a class="el" href="class_o_n___mass_properties.html">ON_MassProperties</a> &amp;mp, bool bVolume=true, bool bFirstMoments=true, bool bSecondMoments=true, bool bProductMoments=true, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> base_point=<a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a>, double rel_tol=1.0e-6, double abs_tol=1.0e-6) const</td></tr>
+<tr class="memitem:aac11a479900d382eef0af74029bb9bb9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep_region.html#aac11a479900d382eef0af74029bb9bb9">VolumeMassProperties</a> (<a class="el" href="class_o_n___mass_properties.html">ON_MassProperties</a> &amp;mp, bool bVolume=true, bool bFirstMoments=true, bool bSecondMoments=true, bool bProductMoments=true, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> base_point=<a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a>, double rel_tol=1.0e-6, double abs_tol=1.0e-6) const</td></tr>
 <tr class="separator:aac11a479900d382eef0af74029bb9bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd1a26a64b5468dce1c0ba3d7b22e935"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep_region.html#afd1a26a64b5468dce1c0ba3d7b22e935">Write</a> (<a class="el" href="class_o_n___binary_archive.html">ON_BinaryArchive</a> &amp;binary_archive) const override</td></tr>
 <tr class="separator:afd1a26a64b5468dce1c0ba3d7b22e935"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,7 +214,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:affb3eb70731687b4b41083c13a737f45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="union_o_n___u.html">ON_U</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep_region.html#affb3eb70731687b4b41083c13a737f45">m_region_user</a></td></tr>
 <tr class="separator:affb3eb70731687b4b41083c13a737f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a982998dac7a298340583bc5f68c73f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep_region.html#a0a982998dac7a298340583bc5f68c73f">m_type</a></td></tr>
-<tr class="memdesc:a0a982998dac7a298340583bc5f68c73f"><td class="mdescLeft">&#160;</td><td class="mdescRight">0 = infinte, 1 = bounded  <a href="class_o_n___brep_region.html#a0a982998dac7a298340583bc5f68c73f">More...</a><br /></td></tr>
+<tr class="memdesc:a0a982998dac7a298340583bc5f68c73f"><td class="mdescLeft">&#160;</td><td class="mdescRight">0 = infinite, 1 = bounded  <a href="class_o_n___brep_region.html#a0a982998dac7a298340583bc5f68c73f">More...</a><br /></td></tr>
 <tr class="separator:a0a982998dac7a298340583bc5f68c73f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
@@ -648,7 +648,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a>&#160;</td>
-          <td class="paramname"><em>base_point</em> = <code><a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a></code>, </td>
+          <td class="paramname"><em>base_point</em> = <code><a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -830,14 +830,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>0 = infinte, 1 = bounded </p>
+<p>0 = infinite, 1 = bounded </p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 28 2020 16:13:22 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 21 2020 12:55:48 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
